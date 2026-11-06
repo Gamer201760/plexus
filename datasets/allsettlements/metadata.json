@@ -1,0 +1,41 @@
+{
+  "source_row": 9,
+  "slug": "allsettlements",
+  "title": "Точно: населённые пункты и перепись 2020–2021",
+  "status": "downloaded",
+  "source_url": "https://tochno.st/datasets/allsettlements",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "Перепись 2020–2021; версия 25.09.2026",
+  "license": "Условия не подтверждены отдельно; сохраняйте указание Росстата и Точно и сверяйте право использования по описанию источника.",
+  "description": "Полная публичная анонимизированная CSV-выгрузка населения, координат и национального состава; выбранные территории не ограничивались.",
+  "limitations": "176215 строк × 237 полей, из них 155747 строк уровня «Населенный пункт». Остальные строки — агрегаты разных уровней и анонимизации; суммировать их вместе нельзя. Страница сообщает 176131 наблюдение: зафиксировано расхождение с фактическим файлом. Отсутствующие координаты надо оценивать по уровню объекта, не по всем строкам сразу. Чувствительные значения национального состава для малых поселений закодированы-9; полная неанонимизированная версия не запрашивалась.",
+  "files": [
+    {
+      "path": "derived/coverage_by_region.csv",
+      "url": "https://tochno.st/datasets/allsettlements",
+      "download_url": null,
+      "bytes": 3878,
+      "sha256": "2db34c4c35abaeb7f2f54d6f79fd5738a8084d95105dd17d6f80b5ee2e44c361",
+      "kind": "derived_data"
+    },
+    {
+      "path": "raw/data_allsettlements_anon_156_v20260925_csv.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_settlements_156_v20260925/data_allsettlements_anon_156_v20260925_csv.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_settlements_156_v20260925/data_allsettlements_anon_156_v20260925_csv.zip",
+      "bytes": 17270412,
+      "sha256": "33488f0ea405aeee055d454236238297540d042e473c88156da94416b6ea5562",
+      "kind": "raw_data"
+    },
+    {
+      "path": "raw/description_allsettlements_156_v20260925.pdf",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_settlements_156_v20260925/description_allsettlements_156_v20260925.pdf",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_settlements_156_v20260925/description_allsettlements_156_v20260925.pdf",
+      "bytes": 271754,
+      "sha256": "ca53efeacc693f4185dc7188ae5f2eea1bbc2adc1baa32d1546ea32a579a16ec",
+      "kind": "source_documentation"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": []
+}

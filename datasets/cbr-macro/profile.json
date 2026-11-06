@@ -1,0 +1,55 @@
+{
+  "geography": "Россия; макроэкономические ряды федерального уровня, регионов нет.",
+  "period": "USD/RUB: вся доступная история с 01.07.1992 до 06.11.2026; месячные инфляция и ключевая ставка: 09.2013–09.2026; платёжный баланс: бюллетень за III квартал 2025, сравнения 2023–2025.",
+  "geographic_completeness": "See limitations; no inferred all-region completeness.",
+  "files": [
+    {
+      "file": "raw/balance-of-payments-2025-q3.pdf",
+      "pages": 13,
+      "format": "PDF report/document; not a normalized data table"
+    },
+    {
+      "file": "raw/currencies.xml",
+      "root": "Valuta",
+      "records": 83,
+      "columns": [
+        "ID",
+        "Name",
+        "EngName",
+        "Nominal",
+        "ParentCode",
+        "ISO_Num_Code",
+        "ISO_Char_Code"
+      ]
+    },
+    {
+      "file": "raw/inflation-keyrate-2013-2026.xlsx",
+      "sheets": [
+        {
+          "name": "Инфляция и ключевая ставка Банк",
+          "rows": 157,
+          "columns": [
+            "Дата",
+            "Ключевая ставка, % годовых",
+            "Инфляция, % г/г",
+            "Цель по инфляции"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "raw/usd-rub-1992-2026.xml",
+      "root": "ValCurs",
+      "records": 7956,
+      "columns": [
+        "Date",
+        "Id",
+        "Nominal",
+        "Value",
+        "VunitRate"
+      ],
+      "first_date": "1992-07-01",
+      "last_date": "2026-11-06"
+    }
+  ]
+}

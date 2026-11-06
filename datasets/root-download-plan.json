@@ -1,0 +1,77 @@
+[
+  {
+    "url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+    "destination": "datasets/ourairports-russia/raw/airports.csv",
+    "source_row": 11
+  },
+  {
+    "url": "https://davidmegginson.github.io/ourairports-data/runways.csv",
+    "destination": "datasets/ourairports-russia/raw/runways.csv",
+    "source_row": 11
+  },
+  {
+    "url": "https://davidmegginson.github.io/ourairports-data/airport-frequencies.csv",
+    "destination": "datasets/ourairports-russia/raw/airport-frequencies.csv",
+    "source_row": 11
+  },
+  {
+    "url": "https://davidmegginson.github.io/ourairports-data/navaids.csv",
+    "destination": "datasets/ourairports-russia/raw/navaids.csv",
+    "source_row": 11
+  },
+  {
+    "url": "https://davidmegginson.github.io/ourairports-data/countries.csv",
+    "destination": "datasets/ourairports-russia/raw/countries.csv",
+    "source_row": 11
+  },
+  {
+    "url": "https://davidmegginson.github.io/ourairports-data/regions.csv",
+    "destination": "datasets/ourairports-russia/raw/regions.csv",
+    "source_row": 11
+  },
+  {
+    "url": "https://download.geonames.org/export/dump/RU.zip",
+    "destination": "datasets/geonames-russia/raw/RU.zip",
+    "source_row": 13
+  },
+  {
+    "url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+    "destination": "datasets/geonames-russia/raw/admin1CodesASCII.txt",
+    "source_row": 13
+  },
+  {
+    "url": "https://download.geonames.org/export/dump/admin2Codes.txt",
+    "destination": "datasets/geonames-russia/raw/admin2Codes.txt",
+    "source_row": 13
+  },
+  {
+    "url": "https://download.geonames.org/export/dump/featureCodes_en.txt",
+    "destination": "datasets/geonames-russia/raw/featureCodes_en.txt",
+    "source_row": 13
+  },
+  {
+    "url": "https://download.geonames.org/export/dump/countryInfo.txt",
+    "destination": "datasets/geonames-russia/raw/countryInfo.txt",
+    "source_row": 13
+  },
+  {
+    "url": "https://download.geonames.org/export/dump/readme.txt",
+    "destination": "datasets/geonames-russia/raw/readme.txt",
+    "source_row": 13
+  },
+  {
+    "url": "https://codeload.github.com/isdayoff/calendars/zip/refs/heads/main",
+    "destination": "datasets/production-calendar/raw/isdayoff-calendars-main.zip",
+    "source_row": 26
+  },
+  {
+    "url": "https://isdayoff.ru/api/getdata?year=2026&cc=ru",
+    "destination": "datasets/production-calendar/raw/ru-2026-api.txt",
+    "source_row": 26
+  },
+  {
+    "url": "https://fias.nalog.ru/WebServices/Public/GetLastDownloadFileInfo",
+    "destination": "datasets/gar-addresses/raw/download-file-info.json",
+    "source_row": 25
+  }
+]

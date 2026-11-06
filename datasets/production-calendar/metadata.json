@@ -1,0 +1,33 @@
+{
+  "source_row": 26,
+  "slug": "production-calendar",
+  "title": "Производственный календарь isDayOff",
+  "status": "downloaded",
+  "source_url": "https://github.com/isdayoff/calendars",
+  "geography": "РФ и доступные региональные календари в архиве",
+  "period": "2004–2027; дополнительно полный ответ API за 2026",
+  "license": "Отдельная лицензия в репозитории не обнаружена",
+  "limitations": [
+    "Региональные календари неполны по годам; будущие даты могут меняться."
+  ],
+  "files": [
+    {
+      "path": "raw/isdayoff-calendars-main.zip",
+      "url": "https://codeload.github.com/isdayoff/calendars/zip/refs/heads/main",
+      "final_url": "https://codeload.github.com/isdayoff/calendars/zip/refs/heads/main",
+      "retrieved_at": "2026-11-06T18:27:46.427819+00:00",
+      "bytes": 57044,
+      "sha256": "f48c0dc3d4d2cd3482afd9e1923297d78c2824d2295a60599bbc8a5ce0f56243",
+      "kind": "data"
+    },
+    {
+      "path": "raw/ru-2026-api.txt",
+      "url": "https://isdayoff.ru/api/getdata?year=2026&cc=ru",
+      "final_url": "https://isdayoff.ru/api/getdata?year=2026&cc=ru",
+      "retrieved_at": "2026-11-06T18:27:45.524749+00:00",
+      "bytes": 365,
+      "sha256": "1182cdd53e843bc2363214e4d491f11de6d9e5d1d88a32f4d9c526c94f5250dc",
+      "kind": "data"
+    }
+  ]
+}

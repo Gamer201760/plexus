@@ -1,0 +1,62 @@
+{
+  "source_row": 29,
+  "slug": "transport-strategy",
+  "title": "Транспортная стратегия РФ до 2030/2035 года",
+  "status": "downloaded",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "Федеральный уровень РФ, направления транспорта и территории в тексте.",
+  "period": "Распоряжение 3363-р от 27.11.2021, горизонт до 2030 года с прогнозом до 2035 года.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Полный исходный PDF Минтранса: 285 страниц. Это нормативный документ с целевыми показателями, а не статистическая таблица. Скачана исходная публикация 2021 года; актуальная редакция и изменения после неё отдельно не проверены.",
+  "source_urls": [
+    "https://mintrans.gov.ru/eye/documents/2/11577",
+    "https://www.mintrans.gov.ru/file/473193"
+  ],
+  "files": [
+    {
+      "path": "raw/transport-strategy-3363r-2021.pdf",
+      "bytes": 1616103,
+      "sha256": "909c861d2197a5e5b5fba5b55eb8faae72e386c52d8453e619227ac07676070d",
+      "url": "https://www.mintrans.gov.ru/file/473193",
+      "retrieved_at": "2026-11-06T18:28:51.309982+00:00",
+      "content_type": "application/pdf",
+      "kind": "original_download",
+      "pages": 285
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://rostransnadzor.gov.ru/storage/documents/%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%B0/I-3.2.1.%D0%A0%D0%B0%D1%81%D0%BF%D0%BE%D1%80%D1%8F%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%B0%20%D0%A0%D0%A4%20%D0%BE%D1%82%2027.11.2021%20%E2%84%963363-%D1%80.pdf",
+      "file": "datasets/transport-strategy/raw/transport-strategy-3363r-2021-ed2024.pdf",
+      "retrieved_at": "2026-11-06T18:26:25.348816+00:00",
+      "status": "failed",
+      "error": "curl: (22) The requested URL returned error: 403"
+    },
+    {
+      "url": "https://static.government.ru/media/files/7enYF2uL5kFZlOOpQhLl0nUT91RjCbeR.pdf",
+      "file": "datasets/transport-strategy/raw/transport-strategy-3363r-2021.pdf",
+      "retrieved_at": "2026-11-06T18:27:45.084524+00:00",
+      "status": "failed",
+      "error": "curl: (28) SSL connection timeout"
+    },
+    {
+      "url": "http://static.government.ru/media/files/7enYF2uL5kFZlOOpQhLl0nUT91RjCbeR.pdf",
+      "file": "datasets/transport-strategy/raw/transport-strategy-3363r-2021.pdf",
+      "retrieved_at": "2026-11-06T18:28:23.802335+00:00",
+      "status": "failed",
+      "error": "curl: (52) Empty reply from server"
+    },
+    {
+      "url": "https://www.mintrans.gov.ru/file/473193",
+      "file": "datasets/transport-strategy/raw/transport-strategy-3363r-2021.pdf",
+      "retrieved_at": "2026-11-06T18:28:51.309982+00:00",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "final_url": "https://www.mintrans.gov.ru/file/473193",
+      "status": "downloaded",
+      "bytes": 1616103,
+      "sha256": "909c861d2197a5e5b5fba5b55eb8faae72e386c52d8453e619227ac07676070d"
+    }
+  ],
+  "profile_path": "profile.json"
+}

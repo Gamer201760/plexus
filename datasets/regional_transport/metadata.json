@@ -1,0 +1,33 @@
+{
+  "source_row": 2,
+  "slug": "regional_transport",
+  "title": "Точно / Росстат: транспорт регионов",
+  "status": "downloaded",
+  "source_url": "https://tochno.st/datasets/regions_collection",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "2001–2024",
+  "license": "CC BY 4.0, прямо указана на странице подборки.",
+  "description": "Полный опубликованный раздел 16 «Транспорт» сборника «Регионы России. Социально-экономические показатели» в обработке Точно.",
+  "limitations": "31872 строки × 14 полей,13 показателей. В одном файле есть регионы, федеральные округа и страна: нельзя суммировать все уровни. Годы и показатели покрыты неравномерно; единицы и методические оговорки находятся в indicator_unit и comment. В indicator_value есть числовые коды пропуска: -99999999 — нет информации, -77777777 — скрыто. Их нельзя включать в расчёт как измеренные числа.",
+  "files": [
+    {
+      "path": "raw/data_16_socio_economic_102_v20260313.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_16_socio_economic_102_v20260313.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_16_socio_economic_102_v20260313.zip",
+      "bytes": 2259923,
+      "sha256": "aa717221482c6abe5e63156c8b43d8b6aa6dff7da358ca57fb1104c17ce82d19",
+      "kind": "raw_data"
+    },
+    {
+      "path": "raw/description_regions_collection_102_v20260313.pdf",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/description_regions_collection_102_v20260313.pdf",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/description_regions_collection_102_v20260313.pdf",
+      "bytes": 230594,
+      "sha256": "e5b6f09f05ba6bf165f1d9065e8cd2d071a9f81225e21f0fe2837ee1b3aa8a00",
+      "kind": "source_documentation"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": []
+}

@@ -1,0 +1,12 @@
+{
+  "geography": "РФ, субъекты, федеральные округа, наблюдаемые города и станции; покрытие определяется сетью мониторинга, не всеми населёнными пунктами.",
+  "period": "Обзор за 2024 год; отдельные сравнительные ряды предшествующих лет.",
+  "geographic_completeness": "See limitations; no inferred all-region completeness.",
+  "files": [
+    {
+      "file": "raw/environment-review-2024.pdf",
+      "pages": 222,
+      "format": "PDF report/document; not a normalized data table"
+    }
+  ]
+}

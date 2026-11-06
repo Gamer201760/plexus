@@ -1,0 +1,12 @@
+{
+  "geography": "Федеральные проекты и объекты РФ; имеется привязка к отдельным транспортным направлениям, не единая таблица всех регионов.",
+  "period": "Паспорт транспортной части комплексного плана на период 30.07.2018–31.12.2024; таблица содержит базовые и целевые годы.",
+  "geographic_completeness": "See limitations; no inferred all-region completeness.",
+  "files": [
+    {
+      "file": "raw/infrastructure-plan-passport-2024.pdf",
+      "pages": 32,
+      "format": "PDF report/document; not a normalized data table"
+    }
+  ]
+}

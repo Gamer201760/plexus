@@ -39,3 +39,7 @@ models/
 *.pt
 *.gguf
 var/
+
+datasets/**/raw/
+datasets/**/derived/
+datasets/**/*.part

@@ -1,0 +1,69 @@
+{
+  "source_row": 13,
+  "slug": "geonames-russia",
+  "title": "GeoNames: населённые пункты РФ",
+  "status": "downloaded",
+  "source_url": "https://download.geonames.org/export/dump/",
+  "geography": "Полная выгрузка RU; класс P выделен отдельно",
+  "period": "Текущий снимок; даты населения неоднородны",
+  "license": "CC BY 4.0",
+  "limitations": [
+    "Нулевая численность часто означает отсутствие данных; admin1 требует сопоставления другим справочникам."
+  ],
+  "files": [
+    {
+      "path": "raw/RU.zip",
+      "url": "https://download.geonames.org/export/dump/RU.zip",
+      "final_url": "https://download.geonames.org/export/dump/RU.zip",
+      "retrieved_at": "2026-11-06T18:27:56.536008+00:00",
+      "bytes": 15264343,
+      "sha256": "ff0b1ccc325d64bd56ae261059e56192855e4ad8d7e1c3362e009e52e0be1367",
+      "kind": "data"
+    },
+    {
+      "path": "raw/admin1CodesASCII.txt",
+      "url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+      "final_url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+      "retrieved_at": "2026-11-06T18:27:35.235071+00:00",
+      "bytes": 151571,
+      "sha256": "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3",
+      "kind": "data"
+    },
+    {
+      "path": "raw/admin2Codes.txt",
+      "url": "https://download.geonames.org/export/dump/admin2Codes.txt",
+      "final_url": "https://download.geonames.org/export/dump/admin2Codes.txt",
+      "retrieved_at": "2026-11-06T18:27:41.387929+00:00",
+      "bytes": 2371804,
+      "sha256": "a8d8181ac05e7bf49797cb7cdc1d1ceae8248eb8639b985f0b908e1a95a35955",
+      "kind": "data"
+    },
+    {
+      "path": "raw/featureCodes_en.txt",
+      "url": "https://download.geonames.org/export/dump/featureCodes_en.txt",
+      "final_url": "https://download.geonames.org/export/dump/featureCodes_en.txt",
+      "retrieved_at": "2026-11-06T18:27:40.115166+00:00",
+      "bytes": 58642,
+      "sha256": "d44f129c1cffdeabf759c99fe7ea5b84f615c7f3e7366fb76ccf990f408f6af7",
+      "kind": "data"
+    },
+    {
+      "path": "raw/countryInfo.txt",
+      "url": "https://download.geonames.org/export/dump/countryInfo.txt",
+      "final_url": "https://download.geonames.org/export/dump/countryInfo.txt",
+      "retrieved_at": "2026-11-06T18:27:41.960079+00:00",
+      "bytes": 32112,
+      "sha256": "79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04",
+      "kind": "data"
+    },
+    {
+      "path": "raw/readme.txt",
+      "url": "https://download.geonames.org/export/dump/readme.txt",
+      "final_url": "https://download.geonames.org/export/dump/readme.txt",
+      "retrieved_at": "2026-11-06T18:27:43.586607+00:00",
+      "bytes": 8843,
+      "sha256": "b1957379b6c1242c700c98ac9a8aa0a09f56c3c0a50ee72175527005f48ef2c5",
+      "kind": "data"
+    }
+  ]
+}

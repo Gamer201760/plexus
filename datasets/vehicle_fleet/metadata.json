@@ -1,0 +1,62 @@
+{
+  "source_row": 35,
+  "slug": "vehicle_fleet",
+  "title": "Росстат: парк транспортных средств",
+  "status": "blocked",
+  "source_url": "https://rosstat.gov.ru/statistics/transport",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "Не установлен по файлам: таблицы не скачаны",
+  "license": "Не установлена.",
+  "description": "Официальная страница Росстата перечисляет наличие транспортных средств, собственные легковые автомобили на 1000 жителей и грузовые автомобили/автобусы по видам топлива.",
+  "limitations": "Опубликованные адреса Nalichie_TS_2024.xlsx, Obesp_legk_avto_2024.xlsx и Nal_gruz_avto_bus_2024.xlsx отдают 404. Проверенные актуальные по схеме имён варианты 2025 тоже 404. Данных автопарка здесь нет; HTML и ответы 404 не сохранены как датасет. Для завершения нужен рабочий официальный файл или точный показатель/экспорт ЕМИСС.",
+  "files": [],
+  "profile": null,
+  "coverage": "coverage.md",
+  "attempts": [
+    {
+      "title": "Наличие транспортных средств (с 2000 г.)",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/Nalichie_TS_2024.xlsx",
+      "slug": "vehicle_fleet",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/vehicle_fleet/raw/Nalichie_TS_2024.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null
+    },
+    {
+      "title": "Количество собственных легковых автомобилей на 1000 человек населения (с 2000 г.)",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/Obesp_legk_avto_2024.xlsx",
+      "slug": "vehicle_fleet",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/vehicle_fleet/raw/Obesp_legk_avto_2024.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null
+    },
+    {
+      "slug": "vehicle_fleet",
+      "url": "https://rosstat.gov.ru/storage/mediabank/Nalichie_TS_2025.xlsx",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/vehicle_fleet/raw/Nalichie_TS_2025.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null,
+      "url_discovery": "Versioned filename inferred from published Rosstat file pattern and October 2026 catalog update; accepted only if actual file download succeeds."
+    },
+    {
+      "slug": "vehicle_fleet",
+      "url": "https://rosstat.gov.ru/storage/mediabank/Obesp_legk_avto_2025.xlsx",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/vehicle_fleet/raw/Obesp_legk_avto_2025.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null,
+      "url_discovery": "Versioned filename inferred from published Rosstat file pattern and October 2026 catalog update; accepted only if actual file download succeeds."
+    },
+    {
+      "slug": "vehicle_fleet",
+      "url": "https://rosstat.gov.ru/storage/mediabank/Nal_gruz_avto_bus_2025.xlsx",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/vehicle_fleet/raw/Nal_gruz_avto_bus_2025.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null,
+      "url_discovery": "Versioned filename inferred from published Rosstat file pattern and October 2026 catalog update; accepted only if actual file download succeeds."
+    }
+  ]
+}

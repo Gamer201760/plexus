@@ -1,0 +1,12 @@
+{
+  "geography": "Федеральный уровень РФ, направления транспорта и территории в тексте.",
+  "period": "Распоряжение 3363-р от 27.11.2021, горизонт до 2030 года с прогнозом до 2035 года.",
+  "geographic_completeness": "See limitations; no inferred all-region completeness.",
+  "files": [
+    {
+      "file": "raw/transport-strategy-3363r-2021.pdf",
+      "pages": 285,
+      "format": "PDF report/document; not a normalized data table"
+    }
+  ]
+}

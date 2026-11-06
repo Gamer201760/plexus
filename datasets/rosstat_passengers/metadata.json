@@ -1,0 +1,79 @@
+{
+  "source_row": 17,
+  "slug": "rosstat_passengers",
+  "title": "Росстат: пассажирские перевозки и пассажирооборот",
+  "status": "partial",
+  "source_url": "https://rosstat.gov.ru/statistics/transport",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "Доступные региональные данные 2001–2024",
+  "license": "Для сохранённой публикации Точно CC BY 4.0.",
+  "description": "Оригинальные текущие XLSX из транспортного раздела Росстата недоступны по опубликованным ссылкам 404. Сохранены все строки пассажирских показателей из полного регионального раздела 16 в обработке Точно.",
+  "limitations": "Частичное покрытие: автобусные перевозки, автобусный пассажирооборот и отправление пассажиров железной дорогой; это не полная текущая месячная статистика всех видов транспорта. Исходный ZIP и полный фильтр пассажирских показателей сохранены. В исходных значениях есть числовые коды пропуска -99999999 (нет информации) и -77777777 (скрыто); перед расчётами их нужно исключать, сохраняя причины пропусков.",
+  "files": [
+    {
+      "path": "derived/passenger_indicators.csv",
+      "url": "https://rosstat.gov.ru/statistics/transport",
+      "download_url": null,
+      "bytes": 4056112,
+      "sha256": "d20e71d1290ad2671b66647707eea4c37aa2759cee5059c25913cf87e75ec2c3",
+      "kind": "derived_data"
+    },
+    {
+      "path": "raw/data_16_socio_economic_102_v20260313.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_16_socio_economic_102_v20260313.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_16_socio_economic_102_v20260313.zip",
+      "bytes": 2259923,
+      "sha256": "aa717221482c6abe5e63156c8b43d8b6aa6dff7da358ca57fb1104c17ce82d19",
+      "kind": "raw_data"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": [
+    {
+      "title": "Перевозки пассажиров по видам транспорта общего пользования",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/PerevPass-01-2026.xlsx",
+      "slug": "rosstat_passengers",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/raw/PerevPass-01-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null
+    },
+    {
+      "title": "Пассажирооборот по видам транспорта общего пользования",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/Passoborot-01-2026.xlsx",
+      "slug": "rosstat_passengers",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/raw/Passoborot-01-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null
+    },
+    {
+      "title": "Количество грузовых автомобилей и пассажирских автобусов по видам топлива в организациях всех видов экономической деятельности по субъектам Российской Федерации (с 2010 г.)",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/Nal_gruz_avto_bus_2024.xlsx",
+      "slug": "rosstat_passengers",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/raw/Nal_gruz_avto_bus_2024.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null
+    },
+    {
+      "slug": "rosstat_passengers",
+      "url": "https://rosstat.gov.ru/storage/mediabank/PerevPass-09-2026.xlsx",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/raw/PerevPass-09-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null,
+      "url_discovery": "Versioned filename inferred from published Rosstat file pattern and October 2026 catalog update; accepted only if actual file download succeeds."
+    },
+    {
+      "slug": "rosstat_passengers",
+      "url": "https://rosstat.gov.ru/storage/mediabank/Passoborot-09-2026.xlsx",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/raw/Passoborot-09-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null,
+      "url_discovery": "Versioned filename inferred from published Rosstat file pattern and October 2026 catalog update; accepted only if actual file download succeeds."
+    }
+  ]
+}

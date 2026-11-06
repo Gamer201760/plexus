@@ -1,0 +1,24 @@
+{
+  "source_row": 25,
+  "slug": "gar-addresses",
+  "title": "ФИАС / ГАР: адресный реестр",
+  "status": "deferred_disk",
+  "source_url": "https://fias.nalog.ru/WebServices/Public/GetLastDownloadFileInfo",
+  "geography": "РФ",
+  "period": "Версия 06.11.2026; скачаны только метаданные выгрузки",
+  "license": "Открытый реестр ФНС; точные условия использования уточнить",
+  "limitations": [
+    "Полный ZIP 58 052 049 925 байт, свободно около 29 ГБ. Сам адресный реестр не скачан. Дельта без базового снимка не заменяет полный реестр."
+  ],
+  "files": [
+    {
+      "path": "raw/download-file-info.json",
+      "url": "https://fias.nalog.ru/WebServices/Public/GetLastDownloadFileInfo",
+      "final_url": "https://fias.nalog.ru/WebServices/Public/GetLastDownloadFileInfo",
+      "retrieved_at": "2026-11-06T18:27:45.651796+00:00",
+      "bytes": 551,
+      "sha256": "f8d406dc61ccbbd82d07d1b35bb4d4ebb87f51000ea03744a042831dc1f8164d",
+      "kind": "metadata"
+    }
+  ]
+}
