@@ -1,0 +1,27 @@
+#price-chart .pc3-wrap {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 56px;
+  height: 100%;
+}
+
+#price-chart .pc3 {
+  height: 100%;
+}
+
+#price-chart .pc3-side {
+  display: grid;
+  align-content: center;
+  gap: 56px;
+  padding-left: 40px;
+  border-left: 1px solid var(--deck-line);
+}
+
+#price-chart .pc3-side .kpi-value {
+  font-size: 72px;
+  white-space: nowrap;
+}
+
+#price-chart .pc3-up {
+  color: var(--deck-success);
+}

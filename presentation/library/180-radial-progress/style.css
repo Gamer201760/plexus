@@ -1,0 +1,23 @@
+#radial-progress .rp {
+  gap: 32px;
+}
+
+#radial-progress .rp-item {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  justify-items: center;
+  gap: 16px;
+  padding: 32px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#radial-progress .rp-viz {
+  width: 100%;
+  height: 100%;
+}
+
+#radial-progress .rp-item b {
+  font-size: var(--fs-lead);
+}

@@ -1,0 +1,144 @@
+#queue .qu {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 440px 1fr;
+  align-items: center;
+  gap: 80px;
+  height: 100%;
+}
+
+#queue .qu-in,
+#queue .qu-out {
+  display: grid;
+  gap: 16px;
+}
+
+#queue .qu-doc {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  gap: 20px;
+  height: 88px;
+  padding: 0 24px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#queue .qu-doc::before {
+  content: "";
+  height: 52px;
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--deck-accent) 14%, var(--deck-raised));
+}
+
+#queue .qu-doc::after {
+  content: "";
+  height: 40px;
+  background:
+    linear-gradient(var(--deck-sunken), var(--deck-sunken)) 0 4px / 85% 12px no-repeat,
+    linear-gradient(var(--deck-sunken), var(--deck-sunken)) 0 26px / 50% 12px no-repeat;
+}
+
+#queue .qu-machine {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  padding: 64px 40px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  box-shadow: 0 0 0 3px var(--deck-accent), var(--shadow-float);
+  font-size: var(--fs-body);
+}
+
+#queue .qu-machine .tile {
+  width: 136px;
+  height: 136px;
+}
+
+#queue .qu-beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 6px;
+  background: var(--deck-accent);
+  opacity: 0.5;
+}
+
+#queue.play .qu-beam {
+  animation: qu-scan 1.4s var(--ease-in-out) 0.8s infinite alternate;
+}
+
+@keyframes qu-scan {
+  to {
+    translate: 0 360px;
+  }
+}
+
+#queue .qu-res {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 88px;
+  padding: 0 28px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+}
+
+#queue .qu-res b {
+  font-size: 40px;
+}
+
+#queue .qu-res.is-ok .ico {
+  color: var(--deck-success);
+}
+
+#queue .qu-res.is-bad .ico {
+  color: var(--deck-danger);
+}
+
+#queue .qu-fly {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 72px;
+  height: 52px;
+  border-radius: 8px;
+  background: var(--deck-accent);
+  opacity: 0;
+}
+
+#queue.play .qu-fly {
+  animation: qu-fly 2.4s var(--ease-in-out) 0.8s infinite;
+}
+
+@keyframes qu-fly {
+  0% {
+    translate: 380px 0;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  45% {
+    translate: 760px 0;
+    opacity: 0;
+  }
+  55% {
+    translate: 860px 0;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    translate: 1220px 0;
+    opacity: 0;
+  }
+}

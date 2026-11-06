@@ -1,0 +1,67 @@
+#swot .sw {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: 100%;
+}
+
+#swot .sw-axis {
+  display: none;
+}
+
+#swot .sw-q {
+  display: grid;
+  align-content: start;
+  gap: 20px;
+  padding: 32px 40px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#swot .sw-q.is-s {
+  background: color-mix(in oklab, var(--deck-accent) 10%, var(--deck-raised));
+  border-color: color-mix(in oklab, var(--deck-accent) 40%, var(--deck-bg));
+}
+
+#swot .sw-q.is-t {
+  background: color-mix(in oklab, var(--deck-danger) 6%, var(--deck-raised));
+}
+
+#swot .sw-tag {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+}
+
+#swot .is-s .sw-tag {
+  color: var(--deck-accent);
+}
+
+#swot .is-w .sw-tag {
+  color: var(--deck-fg-2);
+}
+
+#swot .is-o .sw-tag {
+  color: var(--deck-success);
+}
+
+#swot .is-t .sw-tag {
+  color: var(--deck-danger);
+}
+
+#swot .sw-q ul {
+  display: grid;
+  gap: 16px;
+  font-size: var(--fs-body);
+  color: var(--deck-fg-2);
+}
+
+#swot .sw-q li {
+  padding-left: 24px;
+  border-left: 3px solid var(--deck-line-strong);
+}

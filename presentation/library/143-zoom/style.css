@@ -1,0 +1,82 @@
+#zoom .zm {
+  position: relative;
+  height: 100%;
+}
+
+#zoom .zm-doc {
+  position: absolute;
+  left: 80px;
+  top: 40px;
+  display: grid;
+  align-content: start;
+  gap: 22px;
+  width: 460px;
+  height: 600px;
+  padding: 48px 40px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  box-shadow: var(--shadow-float);
+}
+
+#zoom .zm-line {
+  height: 16px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-sunken);
+}
+
+#zoom .zm-line.is-short {
+  width: 60%;
+}
+
+#zoom .zm-hit {
+  height: 40px;
+  border: 3px solid var(--deck-danger);
+  border-radius: var(--radius-sm);
+}
+
+#zoom .zm-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#zoom .zm-lens {
+  position: absolute;
+  left: 900px;
+  top: 90px;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 20px;
+  width: 700px;
+  height: 510px;
+  padding: 56px;
+  border-radius: 40px;
+  background: var(--deck-raised);
+  box-shadow: 0 0 0 4px var(--deck-danger), var(--shadow-float);
+}
+
+#zoom .zm-digits,
+#zoom .zm-fix {
+  font-family: var(--font-mono);
+  font-size: 88px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+#zoom .zm-digits b {
+  color: var(--deck-danger);
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+}
+
+#zoom .zm-fix {
+  font-size: 56px;
+  color: var(--deck-fg-3);
+}
+
+#zoom .zm-fix b {
+  color: var(--deck-success);
+}

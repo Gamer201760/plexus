@@ -1,0 +1,10 @@
+#calendar .ca {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 48px;
+  height: 100%;
+}
+
+#calendar .kpi-value {
+  font-size: 72px;
+}

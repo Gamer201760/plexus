@@ -1,0 +1,67 @@
+#flywheel .fw {
+  position: relative;
+  width: 690px;
+  height: 690px;
+  margin: 0 auto;
+}
+
+#flywheel .fw-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#flywheel .fw-track {
+  fill: none;
+  stroke: var(--deck-sunken);
+  stroke-width: 24;
+}
+
+#flywheel .fw-spin {
+  transform-origin: 345px 345px;
+}
+
+#flywheel.play .fw-spin {
+  animation: fw-spin 6s linear 2.2s infinite;
+}
+
+@keyframes fw-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#flywheel .fw-node {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  translate: -50% -50%;
+  padding: 16px 28px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-raised);
+  box-shadow: 0 0 0 2px var(--deck-accent), var(--shadow-raised);
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-strong);
+  white-space: nowrap;
+}
+
+#flywheel .fw-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 160px;
+  height: 160px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#flywheel .fw-core .ico {
+  width: 72px;
+  height: 72px;
+}

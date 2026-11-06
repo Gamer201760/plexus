@@ -1,0 +1,82 @@
+#terminal .tr {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--deck-fg);
+  color: var(--deck-bg);
+}
+
+#terminal .tr-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 24px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: color-mix(in oklab, var(--deck-bg) 55%, var(--deck-fg));
+}
+
+#terminal .tr-bar i {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--deck-bg) 25%, var(--deck-fg));
+}
+
+#terminal .tr-bar span {
+  margin-left: 16px;
+}
+
+#terminal .tr-body {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 16px 40px;
+  font-family: var(--font-mono);
+  font-size: 28px;
+}
+
+#terminal .tr-line {
+  color: color-mix(in oklab, var(--deck-bg) 70%, var(--deck-fg));
+}
+
+#terminal .tr-line.is-cmd {
+  color: var(--deck-bg);
+}
+
+#terminal .tr-line b {
+  color: color-mix(in oklab, var(--deck-accent) 55%, var(--deck-bg));
+}
+
+#terminal .is-ok {
+  margin-right: 16px;
+  color: color-mix(in oklab, var(--deck-success) 60%, var(--deck-bg));
+}
+
+#terminal .tr-cursor {
+  display: inline-block;
+  width: 16px;
+  height: 30px;
+  vertical-align: -4px;
+  background: var(--deck-bg);
+  animation: tr-blink 1s steps(1) infinite;
+}
+
+@keyframes tr-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+#terminal .tr-chips {
+  display: flex;
+  gap: 16px;
+  padding: 24px 40px 32px;
+}
+
+#terminal .chip {
+  border-color: color-mix(in oklab, var(--deck-bg) 30%, var(--deck-fg));
+  color: var(--deck-bg);
+}

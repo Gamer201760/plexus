@@ -1,0 +1,61 @@
+#problem .problem-flow {
+  position: absolute;
+  left: var(--gutter);
+  top: 360px;
+  width: 1680px;
+  height: 200px;
+}
+
+#problem .problem-flow svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#problem .problem-ping {
+  color: var(--deck-danger);
+}
+
+#problem .problem-steps {
+  position: absolute;
+  left: var(--gutter);
+  top: 500px;
+  width: 1680px;
+}
+
+#problem .problem-steps li {
+  position: absolute;
+  left: var(--x);
+  width: 320px;
+  translate: -50% 0;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  text-align: center;
+  font-size: var(--fs-caption);
+  line-height: var(--lh-snug);
+  color: var(--deck-fg-2);
+}
+
+#problem .problem-steps .is-break b {
+  font-weight: var(--weight-strong);
+  color: var(--deck-danger);
+}
+
+#problem .problem-steps .is-lost {
+  color: var(--deck-fg-3);
+}
+
+#problem .problem-cost {
+  font-size: var(--fs-lead);
+  color: var(--deck-fg);
+}
+
+#problem .problem-outcome {
+  position: absolute;
+  left: var(--gutter);
+  top: var(--facts-top);
+  width: 1680px;
+  color: var(--deck-fg);
+}

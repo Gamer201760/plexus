@@ -1,0 +1,63 @@
+#reasoning .rs {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr auto;
+  gap: 16px;
+  height: 100%;
+}
+
+#reasoning .rs-row {
+  display: grid;
+  grid-template-columns: 700px 1fr;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#reasoning .rs-what {
+  display: grid;
+  gap: 6px;
+  height: 100%;
+  align-content: center;
+  padding: 0 40px;
+  border-right: 1px solid var(--deck-line);
+}
+
+#reasoning .rs-val {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  font-family: var(--font-mono);
+  font-size: 56px;
+  white-space: nowrap;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+}
+
+#reasoning .rs-val b {
+  color: var(--deck-accent);
+}
+
+#reasoning .rs-val small {
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-3);
+}
+
+#reasoning .rs-arrow {
+  align-self: center;
+  color: var(--deck-fg-3);
+}
+
+#reasoning .rs-why {
+  display: grid;
+  gap: 8px;
+  padding: 0 40px;
+  font-size: var(--fs-body);
+}
+
+#reasoning .rs-foot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

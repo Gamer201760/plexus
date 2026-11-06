@@ -1,0 +1,23 @@
+#share-donuts .sd {
+  gap: 48px;
+}
+
+#share-donuts .sd-item {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  justify-items: center;
+  gap: 8px;
+  text-align: center;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#share-donuts .sd-viz {
+  width: 100%;
+  height: 100%;
+}
+
+#share-donuts .sd-item b {
+  font-size: var(--fs-lead);
+  color: var(--deck-fg);
+}

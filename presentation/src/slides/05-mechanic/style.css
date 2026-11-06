@@ -1,0 +1,73 @@
+#mechanic .mech {
+  position: absolute;
+  left: var(--gutter);
+  top: 290px;
+  width: 1680px;
+  height: 480px;
+}
+
+#mechanic .mech-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#mechanic .mech-ping {
+  color: var(--deck-accent);
+}
+
+#mechanic .mech-in {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#mechanic .mech-in li {
+  position: absolute;
+  left: 0;
+  top: var(--y);
+  width: 220px;
+  translate: 0 -50%;
+  text-align: right;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#mechanic .mech-core {
+  position: absolute;
+  left: 840px;
+  top: 340px;
+  width: 360px;
+  margin: 0;
+  translate: -50% 0;
+  text-align: center;
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg);
+}
+
+#mechanic .mech-out {
+  position: absolute;
+  left: 1440px;
+  top: 240px;
+  width: 240px;
+  margin: 0;
+  translate: 0 -50%;
+  display: grid;
+  gap: 6px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#mechanic .mech-out b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#mechanic .mech-key {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 850px;
+}

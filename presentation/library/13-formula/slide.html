@@ -1,0 +1,22 @@
+<section class="slide" id="formula" data-title="Формулы">
+  <h2 class="title a">{{Считаем}} <em>{{по шагам}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="fm">
+      <div class="tbl fm-tbl">
+        <div class="tbl-row a" style="--d:0.3s"><span class="n">1</span><b>{{Риск}}</b><span class="fm-eq">{{r = p(просрочка) × сумма}}</span><span class="micro">{{p из модели, обучена на 31 400 счетах}}</span></div>
+        <div class="tbl-row a" style="--d:0.45s"><span class="n">2</span><b>{{Выгода}}</b><span class="fm-eq">{{S = Σ wᵢ xᵢ}}</span><span class="micro">{{веса из регламента клиента}}</span></div>
+        <div class="tbl-row a" style="--d:0.6s"><span class="n">3</span><b>{{Ограничение}}</b><span class="fm-eq">{{r ≤ L}}</span><span class="micro">{{лимит L из политики, раздел 4}}</span></div>
+        <div class="tbl-row is-ours a" style="--d:0.75s"><span class="n">4</span><b>{{Выбор}}</b><span class="fm-eq">{{x* = argmax S(x)}}</span><span class="micro">{{среди вариантов, где r ≤ L}}</span></div>
+      </div>
+      <div class="fm-ex a" style="--d:1.1s">
+        <span class="eyebrow"><span class="ico is-sm" data-icon="file"></span>{{На примере счёта 1042}}</span>
+        <div class="fm-calc">
+          <span><i>r</i><b>{{0,04 × 1,25 млн = 50 тыс.}}</b></span>
+          <span><i>L</i><b>{{100 тыс.}}</b></span>
+          <span class="is-ok"><i>{{итог}}</i><b>{{r ≤ L, платим сегодня}}</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<section class="slide" id="risk-matrix" data-title="Матрица рисков">
+  <h2 class="title a">{{Рисков пять}}, <em>{{критичных ноль}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="rm">
+      <div class="rm-grid">
+        <span class="rm-y micro f" style="--d:0.2s">{{Вероятность}}</span>
+        <span class="rm-x micro f" style="--d:0.2s">{{Ущерб}}</span>
+        <div class="rm-cells">
+          <span class="rm-c is-2 s" style="--d:0.2s"></span><span class="rm-c is-3 s" style="--d:0.25s"></span><span class="rm-c is-4 s" style="--d:0.3s"></span>
+          <span class="rm-c is-1 s" style="--d:0.25s"></span><span class="rm-c is-2 s" style="--d:0.3s"></span><span class="rm-c is-3 s" style="--d:0.35s"></span>
+          <span class="rm-c is-0 s" style="--d:0.3s"></span><span class="rm-c is-1 s" style="--d:0.35s"></span><span class="rm-c is-2 s" style="--d:0.4s"></span>
+          <span class="pin pop" style="--px:18%;--py:20%;--d:0.8s">1</span>
+          <span class="pin pop" style="--px:50%;--py:52%;--d:0.9s">2</span>
+          <span class="pin pop" style="--px:80%;--py:84%;--d:1s">3</span>
+          <span class="pin pop" style="--px:20%;--py:78%;--d:1.1s">4</span>
+          <span class="pin pop" style="--px:46%;--py:84%;--d:1.2s">5</span>
+        </div>
+      </div>
+      <ol class="rm-list">
+        <li class="a" style="--d:1s"><span class="n">1</span><span><b>{{Ошибка модели}}</b> {{ловит проверка кодом}}</span></li>
+        <li class="a" style="--d:1.1s"><span class="n">2</span><span><b>{{Утечка данных}}</b> {{данные не выходят из контура}}</span></li>
+        <li class="a" style="--d:1.2s"><span class="n">3</span><span><b>{{Падение API}}</b> {{детерминированный запасной путь}}</span></li>
+        <li class="a" style="--d:1.3s"><span class="n">4</span><span><b>{{Медленный ответ}}</b> {{кэш и очередь}}</span></li>
+        <li class="a" style="--d:1.4s"><span class="n">5</span><span><b>{{Сопротивление}}</b> {{пилот на одном отделе}}</span></li>
+      </ol>
+    </div>
+  </div>
+</section>

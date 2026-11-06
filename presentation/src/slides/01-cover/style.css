@@ -1,0 +1,56 @@
+#cover .cover-trace {
+  position: absolute;
+  left: 0;
+  top: 470px;
+  width: 1920px;
+  height: 120px;
+  overflow: visible;
+}
+
+#cover .cover-lockup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 250px;
+  --mark-size: 220px;
+  --word-size: 200px;
+}
+
+#cover .cover-lockup .wordmark {
+  translate: 0 -6px;
+}
+
+#cover .cover-promise {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 610px;
+  text-align: center;
+}
+
+#cover .cover-team {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 740px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: var(--fs-body);
+  color: var(--deck-fg-2);
+}
+
+#cover .cover-team b {
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg);
+}
+
+#cover .cover-event {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 96px;
+  text-align: center;
+  font-family: var(--font-mono);
+  color: var(--deck-fg-3);
+}

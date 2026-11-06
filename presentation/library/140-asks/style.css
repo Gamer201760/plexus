@@ -1,0 +1,37 @@
+#asks .ak-card {
+  align-content: start;
+  gap: 24px;
+  padding: 48px 40px;
+}
+
+#asks .ak-card b {
+  font-size: var(--fs-lead);
+}
+
+#asks .ak-card p {
+  font-size: var(--fs-body);
+}
+
+#asks .ak-card {
+  grid-template-rows: auto auto auto 1fr;
+}
+
+#asks .ak-back {
+  display: flex;
+  align-self: end;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 100px;
+  padding-top: 24px;
+  border-top: 1px solid var(--deck-line);
+  color: var(--deck-accent);
+}
+
+#asks .ak-card p.ak-back {
+  font-size: var(--fs-caption);
+}
+
+#asks .ak-card .tile {
+  width: 112px;
+  height: 112px;
+}

@@ -1,0 +1,81 @@
+.viz .gy,
+.viz .gx,
+.viz .gxr,
+.viz .sx {
+  transform-box: fill-box;
+}
+
+.viz .gy {
+  transform-origin: 50% 100%;
+}
+
+.viz .gy.is-neg {
+  transform-origin: 50% 0;
+}
+
+.viz .gx {
+  transform-origin: 0 50%;
+}
+
+.viz .gxr {
+  transform-origin: 100% 50%;
+}
+
+.viz .sx {
+  transform-origin: 50% 50%;
+}
+
+.play .viz .gy {
+  animation: viz-grow-y var(--t, 0.8s) var(--ease-out) var(--d, 0s) both;
+}
+
+.play .viz .gx,
+.play .viz .gxr,
+.play .viz .sx {
+  animation: viz-grow-x var(--t, 0.8s) var(--ease-out) var(--d, 0s) both;
+}
+
+@keyframes viz-grow-y {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes viz-grow-x {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+.viz .mv {
+  transform-box: fill-box;
+}
+
+.play .viz .mv {
+  animation: viz-move var(--t, 0.8s) var(--ease-in-out) var(--d, 0s) both;
+}
+
+@keyframes viz-move {
+  from {
+    opacity: 0;
+    transform: translateX(var(--dx, 0px));
+  }
+  15% {
+    opacity: 1;
+  }
+}
+
+.viz .gc {
+  transform-box: view-box;
+}
+
+.play .viz .gc {
+  animation: viz-grow-c var(--t, 0.8s) var(--ease-out) var(--d, 0s) both;
+}
+
+@keyframes viz-grow-c {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}

@@ -1,0 +1,244 @@
+.viz-line,
+.viz-stem,
+.viz-span,
+.viz-link,
+.viz-target,
+.viz-today,
+.viz-edge,
+.viz-whisker,
+.viz-wick,
+.viz-median,
+.viz-mean,
+.viz-needle,
+.viz-arc,
+.viz-ring-track,
+.viz-flow {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.viz-line {
+  stroke: var(--viz-muted);
+  stroke-width: 5;
+}
+
+.viz-line.is-accent {
+  stroke: var(--viz-accent);
+  stroke-width: 6;
+}
+
+.viz-line.is-danger {
+  stroke: var(--deck-danger);
+}
+
+.viz-line.is-ink {
+  stroke: var(--deck-fg);
+}
+
+.viz-line.is-dashed {
+  stroke-dasharray: 2 14;
+}
+
+.viz-area {
+  fill: color-mix(in oklab, var(--viz-accent) 14%, transparent);
+}
+
+.viz-area.is-band {
+  fill: color-mix(in oklab, var(--viz-accent) 18%, transparent);
+}
+
+.viz-stem,
+.viz-span {
+  stroke: var(--viz-muted);
+  stroke-width: 6;
+}
+
+.viz-stem.is-accent,
+.viz-span.is-accent {
+  stroke: var(--viz-accent);
+}
+
+.viz-span.is-danger,
+.viz-stem.is-danger {
+  stroke: var(--deck-danger);
+}
+
+.viz-span.is-good {
+  stroke: var(--deck-success);
+}
+
+.viz-link {
+  stroke: var(--deck-line-strong);
+  stroke-width: 2;
+  stroke-dasharray: 6 8;
+}
+
+.viz-target {
+  stroke: var(--deck-fg);
+  stroke-width: 3;
+  stroke-dasharray: 10 10;
+}
+
+.viz-today {
+  stroke: var(--deck-fg);
+  stroke-width: 2;
+}
+
+.viz-marker,
+.viz-needle {
+  fill: var(--deck-fg);
+  stroke: var(--deck-fg);
+  stroke-width: 6;
+}
+
+.viz-arc {
+  stroke: var(--viz-muted);
+  stroke-linecap: butt;
+}
+
+.viz-arc.is-round {
+  stroke-linecap: round;
+}
+
+.viz-arc.is-accent {
+  stroke: var(--viz-accent);
+}
+
+.viz-arc.is-shade-1 {
+  stroke: var(--viz-shade-1);
+}
+
+.viz-arc.is-shade-2 {
+  stroke: var(--viz-shade-2);
+}
+
+.viz-arc.is-shade-3 {
+  stroke: var(--viz-shade-3);
+}
+
+.viz-arc.is-danger {
+  stroke: var(--deck-danger);
+}
+
+.viz-arc.is-faint {
+  stroke: var(--deck-sunken);
+}
+
+.viz-arc.is-good {
+  stroke: var(--deck-success);
+}
+
+.viz-ring-track {
+  stroke: var(--deck-sunken);
+}
+
+.viz-shape {
+  fill: color-mix(in oklab, var(--viz-muted) 30%, transparent);
+  stroke: var(--viz-muted);
+  stroke-width: 3;
+}
+
+.viz-shape.is-dashed {
+  fill: none;
+  stroke-dasharray: 8 10;
+}
+
+.viz-shape.is-accent {
+  fill: color-mix(in oklab, var(--viz-accent) 22%, transparent);
+  stroke: var(--viz-accent);
+}
+
+.viz-whisker,
+.viz-wick {
+  stroke: var(--deck-fg-3);
+  stroke-width: 3;
+}
+
+.viz-wick.is-good {
+  stroke: var(--deck-success);
+}
+
+.viz-wick.is-danger {
+  stroke: var(--deck-danger);
+}
+
+.viz-box {
+  fill: var(--viz-shade-3);
+  stroke: var(--viz-muted);
+  stroke-width: 3;
+}
+
+.viz-box.is-accent {
+  fill: var(--viz-shade-2);
+  stroke: var(--viz-accent);
+}
+
+.viz-median,
+.viz-mean {
+  stroke: var(--deck-fg);
+  stroke-width: 5;
+}
+
+.viz-mean.is-accent,
+.viz-median.is-accent {
+  stroke: var(--viz-accent);
+}
+
+.viz-cell {
+  fill: color-mix(in oklab, var(--viz-accent) calc(6% + var(--level, 0) * 94%), var(--deck-bg));
+}
+
+.viz-cell.is-mark {
+  stroke: var(--deck-fg);
+  stroke-width: 4;
+}
+
+.viz-icon {
+  overflow: visible;
+}
+
+.viz-icon * {
+  fill: none;
+  stroke: var(--viz-faint);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.viz-icon.is-danger * {
+  stroke: var(--deck-danger);
+  stroke-width: 2.4;
+}
+
+.viz-icon.is-accent * {
+  stroke: var(--viz-accent);
+  stroke-width: 2.4;
+}
+
+.viz-flow {
+  stroke: var(--viz-shade-3);
+  stroke-linecap: butt;
+  stroke-opacity: 0.9;
+}
+
+.viz-flow.is-accent {
+  stroke: var(--viz-shade-1);
+}
+
+.viz-flow.is-danger {
+  stroke: color-mix(in oklab, var(--deck-danger) 40%, var(--deck-bg));
+}
+
+.viz-node-bar {
+  fill: var(--deck-fg);
+}
+
+.viz-edge {
+  stroke: var(--deck-line-strong);
+  stroke-width: 3;
+}
+
+.viz-edge.is-danger {
+  stroke: var(--deck-danger);
+}

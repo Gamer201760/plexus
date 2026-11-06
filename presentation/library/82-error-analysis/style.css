@@ -1,0 +1,10 @@
+#error-analysis .ea {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 64px;
+  height: 100%;
+}
+
+#error-analysis .ea-cards {
+  align-content: center;
+}

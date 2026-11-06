@@ -1,0 +1,66 @@
+#next-steps .ns2 {
+  position: relative;
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 16px;
+  height: 100%;
+  padding-left: 48px;
+}
+
+#next-steps .ns2::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 24px;
+  bottom: 24px;
+  width: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-line-strong);
+}
+
+#next-steps .ns2 li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px 520px 1fr auto;
+  align-items: center;
+  gap: 32px;
+  padding: 0 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#next-steps .ns2 li::before {
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  translate: 0 -50%;
+  border: 5px solid var(--deck-bg);
+  border-radius: 50%;
+  background: var(--deck-line-strong);
+}
+
+#next-steps .ns2 li.is-now::before {
+  background: var(--deck-accent);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--deck-accent) 25%, transparent);
+}
+
+#next-steps .ns2 li.is-now {
+  box-shadow: 0 0 0 3px var(--deck-accent);
+}
+
+#next-steps .ns2-w {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}
+
+#next-steps .ns2 b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}

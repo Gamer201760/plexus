@@ -1,0 +1,91 @@
+#chat .ch {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  gap: 48px;
+  height: 100%;
+}
+
+#chat .ch-ctx {
+  align-self: start;
+  align-content: start;
+  gap: 20px;
+  padding: 40px;
+}
+
+#chat .ch-ctx h3 {
+  font-size: var(--fs-lead);
+}
+
+#chat .ch-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px 28px;
+  margin: 12px 0 0;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-3);
+}
+
+#chat .ch-facts dd {
+  margin: 0;
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg);
+}
+
+#chat .ch-facts dd.is-key {
+  color: var(--deck-warning);
+}
+
+#chat .ch-src {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--deck-line);
+}
+
+#chat .ch-src .eyebrow {
+  width: 100%;
+}
+
+#chat .ch-thread {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+#chat .ch-msg {
+  display: grid;
+  gap: 8px;
+  justify-self: start;
+  max-width: 900px;
+  padding: 20px 28px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  box-shadow: var(--shadow-raised);
+  font-size: var(--fs-caption);
+  line-height: var(--lh-snug);
+  color: var(--deck-fg);
+}
+
+#chat .ch-msg.is-user {
+  justify-self: end;
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#chat .ch-tools {
+  display: flex;
+  gap: 12px;
+  font-family: var(--font-mono);
+}
+
+#chat .ch-btn {
+  justify-self: start;
+  margin-top: 6px;
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+  background: var(--deck-accent);
+  font-weight: var(--weight-strong);
+  color: var(--deck-on-accent);
+}

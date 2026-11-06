@@ -1,0 +1,66 @@
+#metric-tree .mt-root {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: grid;
+  gap: 8px;
+  width: 360px;
+  translate: 0 -50%;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+  font-size: var(--fs-body);
+}
+
+#metric-tree .mt-root .eyebrow {
+  color: var(--deck-on-accent);
+  opacity: 0.8;
+}
+
+#metric-tree .mt-num {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  white-space: nowrap;
+  font-weight: var(--weight-strong);
+}
+
+#metric-tree .mt-node {
+  position: absolute;
+  left: 560px;
+  top: var(--y);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 480px;
+  translate: 0 -50%;
+  padding: 22px 28px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  box-shadow: var(--shadow-raised);
+  font-size: var(--fs-caption);
+}
+
+#metric-tree .mt-node b {
+  line-height: var(--lh-snug);
+}
+
+#metric-tree .mt-node .num {
+  font-size: var(--fs-lead);
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}
+
+#metric-tree .mt-leaf {
+  position: absolute;
+  left: 1200px;
+  top: var(--y);
+  translate: 0 -50%;
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-sunken);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}

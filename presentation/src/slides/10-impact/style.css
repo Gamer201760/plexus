@@ -1,0 +1,55 @@
+#impact .impact {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 340px;
+  display: grid;
+  grid-template-columns: 1fr 360px 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+#impact .impact-side {
+  display: grid;
+  gap: 12px;
+}
+
+#impact .impact-side p {
+  margin: 0;
+}
+
+#impact .impact-side .micro {
+  color: var(--deck-fg-3);
+}
+
+#impact .impact-value {
+  font-size: var(--fs-display);
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--deck-accent);
+}
+
+#impact .impact-value.is-before {
+  color: var(--deck-fg-3);
+}
+
+#impact .impact-arrow {
+  width: 360px;
+  height: 80px;
+  overflow: visible;
+}
+
+#impact .impact-source {
+  position: absolute;
+  left: var(--gutter);
+  top: 760px;
+  margin: 0;
+}
+
+#impact .impact-key {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 880px;
+}

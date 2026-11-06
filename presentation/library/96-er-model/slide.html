@@ -1,0 +1,20 @@
+<section class="slide" id="er-model" data-title="Модель данных">
+  <h2 class="title a">{{Четыре сущности}}, <em>{{одна правда}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="dg er">
+      <svg viewBox="0 0 1680 690" aria-hidden="true">
+        <path class="trace is-muted dr" pathLength="1" style="--d:0.8s" d="M480 180 H660" />
+        <path class="trace is-muted dr" pathLength="1" style="--d:0.9s" d="M1020 180 H1200" />
+        <path class="trace dr" pathLength="1" style="--d:1s" d="M840 330 V420" />
+      </svg>
+      <div class="er-card s" style="--x:260px;--y:40px;--d:0.2s"><b><span class="ico is-sm" data-icon="users"></span>{{Клиент}}</b><span>id</span><span>{{ИНН}}</span><span>{{Сегмент}}</span></div>
+      <div class="er-card is-accent s" style="--x:840px;--y:40px;--d:0.35s"><b><span class="ico is-sm" data-icon="file"></span>{{Заявка}}</b><span>id</span><span>client_id</span><span>{{Сумма}}</span><span>{{Статус}}</span></div>
+      <div class="er-card s" style="--x:1420px;--y:40px;--d:0.5s"><b><span class="ico is-sm" data-icon="shield"></span>{{Правило}}</b><span>id</span><span>{{Условие}}</span><span>{{Версия}}</span></div>
+      <div class="er-card s" style="--x:840px;--y:420px;--d:0.65s"><b><span class="ico is-sm" data-icon="check"></span>{{Решение}}</b><span>request_id</span><span>rule_id</span><span>{{Причина}}</span></div>
+      <span class="er-rel f" style="--x:570px;--y:150px;--d:1.1s">1 : N</span>
+      <span class="er-rel f" style="--x:1110px;--y:150px;--d:1.2s">N : M</span>
+      <span class="er-rel f" style="--x:900px;--y:375px;--d:1.3s">1 : 1</span>
+    </div>
+  </div>
+</section>

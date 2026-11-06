@@ -1,0 +1,128 @@
+#testimonial-metric .tm2 {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 80px;
+  align-items: center;
+  height: 100%;
+}
+
+#testimonial-metric .tm2-quote {
+  display: grid;
+  gap: 40px;
+  margin: 0;
+  color: var(--deck-accent);
+}
+
+#testimonial-metric blockquote {
+  margin: 0;
+  font-size: 64px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-title);
+  color: var(--deck-fg);
+}
+
+#testimonial-metric figcaption {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#testimonial-metric figcaption span:last-child {
+  display: grid;
+}
+
+#testimonial-metric figcaption b {
+  color: var(--deck-fg);
+}
+
+#testimonial-metric .tm2-av {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--deck-sunken);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-2);
+}
+
+#testimonial-metric .tm2-metric {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 24px;
+  height: 100%;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#testimonial-metric .tm2-bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+#testimonial-metric .tm2-b {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  gap: 12px;
+}
+
+#testimonial-metric .tm2-col {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding-top: 72px;
+}
+
+#testimonial-metric .tm2-fill {
+  position: relative;
+  width: 100%;
+  height: max(calc(var(--h) * 100%), 12px);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background: var(--deck-accent);
+  transform-origin: bottom;
+}
+
+#testimonial-metric .is-old .tm2-fill {
+  background: var(--deck-line-strong);
+}
+
+#testimonial-metric.play .tm2-fill {
+  animation: tm2-grow 0.9s var(--ease-out) 0.9s both;
+}
+
+#testimonial-metric.play .tm2-b b {
+  animation: deck-fade 0.4s var(--ease-out) 1.6s both;
+}
+
+@keyframes tm2-grow {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+#testimonial-metric .tm2-b b {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  translate: -50% 0;
+  font-family: var(--font-mono);
+  font-size: 44px;
+  white-space: nowrap;
+}
+
+#testimonial-metric .tm2-b:not(.is-old) b {
+  color: var(--deck-accent);
+}
+
+#testimonial-metric .tm2-b i {
+  font-style: normal;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-3);
+}

@@ -1,0 +1,16 @@
+<section class="slide" id="table" data-title="Таблица">
+  <h2 class="title a">{{Каждая роль видит}}, <em>{{только свой вход}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="tb">
+      <div class="tbl tb-tbl">
+        <div class="tbl-row is-head f" style="--d:0.2s"><span>{{Роль}}</span><span>{{Что получает}}</span><span>{{Что возвращает}}</span><span>{{Проверка}}</span></div>
+        <div class="tbl-row a" style="--d:0.3s"><b class="mono">intent</b><span>{{текст обращения}}</span><span>{{тип запроса из 12}}</span><span class="badge is-success">{{enum}}</span></div>
+        <div class="tbl-row a" style="--d:0.4s"><b class="mono">entities</b><span>{{текст и тип}}</span><span>{{ИНН, суммы, даты}}</span><span class="badge is-success">{{регулярки}}</span></div>
+        <div class="tbl-row is-ours a" style="--d:0.5s"><b class="mono">match</b><span>{{сущности и база}}</span><span>{{карточка контрагента}}</span><span class="badge is-accent">{{SQL-запрос}}</span></div>
+        <div class="tbl-row a" style="--d:0.6s"><b class="mono">flow</b><span>{{карточка и правила}}</span><span>{{следующий шаг}}</span><span class="badge is-success">{{граф переходов}}</span></div>
+      </div>
+      <p class="limit a" style="--d:1s"><b>{{Гарантия}}.</b> {{Сервер принимает ответ модели, только если он проходит схему и проверку из правой колонки}}</p>
+    </div>
+  </div>
+</section>

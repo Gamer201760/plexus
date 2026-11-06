@@ -1,0 +1,61 @@
+#prompt-anatomy .pa {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 80px;
+  height: 100%;
+}
+
+#prompt-anatomy .pa-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#prompt-anatomy .pa-block {
+  flex: var(--h) 1 0;
+  display: grid;
+  grid-template-columns: 340px 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  border-radius: var(--radius-md);
+  font-size: var(--fs-caption);
+}
+
+#prompt-anatomy .pa-block b {
+  font-size: var(--fs-body);
+}
+
+#prompt-anatomy .pa-block i {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-weight: var(--weight-strong);
+}
+
+#prompt-anatomy .pa-block.is-1,
+#prompt-anatomy .pa-block.is-5 {
+  background: var(--deck-sunken);
+}
+
+#prompt-anatomy .pa-block.is-2 {
+  background: color-mix(in oklab, var(--deck-accent) 18%, var(--deck-bg));
+}
+
+#prompt-anatomy .pa-block.is-3 {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#prompt-anatomy .pa-block.is-4 {
+  background: color-mix(in oklab, var(--deck-accent) 35%, var(--deck-bg));
+}
+
+#prompt-anatomy .pa-side {
+  display: grid;
+  align-content: center;
+  gap: 40px;
+}
+
+#prompt-anatomy .kpi-value {
+  font-size: 80px;
+}

@@ -1,0 +1,41 @@
+#voices .vc-card {
+  margin: 0;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 24px;
+}
+
+#voices .vc-q {
+  color: var(--deck-accent);
+}
+
+#voices .vc-card blockquote {
+  margin: 0;
+  font-size: 40px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-snug);
+}
+
+#voices .vc-card figcaption {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-2);
+}
+
+#voices .vc-av {
+  display: grid;
+  place-items: center;
+  min-width: 56px;
+  padding: 0 12px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--deck-sunken);
+  font-weight: var(--weight-strong);
+}
+
+#voices .vc-source {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 110px;
+}

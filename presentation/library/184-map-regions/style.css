@@ -1,0 +1,58 @@
+#map-regions .mr {
+  display: grid;
+  grid-template-columns: 1100px 1fr;
+  gap: 48px;
+  height: 100%;
+}
+
+#map-regions .mr-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#map-regions .mr-land {
+  fill: var(--deck-sunken);
+  stroke: var(--deck-line-strong);
+  stroke-width: 2;
+}
+
+#map-regions .mr-t {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  fill: var(--deck-fg-2);
+  paint-order: stroke;
+  stroke: var(--deck-sunken);
+  stroke-width: 6px;
+}
+
+#map-regions .mr-t.is-big {
+  font-weight: var(--weight-strong);
+  fill: var(--deck-fg);
+}
+
+#map-regions .mr-list {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+}
+
+#map-regions .mr-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 16px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#map-regions .mr-list b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#map-regions .mr-list i {
+  grid-column: 1 / -1;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(var(--deck-accent), var(--deck-accent)) left / calc(var(--w) * 100%) 100% no-repeat, var(--deck-sunken);
+}

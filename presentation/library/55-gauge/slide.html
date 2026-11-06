@@ -1,0 +1,14 @@
+<section class="slide" id="gauge" data-title="Спидометр">
+  <h2 class="title a">{{Уверенность}} <em>{{выше порога}}</em></h2>
+
+  <div class="body">
+    <div class="ga">
+      <div data-viz="gauge" data-values="87" data-unit="%" data-target="70" data-target-label="{{порог}}" data-zones="0,70;70,100" data-caption="{{средняя уверенность}}"></div>
+      <ul class="ga-side list">
+        <li class="a" style="--d:1.2s"><span><b>{{Выше 70%}}</b> {{ответ уходит пользователю}}</span></li>
+        <li class="a" style="--d:1.35s"><span><b>{{Ниже 70%}}</b> {{вопрос уходит человеку}}</span></li>
+        <li class="a" style="--d:1.5s"><span><b>{{Порог}}</b> {{подобран на отложенной выборке}}</span></li>
+      </ul>
+    </div>
+  </div>
+</section>

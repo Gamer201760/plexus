@@ -1,0 +1,45 @@
+#log-stream .lg {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  height: 100%;
+  font-family: var(--font-mono);
+  font-size: 26px;
+}
+
+#log-stream .lg-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 72px;
+  padding: 0 24px;
+  border-radius: var(--radius-md);
+  color: var(--deck-fg-2);
+}
+
+#log-stream .lg-row time {
+  color: var(--deck-fg-3);
+}
+
+#log-stream .lg-row .badge {
+  width: 120px;
+  justify-content: center;
+}
+
+#log-stream .lg-row.is-hot {
+  min-height: 104px;
+  background: var(--deck-raised);
+  box-shadow: 0 0 0 3px var(--deck-danger), var(--shadow-float);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg);
+}
+
+#log-stream .lg-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  color: var(--deck-danger);
+}

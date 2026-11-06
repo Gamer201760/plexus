@@ -1,0 +1,61 @@
+#formula .fm {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 40px;
+  height: 100%;
+}
+
+#formula .fm-tbl {
+  --cols: 44px 260px 1fr 460px;
+}
+
+#formula .fm-eq {
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#formula .fm-ex {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  padding: 32px 40px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-sunken);
+}
+
+#formula .fm-calc {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr 1.2fr;
+  gap: 24px;
+}
+
+#formula .fm-calc span {
+  display: grid;
+  gap: 8px;
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+}
+
+#formula .fm-calc i {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-3);
+}
+
+#formula .fm-calc b {
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+}
+
+#formula .fm-calc .is-ok {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#formula .fm-calc .is-ok i {
+  color: var(--deck-on-accent);
+  opacity: 0.8;
+}

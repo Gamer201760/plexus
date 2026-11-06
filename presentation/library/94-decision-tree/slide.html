@@ -1,0 +1,24 @@
+<section class="slide" id="decision-tree" data-title="Дерево решений">
+  <h2 class="title a">{{Три вопроса}} <em>{{до ответа}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="dg dt">
+      <svg viewBox="0 0 1680 690" aria-hidden="true">
+        <path class="trace is-muted dr" pathLength="1" style="--d:0.4s" d="M840 110 V170 H420 V230" />
+        <path class="trace dr" pathLength="1" style="--d:0.4s" d="M840 110 V170 H1260 V230" />
+        <path class="trace is-muted dr" pathLength="1" style="--d:0.9s" d="M420 330 V390 H210 V450 M420 390 H630 V450" />
+        <path class="trace dr" pathLength="1" style="--d:0.9s" d="M1260 330 V390 H1050 V450" />
+        <path class="trace is-muted dr" pathLength="1" style="--d:0.9s" d="M1260 390 H1470 V450" />
+      </svg>
+      <div class="dg-node s" style="--x:840px;--y:60px;--d:0.2s;--w:420px;--anchor:50px"><span class="dt-q is-on">{{Сумма больше лимита?}}</span></div>
+      <div class="dg-node s" style="--x:420px;--y:280px;--d:0.6s;--w:380px;--anchor:50px"><span class="dt-q">{{Контрагент известен?}}</span></div>
+      <div class="dg-node s" style="--x:1260px;--y:280px;--d:0.6s;--w:380px;--anchor:50px"><span class="dt-q is-on">{{Есть договор?}}</span></div>
+      <div class="dg-node a" style="--x:210px;--y:520px;--d:1.1s;--w:300px;--anchor:50px"><span class="dt-leaf is-ok">{{Оплатить}}</span></div>
+      <div class="dg-node a" style="--x:630px;--y:520px;--d:1.2s;--w:300px;--anchor:50px"><span class="dt-leaf">{{Проверить ИНН}}</span></div>
+      <div class="dg-node a" style="--x:1050px;--y:520px;--d:1.3s;--w:300px;--anchor:50px"><span class="dt-leaf is-accent">{{Согласовать}}</span></div>
+      <div class="dg-node a" style="--x:1470px;--y:520px;--d:1.4s;--w:300px;--anchor:50px"><span class="dt-leaf is-danger">{{Отказ с причиной}}</span></div>
+      <span class="dt-yn f" style="--x:600px;--y:150px;--d:0.5s">{{нет}}</span>
+      <span class="dt-yn f" style="--x:1080px;--y:150px;--d:0.5s">{{да}}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+#fishbone .fb2 {
+  position: relative;
+  height: 100%;
+}
+
+#fishbone .fb2-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#fishbone .fb2-spine {
+  fill: none;
+  stroke: var(--deck-fg);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+#fishbone .fb2-bone {
+  fill: none;
+  stroke: var(--deck-line-strong);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+#fishbone .fb2-bone.is-hot {
+  stroke: var(--deck-danger);
+}
+
+#fishbone .fb2-head {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 360px;
+  translate: 0 -50%;
+  padding: 28px 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-danger);
+  color: var(--deck-on-accent);
+  font-size: var(--fs-body);
+}
+
+#fishbone .fb2-c {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  display: grid;
+  gap: 2px;
+  translate: -50% -50%;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  background: var(--deck-bg);
+  font-size: var(--fs-micro);
+  text-align: center;
+  color: var(--deck-fg-2);
+  white-space: nowrap;
+}
+
+#fishbone .fb2-c b {
+  font-size: var(--fs-caption);
+  color: var(--deck-fg);
+}
+
+#fishbone .fb2-c.is-hot b {
+  color: var(--deck-danger);
+}

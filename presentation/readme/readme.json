@@ -1,0 +1,103 @@
+{
+  "buttons": [
+    {
+      "name": "live",
+      "label": "Открыть стенд",
+      "icon": "external-link",
+      "href": "https://{{DOMAIN}}",
+      "primary": true
+    },
+    {
+      "name": "run",
+      "label": "Запустить локально",
+      "icon": "terminal",
+      "href": "#запуск"
+    },
+    {
+      "name": "docs",
+      "label": "Документация",
+      "icon": "book-open",
+      "href": "docs/README.md"
+    }
+  ],
+  "status": [
+    {
+      "label": "{{M1}}",
+      "value": "{{значение на n}}",
+      "href": "#результаты",
+      "tone": "accent"
+    },
+    {
+      "label": "офлайн",
+      "value": "без ключей",
+      "href": "#запуск"
+    },
+    {
+      "label": "тесты",
+      "value": "{{N пройдено}}",
+      "href": "docs/running.md"
+    },
+    {
+      "label": "интерфейс",
+      "value": "RU и EN"
+    },
+    {
+      "label": "лицензия",
+      "value": "MIT",
+      "href": "LICENSE"
+    }
+  ],
+  "stack": [
+    {
+      "label": "фронтенд",
+      "value": "React 19 и TypeScript"
+    },
+    {
+      "label": "API",
+      "value": "{{FastAPI}}"
+    },
+    {
+      "label": "хранилище",
+      "value": "{{PostgreSQL 16}}"
+    },
+    {
+      "label": "модель",
+      "value": "{{название, локально}}"
+    },
+    {
+      "label": "запуск",
+      "value": "Docker Compose"
+    }
+  ],
+  "nav": [
+    {
+      "value": "Зачем это",
+      "href": "#зачем-это"
+    },
+    {
+      "value": "Как это работает",
+      "href": "#как-это-работает"
+    },
+    {
+      "value": "Попробовать",
+      "href": "#попробовать-за-две-минуты"
+    },
+    {
+      "value": "Результаты",
+      "href": "#результаты"
+    },
+    {
+      "value": "Запуск",
+      "href": "#запуск"
+    },
+    {
+      "value": "Устройство",
+      "href": "#устройство"
+    },
+    {
+      "value": "Ограничения",
+      "href": "#ограничения",
+      "tone": "warning"
+    }
+  ]
+}

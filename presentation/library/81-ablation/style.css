@@ -1,0 +1,17 @@
+#ablation .ah {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 64px;
+  height: 100%;
+}
+
+#ablation .ah-base {
+  align-self: center;
+}
+
+#ablation .ah-value {
+  font-size: 64px;
+  white-space: nowrap;
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}

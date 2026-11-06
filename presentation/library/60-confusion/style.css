@@ -1,0 +1,39 @@
+#confusion .cf {
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 72px;
+  height: 100%;
+}
+
+#confusion .cf-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 1fr 36px;
+}
+
+#confusion .cf-axis-y {
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  align-self: center;
+}
+
+#confusion .cf-axis-x {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+}
+
+#confusion .cf-map {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#confusion .cf-side {
+  align-content: center;
+  gap: 40px;
+}
+
+#confusion .kpi-value {
+  font-size: 96px;
+}

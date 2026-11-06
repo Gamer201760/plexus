@@ -1,0 +1,171 @@
+[data-viz] {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+[data-viz] > .viz {
+  position: absolute;
+  inset: 0;
+}
+
+.viz {
+  --viz-accent: var(--deck-accent);
+  --viz-shade-1: color-mix(in oklab, var(--deck-accent) 55%, var(--deck-bg));
+  --viz-shade-2: color-mix(in oklab, var(--deck-accent) 32%, var(--deck-bg));
+  --viz-shade-3: color-mix(in oklab, var(--deck-accent) 16%, var(--deck-bg));
+  --viz-muted: color-mix(in oklab, var(--deck-fg) 22%, var(--deck-bg));
+  --viz-faint: color-mix(in oklab, var(--deck-fg) 9%, var(--deck-bg));
+  font-family: var(--font-sans);
+}
+
+.viz text {
+  font-size: 24px;
+  fill: var(--deck-fg-2);
+}
+
+.viz .viz-tick {
+  font-family: var(--font-mono);
+  font-size: 21px;
+  fill: var(--deck-fg-3);
+}
+
+.viz .viz-label {
+  font-size: 24px;
+  fill: var(--deck-fg-2);
+}
+
+.viz .viz-value {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: var(--weight-strong);
+  fill: var(--deck-fg-2);
+}
+
+.viz .viz-note {
+  font-size: 22px;
+  fill: var(--deck-fg-3);
+}
+
+.viz .viz-inside,
+.viz .viz-cell-value,
+.viz .viz-tile-value {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: var(--weight-strong);
+  fill: var(--deck-fg);
+}
+
+.viz .viz-tile-value {
+  font-size: 36px;
+}
+
+.viz .viz-center,
+.viz .viz-big {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-strong);
+  letter-spacing: -0.03em;
+  fill: var(--deck-fg);
+}
+
+.viz .viz-value,
+.viz .viz-note,
+.viz .viz-tick,
+.viz .is-halo {
+  paint-order: stroke;
+  stroke: var(--deck-bg);
+  stroke-width: 8px;
+  stroke-linejoin: round;
+}
+
+.viz .is-strong {
+  font-weight: var(--weight-strong);
+  fill: var(--deck-fg);
+}
+
+.viz text.is-accent {
+  fill: var(--viz-accent);
+}
+
+.viz text.is-danger {
+  fill: var(--deck-danger);
+}
+
+.viz text.is-good {
+  fill: var(--deck-success);
+}
+
+.viz .viz-value.is-strong {
+  font-size: 32px;
+}
+
+.viz .is-on-accent {
+  fill: var(--deck-on-accent);
+  stroke: none;
+}
+
+.viz-bar,
+.viz-tile,
+.viz-unit,
+.viz-swatch,
+.viz-dot,
+.viz-candle {
+  fill: var(--viz-muted);
+}
+
+.viz .is-accent:not(text, .viz-line, .viz-arc, .viz-flow, .viz-stem, .viz-span, .viz-median, .viz-mean, .viz-shape, .viz-box, .viz-row, .viz-hull, .viz-range) {
+  fill: var(--viz-accent);
+}
+
+.viz .is-shade-1:not(text, .viz-line, .viz-arc, .viz-hull) {
+  fill: var(--viz-shade-1);
+}
+
+.viz .is-shade-2:not(text, .viz-line, .viz-arc, .viz-hull) {
+  fill: var(--viz-shade-2);
+}
+
+.viz .is-shade-3:not(text, .viz-line, .viz-arc) {
+  fill: var(--viz-shade-3);
+}
+
+.viz .is-danger:not(text, .viz-line, .viz-arc, .viz-flow, .viz-edge, .viz-wick, .viz-row, .viz-neck) {
+  fill: var(--deck-danger);
+}
+
+.viz .is-good:not(text, .viz-wick, .viz-arc, .viz-span, .viz-line) {
+  fill: var(--deck-success);
+}
+
+.viz .is-ink:not(.viz-line) {
+  fill: var(--deck-fg);
+}
+
+.viz .is-faint:not(.viz-arc, .viz-line),
+.viz .is-empty {
+  fill: var(--viz-faint);
+}
+
+.viz .is-ringed {
+  stroke: var(--deck-bg);
+  stroke-width: 4;
+}
+
+.viz .viz-end-value {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-strong);
+}
+
+.viz .is-soft {
+  fill-opacity: 0.55;
+}
+
+.viz .is-bubble {
+  fill-opacity: 0.78;
+  stroke: var(--deck-bg);
+  stroke-width: 3;
+}
+
+.viz-track {
+  fill: var(--deck-sunken);
+}

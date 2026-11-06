@@ -1,0 +1,65 @@
+#journey .jr {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 48px;
+  height: 100%;
+}
+
+#journey .jr-break b {
+  color: var(--deck-danger);
+}
+
+#journey .jr-time {
+  display: grid;
+  gap: 14px;
+}
+
+#journey .jr-bar {
+  display: flex;
+  gap: 4px;
+  height: 72px;
+}
+
+#journey .jr-bar i {
+  flex: var(--f) 1 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklab, var(--deck-accent) 25%, var(--deck-bg));
+  font-style: normal;
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  white-space: nowrap;
+  transform-origin: left;
+}
+
+#journey .jr-bar i:nth-child(3) {
+  background: color-mix(in oklab, var(--deck-accent) 45%, var(--deck-bg));
+}
+
+#journey .jr-bar i.is-bad {
+  background: var(--deck-danger);
+  color: var(--deck-on-accent);
+}
+
+#journey.play .jr-bar i {
+  animation: deck-grow 0.6s var(--ease-out) var(--d) both;
+}
+
+#journey .jr-cost {
+  align-self: end;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 28px 40px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-sunken);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#journey .jr-cost .kpi-value {
+  font-size: 72px;
+  color: var(--deck-danger);
+}

@@ -1,0 +1,63 @@
+#quote .qt {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 200px;
+  bottom: 140px;
+  display: grid;
+  align-content: center;
+  gap: 48px;
+}
+
+#quote .qt-mark {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#quote .qt-mark .ico {
+  width: 52px;
+  height: 52px;
+}
+
+#quote .qt-text {
+  margin: 0;
+  max-width: 1500px;
+  font-size: 80px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-title);
+  text-wrap: balance;
+}
+
+#quote .qt-who {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#quote .qt-who span:last-child {
+  display: grid;
+  gap: 4px;
+}
+
+#quote .qt-who b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#quote .qt-avatar {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--deck-sunken);
+  font-weight: var(--weight-strong);
+}

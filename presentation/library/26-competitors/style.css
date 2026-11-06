@@ -1,0 +1,62 @@
+#competitors .cp {
+  --cols: 1.6fr repeat(4, 1fr);
+}
+
+#competitors .cp .tbl-row:not(.is-head) {
+  min-height: 92px;
+  font-size: var(--fs-body);
+}
+
+#competitors .cp-total {
+  border-bottom: 0;
+  background: var(--deck-sunken);
+  border-radius: var(--radius-md);
+}
+
+#competitors .cp-score {
+  display: grid;
+  gap: 8px;
+  padding-right: 32px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+}
+
+#competitors .cp-score i {
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(var(--deck-line-strong), var(--deck-line-strong)) left / calc(var(--w) * 100%) 100% no-repeat, var(--deck-bg);
+}
+
+#competitors .cp-score.is-us {
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}
+
+#competitors .cp-score.is-us i {
+  background: var(--deck-accent);
+}
+
+#competitors .cp .ico {
+  width: 36px;
+  height: 36px;
+  color: var(--deck-success);
+}
+
+#competitors .cp .cp-no {
+  color: var(--deck-danger);
+}
+
+#competitors .cp .cp-mid {
+  color: var(--deck-fg-3);
+}
+
+#competitors .cp .cp-us {
+  color: var(--deck-accent);
+  font-weight: var(--weight-strong);
+}
+
+#competitors .cp-source {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 80px;
+}

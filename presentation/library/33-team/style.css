@@ -1,0 +1,80 @@
+#team .tm-grid {
+  height: 100%;
+  align-items: stretch;
+}
+
+#team .tm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 36px;
+}
+
+#team .tm-ava {
+  display: grid;
+  place-items: center;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: var(--deck-sunken);
+  font-size: 30px;
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-2);
+}
+
+#team .tm.is-lead .tm-ava {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#team .tm h3 {
+  font-size: var(--fs-lead);
+}
+
+#team .tm .list {
+  gap: 14px;
+  font-size: var(--fs-body);
+}
+
+#team .tm-at {
+  font-size: var(--fs-caption);
+  color: var(--deck-accent);
+}
+
+#team .tm-foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-self: stretch;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--deck-line);
+}
+
+#team .tm-chips {
+  display: flex;
+  gap: 8px;
+}
+
+#team .chip {
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-sunken);
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-2);
+}
+
+#team .tm-n {
+  display: grid;
+  justify-items: end;
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-3);
+}
+
+#team .tm-n b {
+  font-family: var(--font-mono);
+  font-size: 40px;
+  line-height: 1;
+  color: var(--deck-fg);
+}

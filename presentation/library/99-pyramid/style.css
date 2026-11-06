@@ -1,0 +1,74 @@
+#pyramid .py {
+  display: grid;
+  grid-template-columns: 820px 1fr;
+  gap: 64px;
+  height: 100%;
+}
+
+#pyramid .py-shape {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  direction: ltr;
+}
+
+#pyramid .py-shape {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+#pyramid .py-lvl {
+  display: grid;
+  place-items: center;
+  height: 150px;
+  margin: 0 auto;
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+  clip-path: polygon(var(--i) 0, calc(100% - var(--i)) 0, 100% 100%, 0 100%);
+}
+
+#pyramid .py-lvl.is-1 {
+  --i: 60px;
+  width: 820px;
+  background: color-mix(in oklab, var(--deck-accent) 14%, var(--deck-bg));
+}
+
+#pyramid .py-lvl.is-2 {
+  --i: 60px;
+  width: 700px;
+  background: color-mix(in oklab, var(--deck-accent) 30%, var(--deck-bg));
+}
+
+#pyramid .py-lvl.is-3 {
+  --i: 60px;
+  width: 580px;
+  background: color-mix(in oklab, var(--deck-accent) 55%, var(--deck-bg));
+}
+
+#pyramid .py-lvl.is-4 {
+  --i: 60px;
+  width: 460px;
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#pyramid .py-notes {
+  display: grid;
+  grid-template-rows: repeat(4, 150px);
+  gap: 10px;
+  align-content: start;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#pyramid .py-notes li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed var(--deck-line-strong);
+}
+
+#pyramid .py-notes li:first-child {
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}

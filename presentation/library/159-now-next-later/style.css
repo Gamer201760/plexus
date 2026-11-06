@@ -1,0 +1,73 @@
+#now-next-later .nnl {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  height: 100%;
+  padding-top: 40px;
+}
+
+#now-next-later .nnl-arrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--deck-accent), color-mix(in oklab, var(--deck-accent) 20%, var(--deck-bg)));
+}
+
+#now-next-later .nnl-col {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+#now-next-later .nnl-h {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 8px;
+  font-size: var(--fs-lead);
+  font-weight: var(--weight-strong);
+}
+
+#now-next-later .nnl-h i {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--deck-line-strong);
+}
+
+#now-next-later .nnl-h small {
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-regular);
+  color: var(--deck-fg-3);
+}
+
+#now-next-later .is-now .nnl-h {
+  color: var(--deck-accent);
+}
+
+#now-next-later .is-now .nnl-h i {
+  background: var(--deck-accent);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--deck-accent) 25%, transparent);
+}
+
+#now-next-later .nnl-card {
+  padding: 30px 32px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+}
+
+#now-next-later .is-now .nnl-card {
+  border-left: 6px solid var(--deck-accent);
+}
+
+#now-next-later .is-later .nnl-card {
+  background: none;
+  border-style: dashed;
+  color: var(--deck-fg-2);
+}

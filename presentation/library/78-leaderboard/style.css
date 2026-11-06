@@ -1,0 +1,40 @@
+#leaderboard .lb {
+  display: grid;
+  gap: 20px;
+}
+
+#leaderboard .lb-row {
+  display: grid;
+  grid-template-columns: 96px 1fr 220px 140px;
+  align-items: center;
+  gap: 24px;
+  min-height: 112px;
+  padding: 0 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-body);
+  color: var(--deck-fg-2);
+}
+
+#leaderboard .lb-row.is-ours {
+  box-shadow: 0 0 0 3px var(--deck-accent);
+  color: var(--deck-fg);
+}
+
+#leaderboard .lb-rank {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}
+
+#leaderboard .is-ours .lb-rank {
+  color: var(--deck-accent);
+}
+
+#leaderboard .lb-score {
+  font-size: 40px;
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg);
+}

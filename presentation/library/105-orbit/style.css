@@ -1,0 +1,61 @@
+#orbit .ob {
+  position: relative;
+  height: 100%;
+}
+
+#orbit .ob-rings {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#orbit .ob-ring {
+  fill: none;
+  stroke: var(--deck-line-strong);
+  stroke-width: 2;
+}
+
+#orbit .ob-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  translate: -50% -50%;
+  padding: 32px 48px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  box-shadow: 0 0 0 3px var(--deck-accent), var(--shadow-float);
+  font-size: var(--fs-body);
+}
+
+#orbit .ob-core .mark {
+  width: 72px;
+}
+
+#orbit .ob-sat {
+  position: absolute;
+  left: calc(50% + cos(var(--a)) * var(--rx));
+  top: calc(50% + sin(var(--a)) * var(--ry));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  translate: -50% -50%;
+  padding: 14px 24px;
+  border: 1px solid var(--deck-line);
+  border-radius: var(--radius-pill);
+  background: var(--deck-raised);
+  box-shadow: var(--shadow-raised);
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-strong);
+  white-space: nowrap;
+}
+
+#orbit .ob-sat .ico {
+  width: 30px;
+  height: 30px;
+  color: var(--deck-accent);
+}

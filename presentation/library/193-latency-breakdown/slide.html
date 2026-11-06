@@ -1,0 +1,21 @@
+<section class="slide" id="latency-breakdown" data-title="Из чего складывается задержка">
+  <h2 class="title a">{{1,8 секунды}}, <em>{{по этапам}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="lb2">
+      <div class="lb2-track">
+        <span class="lb2-goal f" style="--x:66.7%;--d:1s"><em>{{цель 1,2 с}}</em></span>
+        <span class="lb2-seg is-1 gx" style="--f:8;--d:0.2s"><b>{{сеть}}</b><i>0,15</i></span>
+        <span class="lb2-seg is-2 gx" style="--f:22;--d:0.35s"><b>{{поиск}}</b><i>0,4</i></span>
+        <span class="lb2-seg is-3 gx" style="--f:56;--d:0.5s"><b>{{модель}}</b><i>1,0</i></span>
+        <span class="lb2-seg is-4 gx" style="--f:14;--d:0.65s"><b>{{правила}}</b><i>0,25</i></span>
+      </div>
+      <div class="lb2-axis f" style="--d:0.2s"><span style="--x:0%">0 {{с}}</span><span style="--x:27.8%">0,5</span><span style="--x:55.6%">1,0</span><span style="--x:83.3%">1,5</span><span style="--x:100%">1,8 {{с}}</span></div>
+      <div class="grid is-3 lb2-notes">
+        <p class="a" style="--d:1s"><b>{{Модель: 56%}}</b>{{локальная, без очереди к облаку}}</p>
+        <p class="a" style="--d:1.15s"><b>{{Поиск: кэш}}</b>{{повторные вопросы за 40 мс}}</p>
+        <p class="a" style="--d:1.3s"><b>{{Цель: 1,2 с}}</b>{{за счёт стриминга ответа}}</p>
+      </div>
+    </div>
+  </div>
+</section>

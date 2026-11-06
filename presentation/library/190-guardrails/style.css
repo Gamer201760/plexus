@@ -1,0 +1,83 @@
+#guardrails .gr {
+  position: relative;
+  display: grid;
+  grid-template-columns: 160px 1fr 1fr 1fr 1fr 160px;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+#guardrails .gr-line {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  top: 50%;
+  z-index: -1;
+  height: 4px;
+  background: var(--deck-line-strong);
+}
+
+#guardrails .gr-in,
+#guardrails .gr-out {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#guardrails .gr-out {
+  color: var(--deck-success);
+}
+
+#guardrails .gr-wall {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  height: 420px;
+  align-content: center;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  border-left: 8px solid var(--deck-fg);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#guardrails .gr-wall b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#guardrails .gr-wall .ico {
+  color: var(--deck-accent);
+}
+
+#guardrails .gr-wall .badge {
+  margin-top: 12px;
+  font-style: normal;
+}
+
+#guardrails .gr-core {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--deck-accent) 10%, var(--deck-raised));
+  border: 2px dashed var(--deck-accent);
+  font-size: var(--fs-caption);
+  text-align: center;
+  color: var(--deck-fg-2);
+}
+
+#guardrails .gr-core b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#guardrails .gr-core .tile {
+  width: 104px;
+  height: 104px;
+}

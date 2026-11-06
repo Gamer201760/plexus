@@ -1,0 +1,17 @@
+#replaceable .rp {
+  --cols: 320px 48px 360px 1fr;
+}
+
+#replaceable .rp .ico {
+  color: var(--deck-fg-3);
+}
+
+#replaceable .rp .tbl-row:not(.is-head) {
+  min-height: 104px;
+  font-size: var(--fs-body);
+}
+
+#replaceable .chips {
+  top: auto;
+  bottom: 120px;
+}

@@ -1,0 +1,60 @@
+#versus-numbers .vn2 {
+  display: grid;
+  grid-template-rows: auto repeat(4, 1fr);
+  gap: 12px;
+  height: 100%;
+}
+
+#versus-numbers .vn2-head,
+#versus-numbers .vn2-row {
+  display: grid;
+  grid-template-columns: 1fr 480px 1fr;
+  align-items: center;
+  gap: 32px;
+}
+
+#versus-numbers .vn2-head {
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}
+
+#versus-numbers .vn2-head span:first-child {
+  text-align: right;
+}
+
+#versus-numbers .vn2-head .is-us {
+  color: var(--deck-accent);
+}
+
+#versus-numbers .vn2-row {
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  padding: 0 40px;
+}
+
+#versus-numbers .vn2-row b {
+  justify-self: center;
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-sunken);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#versus-numbers .vn2-old {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 48px;
+  color: var(--deck-fg-3);
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+}
+
+#versus-numbers .vn2-new {
+  font-family: var(--font-mono);
+  font-size: 56px;
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}

@@ -1,0 +1,12 @@
+#gauge .ga {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  gap: 72px;
+  height: 100%;
+}
+
+#gauge .ga-side {
+  align-content: center;
+  gap: 32px;
+  font-size: var(--fs-body);
+}

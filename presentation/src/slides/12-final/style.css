@@ -1,0 +1,73 @@
+#final .final-trace {
+  position: absolute;
+  left: 0;
+  top: 634px;
+  width: 1920px;
+  height: 120px;
+  overflow: visible;
+}
+
+#final .final-lockup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  gap: 32px;
+  --mark-size: 128px;
+  --word-size: 132px;
+  --word-d: 0.45s;
+}
+
+#final .final-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 330px;
+  margin: 0;
+  text-align: center;
+  font-size: var(--fs-lead);
+  font-weight: var(--weight-regular);
+  color: var(--deck-fg-2);
+}
+
+#final .final-qrs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 440px;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+}
+
+#final .qr-card {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  width: 520px;
+  padding: 32px 32px 28px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  color: var(--deck-fg);
+  text-decoration: none;
+}
+
+#final .qr-card .qr {
+  width: 340px;
+}
+
+#final .qr-card b {
+  margin-top: 10px;
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+}
+
+#final .qr-card .mono {
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-2);
+  white-space: nowrap;
+}
+
+#final .qr-card {
+  position: relative;
+}

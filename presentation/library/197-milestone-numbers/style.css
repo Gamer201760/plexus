@@ -1,0 +1,56 @@
+#milestone-numbers .mn {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: 100%;
+}
+
+#milestone-numbers .mn-c {
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#milestone-numbers .mn-v {
+  font-family: var(--font-mono);
+  font-size: 72px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--deck-fg);
+}
+
+#milestone-numbers .mn-c.is-big {
+  grid-row: span 2;
+  background: var(--deck-fg);
+  color: color-mix(in oklab, var(--deck-bg) 70%, var(--deck-fg));
+}
+
+#milestone-numbers .mn-c.is-big .mn-v {
+  font-size: 96px;
+  color: var(--deck-bg);
+}
+
+#milestone-numbers .mn-c.is-accent {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#milestone-numbers .mn-c.is-accent .mn-v {
+  color: var(--deck-on-accent);
+}
+
+#milestone-numbers .mn-c.is-wide {
+  grid-column: span 2;
+}
+
+#milestone-numbers .mn-c.is-wide .mn-v {
+  font-size: 64px;
+}

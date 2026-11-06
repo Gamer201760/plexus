@@ -1,0 +1,50 @@
+#thanks-contacts .tcx {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 120px;
+  align-items: center;
+  height: 100%;
+}
+
+#thanks-contacts .tcx-qr {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+}
+
+#thanks-contacts .tcx-qr .qr {
+  width: 460px;
+}
+
+#thanks-contacts .tcx-list {
+  display: grid;
+  gap: 32px;
+}
+
+#thanks-contacts .tcx-list li {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  align-items: center;
+  gap: 28px;
+}
+
+#thanks-contacts .tcx-list li > span:last-child {
+  display: grid;
+  gap: 2px;
+}
+
+#thanks-contacts .tcx-list i {
+  font-style: normal;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-3);
+}
+
+#thanks-contacts .tcx-list b {
+  font-family: var(--font-mono);
+  font-size: var(--fs-lead);
+}
+
+#thanks-contacts .tcx-list b.is-text {
+  font-family: var(--font-sans);
+  color: var(--deck-accent);
+}

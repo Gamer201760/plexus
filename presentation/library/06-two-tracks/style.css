@@ -1,0 +1,60 @@
+#two-tracks .tt {
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+  gap: 24px;
+  height: 100%;
+}
+
+#two-tracks .tt-row {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  grid-template-rows: auto 1fr;
+  gap: 20px 40px;
+  padding: 32px 40px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#two-tracks .tt-row.is-a {
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--deck-success) 50%, transparent);
+}
+
+#two-tracks .tt-row .badge {
+  grid-column: 1 / -1;
+}
+
+#two-tracks .steps {
+  --tile: 36px;
+  align-self: center;
+}
+
+#two-tracks .steps b {
+  margin-top: 4px;
+  font-size: var(--fs-caption);
+}
+
+#two-tracks .tt-kpi {
+  display: grid;
+  align-content: center;
+  padding-left: 32px;
+  border-left: 2px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#two-tracks .tt-kpi b {
+  font-family: var(--font-mono);
+  font-size: 52px;
+  white-space: nowrap;
+  line-height: 1;
+  color: var(--deck-accent);
+}
+
+#two-tracks .tt-core {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}

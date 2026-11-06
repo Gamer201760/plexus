@@ -1,0 +1,20 @@
+<section class="slide" id="prompt-anatomy" data-title="Анатомия запроса к модели">
+  <h2 class="title a">{{Что модель}} <em>{{получает на входе}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="pa">
+      <div class="pa-stack">
+        <div class="pa-block is-1 a" style="--d:0.2s;--h:0.12"><b>{{Роль}}</b><span>{{ты проверяешь счета}}</span><i>{{120 токенов}}</i></div>
+        <div class="pa-block is-2 a" style="--d:0.35s;--h:0.18"><b>{{Правила}}</b><span>{{из rules.yaml}}</span><i>{{480}}</i></div>
+        <div class="pa-block is-3 a" style="--d:0.5s;--h:0.42"><b>{{Найденные документы}}</b><span>{{3 фрагмента с источником}}</span><i>{{1 900}}</i></div>
+        <div class="pa-block is-4 a" style="--d:0.65s;--h:0.16"><b>{{Документ}}</b><span>{{распознанный счёт}}</span><i>{{640}}</i></div>
+        <div class="pa-block is-5 a" style="--d:0.8s;--h:0.12"><b>{{Формат ответа}}</b><span>{{JSON-схема}}</span><i>{{210}}</i></div>
+      </div>
+      <div class="pa-side">
+        <div class="kpi a" style="--d:1.1s"><span class="kpi-value">{{3 350}}</span><span class="kpi-label">{{токенов на запрос}}</span></div>
+        <div class="kpi a" style="--d:1.25s"><span class="kpi-value">{{57%}}</span><span class="kpi-label">{{это контекст из поиска}}</span></div>
+        <p class="caption a" style="--d:1.4s">{{Без найденных документов модель отвечает «не знаю», а не придумывает}}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+#versions .vs {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 24px;
+  height: 100%;
+}
+
+#versions .vs-cards {
+  height: auto;
+}
+
+#versions .vs-cards .card {
+  padding: 24px 28px;
+}

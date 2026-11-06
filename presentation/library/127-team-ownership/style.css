@@ -1,0 +1,44 @@
+#team-ownership .to-person,
+#team-ownership .to-part {
+  position: absolute;
+  top: var(--y);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  translate: 0 -50%;
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+}
+
+#team-ownership .to-person {
+  left: 0;
+  width: 300px;
+}
+
+#team-ownership .to-av {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--deck-sunken);
+  font-size: var(--fs-caption);
+}
+
+#team-ownership .to-part {
+  left: 900px;
+  width: 560px;
+  height: 96px;
+  padding: 0 32px;
+  border: 1px solid var(--deck-line);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+}
+
+#team-ownership .to-part.is-accent {
+  box-shadow: 0 0 0 3px var(--deck-accent);
+}
+
+#team-ownership .to-part .ico {
+  color: var(--deck-accent);
+}

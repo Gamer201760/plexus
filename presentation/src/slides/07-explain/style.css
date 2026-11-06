@@ -1,0 +1,76 @@
+#explain .explain-links {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+#explain .explain-card {
+  position: absolute;
+  left: var(--gutter);
+  top: 300px;
+  width: 640px;
+  margin: 0;
+  padding: 32px 36px;
+  border: 1px solid var(--deck-line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+}
+
+#explain .explain-card .micro {
+  margin: 0;
+  color: var(--deck-fg-3);
+}
+
+#explain .explain-card h3 {
+  margin: 8px 0 28px;
+  font-size: var(--fs-lead);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg);
+}
+
+#explain .explain-card ul {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#explain .explain-card li {
+  display: flex;
+  align-items: center;
+  height: 96px;
+  border-top: 1px solid var(--deck-line);
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#explain .is-unknown {
+  color: var(--deck-fg-3);
+}
+
+#explain .explain-sources {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#explain .explain-sources li {
+  position: absolute;
+  left: 1180px;
+  top: var(--y);
+  translate: 0 -50%;
+}
+
+#explain .explain-sources .is-unknown {
+  border-style: dashed;
+}
+
+#explain .explain-key {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 900px;
+}

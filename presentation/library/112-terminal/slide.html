@@ -1,0 +1,24 @@
+<section class="slide" id="terminal" data-title="Терминал">
+  <h2 class="title a">{{Одна команда}} <em>{{поднимает всё}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="tr">
+      <div class="tr-bar"><i></i><i></i><i></i><span>{{bash}}</span></div>
+      <div class="tr-body">
+        <p class="tr-line is-cmd f" style="--d:0.3s"><b>$</b> docker compose up --build</p>
+        <p class="tr-line f" style="--d:0.8s"><span class="is-ok">{{готово}}</span> postgres {{поднят, 12 таблиц}}</p>
+        <p class="tr-line f" style="--d:1.1s"><span class="is-ok">{{готово}}</span> seed {{2 000 синтетических записей}}</p>
+        <p class="tr-line f" style="--d:1.4s"><span class="is-ok">{{готово}}</span> backend {{отвечает на /health}}</p>
+        <p class="tr-line f" style="--d:1.6s"><span class="is-ok">{{готово}}</span> frontend http://localhost:3000</p>
+        <p class="tr-line is-cmd f" style="--d:1.8s"><b>$</b> make check</p>
+        <p class="tr-line f" style="--d:2s"><span class="is-ok">{{готово}}</span> {{142 теста, 0 упало}}</p>
+        <p class="tr-line is-cmd f" style="--d:2.2s"><b>$</b> <span class="tr-cursor"></span></p>
+      </div>
+      <div class="tr-chips">
+        <span class="chip a" style="--d:2.2s"><span class="ico is-sm" data-icon="clock"></span>{{94 секунды}}</span>
+        <span class="chip a" style="--d:2.3s"><span class="ico is-sm" data-icon="globe"></span>{{без интернета}}</span>
+        <span class="chip a" style="--d:2.4s"><span class="ico is-sm" data-icon="wallet"></span>{{без платных ключей}}</span>
+      </div>
+    </div>
+  </div>
+</section>

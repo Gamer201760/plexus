@@ -1,0 +1,94 @@
+#before-after .ba {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
+  gap: 48px;
+  height: 100%;
+}
+
+#before-after .ba > .tile {
+  align-self: center;
+}
+
+#before-after .ba-card {
+  grid-template-rows: auto auto auto 1fr auto;
+  gap: 24px;
+  padding: 40px;
+}
+
+#before-after .ba-new {
+  color: var(--deck-accent);
+}
+
+#before-after .list {
+  align-content: start;
+  gap: 20px;
+  font-size: var(--fs-body);
+}
+
+#before-after .list .ico {
+  color: var(--deck-fg-3);
+}
+
+#before-after .card.is-accent .list .ico {
+  color: var(--deck-accent);
+}
+
+#before-after .ba-cost {
+  align-self: center;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: var(--weight-strong);
+  color: var(--deck-danger);
+}
+
+#before-after .ba-cost.is-new {
+  color: var(--deck-accent);
+}
+
+#before-after .ba-cost span {
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-regular);
+  color: var(--deck-fg-3);
+}
+
+#before-after .ba-time {
+  display: grid;
+  gap: 10px;
+}
+
+#before-after .ba-bar {
+  display: flex;
+  gap: 4px;
+  height: 48px;
+}
+
+#before-after .ba-bar i {
+  flex: var(--f) 1 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  background: var(--deck-line-strong);
+  font-style: normal;
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  transform-origin: left;
+}
+
+#before-after .ba-bar i.is-bad {
+  background: var(--deck-danger);
+  color: var(--deck-on-accent);
+}
+
+#before-after .ba-bar i.is-ok {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#before-after.play .ba-bar i {
+  animation: deck-grow 0.7s var(--ease-out) 1.2s both;
+}

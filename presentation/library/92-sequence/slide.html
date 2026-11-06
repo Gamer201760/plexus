@@ -1,0 +1,32 @@
+<section class="slide" id="sequence" data-title="Диаграмма последовательности">
+  <h2 class="title a">{{Один запрос}} <em>{{за четыре хода}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="sq">
+      <div class="sq-actors">
+        <span class="sq-actor a" style="--d:0.1s"><span class="tile"><span class="ico" data-icon="user"></span></span>{{Клиент}}</span>
+        <span class="sq-actor a" style="--d:0.2s"><span class="tile"><span class="ico" data-icon="server"></span></span>{{Сервис}}</span>
+        <span class="sq-actor a" style="--d:0.3s"><span class="tile is-accent"><span class="ico" data-icon="bot"></span></span>{{Модель}}</span>
+        <span class="sq-actor a" style="--d:0.4s"><span class="tile"><span class="ico" data-icon="database"></span></span>{{База}}</span>
+      </div>
+      <svg class="sq-svg" viewBox="0 0 1680 540" aria-hidden="true">
+        <path class="sq-life f" style="--d:0.4s" d="M210 0 V540 M630 0 V540 M1050 0 V540 M1470 0 V540" />
+        <path class="trace dr" pathLength="1" style="--d:0.6s;--t:0.45s" d="M214 70 H612" />
+        <path class="tip is-accent pop" style="--d:1s" d="M628 70 L610 60 L610 80 Z" />
+        <path class="trace dr" pathLength="1" style="--d:1.05s;--t:0.5s" d="M634 170 H1452" />
+        <path class="tip is-accent pop" style="--d:1.5s" d="M1468 170 L1450 160 L1450 180 Z" />
+        <path class="trace is-muted is-dashed f" style="--d:1.55s" d="M1466 270 H650" />
+        <path class="tip pop" style="--d:1.65s" d="M632 270 L650 260 L650 280 Z" />
+        <path class="trace dr" pathLength="1" style="--d:1.75s;--t:0.4s" d="M634 370 H1030" />
+        <path class="tip is-accent pop" style="--d:2.1s" d="M1046 370 L1028 360 L1028 380 Z" />
+        <path class="trace is-accent is-dashed f" style="--d:2.2s" d="M626 470 H230" />
+        <path class="tip is-accent pop" style="--d:2.3s" d="M212 470 L230 460 L230 480 Z" />
+        <text class="sq-label f" style="--d:0.7s" x="420" y="50" text-anchor="middle">{{1. Заявка}}</text>
+        <text class="sq-label f" style="--d:1.1s" x="1050" y="150" text-anchor="middle">{{2. Похожие случаи}}</text>
+        <text class="sq-label f" style="--d:1.6s" x="1050" y="250" text-anchor="middle">{{3. Пять документов}}</text>
+        <text class="sq-label f" style="--d:1.8s" x="840" y="350" text-anchor="middle">{{4. Черновик ответа}}</text>
+        <text class="sq-label is-strong f" style="--d:2.3s" x="420" y="450" text-anchor="middle">{{Ответ с источниками, 1,8 с}}</text>
+      </svg>
+    </div>
+  </div>
+</section>

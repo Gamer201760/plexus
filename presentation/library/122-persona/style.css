@@ -1,0 +1,62 @@
+#persona .ps {
+  display: grid;
+  grid-template-columns: 420px 1fr 1fr;
+  gap: 48px;
+  height: 100%;
+}
+
+#persona .ps-card {
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+#persona .ps-avatar {
+  display: grid;
+  place-items: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--deck-accent) 18%, var(--deck-bg));
+  color: var(--deck-accent);
+}
+
+#persona .ps-avatar .ico {
+  width: 88px;
+  height: 88px;
+}
+
+#persona .ps-name {
+  font-size: var(--fs-lead);
+}
+
+#persona .ps-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#persona .ps-col {
+  display: grid;
+  grid-template-rows: 40px repeat(3, 120px);
+  align-content: center;
+  gap: 20px;
+}
+
+#persona .ps-item {
+  display: flex;
+  align-items: center;
+}
+
+#persona .ps-item {
+  padding: 24px 28px;
+  border-left: 6px solid var(--deck-accent);
+  border-radius: var(--radius-sm);
+  background: var(--deck-raised);
+  font-size: var(--fs-caption);
+}
+
+#persona .ps-item.is-pain {
+  border-left-color: var(--deck-danger);
+}

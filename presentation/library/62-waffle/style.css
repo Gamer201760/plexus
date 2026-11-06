@@ -1,0 +1,19 @@
+#waffle .wa {
+  display: grid;
+  grid-template-columns: 640px 1fr;
+  gap: 120px;
+  height: 100%;
+}
+
+#waffle .wa-side {
+  align-content: center;
+  gap: 48px;
+}
+
+#waffle .wa-danger {
+  color: var(--deck-danger);
+}
+
+#waffle .wa-accent {
+  color: var(--deck-accent);
+}

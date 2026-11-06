@@ -1,0 +1,30 @@
+<section class="slide" id="flowchart" data-title="Схема с отказом">
+  <h2 class="title a">{{Сначала проверка}}, <em>{{потом ответ}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="fc">
+      <div class="dg fc-dg">
+        <svg viewBox="0 0 1680 520" aria-hidden="true">
+          <path id="fc-main" class="trace is-muted dr" pathLength="1" style="--d:0.3s;--t:1s" d="M120 170 H1470" />
+          <path class="tip pop" style="--d:0.55s" d="M388 170 L370 160 L370 180 Z" />
+          <path class="tip pop" style="--d:0.75s" d="M738 170 L720 160 L720 180 Z" />
+          <path class="tip pop" style="--d:0.95s" d="M1088 170 L1070 160 L1070 180 Z" />
+          <path class="tip is-accent pop" style="--d:1.25s" d="M1438 170 L1420 160 L1420 180 Z" />
+          <path class="trace is-danger dr" pathLength="1" style="--d:1.3s;--t:0.6s" d="M1170 300 C1170 370 1260 400 1420 400" />
+          <path class="tip is-danger pop" style="--d:1.85s" d="M1438 400 L1420 390 L1420 410 Z" />
+        </svg>
+        <div class="dg-node a" style="--x:120px;--y:170px;--d:0.3s"><span class="tile"><span class="ico" data-icon="database"></span></span><b>{{Данные}}</b><span>{{заявка и документы}}</span></div>
+        <div class="dg-node a" style="--x:470px;--y:170px;--d:0.5s"><span class="tile"><span class="ico" data-icon="trending"></span></span><b>{{Прогноз}}</b><span>{{риск и сумма}}</span></div>
+        <div class="dg-node a" style="--x:820px;--y:170px;--d:0.7s"><span class="tile"><span class="ico" data-icon="sliders"></span></span><b>{{Ядро}}</b><span>{{выбирает вариант}}</span></div>
+        <div class="dg-node a" style="--x:1170px;--y:170px;--d:0.9s"><span class="tile"><span class="ico" data-icon="lock"></span></span><b>{{Проверка кодом}}</b><span>{{48 запретов}}</span></div>
+        <div class="dg-node a" style="--x:1530px;--y:170px;--d:1.2s"><span class="tile is-accent"><span class="ico" data-icon="check"></span></span><b>{{Ответ}}</b><span>{{с источником}}</span></div>
+        <div class="dg-node a" style="--x:1530px;--y:400px;--d:1.8s;--w:300px"><span class="tile is-danger"><span class="ico" data-icon="x"></span></span><b>{{Отказ с причиной}}</b><span>{{какое правило сработало}}</span></div>
+        <span class="fc-runner only-motion"><span class="runner" style="--d:1.4s;--t:2.4s;--loop:infinite"></span></span>
+      </div>
+      <div class="fc-split">
+        <div class="fc-bar"><i class="is-ok gx" style="--f:92;--d:2s"><b>{{92%}}</b>{{прошли проверку}}</i><i class="is-no gx" style="--f:8;--d:2.2s"><b>{{8%}}</b></i></div>
+        <span class="caption f" style="--d:2.3s">{{из 1 000 заявок за неделю; отказ всегда называет правило}}</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,109 @@
+#product .product-frame {
+  position: absolute;
+  left: var(--gutter);
+  top: 300px;
+  width: 1080px;
+  height: 600px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--deck-line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+}
+
+#product .frame-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--deck-line);
+}
+
+#product .frame-bar i {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-line-strong);
+}
+
+#product .frame-bar span {
+  margin-left: 16px;
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-3);
+}
+
+#product .frame-body {
+  display: grid;
+  grid-template-columns: 220px 1fr 300px;
+  grid-template-rows: 64px repeat(3, 72px) 1fr;
+  gap: 16px;
+  height: calc(100% - 52px);
+  padding: 24px;
+}
+
+#product .sk {
+  border-radius: var(--radius-md);
+  background: var(--deck-sunken);
+  transition:
+    background-color var(--dur-slow) var(--ease-out),
+    box-shadow var(--dur-slow) var(--ease-out);
+}
+
+#product .sk-side {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+#product .sk-head {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+#product .sk-row {
+  grid-column: 2;
+}
+
+#product .sk-panel {
+  grid-column: 3;
+  grid-row: 2 / -1;
+}
+
+#product .sk.at {
+  background: color-mix(in srgb, var(--deck-accent) 18%, var(--deck-sunken));
+  box-shadow: inset 0 0 0 3px var(--deck-accent);
+}
+
+#product .product-callouts {
+  position: absolute;
+  left: 1300px;
+  right: var(--gutter);
+  top: 330px;
+  display: grid;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#product .product-callouts li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  align-items: start;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--deck-fg-2);
+}
+
+#product .product-callouts b {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-accent);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  color: var(--deck-on-accent);
+}

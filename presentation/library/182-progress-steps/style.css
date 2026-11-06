@@ -1,0 +1,59 @@
+#progress-steps .ps2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: end;
+  gap: 16px;
+  height: 100%;
+}
+
+#progress-steps .ps2-step {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 10px;
+  height: calc(var(--h) * 100%);
+  padding: 28px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--deck-sunken);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#progress-steps .ps2-step b {
+  font-size: var(--fs-lead);
+  color: var(--deck-fg);
+}
+
+#progress-steps .ps2-step .n {
+  background: var(--deck-line-strong);
+  color: var(--deck-fg);
+}
+
+#progress-steps .ps2-step.is-done {
+  background: color-mix(in oklab, var(--deck-accent) 22%, var(--deck-bg));
+}
+
+#progress-steps .ps2-step.is-done .n {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#progress-steps .ps2-step.is-now {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#progress-steps .ps2-step.is-now b {
+  color: var(--deck-on-accent);
+}
+
+#progress-steps .ps2-step.is-now .n {
+  background: var(--deck-on-accent);
+  color: var(--deck-accent);
+}
+
+#progress-steps .ps2-step.is-now .badge {
+  margin-top: auto;
+  background: var(--deck-on-accent);
+  color: var(--deck-accent);
+}

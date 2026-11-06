@@ -1,0 +1,63 @@
+#market-bars .mb {
+  display: grid;
+  align-content: center;
+  gap: 48px;
+  height: 100%;
+}
+
+#market-bars .mb-row {
+  display: grid;
+  grid-template-columns: 440px 1fr 320px;
+  align-items: center;
+  gap: 40px;
+}
+
+#market-bars .mb-name {
+  display: grid;
+  gap: 4px;
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-3);
+}
+
+#market-bars .mb-name b {
+  font-size: var(--fs-lead);
+  color: var(--deck-fg);
+}
+
+#market-bars .mb-bar {
+  height: 96px;
+}
+
+#market-bars .mb-bar i {
+  display: block;
+  width: max(calc(var(--w) * 100%), 24px);
+  height: 100%;
+  border-radius: var(--radius-md);
+  background: color-mix(in oklab, var(--deck-accent) 24%, var(--deck-bg));
+  transform-origin: left;
+}
+
+#market-bars .is-accent .mb-bar i {
+  background: var(--deck-accent);
+}
+
+#market-bars.play .mb-bar i {
+  animation: deck-grow 1s var(--ease-out) calc(var(--d, 0s) + 0.2s) both;
+}
+
+#market-bars .mb-val {
+  font-size: 40px;
+  white-space: nowrap;
+  font-weight: var(--weight-strong);
+  text-align: right;
+}
+
+#market-bars .is-accent .mb-val {
+  color: var(--deck-accent);
+}
+
+#market-bars .mb-source {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 110px;
+}

@@ -1,0 +1,65 @@
+#comparison-cards .cc {
+  align-items: center;
+}
+
+#comparison-cards .cc-card {
+  gap: 24px;
+  padding: 48px 40px;
+}
+
+#comparison-cards .cc-card.is-accent {
+  padding: 64px 40px;
+}
+
+#comparison-cards .cc-flag {
+  position: absolute;
+  top: -20px;
+  left: 40px;
+}
+
+#comparison-cards .cc-price {
+  font-family: var(--font-mono);
+  font-size: 60px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+#comparison-cards .is-accent .cc-price {
+  color: var(--deck-accent);
+}
+
+#comparison-cards .cc-price small {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-regular);
+  color: var(--deck-fg-3);
+}
+
+#comparison-cards .cc-list {
+  display: grid;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+}
+
+#comparison-cards .cc-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+#comparison-cards .cc-list .ico {
+  color: var(--deck-success);
+}
+
+#comparison-cards .cc-list .is-bad {
+  color: var(--deck-fg-2);
+}
+
+#comparison-cards .cc-list .is-bad .ico {
+  color: var(--deck-danger);
+}

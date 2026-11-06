@@ -1,0 +1,53 @@
+#empathy-map .em {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  height: 100%;
+}
+
+#empathy-map .em-q {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 32px 48px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#empathy-map .em-q p {
+  max-width: 480px;
+  font-size: var(--fs-lead);
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-snug);
+}
+
+#empathy-map .em-q.is-tr,
+#empathy-map .em-q.is-br {
+  justify-items: end;
+  text-align: right;
+}
+
+#empathy-map .em-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  width: 260px;
+  height: 260px;
+  align-content: center;
+  translate: -50% -50%;
+  border: 8px solid var(--deck-bg);
+  border-radius: 50%;
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+  font-size: var(--fs-caption);
+}
+
+#empathy-map .em-core b {
+  font-size: var(--fs-lead);
+}

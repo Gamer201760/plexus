@@ -1,0 +1,44 @@
+#clusters .cl {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 72px;
+  height: 100%;
+}
+
+#clusters .cl-legend {
+  align-content: center;
+  gap: 36px;
+}
+
+#clusters .cl-legend li {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 4px 16px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#clusters .cl-legend b {
+  color: var(--deck-fg);
+}
+
+#clusters .cl-legend span {
+  grid-column: 2;
+}
+
+#clusters .cl-dot {
+  grid-row: span 2;
+  width: 28px;
+  height: 28px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: var(--deck-accent);
+}
+
+#clusters .cl-dot.is-1 {
+  background: color-mix(in oklab, var(--deck-accent) 55%, var(--deck-bg));
+}
+
+#clusters .cl-dot.is-2 {
+  background: color-mix(in oklab, var(--deck-accent) 32%, var(--deck-bg));
+}

@@ -1,0 +1,84 @@
+#emotion-curve .ec {
+  position: relative;
+  height: 100%;
+}
+
+#emotion-curve .ec-svg {
+  position: absolute;
+  inset: 0 0 90px;
+  width: 100%;
+  height: calc(100% - 90px);
+  overflow: visible;
+}
+
+#emotion-curve .ec-zero {
+  fill: none;
+  stroke: var(--deck-line-strong);
+  stroke-width: 2;
+  stroke-dasharray: 4 8;
+}
+
+#emotion-curve .ec-area {
+  fill: color-mix(in oklab, var(--deck-accent) 10%, transparent);
+}
+
+#emotion-curve .ec-line {
+  fill: none;
+  stroke: var(--deck-accent);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+#emotion-curve .ec-s {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  translate: -50% 0;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  white-space: nowrap;
+}
+
+#emotion-curve .ec-s .ico {
+  width: 24px;
+  height: 24px;
+  color: var(--deck-accent);
+}
+
+#emotion-curve .ec-s.is-low {
+  background: var(--deck-danger);
+  border-color: var(--deck-danger);
+  color: var(--deck-on-accent);
+}
+
+#emotion-curve .ec-s.is-low .ico {
+  color: var(--deck-on-accent);
+}
+
+#emotion-curve .ec-y {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#emotion-curve .ec-y i {
+  width: 14px;
+  height: 14px;
+  margin-left: 16px;
+  border-radius: 50%;
+  background: var(--deck-accent);
+}
+
+#emotion-curve .ec-y i.is-down {
+  background: var(--deck-danger);
+}

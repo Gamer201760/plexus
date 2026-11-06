@@ -1,0 +1,59 @@
+#api-call .ap {
+  display: grid;
+  grid-template-columns: 1fr 140px 1.2fr;
+  align-items: center;
+  height: 100%;
+}
+
+#api-call .ap-pane {
+  overflow: hidden;
+  border: 1px solid var(--deck-line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+}
+
+#api-call .ap-pane.is-out {
+  box-shadow: 0 0 0 3px var(--deck-accent);
+}
+
+#api-call .ap-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--deck-line);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-2);
+}
+
+#api-call .ap-code {
+  margin: 0;
+  padding: 28px;
+  font-family: var(--font-mono);
+  font-size: 26px;
+  line-height: 1.6;
+  color: var(--deck-fg-3);
+}
+
+#api-call .ap-code i {
+  font-style: normal;
+  color: var(--deck-fg);
+}
+
+#api-call .ap-code s {
+  text-decoration: none;
+  color: var(--deck-success);
+}
+
+#api-call .ap-code u {
+  text-decoration: none;
+  color: var(--deck-accent);
+}
+
+#api-call .ap-arrow {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  color: var(--deck-accent);
+}

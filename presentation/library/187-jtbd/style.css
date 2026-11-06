@@ -1,0 +1,64 @@
+#jtbd .jt {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 460px auto;
+  align-content: center;
+  gap: 40px 24px;
+  height: 100%;
+}
+
+#jtbd .jt-part {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 20px;
+  padding: 72px 40px 48px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#jtbd .jt-part:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  z-index: 1;
+  width: 16px;
+  height: 28px;
+  translate: 0 -50%;
+  background: var(--deck-line-strong);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+#jtbd .jt-part.is-goal {
+  background: var(--deck-accent);
+  border-color: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#jtbd .jt-k {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}
+
+#jtbd .is-goal .jt-k {
+  color: var(--deck-on-accent);
+  opacity: 0.8;
+}
+
+#jtbd .jt-part p {
+  font-size: 48px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-title);
+}
+
+#jtbd .jt-note {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

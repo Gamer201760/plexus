@@ -1,0 +1,97 @@
+#doc-highlight .dh2 {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  gap: 64px;
+  height: 100%;
+}
+
+#doc-highlight .dh2-doc {
+  align-self: center;
+  display: grid;
+  align-content: start;
+  gap: 24px;
+  padding: 48px 56px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  box-shadow: var(--shadow-float);
+  font-family: var(--font-mono);
+  font-size: 24px;
+  line-height: 1.7;
+  color: var(--deck-fg-2);
+}
+
+#doc-highlight .dh2-h {
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg);
+}
+
+#doc-highlight .dh2-fade {
+  opacity: 0.4;
+}
+
+#doc-highlight mark {
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--deck-fg);
+}
+
+#doc-highlight .is-1 {
+  background: color-mix(in oklab, var(--deck-accent) 22%, transparent);
+}
+
+#doc-highlight .is-2 {
+  background: color-mix(in oklab, var(--deck-success) 22%, transparent);
+}
+
+#doc-highlight .is-3 {
+  background: color-mix(in oklab, var(--deck-accent) 40%, transparent);
+}
+
+#doc-highlight .is-4 {
+  background: color-mix(in oklab, var(--deck-warning) 30%, transparent);
+}
+
+#doc-highlight .is-5 {
+  background: color-mix(in oklab, var(--deck-danger) 22%, transparent);
+}
+
+#doc-highlight mark {
+  background-size: 0% 100%;
+}
+
+#doc-highlight .dh2-fields {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+}
+
+#doc-highlight .dh2-fields li {
+  display: grid;
+  grid-template-columns: 20px 190px 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#doc-highlight .dh2-fields i {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+}
+
+#doc-highlight .dh2-fields b {
+  color: var(--deck-fg);
+}
+
+#doc-highlight .dh2-fields .is-warn {
+  border-color: var(--deck-danger);
+}
+
+#doc-highlight .dh2-fields .is-warn b {
+  color: var(--deck-danger);
+}

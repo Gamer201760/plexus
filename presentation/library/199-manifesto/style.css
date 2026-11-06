@@ -1,0 +1,30 @@
+#manifesto .mf {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 0;
+  bottom: 0;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+}
+
+#manifesto .mf-l {
+  font-size: 104px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--deck-fg-3);
+}
+
+#manifesto .mf-l.is-accent {
+  color: var(--deck-fg);
+}
+
+#manifesto .mf-line {
+  width: 320px;
+  height: 10px;
+  margin-top: 48px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-accent);
+}

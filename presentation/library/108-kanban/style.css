@@ -1,0 +1,115 @@
+#kanban .kb {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  height: 100%;
+}
+
+#kanban .kb-col {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-sunken);
+}
+
+#kanban .kb-col b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs-body);
+}
+
+#kanban .kb-card {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  height: 96px;
+  padding: 0 20px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#kanban .kb-card::before,
+#kanban .kb-card::after {
+  content: "";
+  height: 12px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-sunken);
+}
+
+#kanban .kb-card::after {
+  width: 55%;
+}
+
+#kanban .kb-card.is-slot {
+  background: transparent;
+  border: 2px dashed var(--deck-line-strong);
+}
+
+#kanban .kb-card.is-slot::before,
+#kanban .kb-card.is-slot::after {
+  display: none;
+}
+
+#kanban .kb-card.is-done {
+  opacity: 0.6;
+}
+
+#kanban .kb-mover {
+  position: absolute;
+  left: 24px;
+  top: 308px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 354px;
+  white-space: nowrap;
+  height: 96px;
+  padding: 0 20px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  box-shadow: 0 0 0 3px var(--deck-accent), var(--shadow-float);
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-strong);
+  translate: 1278px 0;
+}
+
+#kanban .kb-mover .badge {
+  margin-left: auto;
+}
+
+#kanban.play .kb-mover {
+  animation: kb-move 2.4s var(--ease-in-out) 0.6s both;
+}
+
+@keyframes kb-move {
+  0% {
+    translate: 0 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    translate: 0 0;
+  }
+  45% {
+    translate: 426px 0;
+  }
+  60% {
+    translate: 426px 0;
+  }
+  75% {
+    translate: 852px 0;
+  }
+  85% {
+    translate: 852px 0;
+  }
+  100% {
+    translate: 1278px 0;
+  }
+}

@@ -1,0 +1,63 @@
+#diff-table .dt2 {
+  display: grid;
+  grid-template-columns: 1fr 160px 1fr;
+  gap: 24px;
+  height: 100%;
+}
+
+#diff-table .dt2-col {
+  display: grid;
+  grid-template-rows: 48px repeat(6, 1fr);
+  gap: 8px;
+}
+
+#diff-table .dt2-r {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+}
+
+#diff-table .dt2-r b {
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+}
+
+#diff-table .dt2-r.is-bad {
+  background: color-mix(in oklab, var(--deck-danger) 8%, var(--deck-raised));
+  border-color: color-mix(in oklab, var(--deck-danger) 40%, var(--deck-bg));
+}
+
+#diff-table .dt2-r.is-bad b {
+  color: var(--deck-danger);
+}
+
+#diff-table .dt2-mid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
+  padding-top: 56px;
+}
+
+#diff-table .dt2-eq {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 112px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-weight: var(--weight-strong);
+  color: var(--deck-success);
+}
+
+#diff-table .dt2-eq.is-bad {
+  background: var(--deck-danger);
+  color: var(--deck-on-accent);
+  font-size: var(--fs-body);
+}

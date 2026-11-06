@@ -1,0 +1,29 @@
+#small-multiples .sm {
+  gap: 24px;
+}
+
+#small-multiples .sm-card {
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  padding: 28px 32px;
+}
+
+#small-multiples .sm-name {
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-strong);
+}
+
+#small-multiples .sm-value {
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}
+
+#small-multiples .sm-value.is-danger {
+  color: var(--deck-danger);
+}
+
+#small-multiples .sm-spark {
+  grid-column: 1 / -1;
+  min-height: 140px;
+}

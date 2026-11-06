@@ -1,0 +1,55 @@
+#versus-split .vx {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 260px;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#versus-split .vx-half {
+  display: grid;
+  align-content: center;
+  gap: 40px;
+  padding: 0 var(--gutter) 80px;
+}
+
+#versus-split .vx-half.is-them {
+  background: var(--deck-sunken);
+  color: var(--deck-fg-2);
+}
+
+#versus-split .vx-half.is-us {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#versus-split .is-us .eyebrow {
+  color: var(--deck-on-accent);
+}
+
+#versus-split .is-us .mark .mark-base,
+#versus-split .is-us .mark .mark-accent {
+  fill: var(--deck-on-accent);
+}
+
+#versus-split .chrome-num {
+  color: var(--deck-on-accent);
+}
+
+#versus-split .vx-list {
+  display: grid;
+  gap: 32px;
+  font-size: var(--fs-body);
+}
+
+#versus-split .vx-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#versus-split .is-them .ico {
+  color: var(--deck-danger);
+}

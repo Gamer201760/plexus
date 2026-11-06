@@ -1,0 +1,67 @@
+#summary .su {
+  height: 100%;
+  align-items: stretch;
+}
+
+#summary .su-item {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr auto;
+  align-items: start;
+  gap: 20px;
+  padding: 48px 40px;
+  border-top: 6px solid var(--deck-accent);
+  background: var(--deck-raised);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  font-size: var(--fs-body);
+}
+
+#summary .su-n {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}
+
+#summary .su-num {
+  font-family: var(--font-mono);
+  font-size: 96px;
+  white-space: nowrap;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  color: var(--deck-accent);
+}
+
+#summary .su-cmp {
+  display: grid;
+  align-self: end;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+#summary .su-row {
+  display: grid;
+  gap: 6px;
+}
+
+#summary .su-row i {
+  display: block;
+  width: calc(var(--w) * 100%);
+  min-width: 8px;
+  height: 14px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-accent);
+  transform-origin: left;
+}
+
+#summary .su-row.is-base i {
+  background: var(--deck-line-strong);
+}
+
+#summary .su-row small {
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-3);
+}
+
+#summary.play .su-row i {
+  animation: deck-grow 0.8s var(--ease-out) var(--d) both;
+}

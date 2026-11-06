@@ -1,0 +1,119 @@
+#latency-breakdown .lb2 {
+  display: grid;
+  grid-template-rows: 200px auto auto;
+  align-content: center;
+  gap: 20px;
+  height: 100%;
+}
+
+#latency-breakdown .lb2-track {
+  position: relative;
+  display: flex;
+  gap: 4px;
+}
+
+#latency-breakdown .lb2-goal {
+  position: absolute;
+  left: var(--x);
+  top: -56px;
+  bottom: -36px;
+  z-index: 1;
+  border-left: 3px dashed var(--deck-success);
+}
+
+#latency-breakdown .lb2-goal em {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  font-style: normal;
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-strong);
+  white-space: nowrap;
+  color: var(--deck-success);
+}
+
+#latency-breakdown .lb2-seg {
+  flex: var(--f) 1 0;
+  display: grid;
+  align-content: end;
+  gap: 4px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  font-size: var(--fs-caption);
+  white-space: nowrap;
+  transform-origin: left;
+}
+
+#latency-breakdown.play .lb2-seg {
+  animation: deck-grow 0.6s var(--ease-out) var(--d) both;
+}
+
+#latency-breakdown .lb2-seg i {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: var(--fs-lead);
+  font-weight: var(--weight-strong);
+}
+
+#latency-breakdown .lb2-seg.is-1 {
+  background: var(--deck-sunken);
+}
+
+#latency-breakdown .lb2-seg.is-2 {
+  background: color-mix(in oklab, var(--deck-accent) 30%, var(--deck-bg));
+}
+
+#latency-breakdown .lb2-seg.is-3 {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#latency-breakdown .lb2-seg.is-4 {
+  background: color-mix(in oklab, var(--deck-accent) 55%, var(--deck-bg));
+}
+
+#latency-breakdown .lb2-axis {
+  position: relative;
+  height: 44px;
+  padding-top: 12px;
+  border-top: 2px solid var(--deck-line-strong);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-3);
+}
+
+#latency-breakdown .lb2-axis span {
+  position: absolute;
+  left: var(--x);
+  top: 12px;
+  translate: -50% 0;
+  white-space: nowrap;
+}
+
+#latency-breakdown .lb2-axis span:first-child {
+  translate: 0 0;
+}
+
+#latency-breakdown .lb2-axis span:last-child {
+  translate: -100% 0;
+}
+
+#latency-breakdown .lb2-notes {
+  height: auto;
+  margin-top: 40px;
+}
+
+#latency-breakdown .lb2-notes p {
+  display: grid;
+  gap: 6px;
+  padding-left: 24px;
+  border-left: 4px solid var(--deck-accent);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#latency-breakdown .lb2-notes b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}

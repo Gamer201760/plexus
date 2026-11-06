@@ -1,0 +1,33 @@
+#pictogram .pg {
+  display: grid;
+  grid-template-rows: 280px auto;
+  align-content: center;
+  gap: 56px;
+  height: 100%;
+}
+
+#pictogram .pg-text {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px 48px;
+}
+
+#pictogram .pg-big {
+  grid-row: span 2;
+  font-family: var(--font-mono);
+  font-size: 144px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--deck-accent);
+}
+
+#pictogram .pg-text .lead {
+  max-width: 900px;
+  align-self: end;
+}
+
+#pictogram .pg-text .source {
+  align-self: start;
+}

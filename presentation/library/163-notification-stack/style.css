@@ -1,0 +1,78 @@
+#notification-stack .ns {
+  display: grid;
+  grid-template-columns: 640px 1fr;
+  gap: 120px;
+  align-items: center;
+  height: 100%;
+  padding-left: 80px;
+}
+
+#notification-stack .ns-lock {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  height: 100%;
+  padding: 40px 32px;
+  border-radius: 48px;
+  background: linear-gradient(160deg, color-mix(in oklab, var(--deck-accent) 70%, var(--deck-fg)), color-mix(in oklab, var(--deck-accent) 30%, var(--deck-fg)));
+  color: var(--deck-on-accent);
+}
+
+#notification-stack .ns-time {
+  justify-self: center;
+  font-size: 96px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+}
+
+#notification-stack .ns-date {
+  justify-self: center;
+  margin-bottom: 24px;
+  font-size: var(--fs-caption);
+  opacity: 0.8;
+}
+
+#notification-stack .ns-card {
+  display: grid;
+  gap: 4px;
+  padding: 20px 24px;
+  border-radius: 24px;
+  background: color-mix(in oklab, var(--deck-raised) 92%, transparent);
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-2);
+}
+
+#notification-stack .ns-card b {
+  font-size: var(--fs-caption);
+  color: var(--deck-fg);
+}
+
+#notification-stack .ns-card.is-old {
+  opacity: 0.7;
+}
+
+#notification-stack .ns-app {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  color: var(--deck-fg-3);
+}
+
+#notification-stack .ns-app .mark {
+  width: 22px;
+}
+
+#notification-stack .ns-app i {
+  margin-left: auto;
+  font-style: normal;
+}
+
+#notification-stack .ns-side {
+  display: grid;
+  gap: 56px;
+}
+
+#notification-stack .kpi-value {
+  color: var(--deck-accent);
+}

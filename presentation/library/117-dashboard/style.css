@@ -1,0 +1,32 @@
+#dashboard .dh {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  height: 100%;
+}
+
+#dashboard .card {
+  padding: 24px 28px;
+  gap: 8px;
+}
+
+#dashboard .dh-num {
+  font-family: var(--font-mono);
+  font-size: 56px;
+  font-weight: var(--weight-strong);
+  line-height: 1.1;
+}
+
+#dashboard .dh-num.is-danger {
+  color: var(--deck-danger);
+}
+
+#dashboard .dh-chart {
+  grid-column: span 3;
+  grid-template-rows: auto 1fr;
+}
+
+#dashboard .dh-donut {
+  grid-template-rows: auto 1fr;
+}

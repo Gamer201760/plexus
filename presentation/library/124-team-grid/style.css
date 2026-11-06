@@ -1,0 +1,50 @@
+#team-grid .tg {
+  gap: 24px;
+}
+
+#team-grid .tg-person {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  align-items: center;
+  column-gap: 32px;
+  padding: 24px 32px;
+  border: 1px solid var(--deck-line);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#team-grid .tg-text {
+  display: grid;
+  gap: 6px;
+}
+
+#team-grid .tg-text b {
+  font-size: var(--fs-body);
+  white-space: nowrap;
+  color: var(--deck-fg);
+}
+
+#team-grid .tg-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#team-grid .tg-av {
+  display: grid;
+  place-items: center;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: var(--deck-sunken);
+  font-size: 36px;
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-2);
+}
+
+#team-grid .tg-av.is-accent {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}

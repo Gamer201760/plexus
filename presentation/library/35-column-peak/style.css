@@ -1,0 +1,19 @@
+#column-peak .cp {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 80px;
+  height: 100%;
+}
+
+#column-peak .cp-side {
+  align-content: center;
+}
+
+#column-peak .cp-big {
+  font-family: var(--font-mono);
+  font-size: 112px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--deck-accent);
+}

@@ -1,0 +1,85 @@
+#code-diff .cd {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  height: 100%;
+}
+
+#code-diff .cd-pane {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  border: 1px solid var(--deck-line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+}
+
+#code-diff .cd-pane.is-new {
+  box-shadow: 0 0 0 3px var(--deck-accent);
+}
+
+#code-diff .cd-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--deck-line);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-3);
+}
+
+#code-diff .cd-code {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  margin: 0;
+  padding: 24px 28px;
+  font-family: var(--font-mono);
+  font-size: 24px;
+  line-height: 1.6;
+  white-space: normal;
+  color: var(--deck-fg);
+}
+
+#code-diff .cd-code span {
+  display: block;
+  min-height: 1.6em;
+  padding: 0 12px;
+  border-radius: 4px;
+  white-space: pre;
+}
+
+#code-diff .cd-pane.is-new {
+  grid-template-rows: auto auto 1fr;
+}
+
+#code-diff .cd-stat {
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  padding: 0 40px 40px;
+}
+
+#code-diff .cd-stat b {
+  font-family: var(--font-mono);
+  font-size: 96px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  color: var(--deck-success);
+}
+
+#code-diff .is-del {
+  background: color-mix(in oklab, var(--deck-danger) 12%, transparent);
+  text-decoration: line-through;
+  text-decoration-color: color-mix(in oklab, var(--deck-danger) 50%, transparent);
+}
+
+#code-diff .is-add {
+  background: color-mix(in oklab, var(--deck-success) 16%, transparent);
+  font-weight: var(--weight-strong);
+}
+
+#code-diff .is-muted {
+  color: var(--deck-fg-3);
+}

@@ -1,0 +1,62 @@
+#token-cost .tc2 {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 64px;
+  height: 100%;
+  padding-top: 40px;
+}
+
+#token-cost .tc2-bar {
+  display: flex;
+  gap: 6px;
+}
+
+#token-cost .tc2-part {
+  flex: var(--f) 1 0;
+  display: grid;
+  align-content: end;
+  gap: 4px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  font-size: var(--fs-caption);
+  transform-origin: left;
+}
+
+#token-cost.play .tc2-part {
+  animation: deck-grow 0.6s var(--ease-out) var(--d) both;
+}
+
+#token-cost .tc2-part b {
+  font-size: var(--fs-body);
+}
+
+#token-cost .tc2-part span {
+  font-family: var(--font-mono);
+  font-size: var(--fs-lead);
+  font-weight: var(--weight-strong);
+}
+
+#token-cost .tc2-part.is-1 {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#token-cost .tc2-part.is-2 {
+  background: color-mix(in oklab, var(--deck-accent) 55%, var(--deck-bg));
+}
+
+#token-cost .tc2-part.is-3 {
+  background: color-mix(in oklab, var(--deck-accent) 32%, var(--deck-bg));
+}
+
+#token-cost .tc2-part.is-4 {
+  background: color-mix(in oklab, var(--deck-accent) 16%, var(--deck-bg));
+}
+
+#token-cost .tc2-kpi {
+  height: auto;
+}
+
+#token-cost .kpi-value {
+  font-size: 72px;
+}

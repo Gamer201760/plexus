@@ -1,0 +1,20 @@
+#table .tb {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 32px;
+  height: 100%;
+}
+
+#table .tb-tbl {
+  --cols: 260px 1fr 1fr 260px;
+  align-content: start;
+}
+
+#table .tb-tbl .tbl-row:not(.is-head) {
+  min-height: 108px;
+  font-size: var(--fs-body);
+}
+
+#table .tb-tbl .badge {
+  justify-self: start;
+}

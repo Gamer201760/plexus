@@ -1,0 +1,23 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+*.zip binary
+*.mp4 binary
+*.webm binary
+*.wav binary
+*.mp3 binary
+package-lock.json -diff linguist-generated
+uv.lock -diff linguist-generated
+**/schema.gen.ts -diff linguist-generated

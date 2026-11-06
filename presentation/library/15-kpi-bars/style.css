@@ -1,0 +1,26 @@
+#kpi-bars .kb {
+  height: 100%;
+}
+
+#kpi-bars .kb-left {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#kpi-bars .kb-left .card {
+  align-content: center;
+  padding: 24px 32px;
+}
+
+#kpi-bars .kpi-value {
+  font-size: 64px;
+}
+
+#kpi-bars .kb-right {
+  grid-template-rows: auto 1fr;
+}
+
+#kpi-bars .kb-chart {
+  height: 100%;
+}

@@ -1,0 +1,97 @@
+#process-wheel .pw {
+  position: relative;
+  width: 690px;
+  height: 690px;
+  margin: 0 auto;
+}
+
+#process-wheel .pw-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#process-wheel .pw-track {
+  fill: none;
+  stroke: var(--deck-sunken);
+  stroke-width: 56;
+}
+
+#process-wheel .pw-seg {
+  fill: none;
+  stroke-width: 56;
+  stroke: color-mix(in oklab, var(--deck-accent) calc(30% + var(--k, 0) * 12%), var(--deck-bg));
+}
+
+#process-wheel .pw-seg.is-1 {
+  --k: 0;
+}
+
+#process-wheel .pw-seg.is-2 {
+  --k: 1;
+}
+
+#process-wheel .pw-seg.is-3 {
+  --k: 2;
+}
+
+#process-wheel .pw-seg.is-4 {
+  --k: 3;
+}
+
+#process-wheel .pw-seg.is-5 {
+  --k: 4;
+}
+
+#process-wheel .pw-seg.is-6 {
+  --k: 5.8;
+}
+
+#process-wheel .pw-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  translate: -50% -50%;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#process-wheel .pw-core .num {
+  font-size: 64px;
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}
+
+#process-wheel .pw-step {
+  position: absolute;
+  left: calc(50% + cos(var(--a)) * 385px);
+  top: calc(50% + sin(var(--a)) * 345px);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  translate: -50% -50%;
+  padding: 12px 24px 12px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-raised);
+  box-shadow: var(--shadow-raised);
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-strong);
+  white-space: nowrap;
+}
+
+#process-wheel .pw-step i {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--deck-accent);
+  font-family: var(--font-mono);
+  font-style: normal;
+  color: var(--deck-on-accent);
+}

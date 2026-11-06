@@ -1,0 +1,35 @@
+#big-number .bn {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 0;
+  bottom: 200px;
+  display: grid;
+  align-content: center;
+  gap: 40px;
+}
+
+#big-number .bn-num {
+  font-family: var(--font-mono);
+  font-size: 320px;
+  font-weight: var(--weight-strong);
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+  color: var(--deck-accent);
+}
+
+#big-number .bn-icons {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 250px;
+  width: 560px;
+  height: 112px;
+}
+
+#big-number .bn-text {
+  max-width: 1300px;
+  font-size: 64px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-title);
+}

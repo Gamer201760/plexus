@@ -1,0 +1,33 @@
+#photo-full .pf {
+  position: absolute;
+  inset: 0;
+}
+
+#photo-full .pf-img {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 0;
+  background: var(--deck-sunken);
+}
+
+#photo-full .pf-caption {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 120px;
+  display: grid;
+  gap: 24px;
+  max-width: 1100px;
+  padding: 40px 48px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  box-shadow: var(--shadow-float);
+}
+
+#photo-full .pf-text {
+  font-size: 56px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+}

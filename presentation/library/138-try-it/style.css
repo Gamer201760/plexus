@@ -1,0 +1,35 @@
+#try-it .ti {
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 96px;
+  align-items: center;
+  height: 100%;
+}
+
+#try-it .ti-qr .qr {
+  width: 520px;
+}
+
+#try-it .ti-steps {
+  display: grid;
+  gap: 40px;
+}
+
+#try-it .ti-url {
+  font-family: var(--font-mono);
+  font-size: 64px;
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}
+
+#try-it .ti-list {
+  display: grid;
+  gap: 24px;
+  font-size: var(--fs-body);
+}
+
+#try-it .ti-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

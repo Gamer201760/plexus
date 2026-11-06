@@ -1,0 +1,84 @@
+#boundary .bd {
+  display: grid;
+  grid-template-columns: 1fr 200px 360px;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+
+#boundary .bd-zone {
+  position: relative;
+  align-self: stretch;
+  display: grid;
+  padding: 80px 40px 40px;
+  border: 3px dashed var(--deck-accent);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--deck-accent) 4%, transparent);
+}
+
+#boundary .bd-label {
+  position: absolute;
+  left: 40px;
+  top: 28px;
+  color: var(--deck-accent);
+}
+
+#boundary .bd-grid {
+  gap: 20px;
+}
+
+#boundary .bd-card {
+  grid-template-columns: 88px 1fr;
+  align-items: center;
+  align-content: center;
+  gap: 24px;
+}
+
+#boundary .bd-card > span:last-child {
+  display: grid;
+  gap: 4px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#boundary .bd-card b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#boundary .bd-outside {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-3);
+}
+
+#boundary .bd-outside .ico {
+  width: 96px;
+  height: 96px;
+}
+
+#boundary .bd-cross {
+  position: absolute;
+  top: 44px;
+  width: 130px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-danger);
+  rotate: -40deg;
+}
+
+#boundary .bd-outside b {
+  color: var(--deck-fg-2);
+}
+
+#boundary .bd-side {
+  display: grid;
+  gap: 48px;
+}
+
+#boundary .bd-side .kpi-value {
+  font-size: 64px;
+}

@@ -1,0 +1,9 @@
+#strip .sr {
+  height: 100%;
+}
+
+#strip .sr-source {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 110px;
+}

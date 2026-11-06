@@ -1,0 +1,39 @@
+#logo-wall .lw {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 32px;
+  height: 100%;
+}
+
+#logo-wall .lw-grid {
+  gap: 20px;
+}
+
+#logo-wall .lw-logo {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#logo-wall .lw-logo b {
+  font-size: 44px;
+  font-weight: var(--weight-strong);
+  letter-spacing: -0.02em;
+  color: var(--deck-fg-2);
+}
+
+#logo-wall .lw-logo i {
+  font-style: normal;
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-3);
+}
+
+#logo-wall .lw-logo.is-empty {
+  background: none;
+  border: 2px dashed var(--deck-line-strong);
+  color: var(--deck-fg-3);
+}

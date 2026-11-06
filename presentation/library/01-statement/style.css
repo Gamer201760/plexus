@@ -1,0 +1,56 @@
+#statement .st-eyebrow {
+  position: absolute;
+  left: var(--gutter);
+  top: 200px;
+}
+
+#statement .st-text {
+  position: absolute;
+  left: var(--gutter);
+  top: 280px;
+  width: 1560px;
+  font-size: 112px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+
+#statement .st-bar {
+  position: absolute;
+  left: var(--gutter);
+  top: 620px;
+  width: 200px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-accent);
+}
+
+#statement .st-proof {
+  position: absolute;
+  left: var(--gutter);
+  top: 680px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: 1500px;
+}
+
+#statement .st-num {
+  font-family: var(--font-mono);
+  font-size: 120px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  color: var(--deck-accent);
+  white-space: nowrap;
+}
+
+#statement .st-proof .lead {
+  max-width: 900px;
+}
+
+#statement .st-source {
+  position: absolute;
+  left: var(--gutter);
+  top: 860px;
+}

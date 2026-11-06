@@ -1,0 +1,85 @@
+#balance .bl2 {
+  position: relative;
+  height: 100%;
+}
+
+#balance .bl2-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#balance .bl2-stand {
+  fill: var(--deck-sunken);
+}
+
+#balance .bl2-bar {
+  fill: none;
+  stroke: var(--deck-fg);
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+#balance .bl2-rope {
+  fill: none;
+  stroke: var(--deck-line-strong);
+  stroke-width: 3;
+}
+
+#balance .bl2-pan {
+  fill: var(--deck-accent);
+}
+
+#balance .bl2-pan.is-light {
+  fill: var(--deck-line-strong);
+}
+
+#balance .bl2-beam {
+  transform-box: view-box;
+  transform-origin: 840px 160px;
+  transform: rotate(-8deg);
+}
+
+#balance.play .bl2-beam {
+  animation: bl2-tilt 1.6s var(--ease-in-out) 0.3s both;
+}
+
+@keyframes bl2-tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+
+#balance .bl2-label {
+  position: absolute;
+  top: 480px;
+  display: grid;
+  gap: 4px;
+  width: 400px;
+  text-align: center;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#balance .bl2-label b {
+  font-size: var(--fs-lead);
+  color: var(--deck-fg);
+}
+
+#balance .bl2-label.is-l {
+  left: 220px;
+  top: 520px;
+}
+
+#balance .bl2-label.is-r {
+  left: 1060px;
+  top: 400px;
+}

@@ -1,0 +1,57 @@
+#team-skills .ts {
+  display: grid;
+  gap: 12px;
+}
+
+#team-skills .ts-row {
+  display: grid;
+  grid-template-columns: 300px repeat(5, 1fr);
+  align-items: center;
+  gap: 12px;
+  font-size: var(--fs-body);
+}
+
+#team-skills .ts-row.is-head {
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  text-align: center;
+  color: var(--deck-fg-3);
+}
+
+#team-skills .ts-row i {
+  height: 96px;
+  border-radius: var(--radius-md);
+  background: var(--deck-sunken);
+}
+
+#team-skills .ts-row i.is-1 {
+  background: color-mix(in oklab, var(--deck-accent) 18%, var(--deck-bg));
+}
+
+#team-skills .ts-row i.is-2 {
+  background: color-mix(in oklab, var(--deck-accent) 45%, var(--deck-bg));
+}
+
+#team-skills .ts-row i.is-3 {
+  background: var(--deck-accent);
+}
+
+#team-skills .ts-legend {
+  margin-top: 32px;
+  justify-content: flex-end;
+}
+
+#team-skills .ts-legend .ts-sw {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  vertical-align: -5px;
+}
+
+#team-skills .ts-legend .ts-sw.is-2 {
+  background: color-mix(in oklab, var(--deck-accent) 45%, var(--deck-bg));
+}
+
+#team-skills .ts-legend .ts-sw.is-1 {
+  background: color-mix(in oklab, var(--deck-accent) 18%, var(--deck-bg));
+}

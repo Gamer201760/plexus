@@ -1,0 +1,75 @@
+#wipe-compare .wc {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--deck-line);
+}
+
+#wipe-compare .wc-before,
+#wipe-compare .wc-after {
+  position: absolute;
+  inset: 0;
+}
+
+#wipe-compare .wc-before {
+  background: var(--deck-sunken);
+}
+
+#wipe-compare .wc-mess {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  padding: 20px 28px;
+  border-radius: var(--radius-sm);
+  background: var(--deck-raised);
+  box-shadow: var(--shadow-raised);
+  font-size: var(--fs-caption);
+  rotate: var(--r);
+}
+
+#wipe-compare .wc-after {
+  display: grid;
+  align-content: center;
+  padding: 48px;
+  background: var(--deck-raised);
+  clip-path: inset(0 0 0 0);
+}
+
+#wipe-compare.play .wc-after {
+  animation: wc-wipe 1.6s var(--ease-in-out) 0.8s both;
+}
+
+@keyframes wc-wipe {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+#wipe-compare .wc-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  background: var(--deck-accent);
+  opacity: 0;
+}
+
+#wipe-compare.play .wc-handle {
+  animation: wc-handle 1.6s var(--ease-in-out) 0.8s both;
+}
+
+@keyframes wc-handle {
+  0% {
+    left: 100%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 0;
+    opacity: 0;
+  }
+}

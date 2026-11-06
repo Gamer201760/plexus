@@ -1,0 +1,53 @@
+#unit-economics .ue {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr) 80px minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  row-gap: 16px;
+  height: calc(100% - 96px);
+}
+
+#unit-economics .ue-chart {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  align-self: stretch;
+}
+
+#unit-economics .ue-axis {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  align-self: start;
+  justify-self: end;
+}
+
+#unit-economics .ue-tile {
+  padding: 28px 36px;
+  gap: 16px;
+}
+
+#unit-economics .ue-num {
+  font-family: var(--font-mono);
+  font-size: 56px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+#unit-economics .ue-num.is-accent {
+  font-size: 88px;
+  color: var(--deck-accent);
+}
+
+#unit-economics .ue-op {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 96px;
+  color: var(--deck-fg-3);
+}
+
+#unit-economics .ue-note {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 110px;
+}

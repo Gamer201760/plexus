@@ -1,0 +1,57 @@
+#er-model .er-card {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  display: grid;
+  gap: 4px;
+  width: 360px;
+  translate: -50% 0;
+  overflow: hidden;
+  border: 1px solid var(--deck-line-strong);
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  box-shadow: var(--shadow-raised);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-2);
+}
+
+#er-model .er-card b {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  background: var(--deck-sunken);
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg);
+}
+
+#er-model .er-card span {
+  padding: 4px 24px;
+}
+
+#er-model .er-card span:last-child {
+  padding-bottom: 20px;
+}
+
+#er-model .er-card.is-accent {
+  border-color: var(--deck-accent);
+  box-shadow: 0 0 0 2px var(--deck-accent);
+}
+
+#er-model .er-card.is-accent b {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#er-model .er-rel {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  translate: -50% -50%;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}

@@ -1,0 +1,84 @@
+#funnel .funnel {
+  position: absolute;
+  left: var(--gutter);
+  top: 320px;
+  width: 1680px;
+  height: 460px;
+}
+
+#funnel .dot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-line-strong);
+}
+
+#funnel .dot.is-picked {
+  background: var(--deck-accent);
+}
+
+#funnel.play .dot {
+  animation: deck-pop 0.5s var(--ease-out) var(--d) both;
+}
+
+#funnel.play .dot:not(.is-picked) {
+  animation:
+    deck-pop 0.5s var(--ease-out) var(--d) both,
+    funnel-dim 0.6s var(--ease-out) 1.2s forwards;
+}
+
+#funnel.play .dot.is-picked {
+  animation:
+    deck-pop 0.5s var(--ease-out) var(--d) both,
+    funnel-pick 0.9s var(--ease-in-out) calc(1.3s + var(--k) * 0.08s) forwards;
+}
+
+#funnel .funnel-in,
+#funnel .funnel-out {
+  position: absolute;
+  top: 800px;
+  margin: 0;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#funnel .funnel-in {
+  left: var(--gutter);
+}
+
+#funnel .funnel-out {
+  right: var(--gutter);
+  text-align: right;
+}
+
+#funnel .funnel-in .num,
+#funnel .funnel-out .num {
+  font-size: var(--fs-lead);
+  color: var(--deck-fg);
+}
+
+#funnel .funnel-out .num {
+  color: var(--deck-accent);
+}
+
+#funnel .funnel-key {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 900px;
+}
+
+@keyframes funnel-dim {
+  to {
+    opacity: 0.25;
+  }
+}
+
+@keyframes funnel-pick {
+  to {
+    transform: translate(var(--tx), var(--ty)) scale(1.4);
+  }
+}

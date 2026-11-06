@@ -1,0 +1,107 @@
+#spectrum .spc {
+  position: relative;
+  height: 100%;
+}
+
+#spectrum .spc-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 16px;
+  translate: 0 -50%;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--deck-line-strong), color-mix(in oklab, var(--deck-accent) 40%, var(--deck-bg)) 50%, var(--deck-line-strong));
+}
+
+#spectrum .spc-end {
+  position: absolute;
+  top: calc(50% + 140px);
+  display: grid;
+  gap: 4px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#spectrum .spc-end b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#spectrum .spc-end.is-l {
+  left: 0;
+}
+
+#spectrum .spc-end.is-r {
+  right: 0;
+  text-align: right;
+}
+
+#spectrum .spc-dot {
+  position: absolute;
+  left: calc(var(--x) * 100%);
+  top: 50%;
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  translate: -50% -22px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+  white-space: nowrap;
+}
+
+#spectrum .spc-dot.is-low {
+  translate: -50% calc(-100% + 22px);
+  flex-direction: column-reverse;
+}
+
+#spectrum .spc-dot.is-low i {
+  order: 2;
+}
+
+#spectrum .spc-dot i {
+  width: 44px;
+  height: 44px;
+  border: 6px solid var(--deck-bg);
+  border-radius: 50%;
+  background: var(--deck-fg-3);
+}
+
+#spectrum .spc-us {
+  position: absolute;
+  left: calc(var(--x) * 100%);
+  bottom: calc(50% + 56px);
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  translate: -50% 0;
+  padding: 24px 40px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+  font-size: var(--fs-caption);
+}
+
+#spectrum .spc-us::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -56px;
+  width: 4px;
+  height: 48px;
+  translate: -50% 0;
+  background: var(--deck-accent);
+}
+
+#spectrum .spc-us b {
+  font-size: var(--fs-lead);
+}
+
+#spectrum .spc-us .mark {
+  width: 40px;
+}
+
+#spectrum .spc-us .mark-base,
+#spectrum .spc-us .mark-accent {
+  fill: var(--deck-on-accent);
+}

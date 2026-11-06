@@ -1,0 +1,142 @@
+#roadmap .rm {
+  display: grid;
+  grid-template-rows: 48px 1fr;
+  gap: 24px;
+  height: 100%;
+}
+
+#roadmap .rm-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  column-gap: 32px;
+}
+
+#roadmap .rm-track::before,
+#roadmap .rm-fill {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  top: 50%;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-line-strong);
+}
+
+#roadmap .rm-fill {
+  right: auto;
+  width: calc(50% + 16px);
+  background: var(--deck-accent);
+  transform-origin: left;
+}
+
+#roadmap.play .rm-fill {
+  animation: deck-grow 1s var(--ease-out) 0.4s both;
+}
+
+#roadmap .rm-dot {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 4px solid var(--deck-line-strong);
+  background: var(--deck-bg);
+}
+
+#roadmap .rm-dot.is-done {
+  border-color: var(--deck-accent);
+  background: var(--deck-accent);
+}
+
+#roadmap .rm-dot.is-now {
+  width: 32px;
+  height: 32px;
+  margin-left: -4px;
+  border-color: var(--deck-accent);
+  box-shadow: 0 0 0 8px color-mix(in oklab, var(--deck-accent) 18%, transparent);
+}
+
+#roadmap .rm-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#roadmap .rm-cards > li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 32px;
+}
+
+#roadmap .rm-cards h3 {
+  font-size: var(--fs-lead);
+}
+
+#roadmap .rm-cards .list {
+  gap: 14px;
+  font-size: var(--fs-body);
+}
+
+#roadmap .rm-kpi {
+  display: grid;
+  gap: 12px;
+  align-self: stretch;
+  margin-top: auto;
+}
+
+#roadmap .rm-kpi b {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  line-height: 1;
+}
+
+#roadmap .card.is-accent .rm-kpi b {
+  color: var(--deck-accent);
+}
+
+#roadmap .rm-p {
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-line);
+  overflow: hidden;
+}
+
+#roadmap .rm-p i {
+  display: block;
+  width: calc(var(--f) * 100%);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--deck-accent);
+  transform-origin: left;
+}
+
+#roadmap.play .rm-p i {
+  animation: deck-grow 0.8s var(--ease-out) 1.2s both;
+}
+
+#roadmap .rm-kpi.is-goal {
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 16px;
+}
+
+#roadmap .rm-kpi.is-goal b {
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-3);
+}
+
+#roadmap .rm-kpi.is-goal .mono {
+  font-size: 48px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  color: var(--deck-success);
+}

@@ -1,0 +1,9 @@
+#share-bars .sb {
+  height: 100%;
+}
+
+#share-bars .sb-source {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 110px;
+}

@@ -1,0 +1,118 @@
+#milestones .ms {
+  position: relative;
+  display: grid;
+  align-content: end;
+  height: 100%;
+}
+
+#milestones .ms-svg {
+  width: 100%;
+  height: 80px;
+  margin: 16px 0 24px;
+  overflow: visible;
+}
+
+#milestones .ms-bars {
+  position: relative;
+  height: 420px;
+}
+
+#milestones .ms-unit {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#milestones .ms-bar {
+  position: absolute;
+  left: var(--x);
+  bottom: 0;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  width: 140px;
+  translate: -50% 0;
+}
+
+#milestones .ms-bar b {
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+  color: var(--deck-fg-2);
+}
+
+#milestones .ms-bar i {
+  width: 100%;
+  height: var(--h);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background: color-mix(in oklab, var(--deck-accent) 45%, var(--deck-bg));
+  transform-origin: bottom;
+}
+
+#milestones .ms-bar.is-now b {
+  color: var(--deck-accent);
+}
+
+#milestones .ms-bar.is-now i {
+  background: var(--deck-accent);
+}
+
+#milestones .ms-bar.is-next b {
+  color: var(--deck-fg-3);
+}
+
+#milestones .ms-bar.is-next i {
+  background: transparent;
+  border: 3px dashed var(--deck-line-strong);
+  border-bottom: 0;
+}
+
+#milestones.play .ms-bar i {
+  animation: ms-rise 0.7s var(--ease-out) var(--d) both;
+}
+
+#milestones.play .ms-bar b {
+  animation: deck-fade 0.4s var(--ease-out) calc(var(--d) + 0.5s) both;
+}
+
+@keyframes ms-rise {
+  from {
+    scale: 1 0;
+  }
+}
+
+#milestones .ms-items {
+  position: relative;
+  height: 110px;
+}
+
+#milestones .ms-item {
+  position: absolute;
+  left: var(--x);
+  top: 0;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  width: 300px;
+  translate: -50% 0;
+  text-align: center;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#milestones .ms-item b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#milestones .ms-item.is-now b {
+  color: var(--deck-accent);
+}
+
+#milestones .ms-item.is-next {
+  color: var(--deck-fg-3);
+}
+
+#milestones .ms-item.is-next b {
+  color: var(--deck-fg-3);
+}

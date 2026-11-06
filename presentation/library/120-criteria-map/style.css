@@ -1,0 +1,55 @@
+#criteria-map .cm {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  height: 100%;
+}
+
+#criteria-map .cm-row {
+  display: grid;
+  grid-template-columns: 420px 1fr 520px;
+  align-items: center;
+  gap: 40px;
+  min-height: 96px;
+  padding: 0 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-body);
+}
+
+#criteria-map .cm-row.is-head {
+  min-height: 48px;
+  background: none;
+  border: 0;
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}
+
+#criteria-map .cm-w {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-mono);
+  font-weight: var(--weight-strong);
+}
+
+#criteria-map .cm-w i {
+  display: block;
+  height: 24px;
+  width: calc(var(--w) / 0.35 * 100%);
+  border-radius: var(--radius-pill);
+  background: var(--deck-accent);
+  transform-origin: left;
+}
+
+#criteria-map.play .cm-w i {
+  animation: deck-grow 0.9s var(--ease-out) calc(var(--d, 0s) + 0.3s) both;
+}
+
+#criteria-map .cm-where {
+  display: flex;
+  gap: 12px;
+}

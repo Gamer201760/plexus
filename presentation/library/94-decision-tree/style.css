@@ -1,0 +1,50 @@
+#decision-tree .dt-q,
+#decision-tree .dt-leaf {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100px;
+  padding: 0 24px;
+  border: 2px solid var(--deck-line-strong);
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-strong);
+}
+
+#decision-tree .dt-q.is-on {
+  border-color: var(--deck-accent);
+  color: var(--deck-fg);
+}
+
+#decision-tree .dt-leaf {
+  border-radius: var(--radius-pill);
+  background: var(--deck-sunken);
+  border-color: transparent;
+}
+
+#decision-tree .dt-leaf.is-accent {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#decision-tree .dt-leaf.is-ok {
+  color: var(--deck-success);
+}
+
+#decision-tree .dt-leaf.is-danger {
+  color: var(--deck-danger);
+}
+
+#decision-tree .dt-yn {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  translate: -50% -50%;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-bg);
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}

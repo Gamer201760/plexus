@@ -1,0 +1,57 @@
+#iceberg .ib {
+  position: relative;
+  height: 100%;
+}
+
+#iceberg .ib-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#iceberg .ib-water {
+  fill: color-mix(in oklab, var(--deck-accent) 8%, var(--deck-bg));
+}
+
+#iceberg .ib-top {
+  fill: var(--deck-raised);
+  stroke: var(--deck-line-strong);
+  stroke-width: 3;
+}
+
+#iceberg .ib-under {
+  fill: color-mix(in oklab, var(--deck-accent) 30%, var(--deck-bg));
+  stroke: var(--deck-accent);
+  stroke-width: 3;
+}
+
+#iceberg .ib-line {
+  fill: none;
+  stroke: var(--deck-accent);
+  stroke-width: 3;
+}
+
+#iceberg .ib-lead {
+  fill: none;
+  stroke: var(--deck-fg-3);
+  stroke-width: 2;
+  stroke-dasharray: 4 6;
+}
+
+#iceberg .ib-tag {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  display: grid;
+  gap: 4px;
+  width: 360px;
+  translate: -50% 0;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#iceberg .ib-tag b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}

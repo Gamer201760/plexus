@@ -1,0 +1,81 @@
+#goal-progress .gp {
+  display: grid;
+  align-content: center;
+  gap: 120px;
+  height: 100%;
+  padding: 0 80px 0 20px;
+}
+
+#goal-progress .gp-head {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+  margin-left: -20px;
+}
+
+#goal-progress .gp-big {
+  font-family: var(--font-mono);
+  font-size: 120px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  color: var(--deck-accent);
+}
+
+#goal-progress .gp-track {
+  position: relative;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-sunken);
+}
+
+#goal-progress .gp-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--w) * 100%);
+  border-radius: inherit;
+  background: var(--deck-accent);
+  transform-origin: left;
+}
+
+#goal-progress.play .gp-fill {
+  animation: deck-grow 1.2s var(--ease-out) 0.3s both;
+}
+
+#goal-progress .gp-mark {
+  position: absolute;
+  left: calc(var(--x) * 100%);
+  top: -12px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  width: 280px;
+  translate: -50% 0;
+  text-align: center;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#goal-progress .gp-mark i {
+  width: 64px;
+  height: 64px;
+  border: 6px solid var(--deck-bg);
+  border-radius: 50%;
+  background: var(--deck-accent);
+}
+
+#goal-progress .gp-mark b {
+  margin-top: 16px;
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#goal-progress .gp-mark.is-now i {
+  box-shadow: 0 0 0 8px color-mix(in oklab, var(--deck-accent) 30%, transparent);
+}
+
+#goal-progress .gp-mark.is-goal i {
+  border-color: var(--deck-accent);
+  background: var(--deck-bg);
+}

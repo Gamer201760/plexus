@@ -1,0 +1,40 @@
+#three-cards .tc3 {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 32px;
+  height: 100%;
+}
+
+#three-cards .tc3-cards {
+  height: auto;
+}
+
+#three-cards .tc3-card {
+  grid-template-rows: auto auto 1fr auto;
+  gap: 20px;
+  padding: 40px;
+}
+
+#three-cards .tc3-card h3 {
+  font-size: var(--fs-lead);
+}
+
+#three-cards .tc3-cost {
+  display: grid;
+  gap: 4px;
+  padding-top: 24px;
+  border-top: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#three-cards .tc3-cost b {
+  font-family: var(--font-mono);
+  font-size: 64px;
+  line-height: 1;
+  color: var(--deck-fg);
+}
+
+#three-cards .is-bad .tc3-cost b {
+  color: var(--deck-danger);
+}

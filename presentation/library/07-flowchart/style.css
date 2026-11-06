@@ -1,0 +1,54 @@
+#flowchart .fc {
+  display: grid;
+  grid-template-rows: 520px auto;
+  gap: 24px;
+  height: 100%;
+}
+
+#flowchart .fc-runner {
+  position: absolute;
+  inset: 0;
+}
+
+#flowchart .fc-split {
+  display: grid;
+  gap: 12px;
+}
+
+#flowchart .fc-bar {
+  display: flex;
+  gap: 4px;
+  height: 64px;
+}
+
+#flowchart .fc-bar i {
+  flex: var(--f) 1 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 24px;
+  border-radius: var(--radius-md);
+  font-style: normal;
+  font-size: var(--fs-caption);
+  white-space: nowrap;
+  transform-origin: left;
+}
+
+#flowchart .fc-bar b {
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+}
+
+#flowchart .fc-bar .is-ok {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#flowchart .fc-bar .is-no {
+  background: var(--deck-danger);
+  color: var(--deck-on-accent);
+}
+
+#flowchart.play .fc-bar i {
+  animation: deck-grow 0.6s var(--ease-out) var(--d) both;
+}

@@ -1,0 +1,27 @@
+<section class="slide" id="api-call" data-title="Запрос и ответ API">
+  <h2 class="title a">{{Ответ}} <em>{{с причиной внутри}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="ap">
+      <div class="ap-pane a" style="--d:0.2s">
+        <span class="ap-head"><span class="badge is-accent">POST</span>/api/v1/check</span>
+        <pre class="ap-code">{
+  <i>"inn"</i>: <s>"7707083893"</s>,
+  <i>"amount"</i>: <u>1250000</u>,
+  <i>"purpose"</i>: <s>"{{оплата по счёту}}"</s>
+}</pre>
+      </div>
+      <span class="ap-arrow f" style="--d:0.6s"><span class="ico is-lg" data-icon="arrow-right"></span><span class="micro">{{180 мс}}</span></span>
+      <div class="ap-pane is-out a" style="--d:0.8s">
+        <span class="ap-head"><span class="badge is-success">200</span>{{application/json}}</span>
+        <pre class="ap-code">{
+  <i>"decision"</i>: <s>"review"</s>,
+  <i>"reason"</i>: <s>"{{сумма выше лимита}}"</s>,
+  <i>"rule"</i>: <s>"limit.v3"</s>,
+  <i>"confidence"</i>: <u>0.94</u>,
+  <i>"sources"</i>: [<s>"{{договор §4.2}}"</s>]
+}</pre>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+#lollipop .lp {
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 80px;
+  height: 100%;
+}
+
+#lollipop .lp-side {
+  align-content: center;
+}
+
+#lollipop .lp-big {
+  font-size: 72px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-title);
+  color: var(--deck-accent);
+}

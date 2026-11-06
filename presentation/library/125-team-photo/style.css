@@ -1,0 +1,74 @@
+#team-photo .tp {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 56px;
+  height: 100%;
+}
+
+#team-photo .tp-photo {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--deck-raised) 0%, color-mix(in oklab, var(--deck-accent) 8%, var(--deck-raised)) 100%);
+}
+
+#team-photo .tp-hint {
+  position: absolute;
+  right: 28px;
+  bottom: 20px;
+  z-index: 2;
+}
+
+#team-photo .tp-person {
+  position: absolute;
+  bottom: -2px;
+  width: 240px;
+  translate: -50% 0;
+}
+
+#team-photo .tp-person::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  translate: -50% 0;
+  background: color-mix(in oklab, var(--deck-fg) 9%, transparent);
+}
+
+#team-photo .tp-person::after {
+  content: "";
+  position: absolute;
+  inset: 148px 0 0;
+  border-radius: 120px 120px 0 0;
+  background: color-mix(in oklab, var(--deck-fg) 9%, transparent);
+}
+
+#team-photo .tp-photo .pin {
+  z-index: 1;
+}
+
+#team-photo .tp-names {
+  display: grid;
+  align-content: center;
+  gap: 32px;
+}
+
+#team-photo .tp-names li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  column-gap: 20px;
+  align-items: center;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#team-photo .tp-names b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#team-photo .tp-names .n {
+  grid-row: span 2;
+}

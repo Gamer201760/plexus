@@ -1,0 +1,24 @@
+#ranking .rk {
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 72px;
+  height: 100%;
+}
+
+#ranking .rk-side {
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  padding-left: 48px;
+  border-left: 2px solid var(--deck-line);
+}
+
+#ranking .rk-big {
+  font-family: var(--font-mono);
+  font-size: 80px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  color: var(--deck-accent);
+}

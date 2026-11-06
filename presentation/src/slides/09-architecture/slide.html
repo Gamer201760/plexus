@@ -1,0 +1,19 @@
+<section class="slide" id="architecture" data-title="Архитектура">
+  <h2 class="title a">{{Работает}} <em>{{без внешних сервисов}}</em></h2>
+  <svg class="arch-map" viewBox="0 0 1680 520" aria-hidden="true">
+    <rect class="trace is-muted is-dashed f" style="--d:1.6s" x="2" y="2" width="1676" height="380" rx="24" />
+    <path class="trace dr" pathLength="1" style="--d:0.7s;--t:0.5s" d="M380 190 H460" />
+    <path class="trace dr" pathLength="1" style="--d:0.95s;--t:0.5s" d="M800 190 H880" />
+    <path class="trace dr" pathLength="1" style="--d:1.2s;--t:0.5s" d="M1220 190 H1300" />
+    <path class="trace is-muted is-dashed f" style="--d:1.9s" d="M1050 290 V450" />
+  </svg>
+  <ol class="arch-blocks">
+    <li class="s" style="--d:0.3s;--x:40px"><b>{{Интерфейс}}</b><span>{{что видит пользователь}}</span></li>
+    <li class="s" style="--d:0.55s;--x:460px"><b>{{API}}</b><span>{{контракт из кода}}</span></li>
+    <li class="s at" style="--d:0.8s;--x:880px"><b>{{Ядро}}</b><span>{{механика и правила}}</span></li>
+    <li class="s" style="--d:1.05s;--x:1300px"><b>{{Данные}}</b><span>{{что храним и где}}</span></li>
+  </ol>
+  <p class="arch-bound micro f" style="--d:1.8s">{{Контур стенда: всё внутри работает офлайн}}</p>
+  <p class="arch-port chip f" style="--d:2s">{{Внешняя модель за портом, есть резерв без неё}}</p>
+  <p class="arch-key limit a" style="--d:1.6s"><b>{{Узкое место}}.</b> {{Что ограничивает и как это видно}}</p>
+</section>

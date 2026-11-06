@@ -1,0 +1,15 @@
+<section class="slide" id="log-stream" data-title="Поток логов">
+  <h2 class="title a">{{Аномалию видно}} <em>{{за минуту}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="lg">
+      <p class="lg-row f" style="--d:0.2s"><time>12:04:11</time><span class="badge">INFO</span>{{payment accepted id=8812}}</p>
+      <p class="lg-row f" style="--d:0.3s"><time>12:04:12</time><span class="badge">INFO</span>{{payment accepted id=8813}}</p>
+      <p class="lg-row f" style="--d:0.4s"><time>12:04:12</time><span class="badge">INFO</span>{{payment accepted id=8814}}</p>
+      <p class="lg-row f" style="--d:0.5s"><time>12:04:13</time><span class="badge is-warning">WARN</span>{{retry provider=bank_a attempt=2}}</p>
+      <p class="lg-row is-hot a" style="--d:0.8s"><time>12:04:13</time><span class="badge is-danger">ALERT</span>{{same card, 14 payments in 9 s}}<span class="lg-tag"><span class="ico is-sm" data-icon="shield"></span>{{заблокировано}}</span></p>
+      <p class="lg-row f" style="--d:1s"><time>12:04:14</time><span class="badge">INFO</span>{{payment accepted id=8816}}</p>
+      <p class="lg-row f" style="--d:1.1s"><time>12:04:15</time><span class="badge">INFO</span>{{payment accepted id=8817}}</p>
+    </div>
+  </div>
+</section>

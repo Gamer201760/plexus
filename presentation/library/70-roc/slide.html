@@ -1,0 +1,14 @@
+<section class="slide" id="roc" data-title="ROC-кривая">
+  <h2 class="title a">{{Модель}} <em>{{далеко от случайной}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="rc">
+      <div data-viz="line" data-diagonal data-curve data-min="0" data-max="1" data-digits="1" data-values="0,0.55,0.72,0.81,0.87,0.91,0.94,0.96,0.98,0.99,1|0,0.32,0.48,0.6,0.69,0.76,0.82,0.87,0.92,0.96,1" data-names="{{Наша}};{{База}}" data-no-values data-labels="0;;;;;0,5;;;;;1"></div>
+      <div class="rc-side stack">
+        <div class="kpi is-accent a" style="--d:1.6s"><span class="kpi-label">AUC</span><span class="kpi-value">{{0,91}}</span></div>
+        <div class="kpi a" style="--d:1.75s"><span class="kpi-label">{{AUC базы}}</span><span class="kpi-value">{{0,74}}</span></div>
+        <p class="source a" style="--d:1.9s">{{Отложенная выборка, n, дата}}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+#status-board .sb2 {
+  gap: 20px;
+}
+
+#status-board .sb2-cell {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  grid-template-rows: auto auto 1fr;
+  gap: 6px 16px;
+  padding: 28px 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#status-board .sb2-cell b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#status-board .sb2-cell span:not(.sb2-dot) {
+  grid-column: 2;
+}
+
+#status-board .sb2-dot {
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--deck-success);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--deck-success) 20%, transparent);
+}
+
+#status-board .is-warn .sb2-dot {
+  background: var(--deck-warning);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--deck-warning) 25%, transparent);
+}
+
+#status-board .sb2-spark {
+  grid-column: 1 / -1;
+  min-height: 60px;
+}

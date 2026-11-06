@@ -1,0 +1,11 @@
+#roc .rc {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 64px;
+  height: 100%;
+}
+
+#roc .rc-side {
+  align-content: center;
+  gap: 40px;
+}

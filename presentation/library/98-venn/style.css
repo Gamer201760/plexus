@@ -1,0 +1,80 @@
+#venn .vn {
+  position: relative;
+  width: 900px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#venn .vn-c {
+  position: absolute;
+  width: 440px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid var(--deck-accent);
+  background: color-mix(in oklab, var(--deck-accent) 12%, transparent);
+}
+
+#venn .vn-c.is-a {
+  left: 120px;
+  top: 0;
+}
+
+#venn .vn-c.is-b {
+  left: 340px;
+  top: 0;
+}
+
+#venn .vn-c.is-c {
+  left: 230px;
+  top: 220px;
+}
+
+#venn .vn-l {
+  position: absolute;
+  display: grid;
+  gap: 4px;
+  font-size: var(--fs-body);
+  text-align: center;
+}
+
+#venn .vn-l span {
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-regular);
+  color: var(--deck-fg-3);
+}
+
+#venn .vn-l.is-a {
+  left: 120px;
+  top: 150px;
+  width: 220px;
+}
+
+#venn .vn-l.is-b {
+  left: 560px;
+  top: 150px;
+  width: 220px;
+}
+
+#venn .vn-l.is-c {
+  left: 340px;
+  top: 540px;
+  width: 220px;
+}
+
+#venn .vn-us {
+  position: absolute;
+  left: 450px;
+  top: 300px;
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--deck-raised);
+  box-shadow: 0 0 0 4px var(--deck-accent);
+}
+
+#venn .vn-us .mark {
+  width: 48px;
+}

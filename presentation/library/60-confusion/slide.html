@@ -1,0 +1,17 @@
+<section class="slide" id="confusion" data-title="Матрица ошибок">
+  <h2 class="title a">{{Путает редко}}, <em>{{и только соседей}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="cf">
+      <div class="cf-grid">
+        <span class="cf-axis-y micro f" style="--d:0.2s">{{Истина}}</span>
+        <span class="cf-axis-x micro f" style="--d:0.2s">{{Предсказание}}</span>
+        <div class="cf-map" data-viz="heatmap" data-show-values data-values="48,2,0,0|3,41,4,0|0,2,45,1|0,0,1,53" data-names="{{Счёт}};{{Акт}};{{Договор}};{{Письмо}}" data-labels="{{Счёт}};{{Акт}};{{Договор}};{{Письмо}}" data-label-width="160"></div>
+      </div>
+      <div class="cf-side stack">
+        <div class="kpi is-accent a" style="--d:1.2s"><span class="kpi-label">{{Точность}}</span><span class="kpi-value">{{93,5%}}</span><span class="kpi-note">{{на 200 документах отложенной выборки}}</span></div>
+        <p class="caption a" style="--d:1.4s">{{Акт и счёт путаются чаще всего: у них одинаковая шапка}}</p>
+      </div>
+    </div>
+  </div>
+</section>

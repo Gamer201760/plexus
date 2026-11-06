@@ -1,0 +1,48 @@
+#sequence .sq {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 16px;
+  height: 100%;
+}
+
+#sequence .sq-actors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#sequence .sq-actor {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+}
+
+#sequence .sq-actor .tile {
+  width: 72px;
+  height: 72px;
+}
+
+#sequence .sq-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#sequence .sq-life {
+  fill: none;
+  stroke: var(--deck-line-strong);
+  stroke-width: 2;
+  stroke-dasharray: 4 10;
+}
+
+#sequence .sq-label {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  fill: var(--deck-fg-2);
+}
+
+#sequence .sq-label.is-strong {
+  font-weight: var(--weight-strong);
+  fill: var(--deck-fg);
+}

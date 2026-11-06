@@ -1,0 +1,51 @@
+#security-checklist .sc {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 96px;
+  align-items: center;
+  height: 100%;
+}
+
+#security-checklist .sc-shield svg {
+  display: block;
+  width: 100%;
+}
+
+#security-checklist .sc-shape {
+  fill: color-mix(in oklab, var(--deck-accent) 10%, transparent);
+  stroke: var(--deck-accent);
+  stroke-width: 8;
+  stroke-linejoin: round;
+}
+
+#security-checklist .sc-check {
+  fill: none;
+  stroke: var(--deck-accent);
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#security-checklist .sc-list {
+  display: grid;
+  gap: 28px;
+}
+
+#security-checklist .sc-list li {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  align-items: center;
+  gap: 28px;
+}
+
+#security-checklist .sc-list li > span:last-child {
+  display: grid;
+  gap: 4px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#security-checklist .sc-list b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}

@@ -1,0 +1,53 @@
+#pricing .pc2 {
+  height: auto;
+  align-items: start;
+  margin-top: 64px;
+}
+
+#pricing .pc2-card {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 56px 40px 40px;
+}
+
+#pricing .pc2-flag {
+  position: absolute;
+  top: -20px;
+  left: 40px;
+}
+
+#pricing .pc2-for {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#pricing .pc2-for b {
+  font-family: var(--font-mono);
+  color: var(--deck-accent);
+}
+
+#pricing .pc2-price {
+  font-family: var(--font-mono);
+  font-size: 60px;
+  white-space: nowrap;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+}
+
+#pricing .pc2-price small {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-regular);
+  color: var(--deck-fg-3);
+}
+
+#pricing .is-accent .pc2-price {
+  color: var(--deck-accent);
+}

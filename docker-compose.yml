@@ -1,0 +1,36 @@
+name: ${COMPOSE_PROJECT_NAME:-app}
+
+services:
+  backend:
+    image: ${COMPOSE_PROJECT_NAME:-app}-backend:${TAG:-latest}
+    pull_policy: never
+    env_file:
+      - path: .env
+        required: false
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-8000}:8000"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health', timeout=2)"
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  frontend:
+    image: ${COMPOSE_PROJECT_NAME:-app}-frontend:${TAG:-latest}
+    pull_policy: never
+    env_file:
+      - path: .env
+        required: false
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-8080}:80"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped

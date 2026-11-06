@@ -1,0 +1,85 @@
+#versus-bars .vb {
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+  gap: 24px;
+  height: 100%;
+}
+
+#versus-bars .vb-group {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  gap: 8px 48px;
+  padding: 28px 40px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#versus-bars .vb-group h3 {
+  grid-column: 1 / -1;
+  font-size: var(--fs-body);
+}
+
+#versus-bars .vb-bars {
+  display: grid;
+  gap: 16px;
+}
+
+#versus-bars .vb-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 140px;
+  align-items: center;
+  gap: 24px;
+  font-size: var(--fs-caption);
+}
+
+#versus-bars .vb-row i {
+  font-style: normal;
+  color: var(--deck-fg-2);
+}
+
+#versus-bars .vb-row b {
+  font-family: var(--font-mono);
+  text-align: right;
+}
+
+#versus-bars .vb-track {
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--deck-sunken);
+}
+
+#versus-bars .vb-fill {
+  display: block;
+  width: max(calc(var(--w) * 100%), 8px);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--deck-line-strong);
+  transform-origin: left;
+}
+
+#versus-bars.play .vb-fill {
+  animation: deck-grow 0.9s var(--ease-out) var(--d) both;
+}
+
+#versus-bars .is-ours i,
+#versus-bars .is-ours b {
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}
+
+#versus-bars .is-ours .vb-fill {
+  background: var(--deck-accent);
+}
+
+#versus-bars .vb-delta {
+  font-family: var(--font-mono);
+  font-size: 68px;
+  white-space: nowrap;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  text-align: right;
+  color: var(--deck-accent);
+}

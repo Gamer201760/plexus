@@ -1,0 +1,19 @@
+#experiment-log .el {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 20px;
+  height: 100%;
+}
+
+#experiment-log .el-fail {
+  display: flex;
+  gap: 48px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#experiment-log .el-fail li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}

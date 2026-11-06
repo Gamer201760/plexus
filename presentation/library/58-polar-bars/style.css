@@ -1,0 +1,17 @@
+#polar-bars .pb {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 48px;
+  height: 100%;
+}
+
+#polar-bars .pb-side {
+  align-content: center;
+}
+
+#polar-bars .pb-big {
+  font-size: 64px;
+  font-weight: var(--weight-strong);
+  line-height: var(--lh-tight);
+  color: var(--deck-accent);
+}

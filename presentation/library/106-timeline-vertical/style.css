@@ -1,0 +1,85 @@
+#timeline-vertical .tv {
+  position: relative;
+  display: grid;
+  grid-auto-rows: 1fr;
+  height: 100%;
+}
+
+#timeline-vertical .tv-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  translate: -50% 0;
+  border-radius: var(--radius-pill);
+  background: var(--deck-fg-3);
+}
+
+#timeline-vertical.play .tv-line {
+  animation: tv-grow 1.6s var(--ease-out) 0.2s both;
+}
+
+@keyframes tv-grow {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+#timeline-vertical .tv-item {
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  width: 50%;
+  padding: 0 64px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#timeline-vertical .tv-item b {
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#timeline-vertical .tv-item.is-l {
+  justify-self: start;
+  text-align: right;
+}
+
+#timeline-vertical .tv-item.is-r {
+  justify-self: end;
+}
+
+#timeline-vertical .tv-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  border: 5px solid var(--deck-bg);
+  border-radius: 50%;
+  background: var(--deck-line-strong);
+  translate: 0 -50%;
+}
+
+#timeline-vertical .tv-item.is-l::after {
+  right: -14px;
+}
+
+#timeline-vertical .tv-item.is-r::after {
+  left: -14px;
+}
+
+#timeline-vertical .tv-item.is-accent::after {
+  background: var(--deck-accent);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--deck-accent) 30%, transparent);
+}
+
+#timeline-vertical .tv-item.is-accent b {
+  color: var(--deck-accent);
+}

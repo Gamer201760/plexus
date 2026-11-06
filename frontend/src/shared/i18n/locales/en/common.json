@@ -1,0 +1,41 @@
+{
+  "app": {
+    "name": "Product",
+    "tagline": "Product interface skeleton"
+  },
+  "meta": {
+    "description": "Product interface skeleton: shell, themes, languages and shared states."
+  },
+  "shell": {
+    "skip": "Skip to content"
+  },
+  "action": {
+    "retry": "Try again",
+    "home": "Go to the start page"
+  },
+  "state": {
+    "loading": "Loading"
+  },
+  "value": {
+    "none": "not set",
+    "noneLabel": "No value"
+  },
+  "theme": {
+    "legend": "Theme",
+    "light": "Light theme",
+    "dark": "Dark theme"
+  },
+  "language": {
+    "legend": "Interface language",
+    "ru": "Russian",
+    "en": "English",
+    "short": {
+      "ru": "RU",
+      "en": "EN"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The address may contain a typo, or the page has moved."
+  }
+}

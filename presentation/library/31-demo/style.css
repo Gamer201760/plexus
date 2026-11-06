@@ -1,0 +1,129 @@
+#demo .dm {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 40px;
+  height: 100%;
+}
+
+#demo .dm-main,
+#demo .dm-b {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 40px;
+}
+
+#demo .dm-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#demo .dm-total {
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}
+
+#demo .dm-steps {
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#demo .dm-steps li {
+  display: grid;
+  grid-template-columns: 104px 44px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+#demo .dm-steps b {
+  display: block;
+  font-size: var(--fs-body);
+}
+
+#demo .dm-t {
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-3);
+}
+
+#demo .n.is-danger {
+  background: var(--deck-danger);
+}
+
+#demo .dm-steps.is-compact li {
+  grid-template-columns: 44px 1fr;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#demo .dm-bar {
+  display: flex;
+  gap: 4px;
+  height: 14px;
+  margin-top: auto;
+}
+
+#demo .dm-bar i {
+  flex: var(--f) 1 0;
+  border-radius: var(--radius-pill);
+  background: var(--deck-accent);
+  transform-origin: left;
+}
+
+#demo .dm-bar i.is-danger {
+  background: var(--deck-danger);
+}
+
+#demo.play .dm-bar i {
+  animation: deck-grow 0.5s var(--ease-out) var(--d) both;
+}
+
+#demo .dm-rec {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  border-radius: var(--radius-md);
+  background: var(--deck-fg);
+  color: var(--deck-bg);
+}
+
+#demo .dm-play {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--deck-bg) 18%, transparent);
+}
+
+#demo .dm-rec-bar {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 52px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in oklab, var(--deck-bg) 25%, transparent);
+}
+
+#demo .dm-rec-bar i {
+  display: block;
+  width: 36%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--deck-accent);
+}
+
+#demo .dm-rec-meta {
+  position: absolute;
+  left: 24px;
+  bottom: 16px;
+  font-size: var(--fs-micro);
+  opacity: 0.8;
+}

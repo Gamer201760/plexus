@@ -1,0 +1,64 @@
+#cost-of-delay .cod {
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 96px;
+  align-items: center;
+  height: 100%;
+}
+
+#cost-of-delay .cod-clock svg {
+  display: block;
+  width: 100%;
+}
+
+#cost-of-delay .cod-face {
+  fill: var(--deck-raised);
+  stroke: var(--deck-sunken);
+  stroke-width: 24;
+}
+
+#cost-of-delay .cod-ticks {
+  fill: none;
+  stroke: var(--deck-line-strong);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+#cost-of-delay .cod-arc {
+  fill: none;
+  stroke: var(--deck-danger);
+  stroke-width: 24;
+}
+
+#cost-of-delay .cod-hand {
+  stroke: var(--deck-fg);
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform-origin: 200px 200px;
+}
+
+#cost-of-delay.play .cod-hand {
+  animation: cod-turn 2s var(--ease-in-out) 0.4s both;
+}
+
+@keyframes cod-turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#cost-of-delay .cod-text {
+  display: grid;
+  gap: 28px;
+}
+
+#cost-of-delay .cod-big {
+  font-size: 160px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--deck-danger);
+}

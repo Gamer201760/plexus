@@ -1,0 +1,30 @@
+<section class="slide" id="states" data-title="Конечный автомат">
+  <h2 class="title a">{{У заявки}} <em>{{пять состояний}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="dg sm2">
+      <svg viewBox="0 0 1680 690" aria-hidden="true">
+        <path class="trace is-muted dr" pathLength="1" style="--d:0.5s;--t:0.4s" d="M312 250 H520" />
+        <path class="tip pop" style="--d:0.85s" d="M538 250 L520 240 L520 260 Z" />
+        <path class="trace is-muted dr" pathLength="1" style="--d:0.7s;--t:0.4s" d="M782 250 H960" />
+        <path class="tip pop" style="--d:1.05s" d="M978 250 L960 240 L960 260 Z" />
+        <path class="trace dr" pathLength="1" style="--d:0.9s;--t:0.4s" d="M1282 250 H1400" />
+        <path class="tip is-accent pop" style="--d:1.25s" d="M1418 250 L1400 240 L1400 260 Z" />
+        <path class="trace is-danger dr" pathLength="1" style="--d:1.1s;--t:0.6s" d="M1130 300 C1130 470 1080 560 972 560" />
+        <path class="tip is-danger pop" style="--d:1.65s" d="M954 560 L972 550 L972 570 Z" />
+        <path class="trace is-muted is-dashed f" style="--d:1.4s" d="M706 560 C430 560 190 480 190 318" />
+        <path class="tip pop" style="--d:1.5s" d="M190 300 L180 318 L200 318 Z" />
+        <path class="trace is-muted dr" pathLength="1" style="--d:1.5s;--t:0.5s" d="M615 200 C615 100 705 100 705 184" />
+        <path class="tip pop" style="--d:1.95s" d="M705 202 L695 184 L715 184 Z" />
+      </svg>
+      <div class="dg-node s" style="--x:190px;--y:250px;--d:0.2s;--w:240px"><span class="st-node">{{Черновик}}</span></div>
+      <div class="dg-node s" style="--x:660px;--y:250px;--d:0.4s;--w:240px"><span class="st-node">{{Проверка}}</span></div>
+      <div class="dg-node s" style="--x:1130px;--y:250px;--d:0.6s;--w:300px"><span class="st-node">{{Согласование}}</span></div>
+      <div class="dg-node s" style="--x:1540px;--y:250px;--d:0.8s;--w:240px"><span class="st-node is-accent">{{Готово}}</span></div>
+      <div class="dg-node s" style="--x:830px;--y:560px;--d:1s;--w:240px"><span class="st-node is-danger">{{Отклонено}}</span></div>
+      <span class="st-edge f" style="--x:660px;--y:90px;--d:1.9s">{{повтор, до 3 раз}}</span>
+      <span class="st-edge f" style="--x:1230px;--y:460px;--d:1.4s">{{нет подписи}}</span>
+      <span class="st-edge f" style="--x:400px;--y:540px;--d:1.5s">{{вернуть автору}}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<section class="slide" id="measured" data-title="Измерено">
+  <h2 class="title a">{{Точнее базы}}, <em>{{граница названа}}</em></h2>
+  <p class="measured-method caption f" style="--d:0.25s">{{Метод: выборка, как разбили, когда прогнали, чем считали}}</p>
+  <div class="measured-bars">
+    <div class="bar-row" style="--d:0.45s">
+      <span class="bar-label a">{{Базовый подход}}</span>
+      <span class="bar-track"><i class="bar-fill" data-bar="baseline_metric"></i></span>
+      <span class="bar-value num count" data-num="baseline_metric"></span>
+    </div>
+    <div class="bar-row is-ours" style="--d:0.75s">
+      <span class="bar-label a">{{PRODUCT}}</span>
+      <span class="bar-track"><i class="bar-fill" data-bar="ours_metric"></i></span>
+      <span class="bar-value num count" data-num="ours_metric"></span>
+    </div>
+  </div>
+  <p class="measured-limit limit a" style="--d:1.6s"><b>Граница.</b> {{Где метод ошибается, с числом}}</p>
+  <p class="measured-source source f" style="--d:1.2s">Источник: <span data-source="ours_metric"></span></p>
+</section>

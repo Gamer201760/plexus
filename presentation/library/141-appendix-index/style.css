@@ -1,0 +1,35 @@
+#appendix-index .ai {
+  grid-auto-rows: 1fr;
+  gap: 20px 32px;
+}
+
+#appendix-index .ai-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+  text-decoration: none;
+}
+
+#appendix-index .ai-item span:last-child {
+  display: grid;
+  gap: 4px;
+}
+
+#appendix-index .ai-item b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#appendix-index .ai-key {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: var(--weight-strong);
+  color: var(--deck-accent);
+}

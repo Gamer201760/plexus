@@ -1,0 +1,28 @@
+#cumulative-savings .cs2 {
+  position: relative;
+  height: 100%;
+}
+
+#cumulative-savings .cs2 > [data-viz] {
+  height: 100%;
+}
+
+#cumulative-savings .cs2-kpi {
+  position: absolute;
+  left: 140px;
+  top: 40px;
+  display: grid;
+  gap: 8px;
+  padding: 28px 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  box-shadow: var(--shadow-float);
+}
+
+#cumulative-savings .cs2-kpi .kpi-value {
+  font-family: var(--font-mono);
+  font-size: 72px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  color: var(--deck-accent);
+}

@@ -1,0 +1,87 @@
+#hierarchy .hr {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 56px;
+  height: 100%;
+}
+
+#hierarchy .hr-root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 20px;
+  padding: 16px 36px 16px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-raised);
+  box-shadow: 0 0 0 2px var(--deck-accent);
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+}
+
+#hierarchy .hr-root::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 2px;
+  height: 56px;
+  background: var(--deck-line-strong);
+}
+
+#hierarchy .hr-branches {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  border-top: 2px solid var(--deck-line-strong);
+  padding-top: 40px;
+}
+
+#hierarchy .hr-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 32px;
+  border: 1px solid var(--deck-line);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+}
+
+#hierarchy .hr-branch > b {
+  font-size: var(--fs-body);
+}
+
+#hierarchy .hr-share {
+  order: 9;
+  width: 100%;
+  height: 12px;
+  margin-top: auto;
+  border-radius: var(--radius-pill);
+  background: var(--deck-sunken);
+}
+
+#hierarchy .hr-share i {
+  display: block;
+  width: calc(var(--w) * 100%);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--deck-accent);
+  transform-origin: left;
+}
+
+#hierarchy.play .hr-share i {
+  animation: deck-grow 0.9s var(--ease-out) calc(var(--d, 0s) + 0.4s) both;
+}
+
+#hierarchy .hr-pct {
+  order: 10;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#hierarchy .hr-pct b {
+  font-family: var(--font-mono);
+  color: var(--deck-fg);
+}

@@ -1,0 +1,57 @@
+#pipeline .pl {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-content: center;
+  gap: 48px;
+  height: 100%;
+}
+
+#pipeline .pl-vol {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  align-items: end;
+}
+
+#pipeline .pl-v {
+  display: grid;
+  gap: 6px;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-3);
+}
+
+#pipeline .pl-v i {
+  height: 8px;
+  width: calc(var(--w) * 100%);
+  border-radius: var(--radius-pill);
+  background: color-mix(in oklab, var(--deck-accent) 40%, var(--deck-bg));
+}
+
+#pipeline .pl-v b {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 44px;
+  line-height: 1;
+  color: var(--deck-fg);
+}
+
+#pipeline .pl-v.is-out {
+  border-color: var(--deck-accent);
+  box-shadow: 0 0 0 2px var(--deck-accent);
+}
+
+#pipeline .pl-v.is-out i {
+  background: var(--deck-accent);
+}
+
+#pipeline .pl-v.is-out b {
+  color: var(--deck-accent);
+}
+
+#pipeline .pl-chips {
+  position: static;
+}

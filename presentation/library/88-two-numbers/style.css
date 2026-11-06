@@ -1,0 +1,85 @@
+#two-numbers .tn {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 40px;
+  height: 100%;
+}
+
+#two-numbers .tn-top {
+  display: grid;
+  grid-template-columns: 1fr 280px 1fr;
+  align-items: center;
+}
+
+#two-numbers .tn-side {
+  display: grid;
+  gap: 16px;
+}
+
+#two-numbers .tn-num {
+  font-family: var(--font-mono);
+  font-size: 128px;
+  white-space: nowrap;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--deck-accent);
+}
+
+#two-numbers .tn-num.is-old {
+  color: var(--deck-fg-3);
+  text-decoration: line-through;
+  text-decoration-thickness: 6px;
+}
+
+#two-numbers .tn-mid {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  color: var(--deck-accent);
+}
+
+#two-numbers .tn-mult {
+  font-family: var(--font-mono);
+  font-size: 72px;
+  font-weight: var(--weight-strong);
+}
+
+#two-numbers .tn-days {
+  display: grid;
+  gap: 14px;
+}
+
+#two-numbers .tn-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+#two-numbers .tn-cells {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 8px;
+}
+
+#two-numbers .tn-cells i {
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--deck-line-strong);
+}
+
+#two-numbers .tn-cells i.is-on {
+  background: var(--deck-accent);
+}
+
+#two-numbers .tn-cells i.is-off {
+  background: transparent;
+  border: 2px dashed var(--deck-line);
+}
+
+#two-numbers .tn-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 224px;
+}

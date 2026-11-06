@@ -1,0 +1,37 @@
+#layers .ly {
+  display: grid;
+  gap: 14px;
+  height: 100%;
+}
+
+#layers .ly-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 32px;
+  border: 1px solid var(--deck-line);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+}
+
+#layers .ly-row.is-core {
+  border-color: var(--deck-accent);
+  box-shadow: 0 0 0 2px var(--deck-accent);
+}
+
+#layers .ly-name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 360px;
+  font-size: var(--fs-body);
+  font-weight: var(--weight-strong);
+}
+
+#layers .is-core .ly-name {
+  color: var(--deck-accent);
+}
+
+#layers .chip {
+  height: 52px;
+}

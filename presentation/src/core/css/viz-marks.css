@@ -1,0 +1,51 @@
+.viz-row {
+  fill: color-mix(in oklab, var(--viz-accent) 7%, transparent);
+}
+
+.viz-ring {
+  fill: none;
+  stroke: var(--deck-fg);
+  stroke-width: 3;
+}
+
+.viz-guide {
+  fill: none;
+  stroke: var(--deck-line);
+  stroke-width: 2;
+  stroke-dasharray: 2 10;
+  stroke-linecap: round;
+}
+
+.viz-hull {
+  fill: color-mix(in oklab, var(--viz-muted) 12%, transparent);
+  stroke: var(--viz-muted);
+  stroke-width: 2;
+  stroke-dasharray: 6 8;
+}
+
+.viz-hull.is-accent {
+  fill: color-mix(in oklab, var(--viz-accent) 10%, transparent);
+  stroke: var(--viz-accent);
+}
+
+.viz-hull.is-shade-1,
+.viz-hull.is-shade-2 {
+  fill: color-mix(in oklab, var(--viz-shade-1) 14%, transparent);
+  stroke: var(--viz-shade-1);
+}
+
+.viz-range {
+  fill: color-mix(in oklab, var(--viz-muted) 18%, transparent);
+}
+
+.viz-range.is-accent {
+  fill: color-mix(in oklab, var(--viz-accent) 12%, transparent);
+}
+
+.viz-neck {
+  fill: color-mix(in oklab, var(--viz-accent) 8%, transparent);
+}
+
+.viz-neck.is-danger {
+  fill: color-mix(in oklab, var(--deck-danger) 14%, transparent);
+}

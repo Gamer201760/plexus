@@ -1,0 +1,16 @@
+#histogram .hg {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 72px;
+  height: 100%;
+}
+
+#histogram .hg-kpis {
+  display: grid;
+  align-content: center;
+  gap: 40px;
+}
+
+#histogram .kpi-value {
+  font-size: 72px;
+}

@@ -1,0 +1,18 @@
+#candles .cn {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 64px;
+  height: 100%;
+}
+
+#candles .cn-side {
+  align-content: center;
+}
+
+#candles .cn-big {
+  font-family: var(--font-mono);
+  font-size: 96px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  color: var(--deck-success);
+}

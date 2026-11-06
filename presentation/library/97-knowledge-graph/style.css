@@ -1,0 +1,10 @@
+#knowledge-graph .kg2 {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 48px;
+  height: 100%;
+}
+
+#knowledge-graph .kg2-side {
+  align-content: center;
+}

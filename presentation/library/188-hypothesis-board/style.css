@@ -1,0 +1,42 @@
+#hypothesis-board .hb {
+  display: grid;
+  grid-template-rows: auto repeat(5, 1fr);
+  gap: 10px;
+  height: 100%;
+}
+
+#hypothesis-board .hb-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 260px;
+  align-items: center;
+  gap: 32px;
+  padding: 0 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#hypothesis-board .hb-row.is-head {
+  min-height: 48px;
+  background: none;
+  border: 0;
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}
+
+#hypothesis-board .hb-row b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#hypothesis-board .hb-row.is-no b {
+  color: var(--deck-fg-3);
+  text-decoration: line-through;
+}
+
+#hypothesis-board .hb-row .badge {
+  justify-self: end;
+}

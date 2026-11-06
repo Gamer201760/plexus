@@ -1,0 +1,20 @@
+{
+  "kind": {
+    "network": "No connection to the server. Check the network and try again.",
+    "auth": "Sign in to continue.",
+    "forbidden": "You have no access to this section.",
+    "notFound": "Nothing was found at this address.",
+    "conflict": "The data has changed in the meantime. Refresh it and try again.",
+    "validation": "Some fields are filled in incorrectly.",
+    "server": "The server did not respond. Try again in a minute.",
+    "unknown": "Something went wrong. Try again."
+  },
+  "api": {
+    "server_unavailable": "The server is unavailable right now. Try again in a minute.",
+    "network_unavailable": "No connection to the server. Check the network and try again."
+  },
+  "boundary": {
+    "title": "The page failed to open",
+    "description": "Reload the page. If the error repeats, the details are in the browser console."
+  }
+}

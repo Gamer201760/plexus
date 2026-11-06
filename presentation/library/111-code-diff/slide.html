@@ -1,0 +1,27 @@
+<section class="slide" id="code-diff" data-title="Дифф кода">
+  <h2 class="title a">{{Одна строка}} <em>{{вместо сорока}}</em></h2>
+
+  <div class="body is-tall">
+    <div class="cd">
+      <div class="cd-pane a" style="--d:0.2s">
+        <span class="cd-head"><span class="badge is-danger">{{Было}}</span>{{handler.py}}</span>
+        <pre class="cd-code"><span class="is-del">if doc.type == "invoice":</span>
+<span class="is-del">    total = parse_total(doc)</span>
+<span class="is-del">    if total is None:</span>
+<span class="is-del">        total = guess_total(doc)</span>
+<span class="is-del">    if total &gt; LIMIT:</span>
+<span class="is-del">        notify(manager)</span>
+<span class="is-muted">    ...</span>
+<span class="is-muted">    {{ещё 34 строки правил}}</span></pre>
+      </div>
+      <div class="cd-pane is-new a" style="--d:0.6s">
+        <span class="cd-head"><span class="badge is-success">{{Стало}}</span>{{handler.py}}</span>
+        <pre class="cd-code"><span class="is-add">decision = rules.check(doc)</span>
+<span></span>
+<span class="is-muted"># {{правила в rules.yaml,}}</span>
+<span class="is-muted"># {{их правит аналитик}}</span></pre>
+        <div class="cd-stat a" style="--d:1s"><b>{{−39}}</b><span class="caption">{{строк кода; правило меняется без релиза}}</span></div>
+      </div>
+    </div>
+  </div>
+</section>

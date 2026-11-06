@@ -1,0 +1,10 @@
+#pr-curve .pc {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  height: 100%;
+}
+
+#pr-curve .pc-side {
+  align-content: center;
+}

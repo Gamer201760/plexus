@@ -1,0 +1,67 @@
+#transform .body.is-tall {
+  bottom: 190px;
+}
+
+#transform .tf {
+  display: grid;
+  grid-template-columns: 1fr 160px 1fr;
+  align-items: center;
+  gap: 32px;
+  height: 100%;
+}
+
+#transform .tf-in {
+  display: grid;
+  gap: 16px;
+}
+
+#transform .tf-raw {
+  padding: 22px 28px;
+  border-radius: var(--radius-md);
+  background: var(--deck-sunken);
+  font-family: var(--font-mono);
+  font-size: 22px;
+  line-height: var(--lh-snug);
+  color: var(--deck-fg-2);
+}
+
+#transform .tf-raw:nth-child(3) {
+  rotate: -1deg;
+}
+
+#transform .tf-raw:nth-child(4) {
+  rotate: 1deg;
+}
+
+#transform .tf-arrow {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  color: var(--deck-accent);
+}
+
+#transform .tf-out {
+  gap: 20px;
+}
+
+#transform .tf-fields {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px 28px;
+  align-items: center;
+  margin: 0;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-3);
+}
+
+#transform .tf-fields dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg);
+}
+
+#transform .tf-fields dd.is-key {
+  color: var(--deck-accent);
+}

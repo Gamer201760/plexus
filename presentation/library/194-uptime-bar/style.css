@@ -1,0 +1,66 @@
+#uptime-bar .ub {
+  display: grid;
+  grid-template-rows: auto 220px auto auto;
+  align-content: center;
+  gap: 24px;
+  height: 100%;
+}
+
+#uptime-bar .ub-head {
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+}
+
+#uptime-bar .ub-big {
+  font-family: var(--font-mono);
+  font-size: 120px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+  color: var(--deck-success);
+}
+
+#uptime-bar .ub-days {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  gap: 8px;
+}
+
+#uptime-bar .ub-days i {
+  border-radius: 6px;
+  background: var(--deck-success);
+  transform-origin: bottom;
+}
+
+#uptime-bar .ub-days i.is-bad {
+  background: var(--deck-danger);
+}
+
+#uptime-bar.play .ub-days i {
+  animation: ub-grow 0.4s var(--ease-out) both;
+}
+
+#uptime-bar.play .ub-days i:nth-child(n) {
+  animation-delay: calc(0.4s + 0.03s * var(--i, 0));
+}
+
+@keyframes ub-grow {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+#uptime-bar .ub-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-micro);
+  color: var(--deck-fg-3);
+}
+
+#uptime-bar .ub-incident {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}

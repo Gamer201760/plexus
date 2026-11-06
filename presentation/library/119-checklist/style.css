@@ -1,0 +1,44 @@
+#checklist .ck {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 20px 32px;
+  height: 100%;
+}
+
+#checklist .ck li {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 0 28px;
+  border: 1px solid var(--deck-line);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#checklist .ck li > span:nth-child(2) {
+  display: grid;
+  gap: 4px;
+}
+
+#checklist .ck b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#checklist .ck-box {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#checklist .is-partial .ck-box {
+  background: var(--deck-warning);
+}

@@ -1,0 +1,37 @@
+{
+  "problem_cost": {
+    "value": "{{N}}",
+    "source": "{{docs/evidence.md#problem-cost}}",
+    "note": "{{population, unit, date}}"
+  },
+  "baseline_metric": {
+    "value": "{{N}}",
+    "source": "{{docs/evidence.md#baseline}}",
+    "note": "{{metric name, sample size, split}}"
+  },
+  "ours_metric": {
+    "value": "{{N}}",
+    "source": "{{docs/evidence.md#ours}}",
+    "note": "{{metric name, sample size, split}}"
+  },
+  "funnel_in": {
+    "value": "{{N}}",
+    "source": "{{docs/evidence.md#funnel}}",
+    "note": "{{what is counted, on which example}}"
+  },
+  "funnel_out": {
+    "value": "{{N}}",
+    "source": "{{docs/evidence.md#funnel}}",
+    "note": "{{what is counted, on which example}}"
+  },
+  "impact_before": {
+    "value": "{{N}}",
+    "source": "{{docs/evidence.md#impact}}",
+    "note": "{{metric, unit, sample, date}}"
+  },
+  "impact_after": {
+    "value": "{{N}}",
+    "source": "{{docs/evidence.md#impact}}",
+    "note": "{{metric, unit, same sample, date}}"
+  }
+}

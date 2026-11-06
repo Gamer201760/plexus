@@ -1,0 +1,62 @@
+#five-whys .wy {
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 14px;
+  height: 100%;
+}
+
+#five-whys .wy li {
+  display: grid;
+  grid-template-columns: 72px 360px 1fr;
+  align-items: center;
+  gap: 24px;
+  margin-left: calc(var(--i) * 70px);
+  padding: 0 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#five-whys .wy li > span:nth-child(2) {
+  display: flex;
+  gap: 10px;
+}
+
+#five-whys .wy i {
+  font-style: normal;
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}
+
+#five-whys .wy b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#five-whys .wy-n {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--deck-sunken);
+  font-family: var(--font-mono);
+  font-weight: var(--weight-strong);
+}
+
+#five-whys .is-root {
+  border-color: var(--deck-accent);
+  box-shadow: 0 0 0 2px var(--deck-accent);
+}
+
+#five-whys .is-root .wy-n {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#five-whys .is-root i,
+#five-whys .is-root b {
+  color: var(--deck-accent);
+}

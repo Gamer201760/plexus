@@ -1,0 +1,39 @@
+#benchmark .bm .tbl-row {
+  min-height: 124px;
+  font-size: var(--fs-body);
+}
+
+#benchmark .bm .tbl-row.is-base {
+  color: var(--deck-fg-3);
+}
+
+#benchmark .bm-cell {
+  display: grid;
+  grid-template-columns: 180px auto;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-mono);
+}
+
+#benchmark .bm-bar {
+  display: block;
+  height: 16px;
+  border-radius: var(--radius-pill);
+  background: var(--deck-line-strong);
+  transform: scaleX(var(--w));
+  transform-origin: left;
+}
+
+#benchmark .bm-bar.is-best {
+  background: var(--deck-accent);
+}
+
+#benchmark.play .bm-bar {
+  animation: deck-grow 0.9s var(--ease-out) calc(var(--d, 0s) + 0.3s) both;
+}
+
+#benchmark .bm-source {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 110px;
+}

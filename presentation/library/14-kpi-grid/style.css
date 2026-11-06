@@ -1,0 +1,32 @@
+#kpi-grid .kg {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 20px;
+  height: 100%;
+}
+
+#kpi-grid .kg-grid {
+  gap: 20px;
+}
+
+#kpi-grid .kg-card {
+  grid-template-rows: auto auto auto 1fr;
+  gap: 6px;
+  padding: 28px 32px 20px;
+}
+
+#kpi-grid .kpi-value {
+  font-family: var(--font-mono);
+  font-size: 64px;
+  font-weight: var(--weight-strong);
+  line-height: 1.05;
+}
+
+#kpi-grid .is-accent .kpi-value {
+  color: var(--deck-accent);
+}
+
+#kpi-grid .kg-spark {
+  min-height: 60px;
+  margin-top: 10px;
+}

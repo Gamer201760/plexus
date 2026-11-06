@@ -1,0 +1,45 @@
+#percent-hero .ph {
+  display: grid;
+  align-content: center;
+  gap: 48px;
+  height: 100%;
+}
+
+#percent-hero .ph-big {
+  font-family: var(--font-mono);
+  font-size: 240px;
+  font-weight: var(--weight-strong);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: var(--deck-accent);
+}
+
+#percent-hero .ph-bar {
+  display: flex;
+  height: 56px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: var(--deck-sunken);
+}
+
+#percent-hero .ph-fill {
+  width: calc(var(--w) * 100%);
+  background: var(--deck-accent);
+  transform-origin: left;
+}
+
+#percent-hero.play .ph-fill {
+  animation: deck-grow 1.2s var(--ease-out) 0.7s both;
+}
+
+#percent-hero .ph-legend {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-body);
+  color: var(--deck-fg-2);
+}
+
+#percent-hero .ph-legend b {
+  font-family: var(--font-mono);
+  color: var(--deck-fg);
+}

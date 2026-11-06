@@ -1,0 +1,80 @@
+#weighted-score .ws {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  height: 100%;
+}
+
+#weighted-score .ws-row {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(4, 0.7fr) 1.4fr;
+  align-items: center;
+  gap: 16px;
+  min-height: 104px;
+  padding: 0 28px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+}
+
+#weighted-score .ws-row.is-head {
+  min-height: 56px;
+  background: none;
+  border: 0;
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg-3);
+}
+
+#weighted-score .ws-row.is-head span {
+  display: grid;
+  justify-items: center;
+}
+
+#weighted-score .ws-row.is-head span:first-child {
+  justify-items: start;
+}
+
+#weighted-score .ws-row.is-head i {
+  font-style: normal;
+  font-family: var(--font-mono);
+  color: var(--deck-accent);
+}
+
+#weighted-score .ws-row.is-win {
+  box-shadow: 0 0 0 3px var(--deck-accent);
+}
+
+#weighted-score .ws-c {
+  display: grid;
+  place-items: center;
+  height: 64px;
+  border-radius: var(--radius-md);
+  background: color-mix(in oklab, var(--deck-accent) calc(var(--v) * 55%), var(--deck-sunken));
+  font-family: var(--font-mono);
+  font-weight: var(--weight-strong);
+  color: var(--deck-fg);
+}
+
+#weighted-score .ws-t {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+
+#weighted-score .ws-t i {
+  height: 14px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(var(--deck-accent), var(--deck-accent)) left / calc(var(--w) * 100%) 100% no-repeat, var(--deck-sunken);
+}
+
+#weighted-score .ws-t b {
+  font-family: var(--font-mono);
+  font-size: var(--fs-lead);
+}
+
+#weighted-score .is-win .ws-t b {
+  color: var(--deck-accent);
+}

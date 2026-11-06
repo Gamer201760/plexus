@@ -1,0 +1,82 @@
+#risk-matrix .rm {
+  display: grid;
+  grid-template-columns: 690px 1fr;
+  gap: 80px;
+  height: 100%;
+}
+
+#risk-matrix .rm-grid {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 1fr 40px;
+}
+
+#risk-matrix .rm-y {
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  align-self: center;
+}
+
+#risk-matrix .rm-x {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+  align-self: end;
+}
+
+#risk-matrix .rm-cells {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+}
+
+#risk-matrix .rm-c {
+  border-radius: var(--radius-md);
+}
+
+#risk-matrix .rm-c.is-0 {
+  background: color-mix(in oklab, var(--deck-success) 14%, var(--deck-bg));
+}
+
+#risk-matrix .rm-c.is-1 {
+  background: color-mix(in oklab, var(--deck-success) 24%, var(--deck-bg));
+}
+
+#risk-matrix .rm-c.is-2 {
+  background: color-mix(in oklab, var(--deck-warning) 26%, var(--deck-bg));
+}
+
+#risk-matrix .rm-c.is-3 {
+  background: color-mix(in oklab, var(--deck-danger) 22%, var(--deck-bg));
+}
+
+#risk-matrix .rm-c.is-4 {
+  background: color-mix(in oklab, var(--deck-danger) 40%, var(--deck-bg));
+}
+
+#risk-matrix .pin {
+  left: var(--px);
+  top: var(--py);
+}
+
+#risk-matrix .rm-list {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#risk-matrix .rm-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#risk-matrix .rm-list b {
+  color: var(--deck-fg);
+}

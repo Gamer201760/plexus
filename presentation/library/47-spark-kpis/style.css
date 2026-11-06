@@ -1,0 +1,18 @@
+#spark-kpis .skp {
+  height: 100%;
+}
+
+#spark-kpis .card {
+  grid-template-rows: auto auto auto 1fr;
+}
+
+#spark-kpis .kpi-value {
+  font-family: var(--font-mono);
+  font-size: 72px;
+  font-weight: var(--weight-strong);
+  line-height: 1;
+}
+
+#spark-kpis .skp-spark {
+  min-height: 120px;
+}

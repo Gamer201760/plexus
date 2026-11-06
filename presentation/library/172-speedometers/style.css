@@ -1,0 +1,42 @@
+#speedometers .sp3 {
+  gap: 48px;
+}
+
+#speedometers .sp3-item {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 16px;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  border: 1px solid var(--deck-line);
+}
+
+#speedometers .sp3-item.is-us {
+  box-shadow: 0 0 0 3px var(--deck-accent);
+}
+
+#speedometers .sp3-item .eyebrow {
+  font-size: var(--fs-caption);
+}
+
+#speedometers .sp3-foot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--deck-line);
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#speedometers .sp3-foot b {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: var(--fs-lead);
+  color: var(--deck-accent);
+}
+
+#speedometers .sp3-item .mark {
+  width: 24px;
+}

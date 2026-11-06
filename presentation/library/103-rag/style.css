@@ -1,0 +1,56 @@
+#rag .rg2 {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr 64px 1fr 64px 1fr;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  gap: 32px 8px;
+  height: 100%;
+}
+
+#rag .rg2-step {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  padding: 36px 20px;
+  border: 1px solid var(--deck-line);
+  border-radius: var(--radius-lg);
+  background: var(--deck-raised);
+  text-align: center;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#rag .rg2-step b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#rag .rg2-step.is-accent {
+  box-shadow: 0 0 0 3px var(--deck-accent);
+}
+
+#rag .rg2-arrow {
+  display: grid;
+  place-items: center;
+  color: var(--deck-fg-3);
+}
+
+#rag .rg2-docs {
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  gap: 10px;
+}
+
+#rag .rg2-doc {
+  height: 52px;
+  border-radius: 6px;
+  background: var(--deck-sunken);
+}
+
+#rag .rg2-doc.is-hit {
+  background: var(--deck-accent);
+}
+
+#rag .rg2-rule {
+  grid-column: 1 / -1;
+}

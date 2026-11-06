@@ -1,0 +1,80 @@
+#onion .on {
+  display: grid;
+  grid-template-columns: 690px 1fr;
+  gap: 96px;
+  height: 100%;
+}
+
+#onion .on-rings {
+  position: relative;
+}
+
+#onion .on-r {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  translate: -50% -50%;
+}
+
+#onion .on-r.is-4 {
+  width: 680px;
+  height: 680px;
+  background: color-mix(in oklab, var(--deck-accent) 10%, var(--deck-bg));
+}
+
+#onion .on-r.is-3 {
+  width: 510px;
+  height: 510px;
+  background: color-mix(in oklab, var(--deck-accent) 22%, var(--deck-bg));
+}
+
+#onion .on-r.is-2 {
+  width: 340px;
+  height: 340px;
+  background: color-mix(in oklab, var(--deck-accent) 42%, var(--deck-bg));
+}
+
+#onion .on-r.is-1 {
+  width: 170px;
+  height: 170px;
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#onion .on-n {
+  position: absolute;
+  left: var(--px);
+  top: var(--py);
+  translate: -50% -50%;
+  box-shadow: 0 0 0 4px var(--deck-bg);
+}
+
+#onion .on-list {
+  display: grid;
+  align-content: center;
+  gap: 36px;
+}
+
+#onion .on-list li {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 4px 20px;
+  font-size: var(--fs-caption);
+  color: var(--deck-fg-2);
+}
+
+#onion .on-list b {
+  font-size: var(--fs-body);
+  color: var(--deck-fg);
+}
+
+#onion .on-list span:not(.n) {
+  grid-column: 2;
+}
+
+#onion .on-list .n {
+  grid-row: span 2;
+}

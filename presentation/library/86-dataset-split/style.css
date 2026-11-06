@@ -1,0 +1,65 @@
+#dataset-split .sp2 {
+  display: grid;
+  align-content: center;
+  gap: 56px;
+  height: 100%;
+}
+
+#dataset-split .sp2-bar {
+  display: flex;
+  gap: 8px;
+  height: 320px;
+}
+
+#dataset-split .sp2-part {
+  flex: var(--f) 1 0;
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--deck-accent) 22%, var(--deck-bg));
+  font-size: var(--fs-body);
+}
+
+#dataset-split .sp2-part.is-val {
+  background: color-mix(in oklab, var(--deck-accent) 45%, var(--deck-bg));
+}
+
+#dataset-split .sp2-part.is-test {
+  background: var(--deck-accent);
+  color: var(--deck-on-accent);
+}
+
+#dataset-split .sp2-part .num {
+  font-size: var(--fs-caption);
+}
+
+#dataset-split .sp2-notes {
+  height: auto;
+}
+
+#dataset-split .sp2-note {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 16px;
+  font-size: var(--fs-body);
+  line-height: var(--lh-snug);
+  color: var(--deck-fg-2);
+}
+
+#dataset-split .sp2-note i {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--deck-accent) 22%, var(--deck-bg));
+}
+
+#dataset-split .sp2-note i.is-val {
+  background: color-mix(in oklab, var(--deck-accent) 45%, var(--deck-bg));
+}
+
+#dataset-split .sp2-note i.is-test {
+  background: var(--deck-accent);
+}
