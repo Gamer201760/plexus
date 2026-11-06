@@ -1,0 +1,8 @@
+from_id,to_id,from_name,to_name,mode,vehicle,km,freq_per_week,freq_note,season,confidence,source_url,source_date
+93701000001,93643425101,г. Кызыл,село Кунгуртуг,air,Ми-8 / Ан-2,,2,"вт, чт; ранее 3 раза в неделю (пн, ср, пт); рейсы приостанавливались при нехватке субсидий; льготный тариф 2000 руб. для жителей Тере-Хольского р-на",all,medium,https://www.tuvaonline.ru/2025/03/11/v-tuve-v-otdalennoe-i-trudnodostupnoe-selo-kurgurtug-samolety-budut-letat-dvazhdy-v-nedelyu.html,2025-03
+93701000001,93650444101,г. Кызыл,село Тоора-Хем,air,Ми-8,,,частота не найдена,all,low,https://ru.wikipedia.org/wiki/Кызыл_(аэропорт),2022-11
+93701000001,93650452101,г. Кызыл,село Чазылары,air,Ми-8,,,"частота не найдена; вертолётная площадка, рейс Кызыл — Чазылары (Хамсара)",all,low,https://atlaskmns.ru/page/ru/people_todjincy_transport.html,
+93701000001,93650460101,г. Кызыл,село Ырбан,air,Ми-8 / Ан-2,,,частота не найдена,all,low,https://ru.wikipedia.org/wiki/Кызыл_(аэропорт),2022-11
+93701000001,93622151106,г. Кызыл,арбан Уш-Белдир,air,,,,"нерегулярно, по загрузке; льготные билеты — по путёвке в санаторий Северный Аржаан",all,low,https://tmgnews.ru/novosti/aviaperevozki-v-tuve-czeny-i-marshruty/,2024-05
+93650444101,93650433101,село Тоора-Хем,село Сыстыг-Хем,winter_road,,78,,"«зимой наземно, летом водным путём»",winter,medium,https://atlaskmns.ru/page/ru/people_todjincy_transport.html,
+93650444101,93650433101,село Тоора-Хем,село Сыстыг-Хем,river,лодка,78,,"летом водным путём; причала нет",summer,medium,https://atlaskmns.ru/page/ru/people_todjincy_transport.html,
