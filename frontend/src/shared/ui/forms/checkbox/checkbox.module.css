@@ -1,0 +1,52 @@
+.checkbox {
+  composes: control from "../switch/switch.module.css";
+}
+
+.box {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: var(--icon-md);
+  block-size: var(--icon-md);
+  border: var(--hairline) solid var(--border-control);
+  border-radius: var(--radius-xs);
+  background-color: var(--surface-raised);
+  color: var(--action-primary-text);
+}
+
+.tick {
+  inline-size: var(--icon-sm);
+  block-size: var(--icon-sm);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--check-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: var(--transition-draw);
+}
+
+.checkbox:has(:checked) .box {
+  border-color: var(--action-primary);
+  background-color: var(--action-primary);
+}
+
+.checkbox:has(:checked) .tick {
+  stroke-dashoffset: 0;
+}
+
+.checkbox:has(:disabled) .box {
+  border-color: var(--border-default);
+  background-color: var(--action-disabled);
+  color: var(--text-disabled);
+}
+
+.checkbox:has(:focus-visible) .box {
+  outline: var(--focus-ring-width) solid var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.label {
+  min-inline-size: 0;
+}

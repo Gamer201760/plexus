@@ -1,0 +1,35 @@
+.isolines {
+  --ring-delay-base: var(--delay-none);
+
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.isolines .ring {
+  fill: none;
+  stroke-width: var(--iso-line);
+  stroke-linejoin: round;
+}
+
+.isolines .ring[data-ring="1"] {
+  stroke: var(--iso-1);
+}
+
+.isolines .ring[data-ring="2"] {
+  stroke: var(--iso-2);
+}
+
+.isolines .ring[data-ring="3"] {
+  stroke: var(--iso-3);
+}
+
+.ringEnter {
+  composes: ringEnter from "../../../styles/compose.module.css";
+}
+
+.ringPulse {
+  composes: ringPulse from "../../../styles/compose.module.css";
+}

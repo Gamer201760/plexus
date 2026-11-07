@@ -1,0 +1,58 @@
+.stat {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  min-inline-size: 0;
+}
+
+.label {
+  composes: labelText from "../../../styles/compose.module.css";
+  color: var(--text-muted);
+}
+
+.value {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-4);
+}
+
+.number {
+  font-size: var(--font-size-heading);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--tracking-tight);
+  font-variant-numeric: var(--font-numeric);
+}
+
+.unit {
+  color: var(--text-muted);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--weight-medium);
+}
+
+.delta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--font-size-label);
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: var(--font-numeric);
+}
+
+.deltaLabel {
+  color: var(--text-muted);
+  font-weight: var(--weight-regular);
+}
+
+.gain {
+  color: var(--data-gain-3);
+}
+
+.loss {
+  color: var(--data-loss-3);
+}
+
+.neutral {
+  color: var(--text-muted);
+}

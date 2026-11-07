@@ -1,0 +1,84 @@
+.mark {
+  --brand-ring-1: var(--iso-1);
+  --brand-ring-2: var(--iso-2);
+  --brand-ring-3: var(--iso-3);
+  --brand-word: var(--text-primary);
+
+  --ring-delay-base: var(--dur-base);
+
+  display: block;
+  inline-size: auto;
+  block-size: var(--brand-height);
+  overflow: visible;
+}
+
+.mark .ring[data-ring="1"] {
+  fill: var(--brand-ring-1);
+}
+
+.mark .ring[data-ring="2"] {
+  fill: var(--brand-ring-2);
+}
+
+.mark .ring[data-ring="3"] {
+  fill: var(--brand-ring-3);
+}
+
+.mark .word {
+  fill: var(--brand-word);
+}
+
+.toneDefault {
+  --brand-word: var(--text-primary);
+}
+
+.toneInverse {
+  --brand-ring-1: var(--iso-inverse-1);
+  --brand-ring-2: var(--iso-inverse-2);
+  --brand-ring-3: var(--iso-inverse-3);
+  --brand-word: var(--text-on-inverse);
+}
+
+.xs {
+  --brand-height: 1.25rem;
+}
+
+.sm {
+  --brand-height: 1.75rem;
+}
+
+.md {
+  --brand-height: 2.5rem;
+}
+
+.lg {
+  --brand-height: 6rem;
+}
+
+.xl {
+  --brand-height: 10rem;
+}
+
+.fill {
+  --brand-height: 100%;
+}
+
+.ringEnter {
+  composes: ringEnter from "../../../styles/compose.module.css";
+}
+
+.ringPulse {
+  composes: ringPulse from "../../../styles/compose.module.css";
+}
+
+.wordEnter {
+  animation: var(--motion-rise-in);
+}
+
+.broken .ring[data-ring="3"] {
+  clip-path: polygon(0 0, 62% 0, 38% 100%, 0 100%);
+}
+
+.broken .ring[data-ring="2"] {
+  clip-path: polygon(0 0, 88% 0, 72% 100%, 0 100%);
+}

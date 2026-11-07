@@ -1,0 +1,88 @@
+.frame {
+  composes: surface from "../../overlays/popover/popover.module.css";
+}
+
+.table {
+  inline-size: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body-sm);
+}
+
+.head {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: var(--layer-raised);
+  padding: var(--space-12) var(--space-16);
+  border-block-end: var(--hairline) solid var(--border-default);
+  background-color: var(--surface-muted);
+  color: var(--text-muted);
+  font-weight: var(--weight-medium);
+  text-align: start;
+  white-space: nowrap;
+}
+
+.sortable {
+  padding-block: 0;
+}
+
+.sort {
+  composes: pressable from "../../../styles/compose.module.css";
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-block-size: var(--target-min);
+  font-weight: inherit;
+}
+
+.sortIcon {
+  color: var(--border-control);
+}
+
+.sortActive {
+  color: var(--text-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .sort:hover {
+    color: var(--text-primary);
+  }
+
+  .clickable:hover .cell {
+    background-color: var(--surface-raised-hover);
+  }
+}
+
+.cell {
+  padding: var(--space-12) var(--space-16);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.row:last-child .cell {
+  border-block-end: 0;
+}
+
+.numeric {
+  font-variant-numeric: var(--font-numeric);
+  text-align: end;
+  white-space: nowrap;
+}
+
+.numeric .sort {
+  flex-direction: row-reverse;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.row[aria-current="true"] .cell {
+  background-color: var(--surface-accent-soft);
+}
+
+.rowButton {
+  font-weight: var(--weight-medium);
+  text-align: start;
+}

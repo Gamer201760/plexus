@@ -1,0 +1,23 @@
+.chip {
+  composes: button secondary compact from "../../primitives/button/button.module.css";
+  --button-text: var(--text-secondary);
+}
+
+.chip[aria-pressed="true"] {
+  --button-surface: var(--surface-inverse);
+  --button-surface-hover: var(--surface-inverse);
+  --button-surface-press: var(--surface-inverse);
+  --button-text: var(--text-on-inverse);
+}
+
+.content {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}

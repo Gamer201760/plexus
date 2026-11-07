@@ -1,0 +1,11 @@
+.combobox {
+  min-inline-size: 0;
+}
+
+.row {
+  composes: secondaryText from "../../../styles/compose.module.css";
+  display: flex;
+  align-items: center;
+  min-block-size: var(--target-min);
+  padding-inline: var(--space-12);
+}

@@ -1,0 +1,35 @@
+.tooltip {
+  composes: floating from "../popover/popover.module.css";
+  --origin-block: bottom;
+
+  z-index: var(--layer-tooltip);
+  inline-size: max-content;
+  max-inline-size: var(--prose-measure);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-inverse);
+  color: var(--text-on-inverse);
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  pointer-events: none;
+  transform-origin: center var(--origin-block);
+}
+
+@starting-style {
+  .tooltip {
+    opacity: 0;
+    transform: scale(var(--enter-scale));
+  }
+}
+
+.tooltip[data-side="bottom"] {
+  --origin-block: top;
+}
+
+.tooltip[data-instant="true"] {
+  transition: none;
+}
+
+.tooltip[data-state="closed"] {
+  animation: var(--motion-fade-out);
+}

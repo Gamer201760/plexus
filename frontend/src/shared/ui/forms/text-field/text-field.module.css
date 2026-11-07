@@ -1,0 +1,76 @@
+.field {
+  display: grid;
+  gap: var(--space-8);
+  min-inline-size: 0;
+}
+
+.label {
+  composes: controlText from "../../../styles/compose.module.css";
+  color: var(--text-primary);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-block-size: var(--control-height);
+  padding-inline: var(--space-12);
+  border: var(--hairline) solid var(--border-control);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-raised);
+  transition: var(--transition-control);
+}
+
+.box:has(:focus-visible) {
+  outline: var(--focus-ring-width) solid var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.box[data-invalid="true"] {
+  border-color: var(--status-danger);
+}
+
+.icon {
+  color: var(--text-muted);
+}
+
+.input {
+  flex: 1 1 auto;
+  align-self: stretch;
+  min-inline-size: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+.suffix {
+  color: var(--text-muted);
+  font-size: var(--font-size-body-sm);
+  white-space: nowrap;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  color: var(--text-muted);
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+}
+
+.error {
+  color: var(--text-danger);
+  font-weight: var(--weight-medium);
+}
+
+.messageIcon {
+  margin-block-start: var(--space-2);
+}

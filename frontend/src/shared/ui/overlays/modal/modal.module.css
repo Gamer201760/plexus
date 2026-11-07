@@ -1,0 +1,67 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: var(--layer-dialog);
+  display: grid;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: var(--scrim);
+  animation: var(--motion-fade-in);
+}
+
+.root[data-state="closed"] .backdrop {
+  animation: var(--motion-fade-out);
+}
+
+.root[data-state="closed"] {
+  pointer-events: none;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0;
+  min-block-size: 0;
+  background-color: var(--surface-raised);
+  box-shadow: var(--shadow-dialog);
+  overscroll-behavior: contain;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding: var(--space-20) var(--space-20) var(--space-8) var(--space-24);
+}
+
+.title {
+  composes: subheadingText from "../../../styles/compose.module.css";
+  padding-block-start: var(--space-4);
+}
+
+.title:focus-visible {
+  outline: none;
+}
+
+.description {
+  composes: secondaryText from "../../../styles/compose.module.css";
+  padding-inline: var(--space-24);
+}
+
+.body {
+  flex: 1 1 auto;
+  padding: var(--space-16) var(--space-24);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-8);
+  padding: var(--space-16) var(--space-24) var(--space-24);
+}
