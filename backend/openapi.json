@@ -1,0 +1,1846 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Plexus API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "operationId": "health_api_v1_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/overview": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Get Overview",
+        "operationId": "get_overview_api_v1_overview_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OverviewResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/geo/regions": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Get Geo Regions",
+        "operationId": "get_geo_regions_api_v1_geo_regions_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeoRegionsResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/search": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Search Atlas",
+        "operationId": "search_atlas_api_v1_search_get",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 100,
+              "title": "Q"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 50,
+              "minimum": 1,
+              "default": 8,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/v1/seasons/winter-roads": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "List Winter Roads",
+        "operationId": "list_winter_roads_api_v1_seasons_winter_roads_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/WinterRoadResponse"
+                  },
+                  "type": "array",
+                  "title": "Response List Winter Roads Api V1 Seasons Winter Roads Get"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sources": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "List Sources",
+        "operationId": "list_sources_api_v1_sources_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/SourceResponse"
+                  },
+                  "type": "array",
+                  "title": "Response List Sources Api V1 Sources Get"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/index": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Get Index",
+        "operationId": "get_index_api_v1_index_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexStatusResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/regions": {
+      "get": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "List Regions",
+        "operationId": "list_regions_api_v1_regions_get",
+        "parameters": [
+          {
+            "name": "season",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/Season",
+              "default": "all"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegionSummaryResponse"
+                  },
+                  "title": "Response List Regions Api V1 Regions Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/v1/regions/{region_id}": {
+      "get": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "Get Region",
+        "operationId": "get_region_api_v1_regions__region_id__get",
+        "parameters": [
+          {
+            "name": "region_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Region Id"
+            }
+          },
+          {
+            "name": "season",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/Season",
+              "default": "all"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegionDetailResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/v1/regions/{region_id}/links": {
+      "get": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "List Region Links",
+        "operationId": "list_region_links_api_v1_regions__region_id__links_get",
+        "parameters": [
+          {
+            "name": "region_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Region Id"
+            }
+          },
+          {
+            "name": "season",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/Season",
+              "default": "all"
+            }
+          },
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Mode"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Mode"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LinkResponse"
+                  },
+                  "title": "Response List Region Links Api V1 Regions  Region Id  Links Get"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/v1/regions/{region_id}/settlements": {
+      "get": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "List Settlements",
+        "operationId": "list_settlements_api_v1_regions__region_id__settlements_get",
+        "parameters": [
+          {
+            "name": "region_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Region Id"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 100
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Q"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/SettlementSort",
+              "default": "population"
+            }
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/SortOrder",
+              "default": "desc"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettlementPageResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/v1/links/{link_id}": {
+      "get": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "Get Link",
+        "operationId": "get_link_api_v1_links__link_id__get",
+        "parameters": [
+          {
+            "name": "link_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Link Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LinkResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Confidence": {
+        "type": "string",
+        "enum": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "title": "Confidence"
+      },
+      "EconomyResponse": {
+        "properties": {
+          "company_rows": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Rows"
+          },
+          "strict_rows": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Strict Rows"
+          },
+          "strict_revenue_rub": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Strict Revenue Rub"
+          },
+          "fns_matched_rows": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fns Matched Rows"
+          }
+        },
+        "type": "object",
+        "required": [
+          "company_rows",
+          "strict_rows",
+          "strict_revenue_rub",
+          "fns_matched_rows"
+        ],
+        "title": "EconomyResponse"
+      },
+      "EndpointResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "x": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "X"
+          },
+          "y": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Y"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "x",
+          "y"
+        ],
+        "title": "EndpointResponse"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ErrorResponse"
+      },
+      "GeoRegionsResponse": {
+        "properties": {
+          "view_box": {
+            "type": "string",
+            "title": "View Box"
+          },
+          "regions": {
+            "items": {
+              "$ref": "#/components/schemas/RegionShapeResponse"
+            },
+            "type": "array",
+            "title": "Regions"
+          },
+          "missing": {
+            "items": {
+              "$ref": "#/components/schemas/RegionRefResponse"
+            },
+            "type": "array",
+            "title": "Missing"
+          }
+        },
+        "type": "object",
+        "required": [
+          "view_box",
+          "regions",
+          "missing"
+        ],
+        "title": "GeoRegionsResponse"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "const": "ok",
+            "title": "Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "title": "HealthResponse"
+      },
+      "IndexComponentResponse": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source"
+          }
+        },
+        "type": "object",
+        "required": [
+          "key",
+          "title",
+          "description",
+          "source"
+        ],
+        "title": "IndexComponentResponse"
+      },
+      "IndexState": {
+        "type": "string",
+        "enum": [
+          "ready",
+          "missing"
+        ],
+        "title": "IndexState"
+      },
+      "IndexStatusResponse": {
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/IndexState"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "formula": {
+            "type": "string",
+            "title": "Formula"
+          },
+          "half_life_hours": {
+            "type": "integer",
+            "title": "Half Life Hours"
+          },
+          "markets": {
+            "type": "integer",
+            "title": "Markets"
+          },
+          "components": {
+            "items": {
+              "$ref": "#/components/schemas/IndexComponentResponse"
+            },
+            "type": "array",
+            "title": "Components"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "reason",
+          "formula",
+          "half_life_hours",
+          "markets",
+          "components"
+        ],
+        "title": "IndexStatusResponse"
+      },
+      "LinkResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "region_id": {
+            "type": "string",
+            "title": "Region Id"
+          },
+          "mode": {
+            "$ref": "#/components/schemas/Mode"
+          },
+          "season": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Season"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "from": {
+            "$ref": "#/components/schemas/EndpointResponse"
+          },
+          "to": {
+            "$ref": "#/components/schemas/EndpointResponse"
+          },
+          "km": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Km"
+          },
+          "freq_per_week": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Freq Per Week"
+          },
+          "freq_assumed": {
+            "type": "boolean",
+            "title": "Freq Assumed"
+          },
+          "freq_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Freq Note"
+          },
+          "vehicle": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Vehicle"
+          },
+          "confidence": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Confidence"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "source_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Date"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "region_id",
+          "mode",
+          "season",
+          "from",
+          "to",
+          "km",
+          "freq_per_week",
+          "freq_assumed",
+          "freq_note",
+          "vehicle",
+          "confidence",
+          "source_url",
+          "source_date"
+        ],
+        "title": "LinkResponse"
+      },
+      "Mode": {
+        "type": "string",
+        "enum": [
+          "air",
+          "river",
+          "winter_road",
+          "ferry",
+          "ice_crossing",
+          "pontoon_bridge"
+        ],
+        "title": "Mode"
+      },
+      "ModeCountsResponse": {
+        "properties": {
+          "mode": {
+            "$ref": "#/components/schemas/Mode"
+          },
+          "all": {
+            "type": "integer",
+            "title": "All"
+          },
+          "summer": {
+            "type": "integer",
+            "title": "Summer"
+          },
+          "winter": {
+            "type": "integer",
+            "title": "Winter"
+          }
+        },
+        "type": "object",
+        "required": [
+          "mode",
+          "all",
+          "summer",
+          "winter"
+        ],
+        "title": "ModeCountsResponse"
+      },
+      "ModeTotalsResponse": {
+        "properties": {
+          "air": {
+            "type": "integer",
+            "title": "Air"
+          },
+          "river": {
+            "type": "integer",
+            "title": "River"
+          },
+          "winter_road": {
+            "type": "integer",
+            "title": "Winter Road"
+          },
+          "ferry": {
+            "type": "integer",
+            "title": "Ferry"
+          },
+          "ice_crossing": {
+            "type": "integer",
+            "title": "Ice Crossing"
+          },
+          "pontoon_bridge": {
+            "type": "integer",
+            "title": "Pontoon Bridge"
+          }
+        },
+        "type": "object",
+        "required": [
+          "air",
+          "river",
+          "winter_road",
+          "ferry",
+          "ice_crossing",
+          "pontoon_bridge"
+        ],
+        "title": "ModeTotalsResponse"
+      },
+      "OverviewResponse": {
+        "properties": {
+          "regions": {
+            "type": "integer",
+            "title": "Regions"
+          },
+          "settlements": {
+            "type": "integer",
+            "title": "Settlements"
+          },
+          "population": {
+            "type": "integer",
+            "title": "Population"
+          },
+          "links": {
+            "type": "integer",
+            "title": "Links"
+          },
+          "links_by_mode": {
+            "$ref": "#/components/schemas/ModeTotalsResponse"
+          },
+          "links_by_season": {
+            "$ref": "#/components/schemas/SeasonCountsResponse"
+          },
+          "companies": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Companies"
+          },
+          "revenue_rub": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Revenue Rub"
+          },
+          "index": {
+            "$ref": "#/components/schemas/IndexStatusResponse"
+          }
+        },
+        "type": "object",
+        "required": [
+          "regions",
+          "settlements",
+          "population",
+          "links",
+          "links_by_mode",
+          "links_by_season",
+          "companies",
+          "revenue_rub",
+          "index"
+        ],
+        "title": "OverviewResponse"
+      },
+      "RegionDetailResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "settlements": {
+            "type": "integer",
+            "title": "Settlements"
+          },
+          "population": {
+            "type": "integer",
+            "title": "Population"
+          },
+          "links": {
+            "type": "integer",
+            "title": "Links"
+          },
+          "links_season": {
+            "type": "integer",
+            "title": "Links Season"
+          },
+          "companies": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Companies"
+          },
+          "revenue_rub": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Revenue Rub"
+          },
+          "hansen": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hansen"
+          },
+          "has_geometry": {
+            "type": "boolean",
+            "title": "Has Geometry"
+          },
+          "path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Path"
+          },
+          "bbox": {
+            "anyOf": [
+              {
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ],
+                "type": "array",
+                "maxItems": 4,
+                "minItems": 4
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bbox"
+          },
+          "links_by_mode": {
+            "items": {
+              "$ref": "#/components/schemas/ModeCountsResponse"
+            },
+            "type": "array",
+            "title": "Links By Mode"
+          },
+          "economy": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EconomyResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "settlements",
+          "population",
+          "links",
+          "links_season",
+          "companies",
+          "revenue_rub",
+          "hansen",
+          "has_geometry",
+          "path",
+          "bbox",
+          "links_by_mode",
+          "economy"
+        ],
+        "title": "RegionDetailResponse"
+      },
+      "RegionRefResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "title": "RegionRefResponse"
+      },
+      "RegionShapeResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "path": {
+            "type": "string",
+            "title": "Path"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "path"
+        ],
+        "title": "RegionShapeResponse"
+      },
+      "RegionSummaryResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "settlements": {
+            "type": "integer",
+            "title": "Settlements"
+          },
+          "population": {
+            "type": "integer",
+            "title": "Population"
+          },
+          "links": {
+            "type": "integer",
+            "title": "Links"
+          },
+          "links_season": {
+            "type": "integer",
+            "title": "Links Season"
+          },
+          "companies": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Companies"
+          },
+          "revenue_rub": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Revenue Rub"
+          },
+          "hansen": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hansen"
+          },
+          "has_geometry": {
+            "type": "boolean",
+            "title": "Has Geometry"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "settlements",
+          "population",
+          "links",
+          "links_season",
+          "companies",
+          "revenue_rub",
+          "hansen",
+          "has_geometry"
+        ],
+        "title": "RegionSummaryResponse"
+      },
+      "SearchResponse": {
+        "properties": {
+          "regions": {
+            "items": {
+              "$ref": "#/components/schemas/RegionRefResponse"
+            },
+            "type": "array",
+            "title": "Regions"
+          },
+          "settlements": {
+            "items": {
+              "$ref": "#/components/schemas/SettlementHitResponse"
+            },
+            "type": "array",
+            "title": "Settlements"
+          }
+        },
+        "type": "object",
+        "required": [
+          "regions",
+          "settlements"
+        ],
+        "title": "SearchResponse"
+      },
+      "Season": {
+        "type": "string",
+        "enum": [
+          "all",
+          "summer",
+          "winter"
+        ],
+        "title": "Season"
+      },
+      "SeasonCountsResponse": {
+        "properties": {
+          "summer": {
+            "type": "integer",
+            "title": "Summer"
+          },
+          "winter": {
+            "type": "integer",
+            "title": "Winter"
+          },
+          "all": {
+            "type": "integer",
+            "title": "All"
+          },
+          "unknown": {
+            "type": "integer",
+            "title": "Unknown"
+          }
+        },
+        "type": "object",
+        "required": [
+          "summer",
+          "winter",
+          "all",
+          "unknown"
+        ],
+        "title": "SeasonCountsResponse"
+      },
+      "SettlementHitResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "region_id": {
+            "type": "string",
+            "title": "Region Id"
+          },
+          "region_name": {
+            "type": "string",
+            "title": "Region Name"
+          },
+          "population": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Population"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "region_id",
+          "region_name",
+          "population"
+        ],
+        "title": "SettlementHitResponse"
+      },
+      "SettlementPageResponse": {
+        "properties": {
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/SettlementResponse"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "type": "object",
+        "required": [
+          "total",
+          "items"
+        ],
+        "title": "SettlementPageResponse"
+      },
+      "SettlementResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "region_id": {
+            "type": "string",
+            "title": "Region Id"
+          },
+          "population": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Population"
+          },
+          "x": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "X"
+          },
+          "y": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Y"
+          },
+          "companies": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Companies"
+          },
+          "revenue_rub": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Revenue Rub"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "region_id",
+          "population",
+          "x",
+          "y",
+          "companies",
+          "revenue_rub"
+        ],
+        "title": "SettlementResponse"
+      },
+      "SettlementSort": {
+        "type": "string",
+        "enum": [
+          "population",
+          "name",
+          "companies"
+        ],
+        "title": "SettlementSort"
+      },
+      "SortOrder": {
+        "type": "string",
+        "enum": [
+          "asc",
+          "desc"
+        ],
+        "title": "SortOrder"
+      },
+      "SourceResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "period": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Period"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          },
+          "rows": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rows"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "period",
+          "url",
+          "note",
+          "rows"
+        ],
+        "title": "SourceResponse"
+      },
+      "WinterRoadResponse": {
+        "properties": {
+          "district": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "District"
+          },
+          "route": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Route"
+          },
+          "road_km": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Road Km"
+          },
+          "opening_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Opening Date"
+          },
+          "closure_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Closure Date"
+          },
+          "weight_limit_tonnes": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weight Limit Tonnes"
+          },
+          "season_end_year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Season End Year"
+          },
+          "report_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Report Date"
+          },
+          "source_file": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "district",
+          "route",
+          "road_km",
+          "opening_date",
+          "closure_date",
+          "weight_limit_tonnes",
+          "season_end_year",
+          "report_date",
+          "source_file"
+        ],
+        "title": "WinterRoadResponse"
+      }
+    }
+  }
+}
