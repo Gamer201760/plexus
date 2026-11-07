@@ -27,6 +27,7 @@ etl/                      пайплайн
   graphlib.py               загрузка графа в scipy (минимум по параллельным рёбрам!)
   manual_links.py           ручные связи регионов → manual_links_ru, manual_remote
   access_russia.py          время доступа для всех н.п. (road / summer / winter) → np_access, np_city_times
+  indices.py                индексы из исследований (Hansen, ARIA+, OECD, RAI, Lancet…) → idx_* (docs/indices.md)
   graph_tuva.py, multimodal_tuva.py   детальная модель Тывы (авиа, сезоны, ожидание рейса)
   export_regions_input.py   н.п. каждого региона → data_manual/regions_input/
 data_manual/              ручные данные (в git)
@@ -49,7 +50,8 @@ uv run python etl/download_osm.py                                 # OSM, ~4 ГБ
 ls data/raw/osm_russia/*.pbf | xargs -P 3 -n 1 uv run python etl/osm_extract.py
 uv run python etl/graph_russia.py                                 # граф РФ, пик ~6 ГБ RAM
 uv run python etl/manual_links.py                                 # ручные связи → рёбра по сезонам
-uv run python etl/access_russia.py                                # доступ для всех н.п., 3 сценария, ~15 мин
+uv run python etl/access_russia.py                                # доступ для всех н.п., 3 сценария, ~45 мин
+uv run python etl/indices.py                                      # индексы, ~5 мин
 uv run python etl/graph_tuva.py && uv run python etl/multimodal_tuva.py   # Тыва
 ```
 
@@ -82,5 +84,5 @@ uv run python etl/graph_tuva.py && uv run python etl/multimodal_tuva.py   # Ты
   Остальное — перечни для ККТ и выплат медикам; они покрывают почти все сёла и отсутствие дороги не доказывают.
 
 ```bash
-uv run python etl/manual_links.py && uv run python etl/access_russia.py    # 3 сценария, ~15 мин
+uv run python etl/manual_links.py && uv run python etl/access_russia.py    # 3 сценария, ~45 мин
 ```

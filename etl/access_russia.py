@@ -8,7 +8,7 @@
 
 Выход (DuckDB):
   np_access       — season, point_id, region, population, t_district_center_h, t_capital_h, t_capital_best_h,
-                    nearest_city, t_nearest_city_h, on_road, manual_only, no_all_season_road
+                    nearest_city, t_nearest_city_h, t_centre_{1,5,18}k_h, on_road, manual_only, no_all_season_road
   np_city_times   — season, point_id, city, road_h, best_h  (только best_h <= MAX_H)
 Сценарии (колонка season): road — только дороги; summer / winter — плюс ручные связи сезона
 (manual_links_ru из etl/manual_links.py: местная авиация, зимники, реки, переправы). Н.п. без дороги
@@ -41,6 +41,7 @@ DC_LIMIT_H = 24.0                          # радиус поиска райц�
 # у Московской области нет столицы в списке Точно; функциональный центр — Москва
 CAPITAL_OVERRIDE = {"Московская область": "Москва"}
 BATCH = 8                                  # источников дейкстры за вызов: 8 × узлы × 8 Б ≈ 1 ГБ
+CENTRE_THRESHOLDS = (1_000, 5_000, 18_000)  # ближайший н.п. не меньше порога — классы E, D, C индекса ARIA+
 SCENARIOS = os.environ.get("SCENARIOS", "road,summer,winter").split(",")
 
 
@@ -123,12 +124,26 @@ def run(scenario, con, base, pts0, cities, T0, remote):
     t_dc = d[pnode] + on.snap_h.values + dc_snap.reindex(near_dc).fillna(0).values
     t_dc[np.isinf(t_dc) | (near_dc < 0)] = np.nan
     dc_is_own = (near_dc == own)
-    del d, src_dc, G
+    del d, src_dc
+
+    # --- ближайший центр по размеру (классы ARIA+ C–E): многоисточниковый поиск от всех н.п. ≥ порога
+    t_centre = {}
+    for thr in CENTRE_THRESHOLDS:
+        big = on[on.population >= thr].drop_duplicates("node")
+        d, _, src_c = dijkstra(G, directed=False, indices=big.node.values, min_only=True, return_predecessors=True, limit=MAX_H)
+        snap_c = pd.Series(big.snap_h.values, index=big.node.values)
+        near_c = src_c[pnode]
+        t = d[pnode] + on.snap_h.values + snap_c.reindex(near_c).fillna(0).values
+        t[np.isinf(t) | (near_c < 0)] = np.nan
+        t[on.population.values >= thr] = 0.0
+        t_centre[f"t_centre_{thr // 1000}k_h"] = t
+        del d, src_c
+    del G
 
     acc = pd.DataFrame({
         "point_id": on.point_id, "t_district_center_h": t_dc, "dc_is_own": dc_is_own, "t_capital_h": np.where(np.isinf(t_cap), np.nan, t_cap),
         "t_capital_best_h": np.where(np.isinf(t_cap_best), np.nan, t_cap_best),
-        "nearest_city": cities.city.values[near], "t_nearest_city_h": road[rows, near],
+        "nearest_city": cities.city.values[near], "t_nearest_city_h": road[rows, near], **t_centre,
     })
     acc = pts[["point_id", "name", "region", "mun_upper", "population", "is_dc", "on_road", "manual_only", "snap_km"]].merge(acc, on="point_id", how="left")
     acc.insert(0, "season", scenario)
