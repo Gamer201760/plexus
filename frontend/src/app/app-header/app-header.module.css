@@ -1,24 +1,73 @@
 .header {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: var(--layer-sticky);
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-8) var(--space-16);
+  gap: var(--space-8) var(--space-24);
   min-block-size: var(--header-height);
-  padding-block: var(--space-8);
   padding-inline: var(--space-page);
   border-block-end: var(--hairline) solid var(--border-subtle);
+  background-color: var(--surface-raised);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
+  flex: none;
   min-block-size: var(--target-min);
   color: var(--text-primary);
-  font-size: var(--font-size-subheading);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-tight);
   text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-inline-size: 0;
+}
+
+.link {
+  composes: controlText from "../../shared/styles/compose.module.css";
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-block-size: var(--control-height);
+  padding-inline: var(--space-12) var(--space-16);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition-control-press);
+}
+
+.label {
+  display: inline;
+}
+
+.active {
+  background-color: var(--surface-sunken);
+  color: var(--text-primary);
+}
+
+.search {
+  flex: 1 1 var(--field-max-width);
+  display: flex;
+  justify-content: flex-end;
+  min-inline-size: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover:not(.active) {
+    color: var(--text-primary);
+    background-color: var(--action-ghost-hover);
+  }
+}
+
+@media (max-width: 64rem) {
+  .label {
+    display: none;
+  }
 }
 
 @media (min-width: 75rem) {

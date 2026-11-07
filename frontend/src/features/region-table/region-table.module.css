@@ -1,0 +1,9 @@
+.table {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-16);
+}
+
+.table > :last-child {
+  justify-self: stretch;
+}

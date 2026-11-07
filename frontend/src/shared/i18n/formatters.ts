@@ -5,6 +5,7 @@ export type DateInput = Date | string | number
 export interface Formatters {
   readonly number: (value: number, fractionDigits?: number) => string
   readonly integer: (value: number) => string
+  readonly compact: (value: number) => string
   readonly percent: (ratio: number, fractionDigits?: number) => string
   readonly money: (value: number, currency: string) => string
   readonly date: (value: DateInput) => string
@@ -47,6 +48,8 @@ export function createFormatters(timeZone?: string): Formatters {
   return {
     number: (value, fractionDigits = 1) => numberFormat(digits(fractionDigits)).format(value),
     integer: (value) => numberFormat({ maximumFractionDigits: 0 }).format(value),
+    compact: (value) =>
+      numberFormat({ notation: "compact", maximumFractionDigits: 1 }).format(value),
     percent: (ratio, fractionDigits = 0) =>
       numberFormat({ style: "percent", ...digits(fractionDigits) }).format(ratio),
     money: (value, currency) => numberFormat({ style: "currency", currency }).format(value),

@@ -1,0 +1,83 @@
+.legend {
+  composes: mapFloat from "../../shared/styles/compose.module.css";
+  inset-block-end: var(--space-16);
+  inset-inline-start: var(--space-16);
+  display: grid;
+  gap: var(--space-8);
+  margin: 0;
+  padding: var(--space-12) var(--space-16);
+  inline-size: var(--legend-width);
+}
+
+.legendTitle {
+  font-size: var(--font-size-label);
+  font-weight: var(--weight-semibold);
+}
+
+.ramp {
+  display: flex;
+  block-size: var(--space-8);
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+}
+
+.swatch {
+  display: block;
+  inline-size: var(--space-12);
+  block-size: var(--space-12);
+  border-radius: var(--radius-xs);
+  background-color: var(--map-none);
+}
+
+.swatch[data-step="1"] {
+  background-color: var(--data-seq-1);
+}
+
+.swatch[data-step="2"] {
+  background-color: var(--data-seq-2);
+}
+
+.swatch[data-step="3"] {
+  background-color: var(--data-seq-3);
+}
+
+.swatch[data-step="4"] {
+  background-color: var(--data-seq-4);
+}
+
+.swatch[data-step="5"] {
+  background-color: var(--data-seq-5);
+}
+
+.swatch[data-step="6"] {
+  background-color: var(--data-seq-6);
+}
+
+.ramp > .swatch {
+  flex: 1;
+  border-radius: 0;
+}
+
+.swatch[data-step="7"] {
+  background-color: var(--data-seq-7);
+}
+
+.rampScale,
+.legendNone {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-8);
+  color: var(--text-muted);
+  font-size: var(--font-size-caption);
+}
+
+.legendNone {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (max-width: 64rem) {
+  .legend {
+    display: none;
+  }
+}

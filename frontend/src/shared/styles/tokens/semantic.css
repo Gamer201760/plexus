@@ -35,6 +35,7 @@
   --border-default: var(--neutral-200);
   --border-strong: var(--neutral-300);
   --border-control: var(--neutral-450);
+  --border-selected: var(--neutral-950);
 
   --status-danger: var(--red-600);
   --status-danger-surface: var(--red-50);
@@ -56,6 +57,9 @@
   --iso-1: var(--iso-ring-1);
   --iso-2: var(--iso-ring-2);
   --iso-3: var(--iso-ring-3);
+  --iso-inverse-1: var(--iso-night-1);
+  --iso-inverse-2: var(--iso-night-2);
+  --iso-inverse-3: var(--iso-night-3);
 
   --map-land: var(--land-100);
   --map-none: var(--land-200);

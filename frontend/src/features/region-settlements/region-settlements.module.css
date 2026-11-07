@@ -1,0 +1,23 @@
+.card {
+  min-inline-size: 0;
+}
+
+.stale {
+  opacity: var(--opacity-stale);
+  transition: var(--transition-fade);
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-8);
+}
+
+.pageText {
+  margin-inline-end: auto;
+  color: var(--text-muted);
+  font-size: var(--font-size-body-sm);
+  font-variant-numeric: var(--font-numeric);
+}

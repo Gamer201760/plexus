@@ -1,0 +1,45 @@
+{
+  "mode": {
+    "air": "Авиация",
+    "river": "Речная линия",
+    "winter_road": "Зимник",
+    "ferry": "Паром",
+    "ice_crossing": "Ледовая переправа",
+    "pontoon_bridge": "Понтонный мост"
+  },
+  "season": {
+    "all": "Все сезоны",
+    "summer": "Лето",
+    "winter": "Зима",
+    "unknown": "Сезон не указан",
+    "legend": "Сезон"
+  },
+  "seasonShort": {
+    "all": "Все",
+    "summer": "Лето",
+    "winter": "Зима"
+  },
+  "confidence": {
+    "high": "Высокая достоверность",
+    "medium": "Средняя достоверность",
+    "low": "Низкая достоверность"
+  },
+  "unit": {
+    "km": "км",
+    "tonnes": "т"
+  },
+  "metric": {
+    "label": "Показатель",
+    "links": "Ручных связей в сезоне",
+    "population": "Население",
+    "companies": "Компаний",
+    "revenuePerCapita": "Выручка компаний на жителя"
+  },
+  "frequency": {
+    "assumed": "Частота не найдена, принят 1 рейс в неделю",
+    "value": "{{value, number}} в неделю"
+  },
+  "source": "Источник",
+  "sourceDate": "Проверено {{date}}",
+  "openSource": "Открыть источник"
+}

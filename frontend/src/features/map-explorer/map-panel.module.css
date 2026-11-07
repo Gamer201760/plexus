@@ -1,0 +1,63 @@
+.panel {
+  min-inline-size: 0;
+  min-block-size: 0;
+  border-inline-start: var(--hairline) solid var(--border-subtle);
+  background-color: var(--surface-raised);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-16) var(--space-24);
+}
+
+.selected {
+  display: grid;
+  gap: var(--space-24);
+  animation: var(--motion-rise-in);
+}
+
+.modes {
+  composes: bareList from "../../shared/styles/compose.module.css";
+  display: grid;
+  gap: var(--space-4);
+}
+
+.modeRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-12);
+  min-block-size: var(--control-height-compact);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+  font-size: var(--font-size-body-sm);
+}
+
+.modeValue {
+  font-variant-numeric: var(--font-numeric);
+  font-weight: var(--weight-semibold);
+}
+
+.scroll {
+  block-size: 100%;
+}
+
+.content {
+  display: grid;
+  align-content: start;
+  gap: var(--space-24);
+  padding: var(--space-24);
+}
+
+.flat {
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 64rem) {
+  .panel {
+    border-inline-start: 0;
+    border-block-start: var(--hairline) solid var(--border-subtle);
+  }
+}

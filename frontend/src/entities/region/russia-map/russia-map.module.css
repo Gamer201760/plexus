@@ -1,0 +1,114 @@
+.frame {
+  position: relative;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: hidden;
+  background-color: var(--map-water);
+}
+
+.map {
+  composes: fillBox from "../../../shared/styles/compose.module.css";
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+.layer {
+  transform-origin: 0 0;
+  transition: transform var(--dur-panel) var(--ease-out);
+}
+
+.instant {
+  transition: none;
+}
+
+.region {
+  fill: var(--map-none);
+  composes: hairStroke from "../../../shared/styles/compose.module.css";
+  stroke: var(--map-border);
+  stroke-linejoin: round;
+  cursor: pointer;
+}
+
+.region[data-step="1"] {
+  fill: var(--data-seq-1);
+}
+
+.region[data-step="2"] {
+  fill: var(--data-seq-2);
+}
+
+.region[data-step="3"] {
+  fill: var(--data-seq-3);
+}
+
+.region[data-step="4"] {
+  fill: var(--data-seq-4);
+}
+
+.region[data-step="5"] {
+  fill: var(--data-seq-5);
+}
+
+.region[data-step="6"] {
+  fill: var(--data-seq-6);
+}
+
+.region[data-step="7"] {
+  fill: var(--data-seq-7);
+}
+
+.region[data-selected] {
+  stroke: var(--map-selected);
+  stroke-width: var(--iso-line-strong);
+}
+
+.selection {
+  pointer-events: none;
+}
+
+.selection > path {
+  fill: none;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.ring3 {
+  stroke: var(--iso-3);
+  stroke-width: var(--map-ring-3);
+}
+
+.knock3 {
+  stroke: var(--surface-raised);
+  stroke-width: var(--map-knock-3);
+}
+
+.ring2 {
+  stroke: var(--iso-2);
+  stroke-width: var(--map-ring-2);
+}
+
+.knock2 {
+  stroke: var(--surface-raised);
+  stroke-width: var(--map-knock-2);
+}
+
+.ring1 {
+  stroke: var(--iso-1);
+  stroke-width: var(--map-ring-1);
+}
+
+.knock1 {
+  stroke: var(--surface-raised);
+  stroke-width: var(--map-knock-1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .region:hover:not([data-selected]) {
+    stroke: var(--map-selected);
+  }
+}

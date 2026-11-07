@@ -42,3 +42,62 @@
   text-align: center;
   animation: var(--motion-fade-in);
 }
+
+.ringEnter {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: var(--motion-ring-in);
+  animation-delay: calc(var(--ring-delay-base) + var(--i) * var(--delay-ring-step));
+}
+
+.ringPulse {
+  animation: var(--motion-ring-pulse);
+  animation-delay: calc(var(--i) * var(--dur-base));
+}
+
+.pagePad {
+  padding-block: var(--space-32) var(--space-64);
+  padding-inline: var(--space-page);
+}
+
+@media (min-width: 75rem) {
+  .pagePad {
+    padding-inline: var(--space-page-wide);
+  }
+}
+
+.bareList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.surface {
+  border: var(--hairline) solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-raised);
+}
+
+.mapFloat {
+  composes: surface;
+  position: absolute;
+  z-index: var(--layer-raised);
+  box-shadow: var(--shadow-raised);
+}
+
+.fillBox {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.hairStroke {
+  stroke-width: var(--hairline);
+  vector-effect: non-scaling-stroke;
+}

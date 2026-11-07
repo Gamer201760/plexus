@@ -12,6 +12,23 @@ export const router = createBrowserRouter([
     children: [
       { index: true, lazy: lazyPage(() => import("@/pages/home/home-page"), "HomePage") },
       {
+        path: "regions",
+        lazy: lazyPage(() => import("@/pages/regions/regions-page"), "RegionsPage"),
+      },
+      {
+        path: "regions/:regionId",
+        lazy: lazyPage(() => import("@/pages/region/region-page"), "RegionPage"),
+      },
+      {
+        path: "seasons",
+        lazy: lazyPage(() => import("@/pages/seasons/seasons-page"), "SeasonsPage"),
+      },
+      { path: "method", lazy: lazyPage(() => import("@/pages/method/method-page"), "MethodPage") },
+      {
+        path: "sources",
+        lazy: lazyPage(() => import("@/pages/sources/sources-page"), "SourcesPage"),
+      },
+      {
         path: "*",
         lazy: lazyPage(() => import("@/pages/not-found/not-found-page"), "NotFoundPage"),
       },

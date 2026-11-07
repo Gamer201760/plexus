@@ -18,6 +18,17 @@
   --space-element: var(--space-12);
 
   --hairline: 1px;
+  --iso-line: 1.5px;
+  --iso-line-strong: 2px;
+  --map-ring-1: 12px;
+  --map-knock-1: 8px;
+  --map-ring-2: 22px;
+  --map-knock-2: 18px;
+  --map-ring-3: 32px;
+  --map-knock-3: 28px;
+  --dash-winter: 6 4;
+  --dash-unknown: 1 4;
+  --link-active-width: 4px;
   --target-min: 44px;
   --control-height: 44px;
   --control-height-compact: 36px;
@@ -26,6 +37,7 @@
   --icon-lg: 24px;
   --icon-xl: 48px;
   --icon-stroke: 1.75;
+  --check-stroke: 2.25;
   --focus-ring-width: 2px;
   --focus-ring-offset: 2px;
   --scrollbar-size: 10px;
@@ -36,4 +48,13 @@
   --term-min: 160px;
   --prose-measure: 70ch;
   --field-max-width: 480px;
+  --toast-width: 380px;
+  --dialog-width: 520px;
+  --map-panel-width: 400px;
+  --map-min-height: 560px;
+  --map-mobile-height: 62dvh;
+  --legend-width: 240px;
+  --formula-art: 320px;
+  --sheet-width: 440px;
+  --listbox-max-height: 320px;
 }

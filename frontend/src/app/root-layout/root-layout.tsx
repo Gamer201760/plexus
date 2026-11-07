@@ -1,4 +1,5 @@
 import { Outlet, ScrollRestoration } from "react-router"
+import { GlobalSearch } from "@/features/global-search"
 import { useTranslation } from "@/shared/i18n"
 import { AppHeader } from "../app-header/app-header"
 import styles from "./root-layout.module.css"
@@ -12,7 +13,7 @@ export function RootLayout() {
       <a className={styles.skip} href="#main">
         {t("common:shell.skip")}
       </a>
-      <AppHeader />
+      <AppHeader search={<GlobalSearch />} />
       <main id="main" tabIndex={-1} className={styles.main}>
         <Outlet />
       </main>

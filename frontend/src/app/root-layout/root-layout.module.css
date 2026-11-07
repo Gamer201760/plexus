@@ -26,12 +26,5 @@
 
 .main {
   min-inline-size: 0;
-  padding: var(--space-page);
   outline: none;
-}
-
-@media (min-width: 75rem) {
-  .main {
-    padding: var(--space-page-wide);
-  }
 }
