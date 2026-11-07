@@ -1,0 +1,425 @@
+{
+  "files": [
+    {
+      "file": "data_manual/regions_input/01000000.csv",
+      "rows": 1605,
+      "sha256": "cb8d5b9264f67bcb1bd4407a0d3d4bb5a5d3eaaa0d77520a84686d6388f1b0b8"
+    },
+    {
+      "file": "data_manual/regions_input/03000000.csv",
+      "rows": 1765,
+      "sha256": "adb2ac255860f05780de2c3dbddc482b8a0c71e909aa7f6df56ef76e8bb2c8c3"
+    },
+    {
+      "file": "data_manual/regions_input/04000000.csv",
+      "rows": 1720,
+      "sha256": "e61dfaa563497f8b3f563da2f25700b005b714b8ca8d062d243b25d35460df1e"
+    },
+    {
+      "file": "data_manual/regions_input/05000000.csv",
+      "rows": 659,
+      "sha256": "c52b0185215c31dfe1af94f99aff201aad8105b27300ae0518528226c1a8e9d5"
+    },
+    {
+      "file": "data_manual/regions_input/07000000.csv",
+      "rows": 760,
+      "sha256": "351c5d9d2d71bb777d4d673af88599472cbbb20f7d762a62cefba162a510328c"
+    },
+    {
+      "file": "data_manual/regions_input/08000000.csv",
+      "rows": 436,
+      "sha256": "d510dbf89aeacfbf87e8f3676bbdd41a2404b1c1b098116dd47469ea30c58c92"
+    },
+    {
+      "file": "data_manual/regions_input/10000000.csv",
+      "rows": 627,
+      "sha256": "64cb57cc20f7657cf23691a246418488b70222539854893bb636e6bec4d9dac4"
+    },
+    {
+      "file": "data_manual/regions_input/11000000.csv",
+      "rows": 3956,
+      "sha256": "5e58eb1509fa73137c57fbedcc684c16d3d52740d8d260a2667c7d605b6b40a4"
+    },
+    {
+      "file": "data_manual/regions_input/11800000.csv",
+      "rows": 43,
+      "sha256": "764a5589ace39c62b0b3c1fb392265be3206d1dea0dd99843b23133a457d663f"
+    },
+    {
+      "file": "data_manual/regions_input/12000000.csv",
+      "rows": 432,
+      "sha256": "8dec209a272f629f162b17a6558324aa2a9571482e52f3103c0b0774558f4728"
+    },
+    {
+      "file": "data_manual/regions_input/14000000.csv",
+      "rows": 1602,
+      "sha256": "0065cacc6d58a4fed26055f62520f918b02d25c41e77e30da7d2a045b4f2ccf7"
+    },
+    {
+      "file": "data_manual/regions_input/15000000.csv",
+      "rows": 2643,
+      "sha256": "5cba1f108cca52a03643a98e7c684c05432a0023783f8324fb9bfcb4171cbdf0"
+    },
+    {
+      "file": "data_manual/regions_input/17000000.csv",
+      "rows": 2526,
+      "sha256": "68e408684218a7eab9309f8af8d4ca418302a2c7864d42f99cd294855cd4ade6"
+    },
+    {
+      "file": "data_manual/regions_input/18000000.csv",
+      "rows": 1494,
+      "sha256": "10aaeb3e4f2f93e55d137ae10ca1be951394e0f527b1b9e218f6f0bc5eaa89bd"
+    },
+    {
+      "file": "data_manual/regions_input/19000000.csv",
+      "rows": 7867,
+      "sha256": "4f19aa0ea6ad8ff99d7dfed5065dc2dc77466b39ed6d46b0b263d5033bc0a5f3"
+    },
+    {
+      "file": "data_manual/regions_input/20000000.csv",
+      "rows": 1732,
+      "sha256": "19a99bd4f0dee0f2c7532b13d46e8dcab77bfddcad1f307f0afe5a97ae8827fb"
+    },
+    {
+      "file": "data_manual/regions_input/22000000.csv",
+      "rows": 4841,
+      "sha256": "743a42087a1f14b19f6059b370f85019def0ef5c784914e45e1e7d876585534b"
+    },
+    {
+      "file": "data_manual/regions_input/24000000.csv",
+      "rows": 3049,
+      "sha256": "261e073b486c3f45152547a72d0f8cc10a9f7cbcb4f71ca4eaaebf2187ef433d"
+    },
+    {
+      "file": "data_manual/regions_input/25000000.csv",
+      "rows": 1532,
+      "sha256": "1a0fd775a9f93f9ae076d1812c4efb8cb8ceb19c9ab485e9aedac90acfefa9da"
+    },
+    {
+      "file": "data_manual/regions_input/26000000.csv",
+      "rows": 122,
+      "sha256": "aad8588408ce7e4c979c79ea9a5366fb6190eb03af96e5a35e4cc58e68d3ef3c"
+    },
+    {
+      "file": "data_manual/regions_input/27000000.csv",
+      "rows": 1098,
+      "sha256": "95947ae9ed9eb299c9974d17bd6c28011bd8f7eafff491def6889906e0c38e7b"
+    },
+    {
+      "file": "data_manual/regions_input/28000000.csv",
+      "rows": 9583,
+      "sha256": "e31d7b2812fa24b8b958b0f8f63aba77b40ca460867b23183e37d64f18551d06"
+    },
+    {
+      "file": "data_manual/regions_input/29000000.csv",
+      "rows": 3214,
+      "sha256": "794f6b4ed39294d83bbf093ee3a3434e130b4d63378292026a31e2020a714245"
+    },
+    {
+      "file": "data_manual/regions_input/30000000.csv",
+      "rows": 86,
+      "sha256": "c172726b269a2888fce897dd3cdaa6e3afa252dc1c7910683af0b7c0afe55d20"
+    },
+    {
+      "file": "data_manual/regions_input/32000000.csv",
+      "rows": 1108,
+      "sha256": "e85ca9f8e1363313efa3af9ab9223ceb4013d6a11a11a22db3729b7e1bf76e45"
+    },
+    {
+      "file": "data_manual/regions_input/33000000.csv",
+      "rows": 4245,
+      "sha256": "4936adc929c80b73d1e427ab344282ee780561c8879c634167819c5ac003ff34"
+    },
+    {
+      "file": "data_manual/regions_input/34000000.csv",
+      "rows": 3470,
+      "sha256": "1fb4c1114b707d02c68104c325227e13deedaa179dec0035ff27eb21f60f1329"
+    },
+    {
+      "file": "data_manual/regions_input/35000000.csv",
+      "rows": 1019,
+      "sha256": "78d4b73e756ceb88904ad739180dba35c4b4207cd6ebb1a340050cfa96167c87"
+    },
+    {
+      "file": "data_manual/regions_input/36000000.csv",
+      "rows": 1333,
+      "sha256": "245845ad40a88b0b7f6f82161cd736bfa18fe3b4360d48f9146266bb4ac5f162"
+    },
+    {
+      "file": "data_manual/regions_input/37000000.csv",
+      "rows": 1235,
+      "sha256": "adcd35c9fa69236ba03eaa7db441c16eb556c1752f5aa4a4f863ca3847f59eeb"
+    },
+    {
+      "file": "data_manual/regions_input/38000000.csv",
+      "rows": 2805,
+      "sha256": "b4317bf8929cdda808b7ef9b0b88a73734977059b16adf9bc247930d3272735e"
+    },
+    {
+      "file": "data_manual/regions_input/41000000.csv",
+      "rows": 2941,
+      "sha256": "2243c543195787160eafaa1448924ed4c85738ed4b572e7c14e36e67def807f9"
+    },
+    {
+      "file": "data_manual/regions_input/42000000.csv",
+      "rows": 1609,
+      "sha256": "89f676ae8bd9868f2c933e11c5598971096df673cd1fee69b2d45002d043c50b"
+    },
+    {
+      "file": "data_manual/regions_input/44000000.csv",
+      "rows": 72,
+      "sha256": "56d84f22471a36d234aa02b146791c60550d56e2c8248516742452b35d2b57f5"
+    },
+    {
+      "file": "data_manual/regions_input/46000000.csv",
+      "rows": 5978,
+      "sha256": "aa7af345f2f61c5c156f496dcf90a9e57ac2c6622360437a748fe707fd0f463d"
+    },
+    {
+      "file": "data_manual/regions_input/47000000.csv",
+      "rows": 136,
+      "sha256": "a0ca441f71902351e6ea78c65ecdd7f3525b55cf9f76a6da3feabdd11af745c7"
+    },
+    {
+      "file": "data_manual/regions_input/49000000.csv",
+      "rows": 3720,
+      "sha256": "08b4e322c648d7cf0ef234d149899ee770868bdd2c501a2849380376185679bc"
+    },
+    {
+      "file": "data_manual/regions_input/50000000.csv",
+      "rows": 1544,
+      "sha256": "7a7c43dd94587f4e51a25dc1bac7f0f5435362a6956beb3efb6590403f42308e"
+    },
+    {
+      "file": "data_manual/regions_input/52000000.csv",
+      "rows": 1498,
+      "sha256": "ed2ded9f8aa24ce38230014d90a37d94e1b058e13bc487b4b2652f8f7804ddb6"
+    },
+    {
+      "file": "data_manual/regions_input/53000000.csv",
+      "rows": 1720,
+      "sha256": "77178ba6b64d9875d247777eb4650c3416b00d91382d56edc9ff4d6c6c8623d4"
+    },
+    {
+      "file": "data_manual/regions_input/54000000.csv",
+      "rows": 2943,
+      "sha256": "031c06bd661b85d823257d5cef2456726018ed2e763a6fd1d2dca4a52ef3816f"
+    },
+    {
+      "file": "data_manual/regions_input/56000000.csv",
+      "rows": 1411,
+      "sha256": "5c228c308b7eb9d0cae55bce13a53b4153bda0e34c9dcd345d54f3dc163c8ade"
+    },
+    {
+      "file": "data_manual/regions_input/57000000.csv",
+      "rows": 3629,
+      "sha256": "ae64ba80b3ace13b6e2730e3ddf25b54d2e5f718434aff503705028ae54e7fd0"
+    },
+    {
+      "file": "data_manual/regions_input/58000000.csv",
+      "rows": 8383,
+      "sha256": "844cb82876e005db7b1d86edc7df757d5c31e0b1d79a0366915cfcdbaee6d4ce"
+    },
+    {
+      "file": "data_manual/regions_input/60000000.csv",
+      "rows": 2295,
+      "sha256": "85e4c15708ec90d588067ff369f5c6650809e02e3007b8876c2d472916b307e2"
+    },
+    {
+      "file": "data_manual/regions_input/61000000.csv",
+      "rows": 2780,
+      "sha256": "d814dcb8ba817c79b7f0e5c5df0eeebc567d3189a44e77f27eeeb3b0befd0ace"
+    },
+    {
+      "file": "data_manual/regions_input/63000000.csv",
+      "rows": 1821,
+      "sha256": "030814031828de05e8a147356754344fefa6448fdfbac21284f8f562f6741c9f"
+    },
+    {
+      "file": "data_manual/regions_input/64000000.csv",
+      "rows": 243,
+      "sha256": "085132240e6ceab4ebe58c6dc84fda41750e62105e10de9ff0213276cffc483e"
+    },
+    {
+      "file": "data_manual/regions_input/65000000.csv",
+      "rows": 1844,
+      "sha256": "7aff68ef9bb5c461a40e12494df670d206734abe10162b3ec875204c86e908b0"
+    },
+    {
+      "file": "data_manual/regions_input/66000000.csv",
+      "rows": 4878,
+      "sha256": "dc541a08fb5095cf8877c81c1998b977a000b99083ac41e0e2ea4ae75ee31076"
+    },
+    {
+      "file": "data_manual/regions_input/68000000.csv",
+      "rows": 1575,
+      "sha256": "ba7f8941dc46e787530ce30c633f6a368003ceaf7b2624919a0b9f37741a8674"
+    },
+    {
+      "file": "data_manual/regions_input/69000000.csv",
+      "rows": 578,
+      "sha256": "0a567e3a3d4b3e413975bba15c56041aed6a7c0677e6fecf4c4b088d413c8217"
+    },
+    {
+      "file": "data_manual/regions_input/70000000.csv",
+      "rows": 3478,
+      "sha256": "a4ed6ec1017818b731c91dcc19b9a597076ce62a5878dc73485516473a12ab84"
+    },
+    {
+      "file": "data_manual/regions_input/71000000.csv",
+      "rows": 1236,
+      "sha256": "25f206c2fbe526f6a5680e59ad93e2f71de13cecd21e68c7d8d6aed920cb4693"
+    },
+    {
+      "file": "data_manual/regions_input/71800000.csv",
+      "rows": 194,
+      "sha256": "61bc73f0d982e6f66ded60813b76659e68ba15c95cc951f2a43bbc39bce8aaf9"
+    },
+    {
+      "file": "data_manual/regions_input/71900000.csv",
+      "rows": 91,
+      "sha256": "66666f86e7616726b1f89b8242395a3415a8eb328d0456e62cf203b68dbeded5"
+    },
+    {
+      "file": "data_manual/regions_input/73000000.csv",
+      "rows": 1006,
+      "sha256": "057be38533f5bc2ce0cf570951790b0de9b21b4d718330ccf83a4627b3177e46"
+    },
+    {
+      "file": "data_manual/regions_input/75000000.csv",
+      "rows": 1290,
+      "sha256": "8e9536b0e84d74d4bd55cba93a823ee613c4cb0b8627c0b1c98de63d8c563595"
+    },
+    {
+      "file": "data_manual/regions_input/76000000.csv",
+      "rows": 874,
+      "sha256": "b98c0faff98b377945ec4e547d52ff1253a0d5a8cc83cf6b027f4d1ee8354293"
+    },
+    {
+      "file": "data_manual/regions_input/77000000.csv",
+      "rows": 46,
+      "sha256": "646d8015387b9d8cfaef02eb012f98777e197ce9b7127acaa4c60e068ae2cfe7"
+    },
+    {
+      "file": "data_manual/regions_input/78000000.csv",
+      "rows": 6044,
+      "sha256": "65a917e3ae3c9f33dba992c072d55fdf16a70fe682098b55684731481cd2a673"
+    },
+    {
+      "file": "data_manual/regions_input/79000000.csv",
+      "rows": 233,
+      "sha256": "ba60b2576b6c48fd15f636e175bcbe59b291a0a6c6c920b05e4926d1a725b75f"
+    },
+    {
+      "file": "data_manual/regions_input/80000000.csv",
+      "rows": 4561,
+      "sha256": "2ec5bc2258f1acb42a6daa8f56ce77f569ce1d869ca17b0a6d49b35d6d27c570"
+    },
+    {
+      "file": "data_manual/regions_input/81000000.csv",
+      "rows": 633,
+      "sha256": "7b72adf7e769b0dcf65ac92a3a79b3df145bc4fedbef15851cbd8afccef8e919"
+    },
+    {
+      "file": "data_manual/regions_input/82000000.csv",
+      "rows": 1631,
+      "sha256": "b9eb254f1b418a374b520791de4b41ed9864e99d49d6996924d2238d330c98b7"
+    },
+    {
+      "file": "data_manual/regions_input/83000000.csv",
+      "rows": 180,
+      "sha256": "d8ce2e1452273c8d97859dad2ade1c7a6805b693b6b7057d9be7dc0728ac4690"
+    },
+    {
+      "file": "data_manual/regions_input/84000000.csv",
+      "rows": 247,
+      "sha256": "0b4f3b09b0b937bd41b47d1030d8a9dbdfb709611c0cc2a3654be36a17d7113e"
+    },
+    {
+      "file": "data_manual/regions_input/85000000.csv",
+      "rows": 265,
+      "sha256": "1c383ff5262dba5f2512e85562837246cb6a5726b4216e400f765de4ac9fcb73"
+    },
+    {
+      "file": "data_manual/regions_input/86000000.csv",
+      "rows": 845,
+      "sha256": "32226be22ff2d5cacd48885db7d0cd1ea108adc4f5d9177cfc485a59dd8ee52f"
+    },
+    {
+      "file": "data_manual/regions_input/87000000.csv",
+      "rows": 757,
+      "sha256": "f6ef29b600eef0d48e628ae2c8f700fead3d7f37c39410d84f4a54d63dd2fb5c"
+    },
+    {
+      "file": "data_manual/regions_input/88000000.csv",
+      "rows": 1616,
+      "sha256": "3a03f861bba41d089afda9980a92ab493a9462d7379939730ef20f6bf54eae62"
+    },
+    {
+      "file": "data_manual/regions_input/89000000.csv",
+      "rows": 1257,
+      "sha256": "3222989724b54ed10475cfec5737a544f4fa849c6253affc7ac821db55e8bee9"
+    },
+    {
+      "file": "data_manual/regions_input/90000000.csv",
+      "rows": 222,
+      "sha256": "9af0d8901dbf627621ccb00efdb4a393397f365c5afc0f30de35491256dcef4f"
+    },
+    {
+      "file": "data_manual/regions_input/91000000.csv",
+      "rows": 148,
+      "sha256": "8e00b1567b8cde27258938d3bbd2241c24d8746da1a2580b18d57c4ac4b3bef8"
+    },
+    {
+      "file": "data_manual/regions_input/92000000.csv",
+      "rows": 3119,
+      "sha256": "732d794983fbe1036b547ece0e9864613eea1176b81c53f0a0e4fc490954732b"
+    },
+    {
+      "file": "data_manual/regions_input/93000000.csv",
+      "rows": 150,
+      "sha256": "6c274c056b72389471621de0c5c8ffef40e14e77e06adb2520aead2bf6dac00d"
+    },
+    {
+      "file": "data_manual/regions_input/94000000.csv",
+      "rows": 1961,
+      "sha256": "eb07fd1a339eef7941d31c561df8e21ba68bcdffbc1e201b9cb805c2a0c1fe39"
+    },
+    {
+      "file": "data_manual/regions_input/95000000.csv",
+      "rows": 283,
+      "sha256": "54edf7e7caf89dce5a563284572c8bbb4b6dc135e688946d63eceb3591e88548"
+    },
+    {
+      "file": "data_manual/regions_input/96000000.csv",
+      "rows": 363,
+      "sha256": "c09fa9ff8ac44ea8bf6f80e3a16b035a8b682676436792712741528cbce13f56"
+    },
+    {
+      "file": "data_manual/regions_input/97000000.csv",
+      "rows": 1729,
+      "sha256": "bd9a368f4be2eb7d12a13f2b3526c011333d8c930746bb258c34108b9ac00934"
+    },
+    {
+      "file": "data_manual/regions_input/98000000.csv",
+      "rows": 636,
+      "sha256": "caf00d26f1e79993a133cf78084efdd9de649913fad7c04b4fab82a3dbe9bf0d"
+    },
+    {
+      "file": "data_manual/regions_input/99000000.csv",
+      "rows": 112,
+      "sha256": "9f3a84c949777edb8ca48ebc4d37fdd10fb9525c03afaf974bfebc8327b98871"
+    }
+  ],
+  "total_records": 155412,
+  "unique_point_ids": 155412,
+  "latitude_bounds": [
+    41.283786,
+    73.50742
+  ],
+  "longitude_bounds": [
+    -179.478385,
+    179.258304
+  ],
+  "above_75N": 0
+}

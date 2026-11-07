@@ -1,0 +1,92 @@
+{
+  "dataset": "FNS 7707329152-revexp",
+  "coverage": "complete latest advertised national release, not a regional subset",
+  "financial_year": 2025,
+  "release_date": "2026-10-25",
+  "retrieved_date_utc": "2026-11-07",
+  "license": "FNS linked Russian standard open-data conditions; source attribution and faithful representation, commercial/noncommercial reuse allowed",
+  "license_url": "https://www.nalog.gov.ru/files/tipovye_usloviya_od.pdf",
+  "publisher_sha256": "947900d16af5fd549d8f076671976cd2e59422f2b0a9b9d20f48b3529d67e526",
+  "rows": 1809218,
+  "units": "RUB (source decimal amounts)",
+  "files": [
+    {
+      "path": "data/additional/fns-revexp/derived/archive_inventory.json",
+      "source_url": null,
+      "derived_from": "raw/data-20261025-structure-20180110.zip",
+      "retrieved_date_utc": "2026-11-07",
+      "bytes": 347732,
+      "sha256": "c2b20facbac33615e23aafd12fe7c4039621389f8e5ff6bc1607fdb0584546b9"
+    },
+    {
+      "path": "data/additional/fns-revexp/derived/income_expense_2025.parquet",
+      "source_url": null,
+      "derived_from": "raw/data-20261025-structure-20180110.zip",
+      "retrieved_date_utc": "2026-11-07",
+      "bytes": 96405589,
+      "sha256": "3d692539821088ecd611bd36ad1bddb73b234a74dc557f0ad7f9a537594e5d63"
+    },
+    {
+      "path": "data/additional/fns-revexp/derived/profile.json",
+      "source_url": null,
+      "derived_from": "raw/data-20261025-structure-20180110.zip",
+      "retrieved_date_utc": "2026-11-07",
+      "bytes": 1199,
+      "sha256": "0d1e917947c73ebf9fdfa0b9b672cd0391b39e7fb8a67fe36f77653f62e59158"
+    },
+    {
+      "path": "data/additional/fns-revexp/raw/archive_headers.txt",
+      "source_url": "https://file.nalog.ru/opendata/7707329152-revexp/data-20261025-structure-20180110.zip",
+      "derived_from": null,
+      "retrieved_date_utc": "2026-11-07",
+      "bytes": 495,
+      "sha256": "71ac15fb3d7c0a0e26cb5d9669a76016de08e74410a064e7118497b3408560fe"
+    },
+    {
+      "path": "data/additional/fns-revexp/raw/data-20261025-structure-20180110.zip",
+      "source_url": "https://file.nalog.ru/opendata/7707329152-revexp/data-20261025-structure-20180110.zip",
+      "derived_from": null,
+      "retrieved_date_utc": "2026-11-07",
+      "bytes": 99568119,
+      "sha256": "947900d16af5fd549d8f076671976cd2e59422f2b0a9b9d20f48b3529d67e526"
+    },
+    {
+      "path": "data/additional/fns-revexp/raw/source_page_metadata.json",
+      "source_url": "https://www.nalog.gov.ru/rn54/opendata/7707329152-revexp/",
+      "derived_from": null,
+      "retrieved_date_utc": "2026-11-07",
+      "bytes": 513,
+      "sha256": "5522508007854fdd8a0c1fc2224bcc2071a310ef1b60929fe812bc1565a0aa43"
+    },
+    {
+      "path": "data/additional/fns-revexp/raw/structure-20180110.xsd",
+      "source_url": "https://file.nalog.ru/opendata/7707329152-revexp/structure-20180110.xsd",
+      "derived_from": null,
+      "retrieved_date_utc": "2026-11-07",
+      "bytes": 11651,
+      "sha256": "71156f70e08072672d7cc28bb7dd8e9f03891edb72411133b23d4c1dabcd8f57"
+    }
+  ],
+  "acquisition_failures": [
+    {
+      "stage": "default shell DNS",
+      "error": "Could not resolve host file.nalog.ru",
+      "resolution": "Network-enabled shell curl succeeded"
+    },
+    {
+      "stage": "network Python urllib",
+      "error": "SSL CERTIFICATE_VERIFY_FAILED local issuer",
+      "resolution": "System curl TLS verification succeeded; no insecure TLS bypass used"
+    },
+    {
+      "url": "https://www.nalog.gov.ru/rn54/opendata/7707329152-revexp/",
+      "error": "Direct shell HTTP 403",
+      "resolution": "Metadata inspected with web retrieval tool; actual ZIP/XSD downloaded via curl"
+    },
+    {
+      "url": "https://www.nalog.gov.ru/files/tipovye_usloviya_od.pdf",
+      "error": "Direct shell HTTP 403",
+      "resolution": "Terms inspected with web retrieval; no raw PDF saved"
+    }
+  ]
+}

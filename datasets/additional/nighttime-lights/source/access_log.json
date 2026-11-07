@@ -1,0 +1,44 @@
+{
+  "retrieved_utc_date": "2026-11-07",
+  "attempts": [
+    {
+      "url": "https://eogdata.mines.edu/nighttime_light/annual/v22/",
+      "status": "authentication_required",
+      "evidence": "Public annual V2.2 download redirected to https://eogauth.mines.edu/realms/eog/protocol/openid-connect/auth; no login/registration attempted."
+    },
+    {
+      "url": "https://www.ngdc.noaa.gov/eog/viirs/download_dnb_composites.html",
+      "status": "http_404",
+      "evidence": "Historical NOAA annual/monthly endpoint returned 404 during web open."
+    },
+    {
+      "url": "https://worldbank.github.io/OpenNightLights/wb-light-every-night-readme.html",
+      "status": "alternative_different_product",
+      "evidence": "Official documentation: daily orbital VIIRS 2012\u20132020, not equivalent recent annual VNL composite."
+    },
+    {
+      "url": "https://data.worldpop.org/GIS/Covariates/Global_2015_2030/RUS/VIIRS/v1/fvf/rus_viirs_fvf_2023_100m_v1.tif",
+      "status": "public_full_download_available_range_ignored",
+      "content_length": 1168027401,
+      "last_modified": "2024-09-22T21:27:17Z",
+      "evidence": "HEAD HTTP200 Accept-Ranges bytes; GET Range bytes=20000000-20001023 returned HTTP200 entire Content-Length instead of206; interrupted test removed."
+    },
+    {
+      "url": "ftp://ftp.worldpop.org/GIS/Covariates/Global_2015_2030/RUS/VIIRS/v1/fvf/rus_viirs_fvf_2023_100m_v1.tif",
+      "status": "public_anonymous_ftp_ranges_verified",
+      "content_length": 1168027401,
+      "evidence": "Official mirror documented by WorldPop paper; HEAD same size/date, GET bounded range yielded1024bytes. Download uses5connections with checkpoints.",
+      "mirror_documentation": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12444015/"
+    },
+    {
+      "url": "https://zenodo.org/records/17294744",
+      "status": "public_derivative",
+      "evidence": "Public record API and observed-period2024 GeoTIFF available; CC BY4.0; publisher MD5 verifies content."
+    },
+    {
+      "url": "https://zenodo.org/api/records/17294744/files/nightlights.average_viirs.v21_m_500m_s_20230101_20231231_go_epsg4326_v20250904.tif/content",
+      "status": "public_http_206_ranges_verified",
+      "evidence": "1024-byte test returned exact Content-Range; retained 50,730,668-byte prefix from public file URL and completed remaining11,355,591bytes with4bounded206ranges; final publisherMD5 verified by validator."
+    }
+  ]
+}

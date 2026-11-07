@@ -1,0 +1,14 @@
+{
+  "source_count": 284,
+  "status_counts": {
+    "blocked": 26,
+    "downloaded": 255,
+    "needs_content_review": 3
+  },
+  "raw_bytes": 108012033,
+  "html_tables": 486,
+  "html_table_rows": 5603,
+  "kap_schedule_segments": 72,
+  "full_national_timetable": false,
+  "yandex_api_status": "blocked_missing_api_key"
+}

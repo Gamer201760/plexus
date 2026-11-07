@@ -1,0 +1,82 @@
+{
+  "dataset_id": "opengeohub_2024",
+  "file": "data/additional/nighttime-lights/nightlights.average_viirs.v21_m_500m_s_20240101_20241231_go_epsg4326_v20250904.tif",
+  "bytes": 63713625,
+  "sha256": "e6edde68952052f8c53050e2ce7082bab08ddd0e15a696f999215e2d57194c53",
+  "year": 2024,
+  "md5": "0b976892d40c2d0d99177c727289eaf2",
+  "driver": "GTiff",
+  "crs": "EPSG:4326",
+  "width": 86400,
+  "height": 35849,
+  "bands": 1,
+  "dtype": "int16",
+  "nodata": -32768.0,
+  "resolution_degrees": [
+    0.00416666666666667,
+    0.00416666666666667
+  ],
+  "resolution_arcseconds": [
+    15.000000000000012,
+    15.000000000000012
+  ],
+  "bounds": {
+    "left": -180.0,
+    "bottom": -62.000833333333446,
+    "right": 180.00000000000028,
+    "top": 87.37
+  },
+  "transform": [
+    0.00416666666666667,
+    0.0,
+    -180.0,
+    0.0,
+    -0.00416666666666667,
+    87.37,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "scales": [
+    10.0
+  ],
+  "offsets": [
+    0.0
+  ],
+  "block_shapes": [
+    [
+      512,
+      512
+    ]
+  ],
+  "tags": {
+    "TIFFTAG_DOCUMENTNAME": "./VNL_npp_2024_global_vcmslcfg_v2_c202502261200.average_masked.dat.tif",
+    "TIFFTAG_IMAGEDESCRIPTION": "IDL TIFF file",
+    "TIFFTAG_SOFTWARE": "IDL 8.7.2, Harris Geospatial Solutions, Inc.",
+    "TIFFTAG_DATETIME": "2025:04:03 14:16:11",
+    "TIFFTAG_XRESOLUTION": "100",
+    "TIFFTAG_YRESOLUTION": "100",
+    "TIFFTAG_RESOLUTIONUNIT": "2 (pixels/inch)",
+    "AREA_OR_POINT": "Area"
+  },
+  "image_structure_tags": {
+    "LAYOUT": "COG",
+    "COMPRESSION": "DEFLATE",
+    "INTERLEAVE": "BAND"
+  },
+  "stratified_window_read_count": 64,
+  "stratified_sample_min": 0.0,
+  "stratified_sample_max": 125.0,
+  "settlement_sampling": {
+    "rows": 155412,
+    "status_counts": {
+      "valid": 155412
+    },
+    "method": "Containing pixel; raw stored band value, no interpolation or scale application",
+    "input_files": 82,
+    "blocks_read": 606,
+    "file": "data/additional/nighttime-lights/settlements_opengeohub_2024.csv",
+    "bytes": 13999751,
+    "sha256": "4e76ccd7b00e16e98c3cc752deb0cca5d998af455a079197d55d48d0be566746"
+  }
+}

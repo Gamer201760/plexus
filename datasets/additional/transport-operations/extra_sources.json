@@ -1,0 +1,132 @@
+[
+  {
+    "url": "https://aokap.ru/uslugi/regulyarnye-perevozki/raspisanie-zima/",
+    "kind": "schedule",
+    "regions": []
+  },
+  {
+    "url": "https://aokap.ru/uslugi/regulyarnye-perevozki/raspisanie-leto/",
+    "kind": "schedule",
+    "regions": []
+  },
+  {
+    "url": "https://gazeta-hmrn.ru/images/PDF2024/072024.pdf",
+    "kind": "subsidy_competition",
+    "regions": []
+  },
+  {
+    "url": "https://www.ugrador.ru/news/administration/1930/",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://www.ugrador.ru/news/administration/1923/",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://www.ugrador.ru/news/administration/991/",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://27.mchs.gov.ru/deyatelnost/press-centr/novosti/5498183",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://29.mchs.gov.ru/deyatelnost/press-centr/novosti/5650318",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://41.mchs.gov.ru/deyatelnost/press-centr/operativnaya-informaciya/operativnye-sobytiya/5712152",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://41.mchs.gov.ru/deyatelnost/press-centr/operativnaya-informaciya/5714125",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://27.mchs.gov.ru/deyatelnost/press-centr/vse_novosti/5731858",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://86.mchs.gov.ru/deyatelnost/press-centr/operativnaya-informaciya/5725211",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://oktregion.ru/upload/docs/edds-oktyabrskogo-rayona/ezhednevnyy-operativnyy-prognoz/2023/OP-na_11_04_2025.pdf",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://oktregion.ru/upload/docs/edds-oktyabrskogo-rayona/ezhednevnyy-operativnyy-prognoz/2023/OP_na_02_04_2026.pdf",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://yandex.ru/dev/rasp/doc/ru/reference/schedule-on-station",
+    "kind": "api_documentation",
+    "regions": []
+  },
+  {
+    "url": "https://27.mchs.gov.ru/deyatelnost/press-centr/novosti/5738091",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://14.mchs.gov.ru/deyatelnost/press-centr/novosti/5643625",
+    "kind": "opening",
+    "regions": []
+  },
+  {
+    "url": "https://chemal-altai.ru/press-center/news/novosti/zakryty-vse-ledovye-perepravy-vykhod-na-lyed-zapreshchyen/",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://bratsk-raion.ru/wp-content/uploads/2026/04/%D0%91%D1%80%D0%B0%D1%82%D1%81%D0%BA%D0%B8%D0%B9-%D1%80%D0%B0%D0%B9%D0%BE%D0%BD-5-188.pdf",
+    "kind": "closure",
+    "regions": []
+  },
+  {
+    "url": "https://11.mchs.gov.ru/deyatelnost/press-centr/operativnaya-informaciya/prognozy/prognozy/5730130",
+    "kind": "seasonal_status",
+    "regions": [
+      "87000000"
+    ]
+  },
+  {
+    "url": "https://11.mchs.gov.ru/deyatelnost/press-centr/operativnaya-informaciya/5731532",
+    "kind": "seasonal_status",
+    "regions": [
+      "87000000"
+    ]
+  },
+  {
+    "url": "https://11.mchs.gov.ru/deyatelnost/press-centr/operativnaya-informaciya/prognozy/prognozy/5687110",
+    "kind": "seasonal_status",
+    "regions": [
+      "87000000"
+    ]
+  },
+  {
+    "url": "https://11.mchs.gov.ru/deyatelnost/press-centr/operativnaya-informaciya/5724501",
+    "kind": "seasonal_status",
+    "regions": [
+      "87000000"
+    ]
+  },
+  {
+    "url": "https://11.mchs.gov.ru/deyatelnost/press-centr/operativnaya-informaciya/5723468",
+    "kind": "seasonal_status",
+    "regions": [
+      "87000000"
+    ]
+  }
+]

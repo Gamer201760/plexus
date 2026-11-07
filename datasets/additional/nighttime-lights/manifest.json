@@ -1,0 +1,130 @@
+{
+  "created_utc": "2026-11-07T16:51:17.252103+00:00",
+  "datasets": [
+    {
+      "dataset_id": "opengeohub_2023",
+      "year": 2023,
+      "retrieval_date_utc": "2026-11-07",
+      "source_url": "https://zenodo.org/api/records/17294744/files/nightlights.average_viirs.v21_m_500m_s_20230101_20231231_go_epsg4326_v20250904.tif/content",
+      "metadata_url": "https://doi.org/10.5281/zenodo.17294744",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "status": "acquired_validated_raster",
+      "file": "data/additional/nighttime-lights/nightlights.average_viirs.v21_m_500m_s_20230101_20231231_go_epsg4326_v20250904.tif",
+      "bytes": 62086259,
+      "sha256": "97c9e6e2e66d6c229f865ca59ebf8ff0eafb9346a13a07ed3387c2a69c8b3f7b",
+      "validation_file": "datasets/additional/nighttime-lights/validation_opengeohub_2023.json",
+      "coverage": {
+        "left": -180.0,
+        "bottom": -62.000833333333446,
+        "right": 180.00000000000028,
+        "top": 87.37
+      },
+      "crs": "EPSG:4326",
+      "resolution_arcseconds": [
+        15.000000000000012,
+        15.000000000000012
+      ],
+      "nodata": -32768.0,
+      "settlement_samples": {
+        "rows": 155412,
+        "status_counts": {
+          "valid": 155412
+        },
+        "method": "Containing pixel; raw stored band value, no interpolation or scale application",
+        "input_files": 82,
+        "blocks_read": 606,
+        "file": "data/additional/nighttime-lights/settlements_opengeohub_2023.csv",
+        "bytes": 13999349,
+        "sha256": "8d3b268bb144f078fede17ce7fb34c7956f0726f29225bb6adc88a8d0e59e75a"
+      },
+      "product": "OpenGeoHub observed-period 2023 EOG annual average-masked VNL derivative; global COG includes Russia",
+      "scale_warning": "Raw integers preserved. Source describes 10x radiance encoding, but band scale metadata may be 10; calibrated radiance is not asserted.",
+      "citation": "Hengl (2025), DOI 10.5281/zenodo.17294744; Elvidge et al. (2021), DOI 10.3390/rs13050922"
+    },
+    {
+      "dataset_id": "opengeohub_2024",
+      "year": 2024,
+      "retrieval_date_utc": "2026-11-07",
+      "source_url": "https://zenodo.org/records/17294744/files/nightlights.average_viirs.v21_m_500m_s_20240101_20241231_go_epsg4326_v20250904.tif?download=1",
+      "metadata_url": "https://doi.org/10.5281/zenodo.17294744",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "status": "acquired_validated_raster",
+      "file": "data/additional/nighttime-lights/nightlights.average_viirs.v21_m_500m_s_20240101_20241231_go_epsg4326_v20250904.tif",
+      "bytes": 63713625,
+      "sha256": "e6edde68952052f8c53050e2ce7082bab08ddd0e15a696f999215e2d57194c53",
+      "validation_file": "datasets/additional/nighttime-lights/validation_opengeohub_2024.json",
+      "coverage": {
+        "left": -180.0,
+        "bottom": -62.000833333333446,
+        "right": 180.00000000000028,
+        "top": 87.37
+      },
+      "crs": "EPSG:4326",
+      "resolution_arcseconds": [
+        15.000000000000012,
+        15.000000000000012
+      ],
+      "nodata": -32768.0,
+      "settlement_samples": {
+        "rows": 155412,
+        "status_counts": {
+          "valid": 155412
+        },
+        "method": "Containing pixel; raw stored band value, no interpolation or scale application",
+        "input_files": 82,
+        "blocks_read": 606,
+        "file": "data/additional/nighttime-lights/settlements_opengeohub_2024.csv",
+        "bytes": 13999751,
+        "sha256": "4e76ccd7b00e16e98c3cc752deb0cca5d998af455a079197d55d48d0be566746"
+      },
+      "product": "OpenGeoHub observed-period 2024 EOG annual average-masked VNL derivative; global COG includes Russia",
+      "scale_warning": "Raw integers preserved. Source describes 10x radiance encoding, but band scale metadata may be 10; calibrated radiance is not asserted.",
+      "citation": "Hengl (2025), DOI 10.5281/zenodo.17294744; Elvidge et al. (2021), DOI 10.3390/rs13050922"
+    }
+  ],
+  "metadata_files": [
+    {
+      "file": "datasets/additional/nighttime-lights/source/access_log.json",
+      "bytes": 2429,
+      "sha256": "363f29c14b2f57f76f3d507c748bc29c6222a0d37fe90d0b37aaff5d1f57e17c",
+      "type": "metadata_or_provenance_not_raster"
+    },
+    {
+      "file": "datasets/additional/nighttime-lights/source/annual_lights.night_500m.R",
+      "bytes": 2663,
+      "sha256": "23495834e18252fb03a4b5b329b1d8144e9f9750f4f3c5adf2323e098e772ab7",
+      "type": "metadata_or_provenance_not_raster"
+    },
+    {
+      "file": "datasets/additional/nighttime-lights/source/eog_vnl.html",
+      "bytes": 53879,
+      "sha256": "6c5c3af1f6e27d39f78ea7057ef17e65dba612828238f2a97d35bc78576bc8ce",
+      "type": "metadata_or_provenance_not_raster"
+    },
+    {
+      "file": "datasets/additional/nighttime-lights/source/worldpop_partial_attempt.json",
+      "bytes": 1210,
+      "sha256": "945f078c23d2f5f014e870909d633dcd8a7f2819b6e0825e3e4f353ce7643652",
+      "type": "metadata_or_provenance_not_raster"
+    },
+    {
+      "file": "datasets/additional/nighttime-lights/source/worldpop_russia_2023.html",
+      "bytes": 20672,
+      "sha256": "8c76cc8d1c82cf2ef989466568723a09f769df4c1d805057d23c46d4c9bcc8e2",
+      "type": "metadata_or_provenance_not_raster"
+    },
+    {
+      "file": "datasets/additional/nighttime-lights/source/zenodo_17294744.json",
+      "bytes": 22472,
+      "sha256": "39974c477561cfe5c7f0197732a2b7a5d5223158701f376f370adf096dda65cd",
+      "type": "metadata_or_provenance_not_raster"
+    }
+  ],
+  "access_attempts_file": "datasets/additional/nighttime-lights/source/access_log.json",
+  "settlement_input_manifest": "datasets/additional/nighttime-lights/settlement_inputs.json",
+  "high_north_caveat": "EOG public annual product documentation gives75N limit. Rectangular derivative extent above75N does not establish valid original observations; zero cannot establish electricity access or cloud-free observation coverage.",
+  "worldpop_2023_status": "not_acquired; partial transfer stopped and removed in favor of comparable native-grid observed 2023/2024; see source/worldpop_partial_attempt.json",
+  "total_acquired_raster_bytes": 125799884
+}

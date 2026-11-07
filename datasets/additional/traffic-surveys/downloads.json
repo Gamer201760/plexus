@@ -1,0 +1,45 @@
+[
+  {
+    "filename": "mozhga-ksodd.pdf",
+    "url": "https://www.mozhga-rayon.ru/files/0520/1%20%D1%8D%D1%82%D0%B0%D0%BF%20%D0%9A%D0%A1%D0%9E%D0%94%D0%94.pdf",
+    "retrieved_at": "2026-11-07T16:24:08.712829+00:00",
+    "http_status": 200,
+    "bytes": 3757436,
+    "sha256": "45a5bca11549198e2c013811abbb676656e7fae435c1d9a8e81959b1ae094bd7",
+    "path": "data/additional/traffic-surveys/raw/mozhga-ksodd.pdf"
+  },
+  {
+    "filename": "serov-ksodd.pdf",
+    "url": "https://www.adm-serov.ru/files/statica/KJKH/KSODD1.pdf?schema=white",
+    "retrieved_at": "2026-11-07T16:24:08.713242+00:00",
+    "error": "HTTPSConnectionPool(host='www.adm-serov.ru', port=443): Max retries exceeded with url: /files/statica/KJKH/KSODD1.pdf?schema=white (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+  },
+  {
+    "filename": "nefteyugansk-ksodd.pdf",
+    "url": "https://www.admugansk.ru/uploads/2018/11/3ksodd.pdf",
+    "retrieved_at": "2026-11-07T16:24:08.713448+00:00",
+    "http_status": 200,
+    "bytes": 43505706,
+    "sha256": "dc8094e98c21688fe9ec4fcefb44ed610e8a3a936747b90963ffe799ee6ea449",
+    "path": "data/additional/traffic-surveys/raw/nefteyugansk-ksodd.pdf"
+  },
+  {
+    "filename": "belovo-ksodd.pdf",
+    "url": "https://www.belovorn.ru/LOAD_CONTENT/Район/Дорожное хозяйство/КСОДД Беловского муниципального района.pdf",
+    "retrieved_at": "2026-11-07T16:24:08.713599+00:00",
+    "http_status": 200,
+    "bytes": 11928306,
+    "sha256": "fad02c6d93674ddd57e2b3c8bfdeed7cb0d839bd76f0e279e8153ed88ade0a11",
+    "path": "data/additional/traffic-surveys/raw/belovo-ksodd.pdf"
+  },
+  {
+    "filename": "serov-ksodd.pdf",
+    "url": "https://www.adm-serov.ru/files/statica/KJKH/KSODD1.pdf?schema=white",
+    "retrieved_at": "2026-11-07T16:25:11.041642+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 5193622,
+    "sha256": "fb4929b34f2f61886cc659623225621350c1cf195989704952fe6093e4f953a9",
+    "path": "data/additional/traffic-surveys/raw/serov-ksodd.pdf"
+  }
+]

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>VIIRS Nighttime Light</title>
+    <meta name="description" content="Earth Observation Group is the pioneer of the nocturnal remote sensing, producing cutting edge product of Nighttime Light, Nightfire, and VIIRS Boat Detection.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/Carousel_Image_Slider-1.css">
+    <link rel="stylesheet" href="../assets/css/Carousel_Image_Slider.css">
+    <link rel="stylesheet" href="../assets/css/dh-card-image-left-dark.css">
+    <link rel="stylesheet" href="../assets/css/dropdown-search-bs4.css">
+    <link rel="stylesheet" href="../assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/iframe.css">
+    <link rel="stylesheet" href="../assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="../assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="../assets/css/Ultimate-Testimonial-Slider-BS4-Updated.css">
+    <link rel="stylesheet" href="../assets/css/untitled.css">
+</head>
+
+<body data-spy="scroll" data-target="#sbar">
+    <!-- Start: 1 Row 1 Column -->
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col" style="margin-top: 85px;"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Start: Navigation Clean -->
+                    <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean" style="background: rgb(255,255,255);">
+                        <div class="container-fluid"><a class="navbar-brand" href="https://payneinstitute.mines.edu/eog"><img src="../assets/img/eog_logo_text_banner.500px.png" style="width: 275px;"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbar-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                            <div class="collapse navbar-collapse" id="navbar-2">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item"><a class="nav-link" href="https://payneinstitute.mines.edu/" title="Payne Insttitute for Public Policy">Payne Institute</a></li>
+                                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Nighttime Light</a>
+                                        <div class="dropdown-menu" id="nighttime_light-2"><a class="dropdown-item" id="viirs-2" href="/products/vnl/">VIIRS</a><a class="dropdown-item" id="dmsp-2" href="/products/dmsp/">DMSP</a></div>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="/products/vbd" title="VIIRS Boat Detection">VBD</a></li>
+                                    <li class="nav-item dropdown" id="vnf"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">VNF</a>
+                                        <div class="dropdown-menu"><a class="dropdown-item" id="vnf" href="/products/vnf">VNF (V2.0/V3.0/V3.5)</a><a class="dropdown-item" id="vnf_v40" href="/products/vnf/vnf_v40.html" style="color: var(--red);">VNF V4.0</a><a class="dropdown-item" id="subscriber_page" href="/products/vnf/subscribers">Subscriber Portal</a><a class="dropdown-item" id="Annual-Global-Gas-Flare-Analysis-1" href="/products/vnf/global_gas_flare.html">Annual Global Gas Flare Analysis</a></div>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="/products/special_topics/" title="VIIRS Nightfire">Special Topics</a></li>
+                                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Resources</a>
+                                        <div class="dropdown-menu" id="resources-2"><a class="dropdown-item" id="logo-2" href="/products/logo/">Logo</a><a class="dropdown-item" id="logo-3" href="/products/trip_the_light">Trip the Light</a><a class="dropdown-item" id="artist-3" href="/products/artist">For Artist</a><a class="dropdown-item" id="artist-4" href="/products/faq">FAQ</a></div>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tooltip" data-bss-tooltip="" href="../news/" title="Bulletin"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-newspaper">
+                                                <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"></path>
+                                                <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"></path>
+                                            </svg></a></li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tooltip" data-bss-tooltip="" href="mailto:eog@mines.edu" title="Mail EOG" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tooltip" data-bss-tooltip="" href="https://twitter.com/eogatpayne" title="EOG Twitter" target="_blank"><i class="fa fa-twitter" data-toggle="tooltip" data-bss-tooltip="" title="EOG Twitter feed"></i></a></li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tooltip" data-bss-tooltip="" href="../register/" title="Accounts"><i class="fa fa-user" data-toggle="tooltip" data-bss-tooltip="" title="EOG Twitter feed"></i></a></li>
+                                </ul>
+                            </div>
+                            <header></header>
+                        </div>
+                    </nav><!-- End: Navigation Clean -->
+                </div>
+                <div class="col">
+                    <div class="jumbotron border rounded-0 box" style="margin-top: 0px;">
+                        <h1 class="jumbotron h1" style="text-shadow: 0px 0px 6px var(--gray);">See the World at Night</h1>
+                        <p class="jumbotron h3" style="text-shadow: 0px 0px 15px var(--gray-dark);">“On the earth, even in the darkest night, the light never wholly abandons his rule. It is diffused and subtle, but little as may remain, the retina of the eye is sensible of it.” <br><br>- Jules Verne,&nbsp;Journey to the Center of the Earth<br></p>
+                    </div>
+                    <div class="row" id="vnl_v2_avail">
+                        <div class="col">
+                            <div class="alert alert-danger text-center" role="alert"><span class="text-left">Many of the VIIRS Nighttime Lights data are available under Creative Commons Attribution 4.0 International license. Please refer to the document&nbsp;&nbsp;<a class="alert-link" href="https://eogdata.mines.edu/files/EOG_products_CC_License.pdf" target="_blank" style="font-size: 18px;"><span style="text-decoration: underline;">HERE</span></a>&nbsp;for further details. Please cite EOG as the data source and papers relevant to the EOG product you are using.</span></div>
+                            <div class="alert alert-success text-center" role="alert"><span>EOG is now monitoring the development of Russia-Ukraine war with satellite imagery.&nbsp;<br></span><a class="alert-link" href="../special_topics/russia_ukraine_war.html"><span style="text-decoration: underline;">Check it out</span></a></div>
+                        </div>
+                    </div>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End: 1 Row 1 Column -->
+    <!-- Start: Sidebar -->
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-10 col-lg-9 col-xl-8 offset-md-1 offset-lg-0 offset-xl-1 text-left">
+                    <div id="introduction">
+                        <h1 id="introduction" class="anchor">Introduction</h1>
+                        <p style="color: var(--gray);">As the pioneer of the nocturnal remote sensing technology, Earth Observation Group (EOG) had been collecting nighttime satellite imagery and produce global Nighttime Light map with highest quality.<br><br>The history of Nighttime Light map produced by EOG can trace back early as 1994, with the Operational Linescan Sensor (OLS) onboard Defense Meteorological Satellite Program (DMSP) satellites. Since the launch of the latest generation of earth observation satellite, the Joint Polar-orbiting Satellite System (JPSS), the Visible and Infrared Imaging Suite (VIIRS) Day Night Band (DNB) on board of JPSS satellites provides astounding improvement on low light imaging compared to DMSP-OLS. EOG is able to make use of this technological advance to provide users with global Nighttime Light products with superior quality.<br></p>
+                    </div>
+                    <div id="monthly_vnl">
+                        <h1 id="monthly" class="anchor">Monthly Cloud-free DNB Composite</h1>
+                        <p id="legacy_text" style="color: var(--gray);">In the monthly cloud-free DNB composites, there are many areas of the globe where it is impossible to get good quality data coverage for that month. This can be due to cloud-cover, especially in the tropical regions, or due to solar illumination, as happens toward the poles in their respective summer months. Therefore, it is imperative that users of these data utilize the cloud-free observations file and not assume a value of zero in the average radiance image means that no lights were observed. <br><br>The version 1 monthly series is run globally using two different configurations. The first excludes any data impacted by stray light. The second includes these data if the radiance values have undergone the stray-light correction procedure (Reference). These two configurations are denoted in the filenames as "vcm" and "vcmsl" respectively. The "vcmsl" version, that includes the stray-light corrected data, will have more data coverage toward the poles, but will be of reduced quality. It is up to the users to determine which set is best for their applications.<br></p>
+                        <p style="color: var(--gray);">For each of the months from 2012 - 2020, for the monthly non-tiled versions, the annual v2 masks for each year were applied to all the months for that year. For example, the&nbsp;<a href="https://eogdata.mines.edu/nighttime_light/annual/v20/2020/VNL_v2_npp_2020_global_vcmslcfg_c202102150000.lit_mask.tif.gz" target="_blank" style="color: var(--blue);">2020 lit mask</a>&nbsp;was applied on all the months of 2020. The 2021 annual lit mask is already there on the website, and researchers who are interested may apply the v2 annual lit mask to all the months of 2021. However, we also have the updated v2.1 lit masks for all the years from 2012-2021. Thus, researchers may also apply the v2.1 lit masks on each of the months for each year.</p>
+                        <p><button class="btn btn-primary" type="button"><a href="https://eogdata.mines.edu/nighttime_light/monthly/v10/" target="_blank" style="margin: 4px;">Download Tiled</a></button><button class="btn btn-primary" type="button" style="margin: 4px;"><a href="https://eogdata.mines.edu/nighttime_light/monthly_notile/" target="_blank" style="margin: 4px;">Download Non-tiled</a></button></p>
+                        <h5 class="subanchor">Specifications</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="color: var(--gray);">Delivery File Type</td>
+                                        <td style="color: var(--gray);">(*.tif) Internal DEFLATE compressed GeoTIFF<br>(*.gz) Gzipped GeoTIFF</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);width: 181px;">Delivery File Content</td>
+                                        <td style="color: var(--gray);">avg_rade9h, cf_cvg, cvg</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">Delivery File Config</td>
+                                        <td style="color: var(--gray);">vcm, vcmsl</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">Unit</td>
+                                        <td style="color: var(--gray);">(avg_rade9h) nW/cm<sup>2</sup>/sr</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Image File Type</td>
+                                        <td style="color: var(--gray);">GeoTIFF</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Image CRS</td>
+                                        <td style="color: var(--gray);">EPSG:4326 (Geographic Latitude/Longitude)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);width: 164px;">Image Resolution</td>
+                                        <td style="color: var(--gray);">15 arc second (~500m at the Equator)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Tiled</td>
+                                        <td style="color: var(--gray);">No</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);width: 185.333;">Coverage</td>
+                                        <td style="color: var(--gray);">180W, 75N, 180E,&nbsp;65S<br>Note: The global coverage of monthly VNL is greatly affected by the length of day in different time of year. In summer time northern hemisphere will have less nighttime coverage due to longer day.<br></td>
+                                    </tr>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="legacy_vnl">
+                        <h1 id="v1" class="anchor">Annual VNL V1</h1>
+                        <p id="legacy_text-1" style="color: var(--gray);">The annual composites are only made with the “vcm” version, which excludes any data impacted by stray light. Further processing is done on the annual products to screen out ephemeral lights and background (non-lights).<br><br><strong><em>Reference</em></strong><br>C. D. Elvidge, K. Baugh, M. Zhizhin, F. C. Hsu, and T. Ghosh, “VIIRS night-time lights,”&nbsp;<em>International Journal of Remote Sensing</em>, vol. 38, pp. 5860–5879, 2017.<br></p><button class="btn btn-primary" type="button"><a href="https://eogdata.mines.edu/nighttime_light/annual/v10/" target="_blank">Go to Download</a></button>
+                        <h5 class="subanchor">Specifications</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="color: var(--gray);">Delivery File Tyle</td>
+                                        <td style="color: var(--gray);">tgz (gzipped tar ball)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Delivery File Content</td>
+                                        <td style="color: var(--gray);">rade9h, cf_cvg, cvg</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Delivery File Config</td>
+                                        <td style="color: var(--gray);">vcm, vcm-ntl,&nbsp;vcm-orm,&nbsp;vcm-orm-ntl</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">Unit</td>
+                                        <td style="color: var(--gray);">(avg_rade9h) nW/cm<sup>2</sup>/sr<br></td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Image File Type</td>
+                                        <td style="color: var(--gray);">GeoTIFF</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Image CRS</td>
+                                        <td style="color: var(--gray);">EPSG:4326 (Geographic Latitude/Longitude)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Image Resolution</td>
+                                        <td style="color: var(--gray);">15 arc second (~500m at the Equator)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Tiled</td>
+                                        <td style="color: var(--gray);">Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">Coverage</td>
+                                        <td style="color: var(--gray);">180W, 75N, 180E,&nbsp;65S<br></td>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="new_vnl">
+                        <h1 id="annual_v2" class="anchor">Annual VNL V2</h1>
+                        <p id="new_text" style="color: var(--gray);">A new consistently processed time series of annual global VIIRS nighttime lights has been produced from monthly cloud-free average radiance grids spanning 2012* to 2020. The new methodology is a modification of the original method based on nightly data (Annual VNL V1). <br><br><em>* For 2012 annual VNL V2, there are two sets. (A) 201204-201212, and (B) 201204-201303. Only set (B) has masked median and average, as well as lit area mask.</em><br><br>In both methods there is an initial filtering to remove sunlit, moonlit and cloudy pixels, leading to rough composites that contains lights, fires, aurora and background. In the original method, the rough annual composites are made from a full year of nightly DNB data. In the new method, the rough composites are made on monthly increments and then combined to form rough annual composites. Both methods employ outlier removal to discard biomass burning pixels and isolate the background. <br><br>In the original method the outlier removal is performed on scattergrams generated for each 15 arc second grid cell, with outliers clipped off from both the high and low radiance sides of the scattergram. The discard of outlier pixels proceeds until the scattergram’s standard deviation stabilizes.&nbsp;The new method uses the twelve-month median radiance to discard high and low radiance outliers, filtering out most fires and isolating the background. Background areas are zeroed out in both methods using the data range (DR) calculated from 3x3 grid cells. In both methods, the DR threshold for background is indexed to cloud-cover levels, with higher DR thresholds in areas having low numbers of cloud-free coverages. In the new method, particular attention is given to setting a single DR threshold for distinguishing lit grid cells from background for each 15 arc second grid cell. This is achieved by setting the DR threshold from a multiyear maximum median and a corresponding multiyear percent cloud-cover grids. The multiyear approach makes it possible to detect lighting present in each 15 arc second grid cell with a single DR threshold across all the years in the series.<br></p><img src="../assets/img/Elvidge_graphical_abstract_20210217.png" width="500">
+                        <p style="color: var(--gray);"><strong><em>Reference</em></strong><br>Elvidge, C.D, Zhizhin, M., Ghosh T., Hsu FC, Taneja J. Annual time series of global VIIRS nighttime lights derived from monthly averages:2012 to 2019. Remote Sensing 2021, 13(5), p.922,&nbsp;<a href="https://doi.org/10.3390/rs13050922" target="_blank" style="color: var(--blue);"><span style="text-decoration: underline;">doi:10.3390/rs13050922</span></a><br></p><a class="btn btn-primary" role="button" style="padding: 5px 12px;margin: 4px;" href="https://eogdata.mines.edu/nighttime_light/annual/v20" target="_blank">Go to Download V2</a><a class="btn btn-primary" role="button" style="padding: 5px 12px;margin: 4px;" target="_blank" href="https://eogdata.mines.edu/nighttime_light/annual/v21/">Go to Download V2.1</a><a class="btn btn-primary" role="button" style="padding: 5px 12px;margin: 4px;" target="_blank" href="https://eogdata.mines.edu/nighttime_light/annual/v22/">Go to Download V2.2</a>
+                        <p style="font-size: 15px;"><strong><span style="color: rgb(0, 0, 0);">* The latest update is VNL v2.2.&nbsp; Please find the 'readme' for all the versions of Annual VNL v2&nbsp;</span></strong><a href="VNL_v22_readme_20230707.pptx" target="_blank" style="color: var(--blue);"><span style="text-decoration: underline;">HERE</span></a></p>
+                        <h5 class="subanchor">Specifications</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="color: var(--gray);">Delivery File Tyle</td>
+                                        <td style="color: var(--gray);">gz (gzipped)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);width: 183px;">Delivery File Content</td>
+                                        <td style="color: var(--gray);">average, average-masked, cf_cvg, cvg, max, median, median-masked, min&nbsp;<br></td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);width: 183px;">Delivery File Config</td>
+                                        <td style="color: var(--gray);">vcmslcfg (when available)<br></td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Image File Type</td>
+                                        <td style="color: var(--gray);">GeoTIFF</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">Unit</td>
+                                        <td style="color: var(--gray);">(average, average-masked, max, median, median-masked, min) nW/cm<sup>2</sup>/sr<br></td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">CRS</td>
+                                        <td style="color: var(--gray);">EPSG:4326 (Geographic Latitude/Longitude)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Resolution</td>
+                                        <td style="color: var(--gray);">15 arc second (~500m at the Equator)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Tiled</td>
+                                        <td style="color: var(--gray);">No</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">Coverage</td>
+                                        <td style="color: var(--gray);">180W, 75N, 180E,&nbsp;65S<br></td>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="daily_vnl">
+                        <h1 id="daily" class="anchor">Nightly DNB Mosaic and Cloud</h1>
+                        <p id="daily_text" style="color: var(--gray);">Simple mosaic of nightly DNB imagery with later-on-top logic. The pixel value is rounded to 100th place to reduce file volume. <br><br>Cloud cover image are taken from VIIRS Cloud Mask, and remapped to three categories.<br>0-1 -&gt; Clear<br>2-3 -&gt; Probably Cloudy<br>4-5 -&gt; Confident Cloudy<br><br>Latest file is updated in near real time as new image arrives.<br><br>NOTICE: The daily files are internally DEFLATE compressed GeoTIFF files. See <a href="#internal_compress" style="color: var(--blue);">here</a>&nbsp;for instruction on how to decompress if your application does not recognize internally compressed GeoTIFF files. QGIS and ArcGIS can read internally compressed GeoTIFF files directly.<br><br></p><a class="btn btn-primary" role="button" href="https://eogdata.mines.edu/nighttime_light/nightly/rade9d/?C=N;O=D" target="_blank">Go to Download</a>
+                        <h5 class="subanchor">Specifications</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="color: var(--gray);">Delivery File Tyle</td>
+                                        <td style="color: var(--gray);">GeoTIFF (internal DEFLATE compressed)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);width: 183px;">Delivery File Content</td>
+                                        <td style="color: var(--gray);">rade9d (Radiance rounded to 100th place, nW/cm<sup>2</sup>/sr)<br>vcld (VIIRS Cloud Mask)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">Unit</td>
+                                        <td style="color: var(--gray);">(rade9d) nW/cm2/sr<br></td>
+                                    </tr>
+                                    <tr style="color: var(--gray);"></tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Image File Type</td>
+                                        <td style="color: var(--gray);">GeoTIFF</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">CRS</td>
+                                        <td style="color: var(--gray);">EPSG:4326 (Geographic Latitude/Longitude)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Resolution</td>
+                                        <td style="color: var(--gray);">15 arc second (~500m at the Equator)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">Tiled</td>
+                                        <td style="color: var(--gray);">No</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">Coverage</td>
+                                        <td style="color: var(--gray);">180W, 75N, 180E,&nbsp;65S<br></td>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-left" id="dnb_profile" style="text-align: left;">
+                        <h1 class="text-left anchor" id="dnb_profile">Nightly DNB Profile and Analysis</h1>
+                        <p class="text-left" id="daily_text-1" style="color: var(--gray);">EOG has the ability to extract the DNB radiance and other information from every pixel associated with a given coordinate. EOG had developed a series of indices to describe and analyze the character of the nightly DNB profile. Users can explore the existing datasets processed for a collection of areas of interest.</p>
+                        <div class="text-center"><img src="yem_sanaa_1465.png" width="600" loading="lazy">
+                            <p class="text-left" style="color: var(--gray);">Above is a sample summary image from a grid cell in Sana'a, Yemen. Clear drop of radiance is observed after the <a href="http://america.aljazeera.com/articles/2015/4/20/Yemen-Sanaa-explosion.html" target="_blank" style="color: var(--blue);"><span style="text-decoration: underline;">aerial strike taken place in April, 2015</span></a>. Annual peak of radiance during Ramadan is clearly displayed. The radiance is slowly recovering after the strike. These summary images are shown in the KML file for every grid cell in each study area.<br><br>For more details on this dataset, please check&nbsp;<a href="https://eogdata.mines.edu/wwwdata/hidden/dnb_profiles_deliver_licorr/EOG%20DNB%20profile%20complete%20readme.pdf" style="color: var(--blue);" target="_blank"><span style="text-decoration: underline;">Readme</span></a>.</p>
+                        </div>
+                        <p class="text-left" id="daily_text-3" style="color: var(--gray);"><br><strong><em>Reference</em></strong><br>Elvidge, Christopher D.; Hsu, Feng-Chi; Zhizhin, Mikhail; Ghosh, Tilottama; Taneja, Jay; Bazilian, Morgan. 2020. "Indicators of Electric Power Instability from Satellite Observed Nighttime Lights"&nbsp;<em>Remote Sens.</em>&nbsp;12, no. 19: 3194.<br><br></p><a class="btn btn-primary text-left" role="button" href="https://eogdata.mines.edu/wwwdata/downloads/dnb_profiles_deliver_licorr/" target="_blank">Go to Download</a>
+                        <h5 class="subanchor">Temporal Loops</h5>
+                    </div>
+                    <p>EOG prepared some movie loops for selected regions showcasing how DNB profiles can be visualized.</p><a class="btn btn-primary" role="button" href="https://eogdata.mines.edu/products/movie_loop/#dnb_profile">Open Movie Loops</a>
+                    <div class="text-left" id="eguide" style="text-align: left;">
+                        <h1 class="text-left anchor" id="eguide">Country and City VNL Study</h1>
+                        <p class="text-left" id="daily_text-1" style="color: var(--gray);">With the large volume of VNL data collected, EOG is able to perform various analysis covering vast area revealing interesting insights over the long time span.</p>
+                        <div class="text-center"><img src="Ghana.abs_diff.gif" width="600" loading="lazy">
+                            <p class="text-left" style="color: var(--gray);"><br>Above is a sample GIF animation showing the annual change of radiance compared to 2012 for Ghana.</p>
+                        </div><a class="btn btn-primary text-left" role="button" href="./eguide.html" target="_blank">Go To Datasets</a>
+                    </div>
+                    <div class="text-left" id="rendering" style="text-align: left;">
+                        <h1 class="text-left anchor" id="rendering">For Artists</h1>
+                        <p class="text-left" id="daily_text-4" style="color: var(--gray);">Nighttime Light is extremely popular in artistic purposes. To correctly show the view at the dark side of the Earth, Nighttime Light is a must-have. Visit the special page for more resources on hi-resolution Nighttime Light for artists.</p>
+                        <div class="text-center">
+                            <!-- Start: Image Link --><a class="d-inline-block" href="../assets/img/italy_night.2k.curve.logo.png" target="_blank"><img class="img-fluid" src="../assets/img/italy_night.2k.curve.logo.png" loading="lazy"></a><!-- End: Image Link -->
+                            <p class="text-left" style="color: var(--gray);"><br>Above is a 3D rendering of Europe at night using high-resolution Nighttime Light texture as emission source in Blender.</p>
+                        </div><a class="btn btn-primary text-left" role="button" href="../artist">Read more on hi-res Nighttime Light texture</a>
+                    </div>
+                    <div class="text-left" id="lumenwatch" style="text-align: left;">
+                        <h1 class="text-left anchor" id="lumenwatch">Lumen Watch</h1>
+                        <p class="text-left" id="lumenwatch_intro" style="color: var(--gray);">EOG is developing prototype service to monitor the change of nighttime light in a given region. The service is called "Lumen Watch". It provides long temporal profile for the region as well as current nightly transect and image preview of the area. This application is particularly useful for monitoring nightly changes for small areas.<br></p>
+                        <p class="text-left" id="lumenwatch_intro-1" style="color: var(--gray);">Currently EOG has two regions setup for demonstration, which are Rohingya Refugee Camps in Bangladesh, and Jufaynah Camp in Yemen.<br></p><a class="btn btn-primary text-left" role="button" href="https://eogdata.mines.edu/wwwdata/downloads/rrc_watch/">Access Rohingya Camp Lumen Watch Page</a>
+                        <p></p><a class="btn btn-primary text-left" role="button" href="https://eogdata.mines.edu/wwwdata/downloads/yem_jufaynah_watch/">Access Yemen Jufaynah Camp Lumen Watch Page</a>
+                        <p style="color: var(--secondary);"><br>Please contact EOG for regions you are interested in to setup a monitoring page.<br></p><!-- Start: Image Link --><a class="d-inline-block" href="../assets/img/lumen_watch_instruction.png" target="_blank"><img class="d-inline" src="../assets/img/lumen_watch_instruction.png" style="width: 600px;"></a><!-- End: Image Link -->
+                        <!-- Start: Image Link --><a class="d-inline-block" href="https://www.google.com/"></a><!-- End: Image Link -->
+                        <p style="color: var(--secondary);">Above image shows the interface of the VIIRS Lumen Watch service and instructions on how to read the displayed components.</p>
+                    </div>
+                    <div class="text-left" id="flicker" style="text-align: left;">
+                        <h1 class="text-left anchor" id="flicker">Light Flicker Observed by Satellite</h1>
+                        <p class="text-left" id="flicker_intro" style="color: var(--gray);">EOG is studying the flicker of electric lighting which can be observed by VIIRS DNB from space.</p>
+                        <p class="text-left" id="flicker_intro-1" style="color: var(--gray);"><br>Chris, Elvidge et al., The VIIRS Day/Night Band: A Flicker Meter in Space?, Remote Sensing, 2022. (Submitted)<br><br></p><a class="btn btn-primary text-left" role="button" href="./flicker/">Supplement Materials</a>
+                    </div>
+                    <div class="text-left" id="movie" style="text-align: left;">
+                        <h1 class="text-left anchor" id="movie">Temporal Loops</h1>
+                        <p class="text-left" id="flicker_intro-2" style="color: var(--gray);">Check out the movie loops EOG made showcasing how lights changes over time for different regions of interest.</p><a class="btn btn-primary text-left" role="button" href="https://eogdata.mines.edu/products/movie_loop/#dnb">Go To DNB Temporal Loops</a>
+                    </div>
+                    <div id="download">
+                        <p></p>
+                        <h1 id="download" class="anchor">File Manipulation</h1>
+                        <p id="download_text" style="color: var(--gray);"></p>
+                        <h4 id="un" class="subanchor">Unpacking .tgz File</h4>
+                        <p style="color: var(--gray);"><strong><em>Windows:</em></strong><br>&nbsp; Use <a href="https://www.7-zip.org/"><span style="text-decoration: underline;">7-zip</span></a> to unpack .tgz file, will result in a .tar file. Use <a href="https://www.7-zip.org/"><span style="text-decoration: underline;">7-zip</span></a> to further unpack the .tar file again to access the actual GeoTIFF files.<br><br><strong><em>Mac OS/Linux:</em></strong><br>&nbsp; Double click on the .tgz file to unpack. Or use the command&nbsp;<code>tar xzvf &lt;file.tgz&gt;</code>&nbsp;in command line interface (CLI) to un-compress and extract the GeoTIFF files.</p>
+                        <h4 id="un-1" class="subanchor">Unpacking .gz File</h4>
+                        <p style="color: var(--gray);"><strong><em>Windows:</em></strong><br>&nbsp; Use <a href="https://www.7-zip.org/"><span style="text-decoration: underline;">7-zip</span></a> to unpack .gz file.<br><br><strong><em>Mac OS/Linux:</em></strong><br>&nbsp; Double click on the .gz file to unpack. Or use the command&nbsp;<code>gunzip &lt;file.gz&gt;</code>&nbsp;in command line interface (CLI) to un-compress and extract the GeoTIFF files.</p>
+                        <h4 id="internal_compress" class="subanchor">Unpacking Internal Compressed File</h4>
+                        <p style="color: var(--gray);">If your GIS software does not recognize internal compressed GeoTIFF file, you can use GDAL to decompress the file to ordinary GeoTIFF file.<br></p>
+                        <p style="color: var(--gray);"><strong><em>Windows:</em></strong><br>&nbsp; (1) Install <a href="https://www.anaconda.com/" style="color: var(--blue);">Anaconda</a>.<br>&nbsp; (2) <a href="https://docs.anaconda.com/anaconda/navigator/tutorials/manage-environments/" style="color: var(--blue);">Create a new environment</a>, install GDAL with GUI. Also you can use the following command in Anaconda Powershell Prompt.<br><code>conda create -n &lt;env_name&gt;</code><code><br>conda activate &lt;env_name&gt;</code><code><br>conda install -c conda-forge gdal</code><br>&nbsp; (3) In Anaconda Powershell Prompt, use following command to decompress.&nbsp;<br><code>gdal_translate.exe -of GTiff &lt;input_file&gt; &lt;output_file&gt;</code><br><br></p>
+                        <p style="color: var(--gray);"><strong><em>Mac OS/Linux:</em></strong><br>&nbsp; (1) Install <a href="https://www.anaconda.com/" style="color: var(--blue);">Anaconda</a>.<br>&nbsp; (2) <a href="https://docs.anaconda.com/anaconda/navigator/tutorials/manage-environments/" style="color: var(--blue);">Create a new environment</a>, install GDAL with GUI. Also you can use the following command in terminal.<br><code>conda create -n &lt;env_name&gt;</code><code><br>conda activate &lt;env_name&gt;</code><code><br>conda install -c conda-forge gdal</code><br>&nbsp; (3) In terminal, use following command to decompress.&nbsp;<br><code>gdal_translate -of GTiff &lt;input_file&gt; &lt;output_file&gt;</code><br><br></p>
+                        <h4 class="subanchor">Tiles</h4>
+                        <p style="color: var(--gray);">For those products that are tiled, they are cropped in 6 tiles as shown below.</p><img class="img-fluid d-flex" src="../assets/img/tile_map.png">
+                        <h4 class="subanchor">File Naming</h4>
+                        <p style="color: var(--gray);">The GeoTIFF files are named in the following convention.<br><br>Example:<br><br><em>Annual VNL V1</em><br>SVDNB_npp_20150101-20151231_75N180W_vcm_v10_c201701311200.avg_rade9<br>[Field1]_[Filed2]_[Filed3]_[Filed4]_[Filed5]_[Filed6]_[Filed7].[Filed8]<br><br><em>Annual VNL V2 (Beta)</em><br>VNL_npp_2019_global_average_vcmslcfg_c202010201200<br>[Field1]_[Field2]_[Field3]_[Field4]_[Field8]_[Field5]_[Field7]</p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th style="color: var(--gray);">Field</th>
+                                        <th style="color: var(--gray);">Definition</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="color: var(--gray);">1</td>
+                                        <td style="color: var(--gray);">Product Type</td>
+                                        <td style="color: var(--gray);">SVDNB (VNL V1)<br>VNL (VNL V2)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">2</td>
+                                        <td style="color: var(--gray);">Satellite Name</td>
+                                        <td style="color: var(--gray);">NPP<br>J01 (NOAA-20)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">3</td>
+                                        <td style="color: var(--gray);">Date Range</td>
+                                        <td style="color: var(--gray);">YYYYMMDD-YYYYMMDD (VNL V1)<br>YYYY (VNL V2)</td>
+                                    </tr>
+                                    <tr style="color: var(--gray);">
+                                        <td style="color: var(--gray);">4</td>
+                                        <td style="color: var(--gray);">Region of Interest</td>
+                                        <td style="color: var(--gray);">global<br>Tile ID</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">5</td>
+                                        <td style="color: var(--gray);">Config Short Name</td>
+                                        <td style="color: var(--gray);">"vcm/vcmcfg" (VIIRS Cloud Mask) contains the "vcm" average, identical to the monthly "vcm" average radiance products. In monthly VNL V1 it applies to those months with no stray light correction available. In annual VNL V1 stray light corrected images are used if possible.<br>"vcmsl/vcmslcfg" (VIIRS Cloud Mask - Stray Light Removed) is only applicable to monthly VNL V1.<br> "vcm-ntl" (VIIRS Cloud Mask - Nighttime Lights) contains the "vcm" average, with background (non-lights) set to zero.<br> "vcm-orm" (VIIRS Cloud Mask - Outlier Removed) contains cloud-free average radiance values that have undergone an outlier removal process to filter out fires and other ephemeral lights.<br> "vcm-orm-ntl" (VIIRS Cloud Mask - Outlier Removed - Nighttime Lights) contains the "vcm-orm" average, with background (non-lights) set to zero.<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">6</td>
+                                        <td style="color: var(--gray);width: 160px;">Version</td>
+                                        <td style="color: var(--gray);">Product version</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">7</td>
+                                        <td style="color: var(--gray);">Creation Timestamp</td>
+                                        <td style="color: var(--gray);">In format YYYYMMDDhhmm</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: var(--gray);">8</td>
+                                        <td style="color: var(--gray);">Extension</td>
+                                        <td style="color: var(--gray);"><strong>VNL V1</strong><br>"avg_rade9" Mean radiance, nW/cm<sup>2</sup>/sr<br>"avg_rade9h" Mean radiance rounded to hundredths place (nW/cm<sup>2</sup>/sr)<br>"cf_cvg" Cloud-free coverage count<br>"cvg" Coverage count<br><strong>VNL V2</strong><br>"average" Average monthly radiance, nW/cm<sup>2</sup>/sr<br>"average-masked" Average monthly radiance w/ background masked,&nbsp;nW/cm<sup>2</sup>/sr<br>"cf_cvg" Count of cloud free coverage<br>"cvg" Count of coverage<br>"max" Maximum monthly radiance,&nbsp;nW/cm<sup>2</sup>/sr<br>"median" Median monthly radiance,&nbsp;nW/cm<sup>2</sup>/sr<br>"median-masked" Median monthly radiance&nbsp;w/ background masked,&nbsp;nW/cm<sup>2</sup>/sr<br>"min" Minimum monthly radiance, nW/cm<sup>2</sup>/sr</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="reference">
+                        <h1 id="reference" class="anchor">Reference</h1>
+                        <ul>
+                            <li style="color: var(--gray);">C. D. Elvidge, K. E. Baugh, M. Zhizhin, and F.-C. Hsu, “Why VIIRS data are superior to DMSP for mapping nighttime lights,”&nbsp;<em>Asia-Pacific Advanced Network 35</em>, vol. 35, p. 62, 2013.<br></li>
+                            <li style="color: var(--gray);">C. D. Elvidge, K. Baugh, M. Zhizhin, F. C. Hsu, and T. Ghosh, “VIIRS night-time lights,”&nbsp;<em>International Journal of Remote Sensing</em>, vol. 38, pp. 5860–5879, 2017.<br></li>
+                            <li style="color: var(--gray);">C. D. Elvidge, M. Zhizhin, T. Ghosh, F-C. Hsu, "Annual time series of global VIIRS nighttime lights derived from monthly averages: 2012 to 2019", <em>Remote Sensing, 2021, 13(5), 922.</em><br></li>
+                        </ul>
+                    </div>
+                    <div id="credit">
+                        <h1 id="credit" class="anchor">Credit</h1>
+                        <p id="credit_text" style="color: var(--gray);">When using the data please credit the product generation to the Earth Observation Group, Payne Institute for Public Policy, with proper citations as below.</p>
+                        <ul>
+                            <li style="color: var(--gray);">Any VNL<br>C. D. Elvidge, K. E. Baugh, M. Zhizhin, and F.-C. Hsu, “Why VIIRS data are superior to DMSP for mapping nighttime lights,”&nbsp;<em>Asia-Pacific Advanced Network 35</em>, vol. 35, p. 62, 2013.<br></li>
+                            <li style="color: var(--gray);">Annual VNL V1<br>Elvidge, Christopher D., Kimberly Baugh, Mikhail Zhizhin, Feng Chi Hsu, and Tilottama Ghosh. “VIIRS night-time lights.”&nbsp;<em>International Journal of Remote Sensing</em>&nbsp;38, no. 21 (2017): 5860-5879.<br></li>
+                            <li style="color: var(--gray);">Annual VNL V2<br>C. D. Elvidge, M. Zhizhin, T. Ghosh, F-C. Hsu, "Annual time series of global VIIRS nighttime lights derived from monthly averages: 2012 to 2019", <em>Remote Sensing</em> (In press)<br><br></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xl-2 offset-xl-0">
+                    <!-- Start: Navigation Clean -->
+                    <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean sidebar" id="sbar">
+                        <div class="container">
+                            <div class="collapse navbar-collapse" id="sbar">
+                                <ul class="navbar-nav flex-column ml-auto" id="sbar">
+                                    <li class="nav-item"><a class="nav-link active" href="#introduction">Introduction</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#monthly">Monthly DNB Composite</a></li>
+                                    <li class="nav-item"><a class="nav-link spy" href="#v1">Annual VNL V1</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#annual_v2">Annual VNL V2</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#daily">Nightly DNB Mosaic and Cloud</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#dnb_profile">Nightly DNB Profile and Analysis</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#eguide">Country and City VNL Study</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#rendering">For Artists</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#lumenwatch">Lumen Watch</a><a class="nav-link" href="#flicker">Flicker Study</a><a class="nav-link" href="#movie">Temporal Loops</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#download">File Manipulation</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#reference">Reference</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#credit">Credit</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav><!-- End: Navigation Clean -->
+                </div>
+            </div>
+        </div>
+    </div><!-- End: Sidebar -->
+    <!-- Start: Footer Basic -->
+    <div class="footer-basic">
+        <footer>
+            <!-- Start: Links -->
+            <ul class="list-inline">
+                <li class="list-inline-item"></li>
+            </ul><!-- End: Links -->
+            <!-- Start: Copyright -->
+            <p class="copyright">Earth Observation Group © 2021</p><!-- End: Copyright -->
+        </footer>
+    </div><!-- End: Footer Basic -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bs-init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../assets/js/dropdown-search-bs4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="../assets/js/Simple-Slider.js"></script>
+    <script src="../assets/js/Ultimate-Testimonial-Slider-BS4-Updated.js"></script>
+</body>
+
+</html>

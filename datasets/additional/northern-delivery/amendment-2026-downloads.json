@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://sudact.ru/law/postanovlenie-pravitelstva-rf-ot-27072026-n-942/",
+    "retrieved_at": "2026-11-07T16:39:28.820640+00:00",
+    "status": "downloaded",
+    "path": "data/additional/northern-delivery/raw/territories-amendment-2026.html",
+    "bytes": 17085,
+    "sha256": "14e303c6ad7061f3a90385aac64e663c949037547a2802f40ee00a16707e02e2"
+  },
+  {
+    "url": "https://www.consultant.ru/document/cons_doc_LAW_462190/4e53eb2d98c946bd416cbb3596452be77710721f/",
+    "retrieved_at": "2026-11-07T16:39:31.272391+00:00",
+    "status": "downloaded",
+    "path": "data/additional/northern-delivery/raw/territories-consolidated-2026.html",
+    "bytes": 65007,
+    "sha256": "0fc03b5c10b6e55c0dd7b8051c56958527ea41db64d1a716a2413e287bb72ff4"
+  }
+]

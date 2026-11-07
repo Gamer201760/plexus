@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-07T17:07:58.748108+00:00",
+  "files": 1475,
+  "total_bytes": 1379020942,
+  "bytes_by_dataset": {
+    "fns-revexp": 196335298,
+    "nighttime-lights": 153798984,
+    "northern-delivery": 3321314,
+    "rfsd": 820965182,
+    "seasonal-closures": 369437,
+    "seasonal-ugra": 10778243,
+    "traffic-surveys": 72826345,
+    "transport-operations": 120626139
+  },
+  "incomplete_files_excluded": 18,
+  "incomplete_allocated_bytes": 2208817152,
+  "incomplete_manifest_references_excluded": 13,
+  "manifest_references_checked": 1001,
+  "failures": []
+}

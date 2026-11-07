@@ -1,0 +1,75 @@
+{
+  "url": "ftp://ftp.worldpop.org/GIS/Covariates/Global_2015_2030/RUS/VIIRS/v1/fvf/rus_viirs_fvf_2023_100m_v1.tif",
+  "size": 1168027401,
+  "retained_http_prefix_bytes": 48173056,
+  "ranges": [
+    [
+      48173056,
+      118163952
+    ],
+    [
+      118163953,
+      188154849
+    ],
+    [
+      188154850,
+      258145746
+    ],
+    [
+      258145747,
+      328136643
+    ],
+    [
+      328136644,
+      398127540
+    ],
+    [
+      398127541,
+      468118437
+    ],
+    [
+      468118438,
+      538109334
+    ],
+    [
+      538109335,
+      608100231
+    ],
+    [
+      608100232,
+      678091128
+    ],
+    [
+      678091129,
+      748082025
+    ],
+    [
+      748082026,
+      818072922
+    ],
+    [
+      818072923,
+      888063819
+    ],
+    [
+      888063820,
+      958054716
+    ],
+    [
+      958054717,
+      1028045613
+    ],
+    [
+      1028045614,
+      1098036510
+    ],
+    [
+      1098036511,
+      1168027400
+    ]
+  ],
+  "complete": [],
+  "status": "stopped_in_favor_of_comparable_native_grid_2023_2024",
+  "reason": "WorldPop is resampled100m country derivative; comparable15arcsec observed2023 is available from the same OpenGeoHub inventory as2024.",
+  "partial_outputs_removed": true
+}

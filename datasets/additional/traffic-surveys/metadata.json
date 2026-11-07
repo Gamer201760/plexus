@@ -1,0 +1,91 @@
+{
+  "dataset": "traffic-surveys",
+  "retrieval_date": "2026-11-07",
+  "status": "downloaded and extracted; scope limitations in README",
+  "raw_files": 4,
+  "raw_bytes": 64385070,
+  "files": [
+    {
+      "filename": "belovo-ksodd.pdf",
+      "url": "https://www.belovorn.ru/LOAD_CONTENT/Район/Дорожное хозяйство/КСОДД Беловского муниципального района.pdf",
+      "retrieved_at": "2026-11-07T16:24:08.713599+00:00",
+      "http_status": 200,
+      "bytes": 11928306,
+      "sha256": "fad02c6d93674ddd57e2b3c8bfdeed7cb0d839bd76f0e279e8153ed88ade0a11",
+      "path": "data/additional/traffic-surveys/raw/belovo-ksodd.pdf",
+      "status": "downloaded raw; read README for interpretation",
+      "period": "2018 observations; Belovo document 2019, survey dates not established",
+      "units": "vehicles per reported peak survey interval; PCU/hour; km/hour; vehicles/km; ratios",
+      "coverage": "4 municipalities: Belovo, Serov, Nefteyugansk, Mozhga district"
+    },
+    {
+      "filename": "mozhga-ksodd.pdf",
+      "url": "https://www.mozhga-rayon.ru/files/0520/1%20%D1%8D%D1%82%D0%B0%D0%BF%20%D0%9A%D0%A1%D0%9E%D0%94%D0%94.pdf",
+      "retrieved_at": "2026-11-07T16:24:08.712829+00:00",
+      "http_status": 200,
+      "bytes": 3757436,
+      "sha256": "45a5bca11549198e2c013811abbb676656e7fae435c1d9a8e81959b1ae094bd7",
+      "path": "data/additional/traffic-surveys/raw/mozhga-ksodd.pdf",
+      "status": "downloaded; method text and model data; no observed numeric intensity CSV extracted",
+      "period": "2018 observations; Belovo document 2019, survey dates not established",
+      "units": "vehicles per reported peak survey interval; PCU/hour; km/hour; vehicles/km; ratios",
+      "coverage": "4 municipalities: Belovo, Serov, Nefteyugansk, Mozhga district"
+    },
+    {
+      "filename": "nefteyugansk-ksodd.pdf",
+      "url": "https://www.admugansk.ru/uploads/2018/11/3ksodd.pdf",
+      "retrieved_at": "2026-11-07T16:24:08.713448+00:00",
+      "http_status": 200,
+      "bytes": 43505706,
+      "sha256": "dc8094e98c21688fe9ec4fcefb44ed610e8a3a936747b90963ffe799ee6ea449",
+      "path": "data/additional/traffic-surveys/raw/nefteyugansk-ksodd.pdf",
+      "status": "downloaded raw; read README for interpretation",
+      "period": "2018 observations; Belovo document 2019, survey dates not established",
+      "units": "vehicles per reported peak survey interval; PCU/hour; km/hour; vehicles/km; ratios",
+      "coverage": "4 municipalities: Belovo, Serov, Nefteyugansk, Mozhga district"
+    },
+    {
+      "filename": "serov-ksodd.pdf",
+      "url": "https://www.adm-serov.ru/files/statica/KJKH/KSODD1.pdf?schema=white",
+      "retrieved_at": "2026-11-07T16:25:11.041642+00:00",
+      "tls_verification": false,
+      "http_status": 200,
+      "bytes": 5193622,
+      "sha256": "fb4929b34f2f61886cc659623225621350c1cf195989704952fe6093e4f953a9",
+      "path": "data/additional/traffic-surveys/raw/serov-ksodd.pdf",
+      "status": "downloaded raw; read README for interpretation",
+      "period": "2018 observations; Belovo document 2019, survey dates not established",
+      "units": "vehicles per reported peak survey interval; PCU/hour; km/hour; vehicles/km; ratios",
+      "coverage": "4 municipalities: Belovo, Serov, Nefteyugansk, Mozhga district"
+    }
+  ],
+  "derived_tables": [
+    {
+      "path": "data/additional/traffic-surveys/belovo-observed-vehicle-counts.csv",
+      "rows": 5560,
+      "bytes": 1308974,
+      "sha256": "62e745b944bc6dfb7c48bb2d41b71c71c9704aae329528316a72dcc3a4610d03"
+    },
+    {
+      "path": "data/additional/traffic-surveys/belovo-survey-site-context.csv",
+      "rows": 33,
+      "bytes": 143039,
+      "sha256": "7c8f55bb8c14c663cd99acc2b7c87121dc5be1aee066c0463199e072456d0f91"
+    },
+    {
+      "path": "data/additional/traffic-surveys/nefteyugansk-observed-parameters.csv",
+      "rows": 55,
+      "bytes": 7046,
+      "sha256": "15ab06f5b93630dd043a5b811d50435d053443af2401eb4b4a6932f832a07ea5"
+    },
+    {
+      "path": "data/additional/traffic-surveys/serov-observed-parameters.csv",
+      "rows": 15,
+      "bytes": 2916,
+      "sha256": "f631bb064fabe168bc092a76b03d3df2637327ba5a087af1c58ae828170500ca"
+    }
+  ],
+  "period": "2018 observations; Belovo document 2019, survey dates not established",
+  "units": "vehicles per reported peak survey interval; PCU/hour; km/hour; vehicles/km; ratios",
+  "coverage": "4 municipalities: Belovo, Serov, Nefteyugansk, Mozhga district"
+}

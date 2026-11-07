@@ -1,0 +1,173 @@
+[
+  {
+    "filename": "territories-portal.html",
+    "url": "https://szavoz.gov.ru/portal-main/knowledgebase/about/territories/hkfyom5tzdvbqlg9msgdpf8e/",
+    "retrieved_at": "2026-11-07T16:24:08.713703+00:00",
+    "error": "HTTPSConnectionPool(host='szavoz.gov.ru', port=443): Max retries exceeded with url: /portal-main/knowledgebase/about/territories/hkfyom5tzdvbqlg9msgdpf8e/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+  },
+  {
+    "filename": "infrastructure-consolidated.html",
+    "url": "https://www.consultant.ru/document/cons_doc_LAW_469336/",
+    "retrieved_at": "2026-11-07T16:24:08.714399+00:00",
+    "http_status": 200,
+    "bytes": 33684,
+    "sha256": "da1d76aa72f599c72a4302bc49caae0cf435ed5755561053d3c3bca4eece20fa",
+    "path": "data/additional/northern-delivery/raw/infrastructure-consolidated.html"
+  },
+  {
+    "filename": "infrastructure-garant.html",
+    "url": "https://base.garant.ru/408524339/",
+    "retrieved_at": "2026-11-07T16:24:08.715374+00:00",
+    "http_status": 200,
+    "bytes": 92025,
+    "sha256": "b7262857a78499fcbc4b36918286d17de0f75850d82708ab7b05ddad66ce5375",
+    "path": "data/additional/northern-delivery/raw/infrastructure-garant.html"
+  },
+  {
+    "filename": "territories-portal.html",
+    "url": "https://szavoz.gov.ru/portal-main/knowledgebase/about/territories/hkfyom5tzdvbqlg9msgdpf8e/",
+    "retrieved_at": "2026-11-07T16:25:11.041983+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 256746,
+    "sha256": "4d7b5a5c6411e948b37e229928c73b5b2f033f0d6d4892366dae54e70448f19b",
+    "path": "data/additional/northern-delivery/raw/territories-portal.html"
+  },
+  {
+    "filename": "portal-main.html",
+    "url": "https://szavoz.gov.ru/portal-main/",
+    "retrieved_at": "2026-11-07T16:25:11.042139+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 378763,
+    "sha256": "cb64149763a7c74c8e700c6fd48d35310abdbf8069da5f924134cd15c1512d97",
+    "path": "data/additional/northern-delivery/raw/portal-main.html"
+  },
+  {
+    "filename": "infrastructure-meganorm.html",
+    "url": "https://meganorm.ru/mega_doc/dop_FZ/0/federalnyy_zakon_ot_04_08_2023_N_411-fz_o_severnom_zavoze/0/rasporyazhenie_pravitelstva_rf_ot_09_02_2024_N_286-r_red_ot.html",
+    "retrieved_at": "2026-11-07T16:25:11.042284+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 99849,
+    "sha256": "231a06d400b2d7bce7471423595ebd5a7c4e77045faca050c77212563428e704",
+    "path": "data/additional/northern-delivery/raw/infrastructure-meganorm.html"
+  },
+  {
+    "filename": "documents-index.html",
+    "url": "https://szavoz.gov.ru/portal-main/documents/",
+    "retrieved_at": "2026-11-07T16:26:48.908145+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 246327,
+    "sha256": "c6c600a1c04a38586e3f21e273f5865f939f8643cc02af27849d2d9ec0c20b5b",
+    "path": "data/additional/northern-delivery/raw/documents-index.html"
+  },
+  {
+    "filename": "territories-decree-page.html",
+    "url": "https://szavoz.gov.ru/portal-main/documents/knaotq0gqxruj7gkuhyv1zyl/",
+    "retrieved_at": "2026-11-07T16:26:48.908690+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 168515,
+    "sha256": "44bcc01385fe152316ec1b33754b6a6529d675900eead9b50f87c126ec26f70a",
+    "path": "data/additional/northern-delivery/raw/territories-decree-page.html"
+  },
+  {
+    "filename": "supply-rosatom-2026.html",
+    "url": "https://szavoz.gov.ru/portal-main/newsandevents/dia7bcavathuofe466mzobyr/",
+    "retrieved_at": "2026-11-07T16:26:48.908840+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 181770,
+    "sha256": "577d96a89fe7b4502016aa2917f2040bc8522a345646dd8ab3e06e2876dda78c",
+    "path": "data/additional/northern-delivery/raw/supply-rosatom-2026.html"
+  },
+  {
+    "filename": "supply-taymyr-2026.html",
+    "url": "https://szavoz.gov.ru/portal-main/newsandevents/s4j6hcnqhbdjgpoziakka15e/",
+    "retrieved_at": "2026-11-07T16:26:48.908994+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 181127,
+    "sha256": "2f9dcd8ddc2f59be50b47a3ce8bb2204112141ffc6971387b7b31fcd7997ef7f",
+    "path": "data/additional/northern-delivery/raw/supply-taymyr-2026.html"
+  },
+  {
+    "filename": "supply-chukotka-2026.html",
+    "url": "https://szavoz.gov.ru/portal-main/newsandevents/sdcj4a9omd3hcym2748i88d5/",
+    "retrieved_at": "2026-11-07T16:26:48.910040+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 182096,
+    "sha256": "b20f8b736be92f3ab06652e50e934326aeea13ab3c9030a0d79d7af86948557c",
+    "path": "data/additional/northern-delivery/raw/supply-chukotka-2026.html"
+  },
+  {
+    "filename": "supply-nenets-2026.html",
+    "url": "https://szavoz.gov.ru/portal-main/newsandevents/vmeck70z2ex05mpz9ufa8bfa/",
+    "retrieved_at": "2026-11-07T16:26:48.910249+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 176066,
+    "sha256": "07f4f8cd4881ea074c72c697688ad609c082cf72c9192da61921b07ba07b1797",
+    "path": "data/additional/northern-delivery/raw/supply-nenets-2026.html"
+  },
+  {
+    "filename": "supply-sakhalin-2026.html",
+    "url": "https://szavoz.gov.ru/portal-main/newsandevents/yvnlf5syh30e0vt42esuuqfl/",
+    "retrieved_at": "2026-11-07T16:26:49.302422+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 184772,
+    "sha256": "feb533dceef73eb88b09e6fb9695b9a5975c5599cf7bce31aface665118def76",
+    "path": "data/additional/northern-delivery/raw/supply-sakhalin-2026.html"
+  },
+  {
+    "filename": "supply-yugra-2026.html",
+    "url": "https://szavoz.gov.ru/portal-main/newsandevents/q6zo4li2iutkgs05xktsyrom/",
+    "retrieved_at": "2026-11-07T16:26:49.560530+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 178595,
+    "sha256": "16b964ef2f7173f8e0e0a11fd40ea48855940589b37459cbba22d57f71ece842",
+    "path": "data/additional/northern-delivery/raw/supply-yugra-2026.html"
+  },
+  {
+    "filename": "infrastructure-amendment.html",
+    "url": "https://meganorm.ru/mega_doc/dop1/85/rasporyazhenie_pravitelstva_rf_ot_09_02_2024_N_286-r_red_ot/0/rasporyazhenie_pravitelstva_rf_ot_18_09_2025_N_2560-r_o.html",
+    "retrieved_at": "2026-11-07T16:26:49.608801+00:00",
+    "tls_verification": false,
+    "http_status": 200,
+    "bytes": 33824,
+    "sha256": "312995860a049ab06e665ef50c5e4c92366afa82c4010c82e7908f5a376e0ba5",
+    "path": "data/additional/northern-delivery/raw/infrastructure-amendment.html"
+  },
+  {
+    "filename": "infrastructure-decree-page.html",
+    "url": "https://szavoz.gov.ru/portal-main/documents/ivv5ngn0aknktwyqm3kfr9z6/",
+    "http_status": 200,
+    "bytes": 170007,
+    "sha256": "150da6d97a0e4165fb49c0d7294e43a0931f16fdf6bb4a645f25beb442aa4834",
+    "retrieved_at": "2026-11-07T16:28:02.112446+00:00",
+    "tls_verification": false
+  },
+  {
+    "filename": "infrastructure-decree-286.docx",
+    "url": "https://szavoz.gov.ru/api/portal-main/s3/Rasporyazhenie_Pravitelstva_RF_ot_09_02_2024_286_r_Ob_utverzhdenii_perechnya_obektov_transportno_logisticheskoj_infrastruktury_sostavlyayushhih_opornuyu_set_obektov_TLI_SZ_738560de04.docx",
+    "http_status": 200,
+    "bytes": 43223,
+    "sha256": "8304b4d3561870e45994a85eaf96b97d2439bb3f2ea09fc1ffe31d4fb1fe2619",
+    "retrieved_at": "2026-11-07T16:28:02.352280+00:00",
+    "tls_verification": false
+  },
+  {
+    "filename": "territories-decree-1930.docx",
+    "url": "https://szavoz.gov.ru/api/portal-main/s3/Postanovlenie_Pravitelstva_RF_ot_16_11_2023_1930_Ob_utverzhdenii_perechnya_territorij_severnogo_zavoza_i_Pravil_vneseniya_izmenenij_v_perechen_territorij_severnogo_zavoz_4417418be6.docx",
+    "http_status": 200,
+    "bytes": 57218,
+    "sha256": "7cc93386bf5d1d7df6c0c302e287f100edf9246ad5fb7cedca65286b463c8b0e",
+    "retrieved_at": "2026-11-07T16:28:02.524444+00:00",
+    "tls_verification": false
+  }
+]
