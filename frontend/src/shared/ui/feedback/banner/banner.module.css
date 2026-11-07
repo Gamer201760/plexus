@@ -1,3 +1,7 @@
+.wrap {
+  container-type: inline-size;
+}
+
 .banner {
   composes: surface from "../../overlays/popover/popover.module.css";
   display: grid;
@@ -41,7 +45,7 @@
   grid-column: 2;
 }
 
-@media (min-width: 48rem) {
+@container (min-width: 36rem) {
   .banner:has(.action) {
     grid-template-columns: auto minmax(0, 1fr) auto;
   }

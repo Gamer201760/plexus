@@ -27,7 +27,8 @@ export function RegionSummary({ region }: RegionSummaryProps) {
       />
       <Stat
         label={t("region:stats.revenue")}
-        value={region.revenue_rub === null ? <NoValue /> : f.money(region.revenue_rub, "RUB")}
+        value={region.revenue_rub === null ? <NoValue /> : f.compact(region.revenue_rub)}
+        unit={region.revenue_rub === null ? undefined : t("data:unit.rub")}
       />
     </div>
   )

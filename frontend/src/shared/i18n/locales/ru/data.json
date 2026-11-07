@@ -26,7 +26,8 @@
   },
   "unit": {
     "km": "км",
-    "tonnes": "т"
+    "tonnes": "т",
+    "rub": "₽"
   },
   "metric": {
     "label": "Показатель",

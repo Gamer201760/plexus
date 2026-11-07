@@ -25,17 +25,19 @@ export function Banner({
 }: BannerProps) {
   const role = tone === "danger" ? "alert" : "status"
   return (
-    <div
-      className={clsx(styles.banner, TONE_CLASS[tone], className)}
-      role={announce ? role : undefined}
-      data-tone={tone}
-    >
-      <Icon name={icon ?? TONE_ICON[tone]} size="md" className={styles.icon} />
-      <div className={styles.text}>
-        <p className={styles.title}>{title}</p>
-        {description === undefined ? null : <p className={styles.description}>{description}</p>}
+    <div className={clsx(styles.wrap, className)}>
+      <div
+        className={clsx(styles.banner, TONE_CLASS[tone])}
+        role={announce ? role : undefined}
+        data-tone={tone}
+      >
+        <Icon name={icon ?? TONE_ICON[tone]} size="md" className={styles.icon} />
+        <div className={styles.text}>
+          <p className={styles.title}>{title}</p>
+          {description === undefined ? null : <p className={styles.description}>{description}</p>}
+        </div>
+        {action === undefined ? null : <div className={styles.action}>{action}</div>}
       </div>
-      {action === undefined ? null : <div className={styles.action}>{action}</div>}
     </div>
   )
 }
