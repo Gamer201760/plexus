@@ -9,7 +9,8 @@
 
   --shadow-ring: inset 0 0 0 var(--hairline) var(--border-strong);
   --shadow-raised: 0 1px 2px var(--shadow-color);
-  --shadow-float: 0 1px 2px var(--shadow-color), 0 8px 24px var(--shadow-color);
+  --shadow-float: 0 1px 2px var(--shadow-color), 0 12px 32px -12px var(--shadow-color-strong);
+  --shadow-dialog: 0 2px 6px var(--shadow-color), 0 24px 64px -16px var(--shadow-color-strong);
 
   --opacity-stale: 0.55;
 }
