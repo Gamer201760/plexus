@@ -45,7 +45,7 @@
   grid-column: 2;
 }
 
-@container (min-width: 36rem) {
+@container (min-width: 30rem) {
   .banner:has(.action) {
     grid-template-columns: auto minmax(0, 1fr) auto;
   }
