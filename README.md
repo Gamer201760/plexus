@@ -25,7 +25,8 @@ etl/                      пайплайн
   osm_extract.py            дороги из .pbf → data/osm_ways/*.parquet
   graph_russia.py           упрощённый граф РФ (цепочки без развилок склеиваются)
   graphlib.py               загрузка графа в scipy (минимум по параллельным рёбрам!)
-  access_russia.py          время доступа для всех н.п. → np_access, np_city_times
+  manual_links.py           ручные связи регионов → manual_links_ru, manual_remote
+  access_russia.py          время доступа для всех н.п. (road / summer / winter) → np_access, np_city_times
   graph_tuva.py, multimodal_tuva.py   детальная модель Тывы (авиа, сезоны, ожидание рейса)
   export_regions_input.py   н.п. каждого региона → data_manual/regions_input/
 data_manual/              ручные данные (в git)
@@ -47,7 +48,8 @@ uv run python etl/download.py && uv run python etl/load.py      # открыты
 uv run python etl/download_osm.py                                 # OSM, ~4 ГБ
 ls data/raw/osm_russia/*.pbf | xargs -P 3 -n 1 uv run python etl/osm_extract.py
 uv run python etl/graph_russia.py                                 # граф РФ, пик ~6 ГБ RAM
-uv run python etl/access_russia.py                                # доступ для всех н.п., ~5 мин
+uv run python etl/manual_links.py                                 # ручные связи → рёбра по сезонам
+uv run python etl/access_russia.py                                # доступ для всех н.п., 3 сценария, ~15 мин
 uv run python etl/graph_tuva.py && uv run python etl/multimodal_tuva.py   # Тыва
 ```
 
@@ -61,3 +63,24 @@ uv run python etl/graph_tuva.py && uv run python etl/multimodal_tuva.py   # Ты
 Скорости по классам дорог (trunk 65, primary 60, … track 20 км/ч, грунт −30%) откалиброваны по Кызыл–Абакан;
 сверка с матрицей Точно по 24 тыс. пар: r = 0,993, наше время в среднем +6,6%. Накладные на ЖД/авиа — 1 / 2,5 ч.
 Частоты местных рейсов — из `data_manual`, неизвестные помечены (по умолчанию 1 рейс/нед).
+
+## Ручные связи в графе РФ
+
+`etl/manual_links.py` собирает `data_manual/regions/*.csv` и `tuva_links.csv` в `manual_links_ru`
+(по строке на связь и сезон), `access_russia.py` добавляет их рёбрами в дорожный граф. Сценарии в колонке
+`season` таблиц `np_access` / `np_city_times`: `road` — только дороги, `summer` / `winter` — плюс связи сезона.
+Н.п. без дороги в 5 км, но с ручной связью, получают свой узел (`manual_only`).
+
+- Линии (авиа, зимник, река, дальний паром): км из источника или по прямой × извилистость (зимник 1,25,
+  река 1,3); скорости 200 / 30 / 20 км/ч, накладные 1 / 0 / 0,5 ч.
+- Переправы (паром, лёд, понтон): подъезд между н.п. по прямой × 1,3 на 40 км/ч + створ (km из CSV, иначе 1 км)
+  на 10 / 20 / 20 км/ч; у парома +0,5 ч ожидания.
+- Ожидание рейса: половина интервала, не больше 24 ч (поездку планируют под расписание);
+  частота не найдена — 1 рейс/нед (`freq_assumed`).
+- Не используются: связи без сезона (67, `confidence=low`) и зарубежные `ext:` (Хэйхэ, Тунцзян, Миншань, Сухум).
+- `_remote.csv`: в модель (`manual_remote`, флаг `no_all_season_road`) идут только `all_season_road=no`.
+  Остальное — перечни для ККТ и выплат медикам; они покрывают почти все сёла и отсутствие дороги не доказывают.
+
+```bash
+uv run python etl/manual_links.py && uv run python etl/access_russia.py    # 3 сценария, ~15 мин
+```
