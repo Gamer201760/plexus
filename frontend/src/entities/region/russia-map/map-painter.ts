@@ -8,6 +8,7 @@ import {
   viewShift,
   visibleBox,
 } from "./map-motion"
+import { playRipple } from "./map-ripple"
 import { contains, encloses, expand, intersects, pathBox, union } from "./map-shapes"
 
 export interface PaintRegion {
@@ -24,6 +25,8 @@ export interface MapColors {
   readonly hover: string
   readonly line: number
   readonly selectedLine: number
+  readonly waves: readonly string[]
+  readonly waveReach: number
 }
 
 interface Shape {
@@ -55,6 +58,7 @@ export class MapPainter {
   private readonly stage: HTMLElement
   private readonly group: SVGGElement
   private readonly overlay: SVGPathElement
+  private readonly waves: SVGGElement
   private readonly selectedPath: SVGPathElement
   private readonly frame: Box
   private size: Size = { width: 0, height: 0 }
@@ -65,6 +69,10 @@ export class MapPainter {
   private selected: string | null = null
   private colors: MapColors | null = null
   private hovered: string | null = null
+  private waved: string | null = null
+  private pendingWave = false
+  private moving = false
+  private waveFrame: number | null = null
 
   constructor(element: HTMLDivElement, frame: Box, regions: readonly PaintRegion[]) {
     this.frame = frame
@@ -92,12 +100,19 @@ export class MapPainter {
     this.selectedPath.setAttribute("fill", "none")
     this.group.append(this.selectedPath)
     this.overlay = document.createElementNS(SVG, "path")
-    hover.replaceChildren(this.overlay)
+    this.waves = document.createElementNS(SVG, "g")
+    this.waves.setAttribute("fill", "none")
+    hover.replaceChildren(this.overlay, this.waves)
   }
 
   configure(colors: MapColors, steps: ReadonlyMap<string, number>, selected: string | null) {
     this.colors = colors
     this.selected = selected
+    if (selected !== this.waved) {
+      this.waved = selected
+      this.pendingWave = selected !== null
+      this.waves.replaceChildren()
+    }
     this.group.setAttribute("stroke", colors.border)
     this.group.setAttribute("stroke-linejoin", "round")
     this.selectedPath.setAttribute("stroke", colors.selected)
@@ -120,8 +135,11 @@ export class MapPainter {
       this.setDetail(view.scale > DETAIL_SCALE)
       this.refineViewport(view)
       this.stage.style.transform = ""
+      this.scheduleWave()
       return
     }
+    this.moving = true
+    this.waves.replaceChildren()
     const ratio = view.scale / this.base.scale
     if (phase === "moving" && (ratio > REBASE_IN || ratio < REBASE_OUT)) this.place(view)
     else if (!this.covered || !encloses(this.covered, visibleBox(view, this.frame, size)))
@@ -160,13 +178,41 @@ export class MapPainter {
   private place(view: MapView) {
     this.base = view
     this.group.style.transform = placement(view)
-    this.overlay.setAttribute("transform", `translate(${view.x} ${view.y}) scale(${view.scale})`)
+    const transform = `translate(${view.x} ${view.y}) scale(${view.scale})`
+    this.overlay.setAttribute("transform", transform)
+    this.waves.setAttribute("transform", transform)
     this.cull(expand(visibleBox(view, this.frame, this.size), COVER_SHARE))
     if (this.colors) {
       const unit = unitsPerPixel(this.frame, this.size) / view.scale
       this.group.setAttribute("stroke-width", String(this.colors.line * unit))
       this.selectedPath.setAttribute("stroke-width", String(this.colors.selectedLine * unit))
     }
+  }
+
+  private scheduleWave() {
+    if (!this.pendingWave) return
+    this.moving = false
+    if (this.waveFrame !== null) cancelAnimationFrame(this.waveFrame)
+    this.waveFrame = requestAnimationFrame(() => {
+      this.waveFrame = requestAnimationFrame(() => {
+        this.waveFrame = null
+        if (!this.moving && this.pendingWave) this.ripple()
+      })
+    })
+  }
+
+  private ripple() {
+    this.pendingWave = false
+    const shape = this.shapes.find((item) => item.region.id === this.selected)
+    if (!shape || !this.colors) return
+    playRipple(this.waves, this.stage, {
+      path: geometry(shape.region, false),
+      box: shape.box,
+      unit: unitsPerPixel(this.frame, this.size) / this.view.scale,
+      colors: this.colors.waves,
+      reach: this.colors.waveReach,
+      line: this.colors.selectedLine,
+    })
   }
 
   private cull(box: Box) {

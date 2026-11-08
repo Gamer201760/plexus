@@ -19,12 +19,13 @@
 
   --hairline: 1px;
   --iso-line: 1.5px;
-  --atlas-line: 2.4px;
+  --atlas-line: 1.6px;
   --atlas-stop: 1.8px;
-  --atlas-station: 3px;
+  --atlas-station: 2.2px;
   --atlas-hub: 3.2px;
   --atlas-hub-active: 4.6px;
   --atlas-ripple: 26px;
+  --map-wave-reach: 18px;
   --iso-line-strong: 2px;
   --dash-winter: 6 4;
   --dash-unknown: 1 4;

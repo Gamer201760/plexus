@@ -43,6 +43,8 @@ export function useMapPainter(
         hover: token("--map-hover"),
         line: Number.parseFloat(token("--hairline")),
         selectedLine: Number.parseFloat(token("--iso-line-strong")),
+        waves: [token("--iso-1"), token("--iso-2")],
+        waveReach: Number.parseFloat(token("--map-wave-reach")),
       },
       new Map(regions.map((region) => [region.id, stepOf(region.id)])),
       selected,
