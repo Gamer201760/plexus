@@ -110,13 +110,18 @@ class FakeAtlas:
         ]
 
     def geo(self) -> GeoLayer:
-        return GeoLayer("0 0 1000 620", [RegionShape("R1", "A", "M1,2L5,8Z")], "Geo", None)
+        return GeoLayer(
+            "0 0 1000 620", [RegionShape("R1", "A", "M1,2L5,8Z")], "Geo snapshot 2013", None
+        )
 
     def winter_roads(self) -> list[WinterRoadRecord]:
         return []
 
     def sources(self) -> list[SourceRecord]:
-        return [SourceRecord("rfsd", "RFSD", "2025", None, None, 10)]
+        return [
+            SourceRecord("rfsd", "RFSD · финансы", "2025", None, None, 10),
+            SourceRecord("other", "Издатель · набор", None, None, None, None),
+        ]
 
     def indices(self) -> list[IndexRecord]:
         return self.index_rows
@@ -226,8 +231,12 @@ def test_sources_and_geo_combine_atlas_and_additional() -> None:
     reference = ReferenceQueries(FakeAtlas())
 
     sources = reference.sources()
-    assert [item.id for item in sources][-1] == "rfsd"
+    assert [item.id for item in sources][-2:] == ["rfsd", "other"]
     assert sources[0].rows == 5 and sources[0].period == "2025"
+    assert sources[2].title == "Границы регионов: Click That Hood, OpenStreetMap"
+    assert sources[2].period == "2013"
+    assert [item.title for item in sources][-2:] == ["Финансы компаний: RFSD", "Издатель: набор"]
+    assert all("·" not in item.title for item in sources)
     geo = reference.geo()
     assert [shape.name for shape in geo.regions] == ["Альфа"]
     assert [(stub.id, stub.name) for stub in geo.missing] == [("R2", "Бета")]
