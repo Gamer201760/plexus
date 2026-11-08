@@ -178,6 +178,21 @@ def test_region_links_filter_and_resolve_endpoints() -> None:
         queries.region_links("R9", Season.ALL)
 
 
+def test_routes_keep_links_with_both_endpoints() -> None:
+    class LinkedAtlas(FakeAtlas):
+        def points(self) -> dict[str, PointRecord]:
+            return {
+                **super().points(),
+                "P2": PointRecord("P2", "Озёрный", "R1", 61.0, 101.0, 30.0, 40.0),
+            }
+
+    assert LinkQueries(FakeAtlas()).routes() == []
+    routes = LinkQueries(LinkedAtlas()).routes()
+    assert [item.id for item in routes] == ["0", "1", "2", "3", "4"]
+    assert (routes[2].mode, routes[2].x1, routes[2].y2) == (Mode.WINTER_ROAD, 10.0, 40.0)
+    assert (routes[0].from_name, routes[0].to_name) == ("Ёлкино", "Озёрный")
+
+
 def test_overview_counts_raw_seasons_and_sums_known_economy() -> None:
     overview = OverviewQuery(FakeAtlas()).run()
 

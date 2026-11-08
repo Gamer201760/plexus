@@ -5,14 +5,16 @@ from fastapi import APIRouter, Query
 from app.controller.atlas.mapping import (
     detail_response,
     link_response,
+    route_response,
     settlement_response,
     summary_response,
 )
-from app.controller.atlas.responses import INVALID, NOT_FOUND
+from app.controller.atlas.responses import INVALID, NOT_FOUND, UNAVAILABLE
 from app.controller.atlas.schemas import (
     LinkResponse,
     RegionDetailResponse,
     RegionSummaryResponse,
+    RouteResponse,
     SettlementPageResponse,
 )
 from app.domain.transport import Mode, Season
@@ -63,6 +65,10 @@ def build_regions_router(
         return SettlementPageResponse(
             total=page.total, items=[settlement_response(item) for item in page.items]
         )
+
+    @router.get("/links", responses=UNAVAILABLE)
+    def list_routes() -> list[RouteResponse]:
+        return [route_response(item) for item in links.routes()]
 
     @router.get("/links/{link_id}", responses=NOT_FOUND)
     def get_link(link_id: str) -> LinkResponse:

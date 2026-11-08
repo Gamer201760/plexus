@@ -124,6 +124,18 @@ class LinkResponse(BaseModel):
     source_date: str | None
 
 
+class RouteResponse(BaseModel):
+    id: str
+    mode: Mode
+    season: Season | None
+    from_name: str
+    to_name: str
+    x1: float
+    y1: float
+    x2: float
+    y2: float
+
+
 class SettlementResponse(BaseModel):
     id: str
     name: str

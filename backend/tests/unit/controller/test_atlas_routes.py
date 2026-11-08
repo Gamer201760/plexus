@@ -52,6 +52,16 @@ def test_region_links_serialize_endpoints_as_from_and_to(client: TestClient) -> 
     assert client.get("/api/v1/links/0").json() == first
 
 
+def test_routes_list_every_link_with_coordinates(client: TestClient) -> None:
+    routes = client.get("/api/v1/links").json()
+
+    assert 0 < len(routes) <= 997
+    assert {"id", "mode", "season", "from_name", "to_name", "x1", "y1", "x2", "y2"} == set(
+        routes[0]
+    )
+    assert {item["mode"] for item in routes} >= {"air", "river", "winter_road"}
+
+
 def test_settlements_page_sorts_by_population(client: TestClient) -> None:
     body = client.get(f"/api/v1/regions/{ALTAI}/settlements", params={"limit": 3}).json()
 

@@ -39,6 +39,19 @@ class LinkView:
     source_date: str | None
 
 
+@dataclass(frozen=True, slots=True)
+class RouteView:
+    id: str
+    mode: Mode
+    season: Season | None
+    from_name: str
+    to_name: str
+    x1: float
+    y1: float
+    x2: float
+    y2: float
+
+
 def _endpoint(point_id: str, name: str, points: dict[str, PointRecord]) -> Endpoint:
     point = points.get(point_id)
     if point is None:
@@ -89,6 +102,28 @@ class LinkQueries:
             and runs_in_season(link.season, season)
             and (mode is None or link.mode is mode)
         ]
+
+    def routes(self) -> list[RouteView]:
+        points = self._repository.points()
+        routes: list[RouteView] = []
+        for link in self._repository.links():
+            start, end = points.get(link.from_id), points.get(link.to_id)
+            if start is None or end is None:
+                continue
+            routes.append(
+                RouteView(
+                    id=link.id,
+                    mode=link.mode,
+                    season=link.season,
+                    from_name=link.from_name,
+                    to_name=link.to_name,
+                    x1=start.x,
+                    y1=start.y,
+                    x2=end.x,
+                    y2=end.y,
+                )
+            )
+        return routes
 
     def get(self, link_id: str) -> LinkView:
         link = next((item for item in self._repository.links() if item.id == link_id), None)

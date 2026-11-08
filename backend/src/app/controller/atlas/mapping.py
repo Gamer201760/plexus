@@ -11,12 +11,13 @@ from app.controller.atlas.schemas import (
     OverviewResponse,
     RegionDetailResponse,
     RegionSummaryResponse,
+    RouteResponse,
     SeasonCountsResponse,
     SettlementResponse,
 )
 from app.usecase.dto import SettlementRecord
 from app.usecase.index_status import IndexStatus
-from app.usecase.links import Endpoint, LinkView
+from app.usecase.links import Endpoint, LinkView, RouteView
 from app.usecase.overview import Overview
 from app.usecase.regions import RegionDetail, RegionSummary
 
@@ -92,6 +93,10 @@ def link_response(link: LinkView) -> LinkResponse:
         source_url=link.source_url,
         source_date=link.source_date,
     )
+
+
+def route_response(route: RouteView) -> RouteResponse:
+    return RouteResponse(**asdict(route))
 
 
 def settlement_response(record: SettlementRecord) -> SettlementResponse:
