@@ -57,3 +57,33 @@ export function intersects(a: Box, b: Box): boolean {
     a.x <= b.x + b.width && a.x + a.width >= b.x && a.y <= b.y + b.height && a.y + a.height >= b.y
   )
 }
+
+export function encloses(outer: Box, inner: Box): boolean {
+  return (
+    inner.x >= outer.x &&
+    inner.y >= outer.y &&
+    inner.x + inner.width <= outer.x + outer.width &&
+    inner.y + inner.height <= outer.y + outer.height
+  )
+}
+
+export function expand(box: Box, share: number): Box {
+  return {
+    x: box.x - box.width * share,
+    y: box.y - box.height * share,
+    width: box.width * (1 + share * 2),
+    height: box.height * (1 + share * 2),
+  }
+}
+
+export function union(a: Box | null, b: Box): Box {
+  if (a === null) return b
+  const x = Math.min(a.x, b.x)
+  const y = Math.min(a.y, b.y)
+  return {
+    x,
+    y,
+    width: Math.max(a.x + a.width, b.x + b.width) - x,
+    height: Math.max(a.y + a.height, b.y + b.height) - y,
+  }
+}

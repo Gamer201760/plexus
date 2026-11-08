@@ -57,6 +57,7 @@ export const RussiaMap = memo(function RussiaMap({
   const painter = useMapPainter(surface, frame, regions, stepOf, selectedId, camera)
   const selected = regions.find((region) => region.id === selectedId)
   const focus = useMemo(() => (selected ? mainlandBox(selected.path) : null), [selected])
+  const zoom = useMemo(() => controls(map.controls), [controls, map.controls])
 
   useEffect(() => {
     if (selectedId && focus) fitBox(focus)
@@ -129,10 +130,12 @@ export const RussiaMap = memo(function RussiaMap({
         }}
         onPointerLeave={clearHover}
       >
-        <svg className={styles.layer} viewBox={viewBox} aria-hidden="true" />
-        <svg className={styles.layer} viewBox={viewBox} aria-hidden="true" />
+        <div className={styles.stage} data-map-stage>
+          <svg className={styles.layer} viewBox={viewBox} aria-hidden="true" />
+          <svg className={clsx(styles.layer, styles.hover)} viewBox={viewBox} aria-hidden="true" />
+        </div>
       </div>
-      {controls(map.controls)}
+      {zoom}
     </div>
   )
 })

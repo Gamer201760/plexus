@@ -61,29 +61,43 @@ test("Arkhangelsk focuses on its mainland rather than remote islands", async ({
   expect(offset[1]).toBeLessThan(0.03)
 })
 
-test("gestures use light geometry and restore detail after release", async ({ page }) => {
+test("gestures move the rendered stage and keep geometry until release", async ({ page }) => {
   await page.goto("/?region=11000000")
   const map = page.locator("[data-map-surface]")
+  const stage = map.locator("[data-map-stage]")
   const path = map.locator('[data-region-id="11000000"]')
   await expect(path).toBeAttached()
   await page.waitForTimeout(500)
-  const full = await path.getAttribute("d")
-  await map.evaluate((element) => {
+  const before = await path.getAttribute("d")
+  const during = await map.evaluate(async (element) => {
+    let swaps = 0
+    const observer = new MutationObserver((entries) => {
+      swaps += entries.length
+    })
+    observer.observe(element, { attributes: true, attributeFilter: ["d"], subtree: true })
     const rect = element.getBoundingClientRect()
-    element.dispatchEvent(
-      new WheelEvent("wheel", {
-        deltaY: -16,
-        bubbles: true,
-        cancelable: true,
-        clientX: rect.x + rect.width / 2,
-        clientY: rect.y + rect.height / 2,
-      }),
-    )
+    for (let i = 0; i < 6; i += 1) {
+      element.dispatchEvent(
+        new WheelEvent("wheel", {
+          deltaY: -16,
+          bubbles: true,
+          cancelable: true,
+          clientX: rect.x + rect.width / 2,
+          clientY: rect.y + rect.height / 2,
+        }),
+      )
+      await new Promise(requestAnimationFrame)
+    }
+    observer.disconnect()
+    const layer = element.querySelector("[data-map-stage]")
+    return { swaps, transform: layer instanceof HTMLElement ? layer.style.transform : "" }
   })
+  expect(during.swaps).toBe(0)
+  expect(during.transform).toContain("scale(")
   await expect
-    .poll(async () => (await path.getAttribute("d"))?.length)
-    .toBeLessThan(full?.length ?? 0)
-  await expect.poll(() => path.getAttribute("d")).toBe(full)
+    .poll(() => stage.evaluate((element) => (element as HTMLElement).style.transform))
+    .toBe("")
+  expect(await path.getAttribute("d")).toBe(before)
 })
 
 test("visible geometry and hit testing place Arkhangelsk at the same coordinates", async ({

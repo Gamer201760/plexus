@@ -14,7 +14,7 @@ export function useMapView(frame: Box) {
   const zoomBy = useCallback(
     (factor: number, instant = false) => {
       cancelWheel()
-      camera.begin()
+      camera.begin(false)
       camera.flyTo(
         zoomAt(
           camera.current.current,

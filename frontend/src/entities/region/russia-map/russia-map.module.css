@@ -17,10 +17,21 @@
   cursor: grabbing;
 }
 
+.stage {
+  position: absolute;
+  inset: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+  pointer-events: none;
+}
+
 .layer {
   composes: fillBox from "../../../shared/styles/compose.module.css";
   position: absolute;
   inset: 0;
-  transform-origin: 0 0;
-  pointer-events: none;
+  overflow: visible;
+}
+
+.hover {
+  will-change: transform;
 }

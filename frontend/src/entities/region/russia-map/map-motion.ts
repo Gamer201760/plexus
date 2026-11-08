@@ -16,9 +16,31 @@ export interface Size {
   readonly height: number
 }
 
+export type DrawPhase = "settled" | "moving" | "flying"
+
 export function unitsPerPixel(frame: Box, size: Size): number {
   if (size.width === 0 || size.height === 0) return 1
   return Math.max(frame.width / size.width, frame.height / size.height)
+}
+
+export function viewShift(from: MapView, to: MapView, frame: Box, size: Size): string {
+  const k = unitsPerPixel(frame, size)
+  const ratio = to.scale / from.scale
+  const padX = (size.width - frame.width / k) / 2
+  const padY = (size.height - frame.height / k) / 2
+  const shiftX = padX * (1 - ratio) + (ratio * (frame.x - from.x) + to.x - frame.x) / k
+  const shiftY = padY * (1 - ratio) + (ratio * (frame.y - from.y) + to.y - frame.y) / k
+  return `translate(${shiftX}px, ${shiftY}px) scale(${ratio})`
+}
+
+export function visibleBox(view: MapView, frame: Box, size: Size): Box {
+  const k = unitsPerPixel(frame, size)
+  return {
+    x: (frame.x - view.x - (size.width * k - frame.width) / 2) / view.scale,
+    y: (frame.y - view.y - (size.height * k - frame.height) / 2) / view.scale,
+    width: (size.width * k) / view.scale,
+    height: (size.height * k) / view.scale,
+  }
 }
 
 export interface FlightPath {

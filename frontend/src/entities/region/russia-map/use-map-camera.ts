@@ -1,18 +1,20 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { motionMs, useReducedMotion } from "@/shared/motion"
 import { constrainView, HOME, type MapMetrics } from "./map-gesture"
-import { type Box, flightPath, type MapView } from "./map-motion"
+import { type Box, type DrawPhase, flightPath, type MapView } from "./map-motion"
 
 export function useMapCamera(frame: Box) {
   const [view, setView] = useState<MapView>(HOME)
   const [active, setActive] = useState(false)
   const frameRef = useRef<HTMLDivElement | null>(null)
   const current = useRef(HOME)
-  const draw = useRef<(view: MapView, detail: boolean) => void>(() => undefined)
+  const draw = useRef<(view: MapView, phase: DrawPhase) => void>(() => undefined)
+  const cover = useRef<(views: readonly MapView[]) => void>(() => undefined)
   const raf = useRef<number | null>(null)
   const busy = useRef(false)
   const metrics = useRef<MapMetrics>({ width: 0, height: 0, left: 0, top: 0 })
   const reduced = useReducedMotion()
+  const flight = useRef(0)
 
   const cancelFrame = useCallback(() => {
     if (raf.current !== null) cancelAnimationFrame(raf.current)
@@ -21,18 +23,22 @@ export function useMapCamera(frame: Box) {
 
   const paint = useCallback(() => {
     raf.current = null
-    draw.current(current.current, false)
+    draw.current(current.current, "moving")
   }, [])
 
-  const begin = useCallback(() => {
-    if (busy.current) return
-    cancelFrame()
-    const rect = frameRef.current?.getBoundingClientRect()
-    if (rect)
-      metrics.current = { width: rect.width, height: rect.height, left: rect.left, top: rect.top }
-    busy.current = true
-    setActive(true)
-  }, [cancelFrame])
+  const begin = useCallback(
+    (measure = true) => {
+      if (busy.current) return
+      cancelFrame()
+      const rect =
+        measure || metrics.current.width === 0 ? frameRef.current?.getBoundingClientRect() : null
+      if (rect)
+        metrics.current = { width: rect.width, height: rect.height, left: rect.left, top: rect.top }
+      busy.current = true
+      setActive(true)
+    },
+    [cancelFrame],
+  )
 
   const move = useCallback(
     (next: MapView) => {
@@ -45,14 +51,14 @@ export function useMapCamera(frame: Box) {
   const commit = useCallback(() => {
     cancelFrame()
     busy.current = false
-    draw.current(current.current, true)
+    draw.current(current.current, "settled")
     setView({ ...current.current })
     setActive(false)
   }, [cancelFrame])
 
   const flyTo = useCallback(
     (target: MapView, instant = false) => {
-      begin()
+      begin(false)
       cancelFrame()
       const from = current.current
       const next = constrainView(target, frame)
@@ -66,7 +72,8 @@ export function useMapCamera(frame: Box) {
         return
       }
       const path = flightPath(from, next, frame).frames
-      const duration = motionMs("--dur-panel", frameRef.current ?? undefined)
+      cover.current(path)
+      const duration = flight.current || motionMs("--dur-panel", frameRef.current ?? undefined)
       const start = performance.now()
       busy.current = false
       const tick = (now: number) => {
@@ -80,7 +87,7 @@ export function useMapCamera(frame: Box) {
           x: left.x + (right.x - left.x) * mix,
           y: left.y + (right.y - left.y) * mix,
         }
-        draw.current(current.current, false)
+        draw.current(current.current, "flying")
         if (progress < 1) raf.current = requestAnimationFrame(tick)
         else {
           current.current = next
@@ -95,12 +102,13 @@ export function useMapCamera(frame: Box) {
   useEffect(() => {
     const element = frameRef.current
     if (!element) return
+    flight.current = motionMs("--dur-panel", element)
     const measure = () => {
       const rect = element.getBoundingClientRect()
       const resized = metrics.current.width !== rect.width || metrics.current.height !== rect.height
       metrics.current = { width: rect.width, height: rect.height, left: rect.left, top: rect.top }
       if (resized) commit()
-      else draw.current(current.current, raf.current === null)
+      else draw.current(current.current, raf.current === null ? "settled" : "moving")
     }
     const observer = new ResizeObserver(measure)
     observer.observe(element)
@@ -111,7 +119,7 @@ export function useMapCamera(frame: Box) {
   }, [cancelFrame, commit])
 
   const camera = useMemo(
-    () => ({ begin, move, commit, flyTo, current, metrics, busy, draw }),
+    () => ({ begin, move, commit, flyTo, current, metrics, busy, draw, cover }),
     [begin, move, commit, flyTo],
   )
   return { view, active, frameRef, camera }

@@ -1,6 +1,13 @@
 import { readFileSync } from "node:fs"
 import { describe, expect, it } from "vitest"
-import { contains, intersects, mainlandBox } from "@/entities/region/russia-map/map-shapes"
+import {
+  contains,
+  encloses,
+  expand,
+  intersects,
+  mainlandBox,
+  union,
+} from "@/entities/region/russia-map/map-shapes"
 
 describe("map focus geometry", () => {
   it("focuses on the largest polygon without moving remote islands", () => {
@@ -27,5 +34,21 @@ describe("map focus geometry", () => {
     expect(contains(box, 10, 10)).toBe(true)
     expect(contains(box, 11, 10)).toBe(false)
     expect(intersects(box, { x: 10, y: 2, width: 1, height: 1 })).toBe(true)
+  })
+})
+
+describe("map cover boxes", () => {
+  const box = { x: 10, y: 20, width: 100, height: 50 }
+  it("expands a box by a share of its size on every side", () => {
+    expect(expand(box, 1)).toEqual({ x: -90, y: -30, width: 300, height: 150 })
+  })
+  it("tells whether a view still lies inside the painted cover", () => {
+    expect(encloses(expand(box, 1), box)).toBe(true)
+    expect(encloses(box, expand(box, 0.1))).toBe(false)
+  })
+  it("joins covers without losing either box", () => {
+    const joined = union(box, { x: 200, y: 0, width: 10, height: 10 })
+    expect(joined).toEqual({ x: 10, y: 0, width: 200, height: 70 })
+    expect(union(null, box)).toBe(box)
   })
 })

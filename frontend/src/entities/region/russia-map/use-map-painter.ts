@@ -16,11 +16,13 @@ export function useMapPainter(
     const element = surface.current
     if (!element) return
     painter.current = new MapPainter(element, frame, regions)
-    camera.draw.current = (view, detail) =>
-      painter.current?.draw(view, camera.metrics.current, detail)
+    camera.draw.current = (view, phase) =>
+      painter.current?.draw(view, camera.metrics.current, phase)
+    camera.cover.current = (views) => painter.current?.cover(views)
     return () => {
       painter.current = null
       camera.draw.current = () => undefined
+      camera.cover.current = () => undefined
     }
   }, [surface, camera, frame, regions])
 
@@ -45,7 +47,7 @@ export function useMapPainter(
       new Map(regions.map((region) => [region.id, stepOf(region.id)])),
       selected,
     )
-    camera.draw.current(camera.current.current, !camera.busy.current)
+    camera.draw.current(camera.current.current, camera.busy.current ? "moving" : "settled")
   }, [surface, camera, regions, selected, stepOf])
   return painter
 }
