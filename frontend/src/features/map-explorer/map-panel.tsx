@@ -1,4 +1,4 @@
-import { useEffect, useId } from "react"
+import { memo, useEffect, useId } from "react"
 import { Link, useLocation } from "react-router"
 import type { IndexStatus } from "@/entities/reference"
 import { type Overview, type RegionSummary, type Season, useRegion } from "@/entities/region"
@@ -64,7 +64,7 @@ function SelectedRegion({ id, season, onClose }: SelectedProps) {
   const cardId = useId()
   const { data } = useRegion(id, season)
   useReveal(cardId, data !== undefined, id)
-  if (!data) return <Skeleton lines={6} />
+  if (!data || data.id !== id) return <Skeleton lines={6} />
   return (
     <Card
       as="section"
@@ -102,7 +102,7 @@ function SelectedRegion({ id, season, onClose }: SelectedProps) {
   )
 }
 
-export function MapPanel({
+export const MapPanel = memo(function MapPanel({
   overview,
   regions,
   metric,
@@ -142,4 +142,4 @@ export function MapPanel({
       </ScrollArea>
     </aside>
   )
-}
+})

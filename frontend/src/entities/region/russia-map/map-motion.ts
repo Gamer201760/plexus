@@ -21,20 +21,6 @@ export function unitsPerPixel(frame: Box, size: Size): number {
   return Math.max(frame.width / size.width, frame.height / size.height)
 }
 
-export function viewShift(from: MapView, to: MapView, frame: Box, size: Size): string {
-  const k = unitsPerPixel(frame, size)
-  const ratio = to.scale / from.scale
-  const padX = (size.width - frame.width / k) / 2
-  const padY = (size.height - frame.height / k) / 2
-  const shiftX = padX * (1 - ratio) + (ratio * (frame.x - from.x) + to.x - frame.x) / k
-  const shiftY = padY * (1 - ratio) + (ratio * (frame.y - from.y) + to.y - frame.y) / k
-  return `translate(${shiftX}px, ${shiftY}px) scale(${ratio})`
-}
-
-export function composeTransforms(outer: string, inner: string): string {
-  return outer === "none" || outer === "" ? inner : `${outer} ${inner}`
-}
-
 export interface FlightPath {
   readonly frames: readonly MapView[]
   readonly reach: number

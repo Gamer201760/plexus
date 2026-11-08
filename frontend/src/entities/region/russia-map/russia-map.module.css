@@ -6,22 +6,8 @@
   background-color: var(--map-water);
 }
 
-.motion {
-  composes: fillBox from "../../../shared/styles/compose.module.css";
-  position: relative;
-  transform-origin: 0 0;
-}
-
-.overlay {
-  composes: overlayBox from "../../../shared/styles/compose.module.css";
-  position: absolute;
-  inset: 0;
-  will-change: transform;
-}
-
 .map {
   composes: fillBox from "../../../shared/styles/compose.module.css";
-  overflow: visible;
   cursor: grab;
   touch-action: none;
   user-select: none;
@@ -32,55 +18,9 @@
 }
 
 .layer {
+  composes: fillBox from "../../../shared/styles/compose.module.css";
+  position: absolute;
+  inset: 0;
   transform-origin: 0 0;
-}
-
-.region {
-  fill: var(--map-none);
-  composes: hairStroke from "../../../shared/styles/compose.module.css";
-  stroke: var(--map-border);
-  stroke-linejoin: round;
-  cursor: pointer;
-}
-
-.region[data-step="1"] {
-  fill: var(--data-seq-1);
-}
-
-.region[data-step="2"] {
-  fill: var(--data-seq-2);
-}
-
-.region[data-step="3"] {
-  fill: var(--data-seq-3);
-}
-
-.region[data-step="4"] {
-  fill: var(--data-seq-4);
-}
-
-.region[data-step="5"] {
-  fill: var(--data-seq-5);
-}
-
-.region[data-step="6"] {
-  fill: var(--data-seq-6);
-}
-
-.region[data-step="7"] {
-  fill: var(--data-seq-7);
-}
-
-.selected {
-  stroke: var(--iso-1);
-  stroke-width: var(--iso-line-strong);
   pointer-events: none;
-}
-
-.hover {
-  animation: var(--motion-fade-in);
-}
-
-.hover path {
-  fill: var(--map-hover);
 }

@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import { memo } from "react"
 import { useFormatters, useTranslation } from "@/shared/i18n"
 import { formatThreshold } from "./format-metric"
 import styles from "./map-legend.module.css"
@@ -11,7 +12,7 @@ export interface MapLegendProps {
   readonly missing: boolean
 }
 
-export function MapLegend({ metric, scale, missing }: MapLegendProps) {
+export const MapLegend = memo(function MapLegend({ metric, scale, missing }: MapLegendProps) {
   const { t } = useTranslation()
   const f = useFormatters()
   const title = t(`data:metric.${metric}`)
@@ -48,4 +49,4 @@ export function MapLegend({ metric, scale, missing }: MapLegendProps) {
       ) : null}
     </figure>
   )
-}
+})

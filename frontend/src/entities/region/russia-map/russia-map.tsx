@@ -1,22 +1,25 @@
 import clsx from "clsx"
-import { type ReactNode, useEffect, useMemo, useState } from "react"
+import { memo, type PointerEvent, type ReactNode, useEffect, useMemo, useRef } from "react"
+import { localPoint } from "./map-gesture"
 import type { Box } from "./map-motion"
+import { mainlandBox } from "./map-shapes"
 import styles from "./russia-map.module.css"
-import { SelectionWaves } from "./selection-waves"
+import { useMapPainter } from "./use-map-painter"
 import { useMapView } from "./use-map-view"
 
 export interface MapRegion {
   readonly id: string
   readonly name: string
   readonly path: string
+  readonly path_low?: string | null
 }
 
 export type MapStep = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 
 export interface MapControls {
-  readonly zoomIn: () => void
-  readonly zoomOut: () => void
-  readonly reset: () => void
+  readonly zoomIn: (instant?: boolean) => void
+  readonly zoomOut: (instant?: boolean) => void
+  readonly reset: (instant?: boolean) => void
 }
 
 export interface RussiaMapProps {
@@ -24,7 +27,6 @@ export interface RussiaMapProps {
   readonly regions: readonly MapRegion[]
   readonly stepOf: (id: string) => MapStep
   readonly selectedId: string | null
-  readonly focusBox: Box | null
   readonly label: string
   readonly onSelect: (id: string) => void
   readonly onHover: (id: string | null, x: number, y: number) => void
@@ -36,12 +38,11 @@ function parseBox(viewBox: string): Box {
   return { x, y, width, height }
 }
 
-export function RussiaMap({
+export const RussiaMap = memo(function RussiaMap({
   viewBox,
   regions,
   stepOf,
   selectedId,
-  focusBox,
   label,
   onSelect,
   onHover,
@@ -49,89 +50,89 @@ export function RussiaMap({
 }: RussiaMapProps) {
   const frame = useMemo(() => parseBox(viewBox), [viewBox])
   const map = useMapView(frame)
-  const { fitBox, reset } = map
-  const selected = regions.find((region) => region.id === selectedId) ?? null
-  const [hoveredId, setHoveredId] = useState<string | null>(null)
-  const hovered = regions.find((region) => region.id === hoveredId) ?? null
+  const { fitBox, reset, active, camera } = map
+  const surface = useRef<HTMLDivElement | null>(null)
+  const hoverFrame = useRef<number | null>(null)
+  const cursor = useRef({ x: 0, y: 0 })
+  const painter = useMapPainter(surface, frame, regions, stepOf, selectedId, camera)
+  const selected = regions.find((region) => region.id === selectedId)
+  const focus = useMemo(() => (selected ? mainlandBox(selected.path) : null), [selected])
 
   useEffect(() => {
-    if (focusBox) fitBox(focusBox)
-    else reset()
-  }, [focusBox, fitBox, reset])
+    if (selectedId && focus) fitBox(focus)
+    else if (!selectedId) reset()
+  }, [selectedId, focus, fitBox, reset])
 
-  const transform = `translate(${map.view.x}px, ${map.view.y}px) scale(${map.view.scale})`
+  useEffect(() => {
+    if (active) onHover(null, 0, 0)
+  }, [active, onHover])
+
+  useEffect(
+    () => () => {
+      if (hoverFrame.current !== null) cancelAnimationFrame(hoverFrame.current)
+    },
+    [],
+  )
+
+  const clearHover = () => {
+    if (hoverFrame.current !== null) cancelAnimationFrame(hoverFrame.current)
+    hoverFrame.current = null
+    painter.current?.hover(null)
+    onHover(null, 0, 0)
+  }
+
+  const onPointerMove = (event: PointerEvent<HTMLDivElement>) => {
+    map.handlers.onPointerMove(event)
+    if (camera.busy.current || active || event.pointerType !== "mouse") return
+    cursor.current = { x: event.clientX, y: event.clientY }
+    if (hoverFrame.current !== null) return
+    hoverFrame.current = requestAnimationFrame(() => {
+      hoverFrame.current = null
+      const point = localPoint(cursor.current, frame, camera.metrics.current)
+      const id = painter.current?.pick(point.x, point.y) ?? null
+      painter.current?.hover(id)
+      onHover(id, cursor.current.x, cursor.current.y)
+    })
+  }
 
   return (
-    <div className={styles.frame}>
-      <div ref={map.motionRef} className={styles.motion}>
-        <svg
-          ref={map.svgRef}
-          className={clsx(styles.map, map.dragging && styles.dragging)}
-          viewBox={viewBox}
-          role="img"
-          aria-label={label}
-          {...map.handlers}
-          onPointerLeave={() => {
-            setHoveredId(null)
-            onHover(null, 0, 0)
-          }}
-        >
-          <g className={styles.layer} style={{ transform }}>
-            {regions.map((region) => (
-              // biome-ignore lint/a11y/noStaticElementInteractions: regions are pointer shortcuts, keyboard users pick regions through search and the region list
-              <path
-                key={region.id}
-                className={styles.region}
-                data-step={stepOf(region.id)}
-                data-selected={region.id === selectedId || undefined}
-                d={region.path}
-                onPointerMove={(event) => {
-                  if (event.pointerType === "mouse") setHoveredId(region.id)
-                  onHover(region.id, event.clientX, event.clientY)
-                }}
-                onClick={() => {
-                  if (!map.wasDrag()) onSelect(region.id)
-                }}
-              />
-            ))}
-          </g>
-        </svg>
-        {hovered && !map.dragging ? (
-          <svg
-            key={hovered.id}
-            className={clsx(styles.overlay, styles.hover)}
-            viewBox={viewBox}
-            aria-hidden="true"
-          >
-            <g className={styles.layer} style={{ transform }}>
-              <path d={hovered.path} />
-            </g>
-          </svg>
-        ) : null}
-        {selected ? (
-          <>
-            <svg className={styles.overlay} viewBox={viewBox} aria-hidden="true">
-              <g className={styles.layer} style={{ transform }}>
-                <SelectionWaves
-                  key={selected.id}
-                  path={selected.path}
-                  unit={map.unit / map.view.scale}
-                />
-              </g>
-            </svg>
-            <svg className={styles.overlay} viewBox={viewBox} aria-hidden="true">
-              <g className={styles.layer} style={{ transform }}>
-                <path
-                  className={clsx(styles.region, styles.selected)}
-                  data-step={stepOf(selected.id)}
-                  d={selected.path}
-                />
-              </g>
-            </svg>
-          </>
-        ) : null}
+    <div ref={map.frameRef} className={styles.frame}>
+      {/* biome-ignore lint/a11y/useKeyWithClickEvents: keyboard users select regions through search and the region list */}
+      <div
+        ref={surface}
+        className={clsx(styles.map, active && styles.dragging)}
+        role="img"
+        aria-label={label}
+        data-map-surface
+        data-view={JSON.stringify(map.view)}
+        {...map.handlers}
+        onPointerMove={onPointerMove}
+        onPointerEnter={() => {
+          const rect = map.frameRef.current?.getBoundingClientRect()
+          if (rect)
+            camera.metrics.current = {
+              left: rect.left,
+              top: rect.top,
+              width: rect.width,
+              height: rect.height,
+            }
+        }}
+        onClick={(event) => {
+          if (map.wasDrag()) return
+          const point = localPoint(
+            { x: event.clientX, y: event.clientY },
+            frame,
+            camera.metrics.current,
+          )
+          const id = painter.current?.pick(point.x, point.y)
+          if (id) onSelect(id)
+        }}
+        onPointerLeave={clearHover}
+      >
+        <svg className={styles.layer} viewBox={viewBox} aria-hidden="true" />
+        <svg className={styles.layer} viewBox={viewBox} aria-hidden="true" />
       </div>
-      {controls({ zoomIn: () => map.zoomBy(1.6), zoomOut: () => map.zoomBy(1 / 1.6), reset })}
+      {controls(map.controls)}
     </div>
   )
-}
+})

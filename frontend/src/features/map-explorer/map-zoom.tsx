@@ -12,7 +12,7 @@ export interface MapZoomProps {
 interface ZoomAction {
   readonly label: MessageKey
   readonly icon: IconName
-  readonly run: () => void
+  readonly run: (instant?: boolean) => void
 }
 
 export function MapZoom({ controls, onReset }: MapZoomProps) {
@@ -20,7 +20,14 @@ export function MapZoom({ controls, onReset }: MapZoomProps) {
   const actions: readonly ZoomAction[] = [
     { label: "map:zoomIn", icon: "plus", run: controls.zoomIn },
     { label: "map:zoomOut", icon: "minus", run: controls.zoomOut },
-    { label: "map:reset", icon: "locate", run: onReset },
+    {
+      label: "map:reset",
+      icon: "locate",
+      run: (instant) => {
+        controls.reset(instant)
+        onReset()
+      },
+    },
   ]
   return (
     <div className={styles.zoom}>
@@ -30,7 +37,7 @@ export function MapZoom({ controls, onReset }: MapZoomProps) {
             variant="secondary"
             size="compact"
             icon={action.icon}
-            onClick={action.run}
+            onClick={(event) => action.run(event.detail === 0)}
             aria-label={t(action.label)}
           >
             {null}

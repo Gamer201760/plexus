@@ -1,7 +1,7 @@
 .hover {
   composes: surface from "../../shared/styles/compose.module.css";
   position: fixed;
-  inset: var(--hover-y) auto auto var(--hover-x);
+  inset: 0 auto auto 0;
   z-index: var(--layer-tooltip);
   display: grid;
   gap: var(--space-4);
@@ -9,7 +9,7 @@
   padding: var(--space-8) var(--space-12);
   box-shadow: var(--shadow-float);
   pointer-events: none;
-  transform: translate(var(--space-16), calc(-100% - var(--space-8)));
+  translate: var(--space-16) calc(-100% - var(--space-8));
   animation: var(--motion-fade-in);
 }
 

@@ -1,3 +1,4 @@
+import { memo } from "react"
 import type { Season } from "@/entities/region"
 import { useTranslation } from "@/shared/i18n"
 import { Segmented, Select, Tooltip } from "@/shared/ui"
@@ -11,7 +12,12 @@ export interface MapToolbarProps {
   readonly onSeason: (season: Season) => void
 }
 
-export function MapToolbar({ metric, season, onMetric, onSeason }: MapToolbarProps) {
+export const MapToolbar = memo(function MapToolbar({
+  metric,
+  season,
+  onMetric,
+  onSeason,
+}: MapToolbarProps) {
   const { t } = useTranslation()
   const seasonal = dependsOnSeason(metric)
   const seasons = (
@@ -43,4 +49,4 @@ export function MapToolbar({ metric, season, onMetric, onSeason }: MapToolbarPro
       )}
     </div>
   )
-}
+})

@@ -1,20 +1,12 @@
 import { useCallback, useMemo } from "react"
-import {
-  type Box,
-  type Season,
-  useGeoRegions,
-  useOverview,
-  useRegion,
-  useRegions,
-} from "@/entities/region"
+import { type Season, useGeoRegions, useOverview, useRegions } from "@/entities/region"
 import { type MetricKey, metricValue } from "./metric"
 import { buildScale } from "./scale"
 
-export function useMapData(metric: MetricKey, season: Season, selectedId: string | null) {
+export function useMapData(metric: MetricKey, season: Season) {
   const geo = useGeoRegions()
   const regions = useRegions(season)
   const overview = useOverview()
-  const selected = useRegion(selectedId ?? "", season)
 
   const byId = useMemo(() => new Map((regions.data ?? []).map((r) => [r.id, r])), [regions.data])
   const valueAt = useCallback(
@@ -32,13 +24,6 @@ export function useMapData(metric: MetricKey, season: Season, selectedId: string
     () => (geo.data?.regions ?? []).some((region) => valueAt(region.id) === null),
     [geo.data, valueAt],
   )
-  const focusBox = useMemo<Box | null>(() => {
-    const bbox = selectedId ? selected.data?.bbox : null
-    if (!bbox) return null
-    const [x = 0, y = 0, width = 1, height = 1] = bbox
-    return { x, y, width, height }
-  }, [selectedId, selected.data])
-
   const failed = geo.isError || regions.isError || overview.isError
   const retry = () => {
     void geo.refetch()
@@ -46,5 +31,5 @@ export function useMapData(metric: MetricKey, season: Season, selectedId: string
     void overview.refetch()
   }
 
-  return { geo, regions, overview, byId, valueAt, scale, missing, focusBox, failed, retry }
+  return { geo, regions, overview, byId, valueAt, scale, missing, failed, retry }
 }

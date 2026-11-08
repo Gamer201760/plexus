@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { RussiaMap } from "@/entities/region"
+import { useCallback } from "react"
+import { type MapControls, RussiaMap } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
 import { ErrorState, Skeleton } from "@/shared/ui"
 import { Isolines } from "@/shared/ui/brand"
@@ -13,12 +13,7 @@ import { MapZoom } from "./map-zoom"
 import { metricValue } from "./metric"
 import { useExplorerParams } from "./use-explorer-params"
 import { useMapData } from "./use-map-data"
-
-interface Hover {
-  readonly id: string
-  readonly x: number
-  readonly y: number
-}
+import { useMapHover } from "./use-map-hover"
 
 function MapLoading() {
   const { t } = useTranslation()
@@ -35,13 +30,22 @@ export function MapExplorer() {
   const f = useFormatters()
   const { metric, season, selectedId, setMetric, setSeason, select, searchFor } =
     useExplorerParams()
-  const [hover, setHover] = useState<Hover | null>(null)
-  const { geo, regions, overview, byId, valueAt, scale, missing, focusBox, failed, retry } =
-    useMapData(metric, season, selectedId)
+  const { hoveredId, cardRef, point, onHover } = useMapHover()
+  const { geo, regions, overview, byId, valueAt, scale, missing, failed, retry } = useMapData(
+    metric,
+    season,
+  )
+
+  const stepOf = useCallback((id: string) => scale.stepOf(valueAt(id)), [scale, valueAt])
+  const clear = useCallback(() => select(null), [select])
+  const controls = useCallback(
+    (value: MapControls) => <MapZoom controls={value} onReset={clear} />,
+    [clear],
+  )
 
   if (failed) return <ErrorState title={t("errors:kind.server")} onRetry={retry} />
 
-  const hovered = hover ? byId.get(hover.id) : undefined
+  const hovered = hoveredId ? byId.get(hoveredId) : undefined
   const hoveredValue = hovered ? metricValue(hovered, metric) : null
   const ready = geo.data !== undefined && regions.data !== undefined
 
@@ -52,13 +56,12 @@ export function MapExplorer() {
           <RussiaMap
             viewBox={geo.data.view_box}
             regions={geo.data.regions}
-            stepOf={(id) => scale.stepOf(valueAt(id))}
+            stepOf={stepOf}
             selectedId={selectedId}
-            focusBox={focusBox}
             label={t("map:label")}
             onSelect={select}
-            onHover={(id, x, y) => setHover(id ? { id, x, y } : null)}
-            controls={(controls) => <MapZoom controls={controls} onReset={() => select(null)} />}
+            onHover={onHover}
+            controls={controls}
           />
         ) : (
           <MapLoading />
@@ -67,10 +70,10 @@ export function MapExplorer() {
           <MapToolbar metric={metric} season={season} onMetric={setMetric} onSeason={setSeason} />
           {ready ? <MapLegend metric={metric} scale={scale} missing={missing} /> : null}
         </div>
-        {hover && hovered ? (
+        {hovered ? (
           <HoverCard
-            x={hover.x}
-            y={hover.y}
+            cardRef={cardRef}
+            point={point}
             title={hovered.name}
             label={t(`data:metric.${metric}`)}
             value={hoveredValue === null ? null : formatMetric(hoveredValue, metric, f)}
@@ -86,7 +89,7 @@ export function MapExplorer() {
           season={season}
           selectedId={selectedId}
           searchFor={searchFor}
-          onClear={() => select(null)}
+          onClear={clear}
         />
       ) : (
         <div className={styles.panelLoading}>

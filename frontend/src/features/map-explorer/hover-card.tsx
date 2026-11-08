@@ -1,22 +1,22 @@
-import type { CSSProperties } from "react"
+import { type RefObject, useLayoutEffect } from "react"
 import styles from "./hover-card.module.css"
 
 export interface HoverCardProps {
-  readonly x: number
-  readonly y: number
+  readonly cardRef: RefObject<HTMLDivElement | null>
+  readonly point: RefObject<{ x: number; y: number }>
   readonly title: string
   readonly label: string
   readonly value: string | null
   readonly none: string
 }
 
-export function HoverCard({ x, y, title, label, value, none }: HoverCardProps) {
+export function HoverCard({ cardRef, point, title, label, value, none }: HoverCardProps) {
+  useLayoutEffect(() => {
+    if (cardRef.current)
+      cardRef.current.style.transform = `translate(${point.current.x}px, ${point.current.y}px)`
+  }, [cardRef, point])
   return (
-    <div
-      className={styles.hover}
-      style={{ "--hover-x": `${x}px`, "--hover-y": `${y}px` } as CSSProperties}
-      aria-hidden="true"
-    >
+    <div className={styles.hover} ref={cardRef} aria-hidden="true">
       <b className={styles.hoverTitle}>{title}</b>
       <span className={styles.hoverRow}>
         <span>{label}</span>
