@@ -7,12 +7,16 @@ way_id, highway, ref, name, surface, tracktype, oneway, is_bridge, is_ferry, is_
 nodes (list<int64>), lat (list<double>), lon (list<double>).
 Пишется пачками, чтобы не держать весь округ в памяти Python.
 """
+import json
 import sys
 from pathlib import Path
 
 import osmium
 import pyarrow as pa
 import pyarrow.parquet as pq
+
+from seasonality import operating_season
+from artifacts import file_record, revision, write_json
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "osm_ways"
@@ -25,6 +29,7 @@ HIGHWAYS = {
 SCHEMA = pa.schema([
     ("way_id", pa.int64()), ("highway", pa.string()), ("ref", pa.string()), ("name", pa.string()),
     ("surface", pa.string()), ("tracktype", pa.string()), ("oneway", pa.string()),
+    ("operating_season", pa.string()), ("source_tags", pa.string()),
     ("is_bridge", pa.bool_()), ("is_ferry", pa.bool_()), ("is_seasonal", pa.bool_()),
     ("nodes", pa.list_(pa.int64())), ("lat", pa.list_(pa.float64())), ("lon", pa.list_(pa.float64())),
 ])
@@ -34,7 +39,16 @@ BATCH = 200_000
 def main(pbf: Path) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     dst = OUT / (pbf.name.split(".")[0] + ".parquet")
-    writer = pq.ParquetWriter(dst, SCHEMA, compression="zstd")
+    source = file_record(pbf)
+    manifest = dst.with_suffix(".json")
+    if dst.exists() and manifest.exists():
+        record = json.loads(manifest.read_text())
+        if record.get("input") == source and record.get("extractor") == file_record(Path(__file__)):
+            if record.get("output") == file_record(dst):
+                print(f"skip verified {dst}", flush=True)
+                return
+    temporary = dst.with_suffix(".part")
+    writer = pq.ParquetWriter(temporary, SCHEMA, compression="zstd")
     cols = {f.name: [] for f in SCHEMA}
     n = 0
 
@@ -68,6 +82,8 @@ def main(pbf: Path) -> None:
         cols["surface"].append(t.get("surface"))
         cols["tracktype"].append(t.get("tracktype"))
         cols["oneway"].append(t.get("oneway"))
+        cols["operating_season"].append(operating_season(dict(t)))
+        cols["source_tags"].append(json.dumps(dict(t), ensure_ascii=False, sort_keys=True))
         cols["is_bridge"].append(t.get("bridge", "no") != "no")
         cols["is_ferry"].append(ferry)
         cols["is_seasonal"].append(
@@ -79,6 +95,9 @@ def main(pbf: Path) -> None:
             print(f"  {pbf.name}: {n} ways", flush=True)
     flush()
     writer.close()
+    temporary.replace(dst)
+    write_json(manifest, {"schema_version": 2, "input": source, "output": file_record(dst),
+                          "extractor": file_record(Path(__file__)), "code": revision()})
     print(f"{pbf.name}: {n} ways -> {dst}")
 
 

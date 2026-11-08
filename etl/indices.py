@@ -44,6 +44,8 @@ import pyarrow.compute as pc
 import pyarrow.parquet as pq
 from scipy.spatial import cKDTree
 
+from inequality import gini, palma, theil
+
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "casechamp.duckdb"
 R_EARTH = 6371.0
@@ -105,24 +107,6 @@ def rai(pts):
         print(f"  rai {Path(f).stem}: vertices {len(v)}", flush=True)
         del v
     return best
-
-
-def gini(x, w):
-    o = np.argsort(x); x, w = x[o], w[o]
-    cw = np.cumsum(w) / w.sum(); cx = np.cumsum(x * w) / (x * w).sum()
-    return 1 - np.sum((cw - np.r_[0, cw[:-1]]) * (cx + np.r_[0, cx[:-1]]))
-
-
-def palma(x, w):
-    o = np.argsort(x); x, w = x[o], w[o]
-    cw = np.cumsum(w) / w.sum(); tot = (x * w).sum()
-    return (x * w)[cw > 0.9].sum() / max((x * w)[cw <= 0.4].sum(), 1e-12) if tot else np.nan
-
-
-def theil(x, w):
-    m = np.average(x, weights=w)
-    r = np.where(x > 0, x / m, 1)
-    return np.average(np.where(x > 0, r * np.log(r), 0), weights=w)
 
 
 def main():

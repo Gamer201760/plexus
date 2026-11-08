@@ -12,9 +12,19 @@ from scipy.sparse import csr_matrix
 GRAPH = Path(__file__).resolve().parent.parent / "data" / "graph_ru"
 
 
-def load_edges():
+def load_edges(season=None):
     e = pq.read_table(GRAPH / "edges.parquet")
-    return {c: e[c].to_numpy() for c in e.column_names}
+    result = {c: e[c].to_numpy() for c in e.column_names}
+    if season is not None:
+        ways = pq.read_table(GRAPH / "ways.parquet", columns=["operating_season"])
+        allowed = ways["operating_season"].to_numpy()
+        keep = allowed[result["way_idx"]] == "all"
+        if season in {"summer", "winter"}:
+            keep |= allowed[result["way_idx"]] == season
+        elif season != "road":
+            raise ValueError(f"unsupported season: {season}")
+        result = {c: values[keep] for c, values in result.items()}
+    return result
 
 
 def build_csr(src, dst, w, n, drop_mask=None):
@@ -29,7 +39,7 @@ def build_csr(src, dst, w, n, drop_mask=None):
     return csr_matrix((ww[first], (s[first], d[first])), shape=(n, n))
 
 
-def load_graph(weight="h"):
-    e = load_edges()
+def load_graph(weight="h", season="road"):
+    e = load_edges(season)
     n = pq.read_metadata(GRAPH / "nodes.parquet").num_rows
     return build_csr(e["src"], e["dst"], e[weight], n), e, n

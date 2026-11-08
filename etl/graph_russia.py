@@ -29,7 +29,7 @@ from scipy.spatial import cKDTree
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "data" / "osm_ways"
-OUT = ROOT / "data" / "graph_ru"
+OUT = Path(os.environ.get("GRAPH_OUTPUT", str(ROOT / "data" / "graph_ru")))
 DB = ROOT / "data" / "casechamp.duckdb"
 
 # те же допущения, что и для Тывы (etl/graph_tuva.py)
@@ -108,7 +108,7 @@ def contract(V, junction, speed, oneway):
         km = cum[j[b]] - cum[j[a]]
         h = km / speed[w]
         ow = oneway[w]
-        fwd, bwd = ow != 2, ow == 0
+        fwd, bwd = ow != 2, ow != 1
         src, dst = node[a], node[b]
         parts["S"] += [src[fwd], dst[bwd]]; parts["D"] += [dst[fwd], src[bwd]]
         parts["H"] += [h[fwd].astype(np.float32), h[bwd].astype(np.float32)]
@@ -170,6 +170,8 @@ def main():
     con = duckdb.connect(str(DB), read_only=True)
     pts = con.sql("""select oktmo as point_id, region, latitude as lat, longitude as lon, population
                      from stg_settlements where object_level = 'Населенный пункт' and latitude is not null""").df()
+    if region := os.environ.get("POINT_REGION"):
+        pts = pts[pts.region == region].reset_index(drop=True)
     con.close()
     lat, lon = V["lat"], V["lon"]
     vtx = np.full(len(pts), -1, dtype=np.int64)

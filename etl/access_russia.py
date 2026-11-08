@@ -36,7 +36,7 @@ DB = ROOT / "data" / "casechamp.duckdb"
 
 OVERHEAD_H = {"rail": 1.0, "air": 2.5}    # доезд до вокзала/аэропорта, регистрация, ожидание — допущение
 SNAP_KMH = 15
-MAX_H = 72.0                               # дальше — не храним (вес в индексе ~0)
+MAX_H = np.inf
 DC_LIMIT_H = 24.0                          # радиус поиска райцентра
 # у Московской области нет столицы в списке Точно; функциональный центр — Москва
 CAPITAL_OVERRIDE = {"Московская область": "Москва"}
@@ -88,7 +88,9 @@ def run(scenario, con, base, pts0, cities, T0, remote):
         R_pts[b0:b0 + len(idx)] = d[:, pnode]
         R_cc[b0:b0 + len(idx)] = d[:, cnode]
         del d
-    T = np.minimum(T0, R_cc + cities.snap_h.values[:, None] + cities.snap_h.values[None, :])
+    T = R_cc + cities.snap_h.values[:, None] + cities.snap_h.values[None, :]
+    if scenario != "road":
+        T = np.minimum(T0, T)
     np.fill_diagonal(T, 0)
     F = floyd_warshall(T)
 
@@ -151,7 +153,7 @@ def run(scenario, con, base, pts0, cities, T0, remote):
     for c in ("t_nearest_city_h",):
         acc[c] = acc[c].where(np.isfinite(acc[c]))
 
-    ii, jj = np.nonzero(best <= MAX_H)
+    ii, jj = np.nonzero(np.isfinite(best))
     times = pa.table({"point_id": on.point_id.values[ii],
                       "city": cities.city.values[jj], "road_h": road[ii, jj], "best_h": best[ii, jj]})
     return acc, times
@@ -159,10 +161,7 @@ def run(scenario, con, base, pts0, cities, T0, remote):
 
 def main():
     os.chdir(ROOT)
-    e = load_edges()
     n = pq.read_metadata(GRAPH / "nodes.parquet").num_rows
-    base = (e["src"].astype(np.int64), e["dst"].astype(np.int64), e["h"].astype(np.float32), n)
-    del e
     nodes = pq.read_table(GRAPH / "nodes.parquet", columns=["lat", "lon"]).to_pandas()
     pts = pq.read_table(GRAPH / "points.parquet").to_pandas()
     con = duckdb.connect(str(DB))
@@ -201,22 +200,32 @@ def main():
         a, b = s.city_from.map(ci).values, s.city_to.map(ci).values
         np.minimum.at(T0, (a, b), s.distance_hr.values + oh)
 
-    con.execute("drop table if exists np_access"); con.execute("drop table if exists np_city_times")
+    con.execute("begin transaction")
+    con.execute("drop table if exists np_access_next")
+    con.execute("drop table if exists np_city_times_next")
     for scenario in SCENARIOS:
+        e = load_edges(scenario)
+        base = (e["src"].astype(np.int64), e["dst"].astype(np.int64), e["h"].astype(np.float32), n)
+        del e
         acc, times = run(scenario, con, base, pts, cities, T0, remote)
         con.register("acc", pa.Table.from_pandas(acc, preserve_index=False))
         con.register("times", times)
         if scenario == SCENARIOS[0]:
-            con.execute("create table np_access as select * from acc")
-            con.execute("create table np_city_times as select ?::varchar as season, * from times", [scenario])
+            con.execute("create table np_access_next as select * from acc")
+            con.execute("create table np_city_times_next as select ?::varchar as season, * from times", [scenario])
         else:
-            con.execute("insert into np_access by name select * from acc")
-            con.execute("insert into np_city_times select ?::varchar as season, * from times", [scenario])
+            con.execute("insert into np_access_next by name select * from acc")
+            con.execute("insert into np_city_times_next select ?::varchar as season, * from times", [scenario])
         con.unregister("acc"); con.unregister("times")
         print(f"[{scenario}] np_city_times rows={times.num_rows}", flush=True)
         del acc, times
     con.register("cities", pa.Table.from_pandas(cities.drop(columns=["point_id", "on_road"]), preserve_index=False))
     con.execute("create or replace table market_cities as select * from cities")
+    con.execute("drop table if exists np_access")
+    con.execute("drop table if exists np_city_times")
+    con.execute("alter table np_access_next rename to np_access")
+    con.execute("alter table np_city_times_next rename to np_city_times")
+    con.execute("commit")
     print(con.sql("""select season, count(t_district_center_h) dc, count(t_capital_h) cap,
                             count(*) filter (manual_only) manual_only,
                             round(median(t_district_center_h),2) med_dc, round(median(t_capital_best_h),2) med_cap_best,
