@@ -18,7 +18,6 @@
 }
 
 .table .scroller {
-  max-block-size: calc(100dvh - var(--header-height) - var(--space-48));
   overscroll-behavior: auto;
 }
 
