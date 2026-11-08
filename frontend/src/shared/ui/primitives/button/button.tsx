@@ -28,7 +28,7 @@ export function ButtonContent({ icon, pending = false, children }: ButtonContent
     <>
       <span className={styles.content} data-pending={pending}>
         {icon === undefined ? null : <Icon name={icon} size="sm" />}
-        <span>{children}</span>
+        {children === null || children === undefined ? null : <span>{children}</span>}
       </span>
       {pending ? <Icon name="loader" size="sm" className={styles.loader} /> : null}
     </>
@@ -71,6 +71,7 @@ export function Button({
       className={clsx(styles.button, VARIANT_CLASS[variant], SIZE_CLASS[size], className)}
       aria-busy={pending || undefined}
       aria-disabled={pending || undefined}
+      data-icon-only={children === null || children === undefined || undefined}
       onClick={handleClick}
     >
       <ButtonContent icon={icon} pending={pending}>

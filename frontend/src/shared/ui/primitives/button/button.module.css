@@ -55,6 +55,16 @@
   --button-padding: var(--space-8);
 }
 
+.button[data-icon-only] {
+  --button-padding: 0;
+
+  inline-size: var(--button-height);
+}
+
+.button[data-icon-only]::before {
+  inset-inline: calc((var(--button-height) - var(--target-min)) / 2);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .button:hover:not(:disabled, [aria-disabled="true"]) {
     background-color: var(--button-surface-hover);
