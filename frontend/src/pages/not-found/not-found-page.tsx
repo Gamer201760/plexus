@@ -10,7 +10,7 @@ export function NotFoundPage() {
   useDocumentTitle(t("common:notFound.title"))
   return (
     <StatusScreen
-      art={<IsoText text="404" />}
+      art={<IsoText glyph="notFound" />}
       title={t("common:notFound.title")}
       description={t("common:notFound.description")}
       actions={

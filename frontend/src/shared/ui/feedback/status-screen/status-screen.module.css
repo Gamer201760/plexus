@@ -10,7 +10,7 @@
 }
 
 .art {
-  inline-size: min(100%, 34rem);
+  inline-size: min(70%, 20rem);
 }
 
 .art > svg {
@@ -32,9 +32,7 @@
 }
 
 .description {
-  max-inline-size: var(--prose-measure);
-  color: var(--text-secondary);
-  font-size: var(--font-size-subheading);
+  composes: leadText from "../../../styles/compose.module.css";
 }
 
 .actions {
@@ -44,14 +42,38 @@
   margin-block-start: var(--space-8);
 }
 
+.center {
+  justify-items: center;
+  min-block-size: 100dvh;
+  text-align: center;
+}
+
+.center .art {
+  inline-size: min(90%, 40rem);
+}
+
+.center .copy {
+  justify-items: center;
+}
+
 @media (width >= 64rem) {
   .screen {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    grid-template-columns: auto minmax(0, 36rem);
+    justify-content: center;
     align-items: center;
     gap: var(--space-64);
   }
 
   .art {
-    inline-size: 100%;
+    inline-size: 22rem;
+  }
+
+  .screen.center {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-40);
+  }
+
+  .center .art {
+    inline-size: 40rem;
   }
 }

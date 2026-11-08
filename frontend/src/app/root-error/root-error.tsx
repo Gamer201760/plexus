@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { Link, useRouteError } from "react-router"
 import { useDocumentTitle, useTranslation } from "@/shared/i18n"
-import { Button, ButtonLink, StatusScreen } from "@/shared/ui"
+import { StatusScreen } from "@/shared/ui"
 import { BrandMark, IsoText } from "@/shared/ui/brand"
 import styles from "./root-error.module.css"
 
@@ -21,19 +21,10 @@ export function RootError() {
       </header>
       <main id="main">
         <StatusScreen
-          art={<IsoText text={t("errors:boundary.art")} />}
+          art={<IsoText glyph="failure" />}
           title={t("errors:boundary.title")}
           description={t("errors:boundary.description")}
-          actions={
-            <>
-              <Button icon="refresh" onClick={() => window.location.reload()}>
-                {t("errors:boundary.reload")}
-              </Button>
-              <ButtonLink to="/" variant="secondary" icon="map">
-                {t("errors:boundary.home")}
-              </ButtonLink>
-            </>
-          }
+          layout="center"
         />
       </main>
     </div>

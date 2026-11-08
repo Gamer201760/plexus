@@ -6,7 +6,7 @@ export {
   type BrandMarkSize,
   type BrandMarkTone,
 } from "./brand-mark/brand-mark"
-export { IsoText, type IsoTextProps } from "./iso-text/iso-text"
+export { type IsoGlyph, IsoText, type IsoTextProps } from "./iso-text/iso-text"
 export { blobPath } from "./isolines/iso-path"
 export {
   Isolines,

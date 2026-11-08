@@ -21,6 +21,7 @@ export {
 } from "./feedback/status-badge/status-badge"
 export {
   StatusScreen,
+  type StatusScreenLayout,
   type StatusScreenProps,
 } from "./feedback/status-screen/status-screen"
 export {
