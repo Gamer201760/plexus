@@ -1,0 +1,125 @@
+{
+  "banner": {
+    "promise": "Какие сёла держатся на авиарейсах, зимниках и переправах",
+    "note": "Атлас транспортной связанности регионов России"
+  },
+  "buttons": [
+    {
+      "name": "run",
+      "label": "Запустить локально",
+      "icon": "terminal",
+      "href": "#запуск",
+      "primary": true
+    },
+    {
+      "name": "docs",
+      "label": "Документация",
+      "icon": "book-open",
+      "href": "docs/README.md",
+      "primary": false
+    }
+  ],
+  "status": [
+    {
+      "name": "settlements",
+      "label": "Населённых пунктов",
+      "value": "155 412",
+      "href": "#результаты",
+      "tone": "accent"
+    },
+    {
+      "name": "links",
+      "label": "Ручных связей",
+      "value": "997",
+      "href": "#результаты"
+    },
+    {
+      "name": "regions",
+      "label": "Регионов",
+      "value": "82",
+      "href": "#результаты"
+    },
+    {
+      "name": "tests",
+      "label": "Тесты",
+      "value": "333 и 103",
+      "href": "#запуск"
+    },
+    {
+      "name": "offline",
+      "label": "Ключи и сеть",
+      "value": "не нужны",
+      "href": "#запуск"
+    },
+    {
+      "name": "locale",
+      "label": "Интерфейс",
+      "value": "RU"
+    }
+  ],
+  "stack": [
+    {
+      "name": "frontend",
+      "label": "Фронтенд",
+      "value": "React 19, Vite"
+    },
+    {
+      "name": "types",
+      "label": "Типы",
+      "value": "TypeScript strict"
+    },
+    {
+      "name": "api",
+      "label": "API",
+      "value": "FastAPI"
+    },
+    {
+      "name": "data",
+      "label": "Расчёт",
+      "value": "DuckDB, OSM"
+    },
+    {
+      "name": "tools",
+      "label": "Пакеты",
+      "value": "uv, npm"
+    }
+  ],
+  "nav": [
+    {
+      "name": "why",
+      "value": "Зачем это",
+      "href": "#зачем-это"
+    },
+    {
+      "name": "how",
+      "value": "Как это работает",
+      "href": "#как-это-работает"
+    },
+    {
+      "name": "try",
+      "value": "Попробовать",
+      "href": "#попробовать-за-две-минуты"
+    },
+    {
+      "name": "results",
+      "value": "Результаты",
+      "href": "#результаты"
+    },
+    {
+      "name": "run",
+      "value": "Запуск",
+      "href": "#запуск"
+    },
+    {
+      "name": "layout",
+      "value": "Устройство",
+      "href": "#устройство"
+    },
+    {
+      "name": "limits",
+      "value": "Ограничения",
+      "href": "#ограничения",
+      "tone": "warning"
+    }
+  ]
+}
