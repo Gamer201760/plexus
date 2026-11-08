@@ -3,7 +3,7 @@ import type { MetricKey } from "./metric"
 
 export function formatMetric(value: number, metric: MetricKey, f: Formatters): string {
   if (metric === "links") return f.integer(value)
-  if (metric === "revenuePerCapita") return f.money(Math.round(value), "RUB")
+  if (metric === "revenuePerCapita") return f.money(value, "RUB", 0)
   return f.compact(value)
 }
 

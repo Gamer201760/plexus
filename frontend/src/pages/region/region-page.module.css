@@ -13,6 +13,9 @@
 }
 
 .crumb {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--target-min);
   color: var(--text-secondary);
 }
 

@@ -7,7 +7,7 @@ export interface Formatters {
   readonly integer: (value: number) => string
   readonly compact: (value: number) => string
   readonly percent: (ratio: number, fractionDigits?: number) => string
-  readonly money: (value: number, currency: string) => string
+  readonly money: (value: number, currency: string, fractionDigits?: number) => string
   readonly date: (value: DateInput) => string
   readonly time: (value: DateInput) => string
   readonly dateTime: (value: DateInput) => string
@@ -52,7 +52,12 @@ export function createFormatters(timeZone?: string): Formatters {
       numberFormat({ notation: "compact", maximumFractionDigits: 1 }).format(value),
     percent: (ratio, fractionDigits = 0) =>
       numberFormat({ style: "percent", ...digits(fractionDigits) }).format(ratio),
-    money: (value, currency) => numberFormat({ style: "currency", currency }).format(value),
+    money: (value, currency, fractionDigits) =>
+      numberFormat(
+        fractionDigits === undefined
+          ? { style: "currency", currency }
+          : { style: "currency", currency, ...digits(fractionDigits) },
+      ).format(value),
     date: (value) => dateFormat.format(new Date(value)),
     time: (value) => timeFormat.format(new Date(value)),
     dateTime: (value) => dateTimeFormat.format(new Date(value)),
