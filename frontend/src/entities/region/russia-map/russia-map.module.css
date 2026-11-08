@@ -62,51 +62,6 @@
   fill: var(--data-seq-7);
 }
 
-.region[data-selected] {
-  stroke: var(--map-selected);
-  stroke-width: var(--iso-line-strong);
-}
-
-.selection {
-  pointer-events: none;
-}
-
-.selection > path {
-  fill: none;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.ring3 {
-  stroke: var(--iso-3);
-  stroke-width: var(--map-ring-3);
-}
-
-.knock3 {
-  stroke: var(--surface-raised);
-  stroke-width: var(--map-knock-3);
-}
-
-.ring2 {
-  stroke: var(--iso-2);
-  stroke-width: var(--map-ring-2);
-}
-
-.knock2 {
-  stroke: var(--surface-raised);
-  stroke-width: var(--map-knock-2);
-}
-
-.ring1 {
-  stroke: var(--iso-1);
-  stroke-width: var(--map-ring-1);
-}
-
-.knock1 {
-  stroke: var(--surface-raised);
-  stroke-width: var(--map-knock-1);
-}
-
 @media (hover: hover) and (pointer: fine) {
   .region:hover:not([data-selected]) {
     stroke: var(--map-selected);

@@ -1,4 +1,4 @@
-import { type PointerEvent, useCallback, useRef, useState, type WheelEvent } from "react"
+import { type PointerEvent, useCallback, useEffect, useRef, useState, type WheelEvent } from "react"
 
 export interface MapView {
   readonly scale: number
@@ -16,9 +16,30 @@ export interface Box {
 const MIN_SCALE = 1
 const MAX_SCALE = 12
 const WHEEL_STEP = 1.18
-const FIT_PADDING = 0.78
+const FIT_SHARE = 0.5
+const MAX_FIT_SCALE = 6
 
 const clampScale = (scale: number) => Math.min(MAX_SCALE, Math.max(MIN_SCALE, scale))
+
+function unitsPerPixel(svg: SVGSVGElement | null, frame: Box): number {
+  const rect = svg?.getBoundingClientRect()
+  if (!rect || rect.width === 0 || rect.height === 0) return 1
+  return Math.max(frame.width / rect.width, frame.height / rect.height)
+}
+
+function useUnitsPerPixel(svgRef: { readonly current: SVGSVGElement | null }, frame: Box) {
+  const [unit, setUnit] = useState(1)
+  useEffect(() => {
+    const svg = svgRef.current
+    const measure = () => setUnit(unitsPerPixel(svg, frame))
+    measure()
+    if (svg === null || typeof ResizeObserver === "undefined") return
+    const observer = new ResizeObserver(measure)
+    observer.observe(svg)
+    return () => observer.disconnect()
+  }, [svgRef, frame])
+  return unit
+}
 
 export function useMapView(frame: Box) {
   const [view, setView] = useState<MapView>({ scale: 1, x: 0, y: 0 })
@@ -26,6 +47,7 @@ export function useMapView(frame: Box) {
   const drag = useRef<{ id: number; px: number; py: number; moved: boolean } | null>(null)
   const svgRef = useRef<SVGSVGElement | null>(null)
   const justDragged = useRef(false)
+  const unit = useUnitsPerPixel(svgRef, frame)
 
   const toLocal = useCallback(
     (clientX: number, clientY: number) => {
@@ -60,9 +82,8 @@ export function useMapView(frame: Box) {
 
   const fitBox = useCallback(
     (box: Box) => {
-      const scale = clampScale(
-        Math.min(frame.width / box.width, frame.height / box.height) * FIT_PADDING,
-      )
+      const fit = Math.min(frame.width / box.width, frame.height / box.height) * FIT_SHARE
+      const scale = clampScale(Math.min(MAX_FIT_SCALE, fit))
       const cx = box.x + box.width / 2
       const cy = box.y + box.height / 2
       const fx = frame.x + frame.width / 2
@@ -115,6 +136,7 @@ export function useMapView(frame: Box) {
 
   return {
     view,
+    unit,
     dragging,
     svgRef,
     zoomBy,

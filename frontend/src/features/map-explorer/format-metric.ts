@@ -6,3 +6,7 @@ export function formatMetric(value: number, metric: MetricKey, f: Formatters): s
   if (metric === "revenuePerCapita") return f.money(Math.round(value), "RUB")
   return f.compact(value)
 }
+
+export function formatThreshold(value: number, metric: MetricKey, f: Formatters): string {
+  return metric === "links" ? f.integer(value) : f.compact(value)
+}

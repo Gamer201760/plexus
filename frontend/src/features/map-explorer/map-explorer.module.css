@@ -16,10 +16,34 @@
   border-inline-start: var(--hairline) solid var(--border-subtle);
 }
 
-.mapSkeleton {
+.mapLoading {
   position: absolute;
   inset: 0;
-  border-radius: 0;
+  display: grid;
+  place-items: center;
+  background-color: var(--map-water);
+}
+
+.loadingRings {
+  inline-size: calc(var(--space-64) * 2);
+  block-size: calc(var(--space-64) * 2);
+}
+
+.overlay {
+  display: contents;
+}
+
+.seasonOff {
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  cursor: not-allowed;
+  opacity: var(--opacity-stale);
+}
+
+.seasonOff > * {
+  pointer-events: none;
 }
 
 .toolbar {
@@ -50,11 +74,42 @@
 
 @media (max-width: 48rem) {
   .toolbar {
+    flex-wrap: nowrap;
     inline-size: auto;
+  }
+
+  .metric {
+    flex: 1 1 auto;
+    min-inline-size: 0;
+  }
+
+  .toolbar > :not(.metric) {
+    flex: none;
   }
 }
 
 @media (max-width: 64rem) {
+  .overlay {
+    position: absolute;
+    inset-block-start: var(--space-16);
+    inset-inline: var(--space-16);
+    z-index: var(--layer-raised);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-8);
+    pointer-events: none;
+  }
+
+  .overlay > * {
+    pointer-events: auto;
+  }
+
+  .stage > .overlay > * {
+    position: static;
+    max-inline-size: 100%;
+  }
+
   .explorer {
     grid-template-columns: 1fr;
     grid-template-rows: var(--map-mobile-height) auto;

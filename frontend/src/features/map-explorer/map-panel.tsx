@@ -1,5 +1,5 @@
 import { useEffect, useId } from "react"
-import { useLocation } from "react-router"
+import { Link, useLocation } from "react-router"
 import type { IndexStatus } from "@/entities/reference"
 import { type Overview, type RegionSummary, type Season, useRegion } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
@@ -15,6 +15,7 @@ export interface MapPanelProps {
   readonly metric: MetricKey
   readonly season: Season
   readonly selectedId: string | null
+  readonly searchFor: (id: string) => string
   readonly onClear: () => void
 }
 
@@ -25,11 +26,10 @@ function IndexBanner({ index }: { readonly index: IndexStatus }) {
     <Banner
       tone="info"
       title={t("map:index.missing")}
-      description={t("map:index.missingText")}
-      action={
-        <ButtonLink to="/method" variant="secondary" size="compact" icon="book">
+      description={
+        <Link to="/method" className={styles.indexLink}>
           {t("map:index.method")}
-        </ButtonLink>
+        </Link>
       }
     />
   )
@@ -108,6 +108,7 @@ export function MapPanel({
   metric,
   season,
   selectedId,
+  searchFor,
   onClear,
 }: MapPanelProps) {
   const { t } = useTranslation()
@@ -136,7 +137,7 @@ export function MapPanel({
             </Card>
           )}
           <IndexBanner index={overview.index} />
-          <Ranking regions={regions} metric={metric} />
+          <Ranking regions={regions} metric={metric} searchFor={searchFor} />
         </div>
       </ScrollArea>
     </aside>

@@ -1,31 +1,51 @@
-import { useTranslation } from "@/shared/i18n"
+import clsx from "clsx"
+import { useFormatters, useTranslation } from "@/shared/i18n"
+import { formatThreshold } from "./format-metric"
 import styles from "./map-legend.module.css"
 import type { MetricKey } from "./metric"
-
-const STEPS = [1, 2, 3, 4, 5, 6, 7] as const
+import type { MetricScale } from "./scale"
 
 export interface MapLegendProps {
   readonly metric: MetricKey
+  readonly scale: MetricScale
+  readonly missing: boolean
 }
 
-export function MapLegend({ metric }: MapLegendProps) {
+export function MapLegend({ metric, scale, missing }: MapLegendProps) {
   const { t } = useTranslation()
+  const f = useFormatters()
+  const title = t(`data:metric.${metric}`)
   return (
-    <figure className={styles.legend}>
-      <figcaption className={styles.legendTitle}>{t(`data:metric.${metric}`)}</figcaption>
-      <div className={styles.ramp} aria-hidden="true">
-        {STEPS.map((step) => (
-          <span key={step} className={styles.swatch} data-step={step} />
-        ))}
-      </div>
-      <div className={styles.rampScale}>
-        <span>{t("map:legend.less")}</span>
-        <span>{t("map:legend.more")}</span>
-      </div>
-      <div className={styles.legendNone}>
-        <span className={styles.swatch} data-step={0} aria-hidden="true" />
-        <span>{t("map:legend.none")}</span>
-      </div>
+    <figure className={styles.legend} aria-label={title}>
+      <figcaption className={styles.legendTitle} aria-hidden="true">
+        {title}
+      </figcaption>
+      <ol className={styles.scale}>
+        {scale.hasZero ? (
+          <li className={clsx(styles.bin, styles.zero)}>
+            <span className={styles.swatch} data-step={1} aria-hidden="true" />
+            <span className={styles.tick}>{formatThreshold(0, metric, f)}</span>
+          </li>
+        ) : null}
+        {scale.bins.map((bin) => {
+          const value = formatThreshold(bin.from, metric, f)
+          return (
+            <li key={bin.step} className={styles.bin}>
+              <span className={styles.swatch} data-step={bin.step} aria-hidden="true" />
+              <span className={styles.tick} aria-hidden="true">
+                {value}
+              </span>
+              <span className="visually-hidden">{t("map:legend.from", { value })}</span>
+            </li>
+          )
+        })}
+      </ol>
+      {missing ? (
+        <p className={styles.legendNone}>
+          <span className={styles.swatch} data-step={0} aria-hidden="true" />
+          <span>{t("map:legend.none")}</span>
+        </p>
+      ) : null}
     </figure>
   )
 }

@@ -9,11 +9,12 @@ import styles from "./ranking.module.css"
 export interface RankingProps {
   readonly regions: readonly RegionSummary[]
   readonly metric: MetricKey
+  readonly searchFor: (id: string) => string
 }
 
 const LIMIT = 8
 
-export function Ranking({ regions, metric }: RankingProps) {
+export function Ranking({ regions, metric, searchFor }: RankingProps) {
   const { t } = useTranslation()
   const f = useFormatters()
   const ranked = regions
@@ -29,7 +30,7 @@ export function Ranking({ regions, metric }: RankingProps) {
         {ranked.map(({ region, value }, index) => (
           <li key={region.id} style={{ "--i": index } as CSSProperties}>
             <Link
-              to={{ search: `?region=${region.id}` }}
+              to={{ search: searchFor(region.id) }}
               replace
               preventScrollReset
               state={{ reveal: true }}

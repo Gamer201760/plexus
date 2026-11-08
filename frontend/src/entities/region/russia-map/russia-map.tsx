@@ -1,6 +1,7 @@
 import clsx from "clsx"
 import { type CSSProperties, type ReactNode, useEffect, useMemo } from "react"
 import styles from "./russia-map.module.css"
+import { SelectionRings } from "./selection-rings"
 import { type Box, useMapView } from "./use-map-view"
 
 export interface MapRegion {
@@ -87,20 +88,19 @@ export function RussiaMap({
             />
           ))}
           {selected ? (
-            <g className={styles.selection} key={selected.id}>
-              <path className={styles.ring3} d={selected.path} />
-              <path className={styles.knock3} d={selected.path} />
-              <path className={styles.ring2} d={selected.path} />
-              <path className={styles.knock2} d={selected.path} />
-              <path className={styles.ring1} d={selected.path} />
-              <path className={styles.knock1} d={selected.path} />
+            <SelectionRings
+              key={selected.id}
+              path={selected.path}
+              frame={frame}
+              unit={map.unit / map.view.scale}
+            >
               <path
                 className={styles.region}
                 data-step={stepOf(selected.id)}
                 data-selected
                 d={selected.path}
               />
-            </g>
+            </SelectionRings>
           ) : null}
         </g>
       </svg>

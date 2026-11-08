@@ -1,0 +1,57 @@
+.selection {
+  --ring-step: var(--iso-step);
+  --ring-line: var(--iso-line-strong);
+
+  pointer-events: none;
+}
+
+.enter {
+  composes: ringEnter from "../../../shared/styles/compose.module.css";
+}
+
+.line,
+.band,
+.cut {
+  fill: none;
+  stroke-linejoin: round;
+}
+
+.band {
+  stroke: var(--map-border);
+}
+
+.cut {
+  stroke: var(--map-selected);
+}
+
+.outer2 {
+  stroke-width: calc((var(--ring-step) * 2 + var(--ring-line)) * var(--map-unit));
+}
+
+.inner2 {
+  stroke-width: calc((var(--ring-step) * 2 - var(--ring-line)) * var(--map-unit));
+}
+
+.outer3 {
+  stroke-width: calc((var(--ring-step) * 4 + var(--ring-line)) * var(--map-unit));
+}
+
+.inner3 {
+  stroke-width: calc((var(--ring-step) * 4 - var(--ring-line)) * var(--map-unit));
+}
+
+.ring1 {
+  stroke: var(--iso-1);
+  stroke-width: var(--ring-line);
+  vector-effect: non-scaling-stroke;
+}
+
+.ring2 {
+  stroke: var(--iso-2);
+  stroke-width: calc((var(--ring-step) * 2 + var(--ring-line)) * var(--map-unit));
+}
+
+.ring3 {
+  stroke: var(--iso-3);
+  stroke-width: calc((var(--ring-step) * 4 + var(--ring-line)) * var(--map-unit));
+}

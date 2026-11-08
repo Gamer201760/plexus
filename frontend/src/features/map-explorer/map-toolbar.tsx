@@ -1,8 +1,8 @@
 import type { Season } from "@/entities/region"
 import { useTranslation } from "@/shared/i18n"
-import { Segmented, Select } from "@/shared/ui"
+import { Segmented, Select, Tooltip } from "@/shared/ui"
 import styles from "./map-explorer.module.css"
-import { METRICS, type MetricKey } from "./metric"
+import { dependsOnSeason, METRICS, type MetricKey, SEASONS } from "./metric"
 
 export interface MapToolbarProps {
   readonly metric: MetricKey
@@ -13,6 +13,15 @@ export interface MapToolbarProps {
 
 export function MapToolbar({ metric, season, onMetric, onSeason }: MapToolbarProps) {
   const { t } = useTranslation()
+  const seasonal = dependsOnSeason(metric)
+  const seasons = (
+    <Segmented
+      label={t("data:season.legend")}
+      value={season}
+      onChange={onSeason}
+      options={SEASONS.map((key) => ({ value: key, label: t(`data:seasonShort.${key}`) }))}
+    />
+  )
   return (
     <div className={styles.toolbar}>
       <Select
@@ -23,15 +32,15 @@ export function MapToolbar({ metric, season, onMetric, onSeason }: MapToolbarPro
         options={METRICS.map((key) => ({ value: key, label: t(`data:metric.${key}`) }))}
         className={styles.metric}
       />
-      <Segmented
-        label={t("data:season.legend")}
-        value={season}
-        onChange={onSeason}
-        options={(["all", "summer", "winter"] as const).map((key) => ({
-          value: key,
-          label: t(`data:seasonShort.${key}`),
-        }))}
-      />
+      {seasonal ? (
+        seasons
+      ) : (
+        <Tooltip content={t("map:seasonIgnored")} side="bottom">
+          <fieldset className={styles.seasonOff} disabled>
+            {seasons}
+          </fieldset>
+        </Tooltip>
+      )}
     </div>
   )
 }

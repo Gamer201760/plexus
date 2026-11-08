@@ -20,12 +20,7 @@
   --hairline: 1px;
   --iso-line: 1.5px;
   --iso-line-strong: 2px;
-  --map-ring-1: 12px;
-  --map-knock-1: 8px;
-  --map-ring-2: 22px;
-  --map-knock-2: 18px;
-  --map-ring-3: 32px;
-  --map-knock-3: 28px;
+  --iso-step: 12px;
   --dash-winter: 6 4;
   --dash-unknown: 1 4;
   --link-active-width: 4px;

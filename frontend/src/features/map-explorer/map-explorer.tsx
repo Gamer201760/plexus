@@ -1,23 +1,18 @@
-import { useMemo, useState } from "react"
-import { useSearchParams } from "react-router"
-import {
-  type Box,
-  RussiaMap,
-  type Season,
-  useGeoRegions,
-  useOverview,
-  useRegion,
-  useRegions,
-} from "@/entities/region"
+import { useState } from "react"
+import { RussiaMap } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
-import { Button, ErrorState, Skeleton, Tooltip } from "@/shared/ui"
+import { ErrorState, Skeleton } from "@/shared/ui"
+import { Isolines } from "@/shared/ui/brand"
 import { formatMetric } from "./format-metric"
 import { HoverCard } from "./hover-card"
 import styles from "./map-explorer.module.css"
 import { MapLegend } from "./map-legend"
 import { MapPanel } from "./map-panel"
 import { MapToolbar } from "./map-toolbar"
-import { type MetricKey, metricValue, stepScale } from "./metric"
+import { MapZoom } from "./map-zoom"
+import { metricValue } from "./metric"
+import { useExplorerParams } from "./use-explorer-params"
+import { useMapData } from "./use-map-data"
 
 interface Hover {
   readonly id: string
@@ -25,47 +20,30 @@ interface Hover {
   readonly y: number
 }
 
+function MapLoading() {
+  const { t } = useTranslation()
+  return (
+    <div className={styles.mapLoading} role="status">
+      <Isolines rings={3} motion="pulse" className={styles.loadingRings} />
+      <span className="visually-hidden">{t("common:state.loading")}</span>
+    </div>
+  )
+}
+
 export function MapExplorer() {
   const { t } = useTranslation()
   const f = useFormatters()
-  const [params, setParams] = useSearchParams()
-  const [season, setSeason] = useState<Season>("all")
-  const [metric, setMetric] = useState<MetricKey>("links")
+  const { metric, season, selectedId, setMetric, setSeason, select, searchFor } =
+    useExplorerParams()
   const [hover, setHover] = useState<Hover | null>(null)
-  const selectedId = params.get("region")
-  const geo = useGeoRegions()
-  const regions = useRegions(season)
-  const overview = useOverview()
-  const selected = useRegion(selectedId ?? "", season)
+  const { geo, regions, overview, byId, valueAt, scale, missing, focusBox, failed, retry } =
+    useMapData(metric, season, selectedId)
 
-  const byId = useMemo(() => new Map((regions.data ?? []).map((r) => [r.id, r])), [regions.data])
-  const step = useMemo(() => stepScale(regions.data ?? [], metric), [regions.data, metric])
-  const focusBox = useMemo<Box | null>(() => {
-    const bbox = selectedId ? selected.data?.bbox : null
-    if (!bbox) return null
-    const [x = 0, y = 0, width = 1, height = 1] = bbox
-    return { x, y, width, height }
-  }, [selectedId, selected.data])
-
-  const select = (id: string | null) => {
-    setParams(id ? { region: id } : {}, { replace: true })
-  }
-
-  if (geo.isError || regions.isError || overview.isError) {
-    return (
-      <ErrorState
-        title={t("errors:kind.server")}
-        onRetry={() => {
-          void geo.refetch()
-          void regions.refetch()
-          void overview.refetch()
-        }}
-      />
-    )
-  }
+  if (failed) return <ErrorState title={t("errors:kind.server")} onRetry={retry} />
 
   const hovered = hover ? byId.get(hover.id) : undefined
   const hoveredValue = hovered ? metricValue(hovered, metric) : null
+  const ready = geo.data !== undefined && regions.data !== undefined
 
   return (
     <div className={styles.explorer}>
@@ -74,58 +52,21 @@ export function MapExplorer() {
           <RussiaMap
             viewBox={geo.data.view_box}
             regions={geo.data.regions}
-            stepOf={(id) => {
-              const region = byId.get(id)
-              return step(region ? metricValue(region, metric) : null)
-            }}
+            stepOf={(id) => scale.stepOf(valueAt(id))}
             selectedId={selectedId}
             focusBox={focusBox}
             label={t("map:label")}
             onSelect={select}
             onHover={(id, x, y) => setHover(id ? { id, x, y } : null)}
-            controls={(controls) => (
-              <div className={styles.zoom}>
-                <Tooltip content={t("map:zoomIn")} side="bottom" describe={false}>
-                  <Button
-                    variant="secondary"
-                    size="compact"
-                    icon="plus"
-                    onClick={controls.zoomIn}
-                    aria-label={t("map:zoomIn")}
-                  >
-                    {null}
-                  </Button>
-                </Tooltip>
-                <Tooltip content={t("map:zoomOut")} side="bottom" describe={false}>
-                  <Button
-                    variant="secondary"
-                    size="compact"
-                    icon="minus"
-                    onClick={controls.zoomOut}
-                    aria-label={t("map:zoomOut")}
-                  >
-                    {null}
-                  </Button>
-                </Tooltip>
-                <Tooltip content={t("map:reset")} side="bottom" describe={false}>
-                  <Button
-                    variant="secondary"
-                    size="compact"
-                    icon="locate"
-                    onClick={() => select(null)}
-                    aria-label={t("map:reset")}
-                  >
-                    {null}
-                  </Button>
-                </Tooltip>
-              </div>
-            )}
+            controls={(controls) => <MapZoom controls={controls} onReset={() => select(null)} />}
           />
         ) : (
-          <Skeleton shape="block" className={styles.mapSkeleton} />
+          <MapLoading />
         )}
-        <MapToolbar metric={metric} season={season} onMetric={setMetric} onSeason={setSeason} />
-        <MapLegend metric={metric} />
+        <div className={styles.overlay}>
+          <MapToolbar metric={metric} season={season} onMetric={setMetric} onSeason={setSeason} />
+          {ready ? <MapLegend metric={metric} scale={scale} missing={missing} /> : null}
+        </div>
         {hover && hovered ? (
           <HoverCard
             x={hover.x}
@@ -144,6 +85,7 @@ export function MapExplorer() {
           metric={metric}
           season={season}
           selectedId={selectedId}
+          searchFor={searchFor}
           onClear={() => select(null)}
         />
       ) : (
