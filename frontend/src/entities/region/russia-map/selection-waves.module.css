@@ -13,7 +13,7 @@
   transform-box: fill-box;
   transform-origin: center;
   animation: var(--motion-ring-wave);
-  animation-delay: calc(var(--dur-map) + var(--i) * var(--delay-wave-step));
+  animation-delay: calc(var(--dur-map) * 1.5 + var(--i) * var(--delay-wave-step));
 }
 
 .wave1 {

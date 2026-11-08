@@ -11,6 +11,7 @@ import { motionMs, readEasing } from "@/shared/motion"
 import {
   type Box,
   composeTransforms,
+  flightPath,
   type MapView,
   type Size,
   unitsPerPixel,
@@ -22,7 +23,8 @@ export type { Box, MapView } from "./map-motion"
 interface Flight {
   readonly view: MapView
   readonly anim: Animation | null
-  readonly start?: string
+  readonly keyframes?: Keyframe[]
+  readonly duration?: number
 }
 
 const HOME: MapView = { scale: 1, x: 0, y: 0 }
@@ -52,8 +54,8 @@ function useUnitsPerPixel(svgRef: { readonly current: SVGSVGElement | null }, fr
   return unit
 }
 
-function flightOptions(element: Element): KeyframeAnimationOptions {
-  return { duration: motionMs("--dur-map", element), easing: readEasing("--ease-out", element) }
+function flightOptions(element: Element, duration: number): KeyframeAnimationOptions {
+  return { duration, easing: readEasing("--ease-linear", element) }
 }
 
 export function useMapView(frame: Box) {
@@ -73,15 +75,12 @@ export function useMapView(frame: Box) {
     const current = flight.current
     const layer = motionRef.current
     if (current === null || current.view !== view) return
-    if (current.start === undefined || layer === null) {
+    if (current.keyframes === undefined || layer === null) {
       current.anim?.cancel()
       flight.current = null
       return
     }
-    const anim = layer.animate(
-      [{ transform: current.start }, { transform: "none" }],
-      flightOptions(layer),
-    )
+    const anim = layer.animate(current.keyframes, flightOptions(layer, current.duration ?? 0))
     flight.current = { view, anim }
     anim.onfinish = () => {
       if (flight.current?.anim === anim) flight.current = null
@@ -108,7 +107,7 @@ export function useMapView(frame: Box) {
         layer === null ||
         typeof layer.animate !== "function" ||
         size.width === 0 ||
-        current?.start !== undefined
+        current?.keyframes !== undefined
       ) {
         jump(next)
         return
@@ -117,19 +116,21 @@ export function useMapView(frame: Box) {
       current?.anim?.cancel()
       const from = shown.current
       goal.current = next
-      if (next.scale < from.scale) {
-        flight.current = {
-          view: next,
-          anim: null,
-          start: composeTransforms(now, viewShift(next, from, frame, size)),
-        }
+      const path = flightPath(from, next, frame)
+      const duration = motionMs("--dur-map", layer) * (1 + path.reach)
+      const base = next.scale < from.scale ? next : from
+      const keyframes: Keyframe[] = path.frames.map((view) => ({
+        transform: viewShift(base, view, frame, size),
+      }))
+      keyframes[0] = {
+        transform: base === from ? now : composeTransforms(now, viewShift(next, from, frame, size)),
+      }
+      if (base === next) {
+        flight.current = { view: next, anim: null, keyframes, duration }
         setView(next)
         return
       }
-      const anim = layer.animate(
-        [{ transform: now }, { transform: viewShift(from, next, frame, size) }],
-        { ...flightOptions(layer), fill: "forwards" },
-      )
+      const anim = layer.animate(keyframes, { ...flightOptions(layer, duration), fill: "forwards" })
       flight.current = { view: next, anim }
       anim.onfinish = () => {
         if (flight.current?.anim === anim) setView(next)
