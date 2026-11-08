@@ -1,9 +1,22 @@
+.panel {
+  padding: var(--space-16) var(--space-8);
+  border-radius: var(--radius-lg);
+  background-color: var(--map-water);
+}
+
+@media (width >= 48rem) {
+  .panel {
+    padding: var(--space-40) var(--space-32);
+  }
+}
+
 .atlas {
   position: relative;
 }
 
-.base {
+.land {
   composes: fluidSvg from "../../shared/styles/compose.module.css";
+  filter: var(--shadow-land);
 }
 
 .overlay {
@@ -14,13 +27,13 @@
 
 .region {
   composes: hairStroke from "../../shared/styles/compose.module.css";
-  fill: var(--map-land);
-  stroke: var(--map-border);
+  fill: var(--surface-base);
+  stroke: var(--border-subtle);
 }
 
 .stop {
   r: var(--atlas-stop);
-  fill: var(--iso-2);
+  fill: var(--iso-1);
   opacity: var(--opacity-route);
   animation: var(--motion-fade-in);
   animation-delay: calc(var(--dur-base) + var(--sweep) * var(--dur-draw));

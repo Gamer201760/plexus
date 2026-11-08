@@ -37,10 +37,10 @@ export function HomeIntro() {
           <Skeleton lines={2} className={styles.leadSkeleton} />
         )}
         <div className={styles.actions}>
-          <ButtonLink to="/map" icon="map" className={styles.primary}>
+          <ButtonLink to="/map" icon="map" className={styles.cta}>
             {t("home:open")}
           </ButtonLink>
-          <ButtonLink to="/method" variant="secondary" icon="book">
+          <ButtonLink to="/method" variant="secondary" className={styles.cta}>
             {t("home:method")}
           </ButtonLink>
         </div>

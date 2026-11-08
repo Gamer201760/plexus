@@ -1,19 +1,20 @@
 .home {
   display: grid;
+  justify-items: center;
   gap: var(--space-48);
-  place-content: center stretch;
-  min-block-size: 100svh;
-  padding: var(--space-40) var(--space-page);
+  padding: var(--space-64) var(--space-page) var(--space-48);
 }
 
 .intro {
   display: grid;
-  justify-items: start;
+  justify-items: center;
   gap: var(--space-24);
+  inline-size: min(100%, 52rem);
+  text-align: center;
 }
 
 .wordmark {
-  inline-size: min(80%, 26rem);
+  inline-size: min(88%, 34rem);
 }
 
 .wordmark > svg {
@@ -35,7 +36,7 @@
 .lead {
   composes: leadText from "../../shared/styles/compose.module.css";
   line-height: var(--line-height-body);
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 .leadSkeleton {
@@ -45,14 +46,21 @@
 .actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-12);
+  margin-block-start: var(--space-8);
 }
 
-.primary {
-  --button-padding: var(--space-24);
+.cta {
+  --button-height: calc(var(--control-height) + var(--space-8));
+  --button-padding: var(--space-32);
+
+  min-inline-size: 13rem;
+  font-size: var(--font-size-body);
 }
 
 .stage {
+  inline-size: min(100%, 76rem);
   min-inline-size: 0;
 }
 
@@ -65,9 +73,6 @@
 
 @media (width >= 64rem) {
   .home {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    align-items: center;
-    gap: var(--space-64);
     padding-inline: var(--space-page-wide);
   }
 }
