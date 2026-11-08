@@ -1,26 +1,5 @@
 .page {
   composes: pagePad from "../../shared/styles/compose.module.css";
   display: grid;
-  gap: var(--space-32);
-}
-
-.title {
-  display: grid;
-  gap: var(--space-2);
-  max-inline-size: var(--prose-measure);
-}
-
-.note {
-  color: var(--text-muted);
-  font-size: var(--font-size-caption);
-}
-
-.inlineLink {
-  justify-self: start;
-  margin-block-start: var(--space-4);
-  margin-inline-start: calc(var(--space-12) * -1);
-}
-
-.bone {
-  gap: var(--space-40);
+  gap: var(--space-24);
 }

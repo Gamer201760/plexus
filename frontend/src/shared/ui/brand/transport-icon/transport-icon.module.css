@@ -9,12 +9,7 @@
   stroke-width: var(--icon-stroke);
 }
 
-.icon .dot {
-  fill: currentcolor;
-  stroke: none;
-}
-
-.sm {
+.icon .sm {
   --transport-size: var(--icon-sm);
 }
 

@@ -15,7 +15,7 @@
 
   --font-size-caption: 0.75rem;
   --line-height-caption: 1.45;
-  --font-size-label: 0.8125rem;
+  --font-size-label: 0.875rem;
   --line-height-label: 1.4;
   --font-size-body-sm: 0.875rem;
   --line-height-body-sm: 1.45;
@@ -25,12 +25,12 @@
   --line-height-subheading: 1.35;
   --font-size-heading: 1.5rem;
   --line-height-heading: 1.25;
-  --font-size-heading-lg: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  --font-size-heading-lg: 1.75rem;
   --line-height-heading-lg: 1.15;
 
   --tracking-normal: 0;
   --tracking-tight: -0.015em;
   --tracking-display: -0.025em;
-  --font-size-display: clamp(2rem, 1.4rem + 2vw, 3rem);
+  --font-size-display: 2.5rem;
   --line-height-display: 1.08;
 }

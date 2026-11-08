@@ -60,6 +60,7 @@ export { Select, type SelectOption, type SelectProps } from "./forms/select/sele
 export { Switch, type SwitchProps } from "./forms/switch/switch"
 export { TextField, type TextFieldProps, type TextFieldType } from "./forms/text-field/text-field"
 export { Card, type CardProps } from "./layout/card/card"
+export { Disclosure } from "./layout/disclosure/disclosure"
 export { PageHeader, type PageHeaderProps } from "./layout/page-header/page-header"
 export {
   ScrollArea,

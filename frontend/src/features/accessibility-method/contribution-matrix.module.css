@@ -1,0 +1,43 @@
+.matrix {
+  min-inline-size: 0;
+}
+.matrix table {
+  inline-size: 100%;
+  border-spacing: var(--space-2);
+  table-layout: fixed;
+}
+.matrix th {
+  font-weight: var(--weight-regular);
+  text-align: center;
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+  padding-block: var(--space-12);
+}
+.matrix th:first-child {
+  text-align: start;
+}
+.matrix tbody th {
+  color: var(--text-primary);
+  font-size: var(--font-size-body-sm);
+}
+.matrix .cell {
+  background: var(--cell-background);
+  color: var(--cell-color);
+  inline-size: 100%;
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-body-sm);
+  font-variant-numeric: var(--font-numeric);
+}
+.matrix .cell[aria-pressed="true"] {
+  outline: var(--iso-line-strong) solid var(--text-primary);
+  outline-offset: calc(var(--iso-line-strong) * -1);
+}
+.readout {
+  margin-block-start: var(--space-32);
+}
+.note {
+  margin-block-start: var(--space-12);
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+}

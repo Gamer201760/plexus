@@ -9,6 +9,8 @@ export function useRouteFocus(): void {
     previous.current = pathname
     if (!changed) return
     const frame = window.requestAnimationFrame(() => {
+      const focused = document.activeElement
+      if (focused instanceof HTMLInputElement) return
       const target =
         document.querySelector<HTMLElement>("#main h1") ??
         document.querySelector<HTMLElement>("#main")

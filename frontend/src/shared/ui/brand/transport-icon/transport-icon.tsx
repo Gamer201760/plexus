@@ -1,6 +1,7 @@
 import clsx from "clsx"
+import { type DesignIconName, designArtwork } from "../../primitives/icon/design-icon"
 import styles from "./transport-icon.module.css"
-import { TRANSPORT_GLYPHS, type TransportMode } from "./transport-paths"
+import type { TransportMode } from "./transport-paths"
 
 export type TransportIconSize = "sm" | "md" | "lg"
 
@@ -27,7 +28,14 @@ export interface TransportIconProps {
 }
 
 export function TransportIcon({ mode, size = "md", tinted = true, className }: TransportIconProps) {
-  const glyph = TRANSPORT_GLYPHS[mode]
+  const names: Record<TransportMode, DesignIconName> = {
+    air: "air",
+    river: "river",
+    winter_road: "winter",
+    ferry: "ferry",
+    ice_crossing: "snow",
+    pontoon_bridge: "bridge",
+  }
   return (
     <svg
       className={clsx(styles.icon, SIZES[size], tinted && TINTS[mode], className)}
@@ -36,12 +44,7 @@ export function TransportIcon({ mode, size = "md", tinted = true, className }: T
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      {glyph.strokes.map((d) => (
-        <path key={d} d={d} />
-      ))}
-      {glyph.dots.map(([cx, cy, r]) => (
-        <circle key={`${cx}-${cy}`} className={styles.dot} cx={cx} cy={cy} r={r} />
-      ))}
+      {designArtwork(names[mode])}
     </svg>
   )
 }

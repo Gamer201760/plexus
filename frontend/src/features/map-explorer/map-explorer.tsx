@@ -1,101 +1,147 @@
-import { useCallback } from "react"
-import { type MapControls, RussiaMap } from "@/entities/region"
-import { useFormatters, useTranslation } from "@/shared/i18n"
-import { ErrorState, Skeleton } from "@/shared/ui"
-import { Isolines } from "@/shared/ui/brand"
-import { formatMetric } from "./format-metric"
-import { HoverCard } from "./hover-card"
-import styles from "./map-explorer.module.css"
-import { MapLegend } from "./map-legend"
-import { MapPanel } from "./map-panel"
-import { MapToolbar } from "./map-toolbar"
+import { useCallback, useMemo, useState } from "react"
+import { useSearchParams } from "react-router"
+import {
+  type MapControls,
+  type MapStep,
+  RegionPreview,
+  RussiaMap,
+  SeasonControl,
+  useGeoRegions,
+  useRegions,
+} from "@/entities/region"
+import { useSeason } from "@/shared/hooks/use-season"
+import { useTranslation } from "@/shared/i18n"
+import { ErrorState, Select, Skeleton } from "@/shared/ui"
+import styles from "./atlas-map.module.css"
 import { MapZoom } from "./map-zoom"
-import { metricValue } from "./metric"
-import { useExplorerParams } from "./use-explorer-params"
-import { useMapData } from "./use-map-data"
-import { useMapHover } from "./use-map-hover"
 
-function MapLoading() {
+export function MapExplorer() {
   const { t } = useTranslation()
+  const { season } = useSeason()
+  const geo = useGeoRegions()
+  const summer = useRegions("summer")
+  const winter = useRegions("winter")
+  const rows = (season === "summer" ? summer.data : winter.data) ?? []
+  const [metric, setMetric] = useState("delta")
+  const [params, setParams] = useSearchParams()
+  const selected = params.get("region") ?? "71800000"
+  const setSelected = useCallback(
+    (id: string) => {
+      setParams(
+        (current) => {
+          const next = new URLSearchParams(current)
+          next.set("region", id)
+          return next
+        },
+        { replace: true, preventScrollReset: true },
+      )
+    },
+    [setParams],
+  )
+  const [hovered, setHovered] = useState<string | null>(null)
+  const sums = useMemo(
+    () => new Map((summer.data ?? []).map((r) => [r.id, r.links_season])),
+    [summer.data],
+  )
+  const winters = useMemo(
+    () => new Map((winter.data ?? []).map((r) => [r.id, r.links_season])),
+    [winter.data],
+  )
+  const values = useMemo(
+    () =>
+      new Map(
+        (season === "summer" ? summer.data : winter.data)?.map((r) => [r.id, r.links_season]) ?? [],
+      ),
+    [season, summer.data, winter.data],
+  )
+  const stepOf = useCallback(
+    (id: string): MapStep => {
+      const a = sums.get(id) ?? 0
+      const b = winters.get(id) ?? 0
+      if (!a && !b) return 0
+      if (metric === "delta") return deltaStep(a, b)
+      const max = Math.max(1, ...values.values())
+      const count = values.get(id) ?? 0
+      return count ? (Math.min(7, 1 + Math.floor((count / max) * 6)) as MapStep) : 0
+    },
+    [metric, sums, winters, values],
+  )
+  const onHover = useCallback((id: string | null) => setHovered(id), [])
+  const controls = useCallback(
+    (value: MapControls) => <MapZoom controls={value} onReset={() => setSelected("71800000")} />,
+    [setSelected],
+  )
+  const active = rows.find((r) => r.id === (hovered ?? selected)) ?? rows[0]
+  if (geo.isError || summer.isError || winter.isError)
+    return (
+      <ErrorState
+        title={t("errors:kind.server")}
+        onRetry={() => {
+          void geo.refetch()
+          void summer.refetch()
+          void winter.refetch()
+        }}
+      />
+    )
+  if (!geo.data || !summer.data || !winter.data) return <Skeleton lines={12} />
   return (
-    <div className={styles.mapLoading} role="status">
-      <Isolines rings={3} motion="pulse" className={styles.loadingRings} />
-      <span className="visually-hidden">{t("common:state.loading")}</span>
+    <div className={styles.workspace}>
+      <section className={styles.panel}>
+        <div className={styles.toolbar}>
+          <SeasonControl />
+          <Select
+            label={t("data:metric.label")}
+            hideLabel
+            value={metric}
+            onChange={setMetric}
+            options={[
+              { value: "delta", label: t("atlas:delta") },
+              { value: "count", label: t("atlas:countMetric") },
+            ]}
+          />
+        </div>
+        <div className={styles.map}>
+          <RussiaMap
+            viewBox={geo.data.view_box}
+            regions={geo.data.regions}
+            palette={metric === "delta" ? "delta" : "count"}
+            focusSelected={false}
+            stepOf={stepOf}
+            selectedId={hovered ?? selected}
+            label={t("map:label")}
+            onSelect={setSelected}
+            onHover={onHover}
+            controls={controls}
+          />
+        </div>
+        <div className={styles.legend}>
+          {(metric === "delta"
+            ? (["loss", "gain", "equal", "none"] as const)
+            : (["none"] as const)
+          ).map((key) => (
+            <span key={key}>
+              <i data-tone={key} />
+              {t(`atlas:${key}`)}
+            </span>
+          ))}
+          {metric === "count" ? <span>{t("atlas:countMetric")}</span> : null}
+        </div>
+      </section>
+      {active ? (
+        <RegionPreview
+          region={active}
+          summer={sums.get(active.id) ?? 0}
+          winter={winters.get(active.id) ?? 0}
+          rows={rows}
+          withMap={false}
+        />
+      ) : null}
     </div>
   )
 }
 
-export function MapExplorer() {
-  const { t } = useTranslation()
-  const f = useFormatters()
-  const { metric, season, selectedId, setMetric, setSeason, select, searchFor } =
-    useExplorerParams()
-  const { hoveredId, cardRef, point, onHover } = useMapHover()
-  const { geo, regions, overview, byId, valueAt, scale, missing, failed, retry } = useMapData(
-    metric,
-    season,
-  )
-
-  const stepOf = useCallback((id: string) => scale.stepOf(valueAt(id)), [scale, valueAt])
-  const clear = useCallback(() => select(null), [select])
-  const controls = useCallback(
-    (value: MapControls) => <MapZoom controls={value} onReset={clear} />,
-    [clear],
-  )
-
-  if (failed) return <ErrorState title={t("errors:kind.server")} onRetry={retry} />
-
-  const hovered = hoveredId ? byId.get(hoveredId) : undefined
-  const hoveredValue = hovered ? metricValue(hovered, metric) : null
-  const ready = geo.data !== undefined && regions.data !== undefined
-
-  return (
-    <div className={styles.explorer}>
-      <div className={styles.stage}>
-        {geo.data && regions.data ? (
-          <RussiaMap
-            viewBox={geo.data.view_box}
-            regions={geo.data.regions}
-            stepOf={stepOf}
-            selectedId={selectedId}
-            label={t("map:label")}
-            onSelect={select}
-            onHover={onHover}
-            controls={controls}
-          />
-        ) : (
-          <MapLoading />
-        )}
-        <div className={styles.overlay}>
-          <MapToolbar metric={metric} season={season} onMetric={setMetric} onSeason={setSeason} />
-          {ready ? <MapLegend metric={metric} scale={scale} missing={missing} /> : null}
-        </div>
-        {hovered ? (
-          <HoverCard
-            cardRef={cardRef}
-            point={point}
-            title={hovered.name}
-            label={t(`data:metric.${metric}`)}
-            value={hoveredValue === null ? null : formatMetric(hoveredValue, metric, f)}
-            none={t("map:legend.none")}
-          />
-        ) : null}
-      </div>
-      {overview.data && regions.data ? (
-        <MapPanel
-          overview={overview.data}
-          regions={regions.data}
-          metric={metric}
-          season={season}
-          selectedId={selectedId}
-          searchFor={searchFor}
-          onClear={clear}
-        />
-      ) : (
-        <div className={styles.panelLoading}>
-          <Skeleton lines={8} />
-        </div>
-      )}
-    </div>
-  )
+function deltaStep(summer: number, winter: number): MapStep {
+  if (winter < summer) return 1
+  if (winter > summer) return 3
+  return 2
 }

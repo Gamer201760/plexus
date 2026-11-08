@@ -1,0 +1,12 @@
+.map {
+  inline-size: 100%;
+  block-size: 215px;
+}
+.map path {
+  stroke: var(--map-border);
+  stroke-width: var(--hairline);
+}
+.map path[data-selected="true"] {
+  stroke: var(--action-primary);
+  stroke-width: var(--link-active-width);
+}

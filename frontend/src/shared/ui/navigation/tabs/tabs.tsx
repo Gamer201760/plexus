@@ -1,6 +1,7 @@
 import { clsx } from "clsx"
-import { type KeyboardEvent, type ReactNode, useId } from "react"
-import { Swap, useInputModality, useSlidingIndicator } from "../../../motion"
+import { type KeyboardEvent, type ReactNode, useId, useRef } from "react"
+import { useInputModality, useSlidingIndicator } from "../../../motion"
+import { useContentFade } from "../../../motion/use-content-fade"
 import { ScrollArea } from "../../layout/scroll-area/scroll-area"
 import { Icon, type IconName } from "../../primitives/icon/icon"
 import styles from "./tabs.module.css"
@@ -39,6 +40,8 @@ export function Tabs<T extends string>({
   const panelId = `${baseId}panel`
   const tabId = (item: T) => `${baseId}tab${items.findIndex((entry) => entry.value === item)}`
   const modality = useInputModality()
+  const panelRef = useRef<HTMLDivElement>(null)
+  useContentFade(panelRef, value, modality.instant)
   const { listRef, indicatorRef, itemRef } = useSlidingIndicator<HTMLDivElement>(value, {
     instant: modality.instant,
     radiusToken: "--radius-xs",
@@ -83,7 +86,7 @@ export function Tabs<T extends string>({
                 className={styles.tab}
                 onClick={() => onChange(item.value)}
               >
-                {item.icon === undefined ? null : <Icon name={item.icon} size="sm" />}
+                {item.icon === undefined ? null : <Icon name={item.icon} size="md" />}
                 <span>{item.label}</span>
               </button>
             )
@@ -91,10 +94,14 @@ export function Tabs<T extends string>({
         </div>
       </ScrollArea>
       {children === undefined ? null : (
-        <div id={panelId} role="tabpanel" aria-labelledby={tabId(value)} className={styles.panel}>
-          <Swap swapKey={value} as="div">
-            {children}
-          </Swap>
+        <div
+          ref={panelRef}
+          id={panelId}
+          role="tabpanel"
+          aria-labelledby={tabId(value)}
+          className={styles.panel}
+        >
+          {children}
         </div>
       )}
     </div>

@@ -5,6 +5,7 @@ import styles from "./card.module.css"
 
 export interface CardProps extends Omit<HTMLAttributes<HTMLElement>, "title"> {
   readonly as?: "section" | "article" | "aside" | "div"
+  readonly media?: ReactNode
   readonly title?: ReactNode
   readonly eyebrow?: ReactNode
   readonly description?: ReactNode
@@ -38,6 +39,7 @@ function CardHeader({ titleId, title, eyebrow, description, actions }: CardHeade
 
 export function Card({
   as: Tag = "section",
+  media,
   title,
   eyebrow,
   description,
@@ -59,6 +61,7 @@ export function Card({
       style={entering ? { ...style, ...staggerStyle(motionIndex) } : style}
       data-motion={entering ? "fade" : undefined}
     >
+      {media}
       {titled ? (
         <CardHeader
           titleId={titleId}

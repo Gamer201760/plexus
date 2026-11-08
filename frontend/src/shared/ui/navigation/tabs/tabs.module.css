@@ -27,6 +27,7 @@
 }
 
 .tab {
+  font-size: var(--font-size-body);
   composes: controlText pressable from "../../../styles/compose.module.css";
   position: relative;
   display: inline-flex;

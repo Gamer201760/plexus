@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
 import { useSearch } from "@/entities/settlement"
+import { useSeason } from "@/shared/hooks/use-season"
 import { useFormatters, useTranslation } from "@/shared/i18n"
 import { Combobox, type ComboboxGroup } from "@/shared/ui"
 
@@ -11,6 +12,7 @@ export function GlobalSearch() {
   const { t } = useTranslation()
   const f = useFormatters()
   const navigate = useNavigate()
+  const { seasonHref } = useSeason()
   const [query, setQuery] = useState("")
   const search = useSearch(query)
   const data = search.data
@@ -52,11 +54,15 @@ export function GlobalSearch() {
       onQuery={setQuery}
       onSelect={(item) => {
         if (item.value.startsWith(REGION)) {
-          void navigate(`/regions/${item.value.slice(REGION.length)}`, { viewTransition: true })
+          void navigate(seasonHref(`/regions/${item.value.slice(REGION.length)}`), {
+            viewTransition: true,
+          })
           return
         }
         const [regionId, settlementId] = item.value.slice(SETTLEMENT.length).split(":")
-        void navigate(`/regions/${regionId}?settlement=${settlementId}`, { viewTransition: true })
+        void navigate(seasonHref(`/regions/${regionId}?settlement=${settlementId}`), {
+          viewTransition: true,
+        })
       }}
     />
   )

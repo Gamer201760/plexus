@@ -1,0 +1,18 @@
+.links > div {
+  display: flex;
+  gap: var(--space-12);
+  align-items: center;
+  border-block-end: var(--hairline) solid var(--border-subtle);
+  padding-block: var(--space-12);
+}
+.links > div > span {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  font-size: var(--font-size-body-sm);
+}
+.links small {
+  color: var(--text-secondary);
+}

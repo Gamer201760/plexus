@@ -10,6 +10,7 @@ export function useMapPainter(
   stepOf: (id: string) => number,
   selected: string | null,
   camera: MapCamera,
+  palette: "count" | "delta" = "count",
 ) {
   const painter = useRef<MapPainter | null>(null)
   useLayoutEffect(() => {
@@ -35,7 +36,9 @@ export function useMapPainter(
       {
         fills: [
           token("--map-none"),
-          ...Array.from({ length: 7 }, (_, i) => token(`--data-seq-${i + 1}`)),
+          ...(palette === "delta"
+            ? [token("--data-loss-2"), token("--data-zero"), token("--data-gain-2")]
+            : Array.from({ length: 7 }, (_, i) => token(`--data-seq-${i + 1}`))),
         ],
         water: token("--map-water"),
         border: token("--map-border"),
@@ -48,6 +51,6 @@ export function useMapPainter(
       selected,
     )
     camera.draw.current(camera.current.current, camera.busy.current ? "moving" : "settled")
-  }, [surface, camera, regions, selected, stepOf])
+  }, [surface, camera, regions, selected, stepOf, palette])
   return painter
 }

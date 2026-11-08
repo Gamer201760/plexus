@@ -1,7 +1,16 @@
 import AxeBuilder from "@axe-core/playwright"
 import { expect, type Page, test } from "@playwright/test"
 
-const ROUTES = ["/", "/missing-page"]
+const ROUTES = [
+  "/",
+  "/map",
+  "/regions",
+  "/sources",
+  "/method",
+  "/regions/71800000",
+  "/regions/71800000?section=winter-calendar",
+  "/missing-page",
+]
 const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"]
 
 async function settle(page: Page): Promise<void> {
@@ -16,6 +25,7 @@ async function settle(page: Page): Promise<void> {
 async function audit(page: Page, route: string): Promise<void> {
   await page.goto(route)
   await expect(page.locator("#main h1")).toBeVisible()
+  await page.waitForLoadState("networkidle")
   await settle(page)
   const result = await new AxeBuilder({ page }).withTags(WCAG_TAGS).analyze()
   const violations = result.violations.map((violation) => ({

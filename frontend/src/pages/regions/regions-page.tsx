@@ -1,3 +1,4 @@
+import { SeasonSummary } from "@/entities/region"
 import { RegionTable } from "@/features/region-table"
 import { useDocumentTitle, useTranslation } from "@/shared/i18n"
 import { PageHeader } from "@/shared/ui"
@@ -8,7 +9,8 @@ export function RegionsPage() {
   useDocumentTitle(t("nav:regions"))
   return (
     <div className={styles.page}>
-      <PageHeader title={t("nav:regions")} description={t("map:lead")} />
+      <PageHeader title={t("nav:regions")} description={t("atlas:lead")} />
+      <SeasonSummary />
       <RegionTable />
     </div>
   )

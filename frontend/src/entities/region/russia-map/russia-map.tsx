@@ -23,6 +23,8 @@ export interface MapControls {
 }
 
 export interface RussiaMapProps {
+  readonly palette?: "count" | "delta"
+  readonly focusSelected?: boolean
   readonly viewBox: string
   readonly regions: readonly MapRegion[]
   readonly stepOf: (id: string) => MapStep
@@ -40,6 +42,8 @@ function parseBox(viewBox: string): Box {
 
 export const RussiaMap = memo(function RussiaMap({
   viewBox,
+  palette = "count",
+  focusSelected = true,
   regions,
   stepOf,
   selectedId,
@@ -54,15 +58,16 @@ export const RussiaMap = memo(function RussiaMap({
   const surface = useRef<HTMLDivElement | null>(null)
   const hoverFrame = useRef<number | null>(null)
   const cursor = useRef({ x: 0, y: 0 })
-  const painter = useMapPainter(surface, frame, regions, stepOf, selectedId, camera)
+  const painter = useMapPainter(surface, frame, regions, stepOf, selectedId, camera, palette)
   const selected = regions.find((region) => region.id === selectedId)
   const focus = useMemo(() => (selected ? mainlandBox(selected.path) : null), [selected])
   const zoom = useMemo(() => controls(map.controls), [controls, map.controls])
 
   useEffect(() => {
+    if (!focusSelected) return
     if (selectedId && focus) fitBox(focus)
     else if (!selectedId) reset()
-  }, [selectedId, focus, fitBox, reset])
+  }, [selectedId, focus, fitBox, reset, focusSelected])
 
   useEffect(() => {
     if (active) onHover(null, 0, 0)

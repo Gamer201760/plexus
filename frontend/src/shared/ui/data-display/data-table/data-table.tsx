@@ -1,7 +1,7 @@
 import { clsx } from "clsx"
 import { type ReactNode, useMemo, useState } from "react"
 import { Link } from "react-router"
-import { ScrollArea } from "../../layout/scroll-area/scroll-area"
+import { ScrollArea, type ScrollOrientation } from "../../layout/scroll-area/scroll-area"
 import { Icon, type IconName } from "../../primitives/icon/icon"
 import styles from "./data-table.module.css"
 import {
@@ -24,6 +24,7 @@ export interface DataTableColumn<Row> {
 }
 
 export interface DataTableProps<Row> {
+  readonly scrollOrientation?: ScrollOrientation
   readonly caption: string
   readonly columns: readonly DataTableColumn<Row>[]
   readonly rows: readonly Row[]
@@ -31,6 +32,7 @@ export interface DataTableProps<Row> {
   readonly sort?: TableSort | null | undefined
   readonly defaultSort?: TableSort | null | undefined
   readonly onSortChange?: ((sort: TableSort) => void) | undefined
+  readonly onRowPreview?: ((row: Row) => void) | undefined
   readonly onRowClick?: ((row: Row) => void) | undefined
   readonly rowHref?: ((row: Row) => string) | undefined
   readonly selectedKey?: string | null | undefined
@@ -97,6 +99,7 @@ function RowLead({ href, clickable, children }: RowLeadProps) {
 }
 
 export function DataTable<Row>({
+  scrollOrientation = "both",
   caption,
   columns,
   rows,
@@ -105,6 +108,7 @@ export function DataTable<Row>({
   defaultSort = null,
   onSortChange,
   onRowClick,
+  onRowPreview,
   rowHref,
   selectedKey = null,
   className,
@@ -124,7 +128,11 @@ export function DataTable<Row>({
   const clickable = onRowClick !== undefined || rowHref !== undefined
 
   return (
-    <ScrollArea orientation="both" label={caption} className={clsx(styles.frame, className)}>
+    <ScrollArea
+      orientation={scrollOrientation}
+      label={caption}
+      className={clsx(styles.frame, className)}
+    >
       <table className={styles.table}>
         <caption className="visually-hidden">{caption}</caption>
         <thead>
@@ -147,6 +155,8 @@ export function DataTable<Row>({
                 key={key}
                 className={clsx(styles.row, clickable && styles.clickable)}
                 aria-current={key === selectedKey ? "true" : undefined}
+                onPointerEnter={onRowPreview === undefined ? undefined : () => onRowPreview(row)}
+                onFocus={onRowPreview === undefined ? undefined : () => onRowPreview(row)}
                 onClick={onRowClick === undefined ? undefined : () => onRowClick(row)}
               >
                 {columns.map((column, index) => (

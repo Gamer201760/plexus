@@ -7,6 +7,11 @@
 @import "./tokens/elevation.css";
 @import "./tokens/motion.css";
 @import "./tokens/keyframes.css";
+@import "./tokens/hero-keyframes.css";
+@import "./tokens/hero.css";
+@import "./tokens/hero-signal-0.css";
+@import "./tokens/hero-signal-1.css";
+@import "./tokens/hero-signal-2.css";
 
 html {
   background-color: var(--surface-base);

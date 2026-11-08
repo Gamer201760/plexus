@@ -1,30 +1,39 @@
-.table {
+.workspace {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr) 360px;
+  align-items: start;
+  gap: var(--space-20);
+}
+.filters {
   display: grid;
   gap: var(--space-16);
-  min-inline-size: 0;
+  font-size: var(--font-size-body-sm);
 }
-
+.filters hr {
+  border: 0;
+  border-block-start: var(--hairline) solid var(--border-subtle);
+  inline-size: 100%;
+}
+.table {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-16);
+}
 .toolbar {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  gap: var(--space-12);
   justify-content: space-between;
-  gap: var(--space-12) var(--space-16);
+  align-items: center;
 }
-
-.search {
-  flex: 1 1 var(--term-min);
-  max-inline-size: var(--field-max-width);
+.toolbar > * {
+  min-inline-size: 0;
 }
-
-.table .scroller {
-  overscroll-behavior: auto;
+.count {
+  color: var(--text-secondary);
+  font-size: var(--font-size-body-sm);
 }
-
-.rowsBone {
-  gap: 0;
-}
-
-.rowsBone > span {
-  margin-block: var(--space-16);
+@media (max-width: 75rem) {
+  .workspace {
+    grid-template-columns: 180px minmax(0, 1fr) 320px;
+  }
 }
