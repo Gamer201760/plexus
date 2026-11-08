@@ -4,9 +4,9 @@ import { fileURLToPath } from "node:url"
 import { chromium, type Page } from "@playwright/test"
 import { ICO_SIZES, type Locale, MANIFEST, META_LOCALE, ogFile, RASTERS } from "./brand/assets.ts"
 import { buildIco, type PngImage } from "./brand/binary.ts"
+import { embeddedFontFaces, sansFamily } from "./brand/fonts.ts"
 import { faviconSvg, paintedMark, readMark, readPalette } from "./brand/marks.ts"
 import { cardHtml, rasterHtml, tileHtml } from "./brand/pages.ts"
-import { FONT_PACKAGES, pickFontFaces } from "./exportTokens.ts"
 
 interface CommonWords {
   readonly app: { readonly name: string; readonly tagline: string }
@@ -21,25 +21,6 @@ const LOCALES: readonly Locale[] = ["ru"]
 function words(locale: Locale): CommonWords {
   const file = join(frontendRoot, "src", "shared", "i18n", "locales", locale, "common.json")
   return JSON.parse(readFileSync(file, "utf8")) as CommonWords
-}
-
-function fontFaces(): string {
-  return FONT_PACKAGES.map((name) => {
-    const packageDir = join(frontendRoot, "node_modules", ...name.split("/"))
-    const faces = pickFontFaces(readFileSync(join(packageDir, "index.css"), "utf8"))
-    return faces.files.reduce((css, file) => {
-      const data = readFileSync(join(packageDir, "files", file)).toString("base64")
-      return css.replaceAll(`url("fonts/${file}")`, `url("data:font/woff2;base64,${data}")`)
-    }, faces.css)
-  }).join("\n")
-}
-
-function fontFamily(): string {
-  const css = readFileSync(
-    join(frontendRoot, "src", "shared", "styles", "tokens", "typography.css"),
-    "utf8",
-  )
-  return /--font-sans:\s*([^;]+);/.exec(css)?.[1]?.replace(/\s+/g, " ").trim() ?? "sans-serif"
 }
 
 function write(file: string, data: string | Buffer): void {
@@ -69,8 +50,8 @@ for (const size of ICO_SIZES)
 write("favicon.ico", buildIco(ico))
 for (const asset of RASTERS)
   write(asset.file, await shoot(page, rasterHtml(light, asset, palette.light)))
-const fonts = fontFaces()
-const family = fontFamily()
+const fonts = embeddedFontFaces(frontendRoot)
+const family = sansFamily(frontendRoot)
 for (const locale of LOCALES) {
   const text = words(locale)
   const card = {

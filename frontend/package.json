@@ -20,6 +20,8 @@
     "api:types": "node scripts/apiTypes.ts",
     "tokens:export": "node scripts/exportTokens.ts",
     "brand:assets": "node scripts/brandAssets.ts",
+    "readme": "node scripts/readmeAssets.ts",
+    "readme:hero": "node scripts/readmeHero.ts",
     "shots": "node scripts/shots.ts",
     "i18n:sync": "node scripts/syncResources.ts && biome check --write src/shared/i18n/resources.ts"
   },
