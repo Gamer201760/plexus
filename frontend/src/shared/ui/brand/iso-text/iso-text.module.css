@@ -1,0 +1,39 @@
+.iso {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  overflow: visible;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-display);
+}
+
+.ring {
+  composes: ringEnter from "../../../styles/compose.module.css";
+}
+
+.band,
+.cut {
+  fill: none;
+  stroke-linejoin: round;
+}
+
+.cut {
+  stroke: var(--surface-base);
+}
+
+.ring[data-ring="1"] .band {
+  stroke: var(--iso-1);
+}
+
+.ring[data-ring="2"] .band {
+  stroke: var(--iso-2);
+}
+
+.ring[data-ring="3"] .band {
+  stroke: var(--iso-3);
+}
+
+.glyph {
+  fill: var(--text-primary);
+}

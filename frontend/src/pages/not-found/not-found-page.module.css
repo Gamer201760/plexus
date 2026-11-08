@@ -1,26 +1,17 @@
-.page {
-  display: flex;
-  flex-wrap: wrap;
+.path {
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-40) var(--space-64);
-  min-block-size: 60vh;
-  padding-block: var(--space-48);
-  padding-inline: var(--space-page);
-}
-
-.copy {
-  display: grid;
-  justify-items: start;
-  gap: var(--space-16);
-}
-
-.title {
-  composes: displayText from "../../shared/styles/compose.module.css";
-  font-weight: var(--weight-bold);
-}
-
-.description {
-  max-inline-size: var(--prose-measure);
+  gap: var(--space-8);
+  max-inline-size: 100%;
   color: var(--text-secondary);
-  font-size: var(--font-size-subheading);
+  font-size: var(--font-size-body-sm);
+}
+
+.code {
+  composes: truncate from "../../shared/styles/compose.module.css";
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-sunken);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
 }

@@ -1,6 +1,16 @@
-.page {
+.shell {
   display: grid;
-  align-content: center;
+  grid-template-rows: auto 1fr;
   min-block-size: 100dvh;
-  padding: var(--space-page);
+  background-color: var(--surface-base);
+}
+
+.top {
+  padding: var(--space-12) var(--space-page);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--target-min);
 }
