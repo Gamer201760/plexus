@@ -23,12 +23,7 @@
   min-block-size: calc(var(--control-height) + var(--space-8));
   font-size: var(--font-size-subheading);
 }
-.home .replay {
-  position: absolute;
-  inset-inline-end: var(--space-page-wide);
-  inset-block-end: var(--space-24);
-  color: var(--text-secondary);
-}
+
 @media (max-width: 64rem) {
   .home {
     grid-template-columns: minmax(0, 1fr);

@@ -6,7 +6,7 @@ import nav from "../src/shared/i18n/locales/ru/nav.json" with { type: "json" }
 import region from "../src/shared/i18n/locales/ru/region.json" with { type: "json" }
 import sources from "../src/shared/i18n/locales/ru/sources.json" with { type: "json" }
 
-test("home signals keep moving after replay and respect reduced motion", async ({ page }) => {
+test("home signals keep moving and respect reduced motion", async ({ page }) => {
   await page.goto("/")
   const signal = page.locator('[data-signal="0"]')
   await expect(page.locator("[data-signal]")).toHaveCount(3)
@@ -14,7 +14,6 @@ test("home signals keep moving after replay and respect reduced motion", async (
   await expect
     .poll(() => signal.evaluate((node) => getComputedStyle(node).transform))
     .not.toBe(before)
-  await page.getByRole("button", { name: home.replay }).click()
   expect(
     await page
       .locator("[data-signal]")
@@ -28,7 +27,7 @@ test("home signals keep moving after replay and respect reduced motion", async (
   await page.emulateMedia({ reducedMotion: "reduce" })
   await expect(signal).toHaveCSS("display", "none")
   await page.getByRole("link", { name: home.open }).click()
-  await expect(page).toHaveURL(/\/map\?season=winter/)
+  await expect(page).toHaveURL(/\/map$/)
 })
 
 test("source topics support keyboard and preserve selection across navigation", async ({

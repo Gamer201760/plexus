@@ -1,5 +1,6 @@
 import { memo, useEffect, useId } from "react"
 import { Link, useLocation } from "react-router"
+import { RegionLinks } from "@/entities/link"
 import type { IndexStatus } from "@/entities/reference"
 import { type Overview, type RegionSummary, type Season, useRegion } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
@@ -95,7 +96,7 @@ function SelectedRegion({ id, season, onClose }: SelectedProps) {
           ))}
         </ul>
       ) : null}
-      <ButtonLink to={`/regions/${data.id}`} icon="arrow-right">
+      <ButtonLink to={`/regions/${data.id}?season=${season}`} icon="arrow-right">
         {t("map:selected.open")}
       </ButtonLink>
     </Card>
@@ -136,8 +137,19 @@ export const MapPanel = memo(function MapPanel({
               </div>
             </Card>
           )}
-          <IndexBanner index={overview.index} />
-          <Ranking regions={regions} metric={metric} searchFor={searchFor} />
+          {selectedId ? (
+            <RegionLinks
+              key={selectedId}
+              regionId={selectedId}
+              season={season}
+              className={styles.flat}
+            />
+          ) : (
+            <>
+              <IndexBanner index={overview.index} />
+              <Ranking regions={regions} metric={metric} searchFor={searchFor} />
+            </>
+          )}
         </div>
       </ScrollArea>
     </aside>

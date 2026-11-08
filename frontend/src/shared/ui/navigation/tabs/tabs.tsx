@@ -1,6 +1,6 @@
 import { clsx } from "clsx"
 import { type KeyboardEvent, type ReactNode, useId, useRef } from "react"
-import { useInputModality, useSlidingIndicator } from "../../../motion"
+import { useInputModality } from "../../../motion"
 import { useContentFade } from "../../../motion/use-content-fade"
 import { ScrollArea } from "../../layout/scroll-area/scroll-area"
 import { Icon, type IconName } from "../../primitives/icon/icon"
@@ -42,10 +42,6 @@ export function Tabs<T extends string>({
   const modality = useInputModality()
   const panelRef = useRef<HTMLDivElement>(null)
   useContentFade(panelRef, value, modality.instant)
-  const { listRef, indicatorRef, itemRef } = useSlidingIndicator<HTMLDivElement>(value, {
-    instant: modality.instant,
-    radiusToken: "--radius-xs",
-  })
 
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     modality.onKeyDown()
@@ -63,20 +59,17 @@ export function Tabs<T extends string>({
     <div className={clsx(styles.tabs, className)}>
       <ScrollArea orientation="horizontal" className={styles.scroller}>
         <div
-          ref={listRef}
           role="tablist"
           aria-label={label}
           className={styles.list}
           onKeyDown={onKeyDown}
           onPointerDown={modality.onPointerDown}
         >
-          <span ref={indicatorRef} className={styles.indicator} aria-hidden="true" />
           {items.map((item) => {
             const selected = item.value === value
             return (
               <button
                 key={item.value}
-                ref={itemRef(item.value)}
                 id={tabId(item.value)}
                 type="button"
                 role="tab"

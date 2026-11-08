@@ -53,6 +53,10 @@ export function ContributionMatrix({ halfLife }: ContributionMatrixProps) {
                         value: f.compact(Math.round(value)),
                       })}
                       aria-pressed={selected.market === m && selected.hours === h}
+                      onPointerEnter={(event) => {
+                        if (event.pointerType !== "touch") setSelected({ market: m, hours: h })
+                      }}
+                      onFocus={() => setSelected({ market: m, hours: h })}
                       onClick={() => setSelected({ market: m, hours: h })}
                     >
                       {f.compact(Math.round(value))}

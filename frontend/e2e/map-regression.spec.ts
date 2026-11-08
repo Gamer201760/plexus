@@ -23,13 +23,42 @@ test("map can be dragged immediately after opening", async ({ page }) => {
   await expect.poll(read).not.toBe(before)
 })
 
-test("selecting Arkhangelsk preserves the atlas camera", async ({ page }) => {
+test("Arkhangelsk focuses on its mainland rather than remote islands", async ({
+  page,
+  request,
+}) => {
+  const response = await request.get("/api/v1/geo/regions")
+  const data = await response.json()
+  const region = data.regions.find((entry: { id: string }) => entry.id === "11000000")
+  const mainland = mainlandBox(region.path)
+  if (!mainland) throw new Error("Mainland is missing")
   await page.goto("/map?region=11000000")
   const map = page.locator(mapSelector).first()
   await expect(map).toBeVisible()
-  await expect(map.locator('[data-region-id="11000000"]')).toBeAttached()
-  const view = JSON.parse((await map.getAttribute("data-view")) ?? "{}")
-  expect(view).toEqual({ scale: 1, x: 0, y: 0 })
+  await page.waitForTimeout(1200)
+  const offset = await map.evaluate((element, box) => {
+    const rect = element.getBoundingClientRect()
+    const view = element.getAttribute("data-view")
+    if (view) {
+      const { scale, x, y } = JSON.parse(view)
+      return [
+        Math.abs((box.x + box.width / 2) * scale + x - 500) / 1000,
+        Math.abs((box.y + box.height / 2) * scale + y - 310) / 620,
+      ]
+    }
+    const group = element.querySelector("g")
+    const matrix = group?.getScreenCTM()
+    if (!matrix) throw new Error("Map matrix is missing")
+    const point = new DOMPoint(box.x + box.width / 2, box.y + box.height / 2).matrixTransform(
+      matrix,
+    )
+    return [
+      Math.abs(point.x - rect.x - rect.width / 2) / rect.width,
+      Math.abs(point.y - rect.y - rect.height / 2) / rect.height,
+    ]
+  }, mainland)
+  expect(offset[0]).toBeLessThan(0.03)
+  expect(offset[1]).toBeLessThan(0.03)
 })
 
 test("gestures move the rendered stage and keep geometry until release", async ({ page }) => {
@@ -102,8 +131,11 @@ test("visible geometry and hit testing place Arkhangelsk at the same coordinates
     const point = new DOMPoint(box.x + box.width / 2, box.y + box.height / 2).matrixTransform(
       matrix,
     )
-    return [point.x, point.y]
+    return [
+      Math.abs(point.x - surface.x - surface.width / 2),
+      Math.abs(point.y - surface.y - surface.height / 2),
+    ]
   }, box)
-  expect(Math.abs((offset[0] ?? 0) - target.x)).toBeLessThan(3)
-  expect(Math.abs((offset[1] ?? 0) - target.y)).toBeLessThan(3)
+  expect(offset[0]).toBeLessThan(3)
+  expect(offset[1]).toBeLessThan(3)
 })

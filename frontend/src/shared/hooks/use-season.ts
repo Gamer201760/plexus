@@ -6,7 +6,7 @@ export function useSeason() {
   const [params, setParams] = useSearchParams()
   const raw = params.get("season")
   useEffect(() => {
-    if (raw !== null && raw !== "summer" && raw !== "winter")
+    if (raw !== null && raw !== "summer" && raw !== "winter" && raw !== "all")
       setParams(
         (current) => {
           const p = new URLSearchParams(current)

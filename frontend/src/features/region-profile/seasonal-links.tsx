@@ -1,14 +1,12 @@
-import { useRegionLinks } from "@/entities/link"
+import { LinkList, useRegionLinks } from "@/entities/link"
 import { useSeason } from "@/shared/hooks/use-season"
 import { useTranslation } from "@/shared/i18n"
-import { ButtonLink, Card, EmptyState, ErrorState, Icon, Skeleton } from "@/shared/ui"
-import { TransportIcon } from "@/shared/ui/brand"
-import styles from "./seasonal-links.module.css"
+import { Card, EmptyState, ErrorState, Skeleton } from "@/shared/ui"
 export function SeasonalLinks({ regionId }: { readonly regionId: string }) {
   const { t } = useTranslation()
   const { season } = useSeason()
   const links = useRegionLinks(regionId, season)
-  const rows = (links.data ?? []).filter((l) => l.season === season)
+  const rows = (links.data ?? []).filter((link) => link.season === season)
   if (links.isError)
     return <ErrorState title={t("errors:kind.server")} onRetry={() => void links.refetch()} />
   if (!links.data) return <Skeleton lines={4} />
@@ -18,24 +16,7 @@ export function SeasonalLinks({ regionId }: { readonly regionId: string }) {
       description={t("profile:onlyNote", { season: t(`data:season.${season}`) })}
     >
       {rows.length ? (
-        <div className={styles.links}>
-          {rows.map((l) => (
-            <div key={l.id}>
-              <TransportIcon mode={l.mode} size="sm" />
-              <span>
-                {l.from.name}
-                <Icon name="arrow-right" size="sm" />
-                {l.to.name}
-              </span>
-              <small>{t(`data:season.${season}`)}</small>
-              {l.source_url ? (
-                <ButtonLink to={l.source_url} icon="external" variant="ghost">
-                  <span className="visually-hidden">{t("data:openSource")}</span>
-                </ButtonLink>
-              ) : null}
-            </div>
-          ))}
-        </div>
+        <LinkList rows={rows} />
       ) : (
         <EmptyState icon="route" title={t("profile:empty")} />
       )}

@@ -94,6 +94,7 @@ export function RegionSettlements({ regionId, highlightId, onHighlight }: Region
       ) : (
         <div className={page.isPlaceholderData ? styles.stale : undefined}>
           <DataTable
+            scrollOrientation="horizontal"
             caption={t("region:settlements.title")}
             columns={columns}
             rows={page.data.items}
