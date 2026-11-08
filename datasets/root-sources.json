@@ -1,0 +1,44 @@
+[
+  {
+    "source_row": 8,
+    "slug": "osm-russia",
+    "title": "OpenStreetMap / Geofabrik: сеть РФ",
+    "status": "excluded_by_user"
+  },
+  {
+    "source_row": 11,
+    "slug": "ourairports-russia",
+    "title": "OurAirports: аэропорты РФ",
+    "status": "downloaded"
+  },
+  {
+    "source_row": 13,
+    "slug": "geonames-russia",
+    "title": "GeoNames: населённые пункты РФ",
+    "status": "downloaded"
+  },
+  {
+    "source_row": 24,
+    "slug": "fns-registers",
+    "title": "ФНС: реестры юрлиц и ИП",
+    "status": "blocked"
+  },
+  {
+    "source_row": 25,
+    "slug": "gar-addresses",
+    "title": "ФИАС / ГАР: адресный реестр",
+    "status": "deferred_disk"
+  },
+  {
+    "source_row": 26,
+    "slug": "production-calendar",
+    "title": "Производственный календарь isDayOff",
+    "status": "downloaded"
+  },
+  {
+    "source_row": 28,
+    "slug": "open-meteo-weather",
+    "title": "Open-Meteo: погодные данные",
+    "status": "needs_parameters"
+  }
+]

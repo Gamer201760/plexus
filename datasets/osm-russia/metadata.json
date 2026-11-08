@@ -1,0 +1,14 @@
+{
+  "source_row": 8,
+  "slug": "osm-russia",
+  "title": "OpenStreetMap / Geofabrik: сеть РФ",
+  "status": "excluded_by_user",
+  "source_url": "https://download.geofabrik.de/russia.html",
+  "geography": "Россия",
+  "period": "Снимок сети; не скачивался",
+  "license": "ODbL 1.0",
+  "limitations": [
+    "По прямому указанию пользователя карта РФ исключена из текущей загрузки."
+  ],
+  "files": []
+}

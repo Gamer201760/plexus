@@ -1,0 +1,14 @@
+{
+  "source_row": 24,
+  "slug": "fns-registers",
+  "title": "ФНС: реестры юрлиц и ИП",
+  "status": "blocked",
+  "source_url": "https://www.nalog.gov.ru/rn77/service/egrip2/access_order/",
+  "geography": "РФ",
+  "period": "Не загружено",
+  "license": "Условия сервиса ФНС",
+  "limitations": [
+    "Массовая выгрузка ЕГРЮЛ/ЕГРИП через официальный сервис требует атрибутов доступа и оформления платной услуги. Бесплатный поиск конкретного лица не равен полному дампу."
+  ],
+  "files": []
+}

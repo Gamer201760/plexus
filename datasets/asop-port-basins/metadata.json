@@ -1,0 +1,423 @@
+{
+  "source_row": 5,
+  "slug": "asop-port-basins",
+  "title": "АСОП: морские бассейны",
+  "status": "downloaded",
+  "source_page": "https://www.morport.com/rus/content/statistika-0",
+  "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+  "period": "2017–2024; годовые и накопленные квартальные срезы",
+  "coverage": "Арктический, Балтийский, Азово-Черноморский, Каспийский, Дальневосточный бассейны; направления экспорт/импорт/транзит/каботаж",
+  "license": "Отдельная лицензия на файлы не установлена; открытый доступ не равен разрешению на произвольное распространение. Сохранять атрибуцию и ссылку.",
+  "contents": "Все 29 опубликованных на странице АСОП PDF по бассейнам и направлениям за 2017–2024: один годовой за2017 и четыре накопленных среза каждого из2018–2024.",
+  "limitations": "Это PDF-графики, многие без текстового слоя. Пропуски отдельных чисел машинно не оценены. Нет матрицы пар территорий, точек отправления/назначения и характеристик маршрутов; накопленные квартальные данные нельзя суммировать как независимые кварталы.",
+  "files": [
+    {
+      "path": "raw/06_21_basseyny_napravleniya.pdf",
+      "bytes": 232542,
+      "sha256": "3b6f1bb67a20c6085df84a7f7fe45e027b34292954d5a2d64e6c202ba84f421d",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/06_21_basseyny_napravleniya.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/12_2022_basseyny_i_napravleniya_1.pdf",
+      "bytes": 199767,
+      "sha256": "a7915cabc17fac5d09a2831b18fcbfe5dd0db4839bb3bd69bbf6bd79ff73de3e",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/12_2022_basseyny_i_napravleniya_1.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 312,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/12_2023_basseyny_i_napravleniya.pdf",
+      "bytes": 438337,
+      "sha256": "8d9239ce0fe6b6046f1914e7575a0954d70a6400337494f459e778ac87ebc24e",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/12_2023_basseyny_i_napravleniya.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 257,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/9_mes._2022_basseyn_napravl.pdf",
+      "bytes": 133481,
+      "sha256": "9a0830a9ef0c10dbfb902d33da5b9f1d6f7f55d591fc0fbb7425708a9c8df58c",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/9_mes._2022_basseyn_napravl.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/ass.napravl._06_2018.pdf",
+      "bytes": 105288,
+      "sha256": "526f87c2f09a39d186b38e8f6dd80946c76c19f1ad0e63e2da97b72af1c48783",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/ass.napravl._06_2018.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 2,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/bass_napravl_03_2021.pdf",
+      "bytes": 246158,
+      "sha256": "446d966be879e7d1fb6a1f9d444e588f88ea62dbeb51ac3c02b64cf4d323edcd",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/bass_napravl_03_2021.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyn_napravleniya_03_2023.pdf",
+      "bytes": 501122,
+      "sha256": "681b18532e47f15b3fd1806d44ad1294bd843e917f196f647f4f790a167f0867",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyn_napravleniya_03_2023.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 332,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_i_napravleniya.pdf",
+      "bytes": 236389,
+      "sha256": "8ae0dfc25856c6e397ad89b0beba3250d5994094c791d8c52db504f3ccb67da3",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_i_napravleniya_0.pdf",
+      "bytes": 57360,
+      "sha256": "fe2f0b9f0ba27a62e3b79399613736ccded5155dc329d2695eff82831e018633",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_0.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_i_napravleniya_03_2022.pdf",
+      "bytes": 242737,
+      "sha256": "bae21576364befc288a339a069058bb9bfff8e044db8119cd137d61a90e2a93f",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_03_2022.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_i_napravleniya_1.pdf",
+      "bytes": 48921,
+      "sha256": "c993b2ce48d406a5f593f1ef364324765db7950ecc9aca2693552528037417bc",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_1.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_i_napravleniya_1_kv-l_2024_g.pdf",
+      "bytes": 405656,
+      "sha256": "ff2ad163a4a34e5f87308274fec100d6f556be382edb5838a7ded6c693256df0",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_1_kv-l_2024_g.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 576,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_i_napravleniya_9_mes.2021.pdf",
+      "bytes": 239585,
+      "sha256": "3cb3e8a384818989ee5e4f3fe616ec7c8e589601382b1821d1582d091327f2f0",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_9_mes.2021.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_i_napravleniya_v_2017_g.pdf",
+      "bytes": 528480,
+      "sha256": "628c190fc5feaeac1bc53a167d6abe376ff502a52d9bcbb231eb8a3fb2352656",
+      "download_url": "https://www.morport.com/sites/default/files/inline/basseyny_i_napravleniya_v_2017_g.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 114,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_napr.03_2019.pdf",
+      "bytes": 94481,
+      "sha256": "eb22f0457ade3cb90de4f062fab2959dd3fd7aaef3123eb698c6bc703d36d27d",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napr.03_2019.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_napravl._06_2019.xls.pdf",
+      "bytes": 90384,
+      "sha256": "40851934f81c97abb59fa05e1c0a116cfa121aba2ed4fae998fc1baef3beac09",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravl._06_2019.xls.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_napravl._09_2019.pdf",
+      "bytes": 88660,
+      "sha256": "af4e650228cb32849c805e2d28e7c2ecfe12bba5009703a215487fc8136bfc43",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravl._09_2019.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_napravl._09_2019.xls_0.pdf",
+      "bytes": 83647,
+      "sha256": "6c253fb2015977cb086650c1a5019c27e0877e312bfc94c9edb0e654f8c3b7d4",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravl._09_2019.xls_0.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_napravleniya.pdf",
+      "bytes": 87498,
+      "sha256": "d5a213d601c478d476429912c84a7afbbb4dc5c9fc1c0267c3cc329b72fdfcd2",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_napravleniya_06_2020.pdf",
+      "bytes": 88326,
+      "sha256": "1c0ad0fb6080bdbc9dc56985ffd8c51c7c4b87aa2b3b80f597267f9cdda085d9",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya_06_2020.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_napravleniya_06_2023.pdf",
+      "bytes": 238522,
+      "sha256": "cd47b6a7c4b789cb6aafdd6aa079e0abcd953100d06c3c01712fc2823b108b62",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya_06_2023.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_napravleniya_12_2018_g.pdf",
+      "bytes": 90092,
+      "sha256": "500e2d09cec82455a1952e95fbafc4ab90f08f0401566175a1b6376c4375673e",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya_12_2018_g.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseyny_napravleniya_9_mes.2023.pdf",
+      "bytes": 239551,
+      "sha256": "9fad2be0ea12ddd4a7f0f366d077e73a87c2491233d3a07a3d2102e331f40a94",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya_9_mes.2023.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/basseynynapravleniya_2021.pdf",
+      "bytes": 235235,
+      "sha256": "ecdf29d8be374b3fe4e9e0ae7470b8131734ec8b7393d1cf3458348f254af790",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/basseynynapravleniya_2021.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/bassnapravl_1_kv.2018.pdf",
+      "bytes": 94170,
+      "sha256": "d9a6b5b6e0f5854a99ea22b9c01698e17bebc16b9c858bc269d24581f057e60d",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/bassnapravl_1_kv.2018.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/bassnomen_03_2020.pdf",
+      "bytes": 91361,
+      "sha256": "06ebd5cdb71a782cf260478997def70fa16c6f133e7f5857fd519d53c8252758",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/bassnomen_03_2020.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/bsseyny_napravlneniya_12_20_0.pdf",
+      "bytes": 84797,
+      "sha256": "56fb54bec1fb211b081b430585a24f782bc3e0471979d2d1af71eb0f4ff2e0d9",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/bsseyny_napravlneniya_12_20_0.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/gruzooborot_napravl_basseyny.pdf",
+      "bytes": 91399,
+      "sha256": "fa976fe77ea1bb914a8c94365e18e349c83eb35093e4b444a7f84dbefb9d64b1",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/gruzooborot_napravl_basseyny.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/po_basseynam_i_napravleniyam.pdf",
+      "bytes": 55533,
+      "sha256": "e2693baf05d83bc00c6c21c467204c55fd4fb71a3ad2107f54408b097f38a9c7",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/po_basseynam_i_napravleniyam.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    }
+  ],
+  "profile": "profile.json",
+  "attempts": []
+}

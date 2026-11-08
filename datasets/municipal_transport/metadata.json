@@ -1,0 +1,33 @@
+{
+  "source_row": 10,
+  "slug": "municipal_transport",
+  "title": "Точно / Росстат: муниципальная транспортная доступность",
+  "status": "downloaded",
+  "source_url": "https://tochno.st/datasets/bdmo",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "2007–2025; также присутствует служебное значение года 9999",
+  "license": "Отдельная лицензия на странице не подтверждена; указывать Росстат и обработку Точно.",
+  "description": "Скачан полный опубликованный раздел 41 муниципальной статистики; дополнительно выделены все строки двух транспортных показателей: жители без регулярного сообщения и местные дороги вне нормативов.",
+  "limitations": "Исходный раздел 1996412 строк × 27 полей,87 региональных меток. Архив 39 МБ содержит CSV1.95 ГБ и parquet10.5 МБ; CSV на диск целиком не распаковывался. Транспортная таблица 98220 строк:28776 по регулярному сообщению и 69444 по дорогам. Это полный фильтр показателей, не выборка территорий. Год 9999 — ненормальный календарный год, требует трактовки по методологии. Есть коды отсутствующих/неприменимых значений; см. profile.json.",
+  "files": [
+    {
+      "path": "derived/municipal_transport_indicators.csv",
+      "url": "https://tochno.st/datasets/bdmo",
+      "download_url": null,
+      "bytes": 108275379,
+      "sha256": "68a3ba097ccdd8e8c5a7f15e1f82c96a9e9eb39fbe2531d6494bde3e5150f873",
+      "kind": "derived_data"
+    },
+    {
+      "path": "raw/data_section41_112_v20260928_section_file.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_bdmo_118_v20260928/by_section/data_section41_112_v20260928_section_file.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_bdmo_118_v20260928/by_section/data_section41_112_v20260928_section_file.zip",
+      "bytes": 39374215,
+      "sha256": "a3f1e95765f83de188f79f4b0e94c692848302dff7963e4d536197dd19745b4f",
+      "kind": "raw_data"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": []
+}

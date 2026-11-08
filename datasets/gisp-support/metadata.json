@@ -1,0 +1,26 @@
+{
+  "source_row": 33,
+  "slug": "gisp-support",
+  "title": "ГИСП: транспортная промышленность и меры поддержки",
+  "status": "blocked",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "Россия; фильтры отрасли и регионов в навигаторе, выгрузка не получена.",
+  "period": "Актуальный срез не получен.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Публичный навигатор динамический. Найденный официальный PDF-экспорт карточки меры возвращает 403. Описание сервиса и справочная инструкция не выданы за данные о предприятиях или мерах поддержки. Нужна доступная выгрузка с выбранным охватом.",
+  "source_urls": [
+    "https://portfolio.gisp.gov.ru/nmp/main/831",
+    "https://portfolio.gisp.gov.ru/nmp/measure/8797496/pdf"
+  ],
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://portfolio.gisp.gov.ru/nmp/measure/8797496/pdf",
+      "file": "datasets/gisp-support/raw/support-measure-8797496.pdf",
+      "retrieved_at": "2026-11-06T18:28:23.805661+00:00",
+      "status": "failed",
+      "error": "curl: (56) The requested URL returned error: 403"
+    }
+  ],
+  "profile_path": "profile.json"
+}

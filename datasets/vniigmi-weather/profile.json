@@ -1,0 +1,6 @@
+{
+  "geography": "Станции наблюдений РФ; точный список и полнота не выгружены.",
+  "period": "Доступные периоды зависят от станции и параметра; пока не установлены по файлам.",
+  "geographic_completeness": "See limitations; no inferred all-region completeness.",
+  "files": []
+}

@@ -1,0 +1,69 @@
+{
+  "source_row": 11,
+  "slug": "ourairports-russia",
+  "title": "OurAirports: аэропорты РФ",
+  "status": "downloaded",
+  "source_url": "https://ourairports.com/data/",
+  "geography": "Все записи iso_country=RU и связанные справочники",
+  "period": "Текущий снимок справочника",
+  "license": "Public Domain",
+  "limitations": [
+    "Включены закрытые объекты и площадки; не является расписанием рейсов."
+  ],
+  "files": [
+    {
+      "path": "raw/airports.csv",
+      "url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+      "final_url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+      "retrieved_at": "2026-11-06T18:27:37.962206+00:00",
+      "bytes": 12757683,
+      "sha256": "e2e65a3ddaf76170c0e2c373cb8b68597bdf3b59d243c4d6db454d48498ba6d7",
+      "kind": "data"
+    },
+    {
+      "path": "raw/runways.csv",
+      "url": "https://davidmegginson.github.io/ourairports-data/runways.csv",
+      "final_url": "https://davidmegginson.github.io/ourairports-data/runways.csv",
+      "retrieved_at": "2026-11-06T18:27:29.368989+00:00",
+      "bytes": 3973977,
+      "sha256": "b0bac6ad2a802eba770d57b3e42c191c888f3d334e42780f3d12ff5930650d07",
+      "kind": "data"
+    },
+    {
+      "path": "raw/airport-frequencies.csv",
+      "url": "https://davidmegginson.github.io/ourairports-data/airport-frequencies.csv",
+      "final_url": "https://davidmegginson.github.io/ourairports-data/airport-frequencies.csv",
+      "retrieved_at": "2026-11-06T18:27:27.914898+00:00",
+      "bytes": 1302576,
+      "sha256": "c1b1f04b42040cdb50c470ce75962459ee9d168c27843046c0c66d540fd1f171",
+      "kind": "data"
+    },
+    {
+      "path": "raw/navaids.csv",
+      "url": "https://davidmegginson.github.io/ourairports-data/navaids.csv",
+      "final_url": "https://davidmegginson.github.io/ourairports-data/navaids.csv",
+      "retrieved_at": "2026-11-06T18:27:29.839101+00:00",
+      "bytes": 1524931,
+      "sha256": "d7292380662c33a95214945023ec0a5b13189599305fd18be739e167a97a9bd1",
+      "kind": "data"
+    },
+    {
+      "path": "raw/countries.csv",
+      "url": "https://davidmegginson.github.io/ourairports-data/countries.csv",
+      "final_url": "https://davidmegginson.github.io/ourairports-data/countries.csv",
+      "retrieved_at": "2026-11-06T18:27:30.233015+00:00",
+      "bytes": 24583,
+      "sha256": "2a9dbee691125b0cdb8ceb5fe227c48c903f99c488963b8e53e2ab366521c639",
+      "kind": "data"
+    },
+    {
+      "path": "raw/regions.csv",
+      "url": "https://davidmegginson.github.io/ourairports-data/regions.csv",
+      "final_url": "https://davidmegginson.github.io/ourairports-data/regions.csv",
+      "retrieved_at": "2026-11-06T18:27:31.638844+00:00",
+      "bytes": 485265,
+      "sha256": "9220d6582b804cfdec8432e5bb21456699c9df8969bf5d8886beb62ff0b1318b",
+      "kind": "data"
+    }
+  ]
+}

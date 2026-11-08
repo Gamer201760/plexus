@@ -1,0 +1,57 @@
+{
+  "source_row": 1,
+  "slug": "intercity_connectivity",
+  "title": "Точно: транспортная связность 180 крупнейших городов",
+  "status": "downloaded",
+  "source_url": "https://tochno.st/datasets/intercity_connectivity",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "2026",
+  "license": "CC BY 4.0, прямо указана на странице набора.",
+  "description": "Полная опубликованная CSV-выгрузка направленных пар городов для авто, железной дороги и авиа. Время модельное, рассчитано через среднюю скорость, а не расписания.",
+  "limitations": "96660 строк × 22 поля; 180 городов и 85 региональных меток. У каждого режима 32220 пар. Пустые distance_km и distance_hr совпадают: road2464, rail4164, air25602; у них причина «Маршрут не найден». CD в missing_reason стоит у строк с имеющимся маршрутом. Отсутствие найденного маршрута не доказывает отсутствие физической связи. Заявленная источником погрешность времени около 11%; автомобильные расстояния могут занижаться на извилистых маршрутах.",
+  "files": [
+    {
+      "path": "derived/cities.csv",
+      "url": "https://tochno.st/datasets/intercity_connectivity",
+      "download_url": null,
+      "bytes": 17703,
+      "sha256": "c2432fe372e7cf020471d6ebca007faad6df6d9bf86b11bb462920e02a97c325",
+      "kind": "derived_data"
+    },
+    {
+      "path": "derived/coverage_by_region.csv",
+      "url": "https://tochno.st/datasets/intercity_connectivity",
+      "download_url": null,
+      "bytes": 24458,
+      "sha256": "88d80515df2998499d31f2429d93fde66df4ec066846a69e06cc2cdc8c35e72f",
+      "kind": "derived_data"
+    },
+    {
+      "path": "derived/coverage_by_transport.csv",
+      "url": "https://tochno.st/datasets/intercity_connectivity",
+      "download_url": null,
+      "bytes": 348,
+      "sha256": "6eae6e832fc7d2eb63f10238bd103ccd75510e5d16aeb23de973f1422b6bff32",
+      "kind": "derived_data"
+    },
+    {
+      "path": "raw/data_intercity_connectivity_162_v20260629_csv.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Geo/data_intercity_connectivity_162_v20260629/data_intercity_connectivity_162_v20260629_csv.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Geo/data_intercity_connectivity_162_v20260629/data_intercity_connectivity_162_v20260629_csv.zip",
+      "bytes": 3517124,
+      "sha256": "4728d93b8d29925b433a84a7c91fedbe4665bc78e672a23dc185d01c1e41dbea",
+      "kind": "raw_data"
+    },
+    {
+      "path": "raw/description_intercity_connectivity_162_v20260629.pdf",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Geo/data_intercity_connectivity_162_v20260629/description_intercity_connectivity_162_v20260629.pdf",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Geo/data_intercity_connectivity_162_v20260629/description_intercity_connectivity_162_v20260629.pdf",
+      "bytes": 314192,
+      "sha256": "8c490cb8f3216b0779bef981217db0187716177d6df29c10d0802c1cb9767f50",
+      "kind": "source_documentation"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": []
+}

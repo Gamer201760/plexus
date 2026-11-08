@@ -1,0 +1,53 @@
+{
+  "source_row": 15,
+  "slug": "mintrans-northern-delivery",
+  "title": "Минтранс: водный завоз на Север",
+  "status": "downloaded",
+  "source_page": "https://mintrans.gov.ru/file/557796",
+  "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+  "period": "2023–2025, годовые итоги",
+  "coverage": "Отправление водным транспортом в районы Крайнего Севера и приравненные местности, общий агрегат",
+  "license": "Отдельная лицензия на файлы не установлена; открытый доступ не равен разрешению на произвольное распространение. Сохранять атрибуцию и ссылку.",
+  "contents": "Оригинальные бюллетени2024и2025 и производная таблица за2023–2025: всего/морской/внутренний водный, сухогрузы/наливные/лес в плотах.",
+  "limitations": "Разбивки по отдельным северным регионам и поселениям нет. В таблице2025 нет категории «лесные грузы в плотах»: соответствующее значение оставлено пустым, а не нулём. CSV производный; показатели отправления не тождественны доставке до конечного получателя.",
+  "files": [
+    {
+      "path": "derived/northern-delivery-2023-2025.csv",
+      "bytes": 2385,
+      "sha256": "8af152a642009d3c8a650edd4fd6ca2725d02feca27ae6169567c2fe197f4a85",
+      "download_url": null,
+      "kind": "derived",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/transport-russia-2024.pdf",
+      "bytes": 2213359,
+      "sha256": "89d21f11cd7e11a1f16f37b647c639c986b98af4fb494d8be4331219727acf7e",
+      "download_url": "https://www.mintrans.gov.ru/file/528103",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 39,
+        "text_characters": 46401,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/transport-russia-2025.pdf",
+      "bytes": 1251660,
+      "sha256": "ad6cbb4a4894e8887f0c84a6103932156badb356a22a8b0ba86e5cd0641c3625",
+      "download_url": "https://mintrans.gov.ru/file/557796",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 27,
+        "text_characters": 26780,
+        "text_extraction_error": null
+      }
+    }
+  ],
+  "profile": "profile.json",
+  "attempts": []
+}

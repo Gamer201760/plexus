@@ -1,0 +1,25 @@
+{
+  "source_id": "additional-kuzbass-traffic",
+  "outside_original_38_source_catalog": true,
+  "title": "Дирекция автодорог Кузбасса: интенсивность по типам ТС",
+  "status": "downloaded_period_needs_validation",
+  "source_url": "https://kuzdor.ru/nasha-deyatelnost/soderzhanie-avtomobilnyh-dorog/otchet-ob-intensivnosti/",
+  "retrieved_at": "2026-11-06T19:24:52.503924+00:00",
+  "observation_year": null,
+  "published_snapshot": "2026-01-01",
+  "license": "Отдельная лицензия не подтверждена; сохранять атрибуцию.",
+  "files": [
+    {
+      "path": "raw/Intensivnost-01.01.2026.xlsx",
+      "url": "https://kuzdor.ru/wp-content/KuzdorSiteSection/OurActivity/RoadMaintenance/IntensityReport/Intensivnost-01.01.2026.xlsx",
+      "bytes": 28516,
+      "sha256": "c63d7691bad62b1aec58fdad14eb04234900fa6ad7b07952827ac2bf3e2d032c"
+    },
+    {
+      "path": "derived/traffic_counts.csv",
+      "kind": "derived",
+      "bytes": 7698,
+      "sha256": "e334bb4eda5a5b81b69bcb172d7c61c437d759aeb9075b699d0621d467c91831"
+    }
+  ]
+}

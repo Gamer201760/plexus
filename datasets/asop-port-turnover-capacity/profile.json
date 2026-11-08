@@ -1,0 +1,12 @@
+{
+  "geography": "Россия, один национальный агрегат",
+  "period": "2000–2024",
+  "original_files": 1,
+  "pdf_pages": 1,
+  "pdf_without_extractable_text": 0,
+  "missingness": "По всем числам PDF автоматически не проверялась; нет текстового слоя у части документов.",
+  "year_count": 25,
+  "first_year": 2000,
+  "last_year": 2024,
+  "geography_count": 1
+}

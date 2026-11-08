@@ -1,0 +1,12 @@
+{
+  "sheet": "Опорная сеть",
+  "sheet_rows": 102,
+  "sheet_columns": 26,
+  "traffic_records": 45,
+  "minimum_total_vehicles_per_day": 913,
+  "maximum_total_vehicles_per_day": 18714,
+  "rows_with_class_sum_difference": 5,
+  "internal_title": "СРЕДНЕГОДОВАЯ СУТОЧНАЯ  ИНТЕНСИВНОСТЬ ДВИЖЕНИЯ\nПО ТИПАМ ТРАНСПОРТНЫХ СРЕДСТВ ЗА 2023 ГОД ПО СОСТОЯНИЮ НА 01.01.2026 ",
+  "period_status": "needs_validation",
+  "geography": "Selected counters/sections of regional Kemerovo Oblast/Kuzbass roads, not all roads and not OD flows"
+}

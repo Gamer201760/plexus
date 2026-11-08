@@ -1,0 +1,86 @@
+{
+  "source_row": 12,
+  "slug": "rosaviation-airfield-registry",
+  "title": "Росавиация: реестр аэродромов",
+  "status": "blocked",
+  "source_page": "https://www.favt.gov.ru/opendata/7714549744-gosreestrga/",
+  "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+  "period": "Запрошен срез2025; файл23.10.2025 найден, но не скачан",
+  "coverage": "Российская Федерация; фактическое содержимое локально не получено",
+  "license": "Отдельная лицензия на файлы не установлена; открытый доступ не равен разрешению на произвольное распространение. Сохранять атрибуцию и ссылку.",
+  "contents": "Найдены официальный паспорт открытых данных и ссылка на реестр23.10.2025. Локального файла реестра нет.",
+  "limitations": "Основной домен favt.gov.ru и официальные special/old зеркала отвечают HTTP403 либо TLSошибкой. Уральский официальный PDF06.02.2026 также недоступен (403; wwwхост имеет несоответствие сертификата). Страница/ошибка не выданы за скачанный датасет.",
+  "files": [],
+  "profile": "profile.json",
+  "attempts": [
+    {
+      "key": "airfield-index",
+      "url": "https://www.favt.gov.ru/opendata/7714549744-gosreestrga/",
+      "returncode": 22,
+      "http": "403 text/html https://www.favt.gov.ru/opendata/7714549744-gosreestrga/",
+      "error": "curl: (22) The requested URL returned error: 403\n",
+      "bytes": 0
+    },
+    {
+      "key": "airfield-2025",
+      "url": "https://favt.gov.ru/public/materials/0/d/e/a/6/0dea6bf1435fbf7bd8c19749747c1451.pdf",
+      "returncode": 22,
+      "http": "403 text/html https://favt.gov.ru/public/materials/0/d/e/a/6/0dea6bf1435fbf7bd8c19749747c1451.pdf",
+      "error": "curl: (22) The requested URL returned error: 403\n",
+      "bytes": 0
+    },
+    {
+      "key": "airfield-old",
+      "url": "https://old.favt.gov.ru/opendata/7714549744-gosreestrga/",
+      "returncode": 35,
+      "http": "000  https://old.favt.gov.ru/opendata/7714549744-gosreestrga/",
+      "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to old.favt.gov.ru:443 \n",
+      "bytes": 0
+    },
+    {
+      "key": "airfield-special",
+      "url": "https://special.favt.gov.ru/opendata/7714549744-gosreestrga/",
+      "returncode": 22,
+      "http": "403 text/plain https://special.favt.gov.ru/opendata/7714549744-gosreestrga/",
+      "error": "curl: (22) The requested URL returned error: 403\n",
+      "bytes": 0
+    },
+    {
+      "key": "airfield-pdf-old",
+      "url": "https://old.favt.gov.ru/public/materials/0/d/e/a/6/0dea6bf1435fbf7bd8c19749747c1451.pdf",
+      "returncode": 22,
+      "http": "403 text/plain https://old.favt.gov.ru/public/materials/0/d/e/a/6/0dea6bf1435fbf7bd8c19749747c1451.pdf",
+      "error": "curl: (22) The requested URL returned error: 403\n",
+      "bytes": 0
+    },
+    {
+      "key": "airfield-pdf-special",
+      "url": "https://special.favt.gov.ru/public/materials/0/d/e/a/6/0dea6bf1435fbf7bd8c19749747c1451.pdf",
+      "returncode": 22,
+      "http": "403 text/plain https://special.favt.gov.ru/public/materials/0/d/e/a/6/0dea6bf1435fbf7bd8c19749747c1451.pdf",
+      "error": "curl: (22) The requested URL returned error: 403\n",
+      "bytes": 0
+    },
+    {
+      "key": "airfield-registry-old",
+      "url": "https://old.favt.gov.ru/reestry-aerodromy-vertodromy/",
+      "returncode": 22,
+      "http": "403 text/plain https://old.favt.gov.ru/reestry-aerodromy-vertodromy/",
+      "error": "curl: (22) The requested URL returned error: 403\n",
+      "bytes": 0
+    },
+    {
+      "key": "airfield-ural-2026",
+      "url": "https://www.ural.favt.ru/public/materials/a/f/5/e/5/af5e52bb4b860ff8e136faa50f97ba97.pdf",
+      "returncode": 60,
+      "http": "000  https://www.ural.favt.ru/public/materials/a/f/5/e/5/af5e52bb4b860ff8e136faa50f97ba97.pdf",
+      "error": "curl: (60) SSL: no alternative certificate subject name matches target host name 'www.ural.favt.ru'\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n",
+      "bytes": 0
+    },
+    {
+      "url": "https://ural.favt.ru/public/materials/a/f/5/e/5/af5e52bb4b860ff8e136faa50f97ba97.pdf",
+      "http": "403 text/plain",
+      "returncode": 22
+    }
+  ]
+}

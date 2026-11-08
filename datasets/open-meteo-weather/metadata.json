@@ -1,0 +1,14 @@
+{
+  "source_row": 28,
+  "slug": "open-meteo-weather",
+  "title": "Open-Meteo: погодные данные",
+  "status": "needs_parameters",
+  "source_url": "https://open-meteo.com/en/docs/historical-weather-api",
+  "geography": "Не выбрана",
+  "period": "Не выбран",
+  "license": "Условия Open-Meteo; бесплатное API для некоммерческого использования",
+  "limitations": [
+    "Нужны координаты или область, период, переменные и модель. Пользователь сначала хочет оценить покрытие готовых наборов; произвольные города и периоды не выбраны."
+  ],
+  "files": []
+}

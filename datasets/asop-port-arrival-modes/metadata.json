@@ -1,0 +1,437 @@
+{
+  "source_row": 6,
+  "slug": "asop-port-arrival-modes",
+  "title": "АСОП: подвоз грузов в порты",
+  "status": "partial",
+  "source_page": "https://www.morport.com/rus/content/statistika-0",
+  "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+  "period": "2017–2024 опубликованные срезы; отдельное дополнение 2024–2025",
+  "coverage": "Россия, агрегаты по видам транспорта",
+  "license": "Отдельная лицензия на файлы не установлена; открытый доступ не равен разрешению на произвольное распространение. Сохранять атрибуцию и ссылку.",
+  "contents": "29 PDF взаимодействия морских портов с видами транспорта за2017–2024 и отдельный PDF доставки в порты за2024/2025.",
+  "limitations": "Название ссылки «взаимодействие» не гарантирует подвоз: PDF за12месяцев2024 показывает отправление грузов ИЗ портов, а не доставку В порты. Добавленный PDF2025 явно содержит доставку в порты. Файлы разных направлений нельзя объединять без проверки; многие исходники сканированы. Территориального разреза нет.",
+  "files": [
+    {
+      "path": "raw/06_21_prib._otpr.pdf",
+      "bytes": 256609,
+      "sha256": "2c5923c6bba72a890a8b4e2f8b887f72c5b7ed9a2a01938c0ef55d9a8b750554",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/06_21_prib._otpr.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/12_2023_dostavka_otpravlenie.pdf",
+      "bytes": 265197,
+      "sha256": "8668c7d6469e259553977cf80a344b44115e736f1be378a02f2c8386d63dd9b0",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/12_2023_dostavka_otpravlenie.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/2017-pribytie_otpravlenie.pdf",
+      "bytes": 601307,
+      "sha256": "c8e5574b00feb3754aeb60f37763af1d5c5ea0640a174d80569b298eb9e9fc68",
+      "download_url": "https://www.morport.com/sites/default/files/inline/pribytie_otpravlenie.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 204,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/2019-q3-pribytie_otpravlenie.pdf",
+      "bytes": 116580,
+      "sha256": "2a5bcd770ad8de2bd29372f36b3a6b868cb3400b6385f3c9787d3faa547ec269",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/9_es_2022_prib_otpr_1.pdf",
+      "bytes": 150369,
+      "sha256": "88b84d3b3d3678f2cd98727fbf19dc6654c4b14f8cf8c96a6b9197e3fb61aeff",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/9_es_2022_prib_otpr_1.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/arrival-modes-2024-2025.pdf",
+      "bytes": 171308,
+      "sha256": "f3e0e44350c01e41fa166605f719ce957c666903c45b5a7faa4562c10ef86ab7",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_2025.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 434,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/mp-2_06_2022_0.pdf",
+      "bytes": 150631,
+      "sha256": "1419c25020bd162bf2755795836d390716a82017408457d43088b8f2194a9912",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/mp-2_06_2022_0.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/prib_otprav_03_2020.pdf",
+      "bytes": 106282,
+      "sha256": "3d85780a1a5de414a03d91a9f00d907bb84825c3eb28e598893ac01904bacd05",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/prib_otprav_03_2020.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/prib_otprav_2021.pdf",
+      "bytes": 250914,
+      "sha256": "a908d77cb08a78c1143578c022ec9fa2a1cc72134a816382a18acc60aa3d7134",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/prib_otprav_2021.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/prib_otprav_2022.pdf",
+      "bytes": 159933,
+      "sha256": "bd595d4f6bc8b06993718406fa57bc03766a28b1e16e0029a33e4a50126eac5c",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/prib_otprav_2022.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/prib_otpravl_09_2018_g_0.pdf",
+      "bytes": 109549,
+      "sha256": "2dca2ac4b557d7ee429af1f246d2ca2a01cf45f4bb4e0c55554cbfa9249b613d",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/prib_otpravl_09_2018_g_0.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/prib_otpravl_12_2018_g.pdf",
+      "bytes": 134411,
+      "sha256": "b6f0307a0f3d1485a392239f9eda68cededac2f71e4342c33e61ac6e6a4ba5fd",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/prib_otpravl_12_2018_g.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/prib_otpravl_1_kv.2018_g.pdf",
+      "bytes": 114433,
+      "sha256": "941761c837ee9cdb1e97ea4effce59a4dff3112c0cedcea85af23541539031ca",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/prib_otpravl_1_kv.2018_g.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribotprav.pdf",
+      "bytes": 113361,
+      "sha256": "6ba667bb58f962ad73cb4535dbcb8386ebe292cadb96ed0173005e7ae966142a",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribotprav.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribotpravl_03_2019.pdf",
+      "bytes": 115142,
+      "sha256": "85187fe81d1f8a697fc7a2055473f7eac43cae79b7a247ed49ab7c26a1af6c19",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribotpravl_03_2019.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribyt_otpravl_03_2021.pdf",
+      "bytes": 262827,
+      "sha256": "98fdfd9494219bea12a1604eb4dd2aaea9da97bb445fa31f163117636290dace",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribyt_otpravl_03_2021.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribytie_otpravlenie_0.pdf",
+      "bytes": 116387,
+      "sha256": "3c1c291a1e008ba9f712e9e7044d024993357192641525494f7dcd6c33025a64",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_0.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 2,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribytie_otpravlenie_03_2022.pdf",
+      "bytes": 264428,
+      "sha256": "4867d72182b8aab7d5f299df02ff99c96d1b6d6bb5ef8d73624e305aee36236a",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_03_2022.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribytie_otpravlenie_09_2020.pdf",
+      "bytes": 126502,
+      "sha256": "0d2f7e3adabc11f44641f0da7efcd52012ba6a2322a4bd8e7fdb79c94aa7400e",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_09_2020.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 429,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribytie_otpravlenie_09_2021.pdf",
+      "bytes": 261669,
+      "sha256": "052754ede94ce217beb560e468180eda1a5b3e0b5d6551412a7119324eb36ec1",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_09_2021.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribytie_otpravlenie_2019_g.pdf",
+      "bytes": 117119,
+      "sha256": "6acd4aaed736997d1b350a53b2f5aef591b29692b1d48427ee8d429362d4eba3",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_2019_g.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribytie_otpravleniya_12_20.pdf",
+      "bytes": 103900,
+      "sha256": "e6489e3e643d02b7fe5d77f078ba30140a217ed4e6a7bccc54d8937e4067f633",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravleniya_12_20.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/pribytieotpravlenie_06_2019_g.pdf",
+      "bytes": 101294,
+      "sha256": "1e771025e67d81a7a1b597a5eb125919ccbe604a6a8058a10ab701f724b3247a",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/pribytieotpravlenie_06_2019_g.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/vidy_transporta.pdf",
+      "bytes": 70697,
+      "sha256": "64e2d33cdf53268d890dd4b62c4a5b1f3fca466ed230078e2d5ff3e0ed249c3a",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/vidy_transporta_0.pdf",
+      "bytes": 74369,
+      "sha256": "35893e50415092cc434f444e72d10a29e0f608bc32b275a555e529b400c7921f",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_0.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/vidy_transporta_03_2023.pdf",
+      "bytes": 408023,
+      "sha256": "a98768a57a2cb2574ee5bc4f0721a596d77b4f59aaaa4e35050f0f2e3fce81cd",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_03_2023.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 829,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/vidy_transporta_06_2023.pdf",
+      "bytes": 259809,
+      "sha256": "555dde81594339ee8e9bd50293e716bb389cde2840a474d9156510582941a82f",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_06_2023.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/vidy_transporta_1.pdf",
+      "bytes": 34723,
+      "sha256": "168765d4b3998b292caaf75011db004e37b756e3a3d353d6bc0cc19eec59225f",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_1.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/vidy_transporta_1_kv-l_2024.pdf",
+      "bytes": 278421,
+      "sha256": "bf9ad1c62e5ff6f4ed0701583dda934b127aa3161ba117b2d913890be2de2818",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_1_kv-l_2024.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    },
+    {
+      "path": "raw/vidy_transporta_9_mes.2023.pdf",
+      "bytes": 273338,
+      "sha256": "e08bbf310132895140525293547a2635d1688e2cf400833bceecba9341f73767",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_9_mes.2023.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 0,
+        "text_extraction_error": null
+      }
+    }
+  ],
+  "profile": "profile.json",
+  "attempts": []
+}

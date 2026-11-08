@@ -1,0 +1,116 @@
+{
+  "source_row": 22,
+  "slug": "cbr-macro",
+  "title": "Банк России: ставка, инфляция, валюты и платёжный баланс",
+  "status": "partial",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "Россия; макроэкономические ряды федерального уровня, регионов нет.",
+  "period": "USD/RUB: вся доступная история с 01.07.1992 до 06.11.2026; месячные инфляция и ключевая ставка: 09.2013–09.2026; платёжный баланс: бюллетень за III квартал 2025, сравнения 2023–2025.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Исходные XML и XLSX; PDF-бюллетень. Ряд USD включает деноминацию 1998 года и разные режимы курса: нельзя механически сравнивать номинальные рубли всей истории. Это выбранные макроэкономические серии, а не все серии ЦБ и не все валюты.",
+  "source_urls": [
+    "https://www.cbr.ru/development/SXML/",
+    "https://www.cbr.ru/statistics/ddkp/infl/",
+    "https://www.cbr.ru/hd_base/KeyRate/"
+  ],
+  "files": [
+    {
+      "path": "raw/balance-of-payments-2025-q3.pdf",
+      "bytes": 341746,
+      "sha256": "1d4d841a004867cf7605fca69e831cb8e6caec5724407f65cf095cf687e5d212",
+      "url": "https://www.cbr.ru/collection/collection/file/59425/balance_of_payments_2025-3_24.pdf",
+      "retrieved_at": "2026-11-06T18:26:25.348689+00:00",
+      "content_type": "application/pdf",
+      "kind": "original_download",
+      "pages": 13
+    },
+    {
+      "path": "raw/currencies.xml",
+      "bytes": 17106,
+      "sha256": "b6bc755432f5f3cfa8827496263ce6978a0382ae24c7a1b9ff2568406e6d7ec3",
+      "url": "https://www.cbr.ru/scripts/XML_valFull.asp",
+      "retrieved_at": "2026-11-06T18:26:25.348744+00:00",
+      "content_type": "application/xml; charset=windows-1251",
+      "kind": "original_download"
+    },
+    {
+      "path": "raw/inflation-keyrate-2013-2026.xlsx",
+      "bytes": 7500,
+      "sha256": "5241e4f2bbf6b05ef56bfa43d51c01f540dedae84a88f37bb11af420875fcc48",
+      "url": "https://www.cbr.ru/Queries/UniDbQuery/DownloadExcel/132934?Posted=True&From=17.09.2013&To=06.11.2026&FromDate=09%2F17%2F2013&ToDate=11%2F06%2F2026&backUrl=%2Fstatistics%2Fddkp%2Finfl%2F%3FUniDbQuery.Posted%3DTrue%26UniDbQuery.From%3D17.09.2013%26UniDbQuery.To%3D06.11.2026",
+      "retrieved_at": "2026-11-06T18:31:06.938505+00:00",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "kind": "original_download"
+    },
+    {
+      "path": "raw/usd-rub-1992-2026.xml",
+      "bytes": 943118,
+      "sha256": "afd1bc5c918d16f600738a36ef821d352ee6ab3cca0705e41fe50190f3a04b10",
+      "url": "https://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=01/01/1992&date_req2=06/11/2026&VAL_NM_RQ=R01235",
+      "retrieved_at": "2026-11-06T18:28:23.804944+00:00",
+      "content_type": "application/xml; charset=windows-1251",
+      "kind": "original_download"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=01/01/2020&date_req2=06/11/2026&VAL_NM_RQ=R01235",
+      "file": "datasets/cbr-macro/raw/usd-rub-2020-2026.xml",
+      "retrieved_at": "2026-11-06T18:26:25.348432+00:00",
+      "http_status": "200",
+      "content_type": "application/xml; charset=windows-1251",
+      "final_url": "https://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=01/01/2020&date_req2=06/11/2026&VAL_NM_RQ=R01235",
+      "records": 1688,
+      "status": "downloaded",
+      "bytes": 200939,
+      "sha256": "f83f119de77d1a5ec682c10a7116cefa8e7d9de31a21c367aeaf9acb39a200d4"
+    },
+    {
+      "url": "https://www.cbr.ru/scripts/XML_valFull.asp",
+      "file": "datasets/cbr-macro/raw/currencies.xml",
+      "retrieved_at": "2026-11-06T18:26:25.348744+00:00",
+      "http_status": "200",
+      "content_type": "application/xml; charset=windows-1251",
+      "final_url": "https://www.cbr.ru/scripts/XML_valFull.asp",
+      "records": 83,
+      "status": "downloaded",
+      "bytes": 17106,
+      "sha256": "b6bc755432f5f3cfa8827496263ce6978a0382ae24c7a1b9ff2568406e6d7ec3"
+    },
+    {
+      "url": "https://www.cbr.ru/collection/collection/file/59425/balance_of_payments_2025-3_24.pdf",
+      "file": "datasets/cbr-macro/raw/balance-of-payments-2025-q3.pdf",
+      "retrieved_at": "2026-11-06T18:26:25.348689+00:00",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "final_url": "https://www.cbr.ru/collection/collection/file/59425/balance_of_payments_2025-3_24.pdf",
+      "status": "downloaded",
+      "bytes": 341746,
+      "sha256": "1d4d841a004867cf7605fca69e831cb8e6caec5724407f65cf095cf687e5d212"
+    },
+    {
+      "url": "https://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=01/01/1992&date_req2=06/11/2026&VAL_NM_RQ=R01235",
+      "file": "datasets/cbr-macro/raw/usd-rub-1992-2026.xml",
+      "retrieved_at": "2026-11-06T18:28:23.804944+00:00",
+      "http_status": "200",
+      "content_type": "application/xml; charset=windows-1251",
+      "final_url": "https://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=01/01/1992&date_req2=06/11/2026&VAL_NM_RQ=R01235",
+      "records": 7956,
+      "status": "downloaded",
+      "bytes": 943118,
+      "sha256": "afd1bc5c918d16f600738a36ef821d352ee6ab3cca0705e41fe50190f3a04b10"
+    },
+    {
+      "url": "https://www.cbr.ru/Queries/UniDbQuery/DownloadExcel/132934?Posted=True&From=17.09.2013&To=06.11.2026&FromDate=09%2F17%2F2013&ToDate=11%2F06%2F2026&backUrl=%2Fstatistics%2Fddkp%2Finfl%2F%3FUniDbQuery.Posted%3DTrue%26UniDbQuery.From%3D17.09.2013%26UniDbQuery.To%3D06.11.2026",
+      "file": "datasets/cbr-macro/raw/inflation-keyrate-2013-2026.xlsx",
+      "retrieved_at": "2026-11-06T18:31:06.938505+00:00",
+      "http_status": "200",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "final_url": "https://www.cbr.ru/Queries/UniDbQuery/DownloadExcel/132934?Posted=True&From=17.09.2013&To=06.11.2026&FromDate=09%2F17%2F2013&ToDate=11%2F06%2F2026&backUrl=%2Fstatistics%2Fddkp%2Finfl%2F%3FUniDbQuery.Posted%3DTrue%26UniDbQuery.From%3D17.09.2013%26UniDbQuery.To%3D06.11.2026",
+      "status": "downloaded",
+      "bytes": 7500,
+      "sha256": "5241e4f2bbf6b05ef56bfa43d51c01f540dedae84a88f37bb11af420875fcc48"
+    }
+  ],
+  "profile_path": "profile.json"
+}

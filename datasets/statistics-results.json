@@ -1,0 +1,101 @@
+[
+  {
+    "source_row": 1,
+    "slug": "intercity_connectivity",
+    "title": "Точно: транспортная связность 180 крупнейших городов",
+    "status": "downloaded",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/intercity_connectivity",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/intercity_connectivity/metadata.json",
+    "total_bytes": 3873825
+  },
+  {
+    "source_row": 2,
+    "slug": "regional_transport",
+    "title": "Точно / Росстат: транспорт регионов",
+    "status": "downloaded",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/regional_transport",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/regional_transport/metadata.json",
+    "total_bytes": 2490517
+  },
+  {
+    "source_row": 9,
+    "slug": "allsettlements",
+    "title": "Точно: населённые пункты и перепись 2020–2021",
+    "status": "downloaded",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/allsettlements",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/allsettlements/metadata.json",
+    "total_bytes": 17546044
+  },
+  {
+    "source_row": 10,
+    "slug": "municipal_transport",
+    "title": "Точно / Росстат: муниципальная транспортная доступность",
+    "status": "downloaded",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/municipal_transport",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/municipal_transport/metadata.json",
+    "total_bytes": 147649594
+  },
+  {
+    "source_row": 14,
+    "slug": "regional_grp",
+    "title": "Точно / Росстат: валовый региональный продукт",
+    "status": "downloaded",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/regional_grp",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/regional_grp/metadata.json",
+    "total_bytes": 1479216
+  },
+  {
+    "source_row": 16,
+    "slug": "rosstat_freight",
+    "title": "Росстат: грузовые перевозки и грузооборот",
+    "status": "partial",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/metadata.json",
+    "total_bytes": 9608612
+  },
+  {
+    "source_row": 17,
+    "slug": "rosstat_passengers",
+    "title": "Росстат: пассажирские перевозки и пассажирооборот",
+    "status": "partial",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/metadata.json",
+    "total_bytes": 6316035
+  },
+  {
+    "source_row": 19,
+    "slug": "emiss",
+    "title": "ЕМИСС: макроэкономические показатели",
+    "status": "partial",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/emiss",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/emiss/metadata.json",
+    "total_bytes": 15387949
+  },
+  {
+    "source_row": 20,
+    "slug": "regions_collection",
+    "title": "Росстат: социально-экономические показатели регионов",
+    "status": "downloaded",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/regions_collection",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/regions_collection/metadata.json",
+    "total_bytes": 44436707
+  },
+  {
+    "source_row": 21,
+    "slug": "demography",
+    "title": "Росстат: демография и перепись",
+    "status": "partial",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/demography",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/demography/metadata.json",
+    "total_bytes": 778748
+  },
+  {
+    "source_row": 35,
+    "slug": "vehicle_fleet",
+    "title": "Росстат: парк транспортных средств",
+    "status": "blocked",
+    "directory": "/private/tmp/keys-champ-data-statistics/datasets/vehicle_fleet",
+    "metadata": "/private/tmp/keys-champ-data-statistics/datasets/vehicle_fleet/metadata.json",
+    "total_bytes": 0
+  }
+]

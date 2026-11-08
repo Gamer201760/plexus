@@ -1,0 +1,6 @@
+{
+  "settlement_rows": 155747,
+  "invalid_or_out_of_range_coordinates": 0,
+  "zero_zero_coordinates": 0,
+  "method": "Parsed latitude/longitude as finite numbers within global coordinate ranges; does not verify geocoding accuracy."
+}

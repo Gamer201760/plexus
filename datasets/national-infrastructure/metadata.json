@@ -1,0 +1,55 @@
+{
+  "source_row": 30,
+  "slug": "national-infrastructure",
+  "title": "Правительство РФ: магистральная инфраструктура и финансирование",
+  "status": "partial",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "Федеральные проекты и объекты РФ; имеется привязка к отдельным транспортным направлениям, не единая таблица всех регионов.",
+  "period": "Паспорт транспортной части комплексного плана на период 30.07.2018–31.12.2024; таблица содержит базовые и целевые годы.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Официальный PDF Минтранса, 32 страницы, показатели и финансовое обеспечение плана. Это конкретный исторический паспорт, а не все национальные проекты и не фактическое исполнение бюджета. Требуется извлечение таблиц для расчётов.",
+  "source_urls": [
+    "https://mintrans.gov.ru/file/495363",
+    "https://static.government.ru/media/files/mMrrbr3q9P6cGfWP3WxSmf7lCvAhrLob.pdf"
+  ],
+  "files": [
+    {
+      "path": "raw/infrastructure-plan-passport-2024.pdf",
+      "bytes": 183187,
+      "sha256": "4e1dfd8737758221d3ef925161b91cd2ef86171a53f975e1814f2b78c7a488fd",
+      "url": "https://mintrans.gov.ru/file/495363",
+      "retrieved_at": "2026-11-06T18:30:14.358497+00:00",
+      "content_type": "application/pdf",
+      "kind": "original_download",
+      "pages": 32
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://static.government.ru/media/files/mMrrbr3q9P6cGfWP3WxSmf7lCvAhrLob.pdf",
+      "file": "datasets/national-infrastructure/raw/infrastructure-plan-2018-2024.pdf",
+      "retrieved_at": "2026-11-06T18:27:45.085952+00:00",
+      "status": "failed",
+      "error": "curl: (28) SSL connection timeout"
+    },
+    {
+      "url": "http://static.government.ru/media/files/mMrrbr3q9P6cGfWP3WxSmf7lCvAhrLob.pdf",
+      "file": "datasets/national-infrastructure/raw/infrastructure-plan-2018-2024.pdf",
+      "retrieved_at": "2026-11-06T18:28:23.803770+00:00",
+      "status": "failed",
+      "error": "curl: (52) Empty reply from server"
+    },
+    {
+      "url": "https://mintrans.gov.ru/file/495363",
+      "file": "datasets/national-infrastructure/raw/infrastructure-plan-passport-2024.pdf",
+      "retrieved_at": "2026-11-06T18:30:14.358497+00:00",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "final_url": "https://mintrans.gov.ru/file/495363",
+      "status": "downloaded",
+      "bytes": 183187,
+      "sha256": "4e1dfd8737758221d3ef925161b91cd2ef86171a53f975e1814f2b78c7a488fd"
+    }
+  ],
+  "profile_path": "profile.json"
+}

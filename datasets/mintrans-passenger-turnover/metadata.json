@@ -1,0 +1,39 @@
+{
+  "source_row": 4,
+  "slug": "mintrans-passenger-turnover",
+  "title": "Минтранс: пассажирооборот",
+  "status": "downloaded",
+  "source_page": "https://mintrans.gov.ru/file/529089",
+  "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+  "period": "Январь 2022 — декабрь 2024",
+  "coverage": "Россия, один национальный агрегат",
+  "license": "Отдельная лицензия на файлы не установлена; открытый доступ не равен разрешению на произвольное распространение. Сохранять атрибуцию и ссылку.",
+  "contents": "Помесячный пассажирооборот транспорта общего пользования: 12 месяцев каждого из трёх лет. Оригинальный бюллетень и производный CSV на 36 наблюдений.",
+  "limitations": "CSV получен переносом подписей с графика; не является официальной машинной выгрузкой. Исключения охвата указаны в profile.json. Разбивки по городам/регионам и маршрутам нет.",
+  "files": [
+    {
+      "path": "derived/monthly-passenger-turnover-2022-2024.csv",
+      "bytes": 3452,
+      "sha256": "7115a1d394e8e58045cced9d9e349337ea7241b6bcdec55533d25d103b854701",
+      "download_url": null,
+      "kind": "derived",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/transport-russia-2024-monthly.pdf",
+      "bytes": 2564940,
+      "sha256": "83754ebb06adaa8d5e69afd06bce06e3781b74236a85ae8f62bf94f3fc0f3ea3",
+      "download_url": "https://mintrans.gov.ru/file/529089",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 40,
+        "text_characters": 54774,
+        "text_extraction_error": null
+      }
+    }
+  ],
+  "profile": "profile.json",
+  "attempts": []
+}

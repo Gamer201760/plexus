@@ -1,0 +1,107 @@
+{
+  "source_row": 37,
+  "slug": "minprirody-environment",
+  "title": "Минприроды: окружающая среда, выбросы и транспорт",
+  "status": "partial",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "РФ в целом, федеральные округа, субъекты и отдельные города. Скачан полный региональный раздел 14 государственного доклада, 302 страницы.",
+  "period": "Государственный доклад за 2024 год; в таблицах встречаются исторические ряды 1990–2024 и 2015–2024.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Скачаны четыре исходных PDF-раздела: выбросы, транспорт, субъекты РФ и основные показатели. Полный доклад целиком не скачан. Региональные таблицы неоднородны и могут иметь пропуски; наличие раздела региона не гарантирует заполненность всех показателей. В документе география и названия следуют источнику.",
+  "source_urls": [
+    "https://gosdoklad.mnr.gov.ru/",
+    "https://gosdoklad.mnr.gov.ru/ajax.php?SECTION_ID=191&YEAR=2024",
+    "https://gosdoklad.mnr.gov.ru/ajax.php?SECTION_ID=247&YEAR=2024",
+    "https://gosdoklad.mnr.gov.ru/ajax.php?SECTION_ID=263&YEAR=2024",
+    "https://gosdoklad.mnr.gov.ru/ajax.php?SECTION_ID=457&YEAR=2024"
+  ],
+  "files": [
+    {
+      "path": "raw/mnr-emissions-2024.pdf",
+      "bytes": 1933229,
+      "sha256": "8f71523850fe84ad45e988b4392906fba4cc7c1cf7be5bf5f4b5bc505d18e431",
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/1ad/5clmr227b553vu42g0wwqxox503npinp.pdf",
+      "retrieved_at": "2026-11-06T18:31:06.747716+00:00",
+      "content_type": "application/pdf",
+      "kind": "original_download",
+      "pages": 6
+    },
+    {
+      "path": "raw/mnr-indicators-2024.pdf",
+      "bytes": 235967,
+      "sha256": "95df92112584d3e275a315efbe95b091d6d261489c284beb4f5b9b929b39d1f8",
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/e45/3shfddv0saqflo89dfsbxkrbheqt7vxo.pdf",
+      "retrieved_at": "2026-11-06T18:31:06.747783+00:00",
+      "content_type": "application/pdf",
+      "kind": "original_download",
+      "pages": 7
+    },
+    {
+      "path": "raw/mnr-regions-2024.pdf",
+      "bytes": 42173703,
+      "sha256": "f754a62770ed6d681e1222c657e75d677136c19904eabef4e562eb1f054af865",
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/0b3/zbeqyf63ro1gvflxd6yry20q12vlli0a.pdf",
+      "retrieved_at": "2026-11-06T18:31:06.747473+00:00",
+      "content_type": "application/pdf",
+      "kind": "original_download",
+      "pages": 302
+    },
+    {
+      "path": "raw/mnr-transport-2024.pdf",
+      "bytes": 286782,
+      "sha256": "93f2be5d766b2f8a6977e2ab02d2f5d0bb5b424def2f8753f8b63857a9d2bd23",
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/89d/pgi1ef3p5u06vxyp8vc7cf0w2ihbj569.pdf",
+      "retrieved_at": "2026-11-06T18:31:06.747648+00:00",
+      "content_type": "application/pdf",
+      "kind": "original_download",
+      "pages": 4
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/1ad/5clmr227b553vu42g0wwqxox503npinp.pdf",
+      "file": "datasets/minprirody-environment/raw/mnr-emissions-2024.pdf",
+      "retrieved_at": "2026-11-06T18:31:06.747716+00:00",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "final_url": "https://gosdoklad.mnr.gov.ru/upload/iblock/1ad/5clmr227b553vu42g0wwqxox503npinp.pdf",
+      "status": "downloaded",
+      "bytes": 1933229,
+      "sha256": "8f71523850fe84ad45e988b4392906fba4cc7c1cf7be5bf5f4b5bc505d18e431"
+    },
+    {
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/89d/pgi1ef3p5u06vxyp8vc7cf0w2ihbj569.pdf",
+      "file": "datasets/minprirody-environment/raw/mnr-transport-2024.pdf",
+      "retrieved_at": "2026-11-06T18:31:06.747648+00:00",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "final_url": "https://gosdoklad.mnr.gov.ru/upload/iblock/89d/pgi1ef3p5u06vxyp8vc7cf0w2ihbj569.pdf",
+      "status": "downloaded",
+      "bytes": 286782,
+      "sha256": "93f2be5d766b2f8a6977e2ab02d2f5d0bb5b424def2f8753f8b63857a9d2bd23"
+    },
+    {
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/0b3/zbeqyf63ro1gvflxd6yry20q12vlli0a.pdf",
+      "file": "datasets/minprirody-environment/raw/mnr-regions-2024.pdf",
+      "retrieved_at": "2026-11-06T18:31:06.747473+00:00",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "final_url": "https://gosdoklad.mnr.gov.ru/upload/iblock/0b3/zbeqyf63ro1gvflxd6yry20q12vlli0a.pdf",
+      "status": "downloaded",
+      "bytes": 42173703,
+      "sha256": "f754a62770ed6d681e1222c657e75d677136c19904eabef4e562eb1f054af865"
+    },
+    {
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/e45/3shfddv0saqflo89dfsbxkrbheqt7vxo.pdf",
+      "file": "datasets/minprirody-environment/raw/mnr-indicators-2024.pdf",
+      "retrieved_at": "2026-11-06T18:31:06.747783+00:00",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "final_url": "https://gosdoklad.mnr.gov.ru/upload/iblock/e45/3shfddv0saqflo89dfsbxkrbheqt7vxo.pdf",
+      "status": "downloaded",
+      "bytes": 235967,
+      "sha256": "95df92112584d3e275a315efbe95b091d6d261489c284beb4f5b9b929b39d1f8"
+    }
+  ],
+  "profile_path": "profile.json"
+}

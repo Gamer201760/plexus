@@ -1,0 +1,86 @@
+region_code,region_name,airports,scheduled_service_yes
+RU-AD,Republic of Adygea,9,0
+RU-AL,Altai Republic,13,0
+RU-ALT,Altai Krai,24,1
+RU-AMU,Amur Oblast,58,1
+RU-ARK,Arkhangelsk Oblast,41,4
+RU-AST,Astrakhan Oblast,10,1
+RU-BA,Republic of Bashkortostan,8,2
+RU-BEL,Belgorod Oblast,6,0
+RU-BRY,Bryansk Oblast,8,0
+RU-BU,Republic of Buryat,23,3
+RU-CE,Chechen Republic,4,1
+RU-CHE,Chelyabinsk Oblast,11,1
+RU-CHU,Chukotka Autonomous Okrug,44,5
+RU-CU,Chuvash Republic,2,1
+RU-DA,Republic of Dagestan,7,1
+RU-IN,Republic of Ingushetia,1,1
+RU-IRK,Irkutsk Oblast,27,5
+RU-IVA,Ivanovo Oblast,11,1
+RU-KAM,Kamchatka Krai,59,3
+RU-KB,Kabardino-Balkar Republic,2,1
+RU-KC,Karachay-Cherkess Republic,2,0
+RU-KDA,Krasnodar Krai,54,3
+RU-KEM,Kemerovo Oblast,6,2
+RU-KGD,Kaliningrad Oblast,15,1
+RU-KGN,Kurgan Oblast,5,1
+RU-KHA,Khabarovsk Krai,59,5
+RU-KHM,Khanty-Mansi Autonomous Okrug,29,9
+RU-KIR,Kirov Oblast,1,1
+RU-KK,Republic of Khakassia,1,1
+RU-KL,Republic of Kalmykia,2,1
+RU-KLU,Kaluga Oblast,8,0
+RU-KO,Komi Republic,31,5
+RU-KOS,Kostroma Oblast,6,1
+RU-KR,Republic of Karelia,20,2
+RU-KRS,Kursk Oblast,7,0
+RU-KYA,Krasnoyarsk Krai,106,11
+RU-LEN,Leningrad Oblast,52,0
+RU-LIP,Lipetsk Oblast,5,0
+RU-MAG,Magadan Oblast,18,3
+RU-ME,Mari El Republic,3,0
+RU-MO,Republic of Mordovia,2,1
+RU-MOS,Moscow Oblast,85,3
+RU-MOW,Moscow (city),40,1
+RU-MUR,Murmansk Oblast,58,2
+RU-NEN,Nenets Autonomous Okrug,52,2
+RU-NGR,Novgorod Oblast,15,0
+RU-NIZ,Nizhny Novgorod Oblast,15,1
+RU-NVS,Novosibirsk Oblast,30,1
+RU-OMS,Omsk Oblast,10,1
+RU-ORE,Orenburg Oblast,18,2
+RU-ORL,Oryol Oblast,3,0
+RU-PER,Perm Krai,9,1
+RU-PNZ,Penza Oblast,4,1
+RU-PRI,Primorsky Krai,67,3
+RU-PSK,Pskov Oblast,14,1
+RU-ROS,Rostov Oblast,29,0
+RU-RYA,Ryazan Oblast,10,0
+RU-SA,Sakha (Yakutia) Republic,122,23
+RU-SAK,Sakhalin Oblast,66,5
+RU-SAM,Samara Oblast,16,1
+RU-SAR,Saratov Oblast,21,2
+RU-SE,Republic of North Ossetia-Alania,3,1
+RU-SMO,Smolensk Oblast,8,0
+RU-SPE,Saint Petersburg (city),19,1
+RU-STA,Stavropol Krai,11,2
+RU-SVE,Sverdlovsk Oblast,14,1
+RU-TA,Republic of Tatarstan,17,3
+RU-TAM,Tambov Oblast,8,0
+RU-TOM,Tomsk Oblast,25,1
+RU-TUL,Tula Oblast,6,0
+RU-TVE,Tver Oblast,24,0
+RU-TY,Tuva Republic,6,1
+RU-TYU,Tyumen Oblast,9,2
+RU-U-A,(unassigned),0,0
+RU-UD,Udmurt Republic,3,1
+RU-ULY,Ulyanovsk Oblast,5,2
+RU-UOB,Ust-Orda Buryat Autonomous Okrug,0,0
+RU-VGG,Volgograd Oblast,11,1
+RU-VLA,Vladimir Oblast,20,0
+RU-VLG,Vologda Oblast,17,2
+RU-VOR,Voronezh Oblast,9,1
+RU-YAN,Yamalo-Nenets Autonomous Okrug,61,7
+RU-YAR,Yaroslavl Oblast,10,1
+RU-YEV,Jewish Autonomous Oblast,9,0
+RU-ZAB,Zabaykalsky Krai,65,1
