@@ -14,7 +14,7 @@
   --dur-slow: 320ms;
   --dur-draw: 900ms;
   --dur-map: 600ms;
-  --dur-wave: 2000ms;
+  --dur-wave: 1100ms;
   --dur-spin: 800ms;
   --dur-breathe: 2400ms;
 
@@ -71,7 +71,7 @@
   --motion-ring-ripple: kf-ring-ripple var(--dur-draw) var(--ease-out) both;
   --motion-ring-wave: kf-ring-wave var(--dur-wave) var(--ease-linear) both;
   --delay-ring-step: calc(var(--stagger) * 3);
-  --delay-wave-step: calc(var(--stagger) * 12);
+  --delay-wave-step: calc(var(--stagger) * 5);
   --delay-none: 0ms;
   --ring-delay-base: var(--delay-none);
   --ring-scale-from: 0.94;

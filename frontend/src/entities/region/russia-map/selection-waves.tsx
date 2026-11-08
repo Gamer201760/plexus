@@ -9,7 +9,7 @@ export interface SelectionWavesProps {
   readonly unit: number
 }
 
-const WAVE_REACH_PX = 56
+const WAVE_REACH_PX = 28
 const WAVE_STEP_PX = 2
 const WAVE_MIN_SIZE_PX = 24
 const WAVES = [
