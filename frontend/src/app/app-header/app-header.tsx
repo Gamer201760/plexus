@@ -27,7 +27,7 @@ export function AppHeader({ search }: AppHeaderProps) {
   const { t } = useTranslation()
   return (
     <header className={styles.header}>
-      <Link to="/" viewTransition className={styles.brand} aria-label={t("common:app.name")}>
+      <Link to="/" className={styles.brand} aria-label={t("common:app.name")}>
         <BrandMark size="fill" rings={2} motion="enter" decorative />
       </Link>
       <nav className={styles.nav} aria-label={t("nav:label")}>
@@ -36,7 +36,6 @@ export function AppHeader({ search }: AppHeaderProps) {
             key={item.to}
             to={item.to}
             end={item.to === "/"}
-            viewTransition
             aria-label={t(item.label)}
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
