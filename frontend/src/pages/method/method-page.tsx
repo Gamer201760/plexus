@@ -12,6 +12,7 @@ export function MethodPage() {
   if (index.isError) {
     return (
       <div className={styles.page}>
+        <PageHeader title={t("method:title")} description={t("method:lead")} />
         <ErrorState title={t("errors:kind.server")} onRetry={() => void index.refetch()} />
       </div>
     )

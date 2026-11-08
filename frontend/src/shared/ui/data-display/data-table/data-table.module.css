@@ -75,6 +75,7 @@
 }
 
 .clickable {
+  position: relative;
   cursor: pointer;
 }
 
@@ -83,6 +84,14 @@
 }
 
 .rowButton {
+  color: inherit;
   font-weight: var(--weight-medium);
   text-align: start;
+  text-decoration: none;
+}
+
+.rowButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }

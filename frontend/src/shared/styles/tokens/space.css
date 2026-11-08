@@ -58,3 +58,9 @@
   --sheet-width: 440px;
   --listbox-max-height: 320px;
 }
+
+@media (pointer: coarse) {
+  :root {
+    --control-height-compact: var(--target-min);
+  }
+}

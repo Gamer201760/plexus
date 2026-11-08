@@ -10,7 +10,7 @@ import {
   useRegions,
 } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
-import { Button, ErrorState, Skeleton } from "@/shared/ui"
+import { Button, ErrorState, Skeleton, Tooltip } from "@/shared/ui"
 import { formatMetric } from "./format-metric"
 import { HoverCard } from "./hover-card"
 import styles from "./map-explorer.module.css"
@@ -85,33 +85,39 @@ export function MapExplorer() {
             onHover={(id, x, y) => setHover(id ? { id, x, y } : null)}
             controls={(controls) => (
               <div className={styles.zoom}>
-                <Button
-                  variant="secondary"
-                  size="compact"
-                  icon="plus"
-                  onClick={controls.zoomIn}
-                  aria-label={t("map:zoomIn")}
-                >
-                  {null}
-                </Button>
-                <Button
-                  variant="secondary"
-                  size="compact"
-                  icon="minus"
-                  onClick={controls.zoomOut}
-                  aria-label={t("map:zoomOut")}
-                >
-                  {null}
-                </Button>
-                <Button
-                  variant="secondary"
-                  size="compact"
-                  icon="locate"
-                  onClick={() => select(null)}
-                  aria-label={t("map:reset")}
-                >
-                  {null}
-                </Button>
+                <Tooltip content={t("map:zoomIn")} side="bottom" describe={false}>
+                  <Button
+                    variant="secondary"
+                    size="compact"
+                    icon="plus"
+                    onClick={controls.zoomIn}
+                    aria-label={t("map:zoomIn")}
+                  >
+                    {null}
+                  </Button>
+                </Tooltip>
+                <Tooltip content={t("map:zoomOut")} side="bottom" describe={false}>
+                  <Button
+                    variant="secondary"
+                    size="compact"
+                    icon="minus"
+                    onClick={controls.zoomOut}
+                    aria-label={t("map:zoomOut")}
+                  >
+                    {null}
+                  </Button>
+                </Tooltip>
+                <Tooltip content={t("map:reset")} side="bottom" describe={false}>
+                  <Button
+                    variant="secondary"
+                    size="compact"
+                    icon="locate"
+                    onClick={() => select(null)}
+                    aria-label={t("map:reset")}
+                  >
+                    {null}
+                  </Button>
+                </Tooltip>
               </div>
             )}
           />

@@ -32,6 +32,7 @@ export function Ranking({ regions, metric }: RankingProps) {
               to={{ search: `?region=${region.id}` }}
               replace
               preventScrollReset
+              state={{ reveal: true }}
               className={styles.rankRow}
             >
               <span className={styles.rankName}>{region.name}</span>

@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useNavigate } from "react-router"
 import { type RegionSummary, type Season, useRegions } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
 import {
@@ -15,7 +14,6 @@ import styles from "./region-table.module.css"
 export function RegionTable() {
   const { t } = useTranslation()
   const f = useFormatters()
-  const navigate = useNavigate()
   const [season, setSeason] = useState<Season>("all")
   const regions = useRegions(season)
 
@@ -81,7 +79,7 @@ export function RegionTable() {
           rows={regions.data}
           rowKey={(r) => r.id}
           defaultSort={{ key: "links", direction: "descending" }}
-          onRowClick={(r) => void navigate(`/regions/${r.id}`, { viewTransition: true })}
+          rowHref={(r) => `/regions/${r.id}`}
         />
       ) : (
         <Skeleton lines={10} />

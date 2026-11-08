@@ -1,3 +1,5 @@
+import { useEffect, useId } from "react"
+import { useLocation } from "react-router"
 import type { IndexStatus } from "@/entities/reference"
 import { type Overview, type RegionSummary, type Season, useRegion } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
@@ -39,14 +41,35 @@ interface SelectedProps {
   readonly onClose: () => void
 }
 
+function revealRequested(state: unknown): boolean {
+  return typeof state === "object" && state !== null && "reveal" in state
+}
+
+function useReveal(cardId: string, ready: boolean, regionId: string) {
+  const location = useLocation()
+  const reveal = revealRequested(location.state)
+  useEffect(() => {
+    if (!ready || !reveal || regionId === "") return
+    const card = document.getElementById(cardId)
+    if (!card) return
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    card.scrollIntoView({ block: "start", behavior: still ? "auto" : "smooth" })
+    card.focus({ preventScroll: true })
+  }, [cardId, ready, reveal, regionId])
+}
+
 function SelectedRegion({ id, season, onClose }: SelectedProps) {
   const { t } = useTranslation()
   const f = useFormatters()
+  const cardId = useId()
   const { data } = useRegion(id, season)
+  useReveal(cardId, data !== undefined, id)
   if (!data) return <Skeleton lines={6} />
   return (
     <Card
       as="section"
+      id={cardId}
+      tabIndex={-1}
       key={data.id}
       title={data.name}
       actions={<CloseButton label={t("map:selected.close")} onClick={onClose} />}
@@ -89,8 +112,12 @@ export function MapPanel({
 }: MapPanelProps) {
   const { t } = useTranslation()
   const f = useFormatters()
+  const selected = useRegion(selectedId ?? "", season)
   return (
-    <aside className={styles.panel} aria-live="polite">
+    <aside className={styles.panel}>
+      <p className="visually-hidden" role="status">
+        {selectedId && selected.data ? t("map:selectedStatus", { name: selected.data.name }) : ""}
+      </p>
       <ScrollArea className={styles.scroll} label={t("map:overview.title")}>
         <div className={styles.content}>
           {selectedId ? (

@@ -1,4 +1,4 @@
-import { useDeferredValue, useState } from "react"
+import { useDeferredValue, useId, useState } from "react"
 import { type Settlement, type SettlementSort, useSettlements } from "@/entities/settlement"
 import { useFormatters, useTranslation } from "@/shared/i18n"
 import {
@@ -35,6 +35,15 @@ export function RegionSettlements({ regionId, highlightId, onHighlight }: Region
   const query = useDeferredValue(q)
   const [sort, setSort] = useState<TableSort>({ key: "population", direction: "descending" })
   const [offset, setOffset] = useState(0)
+  const cardId = useId()
+  const turn = (next: number) => {
+    setOffset(next)
+    const card = document.getElementById(cardId)
+    if (card && card.getBoundingClientRect().top < 0) {
+      const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      card.scrollIntoView({ block: "start", behavior: still ? "auto" : "smooth" })
+    }
+  }
   const page = useSettlements({
     regionId,
     q: query,
@@ -64,7 +73,7 @@ export function RegionSettlements({ regionId, highlightId, onHighlight }: Region
 
   const total = page.data?.total ?? 0
   return (
-    <Card as="section" title={t("region:settlements.title")} className={styles.card}>
+    <Card as="section" id={cardId} title={t("region:settlements.title")} className={styles.card}>
       <TextField
         label={t("region:settlements.search")}
         hideLabel
@@ -101,7 +110,7 @@ export function RegionSettlements({ regionId, highlightId, onHighlight }: Region
       )}
       {total > PAGE ? (
         <div className={styles.pager}>
-          <span className={styles.pageText}>
+          <span className={styles.pageText} role="status">
             {t("region:settlements.page", {
               from: offset + 1,
               to: Math.min(offset + PAGE, total),
@@ -113,7 +122,7 @@ export function RegionSettlements({ regionId, highlightId, onHighlight }: Region
             size="compact"
             icon="arrow-left"
             disabled={offset === 0}
-            onClick={() => setOffset(Math.max(0, offset - PAGE))}
+            onClick={() => turn(Math.max(0, offset - PAGE))}
           >
             {t("region:settlements.prev")}
           </Button>
@@ -122,7 +131,7 @@ export function RegionSettlements({ regionId, highlightId, onHighlight }: Region
             size="compact"
             icon="arrow-right"
             disabled={offset + PAGE >= total}
-            onClick={() => setOffset(offset + PAGE)}
+            onClick={() => turn(offset + PAGE)}
           >
             {t("region:settlements.next")}
           </Button>

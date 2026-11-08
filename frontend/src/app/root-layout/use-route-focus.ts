@@ -9,7 +9,10 @@ export function useRouteFocus(): void {
     previous.current = pathname
     if (!changed) return
     const frame = window.requestAnimationFrame(() => {
-      document.querySelector<HTMLElement>("#main h1")?.focus({ preventScroll: true })
+      const target =
+        document.querySelector<HTMLElement>("#main h1") ??
+        document.querySelector<HTMLElement>("#main")
+      target?.focus({ preventScroll: true })
     })
     return () => window.cancelAnimationFrame(frame)
   }, [pathname])

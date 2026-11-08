@@ -38,6 +38,7 @@ export function RegionPage() {
     const missing = isApiError(region.error) && region.error.kind === "notFound"
     return (
       <div className={styles.page}>
+        <PageHeader title={t("region:fallbackTitle")} />
         {missing ? (
           <EmptyState icon="search" title={t("region:notFound")} />
         ) : (
@@ -64,7 +65,7 @@ export function RegionPage() {
     )
 
   return (
-    <div className={styles.page}>
+    <div className={styles.page} aria-busy={data === undefined}>
       <nav className={styles.crumbs} aria-label={t("region:breadcrumb")}>
         <Link to="/regions" viewTransition className={styles.crumb}>
           {t("region:breadcrumb")}
@@ -73,7 +74,7 @@ export function RegionPage() {
         <span>{data?.name}</span>
       </nav>
       <PageHeader
-        title={data?.name ?? ""}
+        title={data?.name ?? t("region:fallbackTitle")}
         actions={
           <Segmented
             label={t("data:season.legend")}

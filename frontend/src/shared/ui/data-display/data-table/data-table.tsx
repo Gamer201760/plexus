@@ -1,5 +1,6 @@
 import { clsx } from "clsx"
 import { type ReactNode, useMemo, useState } from "react"
+import { Link } from "react-router"
 import { ScrollArea } from "../../layout/scroll-area/scroll-area"
 import { Icon, type IconName } from "../../primitives/icon/icon"
 import styles from "./data-table.module.css"
@@ -31,6 +32,7 @@ export interface DataTableProps<Row> {
   readonly defaultSort?: TableSort | null | undefined
   readonly onSortChange?: ((sort: TableSort) => void) | undefined
   readonly onRowClick?: ((row: Row) => void) | undefined
+  readonly rowHref?: ((row: Row) => string) | undefined
   readonly selectedKey?: string | null | undefined
   readonly className?: string | undefined
 }
@@ -72,6 +74,28 @@ function HeaderCell<Row>({ column, direction, onSort }: HeaderCellProps<Row>) {
   )
 }
 
+interface RowLeadProps {
+  readonly href: string | undefined
+  readonly clickable: boolean
+  readonly children: ReactNode
+}
+
+function RowLead({ href, clickable, children }: RowLeadProps) {
+  if (href !== undefined) {
+    return (
+      <Link to={href} viewTransition className={styles.rowButton}>
+        {children}
+      </Link>
+    )
+  }
+  if (!clickable) return children
+  return (
+    <button type="button" className={styles.rowButton}>
+      {children}
+    </button>
+  )
+}
+
 export function DataTable<Row>({
   caption,
   columns,
@@ -81,6 +105,7 @@ export function DataTable<Row>({
   defaultSort = null,
   onSortChange,
   onRowClick,
+  rowHref,
   selectedKey = null,
   className,
 }: DataTableProps<Row>) {
@@ -96,7 +121,7 @@ export function DataTable<Row>({
     setOwnSort(next)
     onSortChange?.(next)
   }
-  const clickable = onRowClick !== undefined
+  const clickable = onRowClick !== undefined || rowHref !== undefined
 
   return (
     <ScrollArea orientation="both" label={caption} className={clsx(styles.frame, className)}>
@@ -122,17 +147,17 @@ export function DataTable<Row>({
                 key={key}
                 className={clsx(styles.row, clickable && styles.clickable)}
                 aria-current={key === selectedKey ? "true" : undefined}
-                onClick={clickable ? () => onRowClick(row) : undefined}
+                onClick={onRowClick === undefined ? undefined : () => onRowClick(row)}
               >
                 {columns.map((column, index) => (
                   <td
                     key={column.key}
                     className={clsx(styles.cell, column.numeric === true && styles.numeric)}
                   >
-                    {clickable && index === 0 ? (
-                      <button type="button" className={styles.rowButton}>
+                    {index === 0 ? (
+                      <RowLead href={rowHref?.(row)} clickable={clickable}>
                         {column.cell(row)}
-                      </button>
+                      </RowLead>
                     ) : (
                       column.cell(row)
                     )}
