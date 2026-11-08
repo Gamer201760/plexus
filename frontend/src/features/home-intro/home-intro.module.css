@@ -1,15 +1,15 @@
 .home {
   display: grid;
-  justify-items: center;
+  align-items: center;
   gap: var(--space-48);
-  padding: var(--space-64) var(--space-page) var(--space-48);
+  min-block-size: 100svh;
+  padding: var(--space-48) var(--space-page);
 }
 
 .intro {
   display: grid;
   justify-items: center;
   gap: var(--space-24);
-  inline-size: min(100%, 52rem);
   text-align: center;
 }
 
@@ -53,14 +53,21 @@
 
 .cta {
   --button-height: calc(var(--control-height) + var(--space-8));
-  --button-padding: var(--space-32);
+  --button-padding: var(--space-24);
 
-  min-inline-size: 13rem;
   font-size: var(--font-size-body);
+  font-weight: var(--weight-semibold);
+}
+
+.primary {
+  box-shadow: var(--shadow-raised);
+}
+
+.secondary {
+  --button-text: var(--text-accent);
 }
 
 .stage {
-  inline-size: min(100%, 76rem);
   min-inline-size: 0;
 }
 
@@ -73,6 +80,12 @@
 
 @media (width >= 64rem) {
   .home {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 0;
     padding-inline: var(--space-page-wide);
+  }
+
+  .intro {
+    padding-inline-end: var(--space-page-wide);
   }
 }

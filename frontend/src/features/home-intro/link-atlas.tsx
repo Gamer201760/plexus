@@ -63,52 +63,50 @@ export function LinkAtlas({ geo, routes, label }: LinkAtlasProps) {
   const hub = active === null ? null : (scene.hubs[active] ?? null)
 
   return (
-    <div className={styles.panel}>
-      <div
-        className={styles.atlas}
-        onPointerEnter={() => setPaused(true)}
-        onPointerLeave={() => setPaused(false)}
-      >
-        <svg className={styles.land} viewBox={geo.view_box} role="img" aria-label={label}>
-          {geo.regions.map((region) => (
-            <path key={region.id} className={styles.region} d={region.path_low ?? region.path} />
-          ))}
-        </svg>
-        <svg className={styles.overlay} viewBox={geo.view_box} aria-hidden="true">
-          {scene.stops.map((stop) => (
-            <circle
-              key={stop.id}
-              className={styles.stop}
-              cx={stop.x}
-              cy={stop.y}
-              style={{ "--sweep": stop.sweep } as CSSProperties}
-            />
-          ))}
-        </svg>
-        <svg className={styles.overlay} viewBox={geo.view_box} aria-hidden="true">
-          {hub ? <HubFocus key={hub.id} hub={hub} /> : null}
-          {scene.hubs.map((item) => (
-            <circle
-              key={item.id}
-              className={styles.hub}
-              data-active={item.id === hub?.id || undefined}
-              cx={item.x}
-              cy={item.y}
-            />
-          ))}
-        </svg>
-        {hub ? (
-          <div
-            key={hub.id}
-            className={styles.label}
-            data-hub-label
-            data-below={hub.below || undefined}
-            style={{ "--x": hub.x / frame.width, "--y": hub.y / frame.height } as CSSProperties}
-          >
-            {hub.name}
-          </div>
-        ) : null}
-      </div>
+    <div
+      className={styles.atlas}
+      onPointerEnter={() => setPaused(true)}
+      onPointerLeave={() => setPaused(false)}
+    >
+      <svg className={styles.land} viewBox={geo.view_box} role="img" aria-label={label}>
+        {geo.regions.map((region) => (
+          <path key={region.id} className={styles.region} d={region.path_low ?? region.path} />
+        ))}
+      </svg>
+      <svg className={styles.overlay} viewBox={geo.view_box} aria-hidden="true">
+        {scene.stops.map((stop) => (
+          <circle
+            key={stop.id}
+            className={styles.stop}
+            cx={stop.x}
+            cy={stop.y}
+            style={{ "--sweep": stop.sweep } as CSSProperties}
+          />
+        ))}
+      </svg>
+      <svg className={styles.overlay} viewBox={geo.view_box} aria-hidden="true">
+        {hub ? <HubFocus key={hub.id} hub={hub} /> : null}
+        {scene.hubs.map((item) => (
+          <circle
+            key={item.id}
+            className={styles.hub}
+            data-active={item.id === hub?.id || undefined}
+            cx={item.x}
+            cy={item.y}
+          />
+        ))}
+      </svg>
+      {hub ? (
+        <div
+          key={hub.id}
+          className={styles.label}
+          data-hub-label
+          data-below={hub.below || undefined}
+          style={{ "--x": hub.x / frame.width, "--y": hub.y / frame.height } as CSSProperties}
+        >
+          {hub.name}
+        </div>
+      ) : null}
     </div>
   )
 }

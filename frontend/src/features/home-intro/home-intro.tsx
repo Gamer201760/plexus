@@ -1,3 +1,4 @@
+import clsx from "clsx"
 import { useGeoRegions, useOverview, useRoutes } from "@/entities/region"
 import { useTranslation } from "@/shared/i18n"
 import { ButtonLink, ErrorState, Skeleton } from "@/shared/ui"
@@ -37,10 +38,15 @@ export function HomeIntro() {
           <Skeleton lines={2} className={styles.leadSkeleton} />
         )}
         <div className={styles.actions}>
-          <ButtonLink to="/map" icon="map" className={styles.cta}>
+          <ButtonLink to="/map" icon="map" className={clsx(styles.cta, styles.primary)}>
             {t("home:open")}
           </ButtonLink>
-          <ButtonLink to="/method" variant="secondary" className={styles.cta}>
+          <ButtonLink
+            to="/method"
+            variant="ghost"
+            icon="book"
+            className={clsx(styles.cta, styles.secondary)}
+          >
             {t("home:method")}
           </ButtonLink>
         </div>

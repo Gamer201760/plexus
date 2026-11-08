@@ -63,6 +63,7 @@
   --iso-inverse-3: var(--iso-night-3);
 
   --map-land: var(--land-100);
+  --map-land-brand: var(--blue-100);
   --map-none: var(--land-200);
   --map-water: var(--water-200);
   --map-water-line: var(--water-400);
