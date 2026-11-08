@@ -22,6 +22,7 @@ export interface Hub {
   readonly count: number
   readonly below: boolean
   readonly routes: readonly HubRoute[]
+  readonly stations: readonly Point[]
 }
 
 export interface AtlasScene {
@@ -29,7 +30,7 @@ export interface AtlasScene {
   readonly hubs: readonly Hub[]
 }
 
-interface Point {
+export interface Point {
   readonly x: number
   readonly y: number
 }
@@ -44,7 +45,7 @@ interface HubDraft {
 const BEND = 0.18
 const HUB_COUNT = 10
 const HUB_MIN_ROUTES = 8
-const HUB_MIN_SPAN = 40
+const HUB_MIN_SPAN = 60
 const TYPE_PREFIX = /^\P{Lu}+/u
 
 function round(value: number): number {
@@ -109,6 +110,12 @@ function collectHubs(routes: readonly Route[]): HubDraft[] {
   return [...drafts.values()]
 }
 
+function stationsOf(routes: readonly HubRoute[]): Point[] {
+  const seen = new Map<string, Point>()
+  for (const route of routes) seen.set(keyOf(route), { x: route.x, y: route.y })
+  return [...seen.values()]
+}
+
 function spanOf(draft: HubDraft): number {
   return Math.max(
     0,
@@ -162,6 +169,7 @@ export function buildScene(routes: readonly Route[], width: number): AtlasScene 
       count: draft.routes.length,
       below: draft.routes.reduce((sum, route) => sum + route.y - draft.y, 0) < 0,
       routes: draft.routes,
+      stations: stationsOf(draft.routes),
     }))
   const stops = collectStops(routes, width, new Set(hubs.map((hub) => hub.id)))
   return { stops, hubs }

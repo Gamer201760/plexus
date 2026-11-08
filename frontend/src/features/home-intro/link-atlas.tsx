@@ -43,8 +43,13 @@ function HubFocus({ hub }: { readonly hub: Hub }) {
           pathLength={1}
         />
       ))}
-      {hub.routes.map((route) => (
-        <circle key={route.id} className={styles.station} cx={route.x} cy={route.y} />
+      {hub.stations.map((station) => (
+        <circle
+          key={`${station.x}:${station.y}`}
+          className={styles.station}
+          cx={station.x}
+          cy={station.y}
+        />
       ))}
     </g>
   )
