@@ -15,7 +15,7 @@
 .rings {
   grid-column: 2;
   grid-row: 1;
-  aspect-ratio: 1;
+  margin: 0;
 }
 
 .formulaBody {
@@ -33,9 +33,10 @@
 }
 
 .expression sub {
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-subheading);
   font-weight: var(--weight-medium);
-  color: var(--text-accent);
+  vertical-align: sub;
+  line-height: 0;
 }
 
 .params {

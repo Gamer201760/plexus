@@ -15,20 +15,18 @@
   flex-wrap: wrap;
   align-items: baseline;
   gap: var(--space-4);
-}
-
-.number {
   font-size: var(--font-size-heading);
   font-weight: var(--weight-semibold);
   line-height: var(--line-height-heading);
+}
+
+.number {
   letter-spacing: var(--tracking-tight);
   font-variant-numeric: var(--font-numeric);
 }
 
 .unit {
-  color: var(--text-muted);
-  font-size: var(--font-size-body-sm);
-  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
 }
 
 .delta {

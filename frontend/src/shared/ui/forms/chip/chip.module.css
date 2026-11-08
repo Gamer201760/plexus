@@ -4,10 +4,12 @@
 }
 
 .chip[aria-pressed="true"] {
-  --button-surface: var(--surface-inverse);
-  --button-surface-hover: var(--surface-inverse);
-  --button-surface-press: var(--surface-inverse);
-  --button-text: var(--text-on-inverse);
+  --button-surface: var(--surface-accent-soft);
+  --button-surface-hover: var(--surface-accent-soft);
+  --button-surface-press: var(--surface-accent-soft);
+  --button-text: var(--text-accent);
+
+  box-shadow: var(--shadow-ring-accent);
 }
 
 .content {

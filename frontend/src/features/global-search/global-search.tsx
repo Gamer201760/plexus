@@ -31,7 +31,7 @@ export function GlobalSearch() {
           items: data.settlements.map((item) => ({
             value: `${SETTLEMENT}${item.region_id}:${item.id}`,
             label: item.name,
-            icon: "users" as const,
+            icon: "home" as const,
             meta:
               item.population === null
                 ? item.region_name
@@ -48,6 +48,7 @@ export function GlobalSearch() {
       groups={groups}
       loading={search.isFetching}
       minLength={2}
+      align="end"
       onQuery={setQuery}
       onSelect={(item) => {
         if (item.value.startsWith(REGION)) {

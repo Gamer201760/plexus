@@ -36,6 +36,7 @@
   --border-strong: var(--neutral-300);
   --border-control: var(--neutral-450);
   --border-selected: var(--neutral-950);
+  --border-accent: var(--blue-600);
 
   --status-danger: var(--red-600);
   --status-danger-surface: var(--red-50);

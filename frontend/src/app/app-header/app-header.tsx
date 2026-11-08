@@ -28,7 +28,7 @@ export function AppHeader({ search }: AppHeaderProps) {
   return (
     <header className={styles.header}>
       <Link to="/" viewTransition className={styles.brand} aria-label={t("common:app.name")}>
-        <BrandMark size="sm" motion="enter" decorative />
+        <BrandMark size="fill" rings={2} motion="enter" decorative />
       </Link>
       <nav className={styles.nav} aria-label={t("nav:label")}>
         {NAV.map((item) => (

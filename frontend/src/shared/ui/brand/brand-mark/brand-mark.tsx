@@ -42,6 +42,7 @@ export interface BrandMarkProps {
   readonly size?: BrandMarkSize
   readonly decorative?: boolean
   readonly broken?: boolean
+  readonly rings?: 1 | 2 | 3
   readonly className?: string | undefined
 }
 
@@ -52,6 +53,7 @@ export function BrandMark({
   size = "md",
   decorative = false,
   broken = false,
+  rings = 3,
   className,
 }: BrandMarkProps) {
   const { t } = useTranslation()
@@ -64,7 +66,7 @@ export function BrandMark({
       aria-hidden={decorative ? true : undefined}
       aria-label={decorative ? undefined : t("common:app.name")}
     >
-      {paths.rings.map((d, index) => (
+      {paths.rings.slice(0, rings).map((d, index) => (
         <path
           key={d.slice(0, 32)}
           className={clsx(styles.ring, RING_MOTIONS[motion])}

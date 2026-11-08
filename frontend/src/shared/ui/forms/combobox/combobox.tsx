@@ -2,6 +2,7 @@ import { clsx } from "clsx"
 import { type ChangeEvent, type KeyboardEvent, useId, useMemo, useRef, useState } from "react"
 import { useTranslation } from "../../../i18n"
 import { useLoadingIndicator } from "../../../motion"
+import type { PopoverAlign } from "../../overlays/popover/anchored-position"
 import { Popover } from "../../overlays/popover/popover"
 import type { IconName } from "../../primitives/icon/icon"
 import { Spinner } from "../../states/spinner/spinner"
@@ -33,6 +34,7 @@ export interface ComboboxProps {
   readonly emptyText?: string | undefined
   readonly hideLabel?: boolean
   readonly minLength?: number
+  readonly align?: PopoverAlign
   readonly className?: string | undefined
 }
 
@@ -54,6 +56,7 @@ export function Combobox({
   emptyText,
   hideLabel = false,
   minLength = 1,
+  align = "start",
   className,
 }: ComboboxProps) {
   const { t } = useTranslation()
@@ -158,7 +161,13 @@ export function Combobox({
         onFocus={() => setOpen(true)}
         onBlur={() => setOpen(false)}
       />
-      <Popover open={shown} onClose={() => setOpen(false)} anchorRef={boxRef} matchWidth>
+      <Popover
+        open={shown}
+        onClose={() => setOpen(false)}
+        anchorRef={boxRef}
+        align={align}
+        matchWidth
+      >
         <OptionList
           id={listId}
           label={label}

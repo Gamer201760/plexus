@@ -1,7 +1,7 @@
 import { useIndexStatus } from "@/entities/reference"
 import { useDocumentTitle, useTranslation } from "@/shared/i18n"
 import { Card, ErrorState, PageHeader, Skeleton, Stat, StatusBadge } from "@/shared/ui"
-import { Isolines } from "@/shared/ui/brand"
+import { DecayRings } from "./decay-rings"
 import { formulaParts } from "./formula-text"
 import styles from "./method-page.module.css"
 
@@ -24,7 +24,7 @@ export function MethodPage() {
       {data ? (
         <>
           <section className={styles.formula} aria-label={t("method:formula")}>
-            <Isolines rings={3} shape="blob" seed={2} motion="enter" className={styles.rings} />
+            <DecayRings halfLife={data.half_life_hours} className={styles.rings} />
             <div className={styles.formulaBody}>
               <StatusBadge
                 tone={data.status === "ready" ? "success" : "info"}
@@ -39,7 +39,7 @@ export function MethodPage() {
                 <Stat label={t("method:markets")} value={String(data.markets)} />
               </div>
               {data.status === "missing" ? (
-                <p className={styles.reason}>{t("map:index.missingText")}</p>
+                <p className={styles.reason}>{t("method:missingText")}</p>
               ) : null}
             </div>
           </section>
