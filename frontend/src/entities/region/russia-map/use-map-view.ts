@@ -1,18 +1,31 @@
-import { type PointerEvent, useCallback, useEffect, useRef, useState, type WheelEvent } from "react"
+import {
+  type PointerEvent,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type WheelEvent,
+} from "react"
+import { motionMs, readEasing } from "@/shared/motion"
+import {
+  type Box,
+  composeTransforms,
+  type MapView,
+  type Size,
+  unitsPerPixel,
+  viewShift,
+} from "./map-motion"
 
-export interface MapView {
-  readonly scale: number
-  readonly x: number
-  readonly y: number
+export type { Box, MapView } from "./map-motion"
+
+interface Flight {
+  readonly view: MapView
+  readonly anim: Animation | null
+  readonly start?: string
 }
 
-export interface Box {
-  readonly x: number
-  readonly y: number
-  readonly width: number
-  readonly height: number
-}
-
+const HOME: MapView = { scale: 1, x: 0, y: 0 }
 const MIN_SCALE = 1
 const MAX_SCALE = 12
 const WHEEL_STEP = 1.18
@@ -21,17 +34,15 @@ const MAX_FIT_SCALE = 6
 
 const clampScale = (scale: number) => Math.min(MAX_SCALE, Math.max(MIN_SCALE, scale))
 
-function unitsPerPixel(svg: SVGSVGElement | null, frame: Box): number {
-  const rect = svg?.getBoundingClientRect()
-  if (!rect || rect.width === 0 || rect.height === 0) return 1
-  return Math.max(frame.width / rect.width, frame.height / rect.height)
+function sizeOf(svg: SVGSVGElement | null): Size {
+  return { width: svg?.clientWidth ?? 0, height: svg?.clientHeight ?? 0 }
 }
 
 function useUnitsPerPixel(svgRef: { readonly current: SVGSVGElement | null }, frame: Box) {
   const [unit, setUnit] = useState(1)
   useEffect(() => {
     const svg = svgRef.current
-    const measure = () => setUnit(unitsPerPixel(svg, frame))
+    const measure = () => setUnit(unitsPerPixel(frame, sizeOf(svg)))
     measure()
     if (svg === null || typeof ResizeObserver === "undefined") return
     const observer = new ResizeObserver(measure)
@@ -41,21 +52,101 @@ function useUnitsPerPixel(svgRef: { readonly current: SVGSVGElement | null }, fr
   return unit
 }
 
+function flightOptions(element: Element): KeyframeAnimationOptions {
+  return { duration: motionMs("--dur-map", element), easing: readEasing("--ease-out", element) }
+}
+
 export function useMapView(frame: Box) {
-  const [view, setView] = useState<MapView>({ scale: 1, x: 0, y: 0 })
+  const [view, setView] = useState<MapView>(HOME)
   const [dragging, setDragging] = useState(false)
+  const shown = useRef<MapView>(HOME)
+  const goal = useRef<MapView>(HOME)
+  const flight = useRef<Flight | null>(null)
   const drag = useRef<{ id: number; px: number; py: number; moved: boolean } | null>(null)
   const svgRef = useRef<SVGSVGElement | null>(null)
+  const motionRef = useRef<HTMLDivElement | null>(null)
   const justDragged = useRef(false)
   const unit = useUnitsPerPixel(svgRef, frame)
 
+  useLayoutEffect(() => {
+    shown.current = view
+    const current = flight.current
+    const layer = motionRef.current
+    if (current === null || current.view !== view) return
+    if (current.start === undefined || layer === null) {
+      current.anim?.cancel()
+      flight.current = null
+      return
+    }
+    const anim = layer.animate(
+      [{ transform: current.start }, { transform: "none" }],
+      flightOptions(layer),
+    )
+    flight.current = { view, anim }
+    anim.onfinish = () => {
+      if (flight.current?.anim === anim) flight.current = null
+    }
+  }, [view])
+
+  const jump = useCallback((next: MapView) => {
+    const current = flight.current
+    if (current?.anim) {
+      current.anim.onfinish = null
+      current.anim.pause()
+    }
+    flight.current = current?.anim ? { view: next, anim: current.anim } : null
+    goal.current = next
+    setView(next)
+  }, [])
+
+  const flyTo = useCallback(
+    (next: MapView) => {
+      const layer = motionRef.current
+      const size = sizeOf(svgRef.current)
+      const current = flight.current
+      if (
+        layer === null ||
+        typeof layer.animate !== "function" ||
+        size.width === 0 ||
+        current?.start !== undefined
+      ) {
+        jump(next)
+        return
+      }
+      const now = current?.anim ? getComputedStyle(layer).transform : "none"
+      current?.anim?.cancel()
+      const from = shown.current
+      goal.current = next
+      if (next.scale < from.scale) {
+        flight.current = {
+          view: next,
+          anim: null,
+          start: composeTransforms(now, viewShift(next, from, frame, size)),
+        }
+        setView(next)
+        return
+      }
+      const anim = layer.animate(
+        [{ transform: now }, { transform: viewShift(from, next, frame, size) }],
+        { ...flightOptions(layer), fill: "forwards" },
+      )
+      flight.current = { view: next, anim }
+      anim.onfinish = () => {
+        if (flight.current?.anim === anim) setView(next)
+      }
+    },
+    [frame, jump],
+  )
+
   const toLocal = useCallback(
     (clientX: number, clientY: number) => {
-      const rect = svgRef.current?.getBoundingClientRect()
-      if (!rect || rect.width === 0) return { x: frame.x, y: frame.y, k: 1 }
-      const k = Math.max(frame.width / rect.width, frame.height / rect.height)
-      const offsetX = (rect.width * k - frame.width) / 2
-      const offsetY = (rect.height * k - frame.height) / 2
+      const svg = svgRef.current
+      const rect = svg?.parentElement?.parentElement?.getBoundingClientRect()
+      const size = sizeOf(svg)
+      if (!rect || size.width === 0) return { x: frame.x, y: frame.y, k: 1 }
+      const k = unitsPerPixel(frame, size)
+      const offsetX = (size.width * k - frame.width) / 2
+      const offsetY = (size.height * k - frame.height) / 2
       return {
         x: frame.x + (clientX - rect.left) * k - offsetX,
         y: frame.y + (clientY - rect.top) * k - offsetY,
@@ -65,20 +156,20 @@ export function useMapView(frame: Box) {
     [frame],
   )
 
-  const zoomAt = useCallback((factor: number, cx: number, cy: number) => {
-    setView((current) => {
-      const scale = clampScale(current.scale * factor)
-      const ratio = scale / current.scale
-      return { scale, x: cx - (cx - current.x) * ratio, y: cy - (cy - current.y) * ratio }
-    })
+  const scaledAt = useCallback((factor: number, cx: number, cy: number): MapView => {
+    const current = goal.current
+    const scale = clampScale(current.scale * factor)
+    const ratio = scale / current.scale
+    return { scale, x: cx - (cx - current.x) * ratio, y: cy - (cy - current.y) * ratio }
   }, [])
 
   const zoomBy = useCallback(
-    (factor: number) => zoomAt(factor, frame.x + frame.width / 2, frame.y + frame.height / 2),
-    [frame, zoomAt],
+    (factor: number) =>
+      flyTo(scaledAt(factor, frame.x + frame.width / 2, frame.y + frame.height / 2)),
+    [frame, flyTo, scaledAt],
   )
 
-  const reset = useCallback(() => setView({ scale: 1, x: 0, y: 0 }), [])
+  const reset = useCallback(() => flyTo(HOME), [flyTo])
 
   const fitBox = useCallback(
     (box: Box) => {
@@ -88,17 +179,17 @@ export function useMapView(frame: Box) {
       const cy = box.y + box.height / 2
       const fx = frame.x + frame.width / 2
       const fy = frame.y + frame.height / 2
-      setView({ scale, x: fx - cx * scale, y: fy - cy * scale })
+      flyTo({ scale, x: fx - cx * scale, y: fy - cy * scale })
     },
-    [frame],
+    [frame, flyTo],
   )
 
   const onWheel = useCallback(
     (event: WheelEvent<SVGSVGElement>) => {
       const point = toLocal(event.clientX, event.clientY)
-      zoomAt(event.deltaY < 0 ? WHEEL_STEP : 1 / WHEEL_STEP, point.x, point.y)
+      jump(scaledAt(event.deltaY < 0 ? WHEEL_STEP : 1 / WHEEL_STEP, point.x, point.y))
     },
-    [toLocal, zoomAt],
+    [toLocal, jump, scaledAt],
   )
 
   const onPointerDown = useCallback((event: PointerEvent<SVGSVGElement>) => {
@@ -121,9 +212,10 @@ export function useMapView(frame: Box) {
       }
       state.px = event.clientX
       state.py = event.clientY
-      setView((current) => ({ ...current, x: current.x + dx, y: current.y + dy }))
+      const current = goal.current
+      jump({ ...current, x: current.x + dx, y: current.y + dy })
     },
-    [toLocal],
+    [toLocal, jump],
   )
 
   const onPointerUp = useCallback(() => {
@@ -139,6 +231,7 @@ export function useMapView(frame: Box) {
     unit,
     dragging,
     svgRef,
+    motionRef,
     zoomBy,
     reset,
     fitBox,

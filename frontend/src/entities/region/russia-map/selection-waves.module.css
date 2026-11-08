@@ -1,57 +1,29 @@
-.selection {
-  --ring-step: var(--iso-step);
-  --ring-line: var(--iso-line-strong);
-
+.waves {
   pointer-events: none;
 }
 
-.enter {
-  composes: ringEnter from "../../../shared/styles/compose.module.css";
+.probe {
+  visibility: hidden;
 }
 
-.line,
-.band,
-.cut {
-  fill: none;
-  stroke-linejoin: round;
-}
-
-.band {
-  stroke: var(--map-border);
-}
-
-.cut {
-  stroke: var(--map-selected);
-}
-
-.outer2 {
-  stroke-width: calc((var(--ring-step) * 2 + var(--ring-line)) * var(--map-unit));
-}
-
-.inner2 {
-  stroke-width: calc((var(--ring-step) * 2 - var(--ring-line)) * var(--map-unit));
-}
-
-.outer3 {
-  stroke-width: calc((var(--ring-step) * 4 + var(--ring-line)) * var(--map-unit));
-}
-
-.inner3 {
-  stroke-width: calc((var(--ring-step) * 4 - var(--ring-line)) * var(--map-unit));
-}
-
-.ring1 {
-  stroke: var(--iso-1);
-  stroke-width: var(--ring-line);
+.wave {
+  composes: isoStroke from "../../../shared/styles/compose.module.css";
   vector-effect: non-scaling-stroke;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: var(--motion-ring-wave);
+  animation-delay: calc(var(--dur-map) + var(--i) * var(--delay-wave-step));
 }
 
-.ring2 {
+.wave1 {
+  stroke: var(--iso-1);
+}
+
+.wave2 {
   stroke: var(--iso-2);
-  stroke-width: calc((var(--ring-step) * 2 + var(--ring-line)) * var(--map-unit));
 }
 
-.ring3 {
+.wave3 {
   stroke: var(--iso-3);
-  stroke-width: calc((var(--ring-step) * 4 + var(--ring-line)) * var(--map-unit));
 }

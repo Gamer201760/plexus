@@ -1,8 +1,9 @@
 import clsx from "clsx"
-import { type CSSProperties, type ReactNode, useEffect, useMemo } from "react"
+import { type ReactNode, useEffect, useMemo, useState } from "react"
+import type { Box } from "./map-motion"
 import styles from "./russia-map.module.css"
-import { SelectionRings } from "./selection-rings"
-import { type Box, useMapView } from "./use-map-view"
+import { SelectionWaves } from "./selection-waves"
+import { useMapView } from "./use-map-view"
 
 export interface MapRegion {
   readonly id: string
@@ -50,6 +51,8 @@ export function RussiaMap({
   const map = useMapView(frame)
   const { fitBox, reset } = map
   const selected = regions.find((region) => region.id === selectedId) ?? null
+  const [hoveredId, setHoveredId] = useState<string | null>(null)
+  const hovered = regions.find((region) => region.id === hoveredId) ?? null
 
   useEffect(() => {
     if (focusBox) fitBox(focusBox)
@@ -60,50 +63,74 @@ export function RussiaMap({
 
   return (
     <div className={styles.frame}>
-      <svg
-        ref={map.svgRef}
-        className={clsx(styles.map, map.dragging && styles.dragging)}
-        viewBox={viewBox}
-        role="img"
-        aria-label={label}
-        {...map.handlers}
-        onPointerLeave={() => onHover(null, 0, 0)}
-      >
-        <g
-          className={clsx(styles.layer, map.dragging && styles.instant)}
-          style={{ transform, "--map-scale": map.view.scale } as CSSProperties}
+      <div ref={map.motionRef} className={styles.motion}>
+        <svg
+          ref={map.svgRef}
+          className={clsx(styles.map, map.dragging && styles.dragging)}
+          viewBox={viewBox}
+          role="img"
+          aria-label={label}
+          {...map.handlers}
+          onPointerLeave={() => {
+            setHoveredId(null)
+            onHover(null, 0, 0)
+          }}
         >
-          {regions.map((region) => (
-            // biome-ignore lint/a11y/noStaticElementInteractions: regions are pointer shortcuts, keyboard users pick regions through search and the region list
-            <path
-              key={region.id}
-              className={styles.region}
-              data-step={stepOf(region.id)}
-              data-selected={region.id === selectedId || undefined}
-              d={region.path}
-              onPointerMove={(event) => onHover(region.id, event.clientX, event.clientY)}
-              onClick={() => {
-                if (!map.wasDrag()) onSelect(region.id)
-              }}
-            />
-          ))}
-          {selected ? (
-            <SelectionRings
-              key={selected.id}
-              path={selected.path}
-              frame={frame}
-              unit={map.unit / map.view.scale}
-            >
+          <g className={styles.layer} style={{ transform }}>
+            {regions.map((region) => (
+              // biome-ignore lint/a11y/noStaticElementInteractions: regions are pointer shortcuts, keyboard users pick regions through search and the region list
               <path
+                key={region.id}
                 className={styles.region}
-                data-step={stepOf(selected.id)}
-                data-selected
-                d={selected.path}
+                data-step={stepOf(region.id)}
+                data-selected={region.id === selectedId || undefined}
+                d={region.path}
+                onPointerMove={(event) => {
+                  if (event.pointerType === "mouse") setHoveredId(region.id)
+                  onHover(region.id, event.clientX, event.clientY)
+                }}
+                onClick={() => {
+                  if (!map.wasDrag()) onSelect(region.id)
+                }}
               />
-            </SelectionRings>
-          ) : null}
-        </g>
-      </svg>
+            ))}
+          </g>
+        </svg>
+        {hovered && !map.dragging ? (
+          <svg
+            key={hovered.id}
+            className={clsx(styles.overlay, styles.hover)}
+            viewBox={viewBox}
+            aria-hidden="true"
+          >
+            <g className={styles.layer} style={{ transform }}>
+              <path d={hovered.path} />
+            </g>
+          </svg>
+        ) : null}
+        {selected ? (
+          <>
+            <svg className={styles.overlay} viewBox={viewBox} aria-hidden="true">
+              <g className={styles.layer} style={{ transform }}>
+                <SelectionWaves
+                  key={selected.id}
+                  path={selected.path}
+                  unit={map.unit / map.view.scale}
+                />
+              </g>
+            </svg>
+            <svg className={styles.overlay} viewBox={viewBox} aria-hidden="true">
+              <g className={styles.layer} style={{ transform }}>
+                <path
+                  className={clsx(styles.region, styles.selected)}
+                  data-step={stepOf(selected.id)}
+                  d={selected.path}
+                />
+              </g>
+            </svg>
+          </>
+        ) : null}
+      </div>
       {controls({ zoomIn: () => map.zoomBy(1.6), zoomOut: () => map.zoomBy(1 / 1.6), reset })}
     </div>
   )

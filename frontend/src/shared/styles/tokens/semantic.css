@@ -68,6 +68,7 @@
   --map-water-line: var(--water-400);
   --map-border: var(--neutral-0);
   --map-selected: var(--neutral-950);
+  --map-hover: color-mix(in oklab, var(--iso-1) 26%, transparent);
 
   --data-seq-1: var(--teal-1);
   --data-seq-2: var(--teal-2);

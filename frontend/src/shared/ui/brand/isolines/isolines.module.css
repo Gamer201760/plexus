@@ -1,17 +1,10 @@
 .isolines {
+  composes: overlayBox from "../../../styles/compose.module.css";
   --ring-delay-base: var(--delay-none);
-
-  display: block;
-  inline-size: 100%;
-  block-size: 100%;
-  overflow: visible;
-  pointer-events: none;
 }
 
-.isolines .ring {
-  fill: none;
-  stroke-width: var(--iso-line-strong);
-  stroke-linejoin: round;
+.ring {
+  composes: isoStroke from "../../../styles/compose.module.css";
 }
 
 .isolines .ring[data-ring="1"] {

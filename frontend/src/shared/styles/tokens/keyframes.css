@@ -72,6 +72,22 @@
   }
 }
 
+@keyframes kf-ring-wave {
+  from {
+    opacity: 0;
+    transform: none;
+  }
+
+  15% {
+    opacity: var(--ring-ripple-from);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(var(--wave-x), var(--wave-y));
+  }
+}
+
 @keyframes kf-slide-in {
   from {
     opacity: 0;
