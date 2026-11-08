@@ -15,9 +15,7 @@
 }
 
 .title {
-  font-size: var(--font-size-display);
-  line-height: var(--line-height-display);
-  letter-spacing: var(--tracking-display);
+  composes: displayText from "../../shared/styles/compose.module.css";
   font-weight: var(--weight-bold);
 }
 

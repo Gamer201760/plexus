@@ -2,6 +2,7 @@ import { useIndexStatus } from "@/entities/reference"
 import { useDocumentTitle, useTranslation } from "@/shared/i18n"
 import { Card, ErrorState, PageHeader, Skeleton, Stat, StatusBadge } from "@/shared/ui"
 import { Isolines } from "@/shared/ui/brand"
+import { formulaParts } from "./formula-text"
 import styles from "./method-page.module.css"
 
 export function MethodPage() {
@@ -28,7 +29,7 @@ export function MethodPage() {
                 tone={data.status === "ready" ? "success" : "info"}
                 label={t(`method:status.${data.status}`)}
               />
-              <p className={styles.expression}>{data.formula}</p>
+              <p className={styles.expression}>{formulaParts(data.formula)}</p>
               <div className={styles.params}>
                 <Stat
                   label={t("method:halfLife")}
@@ -36,14 +37,16 @@ export function MethodPage() {
                 />
                 <Stat label={t("method:markets")} value={String(data.markets)} />
               </div>
-              {data.reason ? <p className={styles.reason}>{data.reason}</p> : null}
+              {data.status === "missing" ? (
+                <p className={styles.reason}>{t("map:index.missingText")}</p>
+              ) : null}
             </div>
           </section>
           <Card as="section" title={t("method:components")}>
             <dl className={styles.components}>
               {data.components.map((item) => (
                 <div key={item.key} className={styles.component}>
-                  <dt>{item.title}</dt>
+                  <dt>{formulaParts(item.title)}</dt>
                   <dd>{item.description}</dd>
                   <dd className={styles.source}>{item.source}</dd>
                 </div>

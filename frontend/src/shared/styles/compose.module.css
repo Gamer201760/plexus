@@ -101,3 +101,9 @@
   stroke-width: var(--hairline);
   vector-effect: non-scaling-stroke;
 }
+
+.displayText {
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--tracking-display);
+}

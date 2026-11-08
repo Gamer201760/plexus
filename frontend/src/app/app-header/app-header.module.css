@@ -70,6 +70,21 @@
   }
 }
 
+@media (max-width: 48rem) {
+  .header {
+    flex-wrap: wrap;
+    padding-block: var(--space-8);
+  }
+
+  .nav {
+    margin-inline-start: auto;
+  }
+
+  .search {
+    flex-basis: 100%;
+  }
+}
+
 @media (min-width: 75rem) {
   .header {
     padding-inline: var(--space-page-wide);

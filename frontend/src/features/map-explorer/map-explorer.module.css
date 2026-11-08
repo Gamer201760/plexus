@@ -48,6 +48,12 @@
   padding: var(--space-4);
 }
 
+@media (max-width: 48rem) {
+  .toolbar {
+    inline-size: auto;
+  }
+}
+
 @media (max-width: 64rem) {
   .explorer {
     grid-template-columns: 1fr;

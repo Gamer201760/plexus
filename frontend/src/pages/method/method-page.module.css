@@ -27,9 +27,15 @@
 }
 
 .expression {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-heading-lg);
-  line-height: var(--line-height-heading-lg);
+  composes: displayText from "../../shared/styles/compose.module.css";
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: var(--font-numeric);
+}
+
+.expression sub {
+  font-size: var(--font-size-body);
+  font-weight: var(--weight-medium);
+  color: var(--text-accent);
 }
 
 .params {

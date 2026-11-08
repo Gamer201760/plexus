@@ -56,7 +56,7 @@ class ReferenceQueries:
         atlas = [
             SourceRecord(
                 id="atlas-links",
-                title="Атлас · ручные транспортные связи",
+                title="Атлас: ручные транспортные связи",
                 period=_years([link.source_date for link in links]),
                 url=None,
                 note="Региональные CSV проекта: у каждой связи своя ссылка и дата источника.",
@@ -64,7 +64,7 @@ class ReferenceQueries:
             ),
             SourceRecord(
                 id="atlas-settlements",
-                title="Атлас · населённые пункты",
+                title="Атлас: населённые пункты",
                 period=None,
                 url=None,
                 note="Координаты и население населённых пунктов 82 регионов атласа.",

@@ -4,7 +4,7 @@ from enum import StrEnum
 from app.domain.transport import Season
 from app.usecase.dto import IndexRecord
 
-FORMULA = "A_i = Σ M_j · exp(−β · t_ij)"
+FORMULA = "A_i = Σ M_j × exp(−β × t_ij)"
 HALF_LIFE_HOURS = 2
 MARKETS = 180
 MISSING_REASON = "Regional index rows are not exported yet: indices.json is empty"
@@ -60,8 +60,8 @@ COMPONENTS = [
         key="scenario",
         title="Сценарий сезона",
         description=(
-            "road — только дороги, summer и winter — дороги и сезонные связи. "
-            "Сезон «все» показывает сценарий road"
+            "Три сценария: только дороги, лето и зима. Летний и зимний добавляют к дорогам "
+            "сезонные связи. Режим «Все сезоны» показывает сценарий только по дорогам"
         ),
         source="Расчёт проекта",
     ),
