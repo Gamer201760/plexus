@@ -1,10 +1,9 @@
 import type { ReactNode } from "react"
-import { Link, NavLink, useLocation } from "react-router"
+import { Link, NavLink } from "react-router"
 import { useSeason } from "@/shared/hooks/use-season"
 import { useTranslation } from "@/shared/i18n"
 import { Icon, type IconName } from "@/shared/ui"
 import { BrandMark } from "@/shared/ui/brand"
-import { BrandLockup } from "@/shared/ui/brand/brand-lockup/brand-lockup"
 import styles from "./app-header.module.css"
 
 interface NavItem {
@@ -27,11 +26,10 @@ export interface AppHeaderProps {
 export function AppHeader({ search }: AppHeaderProps) {
   const { t } = useTranslation()
   const { seasonHref } = useSeason()
-  const landing = useLocation().pathname === "/"
   return (
-    <header className={styles.header} data-landing={landing}>
+    <header className={styles.header}>
       <Link to={seasonHref("/")} className={styles.brand} aria-label={t("common:app.name")}>
-        {landing ? <BrandLockup /> : <BrandMark size="fill" rings={2} decorative />}
+        <BrandMark size="fill" rings={2} decorative />
       </Link>
       <nav className={styles.nav} aria-label={t("nav:label")}>
         {NAV.map((item) => (
@@ -51,7 +49,7 @@ export function AppHeader({ search }: AppHeaderProps) {
           </NavLink>
         ))}
       </nav>
-      {search && !landing ? <div className={styles.search}>{search}</div> : null}
+      {search ? <div className={styles.search}>{search}</div> : null}
     </header>
   )
 }

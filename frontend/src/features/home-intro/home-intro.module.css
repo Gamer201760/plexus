@@ -1,31 +1,73 @@
 .home {
-  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  align-items: center;
-  gap: var(--space-24);
-  min-block-size: calc(100svh - var(--header-height));
-  padding: var(--space-48) 5vw calc(var(--space-48) * 2);
-  overflow: hidden;
+  gap: var(--space-48);
+  place-content: center stretch;
+  min-block-size: 100svh;
+  padding: var(--space-40) var(--space-page);
 }
+
 .intro {
   display: grid;
   justify-items: start;
-  gap: var(--space-32);
+  gap: var(--space-24);
 }
-.intro h1 {
+
+.wordmark {
+  inline-size: min(80%, 26rem);
+}
+
+.wordmark > svg {
+  inline-size: 100%;
+}
+
+.title {
   font-size: var(--font-size-display);
   font-weight: var(--weight-bold);
   line-height: var(--line-height-heading-lg);
   letter-spacing: var(--tracking-display);
-}
-.home .action {
-  min-block-size: calc(var(--control-height) + var(--space-8));
-  font-size: var(--font-size-subheading);
+  text-wrap: balance;
 }
 
-@media (max-width: 64rem) {
+.title:focus {
+  outline: none;
+}
+
+.lead {
+  composes: leadText from "../../shared/styles/compose.module.css";
+  line-height: var(--line-height-body);
+  text-wrap: pretty;
+}
+
+.leadSkeleton {
+  inline-size: min(100%, 30rem);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+
+.primary {
+  --button-padding: var(--space-24);
+}
+
+.stage {
+  min-inline-size: 0;
+}
+
+.placeholder {
+  aspect-ratio: 1000 / 620;
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-muted);
+  animation: var(--motion-shimmer);
+}
+
+@media (width >= 64rem) {
   .home {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: center;
+    gap: var(--space-64);
+    padding-inline: var(--space-page-wide);
   }
 }

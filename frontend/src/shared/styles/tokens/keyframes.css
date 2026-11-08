@@ -72,6 +72,28 @@
   }
 }
 
+@keyframes kf-route-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes kf-hub-ripple {
+  from {
+    opacity: var(--ring-ripple-from);
+    transform: scale(var(--hub-ripple-from));
+  }
+
+  to {
+    opacity: 0;
+    transform: none;
+  }
+}
+
 @keyframes kf-slide-in {
   from {
     opacity: 0;

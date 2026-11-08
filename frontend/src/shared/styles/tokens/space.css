@@ -19,6 +19,12 @@
 
   --hairline: 1px;
   --iso-line: 1.5px;
+  --atlas-line: 2.4px;
+  --atlas-stop: 1.8px;
+  --atlas-station: 3px;
+  --atlas-hub: 3.2px;
+  --atlas-hub-active: 4.6px;
+  --atlas-ripple: 26px;
   --iso-line-strong: 2px;
   --dash-winter: 6 4;
   --dash-unknown: 1 4;

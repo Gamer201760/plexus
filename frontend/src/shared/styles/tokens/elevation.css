@@ -14,4 +14,5 @@
   --shadow-dialog: 0 2px 6px var(--shadow-color), 0 24px 64px -16px var(--shadow-color-strong);
 
   --opacity-stale: 0.55;
+  --opacity-route: 0.45;
 }

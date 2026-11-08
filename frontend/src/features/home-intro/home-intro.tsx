@@ -1,27 +1,65 @@
+import { useGeoRegions, useOverview, useRoutes } from "@/entities/region"
 import { useTranslation } from "@/shared/i18n"
-import { usePageVisibility } from "@/shared/motion/use-page-visibility"
-import { ButtonLink } from "@/shared/ui"
-import { HeroWordmark } from "@/shared/ui/brand/hero-wordmark/hero-wordmark"
-import { NetworkScene } from "@/shared/ui/brand/network-scene/network-scene"
+import { ButtonLink, ErrorState, Skeleton } from "@/shared/ui"
+import { BrandMark } from "@/shared/ui/brand"
 import styles from "./home-intro.module.css"
+import { LinkAtlas } from "./link-atlas"
 
 export function HomeIntro() {
   const { t } = useTranslation()
-  const hidden = usePageVisibility()
+  const geo = useGeoRegions()
+  const routes = useRoutes()
+  const overview = useOverview()
+  const failed = geo.isError || routes.isError || overview.isError
+  const retry = () => {
+    void geo.refetch()
+    void routes.refetch()
+    void overview.refetch()
+  }
+
   return (
-    <div className={styles.home} data-hidden={hidden}>
+    <div className={styles.home}>
       <div className={styles.intro}>
-        <HeroWordmark />
-        <h1 tabIndex={-1}>
+        <div className={styles.wordmark}>
+          <BrandMark size="fill" motion="enter" />
+        </div>
+        <h1 className={styles.title} tabIndex={-1}>
           {t("home:title")}
-          <br />
-          {t("home:continuation")}
         </h1>
-        <ButtonLink to="/map" icon="map" className={styles.action}>
-          {t("home:open")}
-        </ButtonLink>
+        {overview.data ? (
+          <p className={styles.lead}>
+            {t("home:lead", {
+              links: overview.data.links,
+              regions: overview.data.regions,
+            })}
+          </p>
+        ) : (
+          <Skeleton lines={2} className={styles.leadSkeleton} />
+        )}
+        <div className={styles.actions}>
+          <ButtonLink to="/map" icon="map" className={styles.primary}>
+            {t("home:open")}
+          </ButtonLink>
+          <ButtonLink to="/method" variant="secondary" icon="book">
+            {t("home:method")}
+          </ButtonLink>
+        </div>
       </div>
-      <NetworkScene hidden={hidden} />
+      <div className={styles.stage}>
+        {failed ? (
+          <ErrorState title={t("home:failed")} onRetry={retry} />
+        ) : geo.data && routes.data ? (
+          <LinkAtlas
+            geo={geo.data}
+            routes={routes.data}
+            label={t("home:map", { count: routes.data.length })}
+          />
+        ) : (
+          <div className={styles.placeholder} role="status">
+            <span className="visually-hidden">{t("common:state.loading")}</span>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

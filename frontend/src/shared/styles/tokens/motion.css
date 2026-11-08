@@ -15,6 +15,7 @@
   --dur-draw: 900ms;
   --dur-spin: 800ms;
   --dur-breathe: 2400ms;
+  --dur-tour: 3800ms;
 
   --stagger: 40ms;
   --press-scale: 0.97;
@@ -68,6 +69,11 @@
   --motion-ring-in: kf-ring-in var(--dur-draw) var(--ease-out) both;
   --motion-ring-pulse: kf-ring-pulse var(--dur-breathe) var(--ease-in-out) infinite;
   --motion-ring-ripple: kf-ring-ripple var(--dur-draw) var(--ease-out) both;
+  --motion-route-draw: kf-route-draw var(--dur-draw) var(--ease-out) both;
+  --motion-route-out: kf-route-draw calc(var(--dur-panel) * 2) var(--ease-out) both;
+  --motion-hub-ripple: kf-hub-ripple var(--dur-draw) var(--ease-out) both;
+  --delay-ripple-step: calc(var(--dur-draw) / 3);
+  --hub-ripple-from: 0.12;
   --delay-ring-step: calc(var(--stagger) * 3);
   --delay-none: 0ms;
   --ring-delay-base: var(--delay-none);
@@ -91,6 +97,7 @@
     --dur-draw: 1ms;
     --dur-spin: 1ms;
     --dur-breathe: 1ms;
+    --dur-tour: 1ms;
     --stagger: 0ms;
     --press-scale: 1;
     --press-scale-surface: 1;

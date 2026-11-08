@@ -5,12 +5,15 @@ export {
   type Overview,
   type RegionDetail,
   type RegionSummary,
+  type Route,
   regionKeys,
   type Season,
+  type TransportModeKey,
   useGeoRegions,
   useOverview,
   useRegion,
   useRegions,
+  useRoutes,
 } from "./region.queries"
 export { RegionMap, type RegionMapProps } from "./region-map/region-map"
 export { RegionPreview } from "./region-preview/region-preview"

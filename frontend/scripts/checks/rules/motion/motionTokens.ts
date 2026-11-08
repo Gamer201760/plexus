@@ -22,6 +22,7 @@ export const RARE_EVENT_DURATIONS = new Set([
   "--dur-breathe",
   "--dur-map",
   "--dur-wave",
+  "--dur-tour",
 ])
 const CUBIC_BEZIER = /cubic-bezier\(([^)]*)\)/g
 const EASE_IN_KEYWORD = /(?<![\w-])ease-in(?![\w-])/

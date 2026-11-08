@@ -107,10 +107,3 @@
     padding-inline: var(--space-page-wide);
   }
 }
-
-.header[data-landing="true"] .nav {
-  margin-inline-start: auto;
-}
-.header[data-landing="true"] .link > svg {
-  display: none;
-}

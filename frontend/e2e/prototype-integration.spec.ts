@@ -6,28 +6,16 @@ import nav from "../src/shared/i18n/locales/ru/nav.json" with { type: "json" }
 import region from "../src/shared/i18n/locales/ru/region.json" with { type: "json" }
 import sources from "../src/shared/i18n/locales/ru/sources.json" with { type: "json" }
 
-test("home signals keep moving and respect reduced motion", async ({ page }) => {
+test("home draws the link atlas without the app header", async ({ page }) => {
   await page.goto("/")
-  const signal = page.locator('[data-signal="0"]')
-  await expect(page.locator("[data-signal]")).toHaveCount(3)
-  const before = await signal.evaluate((node) => getComputedStyle(node).transform)
-  await expect
-    .poll(() => signal.evaluate((node) => getComputedStyle(node).transform))
-    .not.toBe(before)
-  expect(
-    await page
-      .locator("[data-signal]")
-      .evaluateAll(
-        (nodes) =>
-          nodes.filter((node) =>
-            node.getAnimations().some((animation) => animation.playState === "running"),
-          ).length,
-      ),
-  ).toBe(3)
-  await page.emulateMedia({ reducedMotion: "reduce" })
-  await expect(signal).toHaveCSS("display", "none")
+  await expect(page.locator("header")).toHaveCount(0)
+  await expect(page.getByRole("heading", { level: 1, name: home.title })).toBeVisible()
+  const atlas = page.locator("svg[viewBox='0 0 1000 620']").first()
+  await expect.poll(() => atlas.locator("circle").count()).toBeGreaterThan(300)
+  await expect(page.locator("[data-hub-label]")).toBeVisible({ timeout: 8000 })
   await page.getByRole("link", { name: home.open }).click()
   await expect(page).toHaveURL(/\/map$/)
+  await expect(page.locator("header")).toHaveCount(1)
 })
 
 test("source topics support keyboard and preserve selection across navigation", async ({

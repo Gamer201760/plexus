@@ -9,7 +9,7 @@ interface HeroShot {
 }
 
 const SHOTS: readonly HeroShot[] = [
-  { file: "hero-map.png", path: "/?region=04000000" },
+  { file: "hero-map.png", path: "/map?region=04000000" },
   { file: "hero-region.png", path: "/regions/93000000" },
 ]
 
