@@ -24,10 +24,19 @@
 }
 
 .mapCell {
+  min-inline-size: 0;
+}
+
+.mapEmpty {
+  composes: surface from "../../shared/styles/compose.module.css";
+  display: grid;
+  place-items: center;
   aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border: var(--hairline) solid var(--border-default);
-  border-radius: var(--radius-lg);
+}
+
+.mapSkeleton > span {
+  block-size: auto;
+  aspect-ratio: 4 / 3;
 }
 
 @media (max-width: 64rem) {

@@ -1,9 +1,31 @@
 .table {
   display: grid;
-  justify-items: start;
   gap: var(--space-16);
+  min-inline-size: 0;
 }
 
-.table > :last-child {
-  justify-self: stretch;
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12) var(--space-16);
+}
+
+.search {
+  flex: 1 1 var(--term-min);
+  max-inline-size: var(--field-max-width);
+}
+
+.table .scroller {
+  max-block-size: calc(100dvh - var(--header-height) - var(--space-48));
+  overscroll-behavior: auto;
+}
+
+.rowsBone {
+  gap: 0;
+}
+
+.rowsBone > span {
+  margin-block: var(--space-16);
 }

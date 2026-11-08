@@ -1,88 +1,90 @@
-import { useState } from "react"
+import { useDeferredValue, useState } from "react"
 import { type RegionSummary, type Season, useRegions } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
 import {
   DataTable,
-  type DataTableColumn,
+  EmptyState,
   ErrorState,
-  NoValue,
   Segmented,
   Skeleton,
+  type TableSort,
+  TextField,
 } from "@/shared/ui"
+import { DEFAULT_METRIC, isMetric, regionColumns } from "./region-columns"
 import styles from "./region-table.module.css"
+
+const SEASONS = ["all", "summer", "winter"] as const
+const DIAERESIS = String.fromCodePoint(0x0308)
+
+function fold(text: string) {
+  return text.toLocaleLowerCase("ru").normalize("NFD").replaceAll(DIAERESIS, "").trim()
+}
+
+function matches(rows: readonly RegionSummary[], query: string) {
+  const needle = fold(query)
+  if (needle === "") return rows
+  return rows.filter((row) => fold(row.name).includes(needle))
+}
 
 export function RegionTable() {
   const { t } = useTranslation()
   const f = useFormatters()
   const [season, setSeason] = useState<Season>("all")
+  const [query, setQuery] = useState("")
+  const [sort, setSort] = useState<TableSort>({ key: DEFAULT_METRIC, direction: "descending" })
   const regions = useRegions(season)
+  const deferred = useDeferredValue(query)
+  const all = regions.data ?? []
+  const rows = matches(all, deferred)
+  const columns = regionColumns({
+    rows: all,
+    barKey: isMetric(sort.key) ? sort.key : DEFAULT_METRIC,
+    f,
+    header: (key) => (key === "name" ? t("region:settlements.name") : t(`region:stats.${key}`)),
+  })
 
-  const columns: DataTableColumn<RegionSummary>[] = [
-    {
-      key: "name",
-      header: t("region:settlements.name"),
-      cell: (r) => r.name,
-      sortable: true,
-      sortValue: (r) => r.name,
-    },
-    {
-      key: "settlements",
-      header: t("region:stats.settlements"),
-      cell: (r) => f.integer(r.settlements),
-      numeric: true,
-      sortable: true,
-      sortValue: (r) => r.settlements,
-    },
-    {
-      key: "population",
-      header: t("region:stats.population"),
-      cell: (r) => f.integer(r.population),
-      numeric: true,
-      sortable: true,
-      sortValue: (r) => r.population,
-    },
-    {
-      key: "links",
-      header: t("region:stats.links"),
-      cell: (r) => f.integer(r.links_season),
-      numeric: true,
-      sortable: true,
-      sortValue: (r) => r.links_season,
-    },
-    {
-      key: "companies",
-      header: t("region:stats.companies"),
-      cell: (r) => (r.companies === null ? <NoValue /> : f.integer(r.companies)),
-      numeric: true,
-      sortable: true,
-      sortValue: (r) => r.companies ?? -1,
-    },
-  ]
+  const table =
+    rows.length === 0 ? (
+      <EmptyState icon="search" title={t("region:notFound")} />
+    ) : (
+      <DataTable
+        caption={t("nav:regions")}
+        columns={columns}
+        rows={rows}
+        rowKey={(r) => r.id}
+        sort={sort}
+        onSortChange={setSort}
+        rowHref={(r) => `/regions/${r.id}`}
+        className={styles.scroller}
+      />
+    )
 
   return (
     <div className={styles.table}>
-      <Segmented
-        label={t("data:season.legend")}
-        value={season}
-        onChange={setSeason}
-        options={(["all", "summer", "winter"] as const).map((key) => ({
-          value: key,
-          label: t(`data:season.${key}`),
-        }))}
-      />
+      <div className={styles.toolbar}>
+        <TextField
+          type="search"
+          icon="search"
+          label={t("region:table.search")}
+          placeholder={t("region:table.search")}
+          hideLabel
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          className={styles.search}
+        />
+        <Segmented
+          label={t("data:season.legend")}
+          value={season}
+          onChange={setSeason}
+          options={SEASONS.map((key) => ({ value: key, label: t(`data:season.${key}`) }))}
+        />
+      </div>
       {regions.isError ? (
         <ErrorState title={t("errors:kind.server")} onRetry={() => void regions.refetch()} />
       ) : regions.data ? (
-        <DataTable
-          caption={t("nav:regions")}
-          columns={columns}
-          rows={regions.data}
-          rowKey={(r) => r.id}
-          defaultSort={{ key: "links", direction: "descending" }}
-          rowHref={(r) => `/regions/${r.id}`}
-        />
+        table
       ) : (
-        <Skeleton lines={10} />
+        <Skeleton lines={10} className={styles.rowsBone} />
       )}
     </div>
   )

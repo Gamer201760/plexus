@@ -1,4 +1,5 @@
 import { type Source, useSources } from "@/entities/reference"
+import { useMediaQuery } from "@/shared/hooks"
 import { useDocumentTitle, useFormatters, useTranslation } from "@/shared/i18n"
 import {
   ButtonLink,
@@ -11,11 +12,27 @@ import {
 } from "@/shared/ui"
 import styles from "./sources-page.module.css"
 
+interface OpenLinkProps {
+  readonly source: Source
+}
+
+function OpenLink({ source }: OpenLinkProps) {
+  const { t } = useTranslation()
+  if (!source.url) return null
+  return (
+    <ButtonLink to={source.url} variant="ghost" size="compact" icon="external">
+      <span aria-hidden="true">{t("sources:open")}</span>
+      <span className="visually-hidden">{t("sources:openNamed", { title: source.title })}</span>
+    </ButtonLink>
+  )
+}
+
 export function SourcesPage() {
   const { t } = useTranslation()
   const f = useFormatters()
   useDocumentTitle(t("sources:title"))
   const sources = useSources()
+  const narrow = useMediaQuery("(max-width: 48rem)")
   const columns: DataTableColumn<Source>[] = [
     {
       key: "title",
@@ -24,6 +41,11 @@ export function SourcesPage() {
         <span className={styles.title}>
           <span>{source.title}</span>
           {source.note ? <span className={styles.note}>{source.note}</span> : null}
+          {narrow ? (
+            <span className={styles.inlineLink}>
+              <OpenLink source={source} />
+            </span>
+          ) : null}
         </span>
       ),
     },
@@ -36,33 +58,26 @@ export function SourcesPage() {
       sortable: true,
       sortValue: (source) => source.rows ?? -1,
     },
-    {
-      key: "url",
-      header: t("sources:open"),
-      cell: (source) =>
-        source.url ? (
-          <ButtonLink to={source.url} variant="ghost" size="compact" icon="external">
-            {t("sources:open")}
-          </ButtonLink>
-        ) : (
-          <NoValue />
-        ),
-    },
   ]
+  const linkColumn: DataTableColumn<Source> = {
+    key: "url",
+    header: t("sources:link"),
+    cell: (source) => <OpenLink source={source} />,
+  }
   return (
-    <div className={styles.page}>
+    <div className={styles.page} aria-busy={sources.data === undefined}>
       <PageHeader title={t("sources:title")} description={t("sources:lead")} />
       {sources.isError ? (
         <ErrorState title={t("errors:kind.server")} onRetry={() => void sources.refetch()} />
       ) : sources.data ? (
         <DataTable
           caption={t("sources:title")}
-          columns={columns}
+          columns={narrow ? columns : [...columns, linkColumn]}
           rows={sources.data}
           rowKey={(source) => source.id}
         />
       ) : (
-        <Skeleton lines={8} />
+        <Skeleton lines={8} className={styles.bone} />
       )}
     </div>
   )

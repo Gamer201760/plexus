@@ -14,3 +14,13 @@
   color: var(--text-muted);
   font-size: var(--font-size-caption);
 }
+
+.inlineLink {
+  justify-self: start;
+  margin-block-start: var(--space-4);
+  margin-inline-start: calc(var(--space-12) * -1);
+}
+
+.bone {
+  gap: var(--space-40);
+}

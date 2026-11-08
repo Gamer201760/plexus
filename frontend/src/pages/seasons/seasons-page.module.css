@@ -3,3 +3,14 @@
   display: grid;
   gap: var(--space-32);
 }
+
+.timelines {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--panel-min) * 2)), 1fr));
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.bone {
+  gap: var(--space-24);
+}

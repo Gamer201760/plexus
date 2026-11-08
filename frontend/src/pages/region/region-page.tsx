@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link, useParams, useSearchParams } from "react-router"
-import { useRegionLinks } from "@/entities/link"
+import { type Mode, useRegionLinks } from "@/entities/link"
 import { RegionMap, type Season, useRegion } from "@/entities/region"
 import { useSettlements } from "@/entities/settlement"
 import { RegionLinks } from "@/features/region-links"
@@ -20,6 +20,7 @@ export function RegionPage() {
   const [params, setParams] = useSearchParams()
   const [season, setSeason] = useState<Season>("all")
   const [activeLink, setActiveLink] = useState<string | null>(null)
+  const [modes, setModes] = useState<readonly Mode[]>([])
   const highlight = params.get("settlement")
   const region = useRegion(regionId, season)
   const links = useRegionLinks(regionId, season)
@@ -32,6 +33,8 @@ export function RegionPage() {
     offset: 0,
   })
   const data = region.data
+  const allLinks = links.data ?? []
+  const shown = modes.length === 0 ? allLinks : allLinks.filter((l) => modes.includes(l.mode))
   useDocumentTitle(data?.name ?? t("nav:regions"))
 
   if (region.isError) {
@@ -54,14 +57,16 @@ export function RegionPage() {
         path={data.path}
         bbox={data.bbox}
         settlements={places.data?.items ?? []}
-        links={links.data ?? []}
+        links={shown}
         activeLinkId={activeLink}
         highlightId={highlight}
         label={t("region:map.label")}
         onLink={setActiveLink}
       />
     ) : (
-      <EmptyState icon="map" title={t("region:map.noGeometry")} />
+      <div className={styles.mapEmpty}>
+        <EmptyState icon="map" title={t("region:map.noGeometry")} />
+      </div>
     )
 
   return (
@@ -79,19 +84,26 @@ export function RegionPage() {
           <Segmented
             label={t("data:season.legend")}
             value={season}
-            onChange={setSeason}
+            onChange={(next) => {
+              setSeason(next)
+              setModes([])
+            }}
             options={SEASONS.map((key) => ({ value: key, label: t(`data:season.${key}`) }))}
           />
         }
       />
       <RegionSummary region={data} />
       <div className={styles.workspace}>
-        <div className={styles.mapCell}>{data ? map : <Skeleton shape="block" />}</div>
-        {links.data ? (
-          <RegionLinks links={links.data} activeId={activeLink} onActive={setActiveLink} />
-        ) : (
-          <Skeleton lines={8} />
-        )}
+        <div className={styles.mapCell}>
+          {data ? map : <Skeleton shape="block" className={styles.mapSkeleton} />}
+        </div>
+        <RegionLinks
+          links={links.data}
+          modes={modes}
+          onModesChange={setModes}
+          activeId={activeLink}
+          onActive={setActiveLink}
+        />
       </div>
       <RegionSettlements
         regionId={regionId}

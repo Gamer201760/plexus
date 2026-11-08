@@ -31,7 +31,7 @@
   },
   "metric": {
     "label": "Показатель",
-    "links": "Ручных связей в сезоне",
+    "links": "Ручных связей",
     "population": "Население",
     "companies": "Компаний",
     "revenuePerCapita": "Выручка компаний на жителя"
@@ -41,6 +41,6 @@
     "value": "{{value, number}} в неделю"
   },
   "source": "Источник",
-  "sourceDate": "Проверено {{date}}",
+  "sourceDate": "Проверено: {{date}}",
   "openSource": "Открыть источник"
 }
