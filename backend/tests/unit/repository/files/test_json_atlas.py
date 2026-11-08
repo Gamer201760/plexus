@@ -185,3 +185,13 @@ def settlement_row(point_id: str, region_id: str, name: str) -> dict[str, object
         "company_rows": 0,
         "revenue_rub": None,
     }
+
+
+def test_overview_geometry_covers_every_region_with_fewer_vertices(
+    atlas: JsonAtlasRepository,
+) -> None:
+    shapes = atlas.geo().shapes
+    assert all(shape.path_low and shape.path_low.startswith("M") for shape in shapes)
+    full = sum(shape.path.count("L") for shape in shapes)
+    overview = sum((shape.path_low or "").count("L") for shape in shapes)
+    assert overview < full / 2

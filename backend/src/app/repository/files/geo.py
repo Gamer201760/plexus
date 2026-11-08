@@ -7,6 +7,7 @@ from app.usecase.dto import GeoLayer, RegionShape
 
 BOUNDARIES = "geo/regions.json"
 REGION_PATHS = "geo/region-paths.json"
+LOW_PATHS = "geo/region-paths-low.json"
 
 
 def _positions(value: Json) -> Iterator[tuple[float, float]]:
@@ -32,11 +33,20 @@ def boundary_frame(data_dir: Path) -> SvgFrame:
 
 def region_layer(data_dir: Path) -> GeoLayer:
     document = obj(read_json(data_dir, REGION_PATHS))
+    low_document = obj(read_json(data_dir, LOW_PATHS)) if (data_dir / LOW_PATHS).exists() else {}
+    low_paths = {text(row, "id"): text(row, "path") for row in objects(low_document.get("regions"))}
     shapes = []
     for row in objects(document.get("regions")):
         region_id, name, path = text(row, "id"), text(row, "name"), text(row, "path")
         if region_id and path:
-            shapes.append(RegionShape(id=region_id, name=name or region_id, path=path))
+            shapes.append(
+                RegionShape(
+                    id=region_id,
+                    name=name or region_id,
+                    path=path,
+                    path_low=low_paths.get(region_id),
+                )
+            )
     return GeoLayer(
         view_box=VIEW_BOX,
         shapes=shapes,

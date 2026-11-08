@@ -57,6 +57,7 @@ class RegionShapeResponse(BaseModel):
     id: str
     name: str
     path: str
+    path_low: str | None = None
 
 
 class GeoRegionsResponse(BaseModel):

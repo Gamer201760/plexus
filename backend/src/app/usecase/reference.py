@@ -54,10 +54,7 @@ class ReferenceQueries:
     def geo(self) -> GeoRegions:
         layer = self._repository.geo()
         names = {region.id: region.name for region in self._repository.regions()}
-        shapes = [
-            RegionShape(id=shape.id, name=names.get(shape.id, shape.name), path=shape.path)
-            for shape in layer.shapes
-        ]
+        shapes = [replace(shape, name=names.get(shape.id, shape.name)) for shape in layer.shapes]
         drawn = {shape.id for shape in shapes}
         missing = [
             RegionStub(id=region_id, name=name)

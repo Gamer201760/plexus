@@ -75,6 +75,7 @@ class RegionShape:
     id: str
     name: str
     path: str
+    path_low: str | None = None
 
 
 @dataclass(frozen=True, slots=True)
