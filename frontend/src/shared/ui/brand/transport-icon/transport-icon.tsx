@@ -11,6 +11,7 @@ const SIZES: Record<TransportIconSize, string | undefined> = {
 }
 
 const TINTS: Record<TransportMode, string | undefined> = {
+  bus: undefined,
   air: styles.air,
   river: styles.river,
   winter_road: styles.winter,

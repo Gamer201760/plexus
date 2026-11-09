@@ -63,7 +63,7 @@ def test_barnaul_lands_inside_altai_krai(atlas: JsonAtlasRepository) -> None:
 def test_real_links_keep_unknown_values_null(atlas: JsonAtlasRepository) -> None:
     links = atlas.links()
 
-    assert len(links) == 997
+    assert len(links) == 1650
     assert any(link.season is None for link in links)
     assert any(link.km is None for link in links)
     assert all(link.km != 0 for link in links if link.km is not None)

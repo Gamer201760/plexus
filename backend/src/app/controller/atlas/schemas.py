@@ -28,6 +28,7 @@ class SeasonCountsResponse(BaseModel):
 
 
 class ModeTotalsResponse(BaseModel):
+    bus: int
     air: int
     river: int
     winter_road: int

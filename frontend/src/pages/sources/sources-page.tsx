@@ -20,7 +20,13 @@ function OpenLink({ source }: OpenLinkProps) {
   const { t } = useTranslation()
   if (!source.url) return null
   return (
-    <ButtonLink to={source.url} variant="ghost" size="compact" icon="external">
+    <ButtonLink
+      reloadDocument={source.url.startsWith("/datasets/")}
+      to={source.url}
+      variant="ghost"
+      size="compact"
+      icon="external"
+    >
       <span aria-hidden="true">{t("sources:open")}</span>
       <span className="visually-hidden">{t("sources:openNamed", { title: source.title })}</span>
     </ButtonLink>

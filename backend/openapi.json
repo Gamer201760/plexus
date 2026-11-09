@@ -139,7 +139,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -296,7 +296,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -367,7 +367,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -458,7 +458,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -578,7 +578,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -640,7 +640,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -1041,6 +1041,7 @@
       "Mode": {
         "type": "string",
         "enum": [
+          "bus",
           "air",
           "river",
           "winter_road",
@@ -1079,6 +1080,10 @@
       },
       "ModeTotalsResponse": {
         "properties": {
+          "bus": {
+            "type": "integer",
+            "title": "Bus"
+          },
           "air": {
             "type": "integer",
             "title": "Air"
@@ -1106,6 +1111,7 @@
         },
         "type": "object",
         "required": [
+          "bus",
           "air",
           "river",
           "winter_road",

@@ -323,7 +323,7 @@ export interface components {
          * Mode
          * @enum {string}
          */
-        Mode: "air" | "river" | "winter_road" | "ferry" | "ice_crossing" | "pontoon_bridge";
+        Mode: "bus" | "air" | "river" | "winter_road" | "ferry" | "ice_crossing" | "pontoon_bridge";
         /** ModeCountsResponse */
         ModeCountsResponse: {
             mode: components["schemas"]["Mode"];
@@ -336,6 +336,8 @@ export interface components {
         };
         /** ModeTotalsResponse */
         ModeTotalsResponse: {
+            /** Bus */
+            bus: number;
             /** Air */
             air: number;
             /** River */
@@ -659,7 +661,7 @@ export interface operations {
                     "application/json": components["schemas"]["SearchResponse"];
                 };
             };
-            /** @description Unprocessable Entity */
+            /** @description Unprocessable Content */
             422: {
                 headers: {
                     [name: string]: unknown;
@@ -786,7 +788,7 @@ export interface operations {
                     "application/json": components["schemas"]["RegionSummaryResponse"][];
                 };
             };
-            /** @description Unprocessable Entity */
+            /** @description Unprocessable Content */
             422: {
                 headers: {
                     [name: string]: unknown;
@@ -837,7 +839,7 @@ export interface operations {
                     "application/json": components["schemas"]["ErrorResponse"];
                 };
             };
-            /** @description Unprocessable Entity */
+            /** @description Unprocessable Content */
             422: {
                 headers: {
                     [name: string]: unknown;
@@ -889,7 +891,7 @@ export interface operations {
                     "application/json": components["schemas"]["ErrorResponse"];
                 };
             };
-            /** @description Unprocessable Entity */
+            /** @description Unprocessable Content */
             422: {
                 headers: {
                     [name: string]: unknown;
@@ -944,7 +946,7 @@ export interface operations {
                     "application/json": components["schemas"]["ErrorResponse"];
                 };
             };
-            /** @description Unprocessable Entity */
+            /** @description Unprocessable Content */
             422: {
                 headers: {
                     [name: string]: unknown;
@@ -993,7 +995,7 @@ export interface operations {
                     "application/json": components["schemas"]["ErrorResponse"];
                 };
             };
-            /** @description Unprocessable Entity */
+            /** @description Unprocessable Content */
             422: {
                 headers: {
                     [name: string]: unknown;

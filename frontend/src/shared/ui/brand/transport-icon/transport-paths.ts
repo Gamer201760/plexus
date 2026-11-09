@@ -1,4 +1,5 @@
 export type TransportMode =
+  | "bus"
   | "air"
   | "river"
   | "winter_road"
@@ -12,6 +13,13 @@ export interface Glyph {
 }
 
 export const TRANSPORT_GLYPHS: Record<TransportMode, Glyph> = {
+  bus: {
+    strokes: ["M5 18V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v12Z", "M5 11h14", "M8 18v3", "M16 18v3"],
+    dots: [
+      [8, 15, 1],
+      [16, 15, 1],
+    ],
+  },
   air: {
     strokes: [
       "M12 2.75c.83 0 1.4.95 1.4 2.1v4.4l7.1 4.15v1.85l-7.1-2.05v4.3l2.1 1.6v1.4L12 19.6l-3.5.9v-1.4l2.1-1.6v-4.3L3.5 15.25V13.4l7.1-4.15v-4.4c0-1.15.57-2.1 1.4-2.1Z",

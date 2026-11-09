@@ -9,6 +9,7 @@ class Season(StrEnum):
 
 
 class Mode(StrEnum):
+    BUS = "bus"
     AIR = "air"
     RIVER = "river"
     WINTER_ROAD = "winter_road"
@@ -53,6 +54,6 @@ def is_crossing(mode: Mode, span_km: float | None) -> bool:
 
 
 def is_frequency_assumed(mode: Mode, freq_per_week: float | None, span_km: float | None) -> bool:
-    scheduled = mode is not Mode.WINTER_ROAD and not is_crossing(mode, span_km)
+    scheduled = mode not in {Mode.WINTER_ROAD, Mode.BUS} and not is_crossing(mode, span_km)
     known = freq_per_week is not None and freq_per_week > 0
     return scheduled and not known
