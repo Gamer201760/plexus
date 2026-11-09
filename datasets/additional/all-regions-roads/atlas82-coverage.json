@@ -1,0 +1,658 @@
+[
+  {
+    "region_id": "01000000",
+    "region_name": "Алтайский край",
+    "source_region_name": "Алтайский край",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "03000000",
+    "region_name": "Краснодарский край",
+    "source_region_name": "Краснодарский край",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "04000000",
+    "region_name": "Красноярский край",
+    "source_region_name": "Красноярский край",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "05000000",
+    "region_name": "Приморский край",
+    "source_region_name": "Приморский край",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "07000000",
+    "region_name": "Ставропольский край",
+    "source_region_name": "Ставропольский край",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "08000000",
+    "region_name": "Хабаровский край",
+    "source_region_name": "Хабаровский край",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "10000000",
+    "region_name": "Амурская область",
+    "source_region_name": "Амурская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "11000000",
+    "region_name": "Архангельская область",
+    "source_region_name": "Архангельская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "11800000",
+    "region_name": "Ненецкий АО",
+    "source_region_name": "Ненецкий АО",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "12000000",
+    "region_name": "Астраханская область",
+    "source_region_name": "Астраханская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "14000000",
+    "region_name": "Белгородская область",
+    "source_region_name": "Белгородская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "15000000",
+    "region_name": "Брянская область",
+    "source_region_name": "Брянская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "17000000",
+    "region_name": "Владимирская область",
+    "source_region_name": "Владимирская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "18000000",
+    "region_name": "Волгоградская область",
+    "source_region_name": "Волгоградская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "19000000",
+    "region_name": "Вологодская область",
+    "source_region_name": "Вологодскя область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "20000000",
+    "region_name": "Воронежская область",
+    "source_region_name": "Воронежская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "22000000",
+    "region_name": "Нижегородская область",
+    "source_region_name": "Нижегородская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "24000000",
+    "region_name": "Ивановская область",
+    "source_region_name": "Ивановская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "download_link_found"
+  },
+  {
+    "region_id": "25000000",
+    "region_name": "Иркутская область",
+    "source_region_name": "Иркутская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "26000000",
+    "region_name": "Республика Ингушетия",
+    "source_region_name": "Республика Ингушетия",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "27000000",
+    "region_name": "Калининградская область",
+    "source_region_name": "Калининградская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "28000000",
+    "region_name": "Тверская область",
+    "source_region_name": "Тверская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "29000000",
+    "region_name": "Калужская область",
+    "source_region_name": "Калужская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "30000000",
+    "region_name": "Камчатский край",
+    "source_region_name": "Камчатский край",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "32000000",
+    "region_name": "Кемеровская область",
+    "source_region_name": "Кемеровская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "33000000",
+    "region_name": "Кировская область",
+    "source_region_name": "Кировская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "34000000",
+    "region_name": "Костромская область",
+    "source_region_name": "Костромская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "35000000",
+    "region_name": "Республика Крым",
+    "source_region_name": "Республика Крым",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "36000000",
+    "region_name": "Самарская область",
+    "source_region_name": "Самарская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "37000000",
+    "region_name": "Курганская область",
+    "source_region_name": "Курганская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "38000000",
+    "region_name": "Курская область",
+    "source_region_name": "Курская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "41000000",
+    "region_name": "Ленинградская область",
+    "source_region_name": "Ленинградская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "42000000",
+    "region_name": "Липецкая область",
+    "source_region_name": "Липецкая область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "44000000",
+    "region_name": "Магаданская область",
+    "source_region_name": "Магаданская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "46000000",
+    "region_name": "Московская область",
+    "source_region_name": "Московская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "47000000",
+    "region_name": "Мурманская область",
+    "source_region_name": "Мурманская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "49000000",
+    "region_name": "Новгородская область",
+    "source_region_name": "Новгородская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "50000000",
+    "region_name": "Новосибирская область",
+    "source_region_name": "Новосибирская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "52000000",
+    "region_name": "Омская область",
+    "source_region_name": "Омская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "53000000",
+    "region_name": "Оренбургская область",
+    "source_region_name": "Оренбургская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "54000000",
+    "region_name": "Орловская область",
+    "source_region_name": "Орловская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "56000000",
+    "region_name": "Пензенская область",
+    "source_region_name": "Пензенская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "57000000",
+    "region_name": "Пермский край",
+    "source_region_name": "Пермский край",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "58000000",
+    "region_name": "Псковская область",
+    "source_region_name": "Псковская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "60000000",
+    "region_name": "Ростовская область",
+    "source_region_name": "Ростовская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "61000000",
+    "region_name": "Рязанская область",
+    "source_region_name": "Рязанская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "63000000",
+    "region_name": "Саратовская область",
+    "source_region_name": "Саратовская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "64000000",
+    "region_name": "Сахалинская область",
+    "source_region_name": "Сахалинская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "65000000",
+    "region_name": "Свердловская область",
+    "source_region_name": "Свердловская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "66000000",
+    "region_name": "Смоленская область",
+    "source_region_name": "Смоленская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "68000000",
+    "region_name": "Тамбовская область",
+    "source_region_name": "Тамбовская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "69000000",
+    "region_name": "Томская область",
+    "source_region_name": "Томская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "downloaded_verified_historical"
+  },
+  {
+    "region_id": "70000000",
+    "region_name": "Тульская область",
+    "source_region_name": "Тульская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "71000000",
+    "region_name": "Тюменская область",
+    "source_region_name": "Тюменская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "71800000",
+    "region_name": "Ханты-Мансийский автономный округ",
+    "source_region_name": "Ханты-Мансийский АО - Югра",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "71900000",
+    "region_name": "ЯНАО",
+    "source_region_name": "Ямало-Ненецкий АО",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "73000000",
+    "region_name": "Ульяновская область",
+    "source_region_name": "Ульяновская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "75000000",
+    "region_name": "Челябинская область",
+    "source_region_name": "Челябинская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "76000000",
+    "region_name": "Забайкальский край",
+    "source_region_name": "Забайкальский край",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "77000000",
+    "region_name": "Чукотский АО",
+    "source_region_name": "Чукотский АО",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "78000000",
+    "region_name": "Ярославская область",
+    "source_region_name": "Ярославская область",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "79000000",
+    "region_name": "Республика Адыгея",
+    "source_region_name": "Республика Адыгея",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "80000000",
+    "region_name": "Республика Башкортостан",
+    "source_region_name": "Республика Башкортостан",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "81000000",
+    "region_name": "Республика Бурятия",
+    "source_region_name": "Республика Бурятия",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "82000000",
+    "region_name": "Республика Дагестан",
+    "source_region_name": "Республика Дагестан",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "83000000",
+    "region_name": "Кабардино-Балкарская Республика",
+    "source_region_name": "Кабардино-Балкарская Республика",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "84000000",
+    "region_name": "Республика Алтай",
+    "source_region_name": "Республика Алтай",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "85000000",
+    "region_name": "Республика Калмыкия",
+    "source_region_name": "Республика Калмыкия",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "86000000",
+    "region_name": "Республика Карелия",
+    "source_region_name": "Республика Карелия",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "87000000",
+    "region_name": "Республика Коми",
+    "source_region_name": "Республика Коми",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "88000000",
+    "region_name": "Республика Марий Эл",
+    "source_region_name": "Республика Марий Эл",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "89000000",
+    "region_name": "Республика Мордовия",
+    "source_region_name": "Республика Мордовия",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "90000000",
+    "region_name": "Республика Северная Осетия",
+    "source_region_name": "Республика Северная Осетия-Алания",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "91000000",
+    "region_name": "Карачаево-Черкесская Республика",
+    "source_region_name": "Карачаево-Черкесская Республика",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "92000000",
+    "region_name": "Республика Татарстан",
+    "source_region_name": "Республика Татарстан",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "downloaded_verified_historical"
+  },
+  {
+    "region_id": "93000000",
+    "region_name": "Республика Тыва",
+    "source_region_name": "Республика Тыва",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "94000000",
+    "region_name": "Удмуртская Республика",
+    "source_region_name": "Удмуртская Республика",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "95000000",
+    "region_name": "Республика Хакасия",
+    "source_region_name": "Республика Хакасия",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "96000000",
+    "region_name": "Чеченская Республика",
+    "source_region_name": "Чеченская Республика",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "97000000",
+    "region_name": "Чувашская Республика",
+    "source_region_name": "Чувашская Республика",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "98000000",
+    "region_name": "Республика Саха (Якутия)",
+    "source_region_name": "Республика Саха (Якутия)",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  },
+  {
+    "region_id": "99000000",
+    "region_name": "Еврейская автономная область",
+    "source_region_name": "Еврейская АО",
+    "road_categories_rows": 4,
+    "road_categories_status": "downloaded_verified_historical",
+    "intraregional_bus_status": "not_verified_in_this_pass"
+  }
+]

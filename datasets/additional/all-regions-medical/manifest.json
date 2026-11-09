@@ -1,0 +1,80 @@
+[
+  {
+    "path": "data/additional/all-regions-medical/f032-organizations.jsonl.gz",
+    "bytes": 1513707,
+    "sha256": "c30c546b245637fb248f86890f86f306903fb5d55b3c7364e189a6e49d9f7251",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/dnr-mo-2026.xlsx",
+    "bytes": 379999,
+    "sha256": "d527158db4bac380c0b436c2ff2f89f66bb7f62072eeed3f99f4abe2a0b49ca4",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/dnr-registry.html",
+    "bytes": 39376,
+    "sha256": "5c8fe0596e840831ad97e929e023210f110f60985ba8f371a312827e044cd41a",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/f001_7_68_xml.zip",
+    "bytes": 21275,
+    "sha256": "5d1ca76830f5e5fed2e26b1bf1baf587ce6d0b0ea9b9426f50234df5c52c90dc",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/f031_4_167_xml.zip",
+    "bytes": 1016440,
+    "sha256": "fd7c6533c328e2b9b484481b338f57c2991d3fd0ccf86f1219ba4142c7d4ced8",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "bytes": 1533841,
+    "sha256": "d90eb6500ed0bd4e8eea9a69bbbd22a75b7b176069cdb92044673405b1b3ef15",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/f033_3_409_xml.zip",
+    "bytes": 4613688,
+    "sha256": "ef296b0ccb1300ce4c82ff48ace3a0fbce2f7d6197f9f458e6f931d2db7dcf52",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/ffoms-home-block.html",
+    "bytes": 77,
+    "sha256": "c5cf2460875264cc3e1c2b3a76b8d14235583eec43a0ff5def35e361d21a6366",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/kamchatka-nsi.html",
+    "bytes": 83260,
+    "sha256": "3a8a337d9b78278032b855e8e961d8ad66907bf0024f95c4eed6ab2bc0cc75bc",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/moscow-oblast-mo-2026.xlsx.zip",
+    "bytes": 687112,
+    "sha256": "022637dbd39a4789ef6bbb4256d1cbb15ab44a815e70686f3d8f938a17e075f7",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/moscow-oblast-registry.html",
+    "bytes": 116169,
+    "sha256": "765e7c61e1065420e210c9b38f090a455ec307ebf9d808bea6fef8ba820f3b79",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/regional-download-links.json",
+    "bytes": 1152,
+    "sha256": "d3bf752a7a987ed5366edaa8d6ed9e2729bec966163dbd1544bb53c4c9a2a255",
+    "downloaded_at": "2026-11-09"
+  },
+  {
+    "path": "data/additional/all-regions-medical/raw/tfoms-directory.html",
+    "bytes": 270771,
+    "sha256": "94a9cd81d68e8cbc653866e4c8ee44ab253c168767d9bbbdf59c5e2592e0c2d7",
+    "downloaded_at": "2026-11-09"
+  }
+]

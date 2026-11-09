@@ -1,0 +1,22 @@
+{
+  "validated_at": "2026-11-09T09:47:35.225385+00:00",
+  "status": "passed",
+  "files": 955,
+  "bytes": 177918986,
+  "manifest_references_checked": 943,
+  "regional_files": 902,
+  "atlas_regions": 82,
+  "checks": [
+    "all referenced file SHA256 and sizes",
+    "Parquet record counts",
+    "ZIP/XLSX CRC integrity",
+    "82 unique coverage rows",
+    "82 nonempty national medical slices and OSM source links",
+    "5550 national bus routes, 53506 schedule rows, 81 source region codes"
+  ],
+  "limits": [
+    "HEAD verification is not downloaded OSM or verified geographic completeness",
+    "old national medical and road snapshots are not current service operation",
+    "not a complete national local-transit or road-traffic inventory"
+  ]
+}

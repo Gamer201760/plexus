@@ -1,0 +1,1970 @@
+[
+  {
+    "region_id": "01000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/01000000/medical_2026.parquet",
+    "rows": 156,
+    "bytes": 34288,
+    "sha256": "e9f5f1320941983f88b84bfdceb18bde222007af7333ea564da0da8983b597f7"
+  },
+  {
+    "region_id": "01000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/01000000/bus_routes_20261105.parquet",
+    "rows": 171,
+    "bytes": 79712,
+    "sha256": "960ebc95e65995147619849c0a5d7fd7756ca829ed9ffd0169c28ba636a99eea"
+  },
+  {
+    "region_id": "01000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/01000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1280,
+    "bytes": 31346,
+    "sha256": "ca294bf0ce938002bcd5fa370505e4930ece032c7b6b65d397a3559b62bd55c4"
+  },
+  {
+    "region_id": "03000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/03000000/medical_2026.parquet",
+    "rows": 249,
+    "bytes": 45354,
+    "sha256": "5bb2f720bde3760325aa23b6dc1f2dc08d093a2662106c12df4c00358ad1dfd1"
+  },
+  {
+    "region_id": "03000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/03000000/bus_routes_20261105.parquet",
+    "rows": 558,
+    "bytes": 214215,
+    "sha256": "3b658acfffde67e1494b54904261b8e4ce2ec8cba3e237160406445dc8747ac2"
+  },
+  {
+    "region_id": "03000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/03000000/bus_stop_schedules_20261105.parquet",
+    "rows": 3296,
+    "bytes": 60012,
+    "sha256": "52a45a899a87cdcbb41968e627a1266a7260e9995b5d823138e954af45490689"
+  },
+  {
+    "region_id": "04000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/04000000/medical_2026.parquet",
+    "rows": 250,
+    "bytes": 46611,
+    "sha256": "40b1b853c61794fd55db7d64457b4d01f582ba66e64d6308c5a52f8434cfc509"
+  },
+  {
+    "region_id": "04000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/04000000/bus_routes_20261105.parquet",
+    "rows": 83,
+    "bytes": 44027,
+    "sha256": "8fe902430d6c696ff2e9a3ea676f76b887861e7b2d519a5c6538ca91be5450d5"
+  },
+  {
+    "region_id": "04000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/04000000/bus_stop_schedules_20261105.parquet",
+    "rows": 722,
+    "bytes": 26601,
+    "sha256": "daab8f7e83d24b5093bdcc942ebd4d6cbced409333140721e4c9d5ffe8218a9b"
+  },
+  {
+    "region_id": "05000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/05000000/medical_2026.parquet",
+    "rows": 119,
+    "bytes": 28940,
+    "sha256": "6ebdae8b91a4e942627b1cf138168205529c7343e3c8c21f91e67b43f829dbbb"
+  },
+  {
+    "region_id": "05000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/05000000/bus_routes_20261105.parquet",
+    "rows": 14,
+    "bytes": 16125,
+    "sha256": "6d46ae0744f0f6b7445cf6615e3be64f685108691dded2d949732e7386570fe1"
+  },
+  {
+    "region_id": "05000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/05000000/bus_stop_schedules_20261105.parquet",
+    "rows": 116,
+    "bytes": 10471,
+    "sha256": "28cd872ec5c1f41b99d33fa68d928049a4b13fd315ff6743329e04d8cda37b96"
+  },
+  {
+    "region_id": "07000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/07000000/medical_2026.parquet",
+    "rows": 167,
+    "bytes": 35654,
+    "sha256": "6fc5cf26cfd16248bddf098f0d1d0154f1dc7536b00ca171211bcf85b10f93aa"
+  },
+  {
+    "region_id": "07000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/07000000/bus_routes_20261105.parquet",
+    "rows": 654,
+    "bytes": 215152,
+    "sha256": "8e99c8258c0f97915e825ac26e3b6ca17d772b16d8c43c706f44f73ac9053db2"
+  },
+  {
+    "region_id": "07000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/07000000/bus_stop_schedules_20261105.parquet",
+    "rows": 3540,
+    "bytes": 58613,
+    "sha256": "d2abd866440277b3e0c97db73349d3c8002fb7ee4e03a3bde2137a1e93a1e2c4"
+  },
+  {
+    "region_id": "08000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/08000000/medical_2026.parquet",
+    "rows": 108,
+    "bytes": 28334,
+    "sha256": "b5cec13947bde63fb71b6fef1587f58dd1a242241cccdd1010bf17561b260a88"
+  },
+  {
+    "region_id": "08000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/08000000/bus_routes_20261105.parquet",
+    "rows": 26,
+    "bytes": 18018,
+    "sha256": "084f910458a3ef14d3f52641e47f4550d9226b5eae4c8abbf3be7a9a0a628242"
+  },
+  {
+    "region_id": "08000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/08000000/bus_stop_schedules_20261105.parquet",
+    "rows": 144,
+    "bytes": 11873,
+    "sha256": "652a73c406c2aa6f5dcb835da50ea980ec29334e3f580b62ff708a9da4aaa2d7"
+  },
+  {
+    "region_id": "10000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/10000000/medical_2026.parquet",
+    "rows": 73,
+    "bytes": 22861,
+    "sha256": "85fe8084bb7005c6b95cfe41a68a115c9e5d97d4d20174813d666b5d686aba58"
+  },
+  {
+    "region_id": "10000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/10000000/bus_routes_20261105.parquet",
+    "rows": 9,
+    "bytes": 12542,
+    "sha256": "9397d5bed2176ea4ea5e5865d77e2dfc0ad20c5d46d60d909f63d427e0b3fd6f"
+  },
+  {
+    "region_id": "10000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/10000000/bus_stop_schedules_20261105.parquet",
+    "rows": 24,
+    "bytes": 8298,
+    "sha256": "2d3b264092f2eed15436641e5a3d033d8a7caea5db6c6107aaa51694d20aeed7"
+  },
+  {
+    "region_id": "11000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/11000000/medical_2026.parquet",
+    "rows": 109,
+    "bytes": 27444,
+    "sha256": "7485bc1d76480b27f90e8b4b39734b312cdf288bf1a5b52f36c1332132c258f0"
+  },
+  {
+    "region_id": "11000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/11000000/bus_routes_20261105.parquet",
+    "rows": 15,
+    "bytes": 16005,
+    "sha256": "cacebb7ae1e251727470084a3ed7affa19cd10f1c399177483a46202c0bc4f5e"
+  },
+  {
+    "region_id": "11000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/11000000/bus_stop_schedules_20261105.parquet",
+    "rows": 172,
+    "bytes": 11524,
+    "sha256": "f7fc4db9270e95b0145a4dc812a504dde0479bdcffca7491dc7442f300684355"
+  },
+  {
+    "region_id": "11800000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/11800000/medical_2026.parquet",
+    "rows": 15,
+    "bytes": 14948,
+    "sha256": "d4dbad648a02fc3fc49832fd303bbec21c5a1ff65d4edc27d09041a32fe6750a"
+  },
+  {
+    "region_id": "11800000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/11800000/bus_routes_20261105.parquet",
+    "rows": 0,
+    "bytes": 2405,
+    "sha256": "cc72968b91afbb3189e86cad434db60993638998746b932cc4b17e5c99c914f0"
+  },
+  {
+    "region_id": "11800000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/11800000/bus_stop_schedules_20261105.parquet",
+    "rows": 0,
+    "bytes": 4153,
+    "sha256": "754a6f6e73de58a6c455b9d88e71d30348f42d12715b587864ef1bc5fc50e9b3"
+  },
+  {
+    "region_id": "12000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/12000000/medical_2026.parquet",
+    "rows": 67,
+    "bytes": 22299,
+    "sha256": "8e0afd61a290bbe13f636936dd080a72d055ffed3c0133a1ada88de78d367db2"
+  },
+  {
+    "region_id": "12000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/12000000/bus_routes_20261105.parquet",
+    "rows": 92,
+    "bytes": 54627,
+    "sha256": "c554760f38ce6c75e36a2844ddb0bc0870af83eaed524e77969388d758b363ac"
+  },
+  {
+    "region_id": "12000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/12000000/bus_stop_schedules_20261105.parquet",
+    "rows": 292,
+    "bytes": 16205,
+    "sha256": "676888d21d9ab591c6e6fdf6facf620558c8e08d8d05716a7cc0efb9e6af1b4a"
+  },
+  {
+    "region_id": "14000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/14000000/medical_2026.parquet",
+    "rows": 92,
+    "bytes": 25576,
+    "sha256": "ed944924394741333ecb50e910a7aa2d31cb55a5dadac96516717343c7eb6415"
+  },
+  {
+    "region_id": "14000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/14000000/bus_routes_20261105.parquet",
+    "rows": 299,
+    "bytes": 75007,
+    "sha256": "97547263175fc1ff26885ffd3ec6db6e0d604781a023a002b1ba362e3f6a3d0d"
+  },
+  {
+    "region_id": "14000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/14000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1210,
+    "bytes": 26163,
+    "sha256": "98d22ce97da9dc03862810d2467767a2f19c0be35bbb7654fc3608ee8ba31dac"
+  },
+  {
+    "region_id": "15000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/15000000/medical_2026.parquet",
+    "rows": 72,
+    "bytes": 23155,
+    "sha256": "0b33c67048e1bcf3b80c225722b8359bb1625167fbf5e530d982bfa9e4125c40"
+  },
+  {
+    "region_id": "15000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/15000000/bus_routes_20261105.parquet",
+    "rows": 183,
+    "bytes": 55329,
+    "sha256": "ddd52986d7ba0d62f8070b937f4ba19c5c12d5b9c315399ed313c268c79ae651"
+  },
+  {
+    "region_id": "15000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/15000000/bus_stop_schedules_20261105.parquet",
+    "rows": 768,
+    "bytes": 19115,
+    "sha256": "f09aef0447bb600af45387de82dcd7e4e7cec33372d35ec8239c3af74d023faf"
+  },
+  {
+    "region_id": "17000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/17000000/medical_2026.parquet",
+    "rows": 114,
+    "bytes": 29066,
+    "sha256": "ae3883841529f092fc705f6a0e2341b7b5eb3856f44e4594c8ebab7ca3a66313"
+  },
+  {
+    "region_id": "17000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/17000000/bus_routes_20261105.parquet",
+    "rows": 109,
+    "bytes": 35483,
+    "sha256": "0f38b81459ec4d5b1dd5d6830fc0aaf1d666c6699e58ca98ca30bf347ad74fd1"
+  },
+  {
+    "region_id": "17000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/17000000/bus_stop_schedules_20261105.parquet",
+    "rows": 456,
+    "bytes": 20093,
+    "sha256": "7b445a93f8ea8b6ce09c6fffdc22fe349a1ae33bd54174e6113e6823551e34c6"
+  },
+  {
+    "region_id": "18000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/18000000/medical_2026.parquet",
+    "rows": 171,
+    "bytes": 35407,
+    "sha256": "8af1adaa688acc6cd179918edb56507c5d81dbc599c5bae4a507d1d982bab550"
+  },
+  {
+    "region_id": "18000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/18000000/bus_routes_20261105.parquet",
+    "rows": 243,
+    "bytes": 95640,
+    "sha256": "ea5bc681355a2e6f07281763176d7ce5cefddf51bceb832ef3f3cefae2beea09"
+  },
+  {
+    "region_id": "18000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/18000000/bus_stop_schedules_20261105.parquet",
+    "rows": 754,
+    "bytes": 24187,
+    "sha256": "d3d76addc4ec0118c3a3b7b9a222f81f46421114e0ce7c7e765688b54ab7ec8c"
+  },
+  {
+    "region_id": "19000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/19000000/medical_2026.parquet",
+    "rows": 113,
+    "bytes": 28612,
+    "sha256": "5962552d131efb8b11aebeadf381622c8239dfc6601ce242ba30390168383b2d"
+  },
+  {
+    "region_id": "19000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/19000000/bus_routes_20261105.parquet",
+    "rows": 43,
+    "bytes": 27391,
+    "sha256": "b05743a579e5d80eb077c7d695ffa32a09596d4f2ee52fc1a6a40897adf2890f"
+  },
+  {
+    "region_id": "19000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/19000000/bus_stop_schedules_20261105.parquet",
+    "rows": 124,
+    "bytes": 11454,
+    "sha256": "ee9b51a2c94936f2d085b2e01a71f1c8883558134e96e13abfec2ab6c9bb8e84"
+  },
+  {
+    "region_id": "20000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/20000000/medical_2026.parquet",
+    "rows": 100,
+    "bytes": 25168,
+    "sha256": "8a685b08e7c2303f2668f405504897b8eaf596f54a7df1de50935eff47431fb7"
+  },
+  {
+    "region_id": "20000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/20000000/bus_routes_20261105.parquet",
+    "rows": 505,
+    "bytes": 127368,
+    "sha256": "aeb901fe441faa06bc5436e9f86af809fa1331eb78a5db8d86186426dd06fb4f"
+  },
+  {
+    "region_id": "20000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/20000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1142,
+    "bytes": 29886,
+    "sha256": "c21bdbe59106a0af84363e60a512c80c48459459da8470928ca4aea1d0a05319"
+  },
+  {
+    "region_id": "22000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/22000000/medical_2026.parquet",
+    "rows": 205,
+    "bytes": 41029,
+    "sha256": "f26894d0dad222437a6e638b32677fdd997de57bdb6bb9092dbbb90074e69236"
+  },
+  {
+    "region_id": "22000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/22000000/bus_routes_20261105.parquet",
+    "rows": 238,
+    "bytes": 81059,
+    "sha256": "3bd1c7495341b9a82bfda7f16031a0085a0d9309383f4ac1eaac13e5b7864952"
+  },
+  {
+    "region_id": "22000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/22000000/bus_stop_schedules_20261105.parquet",
+    "rows": 604,
+    "bytes": 20730,
+    "sha256": "d2eccc4fa417a074fdcc19eab08523542320ca7d8485126c8c9a8c2774a12398"
+  },
+  {
+    "region_id": "24000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/24000000/medical_2026.parquet",
+    "rows": 87,
+    "bytes": 25299,
+    "sha256": "91daed7e76a3ddfe2d60594228af3f4a6f138f83a21840d47d26752731bdd134"
+  },
+  {
+    "region_id": "24000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/24000000/bus_routes_20261105.parquet",
+    "rows": 161,
+    "bytes": 51738,
+    "sha256": "a8285484fcefe4c30f1c38b5cb0e9f53ec088abb80ba65f6308d044a29a85434"
+  },
+  {
+    "region_id": "24000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/24000000/bus_stop_schedules_20261105.parquet",
+    "rows": 628,
+    "bytes": 20388,
+    "sha256": "faafb69e89bc6dcb65bc771c840cfe1a9167bd6cd446c793ad37037f1514689a"
+  },
+  {
+    "region_id": "25000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/25000000/medical_2026.parquet",
+    "rows": 138,
+    "bytes": 31450,
+    "sha256": "642e453e0c777cf6c3fb6ff776960a0a95d9a0383fb31eb3f4ec5b58081ef9aa"
+  },
+  {
+    "region_id": "25000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/25000000/bus_routes_20261105.parquet",
+    "rows": 14,
+    "bytes": 26114,
+    "sha256": "44c5410979e0a84415882526d359bb827498b51d48e47259218fd6f7bd1aec7d"
+  },
+  {
+    "region_id": "25000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/25000000/bus_stop_schedules_20261105.parquet",
+    "rows": 40,
+    "bytes": 10589,
+    "sha256": "6b17ea58db19d144112457ef8e7affd2709e28a5a8b347c8dbc4e23a603bd247"
+  },
+  {
+    "region_id": "26000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/26000000/medical_2026.parquet",
+    "rows": 43,
+    "bytes": 18051,
+    "sha256": "47cebf70deb825e4ba6e415b7942fea827f2f8e2cd9c9741328e7377ce65d6b3"
+  },
+  {
+    "region_id": "26000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/26000000/bus_routes_20261105.parquet",
+    "rows": 56,
+    "bytes": 21369,
+    "sha256": "c3feeff69d6eada573f7dd9d8c33d51fdd5e64ecdf03112ecc4c68f7fa642ded"
+  },
+  {
+    "region_id": "26000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/26000000/bus_stop_schedules_20261105.parquet",
+    "rows": 122,
+    "bytes": 11394,
+    "sha256": "957f4add4e8491564b652549d6421154ca5859d740c441792effc390b14d3e56"
+  },
+  {
+    "region_id": "27000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/27000000/medical_2026.parquet",
+    "rows": 108,
+    "bytes": 27306,
+    "sha256": "978551ede0e6599bb53e4612af071242215e544275673a026bc7bb7e635ac9d3"
+  },
+  {
+    "region_id": "27000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/27000000/bus_routes_20261105.parquet",
+    "rows": 0,
+    "bytes": 2405,
+    "sha256": "cc72968b91afbb3189e86cad434db60993638998746b932cc4b17e5c99c914f0"
+  },
+  {
+    "region_id": "27000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/27000000/bus_stop_schedules_20261105.parquet",
+    "rows": 0,
+    "bytes": 4153,
+    "sha256": "754a6f6e73de58a6c455b9d88e71d30348f42d12715b587864ef1bc5fc50e9b3"
+  },
+  {
+    "region_id": "28000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/28000000/medical_2026.parquet",
+    "rows": 105,
+    "bytes": 27008,
+    "sha256": "2374d5fa69dabaa966ba3f3b97b15cbceab1156c295e5c22b834ee50e6e3e6ae"
+  },
+  {
+    "region_id": "28000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/28000000/bus_routes_20261105.parquet",
+    "rows": 67,
+    "bytes": 39121,
+    "sha256": "c2e6018fc4b5cfa86cb19314546ae7710aebc5c4b24536dd999f9ea20926ca6c"
+  },
+  {
+    "region_id": "28000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/28000000/bus_stop_schedules_20261105.parquet",
+    "rows": 254,
+    "bytes": 18935,
+    "sha256": "8e0ffb1402fdbf500cb5009c1551d947b5caa706facb296300dd2f68e6904af0"
+  },
+  {
+    "region_id": "29000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/29000000/medical_2026.parquet",
+    "rows": 61,
+    "bytes": 21945,
+    "sha256": "75cb8388496ca46c2b05891f135a20ab5fb25878c4b5556ed657aae993ee8e56"
+  },
+  {
+    "region_id": "29000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/29000000/bus_routes_20261105.parquet",
+    "rows": 85,
+    "bytes": 38209,
+    "sha256": "2553593dc38d4a72ac0cadb6136ab971024c82981ff5ebbb72bae1bf33e71939"
+  },
+  {
+    "region_id": "29000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/29000000/bus_stop_schedules_20261105.parquet",
+    "rows": 358,
+    "bytes": 19461,
+    "sha256": "504ca77919e8bd8a49c0ffa8af653493662c7348989158cf663aadc1f6f31bcf"
+  },
+  {
+    "region_id": "30000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/30000000/medical_2026.parquet",
+    "rows": 65,
+    "bytes": 22654,
+    "sha256": "23511a603bd55f064e5a5f6482b46cd3795588501981770ab5219f45afebc1cb"
+  },
+  {
+    "region_id": "30000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/30000000/bus_routes_20261105.parquet",
+    "rows": 0,
+    "bytes": 2405,
+    "sha256": "cc72968b91afbb3189e86cad434db60993638998746b932cc4b17e5c99c914f0"
+  },
+  {
+    "region_id": "30000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/30000000/bus_stop_schedules_20261105.parquet",
+    "rows": 0,
+    "bytes": 4153,
+    "sha256": "754a6f6e73de58a6c455b9d88e71d30348f42d12715b587864ef1bc5fc50e9b3"
+  },
+  {
+    "region_id": "32000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/32000000/medical_2026.parquet",
+    "rows": 145,
+    "bytes": 33983,
+    "sha256": "a23bb9aa23ef7b99e58398c6534749fe88ccf1ef4bf20380ab643130d71c6857"
+  },
+  {
+    "region_id": "32000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/32000000/bus_routes_20261105.parquet",
+    "rows": 142,
+    "bytes": 65465,
+    "sha256": "88eb97003a1bf80ba064fd2fd07ca17461fbb7f0202bd992b9b2c5a8f8226a89"
+  },
+  {
+    "region_id": "32000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/32000000/bus_stop_schedules_20261105.parquet",
+    "rows": 954,
+    "bytes": 24631,
+    "sha256": "b321212789fd8a274897d9a01c98c23814e95ececda2ab8fafb5573806cbb3fd"
+  },
+  {
+    "region_id": "33000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/33000000/medical_2026.parquet",
+    "rows": 81,
+    "bytes": 24292,
+    "sha256": "853676bf1adae296fd736511056902bfc13e0e77c6a7f3145977c7b138d60940"
+  },
+  {
+    "region_id": "33000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/33000000/bus_routes_20261105.parquet",
+    "rows": 59,
+    "bytes": 27432,
+    "sha256": "69dc53fdac8d8ba82441cb0bf872d243e2f4b54d580e71a7d1b78a659bd31965"
+  },
+  {
+    "region_id": "33000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/33000000/bus_stop_schedules_20261105.parquet",
+    "rows": 140,
+    "bytes": 11378,
+    "sha256": "53e59313fb673ce558b507552b29ace43535018dd10ed093d70477201902a8af"
+  },
+  {
+    "region_id": "34000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/34000000/medical_2026.parquet",
+    "rows": 64,
+    "bytes": 22369,
+    "sha256": "cb8bdc84ae26dc52a79f7f824c0faf5643a8b1d14614120c776e90875d540513"
+  },
+  {
+    "region_id": "34000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/34000000/bus_routes_20261105.parquet",
+    "rows": 119,
+    "bytes": 34175,
+    "sha256": "094c49b30a028f3321fb881d5454c1c4944fe0738ebaea1da936103f24f1efb4"
+  },
+  {
+    "region_id": "34000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/34000000/bus_stop_schedules_20261105.parquet",
+    "rows": 334,
+    "bytes": 15490,
+    "sha256": "032644e14507099c28ae6311d673fbcb02ce3ae6f0a3c07543bf040829108371"
+  },
+  {
+    "region_id": "35000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/35000000/medical_2026.parquet",
+    "rows": 69,
+    "bytes": 23119,
+    "sha256": "eb32b703ac623270928f3f9cf7cacece11614544e5a552889086bd8d954e4734"
+  },
+  {
+    "region_id": "35000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/35000000/bus_routes_20261105.parquet",
+    "rows": 286,
+    "bytes": 116719,
+    "sha256": "5c7330f9de021d48d5c20ae715286841659f59ea8d92689e1d4643ac2c107b7f"
+  },
+  {
+    "region_id": "35000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/35000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1616,
+    "bytes": 30547,
+    "sha256": "b251d99680045501664c36b35c6fd267c2198fd44b0e03d96b0cf8621386fec3"
+  },
+  {
+    "region_id": "36000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/36000000/medical_2026.parquet",
+    "rows": 181,
+    "bytes": 37829,
+    "sha256": "14c476a24aaf6415582fa9bb4c7af72e368e8bb3f6dccf6bbe1f0d5c63b14b3b"
+  },
+  {
+    "region_id": "36000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/36000000/bus_routes_20261105.parquet",
+    "rows": 267,
+    "bytes": 85138,
+    "sha256": "9ba1a46765c34353952bdd252e88212b490f9f980b91110d2fa686386e1ab8ac"
+  },
+  {
+    "region_id": "36000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/36000000/bus_stop_schedules_20261105.parquet",
+    "rows": 874,
+    "bytes": 25521,
+    "sha256": "48348bfc81b3cd80afc95bdeb318a9549945d0e1f9b02498f7f38919e13db574"
+  },
+  {
+    "region_id": "37000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/37000000/medical_2026.parquet",
+    "rows": 52,
+    "bytes": 19690,
+    "sha256": "91ffee2c6dc16fda88513fba029a7fe54a89fb0f11638137b3d5b2fcab465786"
+  },
+  {
+    "region_id": "37000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/37000000/bus_routes_20261105.parquet",
+    "rows": 66,
+    "bytes": 26554,
+    "sha256": "06017b7016310c93560dfc879345f3dc1f02901e7c67a081bf2daf6f39e13b02"
+  },
+  {
+    "region_id": "37000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/37000000/bus_stop_schedules_20261105.parquet",
+    "rows": 938,
+    "bytes": 25391,
+    "sha256": "d74296aae1acc269ed089491027fd303174403a788ed7d797b25a6cde0fde68c"
+  },
+  {
+    "region_id": "38000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/38000000/medical_2026.parquet",
+    "rows": 81,
+    "bytes": 23835,
+    "sha256": "4f9ff341f35eaf48b3eec2855d45085f6e99f4035cf21c6e69fd831579d98d1f"
+  },
+  {
+    "region_id": "38000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/38000000/bus_routes_20261105.parquet",
+    "rows": 216,
+    "bytes": 73245,
+    "sha256": "96f09a86dfe18692b0b2a8678f9343593297fd2af7727174d1376d4de1703825"
+  },
+  {
+    "region_id": "38000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/38000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1062,
+    "bytes": 23102,
+    "sha256": "1190fe286fbc42faff395115bbeb0ed8a4ac7dd5f38cee297b016ffcce59d0e7"
+  },
+  {
+    "region_id": "41000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/41000000/medical_2026.parquet",
+    "rows": 83,
+    "bytes": 25404,
+    "sha256": "a8877c3f8914f21972ca4168c810e8c68d2b6d9b5b64bf2fde17d1e3aefc1394"
+  },
+  {
+    "region_id": "41000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/41000000/bus_routes_20261105.parquet",
+    "rows": 55,
+    "bytes": 30317,
+    "sha256": "3079c164a77f7c60e4c762f67fac85446d0c570839b92ffd66ee00ab45154bc1"
+  },
+  {
+    "region_id": "41000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/41000000/bus_stop_schedules_20261105.parquet",
+    "rows": 280,
+    "bytes": 15772,
+    "sha256": "c2a38549292a1ab75c9ecdfc00f3942a12b94c0b052226bd3063e17257acd1e9"
+  },
+  {
+    "region_id": "42000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/42000000/medical_2026.parquet",
+    "rows": 82,
+    "bytes": 23675,
+    "sha256": "d0fa03d1f9ec426098606a68eba4cdf8ee5f41682a5adf9f3227dc585b4d1c87"
+  },
+  {
+    "region_id": "42000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/42000000/bus_routes_20261105.parquet",
+    "rows": 213,
+    "bytes": 58557,
+    "sha256": "808a56795f0bc3923b56c512c4b4a9042a7829862dd257c53ec8892966d225a0"
+  },
+  {
+    "region_id": "42000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/42000000/bus_stop_schedules_20261105.parquet",
+    "rows": 630,
+    "bytes": 20416,
+    "sha256": "da8560c51e4273a84a02206d5872807376619f723e46f27c71a6e98945b0cd12"
+  },
+  {
+    "region_id": "44000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/44000000/medical_2026.parquet",
+    "rows": 34,
+    "bytes": 17896,
+    "sha256": "375e9dea176833893295eede4745a8343fc154d365d2d37c40aa0412324cd1a3"
+  },
+  {
+    "region_id": "44000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/44000000/bus_routes_20261105.parquet",
+    "rows": 0,
+    "bytes": 2405,
+    "sha256": "cc72968b91afbb3189e86cad434db60993638998746b932cc4b17e5c99c914f0"
+  },
+  {
+    "region_id": "44000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/44000000/bus_stop_schedules_20261105.parquet",
+    "rows": 0,
+    "bytes": 4153,
+    "sha256": "754a6f6e73de58a6c455b9d88e71d30348f42d12715b587864ef1bc5fc50e9b3"
+  },
+  {
+    "region_id": "46000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/46000000/medical_2026.parquet",
+    "rows": 363,
+    "bytes": 65151,
+    "sha256": "6b1df45853054a960c3de26a5a2b8d7065c99632447c88b63c044bf46a43551f"
+  },
+  {
+    "region_id": "46000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/46000000/bus_routes_20261105.parquet",
+    "rows": 353,
+    "bytes": 93024,
+    "sha256": "1e54ff9fc71a0cc54c3e1306ac13800fdd757bde9edb8fda8bf9c0fe00f48ec1"
+  },
+  {
+    "region_id": "46000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/46000000/bus_stop_schedules_20261105.parquet",
+    "rows": 790,
+    "bytes": 28000,
+    "sha256": "dd032bfa02c563085ad0f48667a2fc90863913cd26e17877262f0260cc4a0bcf"
+  },
+  {
+    "region_id": "47000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/47000000/medical_2026.parquet",
+    "rows": 64,
+    "bytes": 22735,
+    "sha256": "928dfb6a85dd8dfa8a4e73196b6deb10530ad4cd67c3f11b1a6266bd1b3d930d"
+  },
+  {
+    "region_id": "47000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/47000000/bus_routes_20261105.parquet",
+    "rows": 0,
+    "bytes": 2405,
+    "sha256": "cc72968b91afbb3189e86cad434db60993638998746b932cc4b17e5c99c914f0"
+  },
+  {
+    "region_id": "47000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/47000000/bus_stop_schedules_20261105.parquet",
+    "rows": 0,
+    "bytes": 4153,
+    "sha256": "754a6f6e73de58a6c455b9d88e71d30348f42d12715b587864ef1bc5fc50e9b3"
+  },
+  {
+    "region_id": "49000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/49000000/medical_2026.parquet",
+    "rows": 59,
+    "bytes": 21922,
+    "sha256": "99286565252ad7b46bdaa48cbe6c9fe6daf6c67933d2f4f59d33c4f8b1f59d7a"
+  },
+  {
+    "region_id": "49000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/49000000/bus_routes_20261105.parquet",
+    "rows": 79,
+    "bytes": 30066,
+    "sha256": "35d5fdc78b20fbf675d2a22cfcbf26af590da5c2cc8388ef4715f14657e2018e"
+  },
+  {
+    "region_id": "49000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/49000000/bus_stop_schedules_20261105.parquet",
+    "rows": 336,
+    "bytes": 15561,
+    "sha256": "3bfc9f4f37e817a912486efc81334ab57b9bdec5eb0c5b4d1c747e095e829994"
+  },
+  {
+    "region_id": "50000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/50000000/medical_2026.parquet",
+    "rows": 153,
+    "bytes": 33351,
+    "sha256": "d7902719f3f4bcb38a6aae23d2f3578312e743324570b6708d3f4dd98bfe7d49"
+  },
+  {
+    "region_id": "50000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/50000000/bus_routes_20261105.parquet",
+    "rows": 235,
+    "bytes": 81826,
+    "sha256": "ab079164f20f1869041792d8d650dc38a4d39e881f75842d2ab8b4f22d814e07"
+  },
+  {
+    "region_id": "50000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/50000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1574,
+    "bytes": 33943,
+    "sha256": "59f532674b340fc44a924499074df64dd2971cf59bf4c900b21c101b954cee70"
+  },
+  {
+    "region_id": "52000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/52000000/medical_2026.parquet",
+    "rows": 122,
+    "bytes": 28023,
+    "sha256": "d42406d60b2d4ca357a197289b92d1af492c842478300116e0cee0e6d061c213"
+  },
+  {
+    "region_id": "52000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/52000000/bus_routes_20261105.parquet",
+    "rows": 3,
+    "bytes": 22465,
+    "sha256": "bf3c2029ec4719a4615ef848b02b4564169710aaebfa6e41e5473d73776533cf"
+  },
+  {
+    "region_id": "52000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/52000000/bus_stop_schedules_20261105.parquet",
+    "rows": 18,
+    "bytes": 7839,
+    "sha256": "aa6e18939e066aa3973bd83aefa18e3f149f39d80c8fc3a72c84ea30dcd0f265"
+  },
+  {
+    "region_id": "53000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/53000000/medical_2026.parquet",
+    "rows": 118,
+    "bytes": 28668,
+    "sha256": "c84ff1f1dcfe9c1346a5f5f10b564fc0076e54d346c5e86eeffc856a2a1f57a0"
+  },
+  {
+    "region_id": "53000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/53000000/bus_routes_20261105.parquet",
+    "rows": 66,
+    "bytes": 27715,
+    "sha256": "0b182414b930cd6128679ade1fc8cdce730e2a63100990aa25e5436087f998fa"
+  },
+  {
+    "region_id": "53000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/53000000/bus_stop_schedules_20261105.parquet",
+    "rows": 192,
+    "bytes": 13221,
+    "sha256": "5d7ff9d577409ba96e028069bdcc09b1b084cbf673d344da7a47ebdce9d1b932"
+  },
+  {
+    "region_id": "54000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/54000000/medical_2026.parquet",
+    "rows": 72,
+    "bytes": 23461,
+    "sha256": "33e5235a1494ef77603bae55f116f5125db1d3ef8590569679a870a9013048f5"
+  },
+  {
+    "region_id": "54000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/54000000/bus_routes_20261105.parquet",
+    "rows": 111,
+    "bytes": 47012,
+    "sha256": "9f536124430f31ca6007e2bd82a799496e88016eca7455bfc0152461620f111b"
+  },
+  {
+    "region_id": "54000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/54000000/bus_stop_schedules_20261105.parquet",
+    "rows": 478,
+    "bytes": 17553,
+    "sha256": "d668c37067fab2294062035e97e4f81109c1ac9a6eba86a41c08102364c85857"
+  },
+  {
+    "region_id": "56000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/56000000/medical_2026.parquet",
+    "rows": 76,
+    "bytes": 22921,
+    "sha256": "021f72e68fb7fb70f505c68deeaff88a1bc9236812a9c4c484f047d72061ed2c"
+  },
+  {
+    "region_id": "56000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/56000000/bus_routes_20261105.parquet",
+    "rows": 117,
+    "bytes": 46808,
+    "sha256": "0c1c41eb0cfb5dc32c7d202f76ba932251959d3238f1ddc707e3b9477a02ffe3"
+  },
+  {
+    "region_id": "56000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/56000000/bus_stop_schedules_20261105.parquet",
+    "rows": 394,
+    "bytes": 16437,
+    "sha256": "3932371679f118a0bc3da3e839c38c79b30854db1778bf74ebadcb7d292b93d2"
+  },
+  {
+    "region_id": "57000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/57000000/medical_2026.parquet",
+    "rows": 166,
+    "bytes": 34561,
+    "sha256": "ca5fc1d2c4d28b237156525e1475969dbfe0bf4eb3d539157dad9c28ad632221"
+  },
+  {
+    "region_id": "57000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/57000000/bus_routes_20261105.parquet",
+    "rows": 112,
+    "bytes": 49865,
+    "sha256": "7d8024b0c5ccf06f05bda8c91207b107d39d2f435848f8673296867529d762ac"
+  },
+  {
+    "region_id": "57000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/57000000/bus_stop_schedules_20261105.parquet",
+    "rows": 282,
+    "bytes": 18559,
+    "sha256": "8961857f44365a804e3f8cea3e19110fc73ae00e9f4ae64c8d521a422a135584"
+  },
+  {
+    "region_id": "58000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/58000000/medical_2026.parquet",
+    "rows": 51,
+    "bytes": 20548,
+    "sha256": "d03ebc06ca42a6a82f55c9767efde6eb68ac7f67f241cea51f745789fc96db32"
+  },
+  {
+    "region_id": "58000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/58000000/bus_routes_20261105.parquet",
+    "rows": 53,
+    "bytes": 26482,
+    "sha256": "f71a3602ff7433087da66dd92cc5df9ee3f53765460744867a6cd30e6cd1d39b"
+  },
+  {
+    "region_id": "58000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/58000000/bus_stop_schedules_20261105.parquet",
+    "rows": 654,
+    "bytes": 17953,
+    "sha256": "cc293987026dfc9de30196e21ca3269960230482ad4b4afc49f898ebb5d7e010"
+  },
+  {
+    "region_id": "60000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/60000000/medical_2026.parquet",
+    "rows": 245,
+    "bytes": 45236,
+    "sha256": "8f437bad8d21f77ae54de434134fcaebcb9c0d2bb012ccb3414a04bc4b1d2140"
+  },
+  {
+    "region_id": "60000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/60000000/bus_routes_20261105.parquet",
+    "rows": 761,
+    "bytes": 259080,
+    "sha256": "7fd6387131a5e13f7779524258ab1fda22641531ff251a77b64cf23c5991afcf"
+  },
+  {
+    "region_id": "60000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/60000000/bus_stop_schedules_20261105.parquet",
+    "rows": 2992,
+    "bytes": 57567,
+    "sha256": "65fcd3a896c391f432ed0c2d310638ac920eb911e50c8cae5eae1f18613d0c6c"
+  },
+  {
+    "region_id": "61000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/61000000/medical_2026.parquet",
+    "rows": 79,
+    "bytes": 23636,
+    "sha256": "0ce22daa42fe01a8dd8295477833847ac56dcaa1f213dadd9044b008d592c582"
+  },
+  {
+    "region_id": "61000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/61000000/bus_routes_20261105.parquet",
+    "rows": 88,
+    "bytes": 27119,
+    "sha256": "1bf8eaa2198df0a36ef344766f53dbeddb74150c5ce5d893a3f516c1592bd044"
+  },
+  {
+    "region_id": "61000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/61000000/bus_stop_schedules_20261105.parquet",
+    "rows": 304,
+    "bytes": 14612,
+    "sha256": "551ce32ed92c7987069348980a15ff6c33d3fc02ce185c30eaf89423a1ea20c4"
+  },
+  {
+    "region_id": "63000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/63000000/medical_2026.parquet",
+    "rows": 119,
+    "bytes": 29148,
+    "sha256": "658a9c9895dba18b5b7b6bdd2c83b2207fab1cb76f5d204049431a1936081e33"
+  },
+  {
+    "region_id": "63000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/63000000/bus_routes_20261105.parquet",
+    "rows": 150,
+    "bytes": 76114,
+    "sha256": "195c48e41cbfed37aaa9c666082168e165225b39bd139edcbed8e737364dcd4f"
+  },
+  {
+    "region_id": "63000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/63000000/bus_stop_schedules_20261105.parquet",
+    "rows": 512,
+    "bytes": 18787,
+    "sha256": "7deafbd91ef994b5ab45543f08762f1846a727714a20fab37453918406b85642"
+  },
+  {
+    "region_id": "64000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/64000000/medical_2026.parquet",
+    "rows": 61,
+    "bytes": 21742,
+    "sha256": "cba1e28348c558139d8e6355583962d6ec70fc07922e6f92c41eb90e3fd2cc36"
+  },
+  {
+    "region_id": "64000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/64000000/bus_routes_20261105.parquet",
+    "rows": 0,
+    "bytes": 2405,
+    "sha256": "cc72968b91afbb3189e86cad434db60993638998746b932cc4b17e5c99c914f0"
+  },
+  {
+    "region_id": "64000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/64000000/bus_stop_schedules_20261105.parquet",
+    "rows": 0,
+    "bytes": 4153,
+    "sha256": "754a6f6e73de58a6c455b9d88e71d30348f42d12715b587864ef1bc5fc50e9b3"
+  },
+  {
+    "region_id": "65000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/65000000/medical_2026.parquet",
+    "rows": 227,
+    "bytes": 44802,
+    "sha256": "48daad2a6f9afef99284ab6123d5d26416b5db2f18a5d88c067959e62986cc90"
+  },
+  {
+    "region_id": "65000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/65000000/bus_routes_20261105.parquet",
+    "rows": 239,
+    "bytes": 75140,
+    "sha256": "2f2d3519accdb2d4215a283f4f75d46b6d7d04396b13651e259811ad625c5575"
+  },
+  {
+    "region_id": "65000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/65000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1400,
+    "bytes": 32138,
+    "sha256": "8c4cc04d8e1b6e6f94a7f30366d54e19cdae20ec29a679f34ec7a8b783769d43"
+  },
+  {
+    "region_id": "66000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/66000000/medical_2026.parquet",
+    "rows": 64,
+    "bytes": 23042,
+    "sha256": "e6db619ec69e019ef62daa4a317dd53531c16f5a5cfeba93afd37f71dabbd7cc"
+  },
+  {
+    "region_id": "66000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/66000000/bus_routes_20261105.parquet",
+    "rows": 80,
+    "bytes": 33953,
+    "sha256": "a81bdb545a2906482ddca546ff0c9334d2aaf59249b7ae51b8816af539fadbb6"
+  },
+  {
+    "region_id": "66000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/66000000/bus_stop_schedules_20261105.parquet",
+    "rows": 406,
+    "bytes": 15804,
+    "sha256": "eebf8e5aab1a9708b88a112210d86ec03a4d9824bd8eb13d66a805d428371096"
+  },
+  {
+    "region_id": "68000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/68000000/medical_2026.parquet",
+    "rows": 66,
+    "bytes": 21577,
+    "sha256": "2b44cc623c7ab4c5f8494e0b30ca3f2884738bd48fce529d694e29180239a2f6"
+  },
+  {
+    "region_id": "68000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/68000000/bus_routes_20261105.parquet",
+    "rows": 96,
+    "bytes": 36255,
+    "sha256": "92f5e4ad96b559db225f8aeb87110a2798bdc396de88d0d69f66f2461916384f"
+  },
+  {
+    "region_id": "68000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/68000000/bus_stop_schedules_20261105.parquet",
+    "rows": 248,
+    "bytes": 15288,
+    "sha256": "648d5992333dfb7ba7e29c8f771c9f7b9e4cfe1edb565773d0c598181259144a"
+  },
+  {
+    "region_id": "69000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/69000000/medical_2026.parquet",
+    "rows": 122,
+    "bytes": 30860,
+    "sha256": "b4662edb01071f963e7470c82a26333e2974550d5724f6c1ccecf63d76ddb228"
+  },
+  {
+    "region_id": "69000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/69000000/bus_routes_20261105.parquet",
+    "rows": 100,
+    "bytes": 38718,
+    "sha256": "12ec1bf884504f72de87267d63e16ae1683821f22e592db5510b7ce3a208b948"
+  },
+  {
+    "region_id": "69000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/69000000/bus_stop_schedules_20261105.parquet",
+    "rows": 206,
+    "bytes": 13738,
+    "sha256": "829f7e7bb6204893d4baedee7a28b689c8898fad3c15d9c8b858a6a8b0f177ea"
+  },
+  {
+    "region_id": "70000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/70000000/medical_2026.parquet",
+    "rows": 83,
+    "bytes": 24195,
+    "sha256": "17e2e20a2ee607e9905021ce3fffc04dbfab944ba0a1e064f83d580ac9b35bad"
+  },
+  {
+    "region_id": "70000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/70000000/bus_routes_20261105.parquet",
+    "rows": 125,
+    "bytes": 44406,
+    "sha256": "8b4f9eb43be860471facb52feae568c141551ed896e499978e35628f83d427af"
+  },
+  {
+    "region_id": "70000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/70000000/bus_stop_schedules_20261105.parquet",
+    "rows": 390,
+    "bytes": 21180,
+    "sha256": "5ce79968b8b572ca76c1929eb612d4ed122052f053a191dff27a43b53f81b9d4"
+  },
+  {
+    "region_id": "71000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/71000000/medical_2026.parquet",
+    "rows": 98,
+    "bytes": 27259,
+    "sha256": "93e7a917b809b70ac0f009dcb78a8a1ae3029f3584cde9c76ed7f099ed1ad323"
+  },
+  {
+    "region_id": "71000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/71000000/bus_routes_20261105.parquet",
+    "rows": 93,
+    "bytes": 38955,
+    "sha256": "30b0f056e782a57dbf4e789129a501fa3527764124fc1fddac960c7b01231c1b"
+  },
+  {
+    "region_id": "71000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/71000000/bus_stop_schedules_20261105.parquet",
+    "rows": 482,
+    "bytes": 16985,
+    "sha256": "c0efe4bc3c3a153475a4ddf57f2ad3dfaa262063f1ffb2ea599339193fc670d7"
+  },
+  {
+    "region_id": "71800000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/71800000/medical_2026.parquet",
+    "rows": 127,
+    "bytes": 30960,
+    "sha256": "9c8ffe181c17663b113f8cb8e6868bae63ad1a53e77511b1d5926c9a5a3f0810"
+  },
+  {
+    "region_id": "71800000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/71800000/bus_routes_20261105.parquet",
+    "rows": 46,
+    "bytes": 28465,
+    "sha256": "e1093c914dce8ea7bfd160dbd5a6f0597ac501d9b5a99d324545c4b9ee4b55bd"
+  },
+  {
+    "region_id": "71800000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/71800000/bus_stop_schedules_20261105.parquet",
+    "rows": 210,
+    "bytes": 12496,
+    "sha256": "15ac440696e0949972c5c491917f533d71f6a0551277f46ef834bf257f3038fe"
+  },
+  {
+    "region_id": "71900000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/71900000/medical_2026.parquet",
+    "rows": 50,
+    "bytes": 19744,
+    "sha256": "9cc80dc98929217a5a93be8dcbbe78a25701969ebe8fdaa894c402518bd93fd9"
+  },
+  {
+    "region_id": "71900000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/71900000/bus_routes_20261105.parquet",
+    "rows": 5,
+    "bytes": 8105,
+    "sha256": "f516a166905a60683508843f00786b3c62e05609509177b9add86b13c7f0f1f8"
+  },
+  {
+    "region_id": "71900000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/71900000/bus_stop_schedules_20261105.parquet",
+    "rows": 10,
+    "bytes": 8030,
+    "sha256": "0104a17cec938902fe592d71c68facc7386f3485e9f7326ac1171c7f89fa37e4"
+  },
+  {
+    "region_id": "73000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/73000000/medical_2026.parquet",
+    "rows": 88,
+    "bytes": 24997,
+    "sha256": "b44bddad1a15a9fcef329db54bfb54fac89ef813534bcba35899280d377cf38a"
+  },
+  {
+    "region_id": "73000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/73000000/bus_routes_20261105.parquet",
+    "rows": 339,
+    "bytes": 75498,
+    "sha256": "504715392895fd4a5bd9ecc0161dd4f6088c94ebf4aa19f9f6b5ff85e566d4ad"
+  },
+  {
+    "region_id": "73000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/73000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1634,
+    "bytes": 34847,
+    "sha256": "6406e118d000fdb014dc649bd99125abc74ef469671810b543e443550e07cc87"
+  },
+  {
+    "region_id": "75000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/75000000/medical_2026.parquet",
+    "rows": 190,
+    "bytes": 37668,
+    "sha256": "4b5f82ad727e642dee763f8281b2a36f364d705b1ee8ca6c87e54481419a61ae"
+  },
+  {
+    "region_id": "75000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/75000000/bus_routes_20261105.parquet",
+    "rows": 158,
+    "bytes": 53769,
+    "sha256": "e0f5e800fc100fd67eda84e4aa005d6daad647c345826b9390593997e1d0844a"
+  },
+  {
+    "region_id": "75000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/75000000/bus_stop_schedules_20261105.parquet",
+    "rows": 530,
+    "bytes": 20774,
+    "sha256": "6bcb8f79174490171d1a0df158eb74ff0308799195f74ad24b28be19caa7ecdc"
+  },
+  {
+    "region_id": "76000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/76000000/medical_2026.parquet",
+    "rows": 73,
+    "bytes": 23252,
+    "sha256": "bb0bc3d7871a20b2efcc6cf47009febe36a504cd40da00155d0568bc2248db97"
+  },
+  {
+    "region_id": "76000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/76000000/bus_routes_20261105.parquet",
+    "rows": 11,
+    "bytes": 14939,
+    "sha256": "f4f3a2be50d03ddbf75bdb4a1af88c9b890bebbe13a67f95eb4672332327c9b3"
+  },
+  {
+    "region_id": "76000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/76000000/bus_stop_schedules_20261105.parquet",
+    "rows": 48,
+    "bytes": 9792,
+    "sha256": "8baa07cbec82c46f1c2ef3d461096fa83f3e77c8220ef409ce7577f1e3aed5b7"
+  },
+  {
+    "region_id": "77000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/77000000/medical_2026.parquet",
+    "rows": 14,
+    "bytes": 14294,
+    "sha256": "2bd5306cb88540e57c98dbb2b9e59cd14e83a36870b9b164312b75ca017546e7"
+  },
+  {
+    "region_id": "77000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/77000000/bus_routes_20261105.parquet",
+    "rows": 0,
+    "bytes": 2405,
+    "sha256": "cc72968b91afbb3189e86cad434db60993638998746b932cc4b17e5c99c914f0"
+  },
+  {
+    "region_id": "77000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/77000000/bus_stop_schedules_20261105.parquet",
+    "rows": 0,
+    "bytes": 4153,
+    "sha256": "754a6f6e73de58a6c455b9d88e71d30348f42d12715b587864ef1bc5fc50e9b3"
+  },
+  {
+    "region_id": "78000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/78000000/medical_2026.parquet",
+    "rows": 94,
+    "bytes": 26738,
+    "sha256": "e0a4894de9a5ada9dba169a1554d3c2964ac3da42d581a608c13a7b0420a64df"
+  },
+  {
+    "region_id": "78000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/78000000/bus_routes_20261105.parquet",
+    "rows": 176,
+    "bytes": 36298,
+    "sha256": "0a4ceab0a18ecad0fcadb165c877a0b7b88b6543e8de9e48d40f6cbc2256bdcd"
+  },
+  {
+    "region_id": "78000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/78000000/bus_stop_schedules_20261105.parquet",
+    "rows": 662,
+    "bytes": 20794,
+    "sha256": "9b4b4539001d01fc4ed60af72874ed95c0f4e819618f9455f67fd237b155a312"
+  },
+  {
+    "region_id": "79000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/79000000/medical_2026.parquet",
+    "rows": 46,
+    "bytes": 19688,
+    "sha256": "73feb1830e68a96f7266fb313fd9f861d226f1a87f1bbb039068010edb998cb7"
+  },
+  {
+    "region_id": "79000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/79000000/bus_routes_20261105.parquet",
+    "rows": 38,
+    "bytes": 36143,
+    "sha256": "eff2e614ece1483980c7cf10e556ae73a6b9b69b1d71550b90414bdc3622b772"
+  },
+  {
+    "region_id": "79000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/79000000/bus_stop_schedules_20261105.parquet",
+    "rows": 84,
+    "bytes": 10482,
+    "sha256": "9b6308ceb6e20d22f6f12d91d03f7370d337fca986d10815473282eb2a259826"
+  },
+  {
+    "region_id": "80000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/80000000/medical_2026.parquet",
+    "rows": 161,
+    "bytes": 34540,
+    "sha256": "04bf11652946919108527d7a7c1afa70760e79de78e214303193a8bff80a1ce6"
+  },
+  {
+    "region_id": "80000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/80000000/bus_routes_20261105.parquet",
+    "rows": 284,
+    "bytes": 72997,
+    "sha256": "6b04464edbdd2f3b1e9dbd192c682ac5d09e9a236de57b71ff048f8e61f7b25a"
+  },
+  {
+    "region_id": "80000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/80000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1002,
+    "bytes": 28851,
+    "sha256": "993619e3e931bf04f3981af31d900ae44618d84949ffd276ce90fcf7c0266feb"
+  },
+  {
+    "region_id": "81000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/81000000/medical_2026.parquet",
+    "rows": 76,
+    "bytes": 22884,
+    "sha256": "c8648129d1a1649387860a3c6a7d619e05bfae3b3a7ec053e269fbe9e776a106"
+  },
+  {
+    "region_id": "81000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/81000000/bus_routes_20261105.parquet",
+    "rows": 19,
+    "bytes": 24966,
+    "sha256": "5cb89093bb55657df684462bb80ca729c57ab0b9121d77c193265adc28c3a3cf"
+  },
+  {
+    "region_id": "81000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/81000000/bus_stop_schedules_20261105.parquet",
+    "rows": 70,
+    "bytes": 11808,
+    "sha256": "de32e30b6747dbfeed22575b45aaa81af8257b9c7bedbeb9f6378d7c86993c59"
+  },
+  {
+    "region_id": "82000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/82000000/medical_2026.parquet",
+    "rows": 257,
+    "bytes": 45076,
+    "sha256": "ffa478112893f61f194662c943a7354ce6c44d2674d6cf7b79e0e0b2100843ab"
+  },
+  {
+    "region_id": "82000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/82000000/bus_routes_20261105.parquet",
+    "rows": 176,
+    "bytes": 70291,
+    "sha256": "fdb0572330e8343fcd9af977b35774edf48f27071aedd0c95f19e0ac05aa8ab4"
+  },
+  {
+    "region_id": "82000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/82000000/bus_stop_schedules_20261105.parquet",
+    "rows": 782,
+    "bytes": 22237,
+    "sha256": "1f74b48da00d5d62fb757f85ec848ecbfdc7894092178d60e95c17b3310a521d"
+  },
+  {
+    "region_id": "83000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/83000000/medical_2026.parquet",
+    "rows": 54,
+    "bytes": 20684,
+    "sha256": "a9732f6762354a60b5d034cab8fd043c81da123928bf64da4d2bb7a45883567d"
+  },
+  {
+    "region_id": "83000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/83000000/bus_routes_20261105.parquet",
+    "rows": 191,
+    "bytes": 57499,
+    "sha256": "f57841bb7654b3b1d497e231dd59963ebe90bfcfcbf18204d5cd7c2592d90ed3"
+  },
+  {
+    "region_id": "83000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/83000000/bus_stop_schedules_20261105.parquet",
+    "rows": 424,
+    "bytes": 18749,
+    "sha256": "d44ef8efe19cd3dd0fd500bc7fc41fa4177cf53a0717e7a170db3ac8c60475d7"
+  },
+  {
+    "region_id": "84000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/84000000/medical_2026.parquet",
+    "rows": 39,
+    "bytes": 18340,
+    "sha256": "8a5a301ee11cc2af17ef42db57294e601f3e95bb6b3e14e43f84e72cd7432817"
+  },
+  {
+    "region_id": "84000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/84000000/bus_routes_20261105.parquet",
+    "rows": 82,
+    "bytes": 38852,
+    "sha256": "986491c358b77bf9fc9223418b4f6115db7261fcd2e175e383e69524acfe01e1"
+  },
+  {
+    "region_id": "84000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/84000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1056,
+    "bytes": 25443,
+    "sha256": "7ab1d658c7cd4d34c631d0cb4038b29b2e0c4f1c76ac769b47fbe6dc97a4d39f"
+  },
+  {
+    "region_id": "85000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/85000000/medical_2026.parquet",
+    "rows": 40,
+    "bytes": 18615,
+    "sha256": "eeab44c08d7bfa251209744d13a75512f2d01f2308bc238471d37091b78ce6dd"
+  },
+  {
+    "region_id": "85000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/85000000/bus_routes_20261105.parquet",
+    "rows": 100,
+    "bytes": 63404,
+    "sha256": "9b03f903c9bee25009a6a4f47b51e1b7588750f7e3d258991352697c8cedee36"
+  },
+  {
+    "region_id": "85000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/85000000/bus_stop_schedules_20261105.parquet",
+    "rows": 282,
+    "bytes": 14791,
+    "sha256": "f128dfb9afc4a2d8aa05187e8c800f27236cea119e50fcbc4957fa2f5fccce7a"
+  },
+  {
+    "region_id": "86000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/86000000/medical_2026.parquet",
+    "rows": 78,
+    "bytes": 23055,
+    "sha256": "d50fd78389baf7445b83ee5abde5fe3cb646bb684f9b1a6d6cb8c3d6637d1883"
+  },
+  {
+    "region_id": "86000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/86000000/bus_routes_20261105.parquet",
+    "rows": 27,
+    "bytes": 22467,
+    "sha256": "475c84f582c9f31715785f600b994401320753f9926d43aacd43625133d7d9fa"
+  },
+  {
+    "region_id": "86000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/86000000/bus_stop_schedules_20261105.parquet",
+    "rows": 220,
+    "bytes": 13083,
+    "sha256": "51ea8dc29dbd04d47d22ae37d365f3ad0228d027a8275d5dbf6fc557da8eee20"
+  },
+  {
+    "region_id": "87000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/87000000/medical_2026.parquet",
+    "rows": 94,
+    "bytes": 24590,
+    "sha256": "7e3a7fa1b9524bb12624aa55cb249f42b851a224a272c069d4ce4e8d2eaa0ae2"
+  },
+  {
+    "region_id": "87000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/87000000/bus_routes_20261105.parquet",
+    "rows": 41,
+    "bytes": 18684,
+    "sha256": "2ac8e4d5807b2e1a6c779e6d61eedcaeeb8a6a3ced6eba8a3d1d273eb8dbfc98"
+  },
+  {
+    "region_id": "87000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/87000000/bus_stop_schedules_20261105.parquet",
+    "rows": 134,
+    "bytes": 10740,
+    "sha256": "ed5a0274bbe9dc54c0a380785964fbf028b3ee4f086f2c15495ba378b4c328e8"
+  },
+  {
+    "region_id": "88000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/88000000/medical_2026.parquet",
+    "rows": 35,
+    "bytes": 18897,
+    "sha256": "c822e9b768c12f48c9958bfc310f1dcb330d4480f09ff7e0a0cd17679790c310"
+  },
+  {
+    "region_id": "88000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/88000000/bus_routes_20261105.parquet",
+    "rows": 88,
+    "bytes": 35569,
+    "sha256": "7218480a3ab2333a30b5fdb1a7dc73687873bbebcb461cf170f4323a5c92f158"
+  },
+  {
+    "region_id": "88000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/88000000/bus_stop_schedules_20261105.parquet",
+    "rows": 240,
+    "bytes": 20256,
+    "sha256": "ad4679fcd7a441ddc2bcd7338700e66a50a239579947bf37bcfb22068a986e86"
+  },
+  {
+    "region_id": "89000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/89000000/medical_2026.parquet",
+    "rows": 55,
+    "bytes": 21931,
+    "sha256": "a9cc1ac948c0f92fc1a65246b7e43f0aa8943a6128b3acd8b934f9d154109130"
+  },
+  {
+    "region_id": "89000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/89000000/bus_routes_20261105.parquet",
+    "rows": 60,
+    "bytes": 29764,
+    "sha256": "a0932beec3834b0c7ad583d02b24d489091b090732636ffbc3065c7c3f3b332a"
+  },
+  {
+    "region_id": "89000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/89000000/bus_stop_schedules_20261105.parquet",
+    "rows": 210,
+    "bytes": 13279,
+    "sha256": "78e0c759542013d306671bf65b62f38df849985e68d44eabe8c099c4e84bfe7f"
+  },
+  {
+    "region_id": "90000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/90000000/medical_2026.parquet",
+    "rows": 68,
+    "bytes": 23297,
+    "sha256": "099b73c6ceefe5e0d07767106931101208683a004512b59e4eb558e6af3edffb"
+  },
+  {
+    "region_id": "90000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/90000000/bus_routes_20261105.parquet",
+    "rows": 94,
+    "bytes": 35300,
+    "sha256": "d47a983236544f7f2723b7679209bc834c211ea1060a77511d0f778e3196f530"
+  },
+  {
+    "region_id": "90000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/90000000/bus_stop_schedules_20261105.parquet",
+    "rows": 192,
+    "bytes": 12955,
+    "sha256": "dade761981d0dd0f2d2b963e537a5cc0e36052cbe70f98bb2b15907e500b72f5"
+  },
+  {
+    "region_id": "91000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/91000000/medical_2026.parquet",
+    "rows": 59,
+    "bytes": 22263,
+    "sha256": "a41286b24eed1bbafc57d64d2ae2a0c942345839a0b39db1e17fd3dd7b777099"
+  },
+  {
+    "region_id": "91000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/91000000/bus_routes_20261105.parquet",
+    "rows": 130,
+    "bytes": 50549,
+    "sha256": "edd36d6348f8490214babec9a401c48a3319167a7867e46acf3ccc147c2b5bb6"
+  },
+  {
+    "region_id": "91000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/91000000/bus_stop_schedules_20261105.parquet",
+    "rows": 556,
+    "bytes": 17531,
+    "sha256": "ea4d7909d18e71e76b0b68e9ca4abb015a951488f133271ca152ebab30b0f279"
+  },
+  {
+    "region_id": "92000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/92000000/medical_2026.parquet",
+    "rows": 207,
+    "bytes": 39808,
+    "sha256": "f7edad741ccf497659b235304d222f385f8c9e1680be3a6aa9a0d4a32ef7d63a"
+  },
+  {
+    "region_id": "92000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/92000000/bus_routes_20261105.parquet",
+    "rows": 349,
+    "bytes": 108592,
+    "sha256": "015d18cff0ff05d6fd1789cda9d598e75deea51b117e8e3e4311600f4cc8baf0"
+  },
+  {
+    "region_id": "92000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/92000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1016,
+    "bytes": 31089,
+    "sha256": "5d76e13fe370d1d3211c3b316abc06f60ec52b835c6501d30a18c23df657f2b1"
+  },
+  {
+    "region_id": "93000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/93000000/medical_2026.parquet",
+    "rows": 59,
+    "bytes": 21688,
+    "sha256": "1e3c9714850dd4e9389037706e570621fb8550690f518d506ca23cbc14d88f10"
+  },
+  {
+    "region_id": "93000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/93000000/bus_routes_20261105.parquet",
+    "rows": 6,
+    "bytes": 19266,
+    "sha256": "a86c16a493bab52d14e7c7c34d705ed18975644898482d78b6ba2cf0df76b0b2"
+  },
+  {
+    "region_id": "93000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/93000000/bus_stop_schedules_20261105.parquet",
+    "rows": 28,
+    "bytes": 8670,
+    "sha256": "7d8062cf0f6bf8141237f453d8015cc5ebc142e88f28c105224d129f641e2ff2"
+  },
+  {
+    "region_id": "94000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/94000000/medical_2026.parquet",
+    "rows": 120,
+    "bytes": 27852,
+    "sha256": "529cff2ae627639414499ff5b22292934f4a07aba03156aa15d933f1e018f944"
+  },
+  {
+    "region_id": "94000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/94000000/bus_routes_20261105.parquet",
+    "rows": 62,
+    "bytes": 30518,
+    "sha256": "5b619d4961bca01954ae87a9d3389960c829927717fa94b6b4ac73bdf6dd3672"
+  },
+  {
+    "region_id": "94000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/94000000/bus_stop_schedules_20261105.parquet",
+    "rows": 202,
+    "bytes": 16451,
+    "sha256": "7f1538fddd54c5a1d8f7721302b4fe15b57ada292113b24f9cc4610667ba236a"
+  },
+  {
+    "region_id": "95000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/95000000/medical_2026.parquet",
+    "rows": 64,
+    "bytes": 21044,
+    "sha256": "fa67f7246a53d35f4a73f31b9d7461dcdddd4b680bd124d7206ff386d5a09f23"
+  },
+  {
+    "region_id": "95000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/95000000/bus_routes_20261105.parquet",
+    "rows": 62,
+    "bytes": 35221,
+    "sha256": "40820e3f6192464b090b903bc984a14461c79088ddb5ba992f55ce9680bd645e"
+  },
+  {
+    "region_id": "95000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/95000000/bus_stop_schedules_20261105.parquet",
+    "rows": 346,
+    "bytes": 17238,
+    "sha256": "b18c7919a6938ca409c7463f6162a65ee67c97cdcaa90bca3e4ffbce46907f67"
+  },
+  {
+    "region_id": "96000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/96000000/medical_2026.parquet",
+    "rows": 80,
+    "bytes": 23448,
+    "sha256": "ed8f0a96bd1f6c5b885dcf29e2b3f81962776fd17c0b0ed8004c4c6417917aa8"
+  },
+  {
+    "region_id": "96000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/96000000/bus_routes_20261105.parquet",
+    "rows": 87,
+    "bytes": 31664,
+    "sha256": "b6cd3feaba28d99b799d68ba84e81be177b8ab8252cefb9cbe3c4bef233f06e3"
+  },
+  {
+    "region_id": "96000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/96000000/bus_stop_schedules_20261105.parquet",
+    "rows": 174,
+    "bytes": 12761,
+    "sha256": "3c177b0b99ff5552a6dbd78589cac21ee25aeb0c9ef8a3965939aefe9e29d357"
+  },
+  {
+    "region_id": "97000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/97000000/medical_2026.parquet",
+    "rows": 56,
+    "bytes": 22586,
+    "sha256": "2c7334de1898649bbac349fc4f888bb37d5b01a447d593cd21ebdb0921b0c2e7"
+  },
+  {
+    "region_id": "97000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/97000000/bus_routes_20261105.parquet",
+    "rows": 227,
+    "bytes": 68362,
+    "sha256": "3116e30f23eed08ea8552c78da52a80a9ad1674b28567fb5afb33c9c408bb042"
+  },
+  {
+    "region_id": "97000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/97000000/bus_stop_schedules_20261105.parquet",
+    "rows": 1464,
+    "bytes": 40244,
+    "sha256": "bd1c85a2c9e13155bb4780f89ad798e4aae9f9eda0044a89def334dac4be6f9b"
+  },
+  {
+    "region_id": "98000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/98000000/medical_2026.parquet",
+    "rows": 112,
+    "bytes": 29688,
+    "sha256": "3aae1c5834ccfeb6f863100b59c59f9eafab6f8d52b55644c190e67e128e062a"
+  },
+  {
+    "region_id": "98000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/98000000/bus_routes_20261105.parquet",
+    "rows": 0,
+    "bytes": 2405,
+    "sha256": "cc72968b91afbb3189e86cad434db60993638998746b932cc4b17e5c99c914f0"
+  },
+  {
+    "region_id": "98000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/98000000/bus_stop_schedules_20261105.parquet",
+    "rows": 0,
+    "bytes": 4153,
+    "sha256": "754a6f6e73de58a6c455b9d88e71d30348f42d12715b587864ef1bc5fc50e9b3"
+  },
+  {
+    "region_id": "99000000",
+    "kind": "medical_2026",
+    "path": "data/additional/all-regions/derived/regions/99000000/medical_2026.parquet",
+    "rows": 38,
+    "bytes": 17927,
+    "sha256": "c6e723d87d42de4d2a5e2712c6dd2ee0e2807c4e4d86903cd15e4c385b06d479"
+  },
+  {
+    "region_id": "99000000",
+    "kind": "bus_routes_20261105",
+    "path": "data/additional/all-regions/derived/regions/99000000/bus_routes_20261105.parquet",
+    "rows": 8,
+    "bytes": 9496,
+    "sha256": "ae3af0bfc892a9d2be7cf1e06d5fe81908084a2323d7de47071488b9f9f0f6fa"
+  },
+  {
+    "region_id": "99000000",
+    "kind": "bus_stop_schedules_20261105",
+    "path": "data/additional/all-regions/derived/regions/99000000/bus_stop_schedules_20261105.parquet",
+    "rows": 44,
+    "bytes": 10752,
+    "sha256": "73c75e78b320eaffe65a1e27d96e922862d4c104c95505eda42d230bd83be8a2"
+  }
+]

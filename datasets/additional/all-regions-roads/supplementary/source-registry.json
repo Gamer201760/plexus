@@ -1,0 +1,14 @@
+[
+  {
+    "family": "bus_stops",
+    "region_name": "Томская область",
+    "url": "https://dpo.tomsk.gov.ru/opendata/7017321911-stopping",
+    "title": "Перечень остановочных комплексов на межмуниципальных автобусных маршрутах Томской области",
+    "status": "downloaded_verified",
+    "checked_at": "2026-11-09",
+    "coverage": "493 parsed rows: 1 numbering row, 489 nonempty data rows and 3 blank rows; Tomsk only",
+    "period": "CSV version 2023-02-20",
+    "download_url": "https://dpo.tomsk.gov.ru/opendata/7017321911-stopping/data-20230220-structure-20230220.csv",
+    "notes": "Normal TLS curl HTTP200; UTF8 CSV inspected; numbering/blank rows retained in raw. 0 nonempty coordinate cells; no coordinate validation or deduplication. Current service verification absent."
+  }
+]

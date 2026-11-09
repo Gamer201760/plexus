@@ -1,0 +1,46 @@
+[
+  {
+    "filename": "interregional-bus-20261105.xlsx",
+    "url": "https://www.mintrans.gov.ru/file/572836",
+    "retrieved_at": "2026-11-09T09:37:06.089018+00:00",
+    "http_status": "200",
+    "status": "downloaded",
+    "tls_verified": true,
+    "path": "data/additional/all-regions/raw/interregional-bus-20261105.xlsx",
+    "bytes": 6247052,
+    "sha256": "202e6ed7de8de93b37382f9ba7721dea3ee8cb37488d0c983123d62909628ca8"
+  },
+  {
+    "filename": "interregional-bus-index.html",
+    "url": "https://www.mintrans.gov.ru/documents/8/16114",
+    "retrieved_at": "2026-11-09T09:37:06.089366+00:00",
+    "http_status": "200",
+    "status": "downloaded",
+    "tls_verified": true,
+    "path": "data/additional/all-regions/raw/interregional-bus-index.html",
+    "bytes": 69451,
+    "sha256": "affbcc2f0e22aeba01d4efce22ca0749571f5feb059f44862a1959077565fe1d"
+  },
+  {
+    "filename": "bus-stops-20261009.xlsx",
+    "url": "https://www.mintrans.gov.ru/file/571211",
+    "retrieved_at": "2026-11-09T09:37:06.089531+00:00",
+    "http_status": "200",
+    "status": "downloaded",
+    "tls_verified": true,
+    "path": "data/additional/all-regions/raw/bus-stops-20261009.xlsx",
+    "bytes": 867485,
+    "sha256": "5ea613c9912c635e0570256fa0b09c60f22b6a7a3ca1c7ecef29b360d330dd83"
+  },
+  {
+    "filename": "bus-stops-index.html",
+    "url": "https://www.mintrans.gov.ru/documents/8/16039",
+    "retrieved_at": "2026-11-09T09:37:06.089630+00:00",
+    "http_status": "200",
+    "status": "downloaded",
+    "tls_verified": true,
+    "path": "data/additional/all-regions/raw/bus-stops-index.html",
+    "bytes": 69173,
+    "sha256": "ac79120437a2f9c9395e5637f636bbcd70db569186fad18d1188f3aece2a1831"
+  }
+]

@@ -1,0 +1,2352 @@
+{
+  "route_date": "2026-11-05",
+  "stop_date": "2026-10-09",
+  "routes": 5550,
+  "schedule_rows": 53506,
+  "stop_records": 3614,
+  "route_region_pairs": 12805,
+  "regions_in_source": 81,
+  "atlas_regions_with_records": 74,
+  "atlas_regions_without_records": [
+    {
+      "region_id": "11800000",
+      "name": "Ненецкий АО",
+      "population": 41434
+    },
+    {
+      "region_id": "27000000",
+      "name": "Калининградская область",
+      "population": 1029966
+    },
+    {
+      "region_id": "30000000",
+      "name": "Камчатский край",
+      "population": 291705
+    },
+    {
+      "region_id": "44000000",
+      "name": "Магаданская область",
+      "population": 136085
+    },
+    {
+      "region_id": "47000000",
+      "name": "Мурманская область",
+      "population": 667744
+    },
+    {
+      "region_id": "64000000",
+      "name": "Сахалинская область",
+      "population": 466609
+    },
+    {
+      "region_id": "77000000",
+      "name": "Чукотский АО",
+      "population": 47490
+    },
+    {
+      "region_id": "98000000",
+      "name": "Республика Саха (Якутия)",
+      "population": 995686
+    }
+  ],
+  "blank_source_rows_skipped": 15,
+  "schedule_stop_ids_missing_in_older_stop_registry": [
+    ""
+  ],
+  "regions": [
+    {
+      "stop_region_code": "01",
+      "region_name": "Республика Адыгея",
+      "atlas_region_id": "79000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "01002",
+          "source_row": 834,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Адыгея, г. Майкоп, ул. Краснооктябрьская, 68"
+        },
+        {
+          "stop_registry_id": "01001",
+          "source_row": 2980,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Адыгея, а. Кошехабль, ул. Дружбы Народов, 59"
+        },
+        {
+          "stop_registry_id": "01004",
+          "source_row": 1741,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Адыгея, с. Красногвардейское, ул. Первомайская, 1"
+        }
+      ],
+      "route_count": 38,
+      "stop_schedule_rows": 84,
+      "distinct_stop_ids": 3
+    },
+    {
+      "stop_region_code": "02",
+      "region_name": "Республика Башкортостан",
+      "atlas_region_id": "80000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "02061",
+          "source_row": 1852,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Башкортостан, г.Уфа, ул. Р.Зорге, 13"
+        },
+        {
+          "stop_registry_id": "02007",
+          "source_row": 1828,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Башкортостан,  г. Бирск, ул. Мира, 139"
+        },
+        {
+          "stop_registry_id": "02003",
+          "source_row": 1818,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Башкортостан, г. Дюртюли ул. Ленина, 24"
+        }
+      ],
+      "route_count": 284,
+      "stop_schedule_rows": 1002,
+      "distinct_stop_ids": 42
+    },
+    {
+      "stop_region_code": "03",
+      "region_name": "Республика Бурятия",
+      "atlas_region_id": "81000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "03004",
+          "source_row": 866,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Бурятия, г. Улан-Удэ, ул. Советская, 1 \"Б\""
+        },
+        {
+          "stop_registry_id": "03002",
+          "source_row": 2371,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Бурятия, г. Улан-Удэ, ул. Корабельная, 32Б"
+        },
+        {
+          "stop_registry_id": "03051",
+          "source_row": 3272,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Бурятия, г. Улан-Удэ, ул. Революции 1905 года, 53В"
+        }
+      ],
+      "route_count": 19,
+      "stop_schedule_rows": 70,
+      "distinct_stop_ids": 20
+    },
+    {
+      "stop_region_code": "04",
+      "region_name": "Республика Алтай",
+      "atlas_region_id": "84000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "04001",
+          "source_row": 1107,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Алтай, г. Горно-Алтайск, пр. Коммунистический, 55"
+        },
+        {
+          "stop_registry_id": "04002",
+          "source_row": 1105,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Алтай, Чемальский р-н, с. Чемал, ул. Советская, 1а"
+        },
+        {
+          "stop_registry_id": "04053",
+          "source_row": 3417,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Алтай, Турочакский р-н, с. Турочак, ул. Советская, 53 \"А\""
+        }
+      ],
+      "route_count": 82,
+      "stop_schedule_rows": 1056,
+      "distinct_stop_ids": 66
+    },
+    {
+      "stop_region_code": "05",
+      "region_name": "Республика Дагестан",
+      "atlas_region_id": "82000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "05004",
+          "source_row": 2209,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Дагестан, г. Избербаш, ул. Советская"
+        },
+        {
+          "stop_registry_id": "05005",
+          "source_row": 2185,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Дагестан, г. Каспийск, ул. Назарова, 2"
+        },
+        {
+          "stop_registry_id": "05007",
+          "source_row": 1289,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Дагестан, г. Кизляр, ул. Набережная, 43"
+        }
+      ],
+      "route_count": 176,
+      "stop_schedule_rows": 782,
+      "distinct_stop_ids": 17
+    },
+    {
+      "stop_region_code": "06",
+      "region_name": "Республика Ингушетия",
+      "atlas_region_id": "26000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "06001",
+          "source_row": 247,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Ингушетия, г. Малгобек, ул. Осканова"
+        },
+        {
+          "stop_registry_id": "06010",
+          "source_row": 237,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Ингушетия, г. Назрань, ул. Муталиева, 6"
+        },
+        {
+          "stop_registry_id": "06003",
+          "source_row": 246,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Ингушетия, Сунженский р-н, с.п. Орджоникидзевское, ул. Свердлова, 1"
+        }
+      ],
+      "route_count": 56,
+      "stop_schedule_rows": 122,
+      "distinct_stop_ids": 4
+    },
+    {
+      "stop_region_code": "07",
+      "region_name": "Кабардино-Балкарская Республика",
+      "atlas_region_id": "83000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "07006",
+          "source_row": 1305,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Кабардино-Балкарская Республика, г. Прохладный, ул. Гагарина, 28"
+        },
+        {
+          "stop_registry_id": "07004",
+          "source_row": 1299,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Кабардино-Балкарская Республика, г. Нальчик, 455-й км ФАД «Кавказ»"
+        },
+        {
+          "stop_registry_id": "07022",
+          "source_row": 1276,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Кабардино-Балкарская Республика, Чегемский р-н, с. Шалушка, ул. Ленина, д. 367"
+        }
+      ],
+      "route_count": 191,
+      "stop_schedule_rows": 424,
+      "distinct_stop_ids": 5
+    },
+    {
+      "stop_region_code": "08",
+      "region_name": "Республика Калмыкия",
+      "atlas_region_id": "85000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "08009",
+          "source_row": 1907,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Калмыкия, Яшкульский р-н, п. Яшкуль, ул. Клыкова, д. 25"
+        },
+        {
+          "stop_registry_id": "08012",
+          "source_row": 2116,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Калмыкия, Сарпинский р-н, с. Садовое, ул. Ленина, д. 122"
+        },
+        {
+          "stop_registry_id": "08005",
+          "source_row": 3223,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Калмыкия, Кетченеровский р-н, с. Кетченеры, ул. Ленина, д. 42А"
+        }
+      ],
+      "route_count": 100,
+      "stop_schedule_rows": 282,
+      "distinct_stop_ids": 6
+    },
+    {
+      "stop_region_code": "09",
+      "region_name": "Карачаево-Черкесская Республика",
+      "atlas_region_id": "91000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "09037",
+          "source_row": 2138,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Карачаево-Черкесская Республика, г. Черкесск, пл. Привокзальная, д. 1"
+        },
+        {
+          "stop_registry_id": "09013",
+          "source_row": 2947,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Карачаево-Черкесская Республика, р-н Зеленчукский, с. Архыз, ул. Горная, 1"
+        },
+        {
+          "stop_registry_id": "09010",
+          "source_row": 3044,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Карачаево-Черкесская Республика, Карачаевский р-н, г. Теберда, ул. Карачаевская"
+        }
+      ],
+      "route_count": 130,
+      "stop_schedule_rows": 556,
+      "distinct_stop_ids": 17
+    },
+    {
+      "stop_region_code": "10",
+      "region_name": "Республика Карелия",
+      "atlas_region_id": "86000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "10004",
+          "source_row": 2120,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Карелия, г. Олонец, ул. Свободы, 12"
+        },
+        {
+          "stop_registry_id": "10024",
+          "source_row": 348,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Карелия, г. Сортавала, ул. Кирова, 1"
+        },
+        {
+          "stop_registry_id": "10055",
+          "source_row": 1269,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Карелия, г. Пудож, ул. Ленина, д. 62"
+        }
+      ],
+      "route_count": 27,
+      "stop_schedule_rows": 220,
+      "distinct_stop_ids": 21
+    },
+    {
+      "stop_region_code": "11",
+      "region_name": "Республика Коми",
+      "atlas_region_id": "87000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "11003",
+          "source_row": 1316,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Коми, г. Ухта, ул. Октябрьская, 24"
+        },
+        {
+          "stop_registry_id": "11001",
+          "source_row": 2370,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Коми, г. Сыктывкар, ул. Заводская, 13"
+        },
+        {
+          "stop_registry_id": "11008",
+          "source_row": 2455,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Коми, Прилузский район, с. Объячево, ул. Мира, д. 104"
+        }
+      ],
+      "route_count": 41,
+      "stop_schedule_rows": 134,
+      "distinct_stop_ids": 23
+    },
+    {
+      "stop_region_code": "12",
+      "region_name": "Республика Марий Эл",
+      "atlas_region_id": "88000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "12091",
+          "source_row": 1976,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Марий Эл, г. Волжск, ул. Ленина, 55"
+        },
+        {
+          "stop_registry_id": "12031",
+          "source_row": 1833,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Марий Эл, г. Звенигово, ул. Ленина, д. 106а"
+        },
+        {
+          "stop_registry_id": "12010",
+          "source_row": 2229,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Марий Эл, пгт. Оршанка, ул. Советская, д.129"
+        }
+      ],
+      "route_count": 88,
+      "stop_schedule_rows": 240,
+      "distinct_stop_ids": 17
+    },
+    {
+      "stop_region_code": "13",
+      "region_name": "Республика Мордовия",
+      "atlas_region_id": "89000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "13004",
+          "source_row": 1829,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Мордовия, г. Ардатов, ул. Полевая, 78А"
+        },
+        {
+          "stop_registry_id": "13019",
+          "source_row": 2232,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Мордовия, г. Саранск, ул. Полежаева, 184"
+        },
+        {
+          "stop_registry_id": "13055",
+          "source_row": 250,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Мордовия, г. Темников, ул. Октябрьская, д. 10а"
+        }
+      ],
+      "route_count": 60,
+      "stop_schedule_rows": 210,
+      "distinct_stop_ids": 17
+    },
+    {
+      "stop_region_code": "15",
+      "region_name": "Республика Северная Осетия-Алания",
+      "atlas_region_id": "90000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "15003",
+          "source_row": 1241,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "РСО-Алания, г. Владикавказ, ул. Московская/Архонский пер."
+        },
+        {
+          "stop_registry_id": "15001",
+          "source_row": 2000,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "РСО-Алания, р-н Пригородный, с. Донгарон, ул. Остаева, д. 2"
+        },
+        {
+          "stop_registry_id": "15005",
+          "source_row": 2328,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "РСО-Алания, г. Моздок, ул. Вокзальная (привокзальная площадь)"
+        }
+      ],
+      "route_count": 94,
+      "stop_schedule_rows": 192,
+      "distinct_stop_ids": 5
+    },
+    {
+      "stop_region_code": "16",
+      "region_name": "Республика Татарстан",
+      "atlas_region_id": "92000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "16253",
+          "source_row": 2234,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Татарстан, г. Казань, ул. Аграрная, 8"
+        },
+        {
+          "stop_registry_id": "16019",
+          "source_row": 2252,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Татарстан, пгт. Уруссу, ул. Козина, 38"
+        },
+        {
+          "stop_registry_id": "16029",
+          "source_row": 129,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Татарстан, г. Казань, ул. Воровского, 33"
+        }
+      ],
+      "route_count": 349,
+      "stop_schedule_rows": 1016,
+      "distinct_stop_ids": 23
+    },
+    {
+      "stop_region_code": "17",
+      "region_name": "Республика Тыва",
+      "atlas_region_id": "93000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "17003",
+          "source_row": 2763,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Тыва, г. Туран, ул. Дружбы, 75"
+        },
+        {
+          "stop_registry_id": "17002",
+          "source_row": 1038,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Тыва, г. Кызыл, ул. Кочетова, 1"
+        },
+        {
+          "stop_registry_id": "17009",
+          "source_row": 3234,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "а/д Р-257 «Енисей», 739км+690м (справа)"
+        }
+      ],
+      "route_count": 6,
+      "stop_schedule_rows": 28,
+      "distinct_stop_ids": 3
+    },
+    {
+      "stop_region_code": "18",
+      "region_name": "Удмуртская Республика",
+      "atlas_region_id": "94000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "18025",
+          "source_row": 1538,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Удмуртия, п. Игра, ул. Советская, 64"
+        },
+        {
+          "stop_registry_id": "18005",
+          "source_row": 2577,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Удмуртия, г. Можга, ул. Вокзальная, 22"
+        },
+        {
+          "stop_registry_id": "18003",
+          "source_row": 1401,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Удмуртия, г. Глазов, ул. Сулимова, 73Б"
+        }
+      ],
+      "route_count": 62,
+      "stop_schedule_rows": 202,
+      "distinct_stop_ids": 11
+    },
+    {
+      "stop_region_code": "19",
+      "region_name": "Республика Хакасия",
+      "atlas_region_id": "95000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "19009",
+          "source_row": 967,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Хакасия, с. Аскиз, пер. Коммунальный, 12Б"
+        },
+        {
+          "stop_registry_id": "19001",
+          "source_row": 3080,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Хакасия, г. Абакан, ул. Вокзальная, 11 \"А\""
+        },
+        {
+          "stop_registry_id": "19002",
+          "source_row": 2159,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Хакасия, г. Саяногорск, ул. Ивана Ярыгина, 9"
+        }
+      ],
+      "route_count": 62,
+      "stop_schedule_rows": 346,
+      "distinct_stop_ids": 24
+    },
+    {
+      "stop_region_code": "20",
+      "region_name": "Чеченская Республика",
+      "atlas_region_id": "96000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "20002",
+          "source_row": 3608,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Чеченская Республика, г. Грозный, ул. Михайлова, 1"
+        },
+        {
+          "stop_registry_id": "20046",
+          "source_row": 3154,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Чеченская Республика, г. Гудермес, ул. 40 лет Победы, 9а"
+        },
+        {
+          "stop_registry_id": "20012",
+          "source_row": 604,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Чеченская Республика, г. Грозный, ул. С.Ш. Лорсанова, 1 «А»"
+        }
+      ],
+      "route_count": 87,
+      "stop_schedule_rows": 174,
+      "distinct_stop_ids": 5
+    },
+    {
+      "stop_region_code": "21",
+      "region_name": "Чувашская Республика",
+      "atlas_region_id": "97000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "21003",
+          "source_row": 2110,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Чувашская Республика, г. Канаш, ул. Зеленая, 1 А"
+        },
+        {
+          "stop_registry_id": "21027",
+          "source_row": 3584,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Чувашская Республика, г. Чебоксары, пр-т Мира, 78"
+        },
+        {
+          "stop_registry_id": "21011",
+          "source_row": 3587,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Чувашская Республика, с. Батырево, ул. Дружбы, 6В"
+        }
+      ],
+      "route_count": 227,
+      "stop_schedule_rows": 1464,
+      "distinct_stop_ids": 52
+    },
+    {
+      "stop_region_code": "22",
+      "region_name": "Алтайский край",
+      "atlas_region_id": "01000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "22020",
+          "source_row": 1504,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Алтайский край, с. Табуны, ул. Пушкина, 6"
+        },
+        {
+          "stop_registry_id": "22165",
+          "source_row": 2255,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Алтайский край, г. Барнаул, пл. Победы, 12"
+        },
+        {
+          "stop_registry_id": "22062",
+          "source_row": 2306,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Алтайский край, с. Кулунда, ул. Олимпийская, 10"
+        }
+      ],
+      "route_count": 171,
+      "stop_schedule_rows": 1280,
+      "distinct_stop_ids": 76
+    },
+    {
+      "stop_region_code": "23",
+      "region_name": "Краснодарский край",
+      "atlas_region_id": "03000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "23027",
+          "source_row": 1473,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Краснодарский край, ст. Выселки, ул. Лунева, 1"
+        },
+        {
+          "stop_registry_id": "23025",
+          "source_row": 2271,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Краснодарский край, г. Сочи, ул. Горького, 56А"
+        },
+        {
+          "stop_registry_id": "23016",
+          "source_row": 2352,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Краснодарский край, г. Краснодар, ул. Гаврилова"
+        }
+      ],
+      "route_count": 558,
+      "stop_schedule_rows": 3296,
+      "distinct_stop_ids": 73
+    },
+    {
+      "stop_region_code": "24",
+      "region_name": "Красноярский край",
+      "atlas_region_id": "04000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "24005",
+          "source_row": 2634,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Красноярский край, г. Ужур, ул. Калинина, 12"
+        },
+        {
+          "stop_registry_id": "24260",
+          "source_row": 2595,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Красноярский край, г. Канск, ул. Ленина, д. 20"
+        },
+        {
+          "stop_registry_id": "24035",
+          "source_row": 769,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Красноярский край, г. Ачинск, ул. Привокзальная, 17"
+        }
+      ],
+      "route_count": 83,
+      "stop_schedule_rows": 722,
+      "distinct_stop_ids": 76
+    },
+    {
+      "stop_region_code": "25",
+      "region_name": "Приморский край",
+      "atlas_region_id": "05000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "25041",
+          "source_row": 2562,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Приморский край, г. Арсеньев, ул. Вокзальная, 1"
+        },
+        {
+          "stop_registry_id": "25033",
+          "source_row": 3434,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Приморский край, г. Уссурийск, ул. Чичерина, 121"
+        },
+        {
+          "stop_registry_id": "25029",
+          "source_row": 2361,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Приморский край, с. Черниговка, ул. Шоссейная, 3"
+        }
+      ],
+      "route_count": 14,
+      "stop_schedule_rows": 116,
+      "distinct_stop_ids": 25
+    },
+    {
+      "stop_region_code": "26",
+      "region_name": "Ставропольский край",
+      "atlas_region_id": "07000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "26017",
+          "source_row": 1963,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ставропольский край, с. Арзгир, ул. Кирова, д. 15"
+        },
+        {
+          "stop_registry_id": "26031",
+          "source_row": 669,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ставропольский край, ст. Курская, ул. Садовая, д. 1"
+        },
+        {
+          "stop_registry_id": "26007",
+          "source_row": 3266,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ставропольский край, г. Ипатово, ул. Гагарина, д. 17"
+        }
+      ],
+      "route_count": 654,
+      "stop_schedule_rows": 3540,
+      "distinct_stop_ids": 40
+    },
+    {
+      "stop_region_code": "27",
+      "region_name": "Хабаровский край",
+      "atlas_region_id": "08000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [],
+      "route_count": 26,
+      "stop_schedule_rows": 144,
+      "distinct_stop_ids": 17
+    },
+    {
+      "stop_region_code": "28",
+      "region_name": "Амурская область",
+      "atlas_region_id": "10000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "28001",
+          "source_row": 3183,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Амурская область, г. Белогорск, ул. Кирова, 247/1"
+        },
+        {
+          "stop_registry_id": "28003",
+          "source_row": 2340,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Амурская область, г. Благовещенск, ул. 50 лет Октября, 44"
+        }
+      ],
+      "route_count": 9,
+      "stop_schedule_rows": 24,
+      "distinct_stop_ids": 2
+    },
+    {
+      "stop_region_code": "29",
+      "region_name": "Архангельская область",
+      "atlas_region_id": "11000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "29003",
+          "source_row": 2127,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Архангельская обл., г. Архангельск, пр-т Дзержинского, д. 2"
+        },
+        {
+          "stop_registry_id": "29123",
+          "source_row": 1639,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Архангельская обл., Ленский р-н, с. Яренск, ул. Трудовая, 1 «А»"
+        },
+        {
+          "stop_registry_id": "29009",
+          "source_row": 1640,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Архангельская область, г. Котлас, ул. 7-го Съезда Советов, д. 53"
+        }
+      ],
+      "route_count": 15,
+      "stop_schedule_rows": 172,
+      "distinct_stop_ids": 18
+    },
+    {
+      "stop_region_code": "30",
+      "region_name": "Астраханская область",
+      "atlas_region_id": "12000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "30012",
+          "source_row": 565,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Астраханская область, г. Знаменск, зона Т ½, стр. 1"
+        },
+        {
+          "stop_registry_id": "30002",
+          "source_row": 1352,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Астраханская обл., г. Ахтубинск, ул. Добролюбова, 21"
+        },
+        {
+          "stop_registry_id": "30077",
+          "source_row": 2066,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Астраханская область, с. Енотаевка, ул. Татищева, д. 79а"
+        }
+      ],
+      "route_count": 92,
+      "stop_schedule_rows": 292,
+      "distinct_stop_ids": 9
+    },
+    {
+      "stop_region_code": "31",
+      "region_name": "Белгородская область",
+      "atlas_region_id": "14000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "31003",
+          "source_row": 2225,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Белгородская область, г. Бирюч, ул. Красная, 24"
+        },
+        {
+          "stop_registry_id": "31014",
+          "source_row": 1049,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Белгородская область, п. Чернянка, ул. Семашко, 1Б"
+        },
+        {
+          "stop_registry_id": "31030",
+          "source_row": 580,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Белгородская область, п. Ивня, ул. Коммунальная, 1"
+        }
+      ],
+      "route_count": 299,
+      "stop_schedule_rows": 1210,
+      "distinct_stop_ids": 17
+    },
+    {
+      "stop_region_code": "32",
+      "region_name": "Брянская область",
+      "atlas_region_id": "15000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "32011",
+          "source_row": 2134,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Брянская обл., г. Почеп, ул. Усиевича, д. 78"
+        },
+        {
+          "stop_registry_id": "32052",
+          "source_row": 2206,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Брянская обл., г. Клинцы, Парковая ул., д. 2а"
+        },
+        {
+          "stop_registry_id": "32003",
+          "source_row": 2474,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Брянская область, г. Брянск, ул. Ульянова, 58а"
+        }
+      ],
+      "route_count": 183,
+      "stop_schedule_rows": 768,
+      "distinct_stop_ids": 15
+    },
+    {
+      "stop_region_code": "33",
+      "region_name": "Владимирская область",
+      "atlas_region_id": "17000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "33017",
+          "source_row": 2732,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Владимирская обл., ул. Вокзальная, 22А"
+        },
+        {
+          "stop_registry_id": "33004",
+          "source_row": 1804,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Владимирская обл., г. Вязники, ул. Ленина, д. 55"
+        },
+        {
+          "stop_registry_id": "33008",
+          "source_row": 644,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Владимирская обл., г. Ковров, ул. Октябрьская, 10"
+        }
+      ],
+      "route_count": 109,
+      "stop_schedule_rows": 456,
+      "distinct_stop_ids": 46
+    },
+    {
+      "stop_region_code": "34",
+      "region_name": "Волгоградская область",
+      "atlas_region_id": "18000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "34003",
+          "source_row": 1756,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Волгоградская область, г. Волжский, ул. Кирова 19г"
+        },
+        {
+          "stop_registry_id": "34008",
+          "source_row": 244,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Волгоградская область, г. Камышин, ул. Тургенева, 4"
+        },
+        {
+          "stop_registry_id": "34026",
+          "source_row": 683,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Волгоградская область, г. Урюпинск, ул. Штеменко, 2Д"
+        }
+      ],
+      "route_count": 243,
+      "stop_schedule_rows": 754,
+      "distinct_stop_ids": 14
+    },
+    {
+      "stop_region_code": "35",
+      "region_name": "Вологодская область",
+      "atlas_region_id": "19000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "35005",
+          "source_row": 3579,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Вологодская область, г. Вологда, пл. Бабушкина, д. 10"
+        },
+        {
+          "stop_registry_id": "35002",
+          "source_row": 1295,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Вологодская обл., г.  Череповец, ул.  М.Горького, д. 44"
+        },
+        {
+          "stop_registry_id": "35004",
+          "source_row": 2126,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Вологодская обл., г. Великий Устюг, ул. Транспортная, д. 4"
+        }
+      ],
+      "route_count": 43,
+      "stop_schedule_rows": 124,
+      "distinct_stop_ids": 4
+    },
+    {
+      "stop_region_code": "36",
+      "region_name": "Воронежская область",
+      "atlas_region_id": "20000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "36030",
+          "source_row": 281,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Воронежская обл., г. Поворино, пл. Привокзальная, 6"
+        },
+        {
+          "stop_registry_id": "36016",
+          "source_row": 928,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Воронежская область, г. Россошь, Октябрьская пл., 22б"
+        },
+        {
+          "stop_registry_id": "36031",
+          "source_row": 3615,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Воронежская обл., п. Кантемировка, ул. Победы, д. 39-а"
+        }
+      ],
+      "route_count": 505,
+      "stop_schedule_rows": 1142,
+      "distinct_stop_ids": 13
+    },
+    {
+      "stop_region_code": "37",
+      "region_name": "Ивановская область",
+      "atlas_region_id": "24000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "37014",
+          "source_row": 3506,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ивановская обл., ст. Вичуга"
+        },
+        {
+          "stop_registry_id": "37022",
+          "source_row": 2362,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ивановская область, г. Южа, ул. Фрунзе, 1-А"
+        },
+        {
+          "stop_registry_id": "37057",
+          "source_row": 2289,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ивановская обл., г. Фурманов, ул. Вокзальная"
+        }
+      ],
+      "route_count": 161,
+      "stop_schedule_rows": 628,
+      "distinct_stop_ids": 23
+    },
+    {
+      "stop_region_code": "38",
+      "region_name": "Иркутская область",
+      "atlas_region_id": "25000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "38001",
+          "source_row": 3225,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Иркутская обл., г. Усть-Илимск, пр. Мира, 36 «Г»"
+        },
+        {
+          "stop_registry_id": "38003",
+          "source_row": 1912,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Иркутская область, г. Братск, ул. Южная, д. 12 \"А\""
+        },
+        {
+          "stop_registry_id": "38020",
+          "source_row": 3074,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Иркутская область, г. Иркутск, ул. Челнокова, д. 1"
+        }
+      ],
+      "route_count": 14,
+      "stop_schedule_rows": 40,
+      "distinct_stop_ids": 7
+    },
+    {
+      "stop_region_code": "40",
+      "region_name": "Калужская область",
+      "atlas_region_id": "29000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "40018",
+          "source_row": 1076,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Калужская область, г. Калуга, пл. Вокзальная, 3"
+        },
+        {
+          "stop_registry_id": "40021",
+          "source_row": 2183,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Калужская область, г. Юхнов, ул. Энгельса, д. 55"
+        },
+        {
+          "stop_registry_id": "40016",
+          "source_row": 1470,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Калужская обл., с. Хвастовичи, ул. Ленина, д. 2А"
+        }
+      ],
+      "route_count": 85,
+      "stop_schedule_rows": 358,
+      "distinct_stop_ids": 31
+    },
+    {
+      "stop_region_code": "42",
+      "region_name": "Кемеровская область - Кузбасс",
+      "atlas_region_id": "32000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "42024",
+          "source_row": 1987,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Кемеровская область - Кузбасс, г. Юрга, ул. Московская, 86"
+        },
+        {
+          "stop_registry_id": "42002",
+          "source_row": 1998,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Кемеровская область - Кузбасс, г. Белово, ул. Юбилейная, 2"
+        },
+        {
+          "stop_registry_id": "42023",
+          "source_row": 2152,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Кемеровская область - Кузбасс, г. Топки, ул. Революции, 40"
+        }
+      ],
+      "route_count": 142,
+      "stop_schedule_rows": 954,
+      "distinct_stop_ids": 44
+    },
+    {
+      "stop_region_code": "43",
+      "region_name": "Кировская область",
+      "atlas_region_id": "33000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "43001",
+          "source_row": 3610,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Кировская обл., г. Киров, ул. Горького, д. 57"
+        },
+        {
+          "stop_registry_id": "43019",
+          "source_row": 943,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Кировская область, пгт Суна, ул. Заречная, 2б"
+        },
+        {
+          "stop_registry_id": "43003",
+          "source_row": 3603,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Кировская обл., г. Вятские Поляны, ул. Мира, д. 38"
+        }
+      ],
+      "route_count": 59,
+      "stop_schedule_rows": 140,
+      "distinct_stop_ids": 7
+    },
+    {
+      "stop_region_code": "44",
+      "region_name": "Костромская область",
+      "atlas_region_id": "34000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "44087",
+          "source_row": 366,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Костромская область, г. Нерехта, пл. 30-летия Победы, д. 4а"
+        },
+        {
+          "stop_registry_id": "44001",
+          "source_row": 1042,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Костромская обл., г. Шарья, ул. Вокзальная (в районе д. 27а)"
+        },
+        {
+          "stop_registry_id": "44002",
+          "source_row": 2211,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Костромская обл., г. Волгореченск, ул. Имени 50-летия Ленинского Комсомола, д. 6"
+        }
+      ],
+      "route_count": 119,
+      "stop_schedule_rows": 334,
+      "distinct_stop_ids": 15
+    },
+    {
+      "stop_region_code": "45",
+      "region_name": "Курганская область",
+      "atlas_region_id": "37000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "45006",
+          "source_row": 2236,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Курганская обл., г. Курган, пл. Собанина, 1"
+        },
+        {
+          "stop_registry_id": "45023",
+          "source_row": 2949,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Курганская обл., с. Белозерское, ул. Ленина, 82"
+        },
+        {
+          "stop_registry_id": "45020",
+          "source_row": 1030,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Курганская обл., рп Каргаполье, ул. Калинина, 83"
+        }
+      ],
+      "route_count": 66,
+      "stop_schedule_rows": 938,
+      "distinct_stop_ids": 96
+    },
+    {
+      "stop_region_code": "46",
+      "region_name": "Курская область",
+      "atlas_region_id": "38000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "46001",
+          "source_row": 3171,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Курская область, г. Суджа, ст. Суджа"
+        },
+        {
+          "stop_registry_id": "46035",
+          "source_row": 526,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Курская область, сл. Белая, ул. 1 мая, 2"
+        },
+        {
+          "stop_registry_id": "46016",
+          "source_row": 2240,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Курская область, пгт Тим, с. 1-е Выгорное"
+        }
+      ],
+      "route_count": 216,
+      "stop_schedule_rows": 1062,
+      "distinct_stop_ids": 21
+    },
+    {
+      "stop_region_code": "47",
+      "region_name": "Ленинградская область",
+      "atlas_region_id": "41000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "47016",
+          "source_row": 105,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ленинградская обл., г. Сланцы, ул. Баранова, 1"
+        },
+        {
+          "stop_registry_id": "47013",
+          "source_row": 1966,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ленинградская обл., г. Тихвин, пер. Вокзальный, д. 1"
+        },
+        {
+          "stop_registry_id": "47094",
+          "source_row": 57,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ленинградская область, г. Кириши, Привокзальная площадь"
+        }
+      ],
+      "route_count": 55,
+      "stop_schedule_rows": 280,
+      "distinct_stop_ids": 37
+    },
+    {
+      "stop_region_code": "48",
+      "region_name": "Липецкая область",
+      "atlas_region_id": "42000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "48014",
+          "source_row": 2162,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Липецкая обл., г. Елец, ул. Задонская, 1 А"
+        },
+        {
+          "stop_registry_id": "48015",
+          "source_row": 2373,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Липецкая обл., г. Елец, Московское шоссе, 3В"
+        },
+        {
+          "stop_registry_id": "48002",
+          "source_row": 2180,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Липецкая область, г. Грязи, ул. 30 лет Победы"
+        }
+      ],
+      "route_count": 213,
+      "stop_schedule_rows": 630,
+      "distinct_stop_ids": 19
+    },
+    {
+      "stop_region_code": "50",
+      "region_name": "Московская область",
+      "atlas_region_id": "46000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "50509",
+          "source_row": 2388,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Московская область, г. Клин, ул. Карла Маркса, 1"
+        },
+        {
+          "stop_registry_id": "50803",
+          "source_row": 156,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Московская обл., г. Дубна, пр-т Боголюбова, д. 54"
+        },
+        {
+          "stop_registry_id": "50011",
+          "source_row": 1014,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Московская область, г. Зарайск, пл. Революции д.1"
+        }
+      ],
+      "route_count": 353,
+      "stop_schedule_rows": 790,
+      "distinct_stop_ids": 33
+    },
+    {
+      "stop_region_code": "52",
+      "region_name": "Нижегородская область",
+      "atlas_region_id": "22000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "52048",
+          "source_row": 1537,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Нижегородская область, г. Сергач, ул. Школьная, д. 7"
+        },
+        {
+          "stop_registry_id": "52142",
+          "source_row": 867,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Нижегородская область, р.п. Шаранга, ул. Ленина, д. 9"
+        },
+        {
+          "stop_registry_id": "52013",
+          "source_row": 183,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Нижегородская обл., г. Кулебаки, ул. Ст. Разина, д. 17"
+        }
+      ],
+      "route_count": 238,
+      "stop_schedule_rows": 604,
+      "distinct_stop_ids": 11
+    },
+    {
+      "stop_region_code": "53",
+      "region_name": "Новгородская область",
+      "atlas_region_id": "49000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "53162",
+          "source_row": 3607,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Новгородская обл., р.п. Шимск, ул. Ленина, д. 3"
+        },
+        {
+          "stop_registry_id": "53164",
+          "source_row": 3563,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Новгородская обл., р.п. Парфино, ул. Кирова, д. 3"
+        },
+        {
+          "stop_registry_id": "53005",
+          "source_row": 3512,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Новгородская область, г. Валдай, ул. Песчаная, 1\"В\""
+        }
+      ],
+      "route_count": 79,
+      "stop_schedule_rows": 336,
+      "distinct_stop_ids": 50
+    },
+    {
+      "stop_region_code": "54",
+      "region_name": "Новосибирская область",
+      "atlas_region_id": "50000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "54001",
+          "source_row": 3262,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Новосибирская обл., г. Карасук, ул. МПС, 11"
+        },
+        {
+          "stop_registry_id": "54018",
+          "source_row": 2207,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Новосибирская обл., г. Обь-2, аэропорт Толмачево"
+        },
+        {
+          "stop_registry_id": "54109",
+          "source_row": 1607,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Новосибирская обл., г. Бердск, ул. Вокзальная, д.35"
+        }
+      ],
+      "route_count": 235,
+      "stop_schedule_rows": 1574,
+      "distinct_stop_ids": 34
+    },
+    {
+      "stop_region_code": "55",
+      "region_name": "Омская область",
+      "atlas_region_id": "52000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "55004",
+          "source_row": 1923,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Омская область, г. Омск, пр. Комарова, 2"
+        },
+        {
+          "stop_registry_id": "55011",
+          "source_row": 2254,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Омская область, рп Крутинка, ул. Крылова, 17 «А»"
+        },
+        {
+          "stop_registry_id": "55037",
+          "source_row": 3150,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Омская область, г. Тюкалинск, ул. Магистральная, 2 «А»"
+        }
+      ],
+      "route_count": 3,
+      "stop_schedule_rows": 18,
+      "distinct_stop_ids": 3
+    },
+    {
+      "stop_region_code": "56",
+      "region_name": "Оренбургская область",
+      "atlas_region_id": "53000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "56010",
+          "source_row": 1608,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Оренбургская область, г. Орск, пл. Гагарина, 1А"
+        },
+        {
+          "stop_registry_id": "56028",
+          "source_row": 1353,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Оренбургская область, с. Северное, ул. Чапаева, 118"
+        },
+        {
+          "stop_registry_id": "56072",
+          "source_row": 2181,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Оренбургская область, г. Оренбург, Привокзальная площадь, д. 1"
+        }
+      ],
+      "route_count": 66,
+      "stop_schedule_rows": 192,
+      "distinct_stop_ids": 12
+    },
+    {
+      "stop_region_code": "57",
+      "region_name": "Орловская область",
+      "atlas_region_id": "54000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "57002",
+          "source_row": 1628,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Орловская обл., д. Разбегаевка"
+        },
+        {
+          "stop_registry_id": "57005",
+          "source_row": 2383,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Орловская обл., г. Ливны, ул. Кирова, д. 1"
+        },
+        {
+          "stop_registry_id": "57004",
+          "source_row": 3042,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Орловская обл., с. Дросково, ул. Советская"
+        }
+      ],
+      "route_count": 111,
+      "stop_schedule_rows": 478,
+      "distinct_stop_ids": 37
+    },
+    {
+      "stop_region_code": "58",
+      "region_name": "Пензенская область",
+      "atlas_region_id": "56000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "58004",
+          "source_row": 1952,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Пензенская обл., г. Кузнецк, ул. Белинского, 134"
+        },
+        {
+          "stop_registry_id": "58008",
+          "source_row": 2195,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Пензенская область, г. Пенза, ул. Луначарского, 1"
+        },
+        {
+          "stop_registry_id": "58025",
+          "source_row": 1632,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Пензенская область, с. Лопатино, ул. Фабричная, 46а"
+        }
+      ],
+      "route_count": 117,
+      "stop_schedule_rows": 394,
+      "distinct_stop_ids": 26
+    },
+    {
+      "stop_region_code": "59",
+      "region_name": "Пермский край",
+      "atlas_region_id": "57000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "59024",
+          "source_row": 1653,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Пермский край, г. Пермь, ул. Ижевская, 2"
+        },
+        {
+          "stop_registry_id": "59041",
+          "source_row": 3555,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "край Пермский, г Чусовой, ул Свердлова,  1А"
+        },
+        {
+          "stop_registry_id": "59023",
+          "source_row": 3613,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Пермский край, г. Пермь, ул. Революции, д. 68"
+        }
+      ],
+      "route_count": 112,
+      "stop_schedule_rows": 282,
+      "distinct_stop_ids": 9
+    },
+    {
+      "stop_region_code": "60",
+      "region_name": "Псковская область",
+      "atlas_region_id": "58000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "60018",
+          "source_row": 3523,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Псковская обл., Порховский р-н, д. Хилово"
+        },
+        {
+          "stop_registry_id": "60004",
+          "source_row": 1186,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Псковская область, г. Гдов, ул. Никитина, 7"
+        },
+        {
+          "stop_registry_id": "60001",
+          "source_row": 1188,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Псковская область, г. Дно, ул. Советская, 3"
+        }
+      ],
+      "route_count": 53,
+      "stop_schedule_rows": 654,
+      "distinct_stop_ids": 80
+    },
+    {
+      "stop_region_code": "61",
+      "region_name": "Ростовская область",
+      "atlas_region_id": "60000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "61022",
+          "source_row": 3532,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ростовская область, п. Целина, 1 линия, 69а"
+        },
+        {
+          "stop_registry_id": "61001",
+          "source_row": 1745,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ростовская область, г. Донецк, пр. Ленина, 27"
+        },
+        {
+          "stop_registry_id": "61004",
+          "source_row": 844,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ростовская область, г. Сальск, ул. Чкалова, 92"
+        }
+      ],
+      "route_count": 761,
+      "stop_schedule_rows": 2992,
+      "distinct_stop_ids": 32
+    },
+    {
+      "stop_region_code": "62",
+      "region_name": "Рязанская область",
+      "atlas_region_id": "61000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "62017",
+          "source_row": 1781,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Рязанская область, г. Скопин, ул. Ленина, 142"
+        },
+        {
+          "stop_registry_id": "62012",
+          "source_row": 3487,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Рязанская область,  рп Шилово, ул. Вокзальная"
+        },
+        {
+          "stop_registry_id": "62001",
+          "source_row": 1789,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Рязанская область, г. Касимов, ул. Советская, 134"
+        }
+      ],
+      "route_count": 88,
+      "stop_schedule_rows": 304,
+      "distinct_stop_ids": 20
+    },
+    {
+      "stop_region_code": "63",
+      "region_name": "Самарская область",
+      "atlas_region_id": "36000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "63204",
+          "source_row": 1003,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Самарская обл., г. Самара, ул. Авроры, д. 156Б"
+        },
+        {
+          "stop_registry_id": "63013",
+          "source_row": 2731,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Самарская область, г. Тольятти, ул. Родины, 1Г"
+        },
+        {
+          "stop_registry_id": "63005",
+          "source_row": 2171,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Самарская обл., с. Кошки, ул. 60 лет Октября, 1а"
+        }
+      ],
+      "route_count": 267,
+      "stop_schedule_rows": 874,
+      "distinct_stop_ids": 27
+    },
+    {
+      "stop_region_code": "64",
+      "region_name": "Саратовская область",
+      "atlas_region_id": "63000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "64010",
+          "source_row": 1777,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Саратовская область, г. Маркс, ул. 10 линия, д. 54"
+        },
+        {
+          "stop_registry_id": "64119",
+          "source_row": 1995,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Саратовская обл., г. Балаково, ул. Вокзальная, д. 4"
+        },
+        {
+          "stop_registry_id": "64007",
+          "source_row": 1795,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Саратовская область, г. Калининск, ул. Южная, д. 15"
+        }
+      ],
+      "route_count": 150,
+      "stop_schedule_rows": 512,
+      "distinct_stop_ids": 23
+    },
+    {
+      "stop_region_code": "66",
+      "region_name": "Свердловская область",
+      "atlas_region_id": "65000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "66019",
+          "source_row": 2654,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Свердловская обл., г. Карпинск, ул. Серова, 6"
+        },
+        {
+          "stop_registry_id": "66053",
+          "source_row": 2293,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Свердловская область, г. Тавда, ул. Цикарева, 8А"
+        },
+        {
+          "stop_registry_id": "66314",
+          "source_row": 1910,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Свердловская область, г. Реж, ул. Вокзальная, 12"
+        }
+      ],
+      "route_count": 239,
+      "stop_schedule_rows": 1400,
+      "distinct_stop_ids": 79
+    },
+    {
+      "stop_region_code": "67",
+      "region_name": "Смоленская область",
+      "atlas_region_id": "66000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "67006",
+          "source_row": 1881,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Смоленская область, г. Десногорск, 3 мкрн"
+        },
+        {
+          "stop_registry_id": "67021",
+          "source_row": 3061,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Смоленская обл., г. Смоленск, ул. Кашена, д. 13"
+        },
+        {
+          "stop_registry_id": "67043",
+          "source_row": 1386,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Смоленская область, г. Ярцево, пр. Металлургов, 21"
+        }
+      ],
+      "route_count": 80,
+      "stop_schedule_rows": 406,
+      "distinct_stop_ids": 18
+    },
+    {
+      "stop_region_code": "68",
+      "region_name": "Тамбовская область",
+      "atlas_region_id": "68000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "68018",
+          "source_row": 3533,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тамбовская область, г. Тамбов, ул. Мичуринская, 48"
+        },
+        {
+          "stop_registry_id": "68001",
+          "source_row": 2922,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тамбовская обл., г. Кирсанов, ул. Ухтомского, д. 55"
+        },
+        {
+          "stop_registry_id": "68019",
+          "source_row": 2778,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тамбовская область, г. Уварово, ул. Базарная, д. 4А"
+        }
+      ],
+      "route_count": 96,
+      "stop_schedule_rows": 248,
+      "distinct_stop_ids": 14
+    },
+    {
+      "stop_region_code": "69",
+      "region_name": "Тверская область",
+      "atlas_region_id": "28000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "69007",
+          "source_row": 2762,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тверская область, г. Тверь, ул. Коминтерна, 10"
+        },
+        {
+          "stop_registry_id": "69249",
+          "source_row": 2190,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тверская обл., г. Белый, ул. Октябрьская, д. 12"
+        },
+        {
+          "stop_registry_id": "69006",
+          "source_row": 1904,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тверская область, г. Ржев, ул. Привокзальная, 14"
+        }
+      ],
+      "route_count": 67,
+      "stop_schedule_rows": 254,
+      "distinct_stop_ids": 36
+    },
+    {
+      "stop_region_code": "70",
+      "region_name": "Томская область",
+      "atlas_region_id": "69000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "70016",
+          "source_row": 642,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Томская область, г. Томск, пр. Кирова, 68"
+        },
+        {
+          "stop_registry_id": "70015",
+          "source_row": 3489,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Томская область, г. Стрежевой, пл. Буровиков, 3"
+        },
+        {
+          "stop_registry_id": "70005",
+          "source_row": 2222,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Томская область, Кожевниковский р-н, с. Кожевниково, ул. Калинина, д. 53"
+        }
+      ],
+      "route_count": 100,
+      "stop_schedule_rows": 206,
+      "distinct_stop_ids": 5
+    },
+    {
+      "stop_region_code": "71",
+      "region_name": "Тульская область",
+      "atlas_region_id": "70000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "71011",
+          "source_row": 450,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тульская область, п. Куркино, ул. Ленина, 2"
+        },
+        {
+          "stop_registry_id": "71005",
+          "source_row": 1868,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тульская область, г. Кимовск, ул. Бессолова"
+        },
+        {
+          "stop_registry_id": "71055",
+          "source_row": 2188,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тульская область, г. Венев, мкр. Южный, 13Б"
+        }
+      ],
+      "route_count": 125,
+      "stop_schedule_rows": 390,
+      "distinct_stop_ids": 49
+    },
+    {
+      "stop_region_code": "72",
+      "region_name": "Тюменская область",
+      "atlas_region_id": "71000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "72002",
+          "source_row": 1170,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тюменская область. г. Ишим, ул. Иркутская, 9"
+        },
+        {
+          "stop_registry_id": "72025",
+          "source_row": 2486,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тюменская область, г. Тюмень, ул. Пермякова, 9"
+        },
+        {
+          "stop_registry_id": "72023",
+          "source_row": 2237,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тюменская область, с. Ярково, ул. Первомайская, 46"
+        }
+      ],
+      "route_count": 93,
+      "stop_schedule_rows": 482,
+      "distinct_stop_ids": 38
+    },
+    {
+      "stop_region_code": "73",
+      "region_name": "Ульяновская область",
+      "atlas_region_id": "73000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "73001",
+          "source_row": 2800,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ульяновская область, г. Барыш, ул. Радищева, 119"
+        },
+        {
+          "stop_registry_id": "73003",
+          "source_row": 3527,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ульяновская область, г. Инза, ул. Тухачевского, д. 29"
+        },
+        {
+          "stop_registry_id": "73112",
+          "source_row": 771,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ульяновская обл., г. Ульяновск, ул. Нариманова, д. 118"
+        }
+      ],
+      "route_count": 339,
+      "stop_schedule_rows": 1634,
+      "distinct_stop_ids": 44
+    },
+    {
+      "stop_region_code": "74",
+      "region_name": "Челябинская область",
+      "atlas_region_id": "75000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "74002",
+          "source_row": 2430,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Челябинская область, г. Аша, ул. Мира, 49"
+        },
+        {
+          "stop_registry_id": "74008",
+          "source_row": 2809,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Челябинская область, г. Касли, ул. Ленина, 71"
+        },
+        {
+          "stop_registry_id": "74013",
+          "source_row": 3323,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Челябинская область, г. Куса, ул. Бубнова, 32"
+        }
+      ],
+      "route_count": 158,
+      "stop_schedule_rows": 530,
+      "distinct_stop_ids": 29
+    },
+    {
+      "stop_region_code": "75",
+      "region_name": "Забайкальский край",
+      "atlas_region_id": "76000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "75005",
+          "source_row": 1264,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Забайкальский край, г. Чита, ул. Бутина, 2"
+        },
+        {
+          "stop_registry_id": "75001",
+          "source_row": 2189,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Забайкальский край, пгт Агинское, ул. Ленина, 72"
+        },
+        {
+          "stop_registry_id": "75003",
+          "source_row": 2043,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Забайкальский край, пгт. Могойтуй, Комсомольская, 2 а"
+        }
+      ],
+      "route_count": 11,
+      "stop_schedule_rows": 48,
+      "distinct_stop_ids": 8
+    },
+    {
+      "stop_region_code": "76",
+      "region_name": "Ярославская область",
+      "atlas_region_id": "78000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "76001",
+          "source_row": 3511,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ярославская область, г. Данилов, ул. Луговая, 50"
+        },
+        {
+          "stop_registry_id": "76002",
+          "source_row": 2714,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ярославская обл., г. Гаврилов-Ям, ул. Кирова, д. 3-а"
+        },
+        {
+          "stop_registry_id": "76007",
+          "source_row": 3268,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ярославская область, г. Рыбинск, ул. Пассажирская, д. 1а"
+        }
+      ],
+      "route_count": 176,
+      "stop_schedule_rows": 662,
+      "distinct_stop_ids": 57
+    },
+    {
+      "stop_region_code": "77",
+      "region_name": "г. Москва",
+      "atlas_region_id": null,
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "77006",
+          "source_row": 2304,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "г. Москва, Новоясеневский тупик, 4"
+        },
+        {
+          "stop_registry_id": "77020",
+          "source_row": 2378,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "г. Москва,  Щелковское шоссе, д. 75"
+        },
+        {
+          "stop_registry_id": "77777",
+          "source_row": 2057,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "г. Москва, Ореховый бульвар, дом 24Б"
+        }
+      ],
+      "route_count": 845,
+      "stop_schedule_rows": 1756,
+      "distinct_stop_ids": 6
+    },
+    {
+      "stop_region_code": "78",
+      "region_name": "г. Санкт-Петербург",
+      "atlas_region_id": null,
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "78001",
+          "source_row": 773,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "г. Санкт-Петербург, наб. Обводного канала, д. 36"
+        },
+        {
+          "stop_registry_id": "78003",
+          "source_row": 3558,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "г. Санкт-Петербург, Заневский проспект, д. 73, лит. А"
+        }
+      ],
+      "route_count": 220,
+      "stop_schedule_rows": 442,
+      "distinct_stop_ids": 2
+    },
+    {
+      "stop_region_code": "79",
+      "region_name": "Еврейская АО",
+      "atlas_region_id": "99000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "79010",
+          "source_row": 837,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Еврейская автономная область, Смидовичский район, с. Владимировка (район дома № 25 по ул. Лазо)"
+        },
+        {
+          "stop_registry_id": "79028",
+          "source_row": 3230,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "ЕАО, Облученский р-н, г. Облучье, ул. Денисова"
+        },
+        {
+          "stop_registry_id": "79056",
+          "source_row": 1739,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "ЕАО, Смидовичский район, пос. Приамурский (район дома № 24 Б по ул. Вокзальной )"
+        }
+      ],
+      "route_count": 8,
+      "stop_schedule_rows": 44,
+      "distinct_stop_ids": 15
+    },
+    {
+      "stop_region_code": "86",
+      "region_name": "Ханты-Мансийский АО",
+      "atlas_region_id": "71800000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "86009",
+          "source_row": 2767,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Тюменская область, ХМАО-Югра, п. Пойковский, мкр. 5"
+        },
+        {
+          "stop_registry_id": "86003",
+          "source_row": 623,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "г. Мегион, Кузьмина ул., д. 9"
+        },
+        {
+          "stop_registry_id": "86049",
+          "source_row": 1360,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "г. Сургут, Югорский тракт , 38"
+        }
+      ],
+      "route_count": 46,
+      "stop_schedule_rows": 210,
+      "distinct_stop_ids": 17
+    },
+    {
+      "stop_region_code": "89",
+      "region_name": "Ямало-Ненецкий АО",
+      "atlas_region_id": "71900000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "89001",
+          "source_row": 637,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ямало-Ненецкий автономный округ, г. Муравленко, ул. Пионерская, д. 44"
+        },
+        {
+          "stop_registry_id": "89004",
+          "source_row": 897,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Ямало-Ненецкий автономный округ, г. Ноябрьск, микрорайон \"4\", ул. Магистральная"
+        }
+      ],
+      "route_count": 5,
+      "stop_schedule_rows": 10,
+      "distinct_stop_ids": 2
+    },
+    {
+      "stop_region_code": "90",
+      "region_name": "Запорожская область",
+      "atlas_region_id": null,
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "90002",
+          "source_row": 1090,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Запорожская обл., г. Бердянск, пр-т Западный д. 4"
+        },
+        {
+          "stop_registry_id": "90001",
+          "source_row": 898,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Запорожская обл., г. Мелитополь, ул. Екатерины Великой (Интеркультурная), д. 204а"
+        }
+      ],
+      "route_count": 120,
+      "stop_schedule_rows": 356,
+      "distinct_stop_ids": 3
+    },
+    {
+      "stop_region_code": "91",
+      "region_name": "Республика Крым",
+      "atlas_region_id": "35000000",
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "91026",
+          "source_row": 421,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Крым, г. Ялта, ул. Московская, д. 8"
+        },
+        {
+          "stop_registry_id": "91006",
+          "source_row": 411,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Крым, г. Судак, ул. Гвардейская, 34"
+        },
+        {
+          "stop_registry_id": "91035",
+          "source_row": 430,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Республика Крым, г. Джанкой, ул. Крымская, д. 30"
+        }
+      ],
+      "route_count": 286,
+      "stop_schedule_rows": 1616,
+      "distinct_stop_ids": 12
+    },
+    {
+      "stop_region_code": "92",
+      "region_name": "г. Севастополь",
+      "atlas_region_id": null,
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "92004",
+          "source_row": 1599,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "г. Севастополь, ул. Вокзальная, 11"
+        }
+      ],
+      "route_count": 112,
+      "stop_schedule_rows": 224,
+      "distinct_stop_ids": 1
+    },
+    {
+      "stop_region_code": "93",
+      "region_name": "Донецкая Народная Республика",
+      "atlas_region_id": null,
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "93014",
+          "source_row": 2028,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Донецкая Народная Республика, г. Донецк, пр. Ильича, д. 95а"
+        },
+        {
+          "stop_registry_id": "93015",
+          "source_row": 2001,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Донецкая Народная Республика, г. Шахтерск, ул. Крупской, д. 1"
+        },
+        {
+          "stop_registry_id": "93022",
+          "source_row": 2011,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Донецкая Народная Республика, г. Волноваха, Ленина ул., д. 26"
+        }
+      ],
+      "route_count": 332,
+      "stop_schedule_rows": 2306,
+      "distinct_stop_ids": 22
+    },
+    {
+      "stop_region_code": "94",
+      "region_name": "Луганская Народная Республика",
+      "atlas_region_id": null,
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "94008",
+          "source_row": 307,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Луганская Народная Республика, г. Лутугино, ул. Ленина, д. 110"
+        },
+        {
+          "stop_registry_id": "94017",
+          "source_row": 1893,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Луганская Народная Республика, г. Стаханов, пер. Базарный, д. 2"
+        },
+        {
+          "stop_registry_id": "94003",
+          "source_row": 313,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Луганская Народная Республика, г. Старобельск, пл. Базарная, д. 1А"
+        }
+      ],
+      "route_count": 327,
+      "stop_schedule_rows": 1946,
+      "distinct_stop_ids": 18
+    },
+    {
+      "stop_region_code": "95",
+      "region_name": "Херсонская область",
+      "atlas_region_id": null,
+      "mapping_method": "Reviewed stop-address evidence; code systems are not equated with OMS",
+      "evidence": [
+        {
+          "stop_registry_id": "95009",
+          "source_row": 462,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Херсонская обл., с. Чкалово, ул. Зеленая, д. 37"
+        },
+        {
+          "stop_registry_id": "95005",
+          "source_row": 466,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Херсонская обл., пгт Чаплынка, ул. Ленина, д. 22"
+        },
+        {
+          "stop_registry_id": "95003",
+          "source_row": 463,
+          "source_file": "bus-stops-20261009.xlsx",
+          "address": "Херсонская обл., г. Скадовск, ул. Пасечника, д.3"
+        }
+      ],
+      "route_count": 74,
+      "stop_schedule_rows": 324,
+      "distinct_stop_ids": 11
+    }
+  ]
+}

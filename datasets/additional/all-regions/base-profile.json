@@ -1,0 +1,4533 @@
+{
+  "source_database": "data/additional.duckdb",
+  "scope": "82 atlas regions plus all companies outside atlas preserved separately by original source_region",
+  "regions": [
+    {
+      "region_id": "01000000",
+      "name": "Алтайский край",
+      "population": 2163693,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/01000000/settlements.parquet",
+          "rows": 1605,
+          "sha256": "2601f3fb2cf10bca19a90987ea4470d807a9936ef889144637bc70525c7cd7c3",
+          "bytes": 44760
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/01000000/companies_2025.parquet",
+          "rows": 35815,
+          "sha256": "b1b1b3f37637f6b4e7ac6c0c0fb92bda9140f02a3bbcf4047bf5ca25b08aa0e8",
+          "bytes": 796140
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/01000000/fns_matched_2025.parquet",
+          "rows": 21169,
+          "sha256": "3d714f0d9177ef3a889e47dfe3c252c44461c364b4a5f5cb80601f603e079efc",
+          "bytes": 965492
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/01000000/settlement_economy.parquet",
+          "rows": 1605,
+          "sha256": "211a87c43be2b34fce2e60ecd08824ae8af522b0e2985e2f24fbf5967100f3f5",
+          "bytes": 63510
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/01000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "dd6a2e22ea8b781133be914504d108137dd7cdcbb0c32a54af2cc5b29da8e218",
+          "bytes": 2897
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/01000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "56494a441031fde5084c04ca4000ef502a174a682aabee73e9604bceec6e212a",
+          "bytes": 2431
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/01000000/settlement_lights.parquet",
+          "rows": 3210,
+          "sha256": "a039ad64edd89d701be8d81df01323654353a24fd34bfe266f6b802a51429174",
+          "bytes": 5675
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/01000000/company_settlement.parquet",
+          "rows": 18355,
+          "sha256": "692364ca0787b62bd3216689cad9d26d5e2ca39367d06d4922eac24c7412a4da",
+          "bytes": 110599
+        }
+      }
+    },
+    {
+      "region_id": "03000000",
+      "name": "Краснодарский край",
+      "population": 5838273,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/03000000/settlements.parquet",
+          "rows": 1765,
+          "sha256": "3d8f588361d957e8ef3d079efe68843c29ae56fde6446c2bb293634a0c67ba77",
+          "bytes": 50505
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/03000000/companies_2025.parquet",
+          "rows": 97023,
+          "sha256": "f8af6ec7cffc83d040b8d8b168091c0f96a67c4c3e4af7c5ab249250a592a260",
+          "bytes": 2087025
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/03000000/fns_matched_2025.parquet",
+          "rows": 57059,
+          "sha256": "c90088ce1813dc777130be3443e823889e320aded78bba8912608e3086d79c59",
+          "bytes": 2504523
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/03000000/settlement_economy.parquet",
+          "rows": 1765,
+          "sha256": "6fe9d937044998f6fcd14fe3c000e9aa2e95e41c4a7e7776a416abdcd03c6b35",
+          "bytes": 80611
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/03000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "c43f2ad79863027f9c6b1eea0487ed08d2199d55abda5635f2ebfce7762e7b83",
+          "bytes": 2940
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/03000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "f47dd221427504cebd94a5f93913521f0710447089a8e17d23725cb03fe8b7a0",
+          "bytes": 2449
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/03000000/settlement_lights.parquet",
+          "rows": 3530,
+          "sha256": "6032426717619d5e9169b24c0a6aa6b8e91afeb0de74183b36d8a9d7295cca8b",
+          "bytes": 5843
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/03000000/company_settlement.parquet",
+          "rows": 54111,
+          "sha256": "f0f577f336d9e77ea54bdc897d44511b92739158765f388f0cb477ecf2616916",
+          "bytes": 350834
+        }
+      }
+    },
+    {
+      "region_id": "04000000",
+      "name": "Красноярский край",
+      "population": 2856971,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/04000000/settlements.parquet",
+          "rows": 1720,
+          "sha256": "9a7384b60b25128fe63b6392263e34369022b0f268d04cd9074fa0d73dadc3b7",
+          "bytes": 47446
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/04000000/companies_2025.parquet",
+          "rows": 53716,
+          "sha256": "7ecfa91346409f60e1917a07b334e3c6610416d8abf6358c95a8a90b10327940",
+          "bytes": 1133105
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/04000000/fns_matched_2025.parquet",
+          "rows": 32646,
+          "sha256": "fa740a42b87818c5f057ea6766b3ea553358661cda02642abdae1a8084231b4b",
+          "bytes": 1453706
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/04000000/settlement_economy.parquet",
+          "rows": 1720,
+          "sha256": "ab7b443e2d973858689db5719b06098525df5667b219552679d096367630bebc",
+          "bytes": 60789
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/04000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "a7bc33015043605651598425b42674be5dfbc68407f3b6bcb3468fd91346d24f",
+          "bytes": 2930
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/04000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "46264741fc2640d1fd0722109cda37e5af7f98f699a16829516e36f352ead757",
+          "bytes": 2464
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/04000000/settlement_lights.parquet",
+          "rows": 3440,
+          "sha256": "60073b82da0ce671bbc7117fabad4145c2bbbdbbd31163c27011f0ff4ab995aa",
+          "bytes": 6368
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/04000000/company_settlement.parquet",
+          "rows": 24264,
+          "sha256": "9a692721d85687063bf4c5aaadbc50b358e1f32be07a26a9b8be10e2e40144f4",
+          "bytes": 130372
+        }
+      }
+    },
+    {
+      "region_id": "05000000",
+      "name": "Приморский край",
+      "population": 1845165,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/05000000/settlements.parquet",
+          "rows": 659,
+          "sha256": "61e99c1c68ac9e8dd2fc6de3e3d8ffdb8e39eba0f7be8ae6e1181e55e1dee189",
+          "bytes": 31214
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/05000000/companies_2025.parquet",
+          "rows": 49771,
+          "sha256": "45337981c7bcb7edbbd37e87df2d1217e417109ab8ba1fdfc78571225849c12f",
+          "bytes": 1042476
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/05000000/fns_matched_2025.parquet",
+          "rows": 29837,
+          "sha256": "02a60b370adf124200ed16d027c0c0f381d20a53da8e4b13350c2225e040105f",
+          "bytes": 1322578
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/05000000/settlement_economy.parquet",
+          "rows": 659,
+          "sha256": "f397dbb0781a88bd440ceb42e2c27245cd490c65a9ffa7540732f420057335b5",
+          "bytes": 42174
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/05000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "4b4432ebc31518a8a584f106bdbdc4196cc0f67a7099075cd9ee359a6c3949ef",
+          "bytes": 2910
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/05000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "268fc219aa4cdbcba513b8b8217d5bc17c93dbcb4d19ed3b9e9a8277521774b6",
+          "bytes": 2463
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/05000000/settlement_lights.parquet",
+          "rows": 1318,
+          "sha256": "aa478cc32895aa1a5880d3ac8b43b78cab88174c9803b17e6db6dce52524b99e",
+          "bytes": 5074
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/05000000/company_settlement.parquet",
+          "rows": 23824,
+          "sha256": "4671a8663a1e4e8be44f20533f4cb5fab4598fa558625bc259ed48c067cd8389",
+          "bytes": 131499
+        }
+      }
+    },
+    {
+      "region_id": "07000000",
+      "name": "Ставропольский край",
+      "population": 2907593,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/07000000/settlements.parquet",
+          "rows": 760,
+          "sha256": "729052c2bc6f77a047504f4824f0c8245f2cc36163f606502077d76c5d57cea0",
+          "bytes": 34028
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/07000000/companies_2025.parquet",
+          "rows": 28590,
+          "sha256": "ffd2c20a5ae75e5a61c984f348ea00d2d32aebc4c30b03628a4082b4bc6bd3fd",
+          "bytes": 661402
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/07000000/fns_matched_2025.parquet",
+          "rows": 17338,
+          "sha256": "477d34dfa9863917c73427dbba43dfc6289ef752fbc3f06f5a926140df86f54d",
+          "bytes": 799956
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/07000000/settlement_economy.parquet",
+          "rows": 760,
+          "sha256": "572729d134a9254d42995dd353cd1be6443b391a767ca5e54142e59980a854a5",
+          "bytes": 45205
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/07000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "02fc33e47fda0d675f93fc92becf9ece7c5098bee215b04616aa4e20dfcdc395",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/07000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "8ebc79296e13f8a28d562a567e6bd848b9318b4e410f7c27c236bdaf9882ddf3",
+          "bytes": 2411
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/07000000/settlement_lights.parquet",
+          "rows": 1520,
+          "sha256": "ef60e2eb0acd916e30bcc96e83d3596abb6f1476e5b89ec3a18fadc51cf7afd6",
+          "bytes": 5116
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/07000000/company_settlement.parquet",
+          "rows": 16761,
+          "sha256": "e925fd065cea43f08c027e0908473c9d5b2e0dca450b5969252ef8196799a2e8",
+          "bytes": 106727
+        }
+      }
+    },
+    {
+      "region_id": "08000000",
+      "name": "Хабаровский край",
+      "population": 1292944,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/08000000/settlements.parquet",
+          "rows": 436,
+          "sha256": "7e853799c27d99cad9d961184d3f4418abc018f40dbcdb68a827e209489d0db9",
+          "bytes": 23189
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/08000000/companies_2025.parquet",
+          "rows": 30251,
+          "sha256": "a2e1fb85528131152001c3fd0c68d7a8ed8ee5b405efa52d9315b2dc01407296",
+          "bytes": 643614
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/08000000/fns_matched_2025.parquet",
+          "rows": 17271,
+          "sha256": "70279b891d7b33600f09890ab7b176ec83bd73fd973584f377b0c27b04708cdf",
+          "bytes": 781227
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/08000000/settlement_economy.parquet",
+          "rows": 436,
+          "sha256": "f20e94a541bf3fb07bd9b8c6e8364760169d6411dde44c23dbc511a9a5d4becd",
+          "bytes": 31138
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/08000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "8b489c1e5e534f4ad648f3482eaaaafbf1d47427ff4f1ba1b53226172f17b5ca",
+          "bytes": 2917
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/08000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "2db0df44b76cebb92fdddbc5b8bb764f9d6f1348d09d5f516d1f11211a7e8af8",
+          "bytes": 2412
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/08000000/settlement_lights.parquet",
+          "rows": 872,
+          "sha256": "a11199a56c5dca8b9e3e855263f2a614bdb8044b8b5a135e617b57201952186c",
+          "bytes": 4423
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/08000000/company_settlement.parquet",
+          "rows": 16030,
+          "sha256": "6d35a74e5786a7d4d02161011e5434881608e8518b4c87e75fbc73c7fe1bb84b",
+          "bytes": 89528
+        }
+      }
+    },
+    {
+      "region_id": "10000000",
+      "name": "Амурская область",
+      "population": 766912,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/10000000/settlements.parquet",
+          "rows": 627,
+          "sha256": "b8d7b33ff40c58b1d745483f7893b30f6fffd008e33c0b20bb6d22528d40c73d",
+          "bytes": 29224
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/10000000/companies_2025.parquet",
+          "rows": 12275,
+          "sha256": "6768e4b8b2ee8d9a2148aa44e1b5f09991999f64be98a3bf542cfef65d8d8be4",
+          "bytes": 272537
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/10000000/fns_matched_2025.parquet",
+          "rows": 7992,
+          "sha256": "ccd7c3169573b14d4dd5e07f013a220781120f27e5e6b1959569d227ae759828",
+          "bytes": 375548
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/10000000/settlement_economy.parquet",
+          "rows": 627,
+          "sha256": "4bd016fb8519e2819d79bf00459ff2a9df75544f848dbeb24c627e4c6e0df40c",
+          "bytes": 35797
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/10000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "5cdb824792cc2b7a9a055c287c802ecb461b0f23ebdaa6665c434d65cd5fab2a",
+          "bytes": 2917
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/10000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "4d3b7530edd0dc9632b513ee61251bb355e4e9eb43b96059bd039d438f4fc3a0",
+          "bytes": 2377
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/10000000/settlement_lights.parquet",
+          "rows": 1254,
+          "sha256": "3c10c051a4fb0798e8ca4ae4ff2c2eb0905a58207f8f078aeffafb365d25a9a0",
+          "bytes": 5184
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/10000000/company_settlement.parquet",
+          "rows": 7757,
+          "sha256": "d366a87ac74b1772b7297bea417d2283ea9020bbe4424d1f901571f61642be19",
+          "bytes": 43639
+        }
+      }
+    },
+    {
+      "region_id": "11000000",
+      "name": "Архангельская область",
+      "population": 1009881,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/11000000/settlements.parquet",
+          "rows": 3956,
+          "sha256": "604ec8bec8cc65d910fd6e6a07ab6e57a12a58696c97b1d9c45de1ad1312518a",
+          "bytes": 90663
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/11000000/companies_2025.parquet",
+          "rows": 14643,
+          "sha256": "ae112d52505e1338ba2b0224265fb178f5dd3ce25ff456ac2e272178df2902a5",
+          "bytes": 324401
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/11000000/fns_matched_2025.parquet",
+          "rows": 8135,
+          "sha256": "523e8b4aa9563affc3c8d26dedb85224e1db42ee6e95130bbefc9d6baf32a7a2",
+          "bytes": 388265
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/11000000/settlement_economy.parquet",
+          "rows": 3956,
+          "sha256": "eb4bced047757b49a86b10fad77b22e32f1a21067bcee732cae6368f8d566f6e",
+          "bytes": 100593
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/11000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "499a7c14d457ed95f97aef6b91e429fe653d9a7f930cfa9156774c1efdaf5251",
+          "bytes": 2967
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/11000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "61e02ce6aebc6034d0747a829d7fe8a27229b84d9de1243c3694ef5eac80f189",
+          "bytes": 2376
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/11000000/settlement_lights.parquet",
+          "rows": 7912,
+          "sha256": "247a4ba9abb6b87cf72343c127d14b932226540e85bbeeb4d7df2d245ad7f45f",
+          "bytes": 9045
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/11000000/company_settlement.parquet",
+          "rows": 9042,
+          "sha256": "c9c5aeded311fedb0f8998edae1d1ed05552f750e8950cc8852743b1c24d7160",
+          "bytes": 53089
+        }
+      }
+    },
+    {
+      "region_id": "11800000",
+      "name": "Ненецкий АО",
+      "population": 41434,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/11800000/settlements.parquet",
+          "rows": 43,
+          "sha256": "9a269c6e31a50ccea561bb8ef1610add011f425ea2adb7eb107370b02b9bf7b3",
+          "bytes": 3895
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/11800000/companies_2025.parquet",
+          "rows": 842,
+          "sha256": "b3497c0cf007f77a73f3e4eeda263e8069d950b38602714aaee433f0958b7e26",
+          "bytes": 34163
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/11800000/fns_matched_2025.parquet",
+          "rows": 409,
+          "sha256": "8acb2d321ecad3213d20fdc81a7f0ddbcfffe14f2cc62b2d1bd158bb6acfb145",
+          "bytes": 32058
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/11800000/settlement_economy.parquet",
+          "rows": 43,
+          "sha256": "c421639afc675450fdbeb06d93acb15772452d316e554783971c0ee3dfa41c0e",
+          "bytes": 5355
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/11800000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "7a2465bb4eee6c985d9becbd61a04cc5335ec0e5c5c19fe467e5fdbdb4b8a3eb",
+          "bytes": 2867
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/11800000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "880857662de8ee7e9d27cc11e9c77bae56dedfccc5bfe56bc7b89760b2996e2c",
+          "bytes": 2173
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/11800000/settlement_lights.parquet",
+          "rows": 86,
+          "sha256": "12b9612a78196b7d3393576084d3b2b49584812c2ebd52463887ce714c3ed263",
+          "bytes": 1386
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/11800000/company_settlement.parquet",
+          "rows": 380,
+          "sha256": "ce3ebc6e5cafaa3425f229d29eac3d7ec8e2cae2c8ad47a6ac16bb233d356c13",
+          "bytes": 5061
+        }
+      }
+    },
+    {
+      "region_id": "12000000",
+      "name": "Астраханская область",
+      "population": 960142,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/12000000/settlements.parquet",
+          "rows": 432,
+          "sha256": "8bfcb68aceeb64c7d20ad2a61f207464ece09dbe271bc77824eff90533e53c79",
+          "bytes": 22274
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/12000000/companies_2025.parquet",
+          "rows": 10337,
+          "sha256": "4bb1dfa31c94c71d552af0b52cab9c653de06fb55f4c5403f37da71739987cf8",
+          "bytes": 237517
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/12000000/fns_matched_2025.parquet",
+          "rows": 5714,
+          "sha256": "d55184d2f255758d3650d8963f9bfd0ab1fc9e95b654bbc698d437d7475d1853",
+          "bytes": 293995
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/12000000/settlement_economy.parquet",
+          "rows": 432,
+          "sha256": "cd1c3bc89a4de8c4717f35bd30b98070cda1138efaac94d9d9ccb518c18ae1f6",
+          "bytes": 27624
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/12000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "67e6b1e0ee3eb073ad879a16ad419e19fd010b57d0b4430131a7e9438d704a96",
+          "bytes": 2957
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/12000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "7bd21f8d73e46d7da56108c694165b84f4cd10c18a8024271accd705719c6873",
+          "bytes": 2384
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/12000000/settlement_lights.parquet",
+          "rows": 864,
+          "sha256": "dbafa02ffb91804d104998c597f5f0c1bbd05760d0331ea4706a91f47c840426",
+          "bytes": 4106
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/12000000/company_settlement.parquet",
+          "rows": 5676,
+          "sha256": "25489ff142a831e21072a9be566f76ecfa39379e96f5124fbb5b991d14de40c6",
+          "bytes": 37881
+        }
+      }
+    },
+    {
+      "region_id": "14000000",
+      "name": "Белгородская область",
+      "population": 1540486,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/14000000/settlements.parquet",
+          "rows": 1602,
+          "sha256": "47113fa029848b253c4dad03b53eee4e1ff9e3d98e1affc6054c9b3b02c227f6",
+          "bytes": 42323
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/14000000/companies_2025.parquet",
+          "rows": 23425,
+          "sha256": "a05e2dc5b56cff97e1e8a195b7a0b19dbd48d6a183fec19dcfa79bf0eaf22a17",
+          "bytes": 506985
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/14000000/fns_matched_2025.parquet",
+          "rows": 14332,
+          "sha256": "1e67e0fcc15c2fd70408bd1108a0e2858e75dbb416cc4e41ecf5b4a79fdb3ab4",
+          "bytes": 659861
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/14000000/settlement_economy.parquet",
+          "rows": 1602,
+          "sha256": "3e1c8f6a5517607a34534a95eb090a0c229ef90ec994563d147b0bb28c7a61ac",
+          "bytes": 53350
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/14000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "01b5c3903c7a01c532c0d8eb3b74d9641dfab89bc653c864b524ee6cb9a2794e",
+          "bytes": 2957
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/14000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "31c5ba768fe8f9bd91bd54f65fd859a745bd1da513d7a58c95648d2239b2e23a",
+          "bytes": 2403
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/14000000/settlement_lights.parquet",
+          "rows": 3204,
+          "sha256": "e2bf3eea2a3a935c8ed42dd33f5bdf48a6b81d2c402acd3e0ad8817cdb8a1896",
+          "bytes": 4617
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/14000000/company_settlement.parquet",
+          "rows": 13221,
+          "sha256": "3643198fa3a362959f7774b8cc72e6944d1da2106c419ccf0790a50186f56b74",
+          "bytes": 76288
+        }
+      }
+    },
+    {
+      "region_id": "15000000",
+      "name": "Брянская область",
+      "population": 1169161,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/15000000/settlements.parquet",
+          "rows": 2643,
+          "sha256": "67203ec010d82ac12c1133db54cdf8132d64c7a1bf82312b0cffb0f7cc7ff041",
+          "bytes": 64605
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/15000000/companies_2025.parquet",
+          "rows": 11901,
+          "sha256": "4379da7e85d4f74ce2928b3f43befb5d0b2a16e65ae65206548f38d5a605b148",
+          "bytes": 284353
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/15000000/fns_matched_2025.parquet",
+          "rows": 7632,
+          "sha256": "c21285cb22d9ecc96df28fed8343843cde3ff9e307a7047b729a91bad767e089",
+          "bytes": 367983
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/15000000/settlement_economy.parquet",
+          "rows": 2643,
+          "sha256": "ec80cce982b2e02ee4cfabc9db32bd2e5b0ae20cefab6f744977adeafa49572e",
+          "bytes": 72846
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/15000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "fd9503d74d8d5b79804e3a879b7b9a962f4d1f523c434b8cb2be1ca7d5bc8c2d",
+          "bytes": 2917
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/15000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "f4cddd702cb45e0cf629d5a146c9e386025cff96aff86c3b92c1743d3d1a0f83",
+          "bytes": 2353
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/15000000/settlement_lights.parquet",
+          "rows": 5286,
+          "sha256": "97220f945b10d874df05b8868f491166dae0b87ad92e478333559101fc230ac1",
+          "bytes": 6068
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/15000000/company_settlement.parquet",
+          "rows": 7721,
+          "sha256": "25942df591870d4617e7944f9d441e7575bdf6fa34e767f820b6e35454936af0",
+          "bytes": 49531
+        }
+      }
+    },
+    {
+      "region_id": "17000000",
+      "name": "Владимирская область",
+      "population": 1348134,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/17000000/settlements.parquet",
+          "rows": 2526,
+          "sha256": "cc4bbe518be733a9f62c4032059c3ac31c09a827b698e6b6cc2835bcdf4b968f",
+          "bytes": 60944
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/17000000/companies_2025.parquet",
+          "rows": 21416,
+          "sha256": "e8e36f3c57c2bdca9ec43c7b7be27e99772a0767f6d69bb723c193e7c2dca39f",
+          "bytes": 492146
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/17000000/fns_matched_2025.parquet",
+          "rows": 12621,
+          "sha256": "9becea9c0b72ef1cd3418bec259890b5542cbc3ce928c6d2d4714e918e3aa06b",
+          "bytes": 589998
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/17000000/settlement_economy.parquet",
+          "rows": 2526,
+          "sha256": "4e4fbfcb2e0838f593d487fd9f844ae8bcbcfad23c9463824841a48b46fdfb0f",
+          "bytes": 74252
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/17000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "57e310aba871360e2ecd3e80e93439420a25b1ae7c7e6bebd5fbd442d974af4a",
+          "bytes": 2957
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/17000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "284e82f22d8a4340d9b3f98c826b04f389e496436338f70e9700eb3787a09744",
+          "bytes": 2397
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/17000000/settlement_lights.parquet",
+          "rows": 5052,
+          "sha256": "bcf81f3a7f894c5865d2c23b50b97667990552f78007b7466976162e20060a4e",
+          "bytes": 6265
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/17000000/company_settlement.parquet",
+          "rows": 13303,
+          "sha256": "6d4c77fe6e12edb64a13374ff375d340ad9014fe08319d46ce1185e616f91152",
+          "bytes": 85535
+        }
+      }
+    },
+    {
+      "region_id": "18000000",
+      "name": "Волгоградская область",
+      "population": 2500781,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/18000000/settlements.parquet",
+          "rows": 1494,
+          "sha256": "bfb4fca11db0fb17df2ee7cde4d4be24abc45bc7725c246262045cdeadcff173",
+          "bytes": 42073
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/18000000/companies_2025.parquet",
+          "rows": 25667,
+          "sha256": "5e1a767f841820d142750c800024d4f73cd1efb79a8023653c44044310b715c4",
+          "bytes": 576283
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/18000000/fns_matched_2025.parquet",
+          "rows": 15447,
+          "sha256": "b2fdc6e7d5b81d183d065a08e18d60f31f7bf38a9b12ae75d1344ca00e32cda9",
+          "bytes": 717527
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/18000000/settlement_economy.parquet",
+          "rows": 1494,
+          "sha256": "94f0ebcd004e2bbfc08b97513fa1f6af1525866c743f23a90fcd8dec657798c4",
+          "bytes": 54216
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/18000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "3eecc299f6c5cebb72f259e41a494245ea82a134ef5eb608e866c136d7c47bca",
+          "bytes": 2967
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/18000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "8f36b10ebcecbb3cc8c53be36f2e2352a24e44c3a5662d455e59d202a83ea666",
+          "bytes": 2414
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/18000000/settlement_lights.parquet",
+          "rows": 2988,
+          "sha256": "4470decf455355ea71c6e6ffe218e496bb7fc6dbfdab67d5a64b1e5b259457f1",
+          "bytes": 4813
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/18000000/company_settlement.parquet",
+          "rows": 11295,
+          "sha256": "695fce261bbd7d819ae972f5dfdeddacb99ae3321aa716b9761178a92f687114",
+          "bytes": 70276
+        }
+      }
+    },
+    {
+      "region_id": "19000000",
+      "name": "Вологодская область",
+      "population": 1142827,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/19000000/settlements.parquet",
+          "rows": 7867,
+          "sha256": "d38ebdc07710ce4890cad038ad5cf246947680c202ba15404f955cf895e4552a",
+          "bytes": 161097
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/19000000/companies_2025.parquet",
+          "rows": 26710,
+          "sha256": "02e90dbb5548937051f6946595c181ecc026e4c735849ed7d2c7cd59959dfc8c",
+          "bytes": 563521
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/19000000/fns_matched_2025.parquet",
+          "rows": 14777,
+          "sha256": "e0af19495c229d4016362a51b1c2723d7817900f8ea399740d98a6e099a5d265",
+          "bytes": 670687
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/19000000/settlement_economy.parquet",
+          "rows": 7867,
+          "sha256": "6f99073ef3ea81ac8b8502ddd27e20395034d9633533853a7cd6b730ef06a6fc",
+          "bytes": 175377
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/19000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "ad2b9821819209c260e0430175c86936f240e59b2bf77a6a033aae96cddbcbf5",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/19000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "fa7c25db7808d60dd9209aff7233ad34b153643be81e85c1fc177d34cf77980e",
+          "bytes": 2436
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/19000000/settlement_lights.parquet",
+          "rows": 15734,
+          "sha256": "cfde11cf01682eade0b75262878fe4fc0c2f301d3d3cf6b4fb905d6c9ace5c1f",
+          "bytes": 17775
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/19000000/company_settlement.parquet",
+          "rows": 16100,
+          "sha256": "811aa5f9ed7d4c803729fae6120e11fa97b5d17b7c0382d17c253acfc543752a",
+          "bytes": 95229
+        }
+      }
+    },
+    {
+      "region_id": "20000000",
+      "name": "Воронежская область",
+      "population": 2308792,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/20000000/settlements.parquet",
+          "rows": 1732,
+          "sha256": "7be44bc6924b0faeaef31e4ffa73f3d5fb130ac7e45c8bd1ac3b0585884f1d83",
+          "bytes": 47086
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/20000000/companies_2025.parquet",
+          "rows": 35654,
+          "sha256": "053955f2d4f6fc3711ced4d7d29575319e17d9cb4e496d4a17b025b6bf7ba227",
+          "bytes": 809963
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/20000000/fns_matched_2025.parquet",
+          "rows": 23361,
+          "sha256": "e1f1d7fa00e5a904fa3c4a18631b335eb8b7c47fbb2bdc2024dc38f8549ca3b6",
+          "bytes": 1074055
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/20000000/settlement_economy.parquet",
+          "rows": 1732,
+          "sha256": "17650ac85d25d46faaa21cd1346edf1369e4e5d523554beffe2b5e736b8c5704",
+          "bytes": 64661
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/20000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "804185f4948fa70b42d8ff513a3f32dfabe0a3ccc44dbc692894d5d2ee568e10",
+          "bytes": 2950
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/20000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "729735e99b1e8373c25169489d61e617797e3a632e3e08b495b390196adc0fb8",
+          "bytes": 2416
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/20000000/settlement_lights.parquet",
+          "rows": 3464,
+          "sha256": "130a9bfe4ec7c623c77378b26ee4ea3299399a89a49687685defb993e6f9220b",
+          "bytes": 5440
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/20000000/company_settlement.parquet",
+          "rows": 19821,
+          "sha256": "57f37b86580dcd1a99870f7a96c5b7cd0158b04f61f782f4aad676a004953e19",
+          "bytes": 110479
+        }
+      }
+    },
+    {
+      "region_id": "22000000",
+      "name": "Нижегородская область",
+      "population": 3119115,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/22000000/settlements.parquet",
+          "rows": 4841,
+          "sha256": "f860efb12f324208901fc499e520250deab47996689706c592d50dc0b15ca01b",
+          "bytes": 108903
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/22000000/companies_2025.parquet",
+          "rows": 65260,
+          "sha256": "f9904c760b38ef260303e0eb9c9880546db18f475de9ba327f9b5aff97c724ef",
+          "bytes": 1429691
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/22000000/fns_matched_2025.parquet",
+          "rows": 41168,
+          "sha256": "7ebf891c10b0f734ffe50b9fbb50e8aafb56fc5381746c2101351aa5a910c97e",
+          "bytes": 1839648
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/22000000/settlement_economy.parquet",
+          "rows": 4841,
+          "sha256": "acc8646b6a51554bb117874ed4563cce110a26a730298461f16a22ac8f208935",
+          "bytes": 132266
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/22000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "0e771cc13de41461f401f7ee322938631d629b79e552ec8c9ab7e9498f3f51d5",
+          "bytes": 2970
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/22000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "2b94de6b7a495e400a0baf7eb76e712c28398294deccac7cba2597f1cf818f07",
+          "bytes": 2472
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/22000000/settlement_lights.parquet",
+          "rows": 9682,
+          "sha256": "9b9edd28ac8a6758946de9b69382e17128523562a3a2972fdd90b7d6982cdb06",
+          "bytes": 11432
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/22000000/company_settlement.parquet",
+          "rows": 33245,
+          "sha256": "1e0450c031bf64aba935aba59e813e05b0f65a5425cb7d05c7bb113a03e06d35",
+          "bytes": 191555
+        }
+      }
+    },
+    {
+      "region_id": "24000000",
+      "name": "Ивановская область",
+      "population": 927828,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/24000000/settlements.parquet",
+          "rows": 3049,
+          "sha256": "06753a243ae3c678bec6bdadf92bf240d4279d7ae18142a448463787419ee884",
+          "bytes": 67978
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/24000000/companies_2025.parquet",
+          "rows": 21344,
+          "sha256": "50d3acfdf4eaca35a10bb1dd26365ec881b5ce54f9f9a07eb43b503bdd273ea1",
+          "bytes": 456026
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/24000000/fns_matched_2025.parquet",
+          "rows": 12618,
+          "sha256": "f64ee4b74086143d0c565838a9c50b6ad4cb189d09f67572e461e98cb012bb93",
+          "bytes": 578479
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/24000000/settlement_economy.parquet",
+          "rows": 3049,
+          "sha256": "53377e5ab1cfbd51c98022465dcd1c66f1c0428a3be648f966656ad286607843",
+          "bytes": 76124
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/24000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "a164b6525728758ec501e89ec1814aed99a7e937e42e4db8dc2f5463b7ecadf7",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/24000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "ba6633a7b99bf0c06136890c8b7e20db9c7c7c04b729cf3edf056aaf61dcdfb5",
+          "bytes": 2359
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/24000000/settlement_lights.parquet",
+          "rows": 6098,
+          "sha256": "5ac878dc1f9eea1f49d83b1b3b5450f0a12afc1b81458f798a925fbc5988df75",
+          "bytes": 6665
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/24000000/company_settlement.parquet",
+          "rows": 13349,
+          "sha256": "889480ff1aae7cce63a457d00f54d72f19139c004c90ea60b0f10ed195c8649f",
+          "bytes": 74369
+        }
+      }
+    },
+    {
+      "region_id": "25000000",
+      "name": "Иркутская область",
+      "population": 2370102,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/25000000/settlements.parquet",
+          "rows": 1532,
+          "sha256": "0d66cab88bee580f1f9424c9bf6ac6e1f2d453dfb7c34c6254172c518a1bb99b",
+          "bytes": 43448
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/25000000/companies_2025.parquet",
+          "rows": 42191,
+          "sha256": "b08d5a091c645f178d762a12484660fb46071f7e9f27199dd59584156f43b5cb",
+          "bytes": 915532
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/25000000/fns_matched_2025.parquet",
+          "rows": 23783,
+          "sha256": "b9078f14499082329d36f88c4f677ff5241d4963f8500fafba41f3651e9faad3",
+          "bytes": 1069113
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/25000000/settlement_economy.parquet",
+          "rows": 1532,
+          "sha256": "1d356f4e553b5c0685a2bf42cfcc7a1a960a48d5a9f915fb6e871115150041f5",
+          "bytes": 54627
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/25000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "07d569e2af75040c17cc654bdc374e9e4a028a900f3b8daa89f313f68415c66d",
+          "bytes": 2927
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/25000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "e05a2f288e84030c86e2a0ce515da7f0863f3f3385392a60f99e74c7be732501",
+          "bytes": 2510
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/25000000/settlement_lights.parquet",
+          "rows": 3064,
+          "sha256": "9278db9c5c1215c7c2c7cfaaacbb7931b5d661cd7df41b5c73ec027a2708d764",
+          "bytes": 5709
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/25000000/company_settlement.parquet",
+          "rows": 22088,
+          "sha256": "1ad4f258552ee5ffe26627927c3f7d93c801c74fd7215a0c4a465d72f78ff5ad",
+          "bytes": 136710
+        }
+      }
+    },
+    {
+      "region_id": "26000000",
+      "name": "Республика Ингушетия",
+      "population": 509541,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/26000000/settlements.parquet",
+          "rows": 122,
+          "sha256": "52e23655a2467fcf46a60d9c733f5a744112924a0510e4d32e3074bf3b69cdf4",
+          "bytes": 7093
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/26000000/companies_2025.parquet",
+          "rows": 5269,
+          "sha256": "eca5e19a023d838dd06fb30c9c85e13514e49ce33c1d4ed3d5d3dce549c7b4d3",
+          "bytes": 94501
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/26000000/fns_matched_2025.parquet",
+          "rows": 1737,
+          "sha256": "e0464480ccc2523595ead7e417432ce14fa76106f6d77b7ced807f11e3e63769",
+          "bytes": 91895
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/26000000/settlement_economy.parquet",
+          "rows": 122,
+          "sha256": "175974ef3775a53afd1a895a5d5cc567908d2268b85f517b790e40c3daa58de2",
+          "bytes": 8926
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/26000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "9de190a2f4bbb1606d74b149b548d791e659930beebc21835dd465d69a8c9908",
+          "bytes": 2957
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/26000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "16b61a69e9cc1c2be36476296906319bef8a88a947f5d35fefc348d0d9e4854f",
+          "bytes": 2279
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/26000000/settlement_lights.parquet",
+          "rows": 244,
+          "sha256": "1ea9709cd48801f90f14796ab140d4443e7f175b0e4a56c14fea9004c1cd4cd8",
+          "bytes": 1761
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/26000000/company_settlement.parquet",
+          "rows": 777,
+          "sha256": "669b2c76b64a780b549c55b8a6e179165e657e8f56ef9ed1d01c7d3ff4e1ba48",
+          "bytes": 11112
+        }
+      }
+    },
+    {
+      "region_id": "27000000",
+      "name": "Калининградская область",
+      "population": 1029966,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/27000000/settlements.parquet",
+          "rows": 1098,
+          "sha256": "a5636c7fbf0a4540ebd77023079586561c59c9a3a144dd5229c9bc0efed307e0",
+          "bytes": 43116
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/27000000/companies_2025.parquet",
+          "rows": 32136,
+          "sha256": "38e154ee234f19ac96010b41c7ecc99aee6103f1c2c2389af09e4319a88d576c",
+          "bytes": 708697
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/27000000/fns_matched_2025.parquet",
+          "rows": 21101,
+          "sha256": "bea092d0d35d5300a86a7da0b4b800bae4ed754782124c3b19246fa400bd36a4",
+          "bytes": 938523
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/27000000/settlement_economy.parquet",
+          "rows": 1098,
+          "sha256": "334d8ebfe6ff6eb3ee3958d20cbd8bc57c257287c2d730d52ca8774634931d95",
+          "bytes": 55020
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/27000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "c32a2a6dc68e24cdcaf005496ed11bbdc90c5f67caea432618088da91cfdead2",
+          "bytes": 2990
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/27000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "70a100b51997658f6be8fc98e58a7cf5d725d398b3160dc851a97918ab399e4b",
+          "bytes": 2420
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/27000000/settlement_lights.parquet",
+          "rows": 2196,
+          "sha256": "d77970ecb3628aa0f41d5275c9e952a96a1813278317f5d344993675d76f90ed",
+          "bytes": 7221
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/27000000/company_settlement.parquet",
+          "rows": 19790,
+          "sha256": "547cc2d18a48eed645450dafdccc27eb4d896503d8799b30f33ee58de7b16d03",
+          "bytes": 120293
+        }
+      }
+    },
+    {
+      "region_id": "28000000",
+      "name": "Тверская область",
+      "population": 1230171,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/28000000/settlements.parquet",
+          "rows": 9583,
+          "sha256": "04c1180001412a751a353523910390f4a868102325f84c06bf2387c511aa7fdb",
+          "bytes": 186580
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/28000000/companies_2025.parquet",
+          "rows": 23636,
+          "sha256": "28e3171a1bff014c4c8186a48e6f0b9296e415d53ca2f4a84f2618736edb2ebd",
+          "bytes": 512243
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/28000000/fns_matched_2025.parquet",
+          "rows": 13748,
+          "sha256": "bb88a8ba06793af72a949a90a870c798251cd9bc598c05b0a5f23a2070f88b44",
+          "bytes": 637195
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/28000000/settlement_economy.parquet",
+          "rows": 9583,
+          "sha256": "b9c32fdd55eeab8f02cb840837cfb36c30c6c7dc8937c378bfc9e3a666944616",
+          "bytes": 201271
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/28000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "6a1f8b3ae4c5e415c8351051ce6b2fa1a95086e02da59501a44503b595169bf1",
+          "bytes": 2917
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/28000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "ec8e6446f2ba4105a97424adccaeb29e1dd7a375a78f59afde207b3cb3785bdd",
+          "bytes": 2433
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/28000000/settlement_lights.parquet",
+          "rows": 19166,
+          "sha256": "0497c59bfdceed4f0376c765f3ce069262ee982e33770f6f66e951f6d967dc24",
+          "bytes": 17647
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/28000000/company_settlement.parquet",
+          "rows": 13946,
+          "sha256": "f35f47ba8b0f27bd38b7097b3e8632507ebdc33f287137885d15cb68b756d3b8",
+          "bytes": 83509
+        }
+      }
+    },
+    {
+      "region_id": "29000000",
+      "name": "Калужская область",
+      "population": 1069904,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/29000000/settlements.parquet",
+          "rows": 3214,
+          "sha256": "30d8b0d38145d9f29b86e1bfcb9aa2e2ba182179c2af3de6e4fb378fd52d1a7e",
+          "bytes": 74056
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/29000000/companies_2025.parquet",
+          "rows": 19541,
+          "sha256": "02695c843ea3e037166a09590cdff62f9dadfe62afcc80fb634f868c9215fc45",
+          "bytes": 436653
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/29000000/fns_matched_2025.parquet",
+          "rows": 11433,
+          "sha256": "cddc6fb93cf9c67b6e1662d5e15cc67f49be144443609e91c71957fb93ba4e78",
+          "bytes": 541833
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/29000000/settlement_economy.parquet",
+          "rows": 3214,
+          "sha256": "d6ee78eec3b0d95dff8f7ff290f98453c45fe33ea3a6aff6a937c8e1f1082aa9",
+          "bytes": 88150
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/29000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "10eaef3da2e1549c85e3c452438f5128634cd2a27e44b875bddca1c38205866e",
+          "bytes": 2927
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/29000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "eb67753a6b95cd8989b9aa14f154e2fbe27c9d1fb4ae08818080383945623267",
+          "bytes": 2400
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/29000000/settlement_lights.parquet",
+          "rows": 6428,
+          "sha256": "66c27d8e70d9e82328c548d515f4657a493ce5a4834d17beedf62975183ef91e",
+          "bytes": 7700
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/29000000/company_settlement.parquet",
+          "rows": 11513,
+          "sha256": "121f1a52ff24083baff27c7a01668e3ce2fd68b79c4a0e1a73dc0f31aaa605aa",
+          "bytes": 71980
+        }
+      }
+    },
+    {
+      "region_id": "30000000",
+      "name": "Камчатский край",
+      "population": 291705,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/30000000/settlements.parquet",
+          "rows": 86,
+          "sha256": "dab0f3148a848bf92d301497d7a077be633731f2ebc7294a09fe8b2bd59b8669",
+          "bytes": 6105
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/30000000/companies_2025.parquet",
+          "rows": 7824,
+          "sha256": "9f313da227ddfd1d114686aaedc9c650751dab4496834cbbfecec222a8f386cb",
+          "bytes": 169775
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/30000000/fns_matched_2025.parquet",
+          "rows": 4244,
+          "sha256": "558677f6772a518ee62c253b4c3a979904619b64c2f8657d1c0565ac74cc9624",
+          "bytes": 217701
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/30000000/settlement_economy.parquet",
+          "rows": 86,
+          "sha256": "8e08f8d0dcc62271374fa8adfd81e4a843fe810723d2fc859dc69f51b2bd5c21",
+          "bytes": 8914
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/30000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "fd212a8dbebf689179914c6ffd7e79dfb7563d943ace62662a6938385eb596d7",
+          "bytes": 2907
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/30000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "1ea4390dc4f71a569ab556985202e81fae549f557e56f0d20d8668c49ada2e77",
+          "bytes": 2324
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/30000000/settlement_lights.parquet",
+          "rows": 172,
+          "sha256": "3a4af764c88f9958b78d6fde5d2cda25558c7d73bee7bdd153af9368eb9af8e0",
+          "bytes": 1695
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/30000000/company_settlement.parquet",
+          "rows": 4128,
+          "sha256": "7de4fad4937c56abb671751f304157a72e46324e463b8014486cf4104708fdc1",
+          "bytes": 24768
+        }
+      }
+    },
+    {
+      "region_id": "32000000",
+      "name": "Кемеровская область",
+      "population": 2600923,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/32000000/settlements.parquet",
+          "rows": 1108,
+          "sha256": "91a1a8be114912980987016bbc4424b5a1195dfc4d24e740b9759ba3a4351693",
+          "bytes": 47824
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/32000000/companies_2025.parquet",
+          "rows": 30199,
+          "sha256": "158bd251060edd9a42341b1e887486ded941c0d697f5e1facf84319463f70bf5",
+          "bytes": 690928
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/32000000/fns_matched_2025.parquet",
+          "rows": 18290,
+          "sha256": "36acbfeaa69e9355027e60efe7297a3622b86ba48fe63ee989b0b330ded77069",
+          "bytes": 835904
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/32000000/settlement_economy.parquet",
+          "rows": 1108,
+          "sha256": "cd67ffd78592d2cb41ea4c71221f2264bb10ab61398fb1b018d5225898ada930",
+          "bytes": 60091
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/32000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "fbef3918612bdc72c2ff0b3f5068d84198b46ecd1c0f5979e7f8478d857da2ec",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/32000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "279e8aa0a938344a855d1810855ef107de176777cf11e8de375a29e3772309b9",
+          "bytes": 2412
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/32000000/settlement_lights.parquet",
+          "rows": 2216,
+          "sha256": "98fc0fcf794bf7a31b192af321300007c7523e96fd2175b0057addd42f16a7f3",
+          "bytes": 7994
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/32000000/company_settlement.parquet",
+          "rows": 18784,
+          "sha256": "6dcad79b4307deae172fdf260e2c01f29da4cecb0cb855ec8f2226c1d7617c73",
+          "bytes": 117576
+        }
+      }
+    },
+    {
+      "region_id": "33000000",
+      "name": "Кировская область",
+      "population": 1153680,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/33000000/settlements.parquet",
+          "rows": 4245,
+          "sha256": "0698e15ef998b735242be9c8233aab81bc4cf6a24f7528a113d05d32121fd44f",
+          "bytes": 97537
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/33000000/companies_2025.parquet",
+          "rows": 23204,
+          "sha256": "dd0af8e34aa04650e356e09780c8f29f7650043fdbf63b272f99467f4858d617",
+          "bytes": 501685
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/33000000/fns_matched_2025.parquet",
+          "rows": 12502,
+          "sha256": "86b87218fbabfb4d17ed4f24dd209c0688d7a295f93ee4f278109dfe42d5827a",
+          "bytes": 578895
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/33000000/settlement_economy.parquet",
+          "rows": 4245,
+          "sha256": "cde1536e9482fdcc209c0656ded256e8890dae9e21c846be0ce919791300c7b4",
+          "bytes": 118753
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/33000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "41ede69aa4981e30eaf85331027e09dabb75807a2a7b6279411155123086eb2c",
+          "bytes": 2927
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/33000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "1ac1ba771e3d15e26f3c88982819892ed22bb10c1b9b06070a0a3ccf4049fa1d",
+          "bytes": 2405
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/33000000/settlement_lights.parquet",
+          "rows": 8490,
+          "sha256": "b01bf7ada2ac3f164f0a55540b5581473daa015cdd071daede4041c439d17acb",
+          "bytes": 8999
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/33000000/company_settlement.parquet",
+          "rows": 13992,
+          "sha256": "9fe23a621d1452974d880d22ece8c2aadf2995fa9ede3b7cacd83f54d52f28e1",
+          "bytes": 88876
+        }
+      }
+    },
+    {
+      "region_id": "34000000",
+      "name": "Костромская область",
+      "population": 580976,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/34000000/settlements.parquet",
+          "rows": 3470,
+          "sha256": "39019f061363f85d583be0c8bc69a3e9d0130cdb34c539ab6d7f4b2cc851c284",
+          "bytes": 77469
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/34000000/companies_2025.parquet",
+          "rows": 10752,
+          "sha256": "4e50a6125dfbee2484e0fcc7f518ea2f1ab3120d4f0acd2f1c87f9b1553e3280",
+          "bytes": 245747
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/34000000/fns_matched_2025.parquet",
+          "rows": 6142,
+          "sha256": "d4f2a60b0d03a767cde70417f0021623e75df1fa8323f15f584a352f6b84f6fc",
+          "bytes": 310689
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/34000000/settlement_economy.parquet",
+          "rows": 3470,
+          "sha256": "50faed65bc80310b654c04905f3c715bb897d2aed2ce476de5c3030030226e41",
+          "bytes": 84673
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/34000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "1d2d632f81665745d35923be90d50e0020643ac411a734f9952a8e5bec1390a3",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/34000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "309c25180fe34db9402997ad1d61d5b770b316093b848d3635e479ae2febacf5",
+          "bytes": 2350
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/34000000/settlement_lights.parquet",
+          "rows": 6940,
+          "sha256": "e5a4f44bb2385356a485c8966364b638b34993c03ab397088c0a3d5d523dc2f0",
+          "bytes": 7362
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/34000000/company_settlement.parquet",
+          "rows": 6327,
+          "sha256": "85b55b50c8fda468d9c03c9e1b68250799215e4810aba62c54c8f4c1323c0aba",
+          "bytes": 40429
+        }
+      }
+    },
+    {
+      "region_id": "35000000",
+      "name": "Республика Крым",
+      "population": 1934630,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/35000000/settlements.parquet",
+          "rows": 1019,
+          "sha256": "a265f35dc8660683aafc4b91f0ca1054d27c1023928a34043b35baaf4b8794b9",
+          "bytes": 43985
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/35000000/companies_2025.parquet",
+          "rows": 28528,
+          "sha256": "a0e13c44bae12b6aa28e0bd924c1ef2e61e7a197f4b778d6b3968006cf873a79",
+          "bytes": 600033
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/35000000/fns_matched_2025.parquet",
+          "rows": 15919,
+          "sha256": "ec7ff7dde42b5567dbc0f8e75b0103d6fccd10bf678b5caecae8ca4cd81a4d13",
+          "bytes": 715199
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/35000000/settlement_economy.parquet",
+          "rows": 1019,
+          "sha256": "5fdda2d36a920c0168c1398df37d6e7b3d688d9bfbf7be35f7382db07ab6cac0",
+          "bytes": 58897
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/35000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "64860c43189afbcfd5f785a618bbd087639cd9e23c9879b3c6dcd8aac97ea7ad",
+          "bytes": 2907
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/35000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "171e26b8b85609f6532dbc4735d9f6aa9a4dd0a6edf81bed088837c5ad373a16",
+          "bytes": 2405
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/35000000/settlement_lights.parquet",
+          "rows": 2038,
+          "sha256": "7c29543f7aa8e9f1ce09cf2889082d415400c832af335531807d116e524a2571",
+          "bytes": 8011
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/35000000/company_settlement.parquet",
+          "rows": 15592,
+          "sha256": "60fab639e13d241560a9040a3e42ea2135af74f36169eebfd12bc8b61b006022",
+          "bytes": 98941
+        }
+      }
+    },
+    {
+      "region_id": "36000000",
+      "name": "Самарская область",
+      "population": 3172925,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/36000000/settlements.parquet",
+          "rows": 1333,
+          "sha256": "bc7f4b0a2178f201692f512c2e2ab51d06a5f0371aededb601389cb4900e1601",
+          "bytes": 38034
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/36000000/companies_2025.parquet",
+          "rows": 71519,
+          "sha256": "9390335e22bae3bc6185766e319f49e202045017d1898f1455b202076d8e08ac",
+          "bytes": 1492515
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/36000000/fns_matched_2025.parquet",
+          "rows": 42706,
+          "sha256": "75e43c4b441dc931c94e258c42c476a0691a31970340f5f3475e774e4b890fdd",
+          "bytes": 1888608
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/36000000/settlement_economy.parquet",
+          "rows": 1333,
+          "sha256": "ccb6b7900c4ab3287c5143e19df877706d5efc9e3a1ff9714e9861cc83b901e0",
+          "bytes": 56278
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/36000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "f483bf7dee6a9fda167e40f1e224266c2614e7ed90e2d1f3696fff7f838e956a",
+          "bytes": 2930
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/36000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "cfbf04ad17167e5aac047b418edf1a1e003e4f15be7394606d1d72532515a1f3",
+          "bytes": 2499
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/36000000/settlement_lights.parquet",
+          "rows": 2666,
+          "sha256": "8db8d59adcb5ee08a7e066495305631db297fc6a442e39c48bf41f7b7e98f4d7",
+          "bytes": 4752
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/36000000/company_settlement.parquet",
+          "rows": 30092,
+          "sha256": "22a0e7464b18ea11b7d9f445c209ddc2994c6b21b0f962f23bdab16aa7679cd4",
+          "bytes": 166875
+        }
+      }
+    },
+    {
+      "region_id": "37000000",
+      "name": "Курганская область",
+      "population": 776661,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/37000000/settlements.parquet",
+          "rows": 1235,
+          "sha256": "ce62cc5e0ce54979924d252b46b950c0fad18dea9f4bfdb1135b54e6134a044e",
+          "bytes": 38121
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/37000000/companies_2025.parquet",
+          "rows": 9366,
+          "sha256": "1abd7457816d02a1e93c567fb78528bf07b6947fcdb46480647351011d17d3a1",
+          "bytes": 219625
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/37000000/fns_matched_2025.parquet",
+          "rows": 4875,
+          "sha256": "88623ee89277b226372c856fd25e1bebf04031809ce6bfc70856ecc88ceb3979",
+          "bytes": 254183
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/37000000/settlement_economy.parquet",
+          "rows": 1235,
+          "sha256": "a154d7d43e3d0c5889840d120b99d8d48ab310b0c71f6a8a1e6337f1922e6ddf",
+          "bytes": 47108
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/37000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "2fa1790ab0e31075f010b9099284dba0d0fa8707ccb0920939428fac7dbf3006",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/37000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "92b64418a1b7edcb11b4deb40fc446b4339d951688aa81f2aab2eba66c8ec70b",
+          "bytes": 2362
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/37000000/settlement_lights.parquet",
+          "rows": 2470,
+          "sha256": "06ab657bdc2da6fbd8f2edb48f305c6149cbd0408c096dbc739ade55e3d3a46e",
+          "bytes": 4173
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/37000000/company_settlement.parquet",
+          "rows": 5354,
+          "sha256": "dfc2e823dbedec1e8b285252b25b9b495cf5021c66eb73430f3fa7f1444e58de",
+          "bytes": 35385
+        }
+      }
+    },
+    {
+      "region_id": "38000000",
+      "name": "Курская область",
+      "population": 1082458,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/38000000/settlements.parquet",
+          "rows": 2805,
+          "sha256": "caebb8f5558440d3e814ceb79fcfda151679d3d84addf1ed6f0b308a3d8d9c86",
+          "bytes": 69606
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/38000000/companies_2025.parquet",
+          "rows": 12983,
+          "sha256": "9505a7f0f23f41232aca1d857bfd18ca98a720faad3be5f5a866fa2044a86c33",
+          "bytes": 294147
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/38000000/fns_matched_2025.parquet",
+          "rows": 7140,
+          "sha256": "be44f3249433ea87453ff70b30dcd17c49b1fa53e514d528615d520c3789e497",
+          "bytes": 349509
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/38000000/settlement_economy.parquet",
+          "rows": 2805,
+          "sha256": "24d41a3fb4827299c5153480f96e38295d496f222e6f18812e3a277690f7a30d",
+          "bytes": 77537
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/38000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "b3feb6164ca62e7be2d6cb40cb5e491b7139c3edeb5c47624ebbe4a9621e4ba9",
+          "bytes": 2907
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/38000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "3ef639f13bb442c05d2890d38f603ee6fa42b8b587d9d65ebf375823115a46ee",
+          "bytes": 2386
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/38000000/settlement_lights.parquet",
+          "rows": 5610,
+          "sha256": "9f5583c44acaa397ef1fe320fd41b8b5eb9d84a5bb45ea89f404d1fc3f0d8f09",
+          "bytes": 6387
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/38000000/company_settlement.parquet",
+          "rows": 7600,
+          "sha256": "eded297c4f5917d4a989c6dfb9421ffe9893df40786386241f041a0a4293cb31",
+          "bytes": 47913
+        }
+      }
+    },
+    {
+      "region_id": "41000000",
+      "name": "Ленинградская область",
+      "population": 2000997,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/41000000/settlements.parquet",
+          "rows": 2941,
+          "sha256": "0ff6511859cc2282061762b886481be59b07e0a7480a1e0bc5b6df2493f5975b",
+          "bytes": 72169
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/41000000/companies_2025.parquet",
+          "rows": 34240,
+          "sha256": "2749578bdd08c58f11f9d21bd7d1565e1af25675567e05fda1e32b5e010406e4",
+          "bytes": 745128
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/41000000/fns_matched_2025.parquet",
+          "rows": 18535,
+          "sha256": "3f039150a37e6167ac2118e6534f65b52ba73a6c127c35436934138b281425fc",
+          "bytes": 863942
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/41000000/settlement_economy.parquet",
+          "rows": 2941,
+          "sha256": "0d9dcbe41917213f30cd018152364d9aad50d7f8451e13fdcf81c3dcc90d4938",
+          "bytes": 94709
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/41000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "628b518c09f1467f3ec2ec6fde00e7381904964244ab9540120c8d83de63cdc7",
+          "bytes": 2967
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/41000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "8b89b5a45e294505c9d75abfc0eaea0fa3db71efa6c3d7d04471021878e44769",
+          "bytes": 2397
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/41000000/settlement_lights.parquet",
+          "rows": 5882,
+          "sha256": "3b2a3728f431e7bfe6318e5c69ad0c1d9434ddd36ff3bef7c973e367d6bb2d92",
+          "bytes": 8652
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/41000000/company_settlement.parquet",
+          "rows": 17663,
+          "sha256": "15f11c48fe2baae64a297b9660303bf9ab7c371bec0120b3d984cb17c5aecf43",
+          "bytes": 116580
+        }
+      }
+    },
+    {
+      "region_id": "42000000",
+      "name": "Липецкая область",
+      "population": 1143224,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/42000000/settlements.parquet",
+          "rows": 1609,
+          "sha256": "2644d66f4e61431b900500c82d6883a12f5501e491157eaa0f89a1ecad2d519c",
+          "bytes": 42329
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/42000000/companies_2025.parquet",
+          "rows": 15208,
+          "sha256": "d2c82306c6d254c829f03dfe36507d2b94d22ff0a2f4be881e5f8595bbb38dc8",
+          "bytes": 343700
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/42000000/fns_matched_2025.parquet",
+          "rows": 9321,
+          "sha256": "986d518d8b09274aff1f7650542c354226fa744f6a5d9e3550fb399caf3372e0",
+          "bytes": 450143
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/42000000/settlement_economy.parquet",
+          "rows": 1609,
+          "sha256": "4ddc584af9424f51223efeb97f936640bc9fd3aa8b4cafac2dbcb9683a9f6a41",
+          "bytes": 50706
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/42000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "803ef4e4231892573646017d9ac68246052af4094994dc8b1c6dd9cd43e0e63d",
+          "bytes": 2917
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/42000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "065e6aecb871c479e167fc6087d2e9f6e6e10c45b588ae49b0181e2213f4aad4",
+          "bytes": 2414
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/42000000/settlement_lights.parquet",
+          "rows": 3218,
+          "sha256": "9237051b7cc3c8438632a6db7a185a70b0d37577b37eb7358ba5aeb4f7bbbb57",
+          "bytes": 4911
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/42000000/company_settlement.parquet",
+          "rows": 8441,
+          "sha256": "c5f6810bb1d3267ad2125e28020288e4c02c350050ae6f98c07842cff2cd6491",
+          "bytes": 47626
+        }
+      }
+    },
+    {
+      "region_id": "44000000",
+      "name": "Магаданская область",
+      "population": 136085,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/44000000/settlements.parquet",
+          "rows": 72,
+          "sha256": "cc66dc8ee9e9ce465dc3327b8dd4fe0f77f9f76a20d0cb007992d89b32754b26",
+          "bytes": 5272
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/44000000/companies_2025.parquet",
+          "rows": 3217,
+          "sha256": "7cb2789746a7b30da717a185fc0455ccf4dd063ea3621f1cf25951cc86cb4baf",
+          "bytes": 81288
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/44000000/fns_matched_2025.parquet",
+          "rows": 1936,
+          "sha256": "8ca4384ed7a69f4ebb528794e50d3dc6b73ee1e0569e6602160fc74a932afa09",
+          "bytes": 104686
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/44000000/settlement_economy.parquet",
+          "rows": 72,
+          "sha256": "a015e6ab8166a7080de85700ee910aff262b9c76a56b31d6e31b357203c90967",
+          "bytes": 7065
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/44000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "d4c770edea80fe9d6a9e8b546fff78c651d8c35d5641cc353c16fce2151662f1",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/44000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "0f9122696ac67609dcc6241144a99cab2d25f585b45300a8b5c4a7e49e342c30",
+          "bytes": 2345
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/44000000/settlement_lights.parquet",
+          "rows": 144,
+          "sha256": "eee28ced4127893182ec80e75218bd3becbad64ee6e125bbedd5bca144de64f8",
+          "bytes": 1576
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/44000000/company_settlement.parquet",
+          "rows": 1893,
+          "sha256": "b4ffa8b6c66a948f5a6b436250c059b4c3404e2e68aea4ce4f6bee113e5500ef",
+          "bytes": 12586
+        }
+      }
+    },
+    {
+      "region_id": "46000000",
+      "name": "Московская область",
+      "population": 8524665,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/46000000/settlements.parquet",
+          "rows": 5978,
+          "sha256": "e6eaab357bfcdeb26a3b80906e0a55b502a7404086ba425f17421a51faacf52c",
+          "bytes": 127761
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/46000000/companies_2025.parquet",
+          "rows": 194574,
+          "sha256": "8961ef0820fa4b74537f96470a07c1a1d0bead5af1dc73be56a896d2bdab1354",
+          "bytes": 3990572
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/46000000/fns_matched_2025.parquet",
+          "rows": 107516,
+          "sha256": "8244dc2d5c927261cbd97df1dfa9cc51ed10a8fbca61f69587c192102e961733",
+          "bytes": 4745976
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/46000000/settlement_economy.parquet",
+          "rows": 5978,
+          "sha256": "80aea0df8e84a04d96b8bb8ee694cf2918cee7fe66bc6e70b93af33338fb4873",
+          "bytes": 175119
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/46000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "051f779c9f34de68952ce4d6efc444cf59bc611c70cac8ea5ffd7cc5687f95ff",
+          "bytes": 2940
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/46000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "6d5cbae187350241a824afab56b2311602b41542090925b5b2230d2cce399a77",
+          "bytes": 2524
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/46000000/settlement_lights.parquet",
+          "rows": 11956,
+          "sha256": "bf0e7e6ec2c9af971376782985c8bd9c232b0f8dd9ef050af979b0d48837ee42",
+          "bytes": 15916
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/46000000/company_settlement.parquet",
+          "rows": 103004,
+          "sha256": "efbc5ebea7e794be8e157d9137fd9ba9588acac6d0f5d861e76dabbcc2ffd529",
+          "bytes": 664016
+        }
+      }
+    },
+    {
+      "region_id": "47000000",
+      "name": "Мурманская область",
+      "population": 667744,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/47000000/settlements.parquet",
+          "rows": 136,
+          "sha256": "63160fcac43d9c2a817a26101ba671d341357258c84edd5ebe454cc8715ddfce",
+          "bytes": 8440
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/47000000/companies_2025.parquet",
+          "rows": 12128,
+          "sha256": "6a1c7e770a231d081dda0d41675996e19d46dcc2acdc8bd86f67af2db1330366",
+          "bytes": 269200
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/47000000/fns_matched_2025.parquet",
+          "rows": 6925,
+          "sha256": "4e242508efdf428aa0783fd04bf01a94a1582d4614d53bff3ccc31fcfeb3ef59",
+          "bytes": 333113
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/47000000/settlement_economy.parquet",
+          "rows": 136,
+          "sha256": "700f85d442f0e5d59c2b2632cb2bd1fedeef3730ce3438f1d3fa17402ffc02e1",
+          "bytes": 11668
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/47000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "dc08c37aea0a63cf4b0c0a9b36097fbb1438835e79eb06de8176aa01e3ca9dbe",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/47000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "4c1e9819386ba1da15946219302f0fb24b95812eac3562061b75f46c0dcac5d2",
+          "bytes": 2323
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/47000000/settlement_lights.parquet",
+          "rows": 272,
+          "sha256": "9265a4965e0f60188460995caa6ab8f035560c49f3f1559cb556ec0beeebff3f",
+          "bytes": 2249
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/47000000/company_settlement.parquet",
+          "rows": 7491,
+          "sha256": "a34b0e8d152979a5d4b75e12e64a5a8da4be47f4cdb39db1c16de88687a4d77c",
+          "bytes": 42972
+        }
+      }
+    },
+    {
+      "region_id": "49000000",
+      "name": "Новгородская область",
+      "population": 583387,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/49000000/settlements.parquet",
+          "rows": 3720,
+          "sha256": "339a1ad2a93e50856f2c1fc62307571124bb0cf9919454ffc6cbf121e0f4522a",
+          "bytes": 81241
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/49000000/companies_2025.parquet",
+          "rows": 9121,
+          "sha256": "f4c566d76ddef2ba0483824a4010c283fbaeedc6062f90f7b462fa1f0d7d7742",
+          "bytes": 215488
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/49000000/fns_matched_2025.parquet",
+          "rows": 5571,
+          "sha256": "54a2cdce17929372dbed17c0a3c49c88d46a308e9405c37859e08b8431e79641",
+          "bytes": 285082
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/49000000/settlement_economy.parquet",
+          "rows": 3720,
+          "sha256": "97d45d3c77d35328eec3c60ecb53476a41d07a0824df9d68ecf0512e407d5906",
+          "bytes": 89324
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/49000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "c23c9597b174da424b7143b970c5c0bb5820f091d17c73411308d0ede25b24ec",
+          "bytes": 2957
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/49000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "5301c513d063442fcb945912124c4f43b8c069fdc6f2d83acffbf40fd209ffac",
+          "bytes": 2394
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/49000000/settlement_lights.parquet",
+          "rows": 7440,
+          "sha256": "d20a48fd3d75ba8c3b0607bb535ce0e317547661a4cc42e1d019ced5ea1ecbae",
+          "bytes": 7730
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/49000000/company_settlement.parquet",
+          "rows": 5791,
+          "sha256": "ab74a26cb2e638021fbed7fe5a65503321bbc127f1cf5b5933bc35f6534d7f44",
+          "bytes": 36791
+        }
+      }
+    },
+    {
+      "region_id": "50000000",
+      "name": "Новосибирская область",
+      "population": 2797176,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/50000000/settlements.parquet",
+          "rows": 1544,
+          "sha256": "34e92b4a6b67f84dedbb20c3fdba1580a7d96ab58d5971327a0b194577379611",
+          "bytes": 43196
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/50000000/companies_2025.parquet",
+          "rows": 82442,
+          "sha256": "d0a33e09464a9f8b35a3660004e5b42191fd61ab1b0b6313adbe9dfd648e1434",
+          "bytes": 1699737
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/50000000/fns_matched_2025.parquet",
+          "rows": 50700,
+          "sha256": "8c43fb13659438a1cd4a987af312bda93ecdd689a1953ec1cda74086c9f5ec6d",
+          "bytes": 2240910
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/50000000/settlement_economy.parquet",
+          "rows": 1544,
+          "sha256": "355ada0f6d54373a01d0d8131dacd2b5df752de7ffbe2217d7ef37c0a3692004",
+          "bytes": 56236
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/50000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "3af5cdd92273173a0365dfe4441ff6dc7a80e35d8ba3a5d7f916666ab81e05b1",
+          "bytes": 2970
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/50000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "a232b09c2860e81310d3456660dd51c626b5488a404901f92192181531b0f43b",
+          "bytes": 2470
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/50000000/settlement_lights.parquet",
+          "rows": 3088,
+          "sha256": "e4bdc8178741ec7747948ea5d1112c0923fa2e2633c029c2fdd998b1b5df5b8c",
+          "bytes": 5295
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/50000000/company_settlement.parquet",
+          "rows": 44822,
+          "sha256": "84d5022b809878e769a93f979e6a20195285a2189f414650a848ee2af7e2e106",
+          "bytes": 222359
+        }
+      }
+    },
+    {
+      "region_id": "52000000",
+      "name": "Омская область",
+      "population": 1858798,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/52000000/settlements.parquet",
+          "rows": 1498,
+          "sha256": "f1704c751eb4b494411571ae7de91fcfbb0ff9bfb9eba9843476ffa057e6d243",
+          "bytes": 41486
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/52000000/companies_2025.parquet",
+          "rows": 30763,
+          "sha256": "1a258a4ee6de7b56ec1dbe61aac7c0bd076085f63afb40d1010dcd6f5e71b22c",
+          "bytes": 659650
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/52000000/fns_matched_2025.parquet",
+          "rows": 17232,
+          "sha256": "66271b4c8ff390e7ceae449688520bf2fc20dd1a5aa32d83291ee7330d1e41e7",
+          "bytes": 795130
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/52000000/settlement_economy.parquet",
+          "rows": 1498,
+          "sha256": "2e439392b154e594600b1795f8c0c01ce67d3b56b5c80c5dafd326bca4dffe71",
+          "bytes": 51184
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/52000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "6932cbfa16616c9ba22f562963c7f842bebf4935bc24610b677a7e566048ca81",
+          "bytes": 2897
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/52000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "b4a5ae157cc674128fa98cf704a452aa12a6bd51d53bcd12aa36b309bf3026c2",
+          "bytes": 2416
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/52000000/settlement_lights.parquet",
+          "rows": 2996,
+          "sha256": "65bed6f57b412ac283d70f2d54d0ec23b9609460688e109ba1f41af2cf88dd01",
+          "bytes": 4789
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/52000000/company_settlement.parquet",
+          "rows": 13211,
+          "sha256": "ca0aefcaa36f6ccbb00b2291a087e4d92ec07e787ca49fa441524d8e3853aaf6",
+          "bytes": 72315
+        }
+      }
+    },
+    {
+      "region_id": "53000000",
+      "name": "Оренбургская область",
+      "population": 1862767,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/53000000/settlements.parquet",
+          "rows": 1720,
+          "sha256": "08105494f23eafe31fb7c4e4e5e273f4a24849a6584203d300f0e5a3f62f7619",
+          "bytes": 46718
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/53000000/companies_2025.parquet",
+          "rows": 22064,
+          "sha256": "871529e02faa5f31ab8599ffc8f1cd91cd738b03e9acee8f22f507ddc39ee4dd",
+          "bytes": 522285
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/53000000/fns_matched_2025.parquet",
+          "rows": 12605,
+          "sha256": "34ef119c715981fc43c4f9c099b5fd69d0f64930066cc5f27be8a871c26db872",
+          "bytes": 590710
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/53000000/settlement_economy.parquet",
+          "rows": 1720,
+          "sha256": "1254a9dc9511fa2fdc03f23c08184c307c46ec00c3b2710c0b03f247df722787",
+          "bytes": 61695
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/53000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "5ed57d6e79dc4cba732c2d0674be92a3988c4df9410ff1e43a0875a937e49022",
+          "bytes": 2957
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/53000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "a06faec3fcfe1fcc2793ab785daf329df426247e3d4503b78309928ecdd5636f",
+          "bytes": 2411
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/53000000/settlement_lights.parquet",
+          "rows": 3440,
+          "sha256": "c2fcfc006b8399b3419e63373a14aee30704a61f2e0a9dcd93aa2f94fcc63ef5",
+          "bytes": 5439
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/53000000/company_settlement.parquet",
+          "rows": 11169,
+          "sha256": "9bb55de000a9f67135786b0c1d23671ec934b0b6fc9e8f0147b0a3d66b337e5e",
+          "bytes": 78213
+        }
+      }
+    },
+    {
+      "region_id": "54000000",
+      "name": "Орловская область",
+      "population": 713374,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/54000000/settlements.parquet",
+          "rows": 2943,
+          "sha256": "3330ddb908d654b7821821703470f2832c135a58a6b71387634a42d00b80ae4e",
+          "bytes": 75339
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/54000000/companies_2025.parquet",
+          "rows": 9342,
+          "sha256": "8c337c9db84322388b4aa74146c00cbf605bbee73bfce0b00eefa0a4eaf424e6",
+          "bytes": 216403
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/54000000/fns_matched_2025.parquet",
+          "rows": 5709,
+          "sha256": "8c8a7f6c45798d6773572d8e7109acb9095eb77056ac03c7ec45b9a0349eb985",
+          "bytes": 291347
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/54000000/settlement_economy.parquet",
+          "rows": 2943,
+          "sha256": "d5f37bc4069eb622162b351cd45b6d7e71c60e3a12e451c092eeb7ec67ba0c2a",
+          "bytes": 82281
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/54000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "c0b463f1736ca0661cb0181f1c7aa9dcfcb89bb5ff358664fe5ecec0b5f17c5d",
+          "bytes": 2927
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/54000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "9b4238bf85f66cb1d6ddc586bac2140eb6acc9f09f94fbfc0a1f8d06cb728395",
+          "bytes": 2313
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/54000000/settlement_lights.parquet",
+          "rows": 5886,
+          "sha256": "41dfd57a26cbc9da5e05ab83e86ca2d8297808a9a8c92b988d08bb97fede61d7",
+          "bytes": 6222
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/54000000/company_settlement.parquet",
+          "rows": 5946,
+          "sha256": "95acc2b015c7c744cc139074cc6136ebe460f3308b977c936eea45bb3c5bf330",
+          "bytes": 35406
+        }
+      }
+    },
+    {
+      "region_id": "56000000",
+      "name": "Пензенская область",
+      "population": 1266348,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/56000000/settlements.parquet",
+          "rows": 1411,
+          "sha256": "178f749bf9bf11beec8907eb78cd64c300e229ea1914cd0cb4c86593b5c2a19c",
+          "bytes": 40274
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/56000000/companies_2025.parquet",
+          "rows": 17776,
+          "sha256": "af1c2731404ca110e954eb4ea92c86e596090fd4c46dafe80652c489024c43aa",
+          "bytes": 401008
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/56000000/fns_matched_2025.parquet",
+          "rows": 9987,
+          "sha256": "551872781530da048b6ab11f70878a61a2d59beb35ad92309c803e3bc68a8c65",
+          "bytes": 474190
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/56000000/settlement_economy.parquet",
+          "rows": 1411,
+          "sha256": "4662222dfa7206cd2fb75edd183733eb2cc8eb573967e76d2c39322eb620a031",
+          "bytes": 48392
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/56000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "ab605b792e97152fe9e3061efdc3019e0c04a6fdd91841e62201391647a7c54a",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/56000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "b3346b2b3388a0b82e92dee25d044ceaf3be25ee71080f1efadbc2e3e99619fd",
+          "bytes": 2394
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/56000000/settlement_lights.parquet",
+          "rows": 2822,
+          "sha256": "57b08c220096f124b7c8ec96e00bb54dc21cc350fb80cd4eb1c761e6f13d597c",
+          "bytes": 4472
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/56000000/company_settlement.parquet",
+          "rows": 9866,
+          "sha256": "ba52b8f6e39d60ba02dddf2f8ac2d13dc93719a8501081a048c005c272f02879",
+          "bytes": 59816
+        }
+      }
+    },
+    {
+      "region_id": "57000000",
+      "name": "Пермский край",
+      "population": 2532405,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/57000000/settlements.parquet",
+          "rows": 3629,
+          "sha256": "fc30859e75da7b1e4e61a09ae1d1e66d2ba4b376fb79e5f238d4cced42ce6ebf",
+          "bytes": 91303
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/57000000/companies_2025.parquet",
+          "rows": 48146,
+          "sha256": "253f350d2cc06f3c81d53309de8bfd080c4f9d5990aa3f1685010a869008f456",
+          "bytes": 1044570
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/57000000/fns_matched_2025.parquet",
+          "rows": 28591,
+          "sha256": "ed3541834b29d7b1e2f4287812f0668daa6ca761c0e7de078387332024b66b32",
+          "bytes": 1284687
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/57000000/settlement_economy.parquet",
+          "rows": 3629,
+          "sha256": "2bbb447859a8ad75df6803de92e78f54a07476b398f7edfbe9052b31fd373a12",
+          "bytes": 112579
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/57000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "6aafa2b5b721b56b49e00803e0823ae981264b996e447e8a5cbe7174ef6117ed",
+          "bytes": 2887
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/57000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "ea94b04a763d3a65abc1e5a7dcb88d4b5aea26c7f90612f88721f5d85654d047",
+          "bytes": 2483
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/57000000/settlement_lights.parquet",
+          "rows": 7258,
+          "sha256": "abd8d51f197e6472a7d9200695503e98a0a38d6e2b07b4c1b6bd26e3b52e0439",
+          "bytes": 7929
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/57000000/company_settlement.parquet",
+          "rows": 29638,
+          "sha256": "fcb7d19bf99ea93c7d619f22c7969274469296b8fcc53ab1313aff5e88778f69",
+          "bytes": 168995
+        }
+      }
+    },
+    {
+      "region_id": "58000000",
+      "name": "Псковская область",
+      "population": 599084,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/58000000/settlements.parquet",
+          "rows": 8383,
+          "sha256": "a62e967bf159217a5be322b362f2b6cfafe6d5c355cdd6b67fc7e8b280f0b26a",
+          "bytes": 186948
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/58000000/companies_2025.parquet",
+          "rows": 9284,
+          "sha256": "c698c2c9f0caed99e69415c18a9bd19b5cb2421e9afbe03a90f88db43fa23a7b",
+          "bytes": 218316
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/58000000/fns_matched_2025.parquet",
+          "rows": 5379,
+          "sha256": "fa973046c0ab9b0f3f7c773a17cea3fa5eb5ad50ebdbe343bcadbb2c625c2e1c",
+          "bytes": 276026
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/58000000/settlement_economy.parquet",
+          "rows": 8383,
+          "sha256": "83a4910d25fdc6178714efc0f901edfbb06319de7a837b4989a4984132fe41a0",
+          "bytes": 194998
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/58000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "17005d236827628230dbb06026ed74c23808ee89c6a86e5a93aaff2f52c56025",
+          "bytes": 2927
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/58000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "7bdef43c5534aafc6a15463d31bc559e8e861cda469b9df26635f66d6587fbd5",
+          "bytes": 2396
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/58000000/settlement_lights.parquet",
+          "rows": 16766,
+          "sha256": "1b5d76f61a54db8644b1059e0bb873ac8d216501a8f6cf3a738fa5aef68a074d",
+          "bytes": 15286
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/58000000/company_settlement.parquet",
+          "rows": 5683,
+          "sha256": "dcd712d09b02c29cf7d80dfe3ab43fca2d01da51ec943f67b25406e6b07deaf0",
+          "bytes": 35117
+        }
+      }
+    },
+    {
+      "region_id": "60000000",
+      "name": "Ростовская область",
+      "population": 4200729,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/60000000/settlements.parquet",
+          "rows": 2295,
+          "sha256": "3b9349f23c062afdd96fc2cbb158facbdcf998b0ba5b12b9384278823801b820",
+          "bytes": 66424
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/60000000/companies_2025.parquet",
+          "rows": 59263,
+          "sha256": "50837395d65f7ce64cffa3f272f87882b8a011eaf9ab6c6f9bacb49c78dc272a",
+          "bytes": 1326631
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/60000000/fns_matched_2025.parquet",
+          "rows": 35435,
+          "sha256": "030065f66508c7c1cbaf315bbaca65fc6cb5473a0a08a662e02fb9fe9eb65b33",
+          "bytes": 1593755
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/60000000/settlement_economy.parquet",
+          "rows": 2295,
+          "sha256": "c2ddbf39be60826f03b45da22242fcfdfd1bdd1992cdb747024bf6bbdb8cdd4c",
+          "bytes": 89946
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/60000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "e59dd3d74b3833879ff3aa2e80379a94496d5bf8848181025fb122d7161dcf30",
+          "bytes": 2940
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/60000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "a9ebe2d64e51edd1333f3ddf3661f4f11cefb316978f228d1d89c6b5e15315ba",
+          "bytes": 2494
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/60000000/settlement_lights.parquet",
+          "rows": 4590,
+          "sha256": "1fd2da1bc925dcaceb1cc692c50b9428fcf8f4e6967976309bb7f760e039c149",
+          "bytes": 6338
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/60000000/company_settlement.parquet",
+          "rows": 33984,
+          "sha256": "d8fcaa13516612cefae6f8d63ec1e1a48d44992e3eb27baacd8e536cb28172bf",
+          "bytes": 205132
+        }
+      }
+    },
+    {
+      "region_id": "61000000",
+      "name": "Рязанская область",
+      "population": 1102810,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/61000000/settlements.parquet",
+          "rows": 2780,
+          "sha256": "3a2c3d641ab20e3604e269e7bdbe1084f58ffae7298e71d2b6239c0b169e5e1e",
+          "bytes": 72778
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/61000000/companies_2025.parquet",
+          "rows": 19946,
+          "sha256": "fec15db12c46f3ec78b2ae83fedc5b15fe8b41b22f5698a83df7763a19300256",
+          "bytes": 425709
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/61000000/fns_matched_2025.parquet",
+          "rows": 11356,
+          "sha256": "89d9a4ed1185f43e073993866ff3ba9e809074a8ff607bf6c47f15823dc5eabd",
+          "bytes": 531216
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/61000000/settlement_economy.parquet",
+          "rows": 2780,
+          "sha256": "f70a78a578a43e46fc9c11f32bb2654c20ac7b244fb48f6ad497c1698d4eca13",
+          "bytes": 80909
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/61000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "f4e667eb42578b468dd0a10d8e4ca65d7e74120cd6c90f2c81fbad490c763202",
+          "bytes": 2927
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/61000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "ff03f971392e2b9d28eec482be87d829c0f159958a2a1f4f4fb84d4278a8d378",
+          "bytes": 2386
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/61000000/settlement_lights.parquet",
+          "rows": 5560,
+          "sha256": "fbf8eee14612f8eea7c28a236c50d6bf66493051043a0ee5c64eb5349720d4d4",
+          "bytes": 6701
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/61000000/company_settlement.parquet",
+          "rows": 10764,
+          "sha256": "fc82af6d872a01daf6b00bd001b4843c142c240f4bae24664afacddab0b55761",
+          "bytes": 57453
+        }
+      }
+    },
+    {
+      "region_id": "63000000",
+      "name": "Саратовская область",
+      "population": 2442575,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/63000000/settlements.parquet",
+          "rows": 1821,
+          "sha256": "1285ffaef5d22780319e6d2ba820fe1a9c6f4b3f7957c7e76c0f350ee277f448",
+          "bytes": 52209
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/63000000/companies_2025.parquet",
+          "rows": 33410,
+          "sha256": "fe766272d64274e11dce497c220c81406d522a5a7cc8ff0cecb6ce8eafb47eaa",
+          "bytes": 696945
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/63000000/fns_matched_2025.parquet",
+          "rows": 18146,
+          "sha256": "9b4861febb554da3cf5f758c08a357fe66428b338ca7256855915833958c9ce7",
+          "bytes": 833329
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/63000000/settlement_economy.parquet",
+          "rows": 1821,
+          "sha256": "8abc1bdb3d82edb05492c841cfd3c1984eab0215f9afde349f49921ce49e0d44",
+          "bytes": 66960
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/63000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "45f43a36cd045ad771df3e5623bcc479430540b1d53aeb76ddee09e469e971a8",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/63000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "0e55bf361fe1528a2dcd1bc5b70a5839f60564933f9ca2b58546cead2f46c74e",
+          "bytes": 2421
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/63000000/settlement_lights.parquet",
+          "rows": 3642,
+          "sha256": "0e48587613a8714c75a8ebbcf2d26dd15cead22c9c8d8bbb4f62a516829d0b74",
+          "bytes": 5626
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/63000000/company_settlement.parquet",
+          "rows": 14763,
+          "sha256": "232174b7e0e43f7a0348b9f1bf9b8a6280f0149245e4d5e63809f9aae9ab1de8",
+          "bytes": 86789
+        }
+      }
+    },
+    {
+      "region_id": "64000000",
+      "name": "Сахалинская область",
+      "population": 466609,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/64000000/settlements.parquet",
+          "rows": 243,
+          "sha256": "9dcdf164136aaa8ced75e0e5480869453b53711e2104dd7f493f1000877b9bdb",
+          "bytes": 12511
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/64000000/companies_2025.parquet",
+          "rows": 11554,
+          "sha256": "bb66150a35637ecb4a79306373e9f4bfa06dd6ede4ee9863e24aade84bc47b91",
+          "bytes": 257605
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/64000000/fns_matched_2025.parquet",
+          "rows": 6404,
+          "sha256": "a619ae44565ed9834f7686560914ed34d54f6719a9db8496f7e0a679bdd33455",
+          "bytes": 320828
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/64000000/settlement_economy.parquet",
+          "rows": 243,
+          "sha256": "b2ba60eae868c1b4ada94a6fa050bb31b465dc0c4ce7e23eecab5ef8520fbca4",
+          "bytes": 16908
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/64000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "a65211b075eecfcbef585e212d1c6ded7ff546b5d26056bc2ac7698f8bdb228b",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/64000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "3f9a279031184f2f782f9a416edfa8504fd3247ecc597be93ec9a01d1c6480e5",
+          "bytes": 2381
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/64000000/settlement_lights.parquet",
+          "rows": 486,
+          "sha256": "0a55572448c18b96e011f33fefe142c5776d122dd1de2f7a6387561c47eaff78",
+          "bytes": 2641
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/64000000/company_settlement.parquet",
+          "rows": 6260,
+          "sha256": "02550b51a0cca5b34ec8575be64fbebb77b14d9eea9f6ef0012ceaa681a773de",
+          "bytes": 37523
+        }
+      }
+    },
+    {
+      "region_id": "65000000",
+      "name": "Свердловская область",
+      "population": 4268998,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/65000000/settlements.parquet",
+          "rows": 1844,
+          "sha256": "5fbbff85cc5a10f67966dbbf62e185e6fe422a91273f2a5f65ba6a9ea3de59bb",
+          "bytes": 51167
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/65000000/companies_2025.parquet",
+          "rows": 108887,
+          "sha256": "e5ffbcb9ce56d66a3fbb813c03df09d9bc3a8958c0d6a6ac9c5159621a1beb18",
+          "bytes": 2262196
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/65000000/fns_matched_2025.parquet",
+          "rows": 66818,
+          "sha256": "a6170d4c127913ac0b6a23d81e7d4af8761c2cb7460aec551087d245fa7e1140",
+          "bytes": 2965771
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/65000000/settlement_economy.parquet",
+          "rows": 1844,
+          "sha256": "b37bda62a419f863b03127579d1b765bfb94c90d0046429396e35c29f336abaf",
+          "bytes": 71271
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/65000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "f998e5617dd9e7adc5350fb8baa3f88e98077208d6baa739392a2edf2cda2869",
+          "bytes": 2960
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/65000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "51cb8d3361c727e3537f0dfafaa20c1f6c1be3209c492b15b9070c832cc37ba0",
+          "bytes": 2523
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/65000000/settlement_lights.parquet",
+          "rows": 3688,
+          "sha256": "5bb1e9ac81b608a599ecf3d94fcb1657214824cf871a017d8408216dd469174c",
+          "bytes": 5660
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/65000000/company_settlement.parquet",
+          "rows": 59437,
+          "sha256": "0219ec2a32cb66837fd65e3127a77aae86c0174800946f8746391c7b4fdf5178",
+          "bytes": 315893
+        }
+      }
+    },
+    {
+      "region_id": "66000000",
+      "name": "Смоленская область",
+      "population": 888421,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/66000000/settlements.parquet",
+          "rows": 4878,
+          "sha256": "eef26997e879d07a993f4cf8ffb6b5efbad6ddcfea3914db9caab651a0db63c6",
+          "bytes": 116193
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/66000000/companies_2025.parquet",
+          "rows": 22278,
+          "sha256": "014dea110a6858767b6f275226b2baae95af948ed9cced23875dbf57c50d9353",
+          "bytes": 467651
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/66000000/fns_matched_2025.parquet",
+          "rows": 13104,
+          "sha256": "235f64d725bbe033cdeef056c26e832685298c54b279b01353b14576ed331c10",
+          "bytes": 599029
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/66000000/settlement_economy.parquet",
+          "rows": 4878,
+          "sha256": "458dbdbad0bf90b36e41d12de94316502dd4da18c13dc7b2412bbfd3d77db75a",
+          "bytes": 127044
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/66000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "77b8bbd9fe29a93bb27aae2ba2bfa4c20227067a2f0e1f5880be815be2189a5a",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/66000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "47cd03e658f1c5824787ecdbb73e4a7ac0351487e2ede77d6f92e595b3ec850e",
+          "bytes": 2444
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/66000000/settlement_lights.parquet",
+          "rows": 9756,
+          "sha256": "d2cb315526376d2b3f28140aac416f5c3ad92cfe0ba4169bc0cfd703bcb372f6",
+          "bytes": 10758
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/66000000/company_settlement.parquet",
+          "rows": 12976,
+          "sha256": "31e23f4ffa4e6acc3e8356fd1c40559869dd77cd56c2e730414afba43f5b5df0",
+          "bytes": 71261
+        }
+      }
+    },
+    {
+      "region_id": "68000000",
+      "name": "Тамбовская область",
+      "population": 982991,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/68000000/settlements.parquet",
+          "rows": 1575,
+          "sha256": "d975ec0144defd2d071f07a7e373ef8916bebccc87e48efbb27f63d765013c06",
+          "bytes": 45123
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/68000000/companies_2025.parquet",
+          "rows": 10404,
+          "sha256": "ac64e9bd41385d23a98976c4014d8e05163d1818e380bde750b63af092a8c85d",
+          "bytes": 240687
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/68000000/fns_matched_2025.parquet",
+          "rows": 6376,
+          "sha256": "9f53bac2d2a253fdb27e0e14653f16ad301cd67d0b9416264461f3812f1760e9",
+          "bytes": 321066
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/68000000/settlement_economy.parquet",
+          "rows": 1575,
+          "sha256": "fa16423d90ac4089c0008f78a0b8a82201e0ec0822a513031097123b69c1e444",
+          "bytes": 53057
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/68000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "e5cff483e294eaf6aac459bec2661a903cb77347733a510cfefa3d80c25eea9a",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/68000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "40ea8259aa921a84c70f2fd59f700fcf290834c502ba6589b8ad28bcb973ddce",
+          "bytes": 2385
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/68000000/settlement_lights.parquet",
+          "rows": 3150,
+          "sha256": "3d29ad44adceef573e550ce4296c49b47aa03796fac5d66cdd141f2e3f16ca14",
+          "bytes": 4779
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/68000000/company_settlement.parquet",
+          "rows": 6450,
+          "sha256": "784048372240c7ce660dbf98eb629cc3b82a8c806c62cd8299b36496a26fabd3",
+          "bytes": 39019
+        }
+      }
+    },
+    {
+      "region_id": "69000000",
+      "name": "Томская область",
+      "population": 1062666,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/69000000/settlements.parquet",
+          "rows": 578,
+          "sha256": "f3939782077432a0fb9c1e130f90ee8ab2850753eb680baa48eb02e86ebefc1b",
+          "bytes": 28335
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/69000000/companies_2025.parquet",
+          "rows": 21097,
+          "sha256": "d9535ec9324b21cf40888737403ae5a34e1b29cee150bbdbf38b212f2e29f080",
+          "bytes": 457236
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/69000000/fns_matched_2025.parquet",
+          "rows": 12671,
+          "sha256": "3b7918301e36766ce794fe5d7460f12468473e32167bbbd78db089aeba599f16",
+          "bytes": 583948
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/69000000/settlement_economy.parquet",
+          "rows": 578,
+          "sha256": "1311bfa59257348d8f7d3f4e95888896aa3233cf4260d392363c4d0c101d4095",
+          "bytes": 34689
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/69000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "e359055b552907561324a99f347d836843d59bc30e010065ac508082543ba9f8",
+          "bytes": 2907
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/69000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "b77141d00352554a26d46df8fe77eb6fb9acb1b08d6f6a24dcd5c1dd7c0231dc",
+          "bytes": 2441
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/69000000/settlement_lights.parquet",
+          "rows": 1156,
+          "sha256": "edf53376e841ddd616e8e789b032ba727b3bcfd8a2dc26977d885dd846326c1b",
+          "bytes": 4779
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/69000000/company_settlement.parquet",
+          "rows": 13120,
+          "sha256": "08020c32a4f6abfee33f493d65bfb20f1f5525355b3b949a0e273cef476f7c4c",
+          "bytes": 75230
+        }
+      }
+    },
+    {
+      "region_id": "70000000",
+      "name": "Тульская область",
+      "population": 1501214,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/70000000/settlements.parquet",
+          "rows": 3478,
+          "sha256": "178b3435a1b2cb7f0df8c8ab9ecb98f6ae8fac07c9d5650146ed98fa90051857",
+          "bytes": 85858
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/70000000/companies_2025.parquet",
+          "rows": 22211,
+          "sha256": "2ec41394420d5ae3d3cca4071118905e149ac97c695cdfda3e2fc1e8b1621517",
+          "bytes": 502133
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/70000000/fns_matched_2025.parquet",
+          "rows": 13683,
+          "sha256": "dab32335c8fa737f86d033189b44d7f60b2b08b0762f48a81162dac210726a0a",
+          "bytes": 640191
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/70000000/settlement_economy.parquet",
+          "rows": 3478,
+          "sha256": "3da9c58ffa4e843fe162e85575e3c8f781da9f624440f190e291667dbaf97a58",
+          "bytes": 98395
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/70000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "abeb5875d199f34a20d8dd44078522e6bd744357bcafe5f6a4f3fa4116f31fc0",
+          "bytes": 2917
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/70000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "71b74adc8b7a080b9b7203c13b739a63f9ac0f9d2ac2d49abb9f67ec672c0eda",
+          "bytes": 2413
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/70000000/settlement_lights.parquet",
+          "rows": 6956,
+          "sha256": "0ccf3e2b2300a2d70900f9d2ca8fc3d808fb205e2f467e19a0437fc7588b530c",
+          "bytes": 7901
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/70000000/company_settlement.parquet",
+          "rows": 13219,
+          "sha256": "d2c4ef1657dfef1c322d9d724c2f7867d09964535505e4e9cbbf1f671d13eea7",
+          "bytes": 80537
+        }
+      }
+    },
+    {
+      "region_id": "71000000",
+      "name": "Тюменская область",
+      "population": 1601940,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/71000000/settlements.parquet",
+          "rows": 1236,
+          "sha256": "fb90cf150d591c4e51cca4b387ed1c827698d1b68120a2be0e1034619ef6d95c",
+          "bytes": 40098
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/71000000/companies_2025.parquet",
+          "rows": 35365,
+          "sha256": "cfcca8b9e016ed7029e6f78b738f7374e97315bf8f8b5c47b3090e948aeec036",
+          "bytes": 757902
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/71000000/fns_matched_2025.parquet",
+          "rows": 22643,
+          "sha256": "67cb28396b95e8e0ea67f3029dccf8b8c6fc9336f4fd6a20824ef506567c6da6",
+          "bytes": 1019580
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/71000000/settlement_economy.parquet",
+          "rows": 1236,
+          "sha256": "fbc061458c458ca1938fa702b5787407c2d974ddfbf0dea769d2ef4d01d9b396",
+          "bytes": 51759
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/71000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "20db9681fd513cf5fc388b9799a59c1cf9abc9b9d89e6dbf5f42ec91570b78c1",
+          "bytes": 2927
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/71000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "713899c7302fd6b23be86eab115e56500a5672dd7fa64bb45608ddd5e319d83f",
+          "bytes": 2397
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/71000000/settlement_lights.parquet",
+          "rows": 2472,
+          "sha256": "dec6b382d3613492fe63435c5c6b74a738f805fa397343c880c34580d6859e18",
+          "bytes": 4500
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/71000000/company_settlement.parquet",
+          "rows": 21671,
+          "sha256": "0370d87a0eacf52987c6502027d3f1677b38d8590cf6543ba4bf7c8177417596",
+          "bytes": 117488
+        }
+      }
+    },
+    {
+      "region_id": "71800000",
+      "name": "Ханты-Мансийский автономный округ",
+      "population": 1711480,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/71800000/settlements.parquet",
+          "rows": 194,
+          "sha256": "f54475703c638d49ccbd52b416467ff4a59ad4b1838589edf7f86a46b0d0f2f6",
+          "bytes": 10619
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/71800000/companies_2025.parquet",
+          "rows": 25711,
+          "sha256": "19c3f3bbb9819f5ca716278a9931e96c0bc36b0ab5c59dee373ce915bef8ae75",
+          "bytes": 558122
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/71800000/fns_matched_2025.parquet",
+          "rows": 13741,
+          "sha256": "5f5f775040e324f23ceba69fada52165f22052ede1b72b123901c643c11d2a93",
+          "bytes": 643275
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/71800000/settlement_economy.parquet",
+          "rows": 194,
+          "sha256": "bbe97ede585969597006a9f737546b12e25b435f0393cc455a56a75a0251126d",
+          "bytes": 15926
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/71800000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "e277260700e3ef33aad458d631a2ce2cf503c84ccb8f5f341d3cd5a9bda56e9c",
+          "bytes": 3079
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/71800000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "74953d688aed73d71f4c09ba3b00ccb27736000373d9f8310fe9ea8a44bb301a",
+          "bytes": 2416
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/71800000/settlement_lights.parquet",
+          "rows": 388,
+          "sha256": "46b7a8097ec7d4043835bc3c2ee9415571c8bfdb8da6d10eadc2e4aa8143bf68",
+          "bytes": 2627
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/71800000/company_settlement.parquet",
+          "rows": 14264,
+          "sha256": "8a7b504f111d9ae9c677ff5e8dc1f6ec2a065d36495fac91bfbc93e99edb342c",
+          "bytes": 81155
+        }
+      }
+    },
+    {
+      "region_id": "71900000",
+      "name": "ЯНАО",
+      "population": 510490,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/71900000/settlements.parquet",
+          "rows": 91,
+          "sha256": "0fc72a4fee14fc4871477d2af0c1681b7de3cea9426cf71e1cc9c6fc223aa0b9",
+          "bytes": 6201
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/71900000/companies_2025.parquet",
+          "rows": 6957,
+          "sha256": "c6c73951f3929c7852d9694a4e40c2aaa8cddaf84efea643a06348d9f663a5af",
+          "bytes": 161170
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/71900000/fns_matched_2025.parquet",
+          "rows": 3494,
+          "sha256": "dfdf6188190926bd3a4cdf025732dfe2b4d4de2f9dcd96b75e1667d515556117",
+          "bytes": 191289
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/71900000/settlement_economy.parquet",
+          "rows": 91,
+          "sha256": "3476ba872b597e677a0bc3b981ab4e9690756d1ef197011d956ca0912c50fefa",
+          "bytes": 8703
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/71900000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "fb675c3ce25e2021db21f30ff44933a2ea4298f7f8202d44c956e07293116da3",
+          "bytes": 2801
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/71900000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "5e9ce7d72cd3e004ad5443d4d2199e847f1e7d3ad37c4b3ea7c445b52575fe58",
+          "bytes": 2355
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/71900000/settlement_lights.parquet",
+          "rows": 182,
+          "sha256": "00205cf37dffb597b9560242ad5101ab21d4a201ae2c3ea5a9d4ac94821653c6",
+          "bytes": 1876
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/71900000/company_settlement.parquet",
+          "rows": 3396,
+          "sha256": "c37fe49ffefbffa47bcc32534df686bf19b94b74e13078794dfb8bf8da4e4da5",
+          "bytes": 21755
+        }
+      }
+    },
+    {
+      "region_id": "73000000",
+      "name": "Ульяновская область",
+      "population": 1196745,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/73000000/settlements.parquet",
+          "rows": 1006,
+          "sha256": "5e04908fc341d779d82e6530c50f56723c36ceba89a5a775f9071ac2f4f0d23f",
+          "bytes": 46188
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/73000000/companies_2025.parquet",
+          "rows": 20210,
+          "sha256": "f7e9bc31fbb9e2c9fd084abfc7b3f5066914b32e5fd9b10190b4e10b2c54a251",
+          "bytes": 438486
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/73000000/fns_matched_2025.parquet",
+          "rows": 11280,
+          "sha256": "73956df9f16abf53323cc92704ed7e8a19efde313c277f3166a14ffa73f2e326",
+          "bytes": 522128
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/73000000/settlement_economy.parquet",
+          "rows": 1006,
+          "sha256": "53b82308ab3e59f012b0de44aa8a84995218106f57de02d631cf0d893b6ae335",
+          "bytes": 55843
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/73000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "cdd7a170de16b885b8d71dd51d024445edc8b21798bd6606dfaafdd89cca72b9",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/73000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "3579d1926368011fecc2827bf92bc7d1d6ef9a8ca8548ca31ce8ca9d62097b63",
+          "bytes": 2414
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/73000000/settlement_lights.parquet",
+          "rows": 2012,
+          "sha256": "4fc89d532a9ed48c1b7159f6b1340670d58093380038d5da258195dcc6e86a16",
+          "bytes": 7521
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/73000000/company_settlement.parquet",
+          "rows": 12179,
+          "sha256": "9550459a5eb55ba3b0d258d7e78fa26c29fd84369c9174f38ea09f6ede1526f8",
+          "bytes": 71103
+        }
+      }
+    },
+    {
+      "region_id": "75000000",
+      "name": "Челябинская область",
+      "population": 3431224,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/75000000/settlements.parquet",
+          "rows": 1290,
+          "sha256": "00474f1e1cf122db7b02620968c20b647ad5a757e9a7888040b9f6674b438150",
+          "bytes": 42984
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/75000000/companies_2025.parquet",
+          "rows": 67135,
+          "sha256": "3002a8c974cd36bb293ed6f73b56185f74eb4ecc08d3d72405af7c14d250e1a2",
+          "bytes": 1442591
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/75000000/fns_matched_2025.parquet",
+          "rows": 42538,
+          "sha256": "45ccbbe2df3ccfe4d91201bc4347009af3df9103a9d387ac4abdf67abc719816",
+          "bytes": 1898684
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/75000000/settlement_economy.parquet",
+          "rows": 1290,
+          "sha256": "e1bdddc10f8188cbebf1bce70087ee315114bbbcba6cc25624452969bc10b51b",
+          "bytes": 58556
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/75000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "0d30dbab9a9f785432dc73407e4aebc83ee88eb0ae84b3733493422e2bd767c9",
+          "bytes": 2950
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/75000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "2da7161d7c05b7c7c3cd1cfce74e4d6b43065a6484747c19ea3af31383e16697",
+          "bytes": 2482
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/75000000/settlement_lights.parquet",
+          "rows": 2580,
+          "sha256": "0ca0b6e04006f5979abf8e012744f0cde13fbf3a7532c87bc37a539e7d4422b4",
+          "bytes": 4796
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/75000000/company_settlement.parquet",
+          "rows": 37828,
+          "sha256": "31fc07479df9e9bc02c056fa4d3b59b10800a1af8a2e5fcc5881e9efb3cc8551",
+          "bytes": 210643
+        }
+      }
+    },
+    {
+      "region_id": "76000000",
+      "name": "Забайкальский край",
+      "population": 1004125,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/76000000/settlements.parquet",
+          "rows": 874,
+          "sha256": "4667be45e8195aa21914417daf2421ac1688edf40abb0fc6edbb81821c4a1914",
+          "bytes": 42345
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/76000000/companies_2025.parquet",
+          "rows": 10427,
+          "sha256": "ca2150af20f92c0881a9a76ae82d02d6e71b9d68e0cce3f0cd58a005fd57f312",
+          "bytes": 231877
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/76000000/fns_matched_2025.parquet",
+          "rows": 5984,
+          "sha256": "d68115f69cceb5c9fe2823d5cb7a11edf3d70ae8401214d0c2c7c0b8a75e38f8",
+          "bytes": 297505
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/76000000/settlement_economy.parquet",
+          "rows": 874,
+          "sha256": "60de25649d8992e9557acbb3ff3958c52e4684439571fe7652f1d99dcd8e0dc4",
+          "bytes": 47026
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/76000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "4f316b65195d1772730a90346a9418afb2324cdc604a6ec0f252c0d83a61c7e7",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/76000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "aef4997a7f4ebdcb053e85be9a970630f42b94c73a84e5794f581c6322f7d35e",
+          "bytes": 2370
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/76000000/settlement_lights.parquet",
+          "rows": 1748,
+          "sha256": "9c5787c55b86034cfb1d2e9b8a3a1fae7d416e44b94d5ed44a45678d7235d087",
+          "bytes": 7401
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/76000000/company_settlement.parquet",
+          "rows": 5395,
+          "sha256": "ccf43fdefa9e271b3c5567cfc5a388349daf58d0d1a64be81b44481f7f70b3ba",
+          "bytes": 32285
+        }
+      }
+    },
+    {
+      "region_id": "77000000",
+      "name": "Чукотский АО",
+      "population": 47490,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/77000000/settlements.parquet",
+          "rows": 46,
+          "sha256": "87899aacfbb49422832b153c71959d36a2f514ff5ed0ba0323d0f6c602e6b972",
+          "bytes": 4067
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/77000000/companies_2025.parquet",
+          "rows": 855,
+          "sha256": "6baf611849df5017747469af46497c257e01b06e5f38ec0f3c47a663200f047f",
+          "bytes": 36782
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/77000000/fns_matched_2025.parquet",
+          "rows": 450,
+          "sha256": "aad486854b8e018b439cf0c49d2380b2ba4238615a972ab991bb540e3873e23a",
+          "bytes": 35333
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/77000000/settlement_economy.parquet",
+          "rows": 46,
+          "sha256": "39d59ac23b0b4acbbe5ce279733c990a91ecfcaf72aa7371e3a573b828d2fcf4",
+          "bytes": 5810
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/77000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "b8e7372818c4bde5d7c4a102ae42a3fa8d1406f30309d572eb8ee13f07a6f029",
+          "bytes": 2877
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/77000000/sector_economy.parquet",
+          "rows": 18,
+          "sha256": "be58b394f7dd434403e504233217af23f2f73161d55af8516ba09bcc909b5725",
+          "bytes": 2183
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/77000000/settlement_lights.parquet",
+          "rows": 92,
+          "sha256": "eeed0019d2ce6f696d669de669c712f9831df7ff4f7a153a8b7e65c652a2e6fe",
+          "bytes": 1378
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/77000000/company_settlement.parquet",
+          "rows": 497,
+          "sha256": "150fb58dfa3d85b3f6b38236d20e623aef619db57738bc7d5abe8b21d7a832f2",
+          "bytes": 6642
+        }
+      }
+    },
+    {
+      "region_id": "78000000",
+      "name": "Ярославская область",
+      "population": 1209811,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/78000000/settlements.parquet",
+          "rows": 6044,
+          "sha256": "05f7011b21baedb77d570b04ffe097ce57a037017671c749a7d9700eddea7203",
+          "bytes": 138015
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/78000000/companies_2025.parquet",
+          "rows": 27835,
+          "sha256": "7ac1915f2dfb88c573a0a7df7235615f9248bd0d4d25d2c40e2bde11a0e6357b",
+          "bytes": 612794
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/78000000/fns_matched_2025.parquet",
+          "rows": 16770,
+          "sha256": "d39c95505345f6cc425fc471fc076e6510283d41595eb46a0e41a1b1f2db6413",
+          "bytes": 772113
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/78000000/settlement_economy.parquet",
+          "rows": 6044,
+          "sha256": "fea53e607a70b6b7ac5c22e9686cecb504a0d353ce2dacf63e5beab5fc275ca3",
+          "bytes": 150314
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/78000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "3bb22028321084e34c6459659a6cb85237da4419a97c76d44e09af5ec4ae178a",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/78000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "c70dd3fe337b34ae8c4fbaad1ecb8306cb7d3ab6cd42c8888cfe2662ddb0b6d2",
+          "bytes": 2416
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/78000000/settlement_lights.parquet",
+          "rows": 12088,
+          "sha256": "9c7b653b434fb918a956d850bdbeec52e200b44958be40017f2d1c805e2ade1a",
+          "bytes": 12008
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/78000000/company_settlement.parquet",
+          "rows": 17457,
+          "sha256": "8303a542e5afd0539dab6e41bfac6f479dc5b9192a3cb17121f73a1e68cc8cbc",
+          "bytes": 103482
+        }
+      }
+    },
+    {
+      "region_id": "79000000",
+      "name": "Республика Адыгея",
+      "population": 496934,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/79000000/settlements.parquet",
+          "rows": 233,
+          "sha256": "d341fdd7b91f6b80cd9db0a360d2bb8bc3d83cd35b68db0ca47342b8ab3047d6",
+          "bytes": 12542
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/79000000/companies_2025.parquet",
+          "rows": 5214,
+          "sha256": "15e8ec5b3cc12b51905f3ec15f48f8e8ffffabc9f5eaa56962eb25b54420874f",
+          "bytes": 127259
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/79000000/fns_matched_2025.parquet",
+          "rows": 2963,
+          "sha256": "d4425b2777c23a01ac8359d9e74c38575646e95eeb44ff19412868368dcc1ee3",
+          "bytes": 154912
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/79000000/settlement_economy.parquet",
+          "rows": 233,
+          "sha256": "ee74f3ef2f80238204314a2578aac618659c9df6a9b892247deae7291f784c5f",
+          "bytes": 17982
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/79000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "84df3cc0aea4ce6aa29d92c8cf5a164acbf850c41a4701d2f4870dda72617215",
+          "bytes": 2927
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/79000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "38f84112a65d67908395dbf53dcc5aa38a1d719aab86bf3beaead8c1ed76e605",
+          "bytes": 2369
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/79000000/settlement_lights.parquet",
+          "rows": 466,
+          "sha256": "06b56e2b0670c714596b888836aebeddd603b9970f0feab34abf813df9a655c6",
+          "bytes": 2627
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/79000000/company_settlement.parquet",
+          "rows": 3052,
+          "sha256": "b208524da6e7069cfe043a1457afbd1ccf471534f5be9c8da1eafa7dcaf90233",
+          "bytes": 22435
+        }
+      }
+    },
+    {
+      "region_id": "80000000",
+      "name": "Республика Башкортостан",
+      "population": 4091423,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/80000000/settlements.parquet",
+          "rows": 4561,
+          "sha256": "7f6b05bf3a9dacf12a2d5449b306d2aae56e19d407b1731935de94b95b3dda57",
+          "bytes": 121328
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/80000000/companies_2025.parquet",
+          "rows": 61977,
+          "sha256": "2df453b20a92d6c9c00074dd4a07cac85afea4d07530393b3aec39d2244a4c44",
+          "bytes": 1348553
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/80000000/fns_matched_2025.parquet",
+          "rows": 37322,
+          "sha256": "347e4e0c06961f7d08a5a3c2ba03211591923941dbfb15ad9bf1a5d03a75260a",
+          "bytes": 1656561
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/80000000/settlement_economy.parquet",
+          "rows": 4561,
+          "sha256": "0e9d13bcc66d3c591aa15209bc2d0a867fc679743ac7bf8feb4706999acec395",
+          "bytes": 156566
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/80000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "82c7dd69fbbabf2e49a6791aad97bff5f1a01154793bf57730886abdab5509ca",
+          "bytes": 2990
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/80000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "48ebf06c9693936a5870d6861233d20c083b4dc600b788c68877d498e4827621",
+          "bytes": 2508
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/80000000/settlement_lights.parquet",
+          "rows": 9122,
+          "sha256": "e943e9b89f8eba3d77f5c41dbeebc7419320f767bde33927fea9d0b1d1c0a28b",
+          "bytes": 12079
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/80000000/company_settlement.parquet",
+          "rows": 30581,
+          "sha256": "829c83a5355f7bd4c4fa51ee06c96dd59783406ed0601bed8e488aa13833c9c0",
+          "bytes": 189114
+        }
+      }
+    },
+    {
+      "region_id": "81000000",
+      "name": "Республика Бурятия",
+      "population": 978588,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/81000000/settlements.parquet",
+          "rows": 633,
+          "sha256": "77cbe8b5c82e24854b3b24aa558bade49d9829a18f8dbd323f4a0110bfb6c98a",
+          "bytes": 30966
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/81000000/companies_2025.parquet",
+          "rows": 14596,
+          "sha256": "8b9c465179f81e90bf75ed9ecde6e338d5165531121b3b3c53e34bf09fb2c51f",
+          "bytes": 297606
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/81000000/fns_matched_2025.parquet",
+          "rows": 7681,
+          "sha256": "881db48be81836ef9b879797ec95955ea293631f8b371e4368585830a2b66792",
+          "bytes": 353167
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/81000000/settlement_economy.parquet",
+          "rows": 633,
+          "sha256": "3ee001eb14098773046288f202f9945b3bce7a6502fa4dc55c29044178be0f78",
+          "bytes": 36998
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/81000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "9ea3ea75fb62e2a39d3ea839ba4dfe5f292d8b17ef22ff00a4eda039bed39fcb",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/81000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "79dc9521fe31860380c5b440c8cd35233680458b1d547c0b4eb28a864640ddb4",
+          "bytes": 2385
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/81000000/settlement_lights.parquet",
+          "rows": 1266,
+          "sha256": "f56e957b70c79e26e6f87fe8a729361206eeef41beb78ba7f592af29fe267f66",
+          "bytes": 5271
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/81000000/company_settlement.parquet",
+          "rows": 5802,
+          "sha256": "f2687bd260f9c1e0c5b83376aa468f08d40c24c29341adedbb8079f2ffba81af",
+          "bytes": 33568
+        }
+      }
+    },
+    {
+      "region_id": "82000000",
+      "name": "Республика Дагестан",
+      "population": 3182054,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/82000000/settlements.parquet",
+          "rows": 1631,
+          "sha256": "39eaa82e9634cd9ecbab15d95df54ead84778ff8d50e53752538ba2452ed3f02",
+          "bytes": 47897
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/82000000/companies_2025.parquet",
+          "rows": 23487,
+          "sha256": "f469be3d9a11480c2b05ff16b926dc580df346db33f4f35adcd498b69cc86ef7",
+          "bytes": 452097
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/82000000/fns_matched_2025.parquet",
+          "rows": 7337,
+          "sha256": "c251556217b7eef84e63d7114f9b9b91bf0b17ab15ed5dc51a20ab6db144cd06",
+          "bytes": 348947
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/82000000/settlement_economy.parquet",
+          "rows": 1631,
+          "sha256": "8cd6f767684cf2e5710dd6e64c3d1c601c29d3ea41cb298d9fce47bfc660fd24",
+          "bytes": 62102
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/82000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "21dbe124523bf8490191eae85113a3344b95ef6c900eb2ec9052f8becd43048b",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/82000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "6d7c8423e41fc6d2aac4ff05332ce49175ff8411852b7b1d92b3cbc99083c969",
+          "bytes": 2464
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/82000000/settlement_lights.parquet",
+          "rows": 3262,
+          "sha256": "cd68906e60229b354e4e2d45dc69633a3906e732f0a876d9d66730ca9111523b",
+          "bytes": 5721
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/82000000/company_settlement.parquet",
+          "rows": 5623,
+          "sha256": "1173c4174bfb5670bd9e81bdc14a3f544f205cf44eafce177fd84d102c4eaaa9",
+          "bytes": 45247
+        }
+      }
+    },
+    {
+      "region_id": "83000000",
+      "name": "Кабардино-Балкарская Республика",
+      "population": 904200,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/83000000/settlements.parquet",
+          "rows": 180,
+          "sha256": "bbafddd407879af5409123cd0b58fdae5153ebfe073440177198077f74cb76c8",
+          "bytes": 10017
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/83000000/companies_2025.parquet",
+          "rows": 9602,
+          "sha256": "2b8c57dc5ff43e373e0dffc7e42df56b5b0acf86c231e5cc1e84881e51554b2a",
+          "bytes": 197531
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/83000000/fns_matched_2025.parquet",
+          "rows": 4189,
+          "sha256": "c910e520b320117c1a9a75b1963510c0aa8b8a9d142885cd159a8e63e09b9861",
+          "bytes": 215376
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/83000000/settlement_economy.parquet",
+          "rows": 180,
+          "sha256": "829185ff890019104f10370d1d9b5c0e76467939dd44c5b6c3a755575debf7cd",
+          "bytes": 15095
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/83000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "4179f9e59a67053a6d61f1cbd0c605428c7861351adaf0f902592f92f9890b3d",
+          "bytes": 3064
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/83000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "e4239f802c9efa6349283350eade9b6e2b1b0895b40bec788ee1ccb4da41ebf2",
+          "bytes": 2370
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/83000000/settlement_lights.parquet",
+          "rows": 360,
+          "sha256": "0009e688b49b3e699edf7cdc43c38b79f7cdd78b20a3300de177c5fa4f62698b",
+          "bytes": 2122
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/83000000/company_settlement.parquet",
+          "rows": 3708,
+          "sha256": "b6148431fbf8709d7dae037ad7e187c303dd47d03c97441f81aef9b35d44e0eb",
+          "bytes": 25519
+        }
+      }
+    },
+    {
+      "region_id": "84000000",
+      "name": "Республика Алтай",
+      "population": 210924,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/84000000/settlements.parquet",
+          "rows": 247,
+          "sha256": "e641b626956e430a235e984300c6cd70feff1be550888633411197bc62c9f94b",
+          "bytes": 12685
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/84000000/companies_2025.parquet",
+          "rows": 3966,
+          "sha256": "988451eb196eed5e820f7ffe3883e8c441920879729bab755ac4228f14cbfd7b",
+          "bytes": 90607
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/84000000/fns_matched_2025.parquet",
+          "rows": 1926,
+          "sha256": "8dd61f095c8dca9840526d02c1a092b4d5c600e1f4caf6afe06862db85dc4050",
+          "bytes": 107828
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/84000000/settlement_economy.parquet",
+          "rows": 247,
+          "sha256": "b126eb9a8f1fe1d7b40f8725627726f77a181c2f6107202f4b9847f79b887e14",
+          "bytes": 16800
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/84000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "36026bea7fc77148ee4b5c3a10f0a33561b95adf9fbb6574feddd70f7c37b9c5",
+          "bytes": 2917
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/84000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "e57e782489a091af4850d22a16f6205d586035bd6a206ce3e3ba6d843cedba3d",
+          "bytes": 2304
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/84000000/settlement_lights.parquet",
+          "rows": 494,
+          "sha256": "52e8948cf6de63024f475c1a9fb49e09107f7e15c6a1416cfbf12db8a7e238cd",
+          "bytes": 2593
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/84000000/company_settlement.parquet",
+          "rows": 1953,
+          "sha256": "025e2fd6c71ad7f6ff1f79d904bc8256380c265a0d24333f824d95050527f581",
+          "bytes": 17376
+        }
+      }
+    },
+    {
+      "region_id": "85000000",
+      "name": "Республика Калмыкия",
+      "population": 267133,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/85000000/settlements.parquet",
+          "rows": 265,
+          "sha256": "16de5a85fae8475ddd321a5bbf52efe4f304b432108cf862a873a8f43ecaebc3",
+          "bytes": 13763
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/85000000/companies_2025.parquet",
+          "rows": 5674,
+          "sha256": "c9c137558e6b25e96a1d1253f55f0518e1b175a2ab8e8e9a5ffe87ada0d057db",
+          "bytes": 125216
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/85000000/fns_matched_2025.parquet",
+          "rows": 3546,
+          "sha256": "4cdcd4843966782e0701720e2f617c2c8426c66800785fd43c4b877ca5dd1d08",
+          "bytes": 184222
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/85000000/settlement_economy.parquet",
+          "rows": 265,
+          "sha256": "c729e5c51cac9bdbfb314a06297da897e928049007a9c1b889a8e356def38c0f",
+          "bytes": 17459
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/85000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "6fa72919b27cee3e99d8811eee7c36df0d67a1f838d587308aeefc9ac98f16b9",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/85000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "773c6c8d4e34aee9a64befb90bb916ec1b9baeb722e78f9773d028813b7d3bcf",
+          "bytes": 2342
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/85000000/settlement_lights.parquet",
+          "rows": 530,
+          "sha256": "a3a0ba48eec269b0c93d6d718ab19b91e0fcf309306954d61606bbb11bbffac2",
+          "bytes": 2743
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/85000000/company_settlement.parquet",
+          "rows": 2182,
+          "sha256": "0a7cab9f5ad3abab0075fea0c102360e880f7bad4f664e34894258eb28c28f20",
+          "bytes": 14327
+        }
+      }
+    },
+    {
+      "region_id": "86000000",
+      "name": "Республика Карелия",
+      "population": 533121,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/86000000/settlements.parquet",
+          "rows": 845,
+          "sha256": "64b1208c89332ed5e4543580e1bff73094d232d83db90e685512633878137adb",
+          "bytes": 35552
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/86000000/companies_2025.parquet",
+          "rows": 14698,
+          "sha256": "fcf4909544aa8ce1428edeea547aca59e35bb14185b37050456e31882a01301f",
+          "bytes": 311262
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/86000000/fns_matched_2025.parquet",
+          "rows": 7602,
+          "sha256": "903fcfae4e096b88735a4e247a2f9b455c1d19942e230f97c8ddeb5d89143545",
+          "bytes": 361171
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/86000000/settlement_economy.parquet",
+          "rows": 845,
+          "sha256": "f0c723e9b3b6cea46442d04826efc681674c572ffff0d62676a282bdd10c1999",
+          "bytes": 42298
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/86000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "0c1ea910927201d829baa71a66a1d8beabfbde190f1c3e138f3d8d9f20c70e40",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/86000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "b1ca43c46474e17b8c6dc75c9263aeefcda0d60747e07837ab39e75e53eae8a2",
+          "bytes": 2371
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/86000000/settlement_lights.parquet",
+          "rows": 1690,
+          "sha256": "004d75452350ef6f17f8fecfe5dfcdedb77fb3167943a015fd4ec658f1ff3425",
+          "bytes": 5964
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/86000000/company_settlement.parquet",
+          "rows": 7753,
+          "sha256": "450c2a938770c27d18667a1297315a1a1de2d3886b2c4ed1001f1cef6b494e67",
+          "bytes": 45211
+        }
+      }
+    },
+    {
+      "region_id": "87000000",
+      "name": "Республика Коми",
+      "population": 737853,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/87000000/settlements.parquet",
+          "rows": 757,
+          "sha256": "3388f759258aa31d733fdd16621e5bdccf59e529a76882aecef5e063d781b46b",
+          "bytes": 32742
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/87000000/companies_2025.parquet",
+          "rows": 10514,
+          "sha256": "a8767cad795cdccde4fc19515f060f691c70f6d40981b2dda49fa04f99e4087b",
+          "bytes": 245028
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/87000000/fns_matched_2025.parquet",
+          "rows": 6013,
+          "sha256": "43da4885547b25b07b2720b7d045f961da75d63074c6980966575d3f39d74886",
+          "bytes": 301974
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/87000000/settlement_economy.parquet",
+          "rows": 757,
+          "sha256": "ca676e73119c66bd1b92018e0fe1880632aba810c5afdcbaa8d7b8fa37e9e3a0",
+          "bytes": 39811
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/87000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "17b17586a8b81a4d9aa04fba361f3b95ed56c0693d643f65dd0279050e2bc7cd",
+          "bytes": 2907
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/87000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "23448ef4190800dffda60df842f63f4d5a8d3d2a2ad4b4a9e6544fa5789a632d",
+          "bytes": 2345
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/87000000/settlement_lights.parquet",
+          "rows": 1514,
+          "sha256": "a91ab44537c4ba6f1ed1b18ac8b1ade88be5625d8f5c3886c68e68b052247817",
+          "bytes": 5944
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/87000000/company_settlement.parquet",
+          "rows": 6308,
+          "sha256": "e303c85c16fda06074ff783bb9217ebfd0a84ecb6d67e8ad12fff6cf1d19d541",
+          "bytes": 40077
+        }
+      }
+    },
+    {
+      "region_id": "88000000",
+      "name": "Республика Марий Эл",
+      "population": 677097,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/88000000/settlements.parquet",
+          "rows": 1616,
+          "sha256": "a5cbae8d4ea0ad22d77ec2cfb61cf8379e124be20744b486c9913af949f95e37",
+          "bytes": 43660
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/88000000/companies_2025.parquet",
+          "rows": 8912,
+          "sha256": "fbbde4dad8097defc7a02191ad7addccfc07cd0f4825caf819a5b3f14a04d8b8",
+          "bytes": 210412
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/88000000/fns_matched_2025.parquet",
+          "rows": 5458,
+          "sha256": "4d14f22df092e9a358767d219e2c7a12ce4cfbefc2b7cf5aaa64da36fc14aa5d",
+          "bytes": 276669
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/88000000/settlement_economy.parquet",
+          "rows": 1616,
+          "sha256": "53443f09c439bf8bff3692288f2529357e035979320c50a7fc415c694a32789b",
+          "bytes": 52362
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/88000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "403e8a54ee3bd1aa1d1e1849e6e8d27f705f28205e66e552b068d577d53a717b",
+          "bytes": 2942
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/88000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "2d632924875d7f1197399a3d0a466c73aad158e853282b799cdbaa10ccc7bef4",
+          "bytes": 2341
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/88000000/settlement_lights.parquet",
+          "rows": 3232,
+          "sha256": "816c13a1645d647bf8e3d1e2d63b402f8daacb8b605043d5d1bf6897ce5b95af",
+          "bytes": 4218
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/88000000/company_settlement.parquet",
+          "rows": 6048,
+          "sha256": "efa5ca52a98c3af0f040b0a579132adfd1bf5fed1d25d2819005da9985310385",
+          "bytes": 38402
+        }
+      }
+    },
+    {
+      "region_id": "89000000",
+      "name": "Республика Мордовия",
+      "population": 783552,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/89000000/settlements.parquet",
+          "rows": 1257,
+          "sha256": "871beda5a79f92c177a631e4da989c65ecbbda65b16018647f2d9d5c2baf4650",
+          "bytes": 41262
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/89000000/companies_2025.parquet",
+          "rows": 9332,
+          "sha256": "96010c9f7d23cc95fbbcba0d438b8b89cb55f9c5a3668c51707ec44553cd6a5c",
+          "bytes": 210531
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/89000000/fns_matched_2025.parquet",
+          "rows": 5170,
+          "sha256": "63dfefe52248e82caacd238d3e90a39b86656b183f934dbf67fb94cc5a043c18",
+          "bytes": 267637
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/89000000/settlement_economy.parquet",
+          "rows": 1257,
+          "sha256": "87b59195ef8cde8e45a2088e26b13421abfbee993412246878d5e0c65d3e41f1",
+          "bytes": 49232
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/89000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "67c25eedcd531c81e7ecb47ed230a7c6042991e2fde340cb8a764d386418ae70",
+          "bytes": 2947
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/89000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "f2456808e39f713bb1d75d3132286bcdeac7fd2643570c223d3ce47ca97668c0",
+          "bytes": 2385
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/89000000/settlement_lights.parquet",
+          "rows": 2514,
+          "sha256": "28bb8cbf23af7cfe4fc1d2bf423efee138bcf9afa3581e5ef610da016d2958a6",
+          "bytes": 4362
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/89000000/company_settlement.parquet",
+          "rows": 5464,
+          "sha256": "a5358581885339b95c99b24da76e1601d528d62b18709981cc9ef2ca2f60a309",
+          "bytes": 33204
+        }
+      }
+    },
+    {
+      "region_id": "90000000",
+      "name": "Республика Северная Осетия",
+      "population": 687357,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/90000000/settlements.parquet",
+          "rows": 222,
+          "sha256": "54d4e1f5d9327810fbe1c29c298d57db5e99ebb449cf5256caefa727ec95a956",
+          "bytes": 11800
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/90000000/companies_2025.parquet",
+          "rows": 8203,
+          "sha256": "7e93f1a2d4294ec5fb0cd079f0793545b220c847155decac9416e2c517924438",
+          "bytes": 169581
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/90000000/fns_matched_2025.parquet",
+          "rows": 3781,
+          "sha256": "c9f69e99a1e28478f32b4c6d6c59c6c78bae2f6211dafa65fa91f7787b88f479",
+          "bytes": 193586
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/90000000/settlement_economy.parquet",
+          "rows": 222,
+          "sha256": "ac059d2662f41915911ccb751b8c97f47b49bcbfdc2c5a0adc0271f7f99a3f64",
+          "bytes": 15398
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/90000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "d5b1f445c4ea9b2abcb756c298e2c6eb7edb2b83baa77cce2b861fa39d9522cb",
+          "bytes": 3012
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/90000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "8b251ae8d80f68267e46498c792c81251ad025a685a686913f3c45766bdf2f36",
+          "bytes": 2377
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/90000000/settlement_lights.parquet",
+          "rows": 444,
+          "sha256": "1768ab9c8a6f9e6714393924d7ca2d1b264c2f6346ef153d831374df7724f258",
+          "bytes": 2505
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/90000000/company_settlement.parquet",
+          "rows": 3594,
+          "sha256": "6ceaafc5cac87fe5e41f8366303c19caa244de3b5d4e2a7efe76cf2c55310d9b",
+          "bytes": 23558
+        }
+      }
+    },
+    {
+      "region_id": "91000000",
+      "name": "Карачаево-Черкесская Республика",
+      "population": 469865,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/91000000/settlements.parquet",
+          "rows": 148,
+          "sha256": "d3a100ae381cc7a28c3c16b3eb23f0cb5cd522fbf4f460aed04701057219c764",
+          "bytes": 8973
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/91000000/companies_2025.parquet",
+          "rows": 4714,
+          "sha256": "2ccf8b1ab7ccfb4faf242f2e8324b6bd92fb8b28e90e666a0cba99968ac09a0b",
+          "bytes": 105272
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/91000000/fns_matched_2025.parquet",
+          "rows": 2299,
+          "sha256": "9a59dca123fecf395c50ffc30d4a1c10ea1f3490b0000989cd19b5d35237d683",
+          "bytes": 121948
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/91000000/settlement_economy.parquet",
+          "rows": 148,
+          "sha256": "c164ddf46eb03cd4ea6304bec2f0c20ece20e8ecad0a907f27266d9f429c1bd1",
+          "bytes": 12671
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/91000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "30ef230d40abfd8d3ef230b234096806f3d3386d73310f98705c815ca319819e",
+          "bytes": 3064
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/91000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "f9534e3c8aa615a199882965818edef3071a25428329cd9bbaf49be188d6dfff",
+          "bytes": 2357
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/91000000/settlement_lights.parquet",
+          "rows": 296,
+          "sha256": "24126f1224978ab52a179c13cfe3fbeae371cef04fe2d86ff51a15ce7551e69d",
+          "bytes": 1980
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/91000000/company_settlement.parquet",
+          "rows": 1946,
+          "sha256": "07a3771c8cace98dabc892ca0d532fda4d44fec18e04f9d5db07d75c8cf0c9b0",
+          "bytes": 18182
+        }
+      }
+    },
+    {
+      "region_id": "92000000",
+      "name": "Республика Татарстан",
+      "population": 4004809,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/92000000/settlements.parquet",
+          "rows": 3119,
+          "sha256": "d795771792f65220b99a97b739930b0e75835a163b41ef589678f7c81a5af67f",
+          "bytes": 86281
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/92000000/companies_2025.parquet",
+          "rows": 90365,
+          "sha256": "f452e72ab68b10a49275ec9726ba1a49fa77598b5d310501b7bd17172dffd085",
+          "bytes": 1871080
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/92000000/fns_matched_2025.parquet",
+          "rows": 55755,
+          "sha256": "8a55881d5f21059b5f0400ea53142e52b980661a570ac55ccbca3c5e555101e4",
+          "bytes": 2458647
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/92000000/settlement_economy.parquet",
+          "rows": 3119,
+          "sha256": "ff9b8aee2d133a231b12ffe132f339db2379aa7cd2d46be29cd5d8012c74aa58",
+          "bytes": 109503
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/92000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "f34ac752a549b4be32d3cf79a0949eece3aef773c02ced8bf83a76693d9e4840",
+          "bytes": 2960
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/92000000/sector_economy.parquet",
+          "rows": 22,
+          "sha256": "49022053ad15f9087351ee522f926fd42fa7b97430806ad980f337a395c34e5a",
+          "bytes": 2453
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/92000000/settlement_lights.parquet",
+          "rows": 6238,
+          "sha256": "4b7791a91e35478c12c809431108572d848e99a8431b5d2f30da30c6c36bb938",
+          "bytes": 10048
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/92000000/company_settlement.parquet",
+          "rows": 40638,
+          "sha256": "5be0b069df34a7e018b3594cde0eed10e5bbc8521ccd17b32c5178e26143c527",
+          "bytes": 220405
+        }
+      }
+    },
+    {
+      "region_id": "93000000",
+      "name": "Республика Тыва",
+      "population": 336651,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/93000000/settlements.parquet",
+          "rows": 150,
+          "sha256": "ecac408fe8913c616c2d3bbbd13ea5dbc4d06b0b3d589525655bce8af1b80746",
+          "bytes": 8756
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/93000000/companies_2025.parquet",
+          "rows": 2701,
+          "sha256": "33cc49244c9b82b3e8242b3c6bf6bb8e5480e02adaa76f9140625a9125b51ce3",
+          "bytes": 63544
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/93000000/fns_matched_2025.parquet",
+          "rows": 1025,
+          "sha256": "acc0d5326035a92baf6bdaca16b0ba185ae6fc9d55de35784a4b1aad87a13a58",
+          "bytes": 71241
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/93000000/settlement_economy.parquet",
+          "rows": 150,
+          "sha256": "3a0d5b60e8fd73e5d392ea64bd0ff30fea1ed4f95b658e6f0808562ddfd66dd2",
+          "bytes": 10910
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/93000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "179e68c4d7f08f5e465b70db6f48dc4136b726d7c3c4aa6d66c5314e2734986a",
+          "bytes": 2907
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/93000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "fa2f0da9d0ded97e3903e872c69556fb4452f5ac7f023b3b61525b9acfaf83e8",
+          "bytes": 2259
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/93000000/settlement_lights.parquet",
+          "rows": 300,
+          "sha256": "c6b9c7791673929997d61858e927183a6f571248bc0362b2cabb92b65cab08fa",
+          "bytes": 1981
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/93000000/company_settlement.parquet",
+          "rows": 925,
+          "sha256": "5df44af5a52f98eab8dee15198be37e675758b9380d42fb4334cfbfa2a38f55f",
+          "bytes": 13296
+        }
+      }
+    },
+    {
+      "region_id": "94000000",
+      "name": "Удмуртская Республика",
+      "population": 1452914,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/94000000/settlements.parquet",
+          "rows": 1961,
+          "sha256": "c2a41eaca9d65f3f4fc5304ea08cdf00f00adb7931787865bbdeca9257ed9161",
+          "bytes": 53823
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/94000000/companies_2025.parquet",
+          "rows": 29366,
+          "sha256": "6bd552dbfc0539b59769c28f1702bf8f9df8c43944828b57b624b31b63002280",
+          "bytes": 643414
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/94000000/fns_matched_2025.parquet",
+          "rows": 17836,
+          "sha256": "58de34be32e366914f91a84e98ea5548d0719c9517a0e4ac2742c9f1276a0470",
+          "bytes": 810445
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/94000000/settlement_economy.parquet",
+          "rows": 1961,
+          "sha256": "21d1d251271a3884fa0978f5c906724cd5cc20b2c02c695bedd9ec826f2a7db5",
+          "bytes": 63590
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/94000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "422ca05a83d8cf6e7761d52ff6b63ee0373d92325b26ecb8a7a2141978477f32",
+          "bytes": 2967
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/94000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "c1f519176451cc26b48c17f6364c545b17160ca1e059ed20c0ab52127d4687e0",
+          "bytes": 2409
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/94000000/settlement_lights.parquet",
+          "rows": 3922,
+          "sha256": "c8d10cbb5ffeb9490fa5b6ff8705864d009e5cc1d142ebdabb1c1575880812c1",
+          "bytes": 5419
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/94000000/company_settlement.parquet",
+          "rows": 17442,
+          "sha256": "a217151860a6260693629b464204f0f3e447bc50659a4b989752ddffef6f706e",
+          "bytes": 98875
+        }
+      }
+    },
+    {
+      "region_id": "95000000",
+      "name": "Республика Хакасия",
+      "population": 534795,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/95000000/settlements.parquet",
+          "rows": 283,
+          "sha256": "8f11dcdcff58f6da9cc8023a35ce375be0251c479b72f38fd3229cc8fa56b431",
+          "bytes": 14888
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/95000000/companies_2025.parquet",
+          "rows": 6540,
+          "sha256": "ddacd7c0223a1b6e67e0bcfa307610a6c5cee74d9929ff8295ba2b9f6b118c18",
+          "bytes": 151857
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/95000000/fns_matched_2025.parquet",
+          "rows": 3734,
+          "sha256": "1521f0f366a7038ac25bc39ed7f16a6007ca935d5664b650739ee1e22e3c443d",
+          "bytes": 197420
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/95000000/settlement_economy.parquet",
+          "rows": 283,
+          "sha256": "3c0bd6b300efe4ea9dd59d4998d30e9f2d79c432da74060779e5eb81b6d30b15",
+          "bytes": 18761
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/95000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "9f637d3d6f79db570831a2e93505bc2ff9bca4aa12c93adae572c41a8f43f4de",
+          "bytes": 2937
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/95000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "1b253f5c4c3a2275e03aae300f50b612bde4b19dba12d6af013908a31294ec97",
+          "bytes": 2394
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/95000000/settlement_lights.parquet",
+          "rows": 566,
+          "sha256": "c2d04d63369098f06bc48891cfd5466850c128899fd0a17b209b23989e775aea",
+          "bytes": 2999
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/95000000/company_settlement.parquet",
+          "rows": 4024,
+          "sha256": "1fdf6efbe3f0ed45875f4b42df5c756ec12615f7208f7fff6527bf314228b5b0",
+          "bytes": 25409
+        }
+      }
+    },
+    {
+      "region_id": "96000000",
+      "name": "Чеченская Республика",
+      "population": 1510824,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/96000000/settlements.parquet",
+          "rows": 363,
+          "sha256": "e2062f3f00411980974780db57f8e6a6680937d2226312a22733d7b65bd8c103",
+          "bytes": 18245
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/96000000/companies_2025.parquet",
+          "rows": 9895,
+          "sha256": "e8f28be76ac17436a174acc9fea5d3632a8d68d8137df5bdd3b164536607c413",
+          "bytes": 177919
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/96000000/fns_matched_2025.parquet",
+          "rows": 4223,
+          "sha256": "13b11e08be687019b8ac009d41ae51e591e68d005edaed5d10ac1e052efffeca",
+          "bytes": 221273
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/96000000/settlement_economy.parquet",
+          "rows": 363,
+          "sha256": "e4ba43f77de45f3ff701c517fd053e36bb34edd6949f4dcde4dcd4dd62a0e1db",
+          "bytes": 21406
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/96000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "0152c4525f8ec19196afc4331572dace0f7677368f55adc107860416123e1e36",
+          "bytes": 2957
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/96000000/sector_economy.parquet",
+          "rows": 20,
+          "sha256": "a7d255a5583e61b1148e5708c7e486d995f996da682f63227ed665cccca8b9dd",
+          "bytes": 2359
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/96000000/settlement_lights.parquet",
+          "rows": 726,
+          "sha256": "bbe63756559e64be7f9829f16f8ecfbf4e42fd919f58e62ed3c1fb438442225e",
+          "bytes": 3424
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/96000000/company_settlement.parquet",
+          "rows": 1206,
+          "sha256": "c61bc9d7162401236dec6c66d3c076b3b933996238965f13075c081e0128dff0",
+          "bytes": 13597
+        }
+      }
+    },
+    {
+      "region_id": "97000000",
+      "name": "Чувашская Республика",
+      "population": 1186909,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/97000000/settlements.parquet",
+          "rows": 1729,
+          "sha256": "2bcf224351e2bea4c22abdd9aef615b40e557f59663e6e293999bd39d2ba5ad5",
+          "bytes": 47756
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/97000000/companies_2025.parquet",
+          "rows": 17016,
+          "sha256": "484058d48c9fa38a9bf3f37709ad278fea7314b99ee45f1346e78e01f8cbaa8d",
+          "bytes": 381615
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/97000000/fns_matched_2025.parquet",
+          "rows": 10812,
+          "sha256": "bcca881b2e92be8f4765a5b9c3312f6ffe38127e084003cf704013ce6b391e00",
+          "bytes": 504780
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/97000000/settlement_economy.parquet",
+          "rows": 1729,
+          "sha256": "5e614d76fe84310c253bdab6ba39080650cbe7aaa6b6abe0554b546363cfca18",
+          "bytes": 57622
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/97000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "11f99802a2e343ca7291d9d70749db846435f1539e3faf86a93845e63ab05b01",
+          "bytes": 2957
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/97000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "7140b909e2a0cea49a91bebee70131ab62d153255bab583ac94d46f4847fd3ba",
+          "bytes": 2339
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/97000000/settlement_lights.parquet",
+          "rows": 3458,
+          "sha256": "2609009251a4ff967475f518c1d94554695e1f6f7247f95b9723bece13eca79f",
+          "bytes": 5086
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/97000000/company_settlement.parquet",
+          "rows": 10394,
+          "sha256": "8e8879f46961843a6002f61212f7fb159a152c1209468aef0a271a8236d163a5",
+          "bytes": 58600
+        }
+      }
+    },
+    {
+      "region_id": "98000000",
+      "name": "Республика Саха (Якутия)",
+      "population": 995686,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/98000000/settlements.parquet",
+          "rows": 636,
+          "sha256": "ec8e7f209d6de1fcd3e26fb48e2167f4d001252ca1115c44c413c64b5156414c",
+          "bytes": 30461
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/98000000/companies_2025.parquet",
+          "rows": 18389,
+          "sha256": "59b655aa6263d9e385837ef9654da4fd20523e9f5d38fc476469e28e3bb6e144",
+          "bytes": 375376
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/98000000/fns_matched_2025.parquet",
+          "rows": 8651,
+          "sha256": "71ea74df47061d57c79b5997b5715fe84a964835276bc82b81bfb71f64334e86",
+          "bytes": 406380
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/98000000/settlement_economy.parquet",
+          "rows": 636,
+          "sha256": "daf4be3d0d6e78dd04b89361b5599737e2c701cc4a54af3667b95dd21f0839cb",
+          "bytes": 37221
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/98000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "5c000d5d5daeb7f8360afec441b728e0cc5b09d1c6d67dddc36f9f08f3d8ec00",
+          "bytes": 2982
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/98000000/sector_economy.parquet",
+          "rows": 21,
+          "sha256": "9a55355137eba6f1791fb7cdfa52a1129fbbc4d11eb5c8da0d06b764cb9c724d",
+          "bytes": 2406
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/98000000/settlement_lights.parquet",
+          "rows": 1272,
+          "sha256": "47394f77c6935838706e8d16be2786b26d26d450746ad547fc9074360a9b2205",
+          "bytes": 5895
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/98000000/company_settlement.parquet",
+          "rows": 8248,
+          "sha256": "c8cdb31e5d8081ac2210ce6908e6bc4770e716c17b2363dc8e16794dbc9b25ce",
+          "bytes": 49396
+        }
+      }
+    },
+    {
+      "region_id": "99000000",
+      "name": "Еврейская автономная область",
+      "population": 150453,
+      "exports": {
+        "settlements": {
+          "path": "data/additional/all-regions/derived/regions/99000000/settlements.parquet",
+          "rows": 112,
+          "sha256": "a53f24c5cf0e82a07adf280fa5fd37a543c444c61ef423ae5500039176f11202",
+          "bytes": 7223
+        },
+        "companies_2025": {
+          "path": "data/additional/all-regions/derived/regions/99000000/companies_2025.parquet",
+          "rows": 1706,
+          "sha256": "e422bee97580fa7359ca4013efde224d1602ff639a34a24276a82a580e2c4560",
+          "bytes": 49946
+        },
+        "fns_matched_2025": {
+          "path": "data/additional/all-regions/derived/regions/99000000/fns_matched_2025.parquet",
+          "rows": 868,
+          "sha256": "cfdecc4b1ba03400a9f0ffce215b85c345cb764c2be4bcb0557c9546113c0efb",
+          "bytes": 61466
+        },
+        "settlement_economy": {
+          "path": "data/additional/all-regions/derived/regions/99000000/settlement_economy.parquet",
+          "rows": 112,
+          "sha256": "b2a528c3779368736d0414e0a77ae4c9d5beb7a7a5dd61b388539594b9914df3",
+          "bytes": 9597
+        },
+        "region_economy": {
+          "path": "data/additional/all-regions/derived/regions/99000000/region_economy.parquet",
+          "rows": 1,
+          "sha256": "05b0b90ceadf7b4765c277b314378da37de91fe85fe21c33a6b6dd09a0c772fc",
+          "bytes": 3033
+        },
+        "sector_economy": {
+          "path": "data/additional/all-regions/derived/regions/99000000/sector_economy.parquet",
+          "rows": 19,
+          "sha256": "8924f10bec80b85ff44af87ff9d6f94e158f792219366ca48b65717f452caf06",
+          "bytes": 2235
+        },
+        "settlement_lights": {
+          "path": "data/additional/all-regions/derived/regions/99000000/settlement_lights.parquet",
+          "rows": 224,
+          "sha256": "a9557344c7634df4546b45b8f060a5f763eddd9c1da7dddbbdf1e1f9532eed0c",
+          "bytes": 1778
+        },
+        "company_settlement": {
+          "path": "data/additional/all-regions/derived/regions/99000000/company_settlement.parquet",
+          "rows": 1015,
+          "sha256": "0f6c04f7a91bee51ede11dd06d544221b5386ba6940532c537ebca3aba8e4551",
+          "bytes": 13162
+        }
+      }
+    }
+  ],
+  "totals": {
+    "settlements": 155412,
+    "companies_2025": 2230505,
+    "fns_matched_2025": 1302237,
+    "settlement_economy": 155412,
+    "region_economy": 82,
+    "sector_economy": 1678,
+    "settlement_lights": 310824,
+    "company_settlement": 1190422
+  },
+  "outside_atlas": {
+    "path": "data/additional/all-regions/derived/companies_outside_atlas_2025.parquet",
+    "rows": 912673,
+    "sha256": "571c147a3acad3b856ee53cebe279a4d19a7d3edd85ab1830940e2405a797e63"
+  },
+  "region_count": 82,
+  "checks": "settlement, company and lights counts reconcile to source database including outside-atlas companies"
+}

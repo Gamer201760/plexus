@@ -1,0 +1,1633 @@
+[
+  {
+    "region_name": "Республика Адыгея",
+    "atlas_region_name": "Республика Адыгея",
+    "region_id_if_known": "79000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 46,
+    "f032_uidmo_prefixes": [
+      "01"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "01",
+        "tf_okato": "79000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ АДЫГЕЯ",
+        "www": "http://www.arfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Башкортостан",
+    "atlas_region_name": "Республика Башкортостан",
+    "region_id_if_known": "80000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 161,
+    "f032_uidmo_prefixes": [
+      "02"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "02",
+        "tf_okato": "80000",
+        "name_tfp": "Государственное учреждение Территориальный фонд обязательного медицинского страхования Республики Башкортостан",
+        "www": "www.tfoms-rb.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Бурятия",
+    "atlas_region_name": "Республика Бурятия",
+    "region_id_if_known": "81000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 76,
+    "f032_uidmo_prefixes": [
+      "03"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "03",
+        "tf_okato": "81000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Республики Бурятия",
+        "www": "www.tfomsrb.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Алтай",
+    "atlas_region_name": "Республика Алтай",
+    "region_id_if_known": "84000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 39,
+    "f032_uidmo_prefixes": [
+      "04"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "04",
+        "tf_okato": "84000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Республики Алтай",
+        "www": "TFOMSRA.RU"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Дагестан",
+    "atlas_region_name": "Республика Дагестан",
+    "region_id_if_known": "82000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 257,
+    "f032_uidmo_prefixes": [
+      "05"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "05",
+        "tf_okato": "82000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ ДАГЕСТАН",
+        "www": "www.fomsrd.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Ингушетия",
+    "atlas_region_name": "Республика Ингушетия",
+    "region_id_if_known": "26000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 43,
+    "f032_uidmo_prefixes": [
+      "06"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "06",
+        "tf_okato": "26000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Республики Ингушетия",
+        "www": "www.rifoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Кабардино-Балкарская Республика",
+    "atlas_region_name": "Кабардино-Балкарская Республика",
+    "region_id_if_known": "83000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 54,
+    "f032_uidmo_prefixes": [
+      "07"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "07",
+        "tf_okato": "83000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Кабардино-Балкарской Республики",
+        "www": "tfomskbr.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Калмыкия",
+    "atlas_region_name": "Республика Калмыкия",
+    "region_id_if_known": "85000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 40,
+    "f032_uidmo_prefixes": [
+      "08"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "08",
+        "tf_okato": "85000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Республики Калмыкия",
+        "www": "https://kalmfoms.ru/"
+      }
+    ]
+  },
+  {
+    "region_name": "Карачаево-Черкесская Республика",
+    "atlas_region_name": "Карачаево-Черкесская Республика",
+    "region_id_if_known": "91000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 59,
+    "f032_uidmo_prefixes": [
+      "09"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "09",
+        "tf_okato": "91000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КАРАЧАЕВО-ЧЕРКЕССКОЙ РЕСПУБЛИКИ",
+        "www": "www.тфомс09.рф"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Карелия",
+    "atlas_region_name": "Республика Карелия",
+    "region_id_if_known": "86000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 78,
+    "f032_uidmo_prefixes": [
+      "10"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "10",
+        "tf_okato": "86000",
+        "name_tfp": "ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ \"ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ КАРЕЛИЯ\"",
+        "www": "http://oms.karelia.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Коми",
+    "atlas_region_name": "Республика Коми",
+    "region_id_if_known": "87000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 94,
+    "f032_uidmo_prefixes": [
+      "11"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "11",
+        "tf_okato": "87000",
+        "name_tfp": "Государственное бюджетное учреждение Республики Коми \"Территориальный фонд обязательного медицинского страхования Республики Коми\"",
+        "www": "http://komifoms.ru/"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Марий Эл",
+    "atlas_region_name": "Республика Марий Эл",
+    "region_id_if_known": "88000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 35,
+    "f032_uidmo_prefixes": [
+      "12"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "12",
+        "tf_okato": "88000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ МАРИЙ ЭЛ",
+        "www": "www.rfoms.mari-el.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Мордовия",
+    "atlas_region_name": "Республика Мордовия",
+    "region_id_if_known": "89000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 55,
+    "f032_uidmo_prefixes": [
+      "13"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "13",
+        "tf_okato": "89000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ МОРДОВИЯ",
+        "www": "www.tfomsrm.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Саха (Якутия)",
+    "atlas_region_name": "Республика Саха (Якутия)",
+    "region_id_if_known": "98000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 112,
+    "f032_uidmo_prefixes": [
+      "14"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "14",
+        "tf_okato": "98000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Республики Саха (Якутия)",
+        "www": "www.sakhaoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Северная Осетия-Алания",
+    "atlas_region_name": "Республика Северная Осетия",
+    "region_id_if_known": "90000000",
+    "atlas_match_method": "explicit_name_alias",
+    "registry_rows": 68,
+    "f032_uidmo_prefixes": [
+      "15"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "15",
+        "tf_okato": "90000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ СЕВЕРНАЯ ОСЕТИЯ-АЛАНИЯ",
+        "www": "www.omsalania.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Татарстан",
+    "atlas_region_name": "Республика Татарстан",
+    "region_id_if_known": "92000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 207,
+    "f032_uidmo_prefixes": [
+      "16"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "16",
+        "tf_okato": "92000",
+        "name_tfp": "Государственное учреждение \"Территориальный фонд обязательного медицинского страхования Республики Татарстан\"",
+        "www": "https://www.fomsrt.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Тыва",
+    "atlas_region_name": "Республика Тыва",
+    "region_id_if_known": "93000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 59,
+    "f032_uidmo_prefixes": [
+      "17"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "17",
+        "tf_okato": "93000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Республики Тыва",
+        "www": "www.fomstuva.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Удмуртская Республика",
+    "atlas_region_name": "Удмуртская Республика",
+    "region_id_if_known": "94000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 120,
+    "f032_uidmo_prefixes": [
+      "18"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "18",
+        "tf_okato": "94000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Удмуртской Республики",
+        "www": "www.tfoms18.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Хакасия",
+    "atlas_region_name": "Республика Хакасия",
+    "region_id_if_known": "95000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 64,
+    "f032_uidmo_prefixes": [
+      "19"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "19",
+        "tf_okato": "95000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Республики Хакасия",
+        "www": "http://tfomsrh.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Чеченская Республика",
+    "atlas_region_name": "Чеченская Республика",
+    "region_id_if_known": "96000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 80,
+    "f032_uidmo_prefixes": [
+      "20"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "20",
+        "tf_okato": "96000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Чеченской Республики",
+        "www": "www.tfoms-chr.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Чувашская Республика",
+    "atlas_region_name": "Чувашская Республика",
+    "region_id_if_known": "97000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 56,
+    "f032_uidmo_prefixes": [
+      "21"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "21",
+        "tf_okato": "97000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Чувашской Республики",
+        "www": "www.chuvtfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Алтайский край",
+    "atlas_region_name": "Алтайский край",
+    "region_id_if_known": "01000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 156,
+    "f032_uidmo_prefixes": [
+      "22"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "22",
+        "tf_okato": "01000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ АЛТАЙСКОГО КРАЯ",
+        "www": "http://www.tfoms22.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Краснодарский край",
+    "atlas_region_name": "Краснодарский край",
+    "region_id_if_known": "03000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 249,
+    "f032_uidmo_prefixes": [
+      "23"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "23",
+        "tf_okato": "03000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КРАСНОДАРСКОГО КРАЯ",
+        "www": "http://www.kubanoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Красноярский край",
+    "atlas_region_name": "Красноярский край",
+    "region_id_if_known": "04000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 250,
+    "f032_uidmo_prefixes": [
+      "24"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "24",
+        "tf_okato": "04000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КРАСНОЯРСКОГО КРАЯ",
+        "www": "www.krasmed.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Приморский край",
+    "atlas_region_name": "Приморский край",
+    "region_id_if_known": "05000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 119,
+    "f032_uidmo_prefixes": [
+      "25"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "25",
+        "tf_okato": "05000",
+        "name_tfp": "Государственное учреждение Территориальный фонд обязательного медицинского страхования Приморского края",
+        "www": "www.omspk.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Ставропольский край",
+    "atlas_region_name": "Ставропольский край",
+    "region_id_if_known": "07000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 167,
+    "f032_uidmo_prefixes": [
+      "26"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "26",
+        "tf_okato": "07000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ СТАВРОПОЛЬСКОГО КРАЯ",
+        "www": "www.тфомсск.рф"
+      }
+    ]
+  },
+  {
+    "region_name": "Хабаровский край",
+    "atlas_region_name": "Хабаровский край",
+    "region_id_if_known": "08000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 108,
+    "f032_uidmo_prefixes": [
+      "27"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "27",
+        "tf_okato": "08000",
+        "name_tfp": "ХАБАРОВСКИЙ КРАЕВОЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ",
+        "www": "www.khfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Амурская область",
+    "atlas_region_name": "Амурская область",
+    "region_id_if_known": "10000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 73,
+    "f032_uidmo_prefixes": [
+      "28"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "28",
+        "tf_okato": "10000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ АМУРСКОЙ ОБЛАСТИ",
+        "www": "www.aofoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Архангельская область",
+    "atlas_region_name": "Архангельская область",
+    "region_id_if_known": "11000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 109,
+    "f032_uidmo_prefixes": [
+      "29"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "29",
+        "tf_okato": "11000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ АРХАНГЕЛЬСКОЙ ОБЛАСТИ",
+        "www": "www.arhofoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Астраханская область",
+    "atlas_region_name": "Астраханская область",
+    "region_id_if_known": "12000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 67,
+    "f032_uidmo_prefixes": [
+      "30"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "30",
+        "tf_okato": "12000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Астраханской области",
+        "www": "www.astfond.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Белгородская область",
+    "atlas_region_name": "Белгородская область",
+    "region_id_if_known": "14000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 92,
+    "f032_uidmo_prefixes": [
+      "31"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "31",
+        "tf_okato": "14000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ БЕЛГОРОДСКОЙ ОБЛАСТИ",
+        "www": "www.belfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Брянская область",
+    "atlas_region_name": "Брянская область",
+    "region_id_if_known": "15000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 72,
+    "f032_uidmo_prefixes": [
+      "32"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "32",
+        "tf_okato": "15000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ БРЯНСКОЙ ОБЛАСТИ",
+        "www": "http://тфомсбрк.рф"
+      }
+    ]
+  },
+  {
+    "region_name": "Владимирская область",
+    "atlas_region_name": "Владимирская область",
+    "region_id_if_known": "17000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 114,
+    "f032_uidmo_prefixes": [
+      "33"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "33",
+        "tf_okato": "17000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ВЛАДИМИРСКОЙ ОБЛАСТИ",
+        "www": "www.tfoms33.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Волгоградская область",
+    "atlas_region_name": "Волгоградская область",
+    "region_id_if_known": "18000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 171,
+    "f032_uidmo_prefixes": [
+      "34"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "34",
+        "tf_okato": "18000",
+        "name_tfp": "ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ \"ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ВОЛГОГРАДСКОЙ ОБЛАСТИ\"",
+        "www": "www.volgatfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Вологодская область",
+    "atlas_region_name": "Вологодская область",
+    "region_id_if_known": "19000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 113,
+    "f032_uidmo_prefixes": [
+      "35"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "35",
+        "tf_okato": "19000",
+        "name_tfp": "ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ВОЛОГОДСКОЙ ОБЛАСТИ",
+        "www": "http://new.oms35.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Воронежская область",
+    "atlas_region_name": "Воронежская область",
+    "region_id_if_known": "20000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 100,
+    "f032_uidmo_prefixes": [
+      "36"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "36",
+        "tf_okato": "20000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ВОРОНЕЖСКОЙ ОБЛАСТИ",
+        "www": "http://www.omsvrn.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Ивановская область",
+    "atlas_region_name": "Ивановская область",
+    "region_id_if_known": "24000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 87,
+    "f032_uidmo_prefixes": [
+      "37"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "37",
+        "tf_okato": "24000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Ивановской области",
+        "www": "tfoms37.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Иркутская область",
+    "atlas_region_name": "Иркутская область",
+    "region_id_if_known": "25000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 138,
+    "f032_uidmo_prefixes": [
+      "38"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "38",
+        "tf_okato": "25000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ИРКУТСКОЙ ОБЛАСТИ",
+        "www": "www.irkoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Калининградская область",
+    "atlas_region_name": "Калининградская область",
+    "region_id_if_known": "27000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 108,
+    "f032_uidmo_prefixes": [
+      "39"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "39",
+        "tf_okato": "27000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КАЛИНИНГРАДСКОЙ ОБЛАСТИ",
+        "www": "www.tfoms39.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Калужская область",
+    "atlas_region_name": "Калужская область",
+    "region_id_if_known": "29000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 61,
+    "f032_uidmo_prefixes": [
+      "40"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "40",
+        "tf_okato": "29000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КАЛУЖСКОЙ ОБЛАСТИ",
+        "www": "www.oms-kaluga.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Камчатский край",
+    "atlas_region_name": "Камчатский край",
+    "region_id_if_known": "30000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 65,
+    "f032_uidmo_prefixes": [
+      "41"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "41",
+        "tf_okato": "30000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КАМЧАТСКОГО КРАЯ",
+        "www": "http://kamtfoms.ru/"
+      }
+    ]
+  },
+  {
+    "region_name": "Кемеровская область - Кузбасс",
+    "atlas_region_name": "Кемеровская область",
+    "region_id_if_known": "32000000",
+    "atlas_match_method": "explicit_name_alias",
+    "registry_rows": 145,
+    "f032_uidmo_prefixes": [
+      "42"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "42",
+        "tf_okato": "32000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КЕМЕРОВСКОЙ ОБЛАСТИ - КУЗБАССА",
+        "www": "http://www.kemoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Кировская область",
+    "atlas_region_name": "Кировская область",
+    "region_id_if_known": "33000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 81,
+    "f032_uidmo_prefixes": [
+      "43"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "43",
+        "tf_okato": "33000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Кировской области",
+        "www": ""
+      }
+    ]
+  },
+  {
+    "region_name": "Костромская область",
+    "atlas_region_name": "Костромская область",
+    "region_id_if_known": "34000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 64,
+    "f032_uidmo_prefixes": [
+      "44"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "44",
+        "tf_okato": "34000",
+        "name_tfp": "территориальный фонд обязательного медицинского страхования Костромской области",
+        "www": "oms44.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Курганская область",
+    "atlas_region_name": "Курганская область",
+    "region_id_if_known": "37000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 52,
+    "f032_uidmo_prefixes": [
+      "45"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "45",
+        "tf_okato": "37000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КУРГАНСКОЙ ОБЛАСТИ",
+        "www": "ktfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Курская область",
+    "atlas_region_name": "Курская область",
+    "region_id_if_known": "38000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 81,
+    "f032_uidmo_prefixes": [
+      "46"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "46",
+        "tf_okato": "38000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КУРСКОЙ ОБЛАСТИ",
+        "www": "www.kurskoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Ленинградская область",
+    "atlas_region_name": "Ленинградская область",
+    "region_id_if_known": "41000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 83,
+    "f032_uidmo_prefixes": [
+      "47"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "47",
+        "tf_okato": "41000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Ленинградской области",
+        "www": "lofoms.spb.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Липецкая область",
+    "atlas_region_name": "Липецкая область",
+    "region_id_if_known": "42000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 82,
+    "f032_uidmo_prefixes": [
+      "48"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "48",
+        "tf_okato": "42000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Липецкой области",
+        "www": "www.ofoms48.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Магаданская область",
+    "atlas_region_name": "Магаданская область",
+    "region_id_if_known": "44000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 34,
+    "f032_uidmo_prefixes": [
+      "49"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "49",
+        "tf_okato": "44000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Магаданской области",
+        "www": "http://www.tfoms-magadan.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Московская область",
+    "atlas_region_name": "Московская область",
+    "region_id_if_known": "46000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 363,
+    "f032_uidmo_prefixes": [
+      "50"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "50",
+        "tf_okato": "46000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ МОСКОВСКОЙ ОБЛАСТИ",
+        "www": "http://www.mofoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Мурманская область",
+    "atlas_region_name": "Мурманская область",
+    "region_id_if_known": "47000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 64,
+    "f032_uidmo_prefixes": [
+      "51"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "51",
+        "tf_okato": "47000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ МУРМАНСКОЙ ОБЛАСТИ",
+        "www": "www.omsmurm.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Нижегородская область",
+    "atlas_region_name": "Нижегородская область",
+    "region_id_if_known": "22000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 205,
+    "f032_uidmo_prefixes": [
+      "52"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "52",
+        "tf_okato": "22000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Нижегородской области",
+        "www": "www.tfoms52.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Новгородская область",
+    "atlas_region_name": "Новгородская область",
+    "region_id_if_known": "49000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 59,
+    "f032_uidmo_prefixes": [
+      "53"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "53",
+        "tf_okato": "49000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ НОВГОРОДСКОЙ ОБЛАСТИ",
+        "www": "http://tfomsvn.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Новосибирская область",
+    "atlas_region_name": "Новосибирская область",
+    "region_id_if_known": "50000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 153,
+    "f032_uidmo_prefixes": [
+      "54"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "54",
+        "tf_okato": "50000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Новосибирской области",
+        "www": "www.novofoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Омская область",
+    "atlas_region_name": "Омская область",
+    "region_id_if_known": "52000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 122,
+    "f032_uidmo_prefixes": [
+      "55"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "55",
+        "tf_okato": "52000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ОМСКОЙ ОБЛАСТИ",
+        "www": "https://omsomsk.ru/"
+      }
+    ]
+  },
+  {
+    "region_name": "Оренбургская область",
+    "atlas_region_name": "Оренбургская область",
+    "region_id_if_known": "53000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 118,
+    "f032_uidmo_prefixes": [
+      "56"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "56",
+        "tf_okato": "53000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Оренбургской области",
+        "www": "https://www.orenfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Орловская область",
+    "atlas_region_name": "Орловская область",
+    "region_id_if_known": "54000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 72,
+    "f032_uidmo_prefixes": [
+      "57"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "57",
+        "tf_okato": "54000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ОРЛОВСКОЙ ОБЛАСТИ",
+        "www": "www.oreltfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Пензенская область",
+    "atlas_region_name": "Пензенская область",
+    "region_id_if_known": "56000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 76,
+    "f032_uidmo_prefixes": [
+      "58"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "58",
+        "tf_okato": "56000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Пензенской области",
+        "www": "www.omspenza.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Пермский край",
+    "atlas_region_name": "Пермский край",
+    "region_id_if_known": "57000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 166,
+    "f032_uidmo_prefixes": [
+      "59"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "59",
+        "tf_okato": "57000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Пермского края",
+        "www": "www.pkfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Псковская область",
+    "atlas_region_name": "Псковская область",
+    "region_id_if_known": "58000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 51,
+    "f032_uidmo_prefixes": [
+      "60"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "60",
+        "tf_okato": "58000",
+        "name_tfp": "территориальный фонд обязательного медицинского страхования Псковской области",
+        "www": "псковский-тфомс.рф"
+      }
+    ]
+  },
+  {
+    "region_name": "Ростовская область",
+    "atlas_region_name": "Ростовская область",
+    "region_id_if_known": "60000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 245,
+    "f032_uidmo_prefixes": [
+      "61"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "61",
+        "tf_okato": "60000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Ростовской области",
+        "www": "http://rostov-tfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Рязанская область",
+    "atlas_region_name": "Рязанская область",
+    "region_id_if_known": "61000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 79,
+    "f032_uidmo_prefixes": [
+      "62"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "62",
+        "tf_okato": "61000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЯЗАНСКОЙ ОБЛАСТИ",
+        "www": "https://tfoms-rzn.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Самарская область",
+    "atlas_region_name": "Самарская область",
+    "region_id_if_known": "36000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 181,
+    "f032_uidmo_prefixes": [
+      "63"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "63",
+        "tf_okato": "36000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ САМАРСКОЙ ОБЛАСТИ",
+        "www": "http://www.samtfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Саратовская область",
+    "atlas_region_name": "Саратовская область",
+    "region_id_if_known": "63000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 119,
+    "f032_uidmo_prefixes": [
+      "64"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "64",
+        "tf_okato": "63000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Саратовской области",
+        "www": "www.sartfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Сахалинская область",
+    "atlas_region_name": "Сахалинская область",
+    "region_id_if_known": "64000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 61,
+    "f032_uidmo_prefixes": [
+      "65"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "65",
+        "tf_okato": "64000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Сахалинской области",
+        "www": "http://tfoms-sakhalin.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Свердловская область",
+    "atlas_region_name": "Свердловская область",
+    "region_id_if_known": "65000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 227,
+    "f032_uidmo_prefixes": [
+      "66"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "66",
+        "tf_okato": "65000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Свердловской области",
+        "www": "https://oms66.ru/"
+      }
+    ]
+  },
+  {
+    "region_name": "Смоленская область",
+    "atlas_region_name": "Смоленская область",
+    "region_id_if_known": "66000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 64,
+    "f032_uidmo_prefixes": [
+      "67"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "67",
+        "tf_okato": "66000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Смоленской области",
+        "www": "www.smolfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Тамбовская область",
+    "atlas_region_name": "Тамбовская область",
+    "region_id_if_known": "68000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 66,
+    "f032_uidmo_prefixes": [
+      "68"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "68",
+        "tf_okato": "68000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ТАМБОВСКОЙ ОБЛАСТИ",
+        "www": "www.tofoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Тверская область",
+    "atlas_region_name": "Тверская область",
+    "region_id_if_known": "28000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 105,
+    "f032_uidmo_prefixes": [
+      "69"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "69",
+        "tf_okato": "28000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ТВЕРСКОЙ ОБЛАСТИ",
+        "www": "www.tveroms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Томская область",
+    "atlas_region_name": "Томская область",
+    "region_id_if_known": "69000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 122,
+    "f032_uidmo_prefixes": [
+      "70"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "70",
+        "tf_okato": "69000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Томской области",
+        "www": "http://www.ttfoms.tomsk.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Тульская область",
+    "atlas_region_name": "Тульская область",
+    "region_id_if_known": "70000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 83,
+    "f032_uidmo_prefixes": [
+      "71"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "71",
+        "tf_okato": "70000",
+        "name_tfp": "территориальный фонд обязательного медицинского страхования Тульской области",
+        "www": "www.omstula.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Тюменская область",
+    "atlas_region_name": "Тюменская область",
+    "region_id_if_known": "71000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 98,
+    "f032_uidmo_prefixes": [
+      "72"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "72",
+        "tf_okato": "71000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ТЮМЕНСКОЙ ОБЛАСТИ",
+        "www": "www.tfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Ульяновская область",
+    "atlas_region_name": "Ульяновская область",
+    "region_id_if_known": "73000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 88,
+    "f032_uidmo_prefixes": [
+      "73"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "73",
+        "tf_okato": "73000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Ульяновской области",
+        "www": "web.ultfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Челябинская область",
+    "atlas_region_name": "Челябинская область",
+    "region_id_if_known": "75000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 190,
+    "f032_uidmo_prefixes": [
+      "74"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "74",
+        "tf_okato": "75000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ЧЕЛЯБИНСКОЙ ОБЛАСТИ",
+        "www": "www.foms74.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Забайкальский край",
+    "atlas_region_name": "Забайкальский край",
+    "region_id_if_known": "76000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 73,
+    "f032_uidmo_prefixes": [
+      "75"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "75",
+        "tf_okato": "76000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Забайкальского края",
+        "www": "zabtfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Ярославская область",
+    "atlas_region_name": "Ярославская область",
+    "region_id_if_known": "78000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 94,
+    "f032_uidmo_prefixes": [
+      "76"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "76",
+        "tf_okato": "78000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ЯРОСЛАВСКОЙ ОБЛАСТИ",
+        "www": "http://www.yartfoms.ru/"
+      }
+    ]
+  },
+  {
+    "region_name": "г. Москва",
+    "atlas_region_name": null,
+    "region_id_if_known": null,
+    "atlas_match_method": "outside_atlas",
+    "registry_rows": 462,
+    "f032_uidmo_prefixes": [
+      "77"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "77",
+        "tf_okato": "45000",
+        "name_tfp": "МОСКОВСКИЙ ГОРОДСКОЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ",
+        "www": "htpp://www.mgfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "г. Санкт-Петербург",
+    "atlas_region_name": null,
+    "region_id_if_known": null,
+    "atlas_match_method": "outside_atlas",
+    "registry_rows": 344,
+    "f032_uidmo_prefixes": [
+      "78"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "78",
+        "tf_okato": "40000",
+        "name_tfp": "Государственное учреждение «Территориальный фонд обязательного медицинского страхования Санкт-Петербурга»",
+        "www": "https://spboms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Еврейская АО",
+    "atlas_region_name": "Еврейская автономная область",
+    "region_id_if_known": "99000000",
+    "atlas_match_method": "explicit_name_alias",
+    "registry_rows": 38,
+    "f032_uidmo_prefixes": [
+      "79"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "79",
+        "tf_okato": "99000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Еврейской автономной области",
+        "www": "tfomseao.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Ненецкий АО",
+    "atlas_region_name": "Ненецкий АО",
+    "region_id_if_known": "11800000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 15,
+    "f032_uidmo_prefixes": [
+      "80"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "80",
+        "tf_okato": "11100",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ НЕНЕЦКОГО АВТОНОМНОГО ОКРУГА",
+        "www": "www.wp.ofomsnao.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Ханты-Мансийский АО",
+    "atlas_region_name": "Ханты-Мансийский автономный округ",
+    "region_id_if_known": "71800000",
+    "atlas_match_method": "explicit_name_alias",
+    "registry_rows": 127,
+    "f032_uidmo_prefixes": [
+      "81"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "81",
+        "tf_okato": "71100",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ХАНТЫ-МАНСИЙСКОГО АВТОНОМНОГО ОКРУГА – ЮГРЫ",
+        "www": "OFOMS.RU"
+      }
+    ]
+  },
+  {
+    "region_name": "Чукотский АО",
+    "atlas_region_name": "Чукотский АО",
+    "region_id_if_known": "77000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 14,
+    "f032_uidmo_prefixes": [
+      "82"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "82",
+        "tf_okato": "77000",
+        "name_tfp": "Чукотский территориальный фонд обязательного медицинского страхования",
+        "www": "www.chtfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Ямало-Ненецкий АО",
+    "atlas_region_name": "ЯНАО",
+    "region_id_if_known": "71900000",
+    "atlas_match_method": "explicit_name_alias",
+    "registry_rows": 50,
+    "f032_uidmo_prefixes": [
+      "83"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "83",
+        "tf_okato": "71140",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Ямало-Ненецкого автономного округа",
+        "www": "www.webfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "г. Байконур",
+    "atlas_region_name": null,
+    "region_id_if_known": null,
+    "atlas_match_method": "outside_atlas",
+    "registry_rows": 2,
+    "f032_uidmo_prefixes": [
+      "84"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "84",
+        "tf_okato": "55000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ГОРОДА БАЙКОНУР",
+        "www": "БТ-ФОМС.РФ"
+      }
+    ]
+  },
+  {
+    "region_name": "Республика Крым",
+    "atlas_region_name": "Республика Крым",
+    "region_id_if_known": "35000000",
+    "atlas_match_method": "exact_name",
+    "registry_rows": 69,
+    "f032_uidmo_prefixes": [
+      "85"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "85",
+        "tf_okato": "35000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ КРЫМ",
+        "www": "http://tfomsrk.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "г. Севастополь",
+    "atlas_region_name": null,
+    "region_id_if_known": null,
+    "atlas_match_method": "outside_atlas",
+    "registry_rows": 31,
+    "f032_uidmo_prefixes": [
+      "86"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "86",
+        "tf_okato": "67000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ГОРОДА СЕВАСТОПОЛЯ",
+        "www": "www.sevtfoms.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Донецкая Народная Республика",
+    "atlas_region_name": null,
+    "region_id_if_known": null,
+    "atlas_match_method": "outside_atlas",
+    "registry_rows": 116,
+    "f032_uidmo_prefixes": [
+      "87"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "87",
+        "tf_okato": "21000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ДОНЕЦКОЙ НАРОДНОЙ РЕСПУБЛИКИ",
+        "www": "FOMSDNR.RU"
+      }
+    ]
+  },
+  {
+    "region_name": "Луганская Народная Республика",
+    "atlas_region_name": null,
+    "region_id_if_known": null,
+    "atlas_match_method": "outside_atlas",
+    "registry_rows": 77,
+    "f032_uidmo_prefixes": [
+      "88"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "88",
+        "tf_okato": "43000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ЛУГАНСКОЙ НАРОДНОЙ РЕСПУБЛИКИ",
+        "www": "tfomslnr.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Запорожская область",
+    "atlas_region_name": null,
+    "region_id_if_known": null,
+    "atlas_match_method": "outside_atlas",
+    "registry_rows": 26,
+    "f032_uidmo_prefixes": [
+      "89"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "89",
+        "tf_okato": "23000",
+        "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ЗАПОРОЖСКОЙ ОБЛАСТИ",
+        "www": "tfomszo.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Херсонская область",
+    "atlas_region_name": null,
+    "region_id_if_known": null,
+    "atlas_match_method": "outside_atlas",
+    "registry_rows": 15,
+    "f032_uidmo_prefixes": [
+      "90"
+    ],
+    "f001_funds": [
+      {
+        "tf_kod": "90",
+        "tf_okato": "74000",
+        "name_tfp": "Территориальный фонд обязательного медицинского страхования Херсонской области",
+        "www": "tfomskho.ru"
+      }
+    ]
+  },
+  {
+    "region_name": "Российская Федерация",
+    "atlas_region_name": null,
+    "region_id_if_known": null,
+    "atlas_match_method": "outside_atlas",
+    "registry_rows": 406,
+    "f032_uidmo_prefixes": [
+      "99"
+    ],
+    "f001_funds": []
+  }
+]

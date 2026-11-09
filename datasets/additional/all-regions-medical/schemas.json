@@ -1,0 +1,123 @@
+{
+  "F001": {
+    "rows": 90,
+    "packet_attributes": {
+      "version": "7.68",
+      "date": "15.10.2025"
+    },
+    "header": null,
+    "fields_present": {
+      "tf_kod": 90,
+      "tf_okato": 90,
+      "tf_ogrn": 90,
+      "name_tfp": 90,
+      "name_tfk": 90,
+      "index": 90,
+      "address": 90,
+      "fam_dir": 90,
+      "im_dir": 90,
+      "ot_dir": 90,
+      "phone": 90,
+      "fax": 90,
+      "hot_line": 90,
+      "e_mail": 90,
+      "kf_tf": 90,
+      "www": 90,
+      "MTR": 90,
+      "d_edit": 90,
+      "d_end": 90,
+      "d_begin": 90,
+      "no_smo": 90
+    }
+  },
+  "F031": {
+    "rows": 8734,
+    "packet_attributes": {},
+    "header": {
+      "type": "ERMO",
+      "version": "4.167",
+      "date": ""
+    },
+    "fields_present": {
+      "IDMO": 8734,
+      "NAM_MOP": 8734,
+      "NAM_MOK": 8734,
+      "INN": 8734,
+      "KPP": 8734,
+      "OGRN": 8734,
+      "OID_MO": 8734,
+      "OKOPF": 8734,
+      "OKFS": 8734,
+      "ADDR_J": 8734,
+      "ADDR_J_GAR": 8734,
+      "OKTMO": 8734,
+      "EMAIL": 8734,
+      "PHONE": 8734,
+      "FAX": 8734,
+      "DATEBEG": 8734,
+      "DATEEND": 8734
+    }
+  },
+  "F032": {
+    "rows": 9980,
+    "packet_attributes": {},
+    "header": {
+      "type": "TRMO-6.932",
+      "version": "5.267",
+      "date": "03.03.2026"
+    },
+    "fields_present": {
+      "UIDMO": 9980,
+      "IDMO": 9980,
+      "MCOD": 9980,
+      "OKTMO_P": 9980,
+      "SUBJ": 9980,
+      "D_BEGIN": 9980,
+      "D_BEGIN_OMS": 9980,
+      "D_END": 9980,
+      "NAME_E": 9980,
+      "OSP": 9980,
+      "PARENT_IDMO": 9980,
+      "PARENT_UIDMO": 9980,
+      "VID_MO": 9980,
+      "OID_MO": 9980,
+      "OID_SPMO": 9980,
+      "NAM_MOP": 9980,
+      "NAM_MOK": 9980,
+      "INN": 9980,
+      "KPP": 9980,
+      "OGRN": 9980,
+      "JURADDRESS_INDEX": 9980,
+      "JURADDRESS_ADDRESS": 9980,
+      "GAR_ADDRESS": 9980,
+      "OKFS": 9980,
+      "VEDPRI": 9980,
+      "PHONE": 9980,
+      "FAX": 9980,
+      "EMAIL": 9980,
+      "DATEBEG": 9980,
+      "DATEEND": 9980
+    }
+  },
+  "F033": {
+    "rows": 137907,
+    "packet_attributes": {},
+    "header": {
+      "type": "SPMO-6.932",
+      "version": "3.409",
+      "date": "03.03.2026"
+    },
+    "fields_present": {
+      "UIDSPMO": 137907,
+      "IDSPMO": 137907,
+      "NAM_SPMO": 137907,
+      "NAM_SK_SPMO": 137907,
+      "PHONE": 137907,
+      "OSP": 137907,
+      "VID_SPMO": 137907,
+      "OID_SPMO": 137907,
+      "DATEBEG": 137907,
+      "DATEEND": 137907
+    }
+  }
+}

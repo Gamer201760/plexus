@@ -1,0 +1,40 @@
+{
+  "atlas_regions": 82,
+  "regional_base_exports": 656,
+  "medical_atlas_regions": 82,
+  "osm_atlas_source_links": 82,
+  "historical_roads_atlas_regions": 82,
+  "bus_atlas_regions": 74,
+  "bus_source_region_categories": 81,
+  "bus_routes": 5550,
+  "bus_schedules": 53506,
+  "bus_stops": 3614,
+  "national_base_totals": {
+    "settlements": 155412,
+    "companies_2025": 2230505,
+    "fns_matched_2025": 1302237,
+    "settlement_economy": 155412,
+    "region_economy": 82,
+    "sector_economy": 1678,
+    "settlement_lights": 310824,
+    "company_settlement": 1190422
+  },
+  "outside_atlas_companies": 912673,
+  "missing_bus_atlas_regions": [
+    "Ненецкий АО",
+    "Калининградская область",
+    "Камчатский край",
+    "Магаданская область",
+    "Мурманская область",
+    "Сахалинская область",
+    "Чукотский АО",
+    "Республика Саха (Якутия)"
+  ],
+  "not_complete": [
+    "current intraregional timetables",
+    "national care-location addresses and geocoding",
+    "current traffic measurements",
+    "current physical road asset inventory",
+    "OSM PBF download/extraction for every region"
+  ]
+}

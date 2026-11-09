@@ -1,0 +1,1403 @@
+{
+  "atlas_path": "datasets/additional/all-regions/atlas-regions.json",
+  "atlas_sha256": "ad91e5a68223d87824c1b9700160e9e95270e23e5a94611a9f203842de964813",
+  "atlas_regions": 82,
+  "mapped_region_links": 82,
+  "osmlab_matches": 80,
+  "regions": [
+    {
+      "region_id": "01000000",
+      "name": "Алтайский край",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-ALT.pbf"
+      ],
+      "source_region_codes": [
+        "RU-ALT"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "03000000",
+      "name": "Краснодарский край",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KDA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KDA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "04000000",
+      "name": "Красноярский край",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KYA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KYA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "05000000",
+      "name": "Приморский край",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-PRI.pbf"
+      ],
+      "source_region_codes": [
+        "RU-PRI"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "07000000",
+      "name": "Ставропольский край",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-STA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-STA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "08000000",
+      "name": "Хабаровский край",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KHA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KHA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "10000000",
+      "name": "Амурская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-AMU.pbf"
+      ],
+      "source_region_codes": [
+        "RU-AMU"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "11000000",
+      "name": "Архангельская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-ARK.pbf"
+      ],
+      "source_region_codes": [
+        "RU-ARK"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "11800000",
+      "name": "Ненецкий АО",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-NEN.pbf"
+      ],
+      "source_region_codes": [
+        "RU-NEN"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "12000000",
+      "name": "Астраханская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-AST.pbf"
+      ],
+      "source_region_codes": [
+        "RU-AST"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "14000000",
+      "name": "Белгородская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-BEL.pbf"
+      ],
+      "source_region_codes": [
+        "RU-BEL"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "15000000",
+      "name": "Брянская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-BRY.pbf"
+      ],
+      "source_region_codes": [
+        "RU-BRY"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "17000000",
+      "name": "Владимирская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-VLA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-VLA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "18000000",
+      "name": "Волгоградская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-VGG.pbf"
+      ],
+      "source_region_codes": [
+        "RU-VGG"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "19000000",
+      "name": "Вологодская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-VLG.pbf"
+      ],
+      "source_region_codes": [
+        "RU-VLG"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "20000000",
+      "name": "Воронежская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-VOR.pbf"
+      ],
+      "source_region_codes": [
+        "RU-VOR"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "22000000",
+      "name": "Нижегородская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-NIZ.pbf"
+      ],
+      "source_region_codes": [
+        "RU-NIZ"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "24000000",
+      "name": "Ивановская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-IVA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-IVA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "25000000",
+      "name": "Иркутская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-IRK.pbf"
+      ],
+      "source_region_codes": [
+        "RU-IRK"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "26000000",
+      "name": "Республика Ингушетия",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-IN.pbf"
+      ],
+      "source_region_codes": [
+        "RU-IN"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "27000000",
+      "name": "Калининградская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KGD.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KGD"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "28000000",
+      "name": "Тверская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-TVE.pbf"
+      ],
+      "source_region_codes": [
+        "RU-TVE"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "29000000",
+      "name": "Калужская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KLU.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KLU"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "30000000",
+      "name": "Камчатский край",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KAM.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KAM"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "32000000",
+      "name": "Кемеровская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KEM.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KEM"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "33000000",
+      "name": "Кировская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KIR.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KIR"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "34000000",
+      "name": "Костромская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KOS.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KOS"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "35000000",
+      "name": "Республика Крым",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-CR.pbf"
+      ],
+      "source_region_codes": [
+        "RU-CR"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "36000000",
+      "name": "Самарская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-SAM.pbf"
+      ],
+      "source_region_codes": [
+        "RU-SAM"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "37000000",
+      "name": "Курганская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KGN.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KGN"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "38000000",
+      "name": "Курская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KRS.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KRS"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "41000000",
+      "name": "Ленинградская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-LEN.pbf"
+      ],
+      "source_region_codes": [
+        "RU-LEN"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "42000000",
+      "name": "Липецкая область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-LIP.pbf"
+      ],
+      "source_region_codes": [
+        "RU-LIP"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "44000000",
+      "name": "Магаданская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-MAG.pbf"
+      ],
+      "source_region_codes": [
+        "RU-MAG"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "46000000",
+      "name": "Московская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-MOS.pbf"
+      ],
+      "source_region_codes": [
+        "RU-MOS"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "47000000",
+      "name": "Мурманская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-MUR.pbf"
+      ],
+      "source_region_codes": [
+        "RU-MUR"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "49000000",
+      "name": "Новгородская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-NGR.pbf"
+      ],
+      "source_region_codes": [
+        "RU-NGR"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "50000000",
+      "name": "Новосибирская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-NVS.pbf"
+      ],
+      "source_region_codes": [
+        "RU-NVS"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "52000000",
+      "name": "Омская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-OMS.pbf"
+      ],
+      "source_region_codes": [
+        "RU-OMS"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "53000000",
+      "name": "Оренбургская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-ORE.pbf"
+      ],
+      "source_region_codes": [
+        "RU-ORE"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "54000000",
+      "name": "Орловская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-ORL.pbf"
+      ],
+      "source_region_codes": [
+        "RU-ORL"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "56000000",
+      "name": "Пензенская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-PNZ.pbf"
+      ],
+      "source_region_codes": [
+        "RU-PNZ"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "57000000",
+      "name": "Пермский край",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-PER.pbf"
+      ],
+      "source_region_codes": [
+        "RU-PER"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "58000000",
+      "name": "Псковская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-PSK.pbf"
+      ],
+      "source_region_codes": [
+        "RU-PSK"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "60000000",
+      "name": "Ростовская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-ROS.pbf"
+      ],
+      "source_region_codes": [
+        "RU-ROS"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "61000000",
+      "name": "Рязанская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-RYA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-RYA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "63000000",
+      "name": "Саратовская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-SAR.pbf"
+      ],
+      "source_region_codes": [
+        "RU-SAR"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "64000000",
+      "name": "Сахалинская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-SAK.pbf"
+      ],
+      "source_region_codes": [
+        "RU-SAK"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "65000000",
+      "name": "Свердловская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-SVE.pbf"
+      ],
+      "source_region_codes": [
+        "RU-SVE"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "66000000",
+      "name": "Смоленская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-SMO.pbf"
+      ],
+      "source_region_codes": [
+        "RU-SMO"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "68000000",
+      "name": "Тамбовская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-TAM.pbf"
+      ],
+      "source_region_codes": [
+        "RU-TAM"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "69000000",
+      "name": "Томская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-TOM.pbf"
+      ],
+      "source_region_codes": [
+        "RU-TOM"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "70000000",
+      "name": "Тульская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-TUL.pbf"
+      ],
+      "source_region_codes": [
+        "RU-TUL"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "71000000",
+      "name": "Тюменская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-TYU.pbf"
+      ],
+      "source_region_codes": [
+        "RU-TYU"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "71800000",
+      "name": "Ханты-Мансийский автономный округ",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KHM.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KHM"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "71900000",
+      "name": "ЯНАО",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-YAN.pbf"
+      ],
+      "source_region_codes": [
+        "RU-YAN"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "73000000",
+      "name": "Ульяновская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-ULY.pbf"
+      ],
+      "source_region_codes": [
+        "RU-ULY"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "75000000",
+      "name": "Челябинская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-CHE.pbf"
+      ],
+      "source_region_codes": [
+        "RU-CHE"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "76000000",
+      "name": "Забайкальский край",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-ZAB.pbf"
+      ],
+      "source_region_codes": [
+        "RU-ZAB"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "77000000",
+      "name": "Чукотский АО",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-CHU.pbf"
+      ],
+      "source_region_codes": [
+        "RU-CHU"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "78000000",
+      "name": "Ярославская область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-YAR.pbf"
+      ],
+      "source_region_codes": [
+        "RU-YAR"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "79000000",
+      "name": "Республика Адыгея",
+      "source_urls": [
+        "https://download.openstreetmap.fr/extracts/russia/southern_federal_district/adygea_republic-latest.osm.pbf"
+      ],
+      "source_region_codes": [
+        "adygea_republic"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": false,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "80000000",
+      "name": "Республика Башкортостан",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-BA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-BA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "81000000",
+      "name": "Республика Бурятия",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-BU.pbf"
+      ],
+      "source_region_codes": [
+        "RU-BU"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "82000000",
+      "name": "Республика Дагестан",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-DA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-DA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "83000000",
+      "name": "Кабардино-Балкарская Республика",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KB.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KB"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "84000000",
+      "name": "Республика Алтай",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-AL.pbf"
+      ],
+      "source_region_codes": [
+        "RU-AL"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "85000000",
+      "name": "Республика Калмыкия",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KL.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KL"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "86000000",
+      "name": "Республика Карелия",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KR.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KR"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "87000000",
+      "name": "Республика Коми",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KO.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KO"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "88000000",
+      "name": "Республика Марий Эл",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-ME.pbf"
+      ],
+      "source_region_codes": [
+        "RU-ME"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "89000000",
+      "name": "Республика Мордовия",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-MO.pbf"
+      ],
+      "source_region_codes": [
+        "RU-MO"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "90000000",
+      "name": "Республика Северная Осетия",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-SE.pbf"
+      ],
+      "source_region_codes": [
+        "RU-SE"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "91000000",
+      "name": "Карачаево-Черкесская Республика",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-KK.pbf"
+      ],
+      "source_region_codes": [
+        "RU-KK"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "92000000",
+      "name": "Республика Татарстан",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-TA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-TA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "93000000",
+      "name": "Республика Тыва",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-TY.pbf"
+      ],
+      "source_region_codes": [
+        "RU-TY"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "94000000",
+      "name": "Удмуртская Республика",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-UD.pbf"
+      ],
+      "source_region_codes": [
+        "RU-UD"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "95000000",
+      "name": "Республика Хакасия",
+      "source_urls": [
+        "https://download.openstreetmap.fr/extracts/russia/siberian_federal_district/khakassia_republic-latest.osm.pbf"
+      ],
+      "source_region_codes": [
+        "khakassia_republic"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": false,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "96000000",
+      "name": "Чеченская Республика",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-CE.pbf"
+      ],
+      "source_region_codes": [
+        "RU-CE"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "97000000",
+      "name": "Чувашская Республика",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-CU.pbf"
+      ],
+      "source_region_codes": [
+        "RU-CU"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "98000000",
+      "name": "Республика Саха (Якутия)",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-SA.pbf"
+      ],
+      "source_region_codes": [
+        "RU-SA"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    },
+    {
+      "region_id": "99000000",
+      "name": "Еврейская автономная область",
+      "source_urls": [
+        "https://www.osmlab.ru/regions/RU-YEV.pbf"
+      ],
+      "source_region_codes": [
+        "RU-YEV"
+      ],
+      "source_statuses": [
+        "head_verified"
+      ],
+      "osmlab_index_present": true,
+      "downloaded": false,
+      "content_coverage_verified": false,
+      "source_mapping_method": "exact source label or explicit alias; fallback slug for Adygea and Khakassia"
+    }
+  ]
+}

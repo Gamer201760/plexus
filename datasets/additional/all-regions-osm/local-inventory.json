@@ -1,0 +1,25 @@
+{
+  "inspected_root": "/Users/andreykuronskin/keys_champ",
+  "method": "recursive find for regular *.pbf files, 2026-11-09; no directory symlink traversal",
+  "files": [
+    {
+      "path": "data/additional/osm-ural/raw/ural-fed-district-261106.osm.pbf",
+      "source_scope": "Ural Federal District; not Yugra alone",
+      "exists": true,
+      "bytes": 396895176,
+      "prior_manifest": "datasets/additional/osm-ural/manifest.json",
+      "status": "preexisting_local_file",
+      "sha256_rechecked": false
+    },
+    {
+      "path": "data/additional/stavropol/raw/north-caucasus-261107.osm.pbf",
+      "source_scope": "North Caucasus Federal District; not Stavropol alone",
+      "exists": true,
+      "bytes": 129493113,
+      "prior_manifest": "datasets/additional/stavropol/downloads.json",
+      "status": "preexisting_local_file",
+      "sha256_rechecked": false
+    }
+  ],
+  "other_locations_not_claimed": true
+}

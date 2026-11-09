@@ -1,0 +1,114 @@
+{
+  "checked_at": "2026-11-09",
+  "atlas_total": 82,
+  "atlas_covered": 82,
+  "atlas_missing": [],
+  "f032_rows": 9980,
+  "f032_subj_categories": 91,
+  "outside_atlas_categories": [
+    "г. Москва",
+    "г. Санкт-Петербург",
+    "г. Байконур",
+    "г. Севастополь",
+    "Донецкая Народная Республика",
+    "Луганская Народная Республика",
+    "Запорожская область",
+    "Херсонская область",
+    "Российская Федерация"
+  ],
+  "alias_matches": [
+    {
+      "region_name": "Республика Северная Осетия-Алания",
+      "atlas_region_name": "Республика Северная Осетия",
+      "region_id_if_known": "90000000",
+      "atlas_match_method": "explicit_name_alias",
+      "registry_rows": 68,
+      "f032_uidmo_prefixes": [
+        "15"
+      ],
+      "f001_funds": [
+        {
+          "tf_kod": "15",
+          "tf_okato": "90000",
+          "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ СЕВЕРНАЯ ОСЕТИЯ-АЛАНИЯ",
+          "www": "www.omsalania.ru"
+        }
+      ]
+    },
+    {
+      "region_name": "Кемеровская область - Кузбасс",
+      "atlas_region_name": "Кемеровская область",
+      "region_id_if_known": "32000000",
+      "atlas_match_method": "explicit_name_alias",
+      "registry_rows": 145,
+      "f032_uidmo_prefixes": [
+        "42"
+      ],
+      "f001_funds": [
+        {
+          "tf_kod": "42",
+          "tf_okato": "32000",
+          "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КЕМЕРОВСКОЙ ОБЛАСТИ - КУЗБАССА",
+          "www": "http://www.kemoms.ru"
+        }
+      ]
+    },
+    {
+      "region_name": "Еврейская АО",
+      "atlas_region_name": "Еврейская автономная область",
+      "region_id_if_known": "99000000",
+      "atlas_match_method": "explicit_name_alias",
+      "registry_rows": 38,
+      "f032_uidmo_prefixes": [
+        "79"
+      ],
+      "f001_funds": [
+        {
+          "tf_kod": "79",
+          "tf_okato": "99000",
+          "name_tfp": "Территориальный фонд обязательного медицинского страхования Еврейской автономной области",
+          "www": "tfomseao.ru"
+        }
+      ]
+    },
+    {
+      "region_name": "Ханты-Мансийский АО",
+      "atlas_region_name": "Ханты-Мансийский автономный округ",
+      "region_id_if_known": "71800000",
+      "atlas_match_method": "explicit_name_alias",
+      "registry_rows": 127,
+      "f032_uidmo_prefixes": [
+        "81"
+      ],
+      "f001_funds": [
+        {
+          "tf_kod": "81",
+          "tf_okato": "71100",
+          "name_tfp": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ХАНТЫ-МАНСИЙСКОГО АВТОНОМНОГО ОКРУГА – ЮГРЫ",
+          "www": "OFOMS.RU"
+        }
+      ]
+    },
+    {
+      "region_name": "Ямало-Ненецкий АО",
+      "atlas_region_name": "ЯНАО",
+      "region_id_if_known": "71900000",
+      "atlas_match_method": "explicit_name_alias",
+      "registry_rows": 50,
+      "f032_uidmo_prefixes": [
+        "83"
+      ],
+      "f001_funds": [
+        {
+          "tf_kod": "83",
+          "tf_okato": "71140",
+          "name_tfp": "Территориальный фонд обязательного медицинского страхования Ямало-Ненецкого автономного округа",
+          "www": "www.webfoms.ru"
+        }
+      ]
+    }
+  ],
+  "f001_funds": 90,
+  "directory_homepages_individually_checked": 0,
+  "code_system_warning": "atlas region_id is the project region identifier; F001 tf_okato is source OKATO territory; tf_kod and F032 UIDMO prefixes are OMS fund codes. They are not interchangeable. Prefix join is explicitly observed in the downloaded F032 snapshot and is not a generalized parsing contract."
+}

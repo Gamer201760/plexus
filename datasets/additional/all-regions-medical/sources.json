@@ -1,0 +1,2691 @@
+[
+  {
+    "region_name": "Республика Адыгея",
+    "region_id_if_known": "79000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 46,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Адыгея",
+    "region_id_if_known": "79000000",
+    "family": "medical",
+    "url": "http://www.arfoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ АДЫГЕЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Башкортостан",
+    "region_id_if_known": "80000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 161,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Башкортостан",
+    "region_id_if_known": "80000000",
+    "family": "medical",
+    "url": "www.tfoms-rb.ru",
+    "title": "Государственное учреждение Территориальный фонд обязательного медицинского страхования Республики Башкортостан",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Бурятия",
+    "region_id_if_known": "81000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 76,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Бурятия",
+    "region_id_if_known": "81000000",
+    "family": "medical",
+    "url": "www.tfomsrb.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Республики Бурятия",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Алтай",
+    "region_id_if_known": "84000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 39,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Алтай",
+    "region_id_if_known": "84000000",
+    "family": "medical",
+    "url": "TFOMSRA.RU",
+    "title": "Территориальный фонд обязательного медицинского страхования Республики Алтай",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Дагестан",
+    "region_id_if_known": "82000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 257,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Дагестан",
+    "region_id_if_known": "82000000",
+    "family": "medical",
+    "url": "www.fomsrd.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ ДАГЕСТАН",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Ингушетия",
+    "region_id_if_known": "26000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 43,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Ингушетия",
+    "region_id_if_known": "26000000",
+    "family": "medical",
+    "url": "www.rifoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Республики Ингушетия",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Кабардино-Балкарская Республика",
+    "region_id_if_known": "83000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 54,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Кабардино-Балкарская Республика",
+    "region_id_if_known": "83000000",
+    "family": "medical",
+    "url": "tfomskbr.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Кабардино-Балкарской Республики",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Калмыкия",
+    "region_id_if_known": "85000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 40,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Калмыкия",
+    "region_id_if_known": "85000000",
+    "family": "medical",
+    "url": "https://kalmfoms.ru/",
+    "title": "Территориальный фонд обязательного медицинского страхования Республики Калмыкия",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Карачаево-Черкесская Республика",
+    "region_id_if_known": "91000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 59,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Карачаево-Черкесская Республика",
+    "region_id_if_known": "91000000",
+    "family": "medical",
+    "url": "www.тфомс09.рф",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КАРАЧАЕВО-ЧЕРКЕССКОЙ РЕСПУБЛИКИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Карелия",
+    "region_id_if_known": "86000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 78,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Карелия",
+    "region_id_if_known": "86000000",
+    "family": "medical",
+    "url": "http://oms.karelia.ru",
+    "title": "ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ \"ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ КАРЕЛИЯ\"",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Коми",
+    "region_id_if_known": "87000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 94,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Коми",
+    "region_id_if_known": "87000000",
+    "family": "medical",
+    "url": "http://komifoms.ru/",
+    "title": "Государственное бюджетное учреждение Республики Коми \"Территориальный фонд обязательного медицинского страхования Республики Коми\"",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Марий Эл",
+    "region_id_if_known": "88000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 35,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Марий Эл",
+    "region_id_if_known": "88000000",
+    "family": "medical",
+    "url": "www.rfoms.mari-el.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ МАРИЙ ЭЛ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Мордовия",
+    "region_id_if_known": "89000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 55,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Мордовия",
+    "region_id_if_known": "89000000",
+    "family": "medical",
+    "url": "www.tfomsrm.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ МОРДОВИЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Саха (Якутия)",
+    "region_id_if_known": "98000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 112,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Саха (Якутия)",
+    "region_id_if_known": "98000000",
+    "family": "medical",
+    "url": "www.sakhaoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Республики Саха (Якутия)",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Северная Осетия-Алания",
+    "region_id_if_known": "90000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 68,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Северная Осетия-Алания",
+    "region_id_if_known": "90000000",
+    "family": "medical",
+    "url": "www.omsalania.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ СЕВЕРНАЯ ОСЕТИЯ-АЛАНИЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Татарстан",
+    "region_id_if_known": "92000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 207,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Татарстан",
+    "region_id_if_known": "92000000",
+    "family": "medical",
+    "url": "https://www.fomsrt.ru",
+    "title": "Государственное учреждение \"Территориальный фонд обязательного медицинского страхования Республики Татарстан\"",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Тыва",
+    "region_id_if_known": "93000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 59,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Тыва",
+    "region_id_if_known": "93000000",
+    "family": "medical",
+    "url": "www.fomstuva.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Республики Тыва",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Удмуртская Республика",
+    "region_id_if_known": "94000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 120,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Удмуртская Республика",
+    "region_id_if_known": "94000000",
+    "family": "medical",
+    "url": "www.tfoms18.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Удмуртской Республики",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Хакасия",
+    "region_id_if_known": "95000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 64,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Хакасия",
+    "region_id_if_known": "95000000",
+    "family": "medical",
+    "url": "http://tfomsrh.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Республики Хакасия",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Чеченская Республика",
+    "region_id_if_known": "96000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 80,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Чеченская Республика",
+    "region_id_if_known": "96000000",
+    "family": "medical",
+    "url": "www.tfoms-chr.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Чеченской Республики",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Чувашская Республика",
+    "region_id_if_known": "97000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 56,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Чувашская Республика",
+    "region_id_if_known": "97000000",
+    "family": "medical",
+    "url": "www.chuvtfoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Чувашской Республики",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Алтайский край",
+    "region_id_if_known": "01000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 156,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Алтайский край",
+    "region_id_if_known": "01000000",
+    "family": "medical",
+    "url": "http://www.tfoms22.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ АЛТАЙСКОГО КРАЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Краснодарский край",
+    "region_id_if_known": "03000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 249,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Краснодарский край",
+    "region_id_if_known": "03000000",
+    "family": "medical",
+    "url": "http://www.kubanoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КРАСНОДАРСКОГО КРАЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Красноярский край",
+    "region_id_if_known": "04000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 250,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Красноярский край",
+    "region_id_if_known": "04000000",
+    "family": "medical",
+    "url": "www.krasmed.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КРАСНОЯРСКОГО КРАЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Приморский край",
+    "region_id_if_known": "05000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 119,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Приморский край",
+    "region_id_if_known": "05000000",
+    "family": "medical",
+    "url": "www.omspk.ru",
+    "title": "Государственное учреждение Территориальный фонд обязательного медицинского страхования Приморского края",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Ставропольский край",
+    "region_id_if_known": "07000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 167,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Ставропольский край",
+    "region_id_if_known": "07000000",
+    "family": "medical",
+    "url": "www.тфомсск.рф",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ СТАВРОПОЛЬСКОГО КРАЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Хабаровский край",
+    "region_id_if_known": "08000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 108,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Хабаровский край",
+    "region_id_if_known": "08000000",
+    "family": "medical",
+    "url": "www.khfoms.ru",
+    "title": "ХАБАРОВСКИЙ КРАЕВОЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Амурская область",
+    "region_id_if_known": "10000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 73,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Амурская область",
+    "region_id_if_known": "10000000",
+    "family": "medical",
+    "url": "www.aofoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ АМУРСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Архангельская область",
+    "region_id_if_known": "11000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 109,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Архангельская область",
+    "region_id_if_known": "11000000",
+    "family": "medical",
+    "url": "www.arhofoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ АРХАНГЕЛЬСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Астраханская область",
+    "region_id_if_known": "12000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 67,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Астраханская область",
+    "region_id_if_known": "12000000",
+    "family": "medical",
+    "url": "www.astfond.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Астраханской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Белгородская область",
+    "region_id_if_known": "14000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 92,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Белгородская область",
+    "region_id_if_known": "14000000",
+    "family": "medical",
+    "url": "www.belfoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ БЕЛГОРОДСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Брянская область",
+    "region_id_if_known": "15000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 72,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Брянская область",
+    "region_id_if_known": "15000000",
+    "family": "medical",
+    "url": "http://тфомсбрк.рф",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ БРЯНСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Владимирская область",
+    "region_id_if_known": "17000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 114,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Владимирская область",
+    "region_id_if_known": "17000000",
+    "family": "medical",
+    "url": "www.tfoms33.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ВЛАДИМИРСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Волгоградская область",
+    "region_id_if_known": "18000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 171,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Волгоградская область",
+    "region_id_if_known": "18000000",
+    "family": "medical",
+    "url": "www.volgatfoms.ru",
+    "title": "ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ \"ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ВОЛГОГРАДСКОЙ ОБЛАСТИ\"",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Вологодская область",
+    "region_id_if_known": "19000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 113,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Вологодская область",
+    "region_id_if_known": "19000000",
+    "family": "medical",
+    "url": "http://new.oms35.ru",
+    "title": "ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ВОЛОГОДСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Воронежская область",
+    "region_id_if_known": "20000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 100,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Воронежская область",
+    "region_id_if_known": "20000000",
+    "family": "medical",
+    "url": "http://www.omsvrn.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ВОРОНЕЖСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Ивановская область",
+    "region_id_if_known": "24000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 87,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Ивановская область",
+    "region_id_if_known": "24000000",
+    "family": "medical",
+    "url": "tfoms37.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Ивановской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Иркутская область",
+    "region_id_if_known": "25000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 138,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Иркутская область",
+    "region_id_if_known": "25000000",
+    "family": "medical",
+    "url": "www.irkoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ИРКУТСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Калининградская область",
+    "region_id_if_known": "27000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 108,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Калининградская область",
+    "region_id_if_known": "27000000",
+    "family": "medical",
+    "url": "www.tfoms39.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КАЛИНИНГРАДСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Калужская область",
+    "region_id_if_known": "29000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 61,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Калужская область",
+    "region_id_if_known": "29000000",
+    "family": "medical",
+    "url": "www.oms-kaluga.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КАЛУЖСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Камчатский край",
+    "region_id_if_known": "30000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 65,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Камчатский край",
+    "region_id_if_known": "30000000",
+    "family": "medical",
+    "url": "http://kamtfoms.ru/",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КАМЧАТСКОГО КРАЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Кемеровская область - Кузбасс",
+    "region_id_if_known": "32000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 145,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Кемеровская область - Кузбасс",
+    "region_id_if_known": "32000000",
+    "family": "medical",
+    "url": "http://www.kemoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КЕМЕРОВСКОЙ ОБЛАСТИ - КУЗБАССА",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Кировская область",
+    "region_id_if_known": "33000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 81,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Кировская область",
+    "region_id_if_known": "33000000",
+    "family": "medical",
+    "url": "",
+    "title": "Территориальный фонд обязательного медицинского страхования Кировской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Костромская область",
+    "region_id_if_known": "34000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 64,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Костромская область",
+    "region_id_if_known": "34000000",
+    "family": "medical",
+    "url": "oms44.ru",
+    "title": "территориальный фонд обязательного медицинского страхования Костромской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Курганская область",
+    "region_id_if_known": "37000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 52,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Курганская область",
+    "region_id_if_known": "37000000",
+    "family": "medical",
+    "url": "ktfoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КУРГАНСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Курская область",
+    "region_id_if_known": "38000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 81,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Курская область",
+    "region_id_if_known": "38000000",
+    "family": "medical",
+    "url": "www.kurskoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ КУРСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Ленинградская область",
+    "region_id_if_known": "41000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 83,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Ленинградская область",
+    "region_id_if_known": "41000000",
+    "family": "medical",
+    "url": "lofoms.spb.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Ленинградской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Липецкая область",
+    "region_id_if_known": "42000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 82,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Липецкая область",
+    "region_id_if_known": "42000000",
+    "family": "medical",
+    "url": "www.ofoms48.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Липецкой области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Магаданская область",
+    "region_id_if_known": "44000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 34,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Магаданская область",
+    "region_id_if_known": "44000000",
+    "family": "medical",
+    "url": "http://www.tfoms-magadan.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Магаданской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Московская область",
+    "region_id_if_known": "46000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 363,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Московская область",
+    "region_id_if_known": "46000000",
+    "family": "medical",
+    "url": "http://www.mofoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ МОСКОВСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Мурманская область",
+    "region_id_if_known": "47000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 64,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Мурманская область",
+    "region_id_if_known": "47000000",
+    "family": "medical",
+    "url": "www.omsmurm.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ МУРМАНСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Нижегородская область",
+    "region_id_if_known": "22000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 205,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Нижегородская область",
+    "region_id_if_known": "22000000",
+    "family": "medical",
+    "url": "www.tfoms52.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Нижегородской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Новгородская область",
+    "region_id_if_known": "49000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 59,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Новгородская область",
+    "region_id_if_known": "49000000",
+    "family": "medical",
+    "url": "http://tfomsvn.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ НОВГОРОДСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Новосибирская область",
+    "region_id_if_known": "50000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 153,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Новосибирская область",
+    "region_id_if_known": "50000000",
+    "family": "medical",
+    "url": "www.novofoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Новосибирской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Омская область",
+    "region_id_if_known": "52000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 122,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Омская область",
+    "region_id_if_known": "52000000",
+    "family": "medical",
+    "url": "https://omsomsk.ru/",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ОМСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Оренбургская область",
+    "region_id_if_known": "53000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 118,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Оренбургская область",
+    "region_id_if_known": "53000000",
+    "family": "medical",
+    "url": "https://www.orenfoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Оренбургской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Орловская область",
+    "region_id_if_known": "54000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 72,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Орловская область",
+    "region_id_if_known": "54000000",
+    "family": "medical",
+    "url": "www.oreltfoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ОРЛОВСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Пензенская область",
+    "region_id_if_known": "56000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 76,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Пензенская область",
+    "region_id_if_known": "56000000",
+    "family": "medical",
+    "url": "www.omspenza.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Пензенской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Пермский край",
+    "region_id_if_known": "57000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 166,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Пермский край",
+    "region_id_if_known": "57000000",
+    "family": "medical",
+    "url": "www.pkfoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Пермского края",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Псковская область",
+    "region_id_if_known": "58000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 51,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Псковская область",
+    "region_id_if_known": "58000000",
+    "family": "medical",
+    "url": "псковский-тфомс.рф",
+    "title": "территориальный фонд обязательного медицинского страхования Псковской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Ростовская область",
+    "region_id_if_known": "60000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 245,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Ростовская область",
+    "region_id_if_known": "60000000",
+    "family": "medical",
+    "url": "http://rostov-tfoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Ростовской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Рязанская область",
+    "region_id_if_known": "61000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 79,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Рязанская область",
+    "region_id_if_known": "61000000",
+    "family": "medical",
+    "url": "https://tfoms-rzn.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЯЗАНСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Самарская область",
+    "region_id_if_known": "36000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 181,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Самарская область",
+    "region_id_if_known": "36000000",
+    "family": "medical",
+    "url": "http://www.samtfoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ САМАРСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Саратовская область",
+    "region_id_if_known": "63000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 119,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Саратовская область",
+    "region_id_if_known": "63000000",
+    "family": "medical",
+    "url": "www.sartfoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Саратовской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Сахалинская область",
+    "region_id_if_known": "64000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 61,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Сахалинская область",
+    "region_id_if_known": "64000000",
+    "family": "medical",
+    "url": "http://tfoms-sakhalin.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Сахалинской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Свердловская область",
+    "region_id_if_known": "65000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 227,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Свердловская область",
+    "region_id_if_known": "65000000",
+    "family": "medical",
+    "url": "https://oms66.ru/",
+    "title": "Территориальный фонд обязательного медицинского страхования Свердловской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Смоленская область",
+    "region_id_if_known": "66000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 64,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Смоленская область",
+    "region_id_if_known": "66000000",
+    "family": "medical",
+    "url": "www.smolfoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Смоленской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Тамбовская область",
+    "region_id_if_known": "68000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 66,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Тамбовская область",
+    "region_id_if_known": "68000000",
+    "family": "medical",
+    "url": "www.tofoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ТАМБОВСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Тверская область",
+    "region_id_if_known": "28000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 105,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Тверская область",
+    "region_id_if_known": "28000000",
+    "family": "medical",
+    "url": "www.tveroms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ТВЕРСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Томская область",
+    "region_id_if_known": "69000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 122,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Томская область",
+    "region_id_if_known": "69000000",
+    "family": "medical",
+    "url": "http://www.ttfoms.tomsk.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Томской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Тульская область",
+    "region_id_if_known": "70000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 83,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Тульская область",
+    "region_id_if_known": "70000000",
+    "family": "medical",
+    "url": "www.omstula.ru",
+    "title": "территориальный фонд обязательного медицинского страхования Тульской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Тюменская область",
+    "region_id_if_known": "71000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 98,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Тюменская область",
+    "region_id_if_known": "71000000",
+    "family": "medical",
+    "url": "www.tfoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ТЮМЕНСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Ульяновская область",
+    "region_id_if_known": "73000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 88,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Ульяновская область",
+    "region_id_if_known": "73000000",
+    "family": "medical",
+    "url": "web.ultfoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Ульяновской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Челябинская область",
+    "region_id_if_known": "75000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 190,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Челябинская область",
+    "region_id_if_known": "75000000",
+    "family": "medical",
+    "url": "www.foms74.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ЧЕЛЯБИНСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Забайкальский край",
+    "region_id_if_known": "76000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 73,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Забайкальский край",
+    "region_id_if_known": "76000000",
+    "family": "medical",
+    "url": "zabtfoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Забайкальского края",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Ярославская область",
+    "region_id_if_known": "78000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 94,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Ярославская область",
+    "region_id_if_known": "78000000",
+    "family": "medical",
+    "url": "http://www.yartfoms.ru/",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ЯРОСЛАВСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "г. Москва",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 462,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "г. Москва",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "htpp://www.mgfoms.ru",
+    "title": "МОСКОВСКИЙ ГОРОДСКОЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "г. Санкт-Петербург",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 344,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "г. Санкт-Петербург",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://spboms.ru",
+    "title": "Государственное учреждение «Территориальный фонд обязательного медицинского страхования Санкт-Петербурга»",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Еврейская АО",
+    "region_id_if_known": "99000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 38,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Еврейская АО",
+    "region_id_if_known": "99000000",
+    "family": "medical",
+    "url": "tfomseao.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Еврейской автономной области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Ненецкий АО",
+    "region_id_if_known": "11800000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 15,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Ненецкий АО",
+    "region_id_if_known": "11800000",
+    "family": "medical",
+    "url": "www.wp.ofomsnao.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ НЕНЕЦКОГО АВТОНОМНОГО ОКРУГА",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Ханты-Мансийский АО",
+    "region_id_if_known": "71800000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 127,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Ханты-Мансийский АО",
+    "region_id_if_known": "71800000",
+    "family": "medical",
+    "url": "OFOMS.RU",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ХАНТЫ-МАНСИЙСКОГО АВТОНОМНОГО ОКРУГА – ЮГРЫ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Чукотский АО",
+    "region_id_if_known": "77000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 14,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Чукотский АО",
+    "region_id_if_known": "77000000",
+    "family": "medical",
+    "url": "www.chtfoms.ru",
+    "title": "Чукотский территориальный фонд обязательного медицинского страхования",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Ямало-Ненецкий АО",
+    "region_id_if_known": "71900000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 50,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Ямало-Ненецкий АО",
+    "region_id_if_known": "71900000",
+    "family": "medical",
+    "url": "www.webfoms.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Ямало-Ненецкого автономного округа",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "г. Байконур",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 2,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "г. Байконур",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "БТ-ФОМС.РФ",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ГОРОДА БАЙКОНУР",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Республика Крым",
+    "region_id_if_known": "35000000",
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 69,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Республика Крым",
+    "region_id_if_known": "35000000",
+    "family": "medical",
+    "url": "http://tfomsrk.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РЕСПУБЛИКИ КРЫМ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "г. Севастополь",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 31,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "г. Севастополь",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "www.sevtfoms.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ГОРОДА СЕВАСТОПОЛЯ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Донецкая Народная Республика",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 116,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Донецкая Народная Республика",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "FOMSDNR.RU",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ДОНЕЦКОЙ НАРОДНОЙ РЕСПУБЛИКИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Луганская Народная Республика",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 77,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Луганская Народная Республика",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "tfomslnr.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ЛУГАНСКОЙ НАРОДНОЙ РЕСПУБЛИКИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Запорожская область",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 26,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Запорожская область",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "tfomszo.ru",
+    "title": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ ЗАПОРОЖСКОЙ ОБЛАСТИ",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Херсонская область",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 15,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Херсонская область",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "tfomskho.ru",
+    "title": "Территориальный фонд обязательного медицинского страхования Херсонской области",
+    "status": "directory_only_not_individually_checked",
+    "checked_at": "2026-11-09",
+    "coverage": "F001 official TFOMS directory entry; site itself not fetched",
+    "download_url": null,
+    "notes": "Source: F001.xml packet dated 2025-10-15. Source values preserved; no homepage URL guesses or silent repairs."
+  },
+  {
+    "region_name": "Российская Федерация",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.kamtfoms.ru/informacionnye_resursy/paket_nsi/",
+    "title": "F032: реестр медицинских организаций, осуществляющих деятельность в сфере ОМС",
+    "status": "downloaded_national_registry",
+    "checked_at": "2026-11-09",
+    "coverage": {
+      "registry_rows": 406,
+      "snapshot_date": "2026-03-03",
+      "programme_year": 2026
+    },
+    "download_url": "https://www.kamtfoms.ru/files/packet_NCI/f032_5_267_xml.zip",
+    "local_path": "data/additional/all-regions-medical/raw/f032_5_267_xml.zip",
+    "notes": "Actual F032 records verified. SUBJ is programme/registry territory; JURADDRESS_ADDRESS is a legal address, not a verified care location. F001 homepage is a directory entry, not an individually checked regional registry."
+  },
+  {
+    "region_name": "Московская область",
+    "region_id_if_known": "46000000",
+    "family": "medical",
+    "url": "https://www.mofoms.ru/dokumenty/spravochniki/reestry/",
+    "title": "Реестр медицинских организаций 2026 от 14.10.2026",
+    "status": "downloaded_regional_registry",
+    "checked_at": "2026-11-09",
+    "coverage": "2026 programme; official page states 2026-10-14",
+    "download_url": "https://www.mofoms.ru/upload/iblock/752/bxjqjzzm7mrb3bujj570kwl5o0mm8jgq/%D0%A0%D0%B5%D0%B5%D1%81%D1%82%D1%80%20%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D1%85%20%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B9%2C%20%D0%BE%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BB%D1%8F%D1%8E%D1%89%D0%B8%D1%85%20%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%20%D1%81%D1%84%D0%B5%D1%80%D0%B5%20%D0%9E%D0%9C%D0%A1%20%D0%BF%D0%BE%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5%20%D0%9E%D0%9C%D0%A1%20%D0%B2%202026%20%D0%B3%D0%BE%D0%B4%D1%83%20%D0%BE%D1%82%2014.10.2026.xlsx.zip",
+    "local_path": "data/additional/all-regions-medical/raw/moscow-oblast-mo-2026.xlsx.zip",
+    "notes": "ZIP archive validated; detailed workbook row extraction not performed."
+  },
+  {
+    "region_name": "Донецкая Народная Республика",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://fomsdnr.ru/reestrmo",
+    "title": "Реестр медицинских организаций на 2026 год",
+    "status": "downloaded_regional_registry",
+    "checked_at": "2026-11-09",
+    "coverage": "2026 programme",
+    "download_url": "https://s3.twcstorage.ru/163156c1-e321-4816-8c5d-2f008b269e54/REESTR_MO_na_2026.xlsx",
+    "local_path": "data/additional/all-regions-medical/raw/dnr-mo-2026.xlsx",
+    "notes": "Official page links this external storage; workbook container validated; detailed row extraction not performed."
+  },
+  {
+    "region_name": "Владимирская область",
+    "region_id_if_known": "17000000",
+    "family": "medical",
+    "url": "https://www.tfoms33.ru/information-omsystem-participants/medical-organizations-institutions-registry",
+    "title": "Реестр медицинских организаций (учреждений)",
+    "status": "search_result_only_fetch_forbidden",
+    "checked_at": "2026-11-09",
+    "coverage": "Search index mentions 2026 and 2027; direct page returned 403",
+    "download_url": null,
+    "notes": "Regional file not acquired; region is covered by downloaded national F032."
+  },
+  {
+    "region_name": "Республика Дагестан",
+    "region_id_if_known": "82000000",
+    "family": "medical",
+    "url": "https://fomsrd.ru/reestr-medicinskih-organizaciy",
+    "title": "Реестр медицинских организаций",
+    "status": "search_result_only_fetch_timeout",
+    "checked_at": "2026-11-09",
+    "coverage": "Search index mentions 2026 XLSX; direct fetch timed out",
+    "download_url": null,
+    "notes": "Regional file not acquired; region is covered by downloaded national F032."
+  },
+  {
+    "region_name": "Российская Федерация",
+    "region_id_if_known": null,
+    "family": "medical",
+    "url": "https://www.ffoms.gov.ru/system-oms/territorial-funds/",
+    "title": "Территориальные фонды ОМС России",
+    "status": "fetch_failed",
+    "checked_at": "2026-11-09",
+    "coverage": "Official national directory linked by Moscow oblast TFOMS; direct web fetch timed out",
+    "download_url": null,
+    "notes": "FFOMS homepage curl returned a 77-byte block page. F001 directory and national registry acquired through official regional TFOMS mirror instead."
+  }
+]
