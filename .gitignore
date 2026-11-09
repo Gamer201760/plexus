@@ -47,3 +47,5 @@ var/
 datasets/**/raw/
 datasets/**/derived/
 datasets/**/*.part
+
+tmp/
