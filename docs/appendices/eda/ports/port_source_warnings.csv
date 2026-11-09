@@ -1,0 +1,4 @@
+port_name,issue,source_value
+Морской порт Высоцк,annual_period_not_explicit,"21,2 млн тонн, в том числе: – наливные: 12,5 млн тонн"
+Морской порт Приморск,source_says_89500_tonnes_not_thousand_tonnes_do_not_correct,89 500 тонн в год;
+Морской порт Приморск,aquatory_unit_suspicious_source_literal,89 500 тонн в год;

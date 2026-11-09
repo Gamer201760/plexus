@@ -1,0 +1,46 @@
+{
+  "measured_at": "2026-11-09T06:02:21.695925+00:00",
+  "code": {
+    "sha": "8c8455d77d940ec5a29d63f2d09b652eff491c17",
+    "dirty": true
+  },
+  "implementation": {
+    "path": "etl/index_sensitivity.py",
+    "bytes": 4161,
+    "sha256": "154db0cb46e560aee7a77e9f713463e82f8a9e3e1fc1fd8ae78e91009add9d78"
+  },
+  "method": "Spearman correlation of population-weighted regional Hansen scores, 82 regions per scenario",
+  "rows": [
+    {
+      "scenario": "road",
+      "regions": 82,
+      "spearman_1h_vs_2h": 0.9030920429686226,
+      "spearman_4h_vs_2h": 0.9763171928908044
+    },
+    {
+      "scenario": "road_summer",
+      "regions": 82,
+      "spearman_1h_vs_2h": 0.9030920429686226,
+      "spearman_4h_vs_2h": 0.9761648218891829
+    },
+    {
+      "scenario": "road_winter",
+      "regions": 82,
+      "spearman_1h_vs_2h": 0.9032661812561901,
+      "spearman_4h_vs_2h": 0.9757730107421556
+    },
+    {
+      "scenario": "summer",
+      "regions": 82,
+      "spearman_1h_vs_2h": 0.9032008793983521,
+      "spearman_4h_vs_2h": 0.9761430546032369
+    },
+    {
+      "scenario": "winter",
+      "regions": 82,
+      "spearman_1h_vs_2h": 0.9032661812561901,
+      "spearman_4h_vs_2h": 0.9757730107421556
+    }
+  ],
+  "limitation": "parameter sensitivity, not behavioural calibration"
+}

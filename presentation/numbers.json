@@ -1,0 +1,47 @@
+{
+  "regions": {
+    "value": 82,
+    "source": "national-scope"
+  },
+  "origins": {
+    "value": 155412,
+    "source": "national-scope"
+  },
+  "pilotPoints": {
+    "value": 7,
+    "source": "pilot-artifact"
+  },
+  "pilotEdges": {
+    "value": 19,
+    "source": "pilot-artifact"
+  },
+  "baseline": {
+    "value": 18.095108680328025,
+    "digits": 2,
+    "source": "pilot-variants"
+  },
+  "frequency4": {
+    "value": 18.095108680328025,
+    "digits": 2,
+    "source": "pilot-variants"
+  },
+  "frequency7": {
+    "value": 14.243330466895841,
+    "digits": 2,
+    "source": "pilot-variants"
+  },
+  "gain7": {
+    "value": 3.8517782134321834,
+    "digits": 2,
+    "source": "pilot-variants"
+  },
+  "comparisons": {
+    "value": 24,
+    "source": "pilot-validation"
+  },
+  "nationalTop": {
+    "value": 479.1471178798613,
+    "source": "national-index",
+    "digits": 2
+  }
+}

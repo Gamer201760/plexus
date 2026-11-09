@@ -1,0 +1,3056 @@
+{
+  "historical_branch": "chore/project-research",
+  "catalog": [
+    {
+      "source_row": "1",
+      "title": "Точно: связность городов",
+      "folder": "intercity_connectivity",
+      "status": "downloaded",
+      "raw_files": "2",
+      "derived_files": "3",
+      "bytes": "3873825",
+      "geography": "coverage.md",
+      "period": "2026",
+      "limitations": "96660 строк × 22 поля; 180 городов и 85 региональных меток. У каждого режима 32220 пар. Пустые distance_km и distance_hr совпадают: road2464, rail4164, air25602; у них причина «Маршрут не найден». CD в missing_reason стоит у строк с имеющимся маршрутом. Отсутствие найденного маршрута не доказывает отсутствие физической связи. Заявленная источником погрешность времени около 11%; автомобильные расстояния могут занижаться на извилистых маршрутах.",
+      "verified_manifest_entries": 5,
+      "manifest_entries": 5,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "2",
+      "title": "Точно / Росстат: транспорт регионов",
+      "folder": "regional_transport",
+      "status": "downloaded",
+      "raw_files": "2",
+      "derived_files": "0",
+      "bytes": "2490517",
+      "geography": "coverage.md",
+      "period": "2001–2024",
+      "limitations": "31872 строки × 14 полей,13 показателей. В одном файле есть регионы, федеральные округа и страна: нельзя суммировать все уровни. Годы и показатели покрыты неравномерно; единицы и методические оговорки находятся в indicator_unit и comment. В indicator_value есть числовые коды пропуска: -99999999 — нет информации, -77777777 — скрыто. Их нельзя включать в расчёт как измеренные числа.",
+      "verified_manifest_entries": 2,
+      "manifest_entries": 2,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "3",
+      "title": "АСОП: грузооборот и мощности портов",
+      "folder": "asop-port-turnover-capacity",
+      "status": "downloaded",
+      "raw_files": "1",
+      "derived_files": "0",
+      "bytes": "192339",
+      "geography": "Россия, один национальный агрегат",
+      "period": "2000–2024",
+      "limitations": "Официальный исходник — одностраничный PDF-график, не CSV/XLSX. Территории и отдельные порты не выделены; для расчёта территориального индекса сам по себе недостаточен.",
+      "verified_manifest_entries": 1,
+      "manifest_entries": 1,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "4",
+      "title": "Минтранс: пассажирооборот",
+      "folder": "mintrans-passenger-turnover",
+      "status": "downloaded",
+      "raw_files": "1",
+      "derived_files": "1",
+      "bytes": "2568392",
+      "geography": "Россия, один национальный агрегат",
+      "period": "Январь 2022 — декабрь 2024",
+      "limitations": "CSV получен переносом подписей с графика; не является официальной машинной выгрузкой. Исключения охвата указаны в profile.json. Разбивки по городам/регионам и маршрутам нет.",
+      "verified_manifest_entries": 2,
+      "manifest_entries": 2,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "5",
+      "title": "АСОП: морские бассейны",
+      "folder": "asop-port-basins",
+      "status": "downloaded",
+      "raw_files": "29",
+      "derived_files": "0",
+      "bytes": "5369479",
+      "geography": "Арктический, Балтийский, Азово-Черноморский, Каспийский, Дальневосточный бассейны; направления экспорт/импорт/транзит/каботаж",
+      "period": "2017–2024; годовые и накопленные квартальные срезы",
+      "limitations": "Это PDF-графики, многие без текстового слоя. Пропуски отдельных чисел машинно не оценены. Нет матрицы пар территорий, точек отправления/назначения и характеристик маршрутов; накопленные квартальные данные нельзя суммировать как независимые кварталы.",
+      "verified_manifest_entries": 29,
+      "manifest_entries": 29,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "6",
+      "title": "АСОП: подвоз грузов в порты",
+      "folder": "asop-port-arrival-modes",
+      "status": "partial",
+      "raw_files": "30",
+      "derived_files": "0",
+      "bytes": "5569532",
+      "geography": "Россия, агрегаты по видам транспорта",
+      "period": "2017–2024 опубликованные срезы; отдельное дополнение 2024–2025",
+      "limitations": "Название ссылки «взаимодействие» не гарантирует подвоз: PDF за12месяцев2024 показывает отправление грузов ИЗ портов, а не доставку В порты. Добавленный PDF2025 явно содержит доставку в порты. Файлы разных направлений нельзя объединять без проверки; многие исходники сканированы. Территориального разреза нет.",
+      "verified_manifest_entries": 30,
+      "manifest_entries": 30,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "7",
+      "title": "Росморпорт: характеристики портов",
+      "folder": "rosmorport-port-characteristics",
+      "status": "partial",
+      "raw_files": "0",
+      "derived_files": "2",
+      "bytes": "8921315",
+      "geography": "42 морских порта на страницах филиалов Росморпорта",
+      "period": "Состояние опубликованных страниц на дату скачивания; единый год показателей не задан",
+      "limitations": "Это фактическое извлечение из опубликованных таблиц, а не официальный XLSX. Не полный реестр всех портов РФ. У42портов есть местоположение и текст характеристик, у38 есть двухколоночные таблицы. Числа/единицы оставлены как в источнике; координаты пока не приведены к десятичным градусам.",
+      "verified_manifest_entries": 12,
+      "manifest_entries": 12,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "8",
+      "title": "OpenStreetMap / Geofabrik: сеть РФ",
+      "folder": "osm-russia",
+      "status": "excluded_by_user",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "Россия",
+      "period": "Снимок сети; не скачивался",
+      "limitations": "[\"По прямому указанию пользователя карта РФ исключена из текущей загрузки.\"]",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "9",
+      "title": "Точно: населённые пункты",
+      "folder": "allsettlements",
+      "status": "downloaded",
+      "raw_files": "2",
+      "derived_files": "1",
+      "bytes": "17546044",
+      "geography": "coverage.md",
+      "period": "Перепись 2020–2021; версия 25.09.2026",
+      "limitations": "176215 строк × 237 полей, из них 155747 строк уровня «Населенный пункт». Остальные строки — агрегаты разных уровней и анонимизации; суммировать их вместе нельзя. Страница сообщает 176131 наблюдение: зафиксировано расхождение с фактическим файлом. Отсутствующие координаты надо оценивать по уровню объекта, не по всем строкам сразу. Чувствительные значения национального состава для малых поселений закодированы-9; полная неанонимизированная версия не запрашивалась.",
+      "verified_manifest_entries": 3,
+      "manifest_entries": 3,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "10",
+      "title": "Точно / Росстат: муниципальный транспорт",
+      "folder": "municipal_transport",
+      "status": "downloaded",
+      "raw_files": "1",
+      "derived_files": "1",
+      "bytes": "147649594",
+      "geography": "coverage.md",
+      "period": "2007–2025; также присутствует служебное значение года 9999",
+      "limitations": "Исходный раздел 1996412 строк × 27 полей,87 региональных меток. Архив 39 МБ содержит CSV1.95 ГБ и parquet10.5 МБ; CSV на диск целиком не распаковывался. Транспортная таблица 98220 строк:28776 по регулярному сообщению и 69444 по дорогам. Это полный фильтр показателей, не выборка территорий. Год 9999 — ненормальный календарный год, требует трактовки по методологии. Есть коды отсутствующих/неприменимых значений; см. profile.json.",
+      "verified_manifest_entries": 2,
+      "manifest_entries": 2,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "11",
+      "title": "OurAirports: аэропорты РФ",
+      "folder": "ourairports-russia",
+      "status": "downloaded",
+      "raw_files": "6",
+      "derived_files": "6",
+      "bytes": "20468509",
+      "geography": "Все записи iso_country=RU и связанные справочники",
+      "period": "Текущий снимок справочника",
+      "limitations": "[\"Включены закрытые объекты и площадки; не является расписанием рейсов.\"]",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 12,
+      "availability_now": "historical_download_not_located"
+    },
+    {
+      "source_row": "12",
+      "title": "Росавиация: реестр аэродромов",
+      "folder": "rosaviation-airfield-registry",
+      "status": "blocked",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "Российская Федерация; фактическое содержимое локально не получено",
+      "period": "Запрошен срез2025; файл23.10.2025 найден, но не скачан",
+      "limitations": "Основной домен favt.gov.ru и официальные special/old зеркала отвечают HTTP403 либо TLSошибкой. Уральский официальный PDF06.02.2026 также недоступен (403; wwwхост имеет несоответствие сертификата). Страница/ошибка не выданы за скачанный датасет.",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "13",
+      "title": "GeoNames: населённые пункты РФ",
+      "folder": "geonames-russia",
+      "status": "downloaded",
+      "raw_files": "6",
+      "derived_files": "1",
+      "bytes": "46451826",
+      "geography": "Полная выгрузка RU; класс P выделен отдельно",
+      "period": "Текущий снимок; даты населения неоднородны",
+      "limitations": "[\"Нулевая численность часто означает отсутствие данных; admin1 требует сопоставления другим справочникам.\"]",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 7,
+      "availability_now": "historical_download_not_located"
+    },
+    {
+      "source_row": "14",
+      "title": "Точно / Росстат: ВРП",
+      "folder": "regional_grp",
+      "status": "downloaded",
+      "raw_files": "2",
+      "derived_files": "0",
+      "bytes": "1479216",
+      "geography": "coverage.md",
+      "period": "2001–2023",
+      "limitations": "16896 строк × 14 полей,8 показателей. Есть уровни региона, федерального округа и страны. Номинальные значения, душевые показатели и индексы требуют разных единиц и интерпретации; валюта и цены читаются из indicator_unit и comment. В indicator_value есть числовые коды пропуска: -99999999 — нет информации, -77777777 — скрыто. Их нельзя включать в расчёт как измеренные числа.",
+      "verified_manifest_entries": 2,
+      "manifest_entries": 2,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "15",
+      "title": "Минтранс: водный завоз на Север",
+      "folder": "mintrans-northern-delivery",
+      "status": "downloaded",
+      "raw_files": "2",
+      "derived_files": "1",
+      "bytes": "3467404",
+      "geography": "Отправление водным транспортом в районы Крайнего Севера и приравненные местности, общий агрегат",
+      "period": "2023–2025, годовые итоги",
+      "limitations": "Разбивки по отдельным северным регионам и поселениям нет. В таблице2025 нет категории «лесные грузы в плотах»: соответствующее значение оставлено пустым, а не нулём. CSV производный; показатели отправления не тождественны доставке до конечного получателя.",
+      "verified_manifest_entries": 3,
+      "manifest_entries": 3,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "16",
+      "title": "Росстат: грузовые перевозки",
+      "folder": "rosstat_freight",
+      "status": "partial",
+      "raw_files": "3",
+      "derived_files": "1",
+      "bytes": "9608612",
+      "geography": "coverage.md",
+      "period": "Доступные региональные данные 2001–2024",
+      "limitations": "Это частичное покрытие строки исходного списка: обработанная региональная публикация, не оригинальная текущая выгрузка Росстата. Нет подтверждения полной ежемесячной серии всех видов транспорта и текущей железнодорожной погрузки. derived/freight_indicators.csv содержит все строки грузовых показателей из полного раздела 16; исходный ZIP сохранён. Дополнительный архив data_transport содержит тарифы и отраслевые показатели сборника «Транспорт в России»; он не заменяет ряды объёмов перевозок. В исходных значениях есть числовые коды пропуска -99999999 (нет информации) и -77777777 (скрыто); перед расчётами их нужно исключать, сохраняя причины пропусков.",
+      "verified_manifest_entries": 4,
+      "manifest_entries": 4,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "17",
+      "title": "Росстат: пассажирские перевозки",
+      "folder": "rosstat_passengers",
+      "status": "partial",
+      "raw_files": "1",
+      "derived_files": "1",
+      "bytes": "6316035",
+      "geography": "coverage.md",
+      "period": "Доступные региональные данные 2001–2024",
+      "limitations": "Частичное покрытие: автобусные перевозки, автобусный пассажирооборот и отправление пассажиров железной дорогой; это не полная текущая месячная статистика всех видов транспорта. Исходный ZIP и полный фильтр пассажирских показателей сохранены. В исходных значениях есть числовые коды пропуска -99999999 (нет информации) и -77777777 (скрыто); перед расчётами их нужно исключать, сохраняя причины пропусков.",
+      "verified_manifest_entries": 2,
+      "manifest_entries": 2,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "18",
+      "title": "Росавиация: статистика перевозок",
+      "folder": "rosaviation-traffic",
+      "status": "partial",
+      "raw_files": "1",
+      "derived_files": "0",
+      "bytes": "2213359",
+      "geography": "Россия, агрегат авиационных перевозок; локальных данных отдельных аэропортов нет",
+      "period": "2023–2024, годовые сравнения в резервном отчёте Минтранса",
+      "limitations": "Прямые статистические выгрузки Росавиации и таблицы аэропортов не скачаны: основной сайт и официальные зеркала отвечают403. Сохранённый PDF — резервный официальный источник Минтранса, а не подмена полной выгрузки Росавиации.",
+      "verified_manifest_entries": 1,
+      "manifest_entries": 1,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "19",
+      "title": "ЕМИСС",
+      "folder": "emiss",
+      "status": "partial",
+      "raw_files": "1",
+      "derived_files": "3",
+      "bytes": "15387949",
+      "geography": "coverage.md",
+      "period": "2016–2024",
+      "limitations": "Сохранены исходный JSON, тело публичного POST-запроса, расшифровки фильтров и длинная CSV-таблица. Это один полный показатель, не вся ЕМИСС и не все доходы, занятость, цены и торговля из исходной строки. Служебные идентификаторы и первоначальная запись чисел с запятой сохранены. Территориальные уровни смешаны; названия перечислены в profile.json.",
+      "verified_manifest_entries": 4,
+      "manifest_entries": 4,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "20",
+      "title": "Росстат: регионы",
+      "folder": "regions_collection",
+      "status": "downloaded",
+      "raw_files": "2",
+      "derived_files": "0",
+      "bytes": "44436707",
+      "geography": "coverage.md",
+      "period": "2001–2025",
+      "limitations": "Архив содержит 40 содержательных CSV плюс вспомогательные файлы; сохранён целиком. Сборники и раздельные разделы частично повторяют одни и те же наблюдения, поэтому число строк по всем файлам не является числом уникальных наблюдений. Фактические годы, уровни, регионы, показатели и пустоты описаны по каждому CSV в profile.json. MACOSX-метаданные не считались таблицами.",
+      "verified_manifest_entries": 2,
+      "manifest_entries": 2,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "21",
+      "title": "Росстат: демография и перепись 2020",
+      "folder": "demography",
+      "status": "partial",
+      "raw_files": "1",
+      "derived_files": "0",
+      "bytes": "778748",
+      "geography": "coverage.md",
+      "period": "Доступный демографический сборник 2005,2010–2023",
+      "limitations": "10560 строк × 14 полей,7 показателей. Перепись по населённым пунктам отдельно сохранена в allsettlements. Прогнозы населения и все миграционные разрезы этой выгрузкой не покрыты; не считать строку источников полностью выполненной.",
+      "verified_manifest_entries": 1,
+      "manifest_entries": 1,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "22",
+      "title": "Банк России",
+      "folder": "cbr-macro",
+      "status": "partial",
+      "raw_files": "4",
+      "derived_files": "0",
+      "bytes": "1309470",
+      "geography": "Россия; макроэкономические ряды федерального уровня, регионов нет.",
+      "period": "USD/RUB: вся доступная история с 01.07.1992 до 06.11.2026; месячные инфляция и ключевая ставка: 09.2013–09.2026; платёжный баланс: бюллетень за III квартал 2025, сравнения 2023–2025.",
+      "limitations": "Исходные XML и XLSX; PDF-бюллетень. Ряд USD включает деноминацию 1998 года и разные режимы курса: нельзя механически сравнивать номинальные рубли всей истории. Это выбранные макроэкономические серии, а не все серии ЦБ и не все валюты.",
+      "verified_manifest_entries": 4,
+      "manifest_entries": 4,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "23",
+      "title": "Минэкономразвития",
+      "folder": "economy-forecast",
+      "status": "blocked",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "Россия в целом; региональный охват не подтверждён.",
+      "period": "Найден прогноз на 2026 год и плановый период 2027–2028; файл не получен.",
+      "limitations": "Официальный домен economy.gov.ru не разрешается из среды загрузки; HTML/чужие пересказы не сохранены вместо прогноза. Нужен доступный официальный файл или файл от пользователя.",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "24",
+      "title": "ФНС: открытые данные",
+      "folder": "fns-registers",
+      "status": "blocked",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "РФ",
+      "period": "Не загружено",
+      "limitations": "[\"Массовая выгрузка ЕГРЮЛ/ЕГРИП через официальный сервис требует атрибутов доступа и оформления платной услуги. Бесплатный поиск конкретного лица не равен полному дампу.\"]",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "25",
+      "title": "ФИАС / ГАР",
+      "folder": "gar-addresses",
+      "status": "deferred_disk",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "551",
+      "geography": "РФ",
+      "period": "Версия 06.11.2026; скачаны только метаданные выгрузки",
+      "limitations": "[\"Полный ZIP 58 052 049 925 байт, свободно около 29 ГБ. Сам адресный реестр не скачан. Дельта без базового снимка не заменяет полный реестр.\"]",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 1,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "26",
+      "title": "Производственный календарь (isDayOff API)",
+      "folder": "production-calendar",
+      "status": "downloaded",
+      "raw_files": "2",
+      "derived_files": "46",
+      "bytes": "125429",
+      "geography": "РФ и доступные региональные календари в архиве",
+      "period": "2004–2027; дополнительно полный ответ API за 2026",
+      "limitations": "[\"Региональные календари неполны по годам; будущие даты могут меняться.\"]",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 48,
+      "availability_now": "historical_download_not_located"
+    },
+    {
+      "source_row": "27",
+      "title": "ВНИИГМИ-МЦД (Росгидромет)",
+      "folder": "vniigmi-weather",
+      "status": "blocked",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "Станции наблюдений РФ; точный список и полнота не выгружены.",
+      "period": "Доступные периоды зависят от станции и параметра; пока не установлены по файлам.",
+      "limitations": "Старый адрес meteo.ru/data/162-temperature-precipitation возвращает страницу 404 нового сайта. Актуальная официальная страница описывает выдачу выборок по запросу по электронной почте. Запрос не отправлялся, регистрации не создавались. Погодные данные других источников не выданы за ВНИИГМИ.",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "28",
+      "title": "Open-Meteo",
+      "folder": "open-meteo-weather",
+      "status": "needs_parameters",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "Не выбрана",
+      "period": "Не выбран",
+      "limitations": "[\"Нужны координаты или область, период, переменные и модель. Пользователь сначала хочет оценить покрытие готовых наборов; произвольные города и периоды не выбраны.\"]",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "29",
+      "title": "Транспортная стратегия РФ до 2030/2035 года",
+      "folder": "transport-strategy",
+      "status": "downloaded",
+      "raw_files": "1",
+      "derived_files": "0",
+      "bytes": "1616103",
+      "geography": "Федеральный уровень РФ, направления транспорта и территории в тексте.",
+      "period": "Распоряжение 3363-р от 27.11.2021, горизонт до 2030 года с прогнозом до 2035 года.",
+      "limitations": "Полный исходный PDF Минтранса: 285 страниц. Это нормативный документ с целевыми показателями, а не статистическая таблица. Скачана исходная публикация 2021 года; актуальная редакция и изменения после неё отдельно не проверены.",
+      "verified_manifest_entries": 1,
+      "manifest_entries": 1,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "30",
+      "title": "Правительство РФ: нацпроект и магистральная инфраструктура",
+      "folder": "national-infrastructure",
+      "status": "partial",
+      "raw_files": "1",
+      "derived_files": "0",
+      "bytes": "183187",
+      "geography": "Федеральные проекты и объекты РФ; имеется привязка к отдельным транспортным направлениям, не единая таблица всех регионов.",
+      "period": "Паспорт транспортной части комплексного плана на период 30.07.2018–31.12.2024; таблица содержит базовые и целевые годы.",
+      "limitations": "Официальный PDF Минтранса, 32 страницы, показатели и финансовое обеспечение плана. Это конкретный исторический паспорт, а не все национальные проекты и не фактическое исполнение бюджета. Требуется извлечение таблиц для расчётов.",
+      "verified_manifest_entries": 1,
+      "manifest_entries": 1,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "31",
+      "title": "Электронный бюджет",
+      "folder": "electronic-budget",
+      "status": "blocked",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "Федеральные и региональные бюджеты; фактический охват без выгрузки не установлен.",
+      "period": "В исходном списке период не определён; выгрузка расходов по программам не получена.",
+      "limitations": "Портал budget.gov.ru не отвечает в доступном времени; проверенные ссылки CSV Минфина возвращают 503. Квартальная сводка Минфина не подменяет нужные программные расходы. Для выгрузки нужно определить конкретный открытый набор, годы и уровни бюджета.",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "32",
+      "title": "Национальный центр ГЧП (Росинфра)",
+      "folder": "rosinfra-ppp",
+      "status": "partial",
+      "raw_files": "1",
+      "derived_files": "0",
+      "bytes": "777810",
+      "geography": "Россия; федеральный, региональный и муниципальный уровни в аналитическом обзоре.",
+      "period": "Итоги 2021 года, состояние рынка на 30.12.2021.",
+      "limitations": "Официальный аналитический обзор, 26 страниц: сводки, проекты и примеры транспортной инфраструктуры. Это исторический отчёт, не полный актуальный реестр всех проектов и соглашений; машиночитаемой полной выгрузки нет.",
+      "verified_manifest_entries": 1,
+      "manifest_entries": 1,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "33",
+      "title": "Минпромторг: ГИСП",
+      "folder": "gisp-support",
+      "status": "blocked",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "Россия; фильтры отрасли и регионов в навигаторе, выгрузка не получена.",
+      "period": "Актуальный срез не получен.",
+      "limitations": "Публичный навигатор динамический. Найденный официальный PDF-экспорт карточки меры возвращает 403. Описание сервиса и справочная инструкция не выданы за данные о предприятиях или мерах поддержки. Нужна доступная выгрузка с выбранным охватом.",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "34",
+      "title": "Фонд развития промышленности",
+      "folder": "industrial-development-fund",
+      "status": "blocked",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "Федеральный ФРП РФ; выгрузка региональной структуры проектов не получена.",
+      "period": "Период и полнота без исходного файла не установлены.",
+      "limitations": "Официальные страницы федерального ФРП возвращают 403. Отчёты одноимённых фондов Казахстана и отдельных региональных фондов не подменяют федеральный перечень. Нужен официальный файл перечня профинансированных проектов.",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "35",
+      "title": "Росстат: парк транспортных средств",
+      "folder": "vehicle_fleet",
+      "status": "blocked",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "coverage.md",
+      "period": "Не установлен по файлам: таблицы не скачаны",
+      "limitations": "Опубликованные адреса Nalichie_TS_2024.xlsx, Obesp_legk_avto_2024.xlsx и Nal_gruz_avto_bus_2024.xlsx отдают 404. Проверенные актуальные по схеме имён варианты 2025 тоже 404. Данных автопарка здесь нет; HTML и ответы 404 не сохранены как датасет. Для завершения нужен рабочий официальный файл или точный показатель/экспорт ЕМИСС.",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "36",
+      "title": "Автостат",
+      "folder": "autostat-vehicles",
+      "status": "blocked",
+      "raw_files": "0",
+      "derived_files": "0",
+      "bytes": "0",
+      "geography": "Россия; региональные данные заявлены в коммерческих исследованиях, не получены.",
+      "period": "Найдено исследование «Электрокары и гибриды в России» 2024; полный файл не получен.",
+      "limitations": "Полный отчёт платный; карточка товара упоминает демоверсию. Прямой файл демо не найден, официальный сайт при скачивании возвращает 403/500. Покупок и регистрации не было; отдельные числа из новостей не оформлены как полный датасет.",
+      "verified_manifest_entries": 0,
+      "manifest_entries": 0,
+      "availability_now": "no_dataset_located"
+    },
+    {
+      "source_row": "37",
+      "title": "Минприроды России",
+      "folder": "minprirody-environment",
+      "status": "partial",
+      "raw_files": "4",
+      "derived_files": "0",
+      "bytes": "44629681",
+      "geography": "РФ в целом, федеральные округа, субъекты и отдельные города. Скачан полный региональный раздел 14 государственного доклада, 302 страницы.",
+      "period": "Государственный доклад за 2024 год; в таблицах встречаются исторические ряды 1990–2024 и 2015–2024.",
+      "limitations": "Скачаны четыре исходных PDF-раздела: выбросы, транспорт, субъекты РФ и основные показатели. Полный доклад целиком не скачан. Региональные таблицы неоднородны и могут иметь пропуски; наличие раздела региона не гарантирует заполненность всех показателей. В документе география и названия следуют источнику.",
+      "verified_manifest_entries": 4,
+      "manifest_entries": 4,
+      "availability_now": "verified_local_files"
+    },
+    {
+      "source_row": "38",
+      "title": "Росгидромет",
+      "folder": "roshydromet-air-quality",
+      "status": "partial",
+      "raw_files": "1",
+      "derived_files": "0",
+      "bytes": "16487207",
+      "geography": "РФ, субъекты, федеральные округа, наблюдаемые города и станции; покрытие определяется сетью мониторинга, не всеми населёнными пунктами.",
+      "period": "Обзор за 2024 год; отдельные сравнительные ряды предшествующих лет.",
+      "limitations": "Полный официальный PDF-обзор за 2024 год, 222 страницы, включает загрязнение атмосферного воздуха городов, региональные характеристики и сеть наблюдений. Это отчёт с таблицами, не архив первичных измерений всех станций. Таблицы не извлечены в нормализованный набор.",
+      "verified_manifest_entries": 1,
+      "manifest_entries": 1,
+      "availability_now": "verified_local_files"
+    }
+  ],
+  "files": [
+    {
+      "source_row": 9,
+      "dataset": "allsettlements",
+      "path": "datasets/allsettlements/raw/data_allsettlements_anon_156_v20260925_csv.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 17270412,
+      "sha256": "33488f0ea405aeee055d454236238297540d042e473c88156da94416b6ea5562",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_settlements_156_v20260925/data_allsettlements_anon_156_v20260925_csv.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/allsettlements/raw/data_allsettlements_anon_156_v20260925_csv.zip"
+      ]
+    },
+    {
+      "source_row": 9,
+      "dataset": "allsettlements",
+      "path": "datasets/allsettlements/raw/description_allsettlements_156_v20260925.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 271754,
+      "sha256": "ca53efeacc693f4185dc7188ae5f2eea1bbc2adc1baa32d1546ea32a579a16ec",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_settlements_156_v20260925/description_allsettlements_156_v20260925.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/allsettlements/raw/description_allsettlements_156_v20260925.pdf"
+      ]
+    },
+    {
+      "source_row": 9,
+      "dataset": "allsettlements",
+      "path": "datasets/allsettlements/derived/coverage_by_region.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 3878,
+      "sha256": "2db34c4c35abaeb7f2f54d6f79fd5738a8084d95105dd17d6f80b5ee2e44c361",
+      "url": "https://tochno.st/datasets/allsettlements",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/allsettlements/derived/coverage_by_region.csv"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/06_21_prib._otpr.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 256609,
+      "sha256": "2c5923c6bba72a890a8b4e2f8b887f72c5b7ed9a2a01938c0ef55d9a8b750554",
+      "url": "https://www.morport.com/sites/default/files/inline/files/06_21_prib._otpr.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/06_21_prib._otpr.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/12_2023_dostavka_otpravlenie.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 265197,
+      "sha256": "8668c7d6469e259553977cf80a344b44115e736f1be378a02f2c8386d63dd9b0",
+      "url": "https://www.morport.com/sites/default/files/inline/files/12_2023_dostavka_otpravlenie.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/12_2023_dostavka_otpravlenie.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/2017-pribytie_otpravlenie.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 601307,
+      "sha256": "c8e5574b00feb3754aeb60f37763af1d5c5ea0640a174d80569b298eb9e9fc68",
+      "url": "https://www.morport.com/sites/default/files/inline/pribytie_otpravlenie.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/2017-pribytie_otpravlenie.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/2019-q3-pribytie_otpravlenie.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 116580,
+      "sha256": "2a5bcd770ad8de2bd29372f36b3a6b868cb3400b6385f3c9787d3faa547ec269",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/2019-q3-pribytie_otpravlenie.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/9_es_2022_prib_otpr_1.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 150369,
+      "sha256": "88b84d3b3d3678f2cd98727fbf19dc6654c4b14f8cf8c96a6b9197e3fb61aeff",
+      "url": "https://www.morport.com/sites/default/files/inline/files/9_es_2022_prib_otpr_1.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/9_es_2022_prib_otpr_1.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/arrival-modes-2024-2025.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 171308,
+      "sha256": "f3e0e44350c01e41fa166605f719ce957c666903c45b5a7faa4562c10ef86ab7",
+      "url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_2025.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/arrival-modes-2024-2025.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/mp-2_06_2022_0.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 150631,
+      "sha256": "1419c25020bd162bf2755795836d390716a82017408457d43088b8f2194a9912",
+      "url": "https://www.morport.com/sites/default/files/inline/files/mp-2_06_2022_0.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/mp-2_06_2022_0.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/prib_otprav_03_2020.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 106282,
+      "sha256": "3d85780a1a5de414a03d91a9f00d907bb84825c3eb28e598893ac01904bacd05",
+      "url": "https://www.morport.com/sites/default/files/inline/files/prib_otprav_03_2020.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/prib_otprav_03_2020.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/prib_otprav_2021.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 250914,
+      "sha256": "a908d77cb08a78c1143578c022ec9fa2a1cc72134a816382a18acc60aa3d7134",
+      "url": "https://www.morport.com/sites/default/files/inline/files/prib_otprav_2021.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/prib_otprav_2021.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/prib_otprav_2022.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 159933,
+      "sha256": "bd595d4f6bc8b06993718406fa57bc03766a28b1e16e0029a33e4a50126eac5c",
+      "url": "https://www.morport.com/sites/default/files/inline/files/prib_otprav_2022.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/prib_otprav_2022.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/prib_otpravl_09_2018_g_0.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 109549,
+      "sha256": "2dca2ac4b557d7ee429af1f246d2ca2a01cf45f4bb4e0c55554cbfa9249b613d",
+      "url": "https://www.morport.com/sites/default/files/inline/files/prib_otpravl_09_2018_g_0.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/prib_otpravl_09_2018_g_0.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/prib_otpravl_12_2018_g.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 134411,
+      "sha256": "b6f0307a0f3d1485a392239f9eda68cededac2f71e4342c33e61ac6e6a4ba5fd",
+      "url": "https://www.morport.com/sites/default/files/inline/files/prib_otpravl_12_2018_g.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/prib_otpravl_12_2018_g.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/prib_otpravl_1_kv.2018_g.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 114433,
+      "sha256": "941761c837ee9cdb1e97ea4effce59a4dff3112c0cedcea85af23541539031ca",
+      "url": "https://www.morport.com/sites/default/files/inline/files/prib_otpravl_1_kv.2018_g.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/prib_otpravl_1_kv.2018_g.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribotprav.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 113361,
+      "sha256": "6ba667bb58f962ad73cb4535dbcb8386ebe292cadb96ed0173005e7ae966142a",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribotprav.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribotprav.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribotpravl_03_2019.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 115142,
+      "sha256": "85187fe81d1f8a697fc7a2055473f7eac43cae79b7a247ed49ab7c26a1af6c19",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribotpravl_03_2019.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribotpravl_03_2019.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribyt_otpravl_03_2021.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 262827,
+      "sha256": "98fdfd9494219bea12a1604eb4dd2aaea9da97bb445fa31f163117636290dace",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribyt_otpravl_03_2021.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribyt_otpravl_03_2021.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_0.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 116387,
+      "sha256": "3c1c291a1e008ba9f712e9e7044d024993357192641525494f7dcd6c33025a64",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_0.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_0.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_03_2022.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 264428,
+      "sha256": "4867d72182b8aab7d5f299df02ff99c96d1b6d6bb5ef8d73624e305aee36236a",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_03_2022.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_03_2022.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_09_2020.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 126502,
+      "sha256": "0d2f7e3adabc11f44641f0da7efcd52012ba6a2322a4bd8e7fdb79c94aa7400e",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_09_2020.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_09_2020.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_09_2021.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 261669,
+      "sha256": "052754ede94ce217beb560e468180eda1a5b3e0b5d6551412a7119324eb36ec1",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_09_2021.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_09_2021.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_2019_g.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 117119,
+      "sha256": "6acd4aaed736997d1b350a53b2f5aef591b29692b1d48427ee8d429362d4eba3",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravlenie_2019_g.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribytie_otpravlenie_2019_g.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribytie_otpravleniya_12_20.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 103900,
+      "sha256": "e6489e3e643d02b7fe5d77f078ba30140a217ed4e6a7bccc54d8937e4067f633",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribytie_otpravleniya_12_20.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribytie_otpravleniya_12_20.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/pribytieotpravlenie_06_2019_g.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 101294,
+      "sha256": "1e771025e67d81a7a1b597a5eb125919ccbe604a6a8058a10ab701f724b3247a",
+      "url": "https://www.morport.com/sites/default/files/inline/files/pribytieotpravlenie_06_2019_g.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/pribytieotpravlenie_06_2019_g.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/vidy_transporta.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 70697,
+      "sha256": "64e2d33cdf53268d890dd4b62c4a5b1f3fca466ed230078e2d5ff3e0ed249c3a",
+      "url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/vidy_transporta.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/vidy_transporta_0.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 74369,
+      "sha256": "35893e50415092cc434f444e72d10a29e0f608bc32b275a555e529b400c7921f",
+      "url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_0.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/vidy_transporta_0.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/vidy_transporta_03_2023.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 408023,
+      "sha256": "a98768a57a2cb2574ee5bc4f0721a596d77b4f59aaaa4e35050f0f2e3fce81cd",
+      "url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_03_2023.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/vidy_transporta_03_2023.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/vidy_transporta_06_2023.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 259809,
+      "sha256": "555dde81594339ee8e9bd50293e716bb389cde2840a474d9156510582941a82f",
+      "url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_06_2023.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/vidy_transporta_06_2023.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/vidy_transporta_1.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 34723,
+      "sha256": "168765d4b3998b292caaf75011db004e37b756e3a3d353d6bc0cc19eec59225f",
+      "url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_1.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/vidy_transporta_1.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/vidy_transporta_1_kv-l_2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 278421,
+      "sha256": "bf9ad1c62e5ff6f4ed0701583dda934b127aa3161ba117b2d913890be2de2818",
+      "url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_1_kv-l_2024.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/vidy_transporta_1_kv-l_2024.pdf"
+      ]
+    },
+    {
+      "source_row": 6,
+      "dataset": "asop-port-arrival-modes",
+      "path": "datasets/asop-port-arrival-modes/raw/vidy_transporta_9_mes.2023.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 273338,
+      "sha256": "e08bbf310132895140525293547a2635d1688e2cf400833bceecba9341f73767",
+      "url": "https://www.morport.com/sites/default/files/inline/files/vidy_transporta_9_mes.2023.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-arrival-modes/raw/vidy_transporta_9_mes.2023.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/06_21_basseyny_napravleniya.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 232542,
+      "sha256": "3b6f1bb67a20c6085df84a7f7fe45e027b34292954d5a2d64e6c202ba84f421d",
+      "url": "https://www.morport.com/sites/default/files/inline/files/06_21_basseyny_napravleniya.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/06_21_basseyny_napravleniya.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/12_2022_basseyny_i_napravleniya_1.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 199767,
+      "sha256": "a7915cabc17fac5d09a2831b18fcbfe5dd0db4839bb3bd69bbf6bd79ff73de3e",
+      "url": "https://www.morport.com/sites/default/files/inline/files/12_2022_basseyny_i_napravleniya_1.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/12_2022_basseyny_i_napravleniya_1.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/12_2023_basseyny_i_napravleniya.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 438337,
+      "sha256": "8d9239ce0fe6b6046f1914e7575a0954d70a6400337494f459e778ac87ebc24e",
+      "url": "https://www.morport.com/sites/default/files/inline/files/12_2023_basseyny_i_napravleniya.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/12_2023_basseyny_i_napravleniya.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/9_mes._2022_basseyn_napravl.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 133481,
+      "sha256": "9a0830a9ef0c10dbfb902d33da5b9f1d6f7f55d591fc0fbb7425708a9c8df58c",
+      "url": "https://www.morport.com/sites/default/files/inline/files/9_mes._2022_basseyn_napravl.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/9_mes._2022_basseyn_napravl.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/ass.napravl._06_2018.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 105288,
+      "sha256": "526f87c2f09a39d186b38e8f6dd80946c76c19f1ad0e63e2da97b72af1c48783",
+      "url": "https://www.morport.com/sites/default/files/inline/files/ass.napravl._06_2018.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/ass.napravl._06_2018.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/bass_napravl_03_2021.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 246158,
+      "sha256": "446d966be879e7d1fb6a1f9d444e588f88ea62dbeb51ac3c02b64cf4d323edcd",
+      "url": "https://www.morport.com/sites/default/files/inline/files/bass_napravl_03_2021.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/bass_napravl_03_2021.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyn_napravleniya_03_2023.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 501122,
+      "sha256": "681b18532e47f15b3fd1806d44ad1294bd843e917f196f647f4f790a167f0867",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyn_napravleniya_03_2023.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyn_napravleniya_03_2023.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_i_napravleniya.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 236389,
+      "sha256": "8ae0dfc25856c6e397ad89b0beba3250d5994094c791d8c52db504f3ccb67da3",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_i_napravleniya.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_i_napravleniya_0.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 57360,
+      "sha256": "fe2f0b9f0ba27a62e3b79399613736ccded5155dc329d2695eff82831e018633",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_0.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_i_napravleniya_0.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_i_napravleniya_03_2022.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 242737,
+      "sha256": "bae21576364befc288a339a069058bb9bfff8e044db8119cd137d61a90e2a93f",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_03_2022.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_i_napravleniya_03_2022.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_i_napravleniya_1.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 48921,
+      "sha256": "c993b2ce48d406a5f593f1ef364324765db7950ecc9aca2693552528037417bc",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_1.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_i_napravleniya_1.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_i_napravleniya_1_kv-l_2024_g.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 405656,
+      "sha256": "ff2ad163a4a34e5f87308274fec100d6f556be382edb5838a7ded6c693256df0",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_1_kv-l_2024_g.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_i_napravleniya_1_kv-l_2024_g.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_i_napravleniya_9_mes.2021.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 239585,
+      "sha256": "3cb3e8a384818989ee5e4f3fe616ec7c8e589601382b1821d1582d091327f2f0",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_i_napravleniya_9_mes.2021.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_i_napravleniya_9_mes.2021.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_i_napravleniya_v_2017_g.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 528480,
+      "sha256": "628c190fc5feaeac1bc53a167d6abe376ff502a52d9bcbb231eb8a3fb2352656",
+      "url": "https://www.morport.com/sites/default/files/inline/basseyny_i_napravleniya_v_2017_g.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_i_napravleniya_v_2017_g.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_napr.03_2019.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 94481,
+      "sha256": "eb22f0457ade3cb90de4f062fab2959dd3fd7aaef3123eb698c6bc703d36d27d",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napr.03_2019.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_napr.03_2019.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_napravl._06_2019.xls.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 90384,
+      "sha256": "40851934f81c97abb59fa05e1c0a116cfa121aba2ed4fae998fc1baef3beac09",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravl._06_2019.xls.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_napravl._06_2019.xls.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_napravl._09_2019.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 88660,
+      "sha256": "af4e650228cb32849c805e2d28e7c2ecfe12bba5009703a215487fc8136bfc43",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravl._09_2019.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_napravl._09_2019.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_napravl._09_2019.xls_0.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 83647,
+      "sha256": "6c253fb2015977cb086650c1a5019c27e0877e312bfc94c9edb0e654f8c3b7d4",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravl._09_2019.xls_0.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_napravl._09_2019.xls_0.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_napravleniya.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 87498,
+      "sha256": "d5a213d601c478d476429912c84a7afbbb4dc5c9fc1c0267c3cc329b72fdfcd2",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_napravleniya.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_napravleniya_06_2020.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 88326,
+      "sha256": "1c0ad0fb6080bdbc9dc56985ffd8c51c7c4b87aa2b3b80f597267f9cdda085d9",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya_06_2020.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_napravleniya_06_2020.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_napravleniya_06_2023.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 238522,
+      "sha256": "cd47b6a7c4b789cb6aafdd6aa079e0abcd953100d06c3c01712fc2823b108b62",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya_06_2023.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_napravleniya_06_2023.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_napravleniya_12_2018_g.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 90092,
+      "sha256": "500e2d09cec82455a1952e95fbafc4ab90f08f0401566175a1b6376c4375673e",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya_12_2018_g.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_napravleniya_12_2018_g.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseyny_napravleniya_9_mes.2023.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 239551,
+      "sha256": "9fad2be0ea12ddd4a7f0f366d077e73a87c2491233d3a07a3d2102e331f40a94",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseyny_napravleniya_9_mes.2023.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseyny_napravleniya_9_mes.2023.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/basseynynapravleniya_2021.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 235235,
+      "sha256": "ecdf29d8be374b3fe4e9e0ae7470b8131734ec8b7393d1cf3458348f254af790",
+      "url": "https://www.morport.com/sites/default/files/inline/files/basseynynapravleniya_2021.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/basseynynapravleniya_2021.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/bassnapravl_1_kv.2018.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 94170,
+      "sha256": "d9a6b5b6e0f5854a99ea22b9c01698e17bebc16b9c858bc269d24581f057e60d",
+      "url": "https://www.morport.com/sites/default/files/inline/files/bassnapravl_1_kv.2018.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/bassnapravl_1_kv.2018.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/bassnomen_03_2020.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 91361,
+      "sha256": "06ebd5cdb71a782cf260478997def70fa16c6f133e7f5857fd519d53c8252758",
+      "url": "https://www.morport.com/sites/default/files/inline/files/bassnomen_03_2020.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/bassnomen_03_2020.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/bsseyny_napravlneniya_12_20_0.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 84797,
+      "sha256": "56fb54bec1fb211b081b430585a24f782bc3e0471979d2d1af71eb0f4ff2e0d9",
+      "url": "https://www.morport.com/sites/default/files/inline/files/bsseyny_napravlneniya_12_20_0.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/bsseyny_napravlneniya_12_20_0.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/gruzooborot_napravl_basseyny.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 91399,
+      "sha256": "fa976fe77ea1bb914a8c94365e18e349c83eb35093e4b444a7f84dbefb9d64b1",
+      "url": "https://www.morport.com/sites/default/files/inline/files/gruzooborot_napravl_basseyny.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/gruzooborot_napravl_basseyny.pdf"
+      ]
+    },
+    {
+      "source_row": 5,
+      "dataset": "asop-port-basins",
+      "path": "datasets/asop-port-basins/raw/po_basseynam_i_napravleniyam.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 55533,
+      "sha256": "e2693baf05d83bc00c6c21c467204c55fd4fb71a3ad2107f54408b097f38a9c7",
+      "url": "https://www.morport.com/sites/default/files/inline/files/po_basseynam_i_napravleniyam.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-basins/raw/po_basseynam_i_napravleniyam.pdf"
+      ]
+    },
+    {
+      "source_row": 3,
+      "dataset": "asop-port-turnover-capacity",
+      "path": "datasets/asop-port-turnover-capacity/raw/turnover-capacity-2000-2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 192339,
+      "sha256": "55aaa7ca1b648c1635d083449f4e85ae8330818415abdd8ebafbc524a1224874",
+      "url": "https://www.morport.com/sites/default/files/inline/files/gruzooborot_i_moshchnosti_morskih_portov_rossii_na_01.01.2025_s_procentami_1.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/asop-port-turnover-capacity/raw/turnover-capacity-2000-2024.pdf"
+      ]
+    },
+    {
+      "source_row": 22,
+      "dataset": "cbr-macro",
+      "path": "datasets/cbr-macro/raw/balance-of-payments-2025-q3.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 341746,
+      "sha256": "1d4d841a004867cf7605fca69e831cb8e6caec5724407f65cf095cf687e5d212",
+      "url": "https://www.cbr.ru/collection/collection/file/59425/balance_of_payments_2025-3_24.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/cbr-macro/raw/balance-of-payments-2025-q3.pdf"
+      ]
+    },
+    {
+      "source_row": 22,
+      "dataset": "cbr-macro",
+      "path": "datasets/cbr-macro/raw/currencies.xml",
+      "kind": "data",
+      "derived": false,
+      "bytes": 17106,
+      "sha256": "b6bc755432f5f3cfa8827496263ce6978a0382ae24c7a1b9ff2568406e6d7ec3",
+      "url": "https://www.cbr.ru/scripts/XML_valFull.asp",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/cbr-macro/raw/currencies.xml"
+      ]
+    },
+    {
+      "source_row": 22,
+      "dataset": "cbr-macro",
+      "path": "datasets/cbr-macro/raw/inflation-keyrate-2013-2026.xlsx",
+      "kind": "data",
+      "derived": false,
+      "bytes": 7500,
+      "sha256": "5241e4f2bbf6b05ef56bfa43d51c01f540dedae84a88f37bb11af420875fcc48",
+      "url": "https://www.cbr.ru/Queries/UniDbQuery/DownloadExcel/132934?Posted=True&From=17.09.2013&To=06.11.2026&FromDate=09%2F17%2F2013&ToDate=11%2F06%2F2026&backUrl=%2Fstatistics%2Fddkp%2Finfl%2F%3FUniDbQuery.Posted%3DTrue%26UniDbQuery.From%3D17.09.2013%26UniDbQuery.To%3D06.11.2026",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/cbr-macro/raw/inflation-keyrate-2013-2026.xlsx"
+      ]
+    },
+    {
+      "source_row": 22,
+      "dataset": "cbr-macro",
+      "path": "datasets/cbr-macro/raw/usd-rub-1992-2026.xml",
+      "kind": "data",
+      "derived": false,
+      "bytes": 943118,
+      "sha256": "afd1bc5c918d16f600738a36ef821d352ee6ab3cca0705e41fe50190f3a04b10",
+      "url": "https://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=01/01/1992&date_req2=06/11/2026&VAL_NM_RQ=R01235",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/cbr-macro/raw/usd-rub-1992-2026.xml"
+      ]
+    },
+    {
+      "source_row": 21,
+      "dataset": "demography",
+      "path": "datasets/demography/raw/data_demography_102_v20260313.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 778748,
+      "sha256": "1d69725ae648e60181b4f75f941c021cc3f56a7ec141c7852d40ec2e2635d0ee",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_demography_102_v20260313.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/demography/raw/data_demography_102_v20260313.zip"
+      ]
+    },
+    {
+      "source_row": 19,
+      "dataset": "emiss",
+      "path": "datasets/emiss/raw/grp_61497.json",
+      "kind": "data",
+      "derived": false,
+      "bytes": 2383841,
+      "sha256": "9830fcd3a5ebb8f54eac88a35c6a7aa034a743b5e5ebfc200b9c5fe9a971bd76",
+      "url": "https://fedstat.ru/indicator/dataGrid.do?id=61497",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/emiss/raw/grp_61497.json"
+      ]
+    },
+    {
+      "source_row": 19,
+      "dataset": "emiss",
+      "path": "datasets/emiss/derived/filters.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 20685,
+      "sha256": "7690b53b1d334a955c770446868692509a04eae1557d4a6d64f61561fa91f825",
+      "url": "https://fedstat.ru/indicator/61497",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/emiss/derived/filters.json"
+      ]
+    },
+    {
+      "source_row": 19,
+      "dataset": "emiss",
+      "path": "datasets/emiss/derived/grp_61497_long.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 12979082,
+      "sha256": "8a36dd7f69d505e41e92ad31f9e277cbd5ea5d0edc0f5e17d2fbe2305c317226",
+      "url": "https://fedstat.ru/indicator/61497",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/emiss/derived/grp_61497_long.csv"
+      ]
+    },
+    {
+      "source_row": 19,
+      "dataset": "emiss",
+      "path": "datasets/emiss/derived/request_body.txt",
+      "kind": "data",
+      "derived": true,
+      "bytes": 4341,
+      "sha256": "ad818ef38930c6a26e50d657cad307aa1876cdd5bc2d138fa8295021470123cf",
+      "url": "https://fedstat.ru/indicator/61497",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/emiss/derived/request_body.txt"
+      ]
+    },
+    {
+      "source_row": 25,
+      "dataset": "gar-addresses",
+      "path": "datasets/gar-addresses/raw/download-file-info.json",
+      "kind": "metadata",
+      "derived": false,
+      "bytes": 551,
+      "sha256": "f8d406dc61ccbbd82d07d1b35bb4d4ebb87f51000ea03744a042831dc1f8164d",
+      "url": "https://fias.nalog.ru/WebServices/Public/GetLastDownloadFileInfo",
+      "verified_paths": []
+    },
+    {
+      "source_row": 13,
+      "dataset": "geonames-russia",
+      "path": "datasets/geonames-russia/raw/RU.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 15264343,
+      "sha256": "ff0b1ccc325d64bd56ae261059e56192855e4ad8d7e1c3362e009e52e0be1367",
+      "url": "https://download.geonames.org/export/dump/RU.zip",
+      "verified_paths": []
+    },
+    {
+      "source_row": 13,
+      "dataset": "geonames-russia",
+      "path": "datasets/geonames-russia/raw/admin1CodesASCII.txt",
+      "kind": "data",
+      "derived": false,
+      "bytes": 151571,
+      "sha256": "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3",
+      "url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+      "verified_paths": []
+    },
+    {
+      "source_row": 13,
+      "dataset": "geonames-russia",
+      "path": "datasets/geonames-russia/raw/admin2Codes.txt",
+      "kind": "data",
+      "derived": false,
+      "bytes": 2371804,
+      "sha256": "a8d8181ac05e7bf49797cb7cdc1d1ceae8248eb8639b985f0b908e1a95a35955",
+      "url": "https://download.geonames.org/export/dump/admin2Codes.txt",
+      "verified_paths": []
+    },
+    {
+      "source_row": 13,
+      "dataset": "geonames-russia",
+      "path": "datasets/geonames-russia/raw/countryInfo.txt",
+      "kind": "data",
+      "derived": false,
+      "bytes": 32112,
+      "sha256": "79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04",
+      "url": "https://download.geonames.org/export/dump/countryInfo.txt",
+      "verified_paths": []
+    },
+    {
+      "source_row": 13,
+      "dataset": "geonames-russia",
+      "path": "datasets/geonames-russia/raw/featureCodes_en.txt",
+      "kind": "data",
+      "derived": false,
+      "bytes": 58642,
+      "sha256": "d44f129c1cffdeabf759c99fe7ea5b84f615c7f3e7366fb76ccf990f408f6af7",
+      "url": "https://download.geonames.org/export/dump/featureCodes_en.txt",
+      "verified_paths": []
+    },
+    {
+      "source_row": 13,
+      "dataset": "geonames-russia",
+      "path": "datasets/geonames-russia/raw/readme.txt",
+      "kind": "data",
+      "derived": false,
+      "bytes": 8843,
+      "sha256": "b1957379b6c1242c700c98ac9a8aa0a09f56c3c0a50ee72175527005f48ef2c5",
+      "url": "https://download.geonames.org/export/dump/readme.txt",
+      "verified_paths": []
+    },
+    {
+      "source_row": 13,
+      "dataset": "geonames-russia",
+      "path": "datasets/geonames-russia/derived/populated_places_ru.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 28564511,
+      "sha256": "f6ab3dbc83f398fdbbac2be87289b8375c2e6fa29beb49d3caf441745471ad40",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 1,
+      "dataset": "intercity_connectivity",
+      "path": "datasets/intercity_connectivity/raw/data_intercity_connectivity_162_v20260629_csv.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 3517124,
+      "sha256": "4728d93b8d29925b433a84a7c91fedbe4665bc78e672a23dc185d01c1e41dbea",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Geo/data_intercity_connectivity_162_v20260629/data_intercity_connectivity_162_v20260629_csv.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/intercity_connectivity/raw/data_intercity_connectivity_162_v20260629_csv.zip"
+      ]
+    },
+    {
+      "source_row": 1,
+      "dataset": "intercity_connectivity",
+      "path": "datasets/intercity_connectivity/raw/description_intercity_connectivity_162_v20260629.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 314192,
+      "sha256": "8c490cb8f3216b0779bef981217db0187716177d6df29c10d0802c1cb9767f50",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Geo/data_intercity_connectivity_162_v20260629/description_intercity_connectivity_162_v20260629.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/intercity_connectivity/raw/description_intercity_connectivity_162_v20260629.pdf"
+      ]
+    },
+    {
+      "source_row": 1,
+      "dataset": "intercity_connectivity",
+      "path": "datasets/intercity_connectivity/derived/cities.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 17703,
+      "sha256": "c2432fe372e7cf020471d6ebca007faad6df6d9bf86b11bb462920e02a97c325",
+      "url": "https://tochno.st/datasets/intercity_connectivity",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/intercity_connectivity/derived/cities.csv"
+      ]
+    },
+    {
+      "source_row": 1,
+      "dataset": "intercity_connectivity",
+      "path": "datasets/intercity_connectivity/derived/coverage_by_region.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 24458,
+      "sha256": "88d80515df2998499d31f2429d93fde66df4ec066846a69e06cc2cdc8c35e72f",
+      "url": "https://tochno.st/datasets/intercity_connectivity",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/intercity_connectivity/derived/coverage_by_region.csv"
+      ]
+    },
+    {
+      "source_row": 1,
+      "dataset": "intercity_connectivity",
+      "path": "datasets/intercity_connectivity/derived/coverage_by_transport.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 348,
+      "sha256": "6eae6e832fc7d2eb63f10238bd103ccd75510e5d16aeb23de973f1422b6bff32",
+      "url": "https://tochno.st/datasets/intercity_connectivity",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/intercity_connectivity/derived/coverage_by_transport.csv"
+      ]
+    },
+    {
+      "source_row": 37,
+      "dataset": "minprirody-environment",
+      "path": "datasets/minprirody-environment/raw/mnr-emissions-2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 1933229,
+      "sha256": "8f71523850fe84ad45e988b4392906fba4cc7c1cf7be5bf5f4b5bc505d18e431",
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/1ad/5clmr227b553vu42g0wwqxox503npinp.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/minprirody-environment/raw/mnr-emissions-2024.pdf"
+      ]
+    },
+    {
+      "source_row": 37,
+      "dataset": "minprirody-environment",
+      "path": "datasets/minprirody-environment/raw/mnr-indicators-2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 235967,
+      "sha256": "95df92112584d3e275a315efbe95b091d6d261489c284beb4f5b9b929b39d1f8",
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/e45/3shfddv0saqflo89dfsbxkrbheqt7vxo.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/minprirody-environment/raw/mnr-indicators-2024.pdf"
+      ]
+    },
+    {
+      "source_row": 37,
+      "dataset": "minprirody-environment",
+      "path": "datasets/minprirody-environment/raw/mnr-regions-2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 42173703,
+      "sha256": "f754a62770ed6d681e1222c657e75d677136c19904eabef4e562eb1f054af865",
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/0b3/zbeqyf63ro1gvflxd6yry20q12vlli0a.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/minprirody-environment/raw/mnr-regions-2024.pdf"
+      ]
+    },
+    {
+      "source_row": 37,
+      "dataset": "minprirody-environment",
+      "path": "datasets/minprirody-environment/raw/mnr-transport-2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 286782,
+      "sha256": "93f2be5d766b2f8a6977e2ab02d2f5d0bb5b424def2f8753f8b63857a9d2bd23",
+      "url": "https://gosdoklad.mnr.gov.ru/upload/iblock/89d/pgi1ef3p5u06vxyp8vc7cf0w2ihbj569.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/minprirody-environment/raw/mnr-transport-2024.pdf"
+      ]
+    },
+    {
+      "source_row": 15,
+      "dataset": "mintrans-northern-delivery",
+      "path": "datasets/mintrans-northern-delivery/raw/transport-russia-2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 2213359,
+      "sha256": "89d21f11cd7e11a1f16f37b647c639c986b98af4fb494d8be4331219727acf7e",
+      "url": "https://www.mintrans.gov.ru/file/528103",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/mintrans-northern-delivery/raw/transport-russia-2024.pdf"
+      ]
+    },
+    {
+      "source_row": 15,
+      "dataset": "mintrans-northern-delivery",
+      "path": "datasets/mintrans-northern-delivery/raw/transport-russia-2025.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 1251660,
+      "sha256": "ad6cbb4a4894e8887f0c84a6103932156badb356a22a8b0ba86e5cd0641c3625",
+      "url": "https://mintrans.gov.ru/file/557796",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/mintrans-northern-delivery/raw/transport-russia-2025.pdf"
+      ]
+    },
+    {
+      "source_row": 15,
+      "dataset": "mintrans-northern-delivery",
+      "path": "datasets/mintrans-northern-delivery/derived/northern-delivery-2023-2025.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2385,
+      "sha256": "8af152a642009d3c8a650edd4fd6ca2725d02feca27ae6169567c2fe197f4a85",
+      "url": null,
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/mintrans-northern-delivery/derived/northern-delivery-2023-2025.csv"
+      ]
+    },
+    {
+      "source_row": 4,
+      "dataset": "mintrans-passenger-turnover",
+      "path": "datasets/mintrans-passenger-turnover/raw/transport-russia-2024-monthly.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 2564940,
+      "sha256": "83754ebb06adaa8d5e69afd06bce06e3781b74236a85ae8f62bf94f3fc0f3ea3",
+      "url": "https://mintrans.gov.ru/file/529089",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/mintrans-passenger-turnover/raw/transport-russia-2024-monthly.pdf"
+      ]
+    },
+    {
+      "source_row": 4,
+      "dataset": "mintrans-passenger-turnover",
+      "path": "datasets/mintrans-passenger-turnover/derived/monthly-passenger-turnover-2022-2024.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 3452,
+      "sha256": "7115a1d394e8e58045cced9d9e349337ea7241b6bcdec55533d25d103b854701",
+      "url": null,
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/mintrans-passenger-turnover/derived/monthly-passenger-turnover-2022-2024.csv"
+      ]
+    },
+    {
+      "source_row": 10,
+      "dataset": "municipal_transport",
+      "path": "datasets/municipal_transport/raw/data_section41_112_v20260928_section_file.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 39374215,
+      "sha256": "a3f1e95765f83de188f79f4b0e94c692848302dff7963e4d536197dd19745b4f",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_bdmo_118_v20260928/by_section/data_section41_112_v20260928_section_file.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/municipal_transport/raw/data_section41_112_v20260928_section_file.zip"
+      ]
+    },
+    {
+      "source_row": 10,
+      "dataset": "municipal_transport",
+      "path": "datasets/municipal_transport/derived/municipal_transport_indicators.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 108275379,
+      "sha256": "68a3ba097ccdd8e8c5a7f15e1f82c96a9e9eb39fbe2531d6494bde3e5150f873",
+      "url": "https://tochno.st/datasets/bdmo",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/municipal_transport/derived/municipal_transport_indicators.csv"
+      ]
+    },
+    {
+      "source_row": 30,
+      "dataset": "national-infrastructure",
+      "path": "datasets/national-infrastructure/raw/infrastructure-plan-passport-2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 183187,
+      "sha256": "4e1dfd8737758221d3ef925161b91cd2ef86171a53f975e1814f2b78c7a488fd",
+      "url": "https://mintrans.gov.ru/file/495363",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/national-infrastructure/raw/infrastructure-plan-passport-2024.pdf"
+      ]
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/raw/airport-frequencies.csv",
+      "kind": "data",
+      "derived": false,
+      "bytes": 1302576,
+      "sha256": "c1b1f04b42040cdb50c470ce75962459ee9d168c27843046c0c66d540fd1f171",
+      "url": "https://davidmegginson.github.io/ourairports-data/airport-frequencies.csv",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/raw/airports.csv",
+      "kind": "data",
+      "derived": false,
+      "bytes": 12757683,
+      "sha256": "e2e65a3ddaf76170c0e2c373cb8b68597bdf3b59d243c4d6db454d48498ba6d7",
+      "url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/raw/countries.csv",
+      "kind": "data",
+      "derived": false,
+      "bytes": 24583,
+      "sha256": "2a9dbee691125b0cdb8ceb5fe227c48c903f99c488963b8e53e2ab366521c639",
+      "url": "https://davidmegginson.github.io/ourairports-data/countries.csv",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/raw/navaids.csv",
+      "kind": "data",
+      "derived": false,
+      "bytes": 1524931,
+      "sha256": "d7292380662c33a95214945023ec0a5b13189599305fd18be739e167a97a9bd1",
+      "url": "https://davidmegginson.github.io/ourairports-data/navaids.csv",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/raw/regions.csv",
+      "kind": "data",
+      "derived": false,
+      "bytes": 485265,
+      "sha256": "9220d6582b804cfdec8432e5bb21456699c9df8969bf5d8886beb62ff0b1318b",
+      "url": "https://davidmegginson.github.io/ourairports-data/regions.csv",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/raw/runways.csv",
+      "kind": "data",
+      "derived": false,
+      "bytes": 3973977,
+      "sha256": "b0bac6ad2a802eba770d57b3e42c191c888f3d334e42780f3d12ff5930650d07",
+      "url": "https://davidmegginson.github.io/ourairports-data/runways.csv",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/derived/airport-frequencies_ru.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 11943,
+      "sha256": "3ea384094d7a9c488a76a230c8d7b3cae24e72c28c5704a98c1ee9dac9e61c68",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/derived/airports_ru.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 287133,
+      "sha256": "fde7636714685e0a06805ff304127352ae0714bc1507d98fb3104d607b26472b",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/derived/countries_ru.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 173,
+      "sha256": "5e07895ee1ab4a3f1a2fb740afe1250578cbaf5d19b9709806c3b361e0609b93",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/derived/navaids_ru.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 52115,
+      "sha256": "56799843caf69a0fbcdaaa2e6ce997bd30b64c41095ec1fb880aefc5eabb2d44",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/derived/regions_ru.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 10043,
+      "sha256": "edf51ae69886e28934d7700ceeec4055ab82ebc74928a34be8a1054f2531891b",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 11,
+      "dataset": "ourairports-russia",
+      "path": "datasets/ourairports-russia/derived/runways_ru.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 38087,
+      "sha256": "e25ccf895b1beb990735e68af8f881032bb7e43c080705dc061ab5aa1fe0c840",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/raw/isdayoff-calendars-main.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 57044,
+      "sha256": "f48c0dc3d4d2cd3482afd9e1923297d78c2824d2295a60599bbc8a5ce0f56243",
+      "url": "https://codeload.github.com/isdayoff/calendars/zip/refs/heads/main",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/raw/ru-2026-api.txt",
+      "kind": "data",
+      "derived": false,
+      "bytes": 365,
+      "sha256": "1182cdd53e843bc2363214e4d491f11de6d9e5d1d88a32f4d9c526c94f5250dc",
+      "url": "https://isdayoff.ru/api/getdata?year=2026&cc=ru",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-2026-api.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 5125,
+      "sha256": "0d45fd49748b07a8649fd6018621e25b10027eecff3fa49bd62bdec9524ff5cb",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-ad2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 541,
+      "sha256": "f2ad1a3ac8cf9ecfe29b4195e3d6feb64d392934e7950cdd3728151c78065571",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-al2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 501,
+      "sha256": "88088b1a6b649fe1ae6e7533ff84cd3a411c014e42604388de7d060eb517754f",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-ba2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 808,
+      "sha256": "9c288900951820ada941f016aee1f8b5cfbf1cef5a12cbbb892b0309d6b434f0",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-bel2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 502,
+      "sha256": "0d33669dda09cc34abec4819b1a758405113a25f1709961d13262031e53633e6",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-bu2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 501,
+      "sha256": "88611a7d1653a6b6f3915ee9c373eca7b93fadbc3b6cf882780714dff3393725",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-ce2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 581,
+      "sha256": "9decc5e41336c2bcd2c46076f1c031b78e664e65ef2b600b07c3cb0996132bf7",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-cu2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 501,
+      "sha256": "ee4910c9acd89f53859b3a0cc5d54cf57a5555f7a4411300bd163d544c9d6aa9",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-da2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 549,
+      "sha256": "70316781a58acd597895d1ab5e3819fc034ca94d9de2d86ea486b6e97442bf09",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-in2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 549,
+      "sha256": "541387cd58e2eedee43b265e3f81eba28aa1edddeb53b3f577a82bb0cbfbd03c",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-kb2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 597,
+      "sha256": "d7e00765235a90a142b40c9224f912ba332cec460ba9848dae0ed656850c1ec4",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-kc2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 549,
+      "sha256": "163a94bc913cedc229bb2b5390ccc27e35bd2d5b9fb04a0a4e32b184fde27654",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-kl2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 565,
+      "sha256": "4f296e463ad2a74583e92d74e561861d4b00b4a4660d5007b7149dbf072c4414",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-ko2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 501,
+      "sha256": "62500f2076045e8c3dbccc2a8f62fa8cb089d0ff0e492e892729e7f616094660",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-pnz2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 494,
+      "sha256": "0035acdb8ac3f0a7ad58802b3c4055c690959ebbe6325b0d665fbfffb1e3630f",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-sa2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 517,
+      "sha256": "2cc527e88178db37a43d0c0cf95d19b26068d72ff4e26a210194283161b6e9b8",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-sar2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 494,
+      "sha256": "74bce06eedb1ad5e699b47d53079d7a2fe951af36f2fd6b7f8ec8fa084bd5a8c",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-se2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 501,
+      "sha256": "8cce7fe06bbab58799838cb20bd0fd2684fa10147bacb259aaa22feb7987ff60",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-sta2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 494,
+      "sha256": "d297b12933818528d6d661df5c26ab6f7f30c1804940796dfb898a60f565cf3f",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-ta2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 476,
+      "sha256": "cfb14301d80e0efcf7ca4590f1e67771e1eeb5152f019bc2002855ade96db16d",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-ty2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 549,
+      "sha256": "405bf945b25631b8983435ece38294fff855dd2f27cc71059f847552084dcbf8",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru-zab2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 502,
+      "sha256": "891f4f906fd391c251c4f7b8bbfccefb35b9218fb95ceaa9e812ca0052b623c3",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2004.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2481,
+      "sha256": "2379e11dea03d261b9def33ab5b5534437d5a0a866e2c0550c1ecf7b06263f2a",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2005.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2507,
+      "sha256": "c1341bbed730c63a15f342a5ba33af2808bd84870212b4c772ce31ba68fd9373",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2006.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2519,
+      "sha256": "86979c640fe62d13d36ff350bfa19ca3e53734c069f0bf8cb92cdd0cfcd2d3bc",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2007.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2541,
+      "sha256": "6ae913502719cdc0b7292b75db40db4163e83ab6247c0b1eed5d1281eddc5371",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2008.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2567,
+      "sha256": "f45ba353091dc2a901854a80204b3a2384814011343d5e618314ba9eda66515b",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2009.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2519,
+      "sha256": "538b6d800ffd8263c2e95e93ad2bb8afe80b2204c13c9f50ffe875ad77c7026b",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2010.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2519,
+      "sha256": "06142779367bca66b85801d801ca8e0237be1159a3e4b6cfb72a478e09fd7349",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2011.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2493,
+      "sha256": "42b20aa190b6f238cc45dd0160bf98abeb4e1923b971a8730af9bbd4fc86cb14",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2012.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2579,
+      "sha256": "b6b0c9b86fc0c5c183161926e18d4bacea93af8f45f5eeac6ce3901341119d3e",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2013.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2565,
+      "sha256": "c867f2e41c6486fbed163bb5c7c0509258096b32c4d0cc87e8047eb288d2c634",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2014.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2577,
+      "sha256": "a1668b5aea7799e12d9957e19a3d36ada9c6cd100074fa4fcb87a84cc592ca71",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2015.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2553,
+      "sha256": "b126c8a67f4088ae380d7ca00cad51837e3d8cc1317a876f346e7a42fe90f8ba",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2016.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2517,
+      "sha256": "d5f95b55e91d5e4664a105e535f209572384d68cfee31e56c770f3606f418398",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2017.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2505,
+      "sha256": "e7be38d036f599dc65127497ca9c8d7284866aad361aa0f8763c82e2179b0766",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2018.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2577,
+      "sha256": "a880fb50c2632f53c6273d51b28a750436b249e1fb5611fee2d0517bddc62d1a",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2019.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2565,
+      "sha256": "4186aca5aebbef9c5f5318167dde4f81779ea51519880be64723e2583ded7735",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2020.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 3671,
+      "sha256": "78ed4363e351617bc8c5ab8dda9207bebf40759052642ffe56611a30c03b831e",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2021.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 2699,
+      "sha256": "6a9655e80f183313d0996079915609a5431e0d1826b7d9822bc6286ed8a68f56",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2022.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 645,
+      "sha256": "cf9c85036003b631815cd427a376cf8d6623bb5131ca20ec645ddb4710f52dea",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2023.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 807,
+      "sha256": "3040ce4b91ca042afdebe4bb8d00c393df1bde0f096e011786e2cfd0cf75aa48",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2024.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 893,
+      "sha256": "2c25f00368c4a02e37a5d2c9ae117810756f97ddf0becea92b692fdb740cafa1",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2025.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 825,
+      "sha256": "58ae529b0dc6dd8603b7f3230cb4142925f18000fa939213c6c5dd0d8d3bbec0",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2026.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 811,
+      "sha256": "6b520877ccb88198ed2f7a100cb747260d1be9492d7e7a8aa976ee57c9d2bc72",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 26,
+      "dataset": "production-calendar",
+      "path": "datasets/production-calendar/derived/ru2027.json",
+      "kind": "data",
+      "derived": true,
+      "bytes": 688,
+      "sha256": "d15ca7c5e1847c39b1871ab002fcde1c2bf2e16695f0a71a00fe2ab10bcb17b1",
+      "url": "",
+      "verified_paths": []
+    },
+    {
+      "source_row": 14,
+      "dataset": "regional_grp",
+      "path": "datasets/regional_grp/raw/data_08_socio_economic_102_v20260313.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 1248622,
+      "sha256": "973a7e3de8a6052cc06d850ff302c7928d08a40c9547e12ae5e9d3dbe09d95d9",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_08_socio_economic_102_v20260313.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_grp/raw/data_08_socio_economic_102_v20260313.zip"
+      ]
+    },
+    {
+      "source_row": 14,
+      "dataset": "regional_grp",
+      "path": "datasets/regional_grp/raw/description_regions_collection_102_v20260313.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 230594,
+      "sha256": "e5b6f09f05ba6bf165f1d9065e8cd2d071a9f81225e21f0fe2837ee1b3aa8a00",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/description_regions_collection_102_v20260313.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_transport/raw/description_regions_collection_102_v20260313.pdf",
+        "/private/tmp/keys-champ-data-statistics/datasets/regions_collection/raw/description_regions_collection_102_v20260313.pdf",
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_grp/raw/description_regions_collection_102_v20260313.pdf"
+      ]
+    },
+    {
+      "source_row": 2,
+      "dataset": "regional_transport",
+      "path": "datasets/regional_transport/raw/data_16_socio_economic_102_v20260313.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 2259923,
+      "sha256": "aa717221482c6abe5e63156c8b43d8b6aa6dff7da358ca57fb1104c17ce82d19",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_16_socio_economic_102_v20260313.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/raw/data_16_socio_economic_102_v20260313.zip",
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_transport/raw/data_16_socio_economic_102_v20260313.zip",
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/data_16_socio_economic_102_v20260313.zip"
+      ]
+    },
+    {
+      "source_row": 2,
+      "dataset": "regional_transport",
+      "path": "datasets/regional_transport/raw/description_regions_collection_102_v20260313.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 230594,
+      "sha256": "e5b6f09f05ba6bf165f1d9065e8cd2d071a9f81225e21f0fe2837ee1b3aa8a00",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/description_regions_collection_102_v20260313.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_transport/raw/description_regions_collection_102_v20260313.pdf",
+        "/private/tmp/keys-champ-data-statistics/datasets/regions_collection/raw/description_regions_collection_102_v20260313.pdf",
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_grp/raw/description_regions_collection_102_v20260313.pdf"
+      ]
+    },
+    {
+      "source_row": 20,
+      "dataset": "regions_collection",
+      "path": "datasets/regions_collection/raw/data_regions_collection_102_v20260313_csv.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 44206113,
+      "sha256": "41ab88aef7118f65d0b92dd5a4e35d323fdac53cc78683dc2358283bcf1eb94d",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_regions_collection_102_v20260313_csv.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/regions_collection/raw/data_regions_collection_102_v20260313_csv.zip"
+      ]
+    },
+    {
+      "source_row": 20,
+      "dataset": "regions_collection",
+      "path": "datasets/regions_collection/raw/description_regions_collection_102_v20260313.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 230594,
+      "sha256": "e5b6f09f05ba6bf165f1d9065e8cd2d071a9f81225e21f0fe2837ee1b3aa8a00",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/description_regions_collection_102_v20260313.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_transport/raw/description_regions_collection_102_v20260313.pdf",
+        "/private/tmp/keys-champ-data-statistics/datasets/regions_collection/raw/description_regions_collection_102_v20260313.pdf",
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_grp/raw/description_regions_collection_102_v20260313.pdf"
+      ]
+    },
+    {
+      "source_row": 18,
+      "dataset": "rosaviation-traffic",
+      "path": "datasets/rosaviation-traffic/raw/mintrans-transport-russia-2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 2213359,
+      "sha256": "89d21f11cd7e11a1f16f37b647c639c986b98af4fb494d8be4331219727acf7e",
+      "url": "https://www.mintrans.gov.ru/file/528103",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosaviation-traffic/raw/mintrans-transport-russia-2024.pdf"
+      ]
+    },
+    {
+      "source_row": 38,
+      "dataset": "roshydromet-air-quality",
+      "path": "datasets/roshydromet-air-quality/raw/environment-review-2024.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 16487207,
+      "sha256": "800bb2c8c33f6517ebc62d47dec6ecb6cc90005ed95c55c8e2dbf2da56514c19",
+      "url": "https://www.meteorf.gov.ru/upload/iblock/88f/%D0%9E%D0%B1%D0%B7%D0%BE%D1%80%20%D0%B7%D0%B0%202024%20%D0%B3%D0%BE%D0%B4_300625.pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/roshydromet-air-quality/raw/environment-review-2024.pdf"
+      ]
+    },
+    {
+      "source_row": 32,
+      "dataset": "rosinfra-ppp",
+      "path": "datasets/rosinfra-ppp/raw/ppp-market-2021.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 777810,
+      "sha256": "59b6c1e5386b58e43f7395a1913889fe5c58ae72eed936cc93210110fcf06f19",
+      "url": "https://rosinfra.ru/api/v2/public/analytics-document/osnovnye-trendy-i-statistika-rynka-gcp-po-itogam-2021-goda-analiticeskij-obzor/download",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/rosinfra-ppp/raw/ppp-market-2021.pdf"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/filials_mur_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 637557,
+      "sha256": "ac626003cb95d42eaa793fe9e3c704a626571e543806f06bd65cdace900ece64",
+      "url": "https://www.rosmorport.ru/filials/mur_seaports/",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/filials_mur_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/filials_nvr_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 1359306,
+      "sha256": "1a90bccff32146b889be16843193f14e5b23647df0356befe1c930d695a4b58a",
+      "url": "https://www.rosmorport.ru/filials/nvr_seaports/",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/filials_nvr_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/filials_vaf_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 942364,
+      "sha256": "5b9dbf3a88747806083a067c8a8507862d6d9a159fc479bd3c206d5628bdde6e",
+      "url": "https://www.rosmorport.ru/filials/vaf_seaports/",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/filials_vaf_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/mur_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 637557,
+      "sha256": "1d441f26fe667fd51675663fee6b5d99bc53c3b04a7d41b00e5107b2d392f1af",
+      "url": "https://www.rosmorport.ru/mur_seaports.html",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/mur_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/nvr_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 1359306,
+      "sha256": "79c7d685f9b26995c42f4cd9080f140ff236e398debf44eed09f468d36d9e629",
+      "url": "https://www.rosmorport.ru/nvr_seaports.html",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/nvr_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/ppv_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 263125,
+      "sha256": "5ee5d94635579c7aaa897019f4ac8acb51b70f3901ebf0a2d328eeb2ffee6bd8",
+      "url": "https://www.rosmorport.ru/ppv_seaports.html",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/ppv_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/shl_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 584440,
+      "sha256": "767f4252c0325cda69d34c0447f1753b8ff031f00cd5902618c679496f954a0f",
+      "url": "https://rosmorport.ru/shl_seaports.html",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/shl_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/spb_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 1209275,
+      "sha256": "ef568e4fbb6432c185f25f5e53eba02f1c63c16dce944ecc32d56d23583cfd97",
+      "url": "https://www.rosmorport.ru/spb_seaports.html",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/spb_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/vaf_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 942364,
+      "sha256": "92847d485c385bbd02b5dfd4c85d50b2a1c640bdf2016475604ef9a0791711c2",
+      "url": "https://www.rosmorport.ru/vaf_seaports.html",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/vaf_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/raw/vlf_seaports.html",
+      "kind": "source_snapshot",
+      "derived": false,
+      "bytes": 824274,
+      "sha256": "95dea5aab68d278f6ee5c2bf91171e5da9d0795e4e8b19b1dc19bde22ca44aa5",
+      "url": "https://rosmorport.ru/vlf_seaports.html",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/raw/vlf_seaports.html"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/derived/characteristics.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 99198,
+      "sha256": "389fecfd67eb2da68db727d0ca2f992f32a018dd9899c0e7f8e0616c5a5a07da",
+      "url": null,
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/derived/characteristics.csv"
+      ]
+    },
+    {
+      "source_row": 7,
+      "dataset": "rosmorport-port-characteristics",
+      "path": "datasets/rosmorport-port-characteristics/derived/ports.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 62549,
+      "sha256": "fa6db4a59c8750acf0b18a47fd7cfaffb354a57df67ad56b07d76466514b969d",
+      "url": null,
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-transport/datasets/rosmorport-port-characteristics/derived/ports.csv"
+      ]
+    },
+    {
+      "source_row": 16,
+      "dataset": "rosstat_freight",
+      "path": "datasets/rosstat_freight/raw/data_16_socio_economic_102_v20260313.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 2259923,
+      "sha256": "aa717221482c6abe5e63156c8b43d8b6aa6dff7da358ca57fb1104c17ce82d19",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_16_socio_economic_102_v20260313.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/raw/data_16_socio_economic_102_v20260313.zip",
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_transport/raw/data_16_socio_economic_102_v20260313.zip",
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/data_16_socio_economic_102_v20260313.zip"
+      ]
+    },
+    {
+      "source_row": 16,
+      "dataset": "rosstat_freight",
+      "path": "datasets/rosstat_freight/raw/data_transport_102_v20260313.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 1844904,
+      "sha256": "85283d639cd8a25edbda0481dfa6379a9142699de1eddbdeb7a377e4c069aa8a",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_transport_102_v20260313.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/data_transport_102_v20260313.zip"
+      ]
+    },
+    {
+      "source_row": 16,
+      "dataset": "rosstat_freight",
+      "path": "datasets/rosstat_freight/raw/Понятия и определения (перевозки грузов транспортом).pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 122004,
+      "sha256": "8e7efa949ca1c2503fe8586e388375ea5825178459de202642507fa350068129",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/Понятия и определения (перевозки грузов транспортом).pdf",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/Понятия и определения (перевозки грузов транспортом).pdf"
+      ]
+    },
+    {
+      "source_row": 16,
+      "dataset": "rosstat_freight",
+      "path": "datasets/rosstat_freight/derived/freight_indicators.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 5381781,
+      "sha256": "06489436b5f0e2b72dbd2ba2298f900846be8b6bfe18bfa4c447d193b3fb712e",
+      "url": "https://rosstat.gov.ru/statistics/transport",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/derived/freight_indicators.csv"
+      ]
+    },
+    {
+      "source_row": 17,
+      "dataset": "rosstat_passengers",
+      "path": "datasets/rosstat_passengers/raw/data_16_socio_economic_102_v20260313.zip",
+      "kind": "data",
+      "derived": false,
+      "bytes": 2259923,
+      "sha256": "aa717221482c6abe5e63156c8b43d8b6aa6dff7da358ca57fb1104c17ce82d19",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_16_socio_economic_102_v20260313.zip",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/raw/data_16_socio_economic_102_v20260313.zip",
+        "/private/tmp/keys-champ-data-statistics/datasets/regional_transport/raw/data_16_socio_economic_102_v20260313.zip",
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/data_16_socio_economic_102_v20260313.zip"
+      ]
+    },
+    {
+      "source_row": 17,
+      "dataset": "rosstat_passengers",
+      "path": "datasets/rosstat_passengers/derived/passenger_indicators.csv",
+      "kind": "data",
+      "derived": true,
+      "bytes": 4056112,
+      "sha256": "d20e71d1290ad2671b66647707eea4c37aa2759cee5059c25913cf87e75ec2c3",
+      "url": "https://rosstat.gov.ru/statistics/transport",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-statistics/datasets/rosstat_passengers/derived/passenger_indicators.csv"
+      ]
+    },
+    {
+      "source_row": 29,
+      "dataset": "transport-strategy",
+      "path": "datasets/transport-strategy/raw/transport-strategy-3363r-2021.pdf",
+      "kind": "report",
+      "derived": false,
+      "bytes": 1616103,
+      "sha256": "909c861d2197a5e5b5fba5b55eb8faae72e386c52d8453e619227ac07676070d",
+      "url": "https://www.mintrans.gov.ru/file/473193",
+      "verified_paths": [
+        "/private/tmp/keys-champ-data-policy/datasets/transport-strategy/raw/transport-strategy-3363r-2021.pdf"
+      ]
+    }
+  ],
+  "checked_on": "2026-11-07",
+  "current_commit": "b1ea7af87b105511c07cdc9df80f6fa8128e94f2",
+  "historical_commit": "7a51d72aa38e382d195d29714a4d8041707037f9",
+  "scope": "Current workspace, /private/tmp/casechamp-a2 and /private/tmp/keys-champ-* research directories. Not a disk-wide or remote-storage audit. Existing frontend/context changes preserved.",
+  "current_data": {
+    "input_regions": 82,
+    "settlements": 155412,
+    "unique_ids": 155412,
+    "population": 128053288.0,
+    "links": 997,
+    "link_regions": 63,
+    "modes": {
+      "air": 480,
+      "river": 266,
+      "winter_road": 77,
+      "ice_crossing": 71,
+      "ferry": 75,
+      "pontoon_bridge": 28
+    },
+    "seasons": {
+      "all": 307,
+      "summer": 360,
+      "winter": 263,
+      "": 67
+    },
+    "confidence": {
+      "high": 567,
+      "low": 187,
+      "medium": 243
+    },
+    "with_frequency": 469,
+    "without_date": 61,
+    "years": {
+      "2026": 532,
+      "2024": 42,
+      "": 61,
+      "2025": 286,
+      "2022": 17,
+      "2021": 9,
+      "2011": 1,
+      "2020": 2,
+      "2017": 3,
+      "2002": 2,
+      "2009": 31,
+      "2023": 4,
+      "2016": 6,
+      "2013": 1
+    },
+    "with_distance": 140,
+    "remote_rows": 12032,
+    "remote_road_status": {
+      "no": 181,
+      "unknown": 11848,
+      "yes": 3
+    },
+    "links_with_both_ids": 936,
+    "scheduled_links": 746,
+    "scheduled_with_missing_frequency": 291,
+    "atlas": {
+      "totals": {
+        "regions": 82,
+        "settlements": 155412,
+        "links": 997
+      },
+      "points": 1208,
+      "mapped_links": 936,
+      "indices_in_atlas": 0,
+      "indices_separate": 0
+    }
+  },
+  "raw_profiles": {
+    "intercity": {
+      "rows": 96660,
+      "cities": 180,
+      "unique_keys": 96660,
+      "modes": {
+        "road": 32220,
+        "rail": 32220,
+        "air": 32220
+      },
+      "known_hours": {
+        "road": 29756,
+        "rail": 28056,
+        "air": 6618
+      }
+    },
+    "regional_grp": {
+      "rows": 16896,
+      "metrics": 8,
+      "years": [
+        "2001",
+        "2002",
+        "2003",
+        "2004",
+        "2005",
+        "2006",
+        "2007",
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023"
+      ],
+      "sentinels": 421,
+      "levels": {
+        "Регион": 15312,
+        "Федеральный округ": 1408,
+        "Страна": 176
+      }
+    },
+    "regional_transport": {
+      "rows": 31872,
+      "metrics": 13,
+      "years": [
+        "2001",
+        "2002",
+        "2003",
+        "2004",
+        "2005",
+        "2006",
+        "2007",
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "sentinels": 943,
+      "levels": {
+        "Регион": 28884,
+        "Федеральный округ": 2656,
+        "Страна": 332
+      }
+    },
+    "settlements": {
+      "levels": {
+        "Страна": 1,
+        "Регион": 82,
+        "Муниципалитет верхнего уровня": 2336,
+        "Населенный пункт": 155747,
+        "Муниципалитет нижнего уровня": 17381,
+        "Внутригородской район": 284,
+        "Город федерального значения": 3,
+        "Административный район": 30,
+        "Внутригородское муниципальное образование города федерального значения": 267,
+        "Регион (анонимизация)": 84
+      },
+      "np_count": 155747,
+      "population": 128796185.0,
+      "missing_from_input_by_region": {
+        "Москва": 293,
+        "Севастополь": 42
+      },
+      "omitted_population": 742897.0,
+      "np_50k": 321,
+      "market_cities_50k": 176,
+      "np_50k_not_in_market_ids": 148
+    },
+    "manifest_verification": {
+      "entries_found": 117,
+      "unique_hashes_found": 112,
+      "dataset_folders_found": 23
+    }
+  },
+  "validation": {
+    "regions": 70,
+    "links": 751,
+    "structural_errors": 0,
+    "full_source_validation": false
+  },
+  "additional_traffic": {
+    "path": "/private/tmp/keys-champ-traffic-kuzbass-2026.xlsx",
+    "sha256": "c63d7691bad62b1aec58fdad14eb04234900fa6ad7b07952827ac2bf3e2d032c",
+    "matched_historical_metadata": true
+  }
+}

@@ -1,0 +1,4 @@
+object_level,object_name,oktmo,region,population,latitude,longitude,valid_coordinates,valid_population,nearest_scheduled_airport_km,nearest_airport_ident,nearest_airport_name,nearest_airport_region
+Город федерального значения,Санкт-Петербург,40000000,Санкт-Петербург,5601911,59.939,30.31582,True,True,15.707164736645295,ULLI,Pulkovo Airport,RU-SPE
+Город федерального значения,Москва,45000000,Москва,13010112,55.75406,37.62049,True,True,28.81058325703288,UUEE,Sheremetyevo International Airport,RU-MOS
+Город федерального значения,Севастополь,67000000,Севастополь,547820,44.61602,33.524471,True,True,355.31373608452395,URKG,Gelendzhik Airport,RU-KDA

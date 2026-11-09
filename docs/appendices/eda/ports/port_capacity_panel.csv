@@ -1,0 +1,43 @@
+port_name,cargo_capacity_tonnes_per_year_literal,annual_period_explicit,capacity_unit_screen_pass,berths,berth_front_m,berth_front_source,capacity_source_text,extraction_method,flags,source_url,first_explicit_draft_m,first_explicit_length_m,first_explicit_width_m
+Морской порт Корсаков,4573900.0,True,True,30.0,3405.5,"3 405,5 п.м;","4 573,9 тыс. тонн в год;",adjacent_metric_value,,https://rosmorport.ru/shl_seaports.html#korsakov,7.5,150.0,40.0
+Морской порт Невельск,1197059.0,True,True,27.0,2887.8,"2887,8 п.м.;","1 197,059 тыс. тонн в год",adjacent_metric_value,,https://rosmorport.ru/shl_seaports.html#nevelsk,,,
+Морской порт Пригородное,19600000.0,True,True,4.0,951.31,"951,31 п. м;",19 600 тыс. тонн в год;,adjacent_metric_value,,https://rosmorport.ru/shl_seaports.html#prigorodnoe,17.5,300.0,
+Морской порт Холмск,3784000.0,True,True,27.0,2469.4,"2 469,4 п.м;",3 784 тыс. тонн в год;,adjacent_metric_value,,https://rosmorport.ru/shl_seaports.html#kholmsk,8.0,130.0,22.0
+Морской порт Шахтерск,2300000.0,True,True,28.0,2113.0,2 113 п.м;,2 300 тыс. тонн в год;,adjacent_metric_value,,https://rosmorport.ru/shl_seaports.html#shakhtersk,15.0,200.0,20.0
+Морской порт Владивосток,22694418.0,True,True,65.0,12915.75,"12 915,75 м;","22 694,418 тыс. тонн в год;",adjacent_metric_value,,https://rosmorport.ru/vlf_seaports.html#vladivostok,18.0,400.0,48.2
+Морской порт Восточный,83480000.0,True,True,32.0,6919.3,"6 919,3 м;",83 480 тыс. тонн в год;,adjacent_metric_value,,https://rosmorport.ru/vlf_seaports.html#vostochny,17.0,400.0,59.0
+Морской порт Зарубино,3702000.0,True,True,7.0,841.0,841 м;,3 702 тыс. тонн в год;,adjacent_metric_value,,https://rosmorport.ru/vlf_seaports.html#zarubino,22.42,333.0,60.0
+Морской порт Находка,34286200.0,True,True,133.0,19011.95,"19 011,95 п.м;","34 286,2 тыс. тонн в год;",adjacent_metric_value,,https://rosmorport.ru/vlf_seaports.html#nakhodka,11.5,250.0,44.0
+Морской порт Ольга,2377000.0,True,True,11.0,1566.2," 1 566,2 м", 2 377 тыс. тонн в год,parallel_cells_first_five_fields,,https://rosmorport.ru/vlf_seaports.html#olga,,,
+Морской порт Посьет,5736000.0,True,True,15.0,2408.53," 2 408,53 м", 5 736 тыс. тонн в год,parallel_cells_first_five_fields,,https://rosmorport.ru/vlf_seaports.html#posyet,,,
+Морской порт Архангельск,11532900.0,True,True,74.0,8794.58," 8 794,58 п. м"," 11 532,9 тыс. тонн в год, 5 200 тыс. тонн в год",parallel_cells_first_five_fields,,https://www.rosmorport.ru/filials/mur_seaports/#arkhangelsk,,,
+Морской порт Варандей,12100400.0,True,True,2.0,199.86,"199,86 п. м;","12 100,4 тыс. тонн в год",adjacent_metric_value,,https://www.rosmorport.ru/filials/mur_seaports/#varandey,3.5,120.0,15.0
+Морской порт Дудинка,1885000.0,True,True,9.0,1723.6,"1 723,6 п. м;",1 885 тыс. тонн в год,adjacent_metric_value,,https://www.rosmorport.ru/filials/mur_seaports/#dudinka,11.8,260.3,32.2
+Морской порт Кандалакша,1500000.0,True,True,5.0,584.45,"584,45 п. м;",1 500 тыс. тонн в год,adjacent_metric_value,,https://www.rosmorport.ru/filials/mur_seaports/#kandalaksha,9.8,200.0,33.0
+Морской порт Мурманск,26611200.0,True,True,111.0,13246.48,"13 246,48 м;","26 611,2 тыс. тонн в год, в том числе: – наливные: 2 810 тыс. тонн в год",adjacent_metric_value,,https://www.rosmorport.ru/filials/mur_seaports/#murmansk,,,
+Морской порт Анапа,374000.0,True,True,6.0,828.0, 828 п.м," 374 тыс. тонн в год, в том числе: 350 тыс. тонн в год",parallel_cells_first_five_fields,,https://www.rosmorport.ru/filials/nvr_seaports/#anapa,,,
+Морской порт Геленджик,250000.0,True,True,9.0,795.75,"795,75 п. м;",250 тыс. тонн сухих грузов в год;,adjacent_metric_value,,https://www.rosmorport.ru/filials/nvr_seaports/#gelendzhik,3.8,114.0,14.0
+Морской порт Ейск,6800000.0,True,True,15.0,2346.2," 2 346,2 п. м"," 6 800 тыс. тонн в год, 1 200 тыс. тонн в год",parallel_cells_first_five_fields,,https://www.rosmorport.ru/filials/nvr_seaports/#eysk,,,
+Морской порт Кавказ,81234000.0,True,True,10.0,1347.64,"1 347,64 п.м;","81 234 тыс. тонн в год, в том числе: - наливные: 24 790 тыс. тонн в год",adjacent_metric_value,,https://www.rosmorport.ru/filials/nvr_seaports/#kavkaz,5.9,157.0,24.0
+Морской порт Новороссийск,222847000.0,True,True,87.0,16286.0,16 286 п. м;,222 847 тыс. тонн в год,adjacent_metric_value,,https://www.rosmorport.ru/filials/nvr_seaports/#novorossiysk,,,
+Морской порт Сочи,5010000.0,True,True,40.0,4332.86,"4 332,86 п.м;","5 010 тыс. тонн в год, в том числе - сухих: 4 353 тыс. тонн в год",adjacent_metric_value,,https://www.rosmorport.ru/filials/nvr_seaports/#sochi,8.8,311.0,38.6
+Морской порт Таганрог,4920000.0,True,True,11.0,1835.3," 1 835,3 метров"," 4920 тыс. тонн в год, 1 700 тыс. тонн в год",parallel_cells_first_five_fields,,https://www.rosmorport.ru/filials/nvr_seaports/#taganrog,,,
+Морской порт Тамань,63100000.0,True,True,13.0,4333.5,"4 333,5 п.м;","63,1 млн тонн в год,",adjacent_metric_value,,https://www.rosmorport.ru/filials/nvr_seaports/#taman,18.5,300.0,50.0
+Морской порт Темрюк,9400000.0,True,True,20.0,2502.08,"2 502,08 п.м","9 400 тыс. тонн в год, в том числе: - наливные: 3 480 тыс. тонн в год",adjacent_metric_value,,https://www.rosmorport.ru/filials/nvr_seaports/#temryuk,4.6,140.0,17.5
+Морской порт Туапсе,38490000.0,True,True,36.0,5877.12,"5 877,12 п. м;","38 490 тыс. тонн в год, в том числе: - наливные: 27 000 тыс. тонн в год",adjacent_metric_value,,https://www.rosmorport.ru/filials/nvr_seaports/#tuapse,15.0,250.0,45.0
+Морской порт Анадырь,3079800.0,True,True,16.0,1876.44,"1 876,44 п. м;","3 079,80 тыс. тонн в год;",adjacent_metric_value,,https://www.rosmorport.ru/filials/vaf_seaports/#anadyr,,,
+Морской порт Ванино,49840000.0,True,True,22.0,3707.19,"3 707,19 п.м.;",49 840 тыс. тонн в год;,adjacent_metric_value,,https://www.rosmorport.ru/filials/vaf_seaports/#vanino,18.5,292.0,45.0
+Морской порт Де-Кастри,12350000.0,True,True,8.0,943.0,943 п. м;,12 350 тыс. тонн в год;,adjacent_metric_value,,https://www.rosmorport.ru/filials/vaf_seaports/#de-kastri,15.0,250.0,50.0
+Морской порт Магадан,2990000.0,True,True,10.0,1707.55,"1 707,55 м;",2 990 тыс. тонн в год в том числе: – наливные 400 тыс. тонн в год,adjacent_metric_value,,https://www.rosmorport.ru/filials/vaf_seaports/#mgd,11.0,199.8,24.55
+Морской порт Николаевск-на-Амуре,784400.0,True,True,8.0,791.6,"791,6 п. м;","784,4 тыс. тонн в год;",adjacent_metric_value,,https://www.rosmorport.ru/filials/vaf_seaports/#nikolayevsk,4.5,140.0,18.0
+Морской порт Охотск,151730.0,True,True,5.0,555.77,"555,77 п.м;","151,73 тыс. тонн в год;",adjacent_metric_value,,https://www.rosmorport.ru/filials/vaf_seaports/#mp_okhotsk,3.5,110.0,18.0
+Морской порт Певек,330000.0,True,True,3.0,500.0,500 м;,330 тыс. тонн в год;,adjacent_metric_value,,https://www.rosmorport.ru/filials/vaf_seaports/#pevek,9.0,172.2,24.55
+Морской порт Советская Гавань,3801500.0,True,True,10.0,1912.0,1 912 п. м;,"3 801,5 тыс. тонн в год;",adjacent_metric_value,,https://www.rosmorport.ru/filials/vaf_seaports/#sovgavan,10.0,200.0,29.0
+Морской порт Петропавловск-Камчатский,2060600.0,True,True,56.0,6089.1,"6,0891 км;","2060,6 тыс. тонн в год;",adjacent_metric_value,,https://www.rosmorport.ru/ppv_seaports.html#ppk,9.0,200.0,25.0
+Морской порт Большой порт Санкт-Петербург,111004390.0,True,True,147.0,21713.63,"21 713,63 п.м.;","111 004,39 тыс. тонн в год, в том числе:",adjacent_metric_value,,https://www.rosmorport.ru/spb_seaports.html#spb_big,13.0,347.0,50.0
+Морской порт Выборг,1970000.0,True,True,9.0,1122.7,"1 122,7 п. м;","1 970 тыс. тонн в год,",adjacent_metric_value,,https://www.rosmorport.ru/spb_seaports.html#vyborg,6.5,135.0,25.0
+Морской порт Высоцк,21200000.0,False,False,8.0,1703.6,"1 703,6 метров","21,2 млн тонн, в том числе: – наливные: 12,5 млн тонн",adjacent_metric_value,annual_period_not_explicit,https://www.rosmorport.ru/spb_seaports.html#vysotsk,13.2,260.0,45.0
+Морской порт Калининград,45023200.0,True,True,106.0,16546.21,"16 546,21 п.м","45 023,2 тыс. тонн в год, в том числе: - наливные: 13 350 тыс. тонн в год",adjacent_metric_value,,https://www.rosmorport.ru/spb_seaports.html#kln,9.6,200.0,30.0
+Морской порт Пассажирский порт Санкт-Петербург,,False,False,,2172.06,"2172,06 п. м",,adjacent_metric_value,,https://www.rosmorport.ru/spb_seaports.html#spb_passenger,8.8,340.0,42.0
+Морской порт Приморск,89500.0,True,False,12.0,3058.66,"3 058,66 п. м;",89 500 тонн в год;,adjacent_metric_value,source_says_89500_tonnes_not_thousand_tonnes_do_not_correct;aquatory_unit_suspicious_source_literal,https://www.rosmorport.ru/spb_seaports.html#primorsk,15.85,307.0,55.0
+Морской порт Усть-Луга,176600250.0,True,True,46.0,9652.68,"9 652,68 м","176 600,25 тыс. тонн в год",adjacent_metric_value,,https://www.rosmorport.ru/spb_seaports.html#ust-luga,15.0,320.0,50.0

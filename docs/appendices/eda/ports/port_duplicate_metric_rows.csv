@@ -1,0 +1,11 @@
+port_name,table_no,row_no,metric_raw,value_raw,source_url,metric_normalized
+Морской порт Шахтерск,1,10,– по осадке:,15 м;,https://rosmorport.ru/shl_seaports.html#shakhtersk,по осадке
+Морской порт Шахтерск,1,11,– по длине:,200 м;,https://rosmorport.ru/shl_seaports.html#shakhtersk,по длине
+Морской порт Шахтерск,1,14,– по осадке:,"1,8 м;",https://rosmorport.ru/shl_seaports.html#shakhtersk,по осадке
+Морской порт Шахтерск,1,15,– по длине:,60 м;,https://rosmorport.ru/shl_seaports.html#shakhtersk,по длине
+Морской порт Кавказ,1,12,- осадка,"5,9 м;",https://www.rosmorport.ru/filials/nvr_seaports/#kavkaz,осадка
+Морской порт Кавказ,1,13,- длина:,157 м;,https://www.rosmorport.ru/filials/nvr_seaports/#kavkaz,длина
+Морской порт Кавказ,1,14,- ширина:,24 м.,https://www.rosmorport.ru/filials/nvr_seaports/#kavkaz,ширина
+Морской порт Кавказ,1,16,- осадка:,"22,6 м;",https://www.rosmorport.ru/filials/nvr_seaports/#kavkaz,осадка
+Морской порт Кавказ,1,17,- длина:,300 м;,https://www.rosmorport.ru/filials/nvr_seaports/#kavkaz,длина
+Морской порт Кавказ,1,18,- ширина:,50 м.,https://www.rosmorport.ru/filials/nvr_seaports/#kavkaz,ширина

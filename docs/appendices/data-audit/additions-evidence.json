@@ -1,0 +1,144 @@
+{
+  "economic": {
+    "rows": 3143178,
+    "geocoded": 3079183,
+    "revenue_nonmissing": 1608501,
+    "filed_nonoutlier_house_street": 1865875,
+    "revenue_nonmissing_filed_nonoutlier_house_street": 1481875
+  },
+  "ugra": {
+    "observations": 18,
+    "routes": 9,
+    "complete_intervals": 13,
+    "spans": [
+      {
+        "route": "с.Ларьяк - д.Чехломей - д.Большой Ларьяк",
+        "year": "2025",
+        "elapsed_days": 107,
+        "road_km": "29.83"
+      },
+      {
+        "route": "г.Нижневартовск - д.Вампугол - с.Былино",
+        "year": "2025",
+        "elapsed_days": 82,
+        "road_km": "22.36"
+      },
+      {
+        "route": "с.Былино - п.Зайцева Речка",
+        "year": "2025",
+        "elapsed_days": 114,
+        "road_km": "14.225"
+      },
+      {
+        "route": "д.Соснина - граница Томской области",
+        "year": "2025",
+        "elapsed_days": 113,
+        "road_km": "4"
+      },
+      {
+        "route": "с.Угут - д.Каюкова",
+        "year": "2025",
+        "elapsed_days": 97,
+        "road_km": "7.744"
+      },
+      {
+        "route": "с.Угут - д.Малоюганский",
+        "year": "2025",
+        "elapsed_days": 81,
+        "road_km": "20.975"
+      },
+      {
+        "route": "г.Сургут - п.Банный",
+        "year": "2025",
+        "elapsed_days": 102,
+        "road_km": "4"
+      },
+      {
+        "route": "с.Сытомино - п.Горный",
+        "year": "2025",
+        "elapsed_days": 97,
+        "road_km": "34.442"
+      },
+      {
+        "route": "г.Нижневартовск - д.Вампугол - с.Былино",
+        "year": "2026",
+        "elapsed_days": 98,
+        "road_km": "22.36"
+      },
+      {
+        "route": "с.Угут - д.Каюкова",
+        "year": "2026",
+        "elapsed_days": 105,
+        "road_km": "7.744"
+      },
+      {
+        "route": "с.Угут - д.Малоюганский",
+        "year": "2026",
+        "elapsed_days": 105,
+        "road_km": "20.975"
+      },
+      {
+        "route": "г.Сургут - п.Банный",
+        "year": "2026",
+        "elapsed_days": 97,
+        "road_km": "2.06"
+      },
+      {
+        "route": "с.Сытомино - п.Горный",
+        "year": "2026",
+        "elapsed_days": 101,
+        "road_km": "34.442"
+      }
+    ]
+  },
+  "lights": {
+    "2023": {
+      "rows": 155412,
+      "unique_ids": 155412,
+      "missing_input_ids": 0,
+      "statuses": {
+        "valid": 155412
+      },
+      "zero_raw": 72132
+    },
+    "2024": {
+      "rows": 155412,
+      "unique_ids": 155412,
+      "missing_input_ids": 0,
+      "statuses": {
+        "valid": 155412
+      },
+      "zero_raw": 70922
+    }
+  },
+  "checks": {
+    "full_file_verification": {
+      "checked_at": "2026-11-07T17:07:58.748108+00:00",
+      "files": 1475,
+      "total_bytes": 1379020942,
+      "bytes_by_dataset": {
+        "fns-revexp": 196335298,
+        "nighttime-lights": 153798984,
+        "northern-delivery": 3321314,
+        "rfsd": 820965182,
+        "seasonal-closures": 369437,
+        "seasonal-ugra": 10778243,
+        "traffic-surveys": 72826345,
+        "transport-operations": 120626139
+      },
+      "incomplete_files_excluded": 18,
+      "incomplete_allocated_bytes": 2208817152,
+      "incomplete_manifest_references_excluded": 13,
+      "manifest_references_checked": 1001,
+      "failures": []
+    },
+    "regional_indices_rows": 0
+  },
+  "original_38_inventory_update": {
+    "verified_or_partial_sources": 24,
+    "historical_download_not_located": 3,
+    "no_dataset_located": 11,
+    "changed_row": 24,
+    "fns_status": "Income/expense dataset available; full EGRUL/EGRIP registers still not available."
+  }
+}

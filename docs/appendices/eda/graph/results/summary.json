@@ -1,0 +1,245 @@
+{
+  "input_archive": "/Users/andreykuronskin/keys_champ/datasets/intercity_connectivity/raw/data_intercity_connectivity_162_v20260629_csv.zip",
+  "input_archive_sha256": "4728d93b8d29925b433a84a7c91fedbe4665bc78e672a23dc185d01c1e41dbea",
+  "input_member": "data_intercity_connectivity_162_v20260629.csv",
+  "rows": 96660,
+  "columns": 22,
+  "cities": 180,
+  "region_labels": 85,
+  "city_population_2021_sum": 77396548,
+  "duplicate_od_mode_rows": 0,
+  "self_rows": 0,
+  "city_metadata_consistent_across_all_records_and_sides": true,
+  "unique_oktmo": 180,
+  "unique_sber_territory_ids": 180,
+  "city_latitude_range": [
+    42.0590354,
+    69.3489906
+  ],
+  "city_longitude_range": [
+    20.5073482,
+    177.5015039
+  ],
+  "city_population_range": [
+    13202,
+    13010112
+  ],
+  "modes": {
+    "air": {
+      "rows": 32220,
+      "observed": 6618,
+      "missing_both": 25602,
+      "time_missing_only": 0,
+      "distance_missing_only": 0,
+      "asymmetric_availability_pairs": 0,
+      "asymmetric_time_pairs": 0,
+      "asymmetric_distance_pairs": 0,
+      "distance_km_quantiles": {
+        "min": 194.0,
+        "p25": 992.0,
+        "median": 1506.0,
+        "p75": 2740.0,
+        "max": 7017.0
+      },
+      "time_hours_quantiles": {
+        "min": 1.0,
+        "p25": 1.9,
+        "median": 2.5,
+        "p75": 4.1,
+        "max": 9.1
+      },
+      "time_model_residual_quantiles_hours": {
+        "min": -0.05000000000000071,
+        "median": 0.0011904761904761862,
+        "max": 2.2940476190476184
+      },
+      "rows_within_0_051h_of_generic_model": 6350,
+      "fitted_time_slope_hours_per_km": 0.001190786283776105,
+      "fitted_time_intercept_hours": 0.7685710702331024,
+      "source_counts": {
+        "ND": 25602,
+        "Aviastats": 4272,
+        "Aviastats, Rosaviation": 1774,
+        "Rosaviation": 400,
+        "manual": 172
+      },
+      "missing_reason_counts": {
+        "Маршрут не найден": 25602,
+        "CD": 6618
+      }
+    },
+    "rail": {
+      "rows": 32220,
+      "observed": 28056,
+      "missing_both": 4164,
+      "time_missing_only": 0,
+      "distance_missing_only": 0,
+      "asymmetric_availability_pairs": 0,
+      "asymmetric_time_pairs": 0,
+      "asymmetric_distance_pairs": 0,
+      "distance_km_quantiles": {
+        "min": 5.0,
+        "p25": 1069.0,
+        "median": 1877.5,
+        "p75": 3339.0,
+        "max": 10482.0
+      },
+      "time_hours_quantiles": {
+        "min": 0.1,
+        "p25": 19.4,
+        "median": 34.1,
+        "p75": 60.7,
+        "max": 190.6
+      },
+      "time_model_residual_quantiles_hours": {
+        "min": -0.04545454545456096,
+        "median": 0.0,
+        "max": 0.04545454545456096
+      },
+      "rows_within_0_051h_of_generic_model": 28056,
+      "fitted_time_slope_hours_per_km": 0.018181811606580785,
+      "fitted_time_intercept_hours": -0.00024413468952106946,
+      "source_counts": {
+        "SberIndex": 28056,
+        "ND": 4164
+      },
+      "missing_reason_counts": {
+        "CD": 28056,
+        "Маршрут не найден": 4164
+      }
+    },
+    "road": {
+      "rows": 32220,
+      "observed": 29756,
+      "missing_both": 2464,
+      "time_missing_only": 0,
+      "distance_missing_only": 0,
+      "asymmetric_availability_pairs": 0,
+      "asymmetric_time_pairs": 0,
+      "asymmetric_distance_pairs": 0,
+      "distance_km_quantiles": {
+        "min": 7.0,
+        "p25": 1071.0,
+        "median": 1833.0,
+        "p75": 3342.0,
+        "max": 10746.0
+      },
+      "time_hours_quantiles": {
+        "min": 0.6,
+        "p25": 14.8,
+        "median": 24.9,
+        "p75": 45.1,
+        "max": 143.8
+      },
+      "time_model_residual_quantiles_hours": {
+        "min": -0.05333333333334167,
+        "median": 0.0,
+        "max": 0.05333333333334167
+      },
+      "rows_within_0_051h_of_generic_model": 28750,
+      "fitted_time_slope_hours_per_km": 0.013333290397207355,
+      "fitted_time_intercept_hours": 0.4998043391184528,
+      "source_counts": {
+        "OSM": 21872,
+        "OSRM": 7884,
+        "ND": 2464
+      },
+      "missing_reason_counts": {
+        "CD": 29756,
+        "Маршрут не найден": 2464
+      }
+    }
+  },
+  "triangle_diagnostics": {
+    "road": {
+      "tolerance_hours": 0.15,
+      "comparable_ordered_triples": 5088276,
+      "violating_ordered_triples": 136076,
+      "unique_ordered_od_pairs_in_violations": 12370,
+      "missing_direct_od_with_two_observed_od_legs": 0,
+      "largest_example": {
+        "from": "Люберцы",
+        "via": "Красноярск",
+        "to": "Уссурийск",
+        "direct_hours": 125.2,
+        "sum_two_od_hours": 110.1,
+        "difference_hours": 15.100000000000009
+      },
+      "interpretation": "Consistency diagnostic of pairwise OD estimates only. Summed OD times are not validated transfers; missing direct rows do not prove physical disconnection."
+    },
+    "rail": {
+      "tolerance_hours": 0.15,
+      "comparable_ordered_triples": 4657296,
+      "violating_ordered_triples": 0,
+      "unique_ordered_od_pairs_in_violations": 0,
+      "missing_direct_od_with_two_observed_od_legs": 0,
+      "largest_example": null,
+      "interpretation": "Consistency diagnostic of pairwise OD estimates only. Summed OD times are not validated transfers; missing direct rows do not prove physical disconnection."
+    },
+    "best_ground": {
+      "tolerance_hours": 0.15,
+      "comparable_ordered_triples": 5171442,
+      "violating_ordered_triples": 153308,
+      "unique_ordered_od_pairs_in_violations": 13400,
+      "missing_direct_od_with_two_observed_od_legs": 12,
+      "largest_example": {
+        "from": "Южно-Сахалинск",
+        "via": "Комсомольск-на-Амуре",
+        "to": "Нижневартовск",
+        "direct_hours": 146.8,
+        "sum_two_od_hours": 99.7,
+        "difference_hours": 47.10000000000001
+      },
+      "interpretation": "Consistency diagnostic of pairwise OD estimates only. Summed OD times are not validated transfers; missing direct rows do not prove physical disconnection."
+    }
+  },
+  "region_city_count_distribution": {
+    "1": 48,
+    "2": 15,
+    "3": 11,
+    "4": 6,
+    "5": 2,
+    "6": 1,
+    "7": 1,
+    "22": 1
+  },
+  "no_observed_destinations": {
+    "road": [
+      "Петропавловск-Камчатский",
+      "Норильск",
+      "Магадан",
+      "Нарьян-Мар",
+      "Якутск",
+      "Южно-Сахалинск",
+      "Анадырь"
+    ],
+    "best_ground": [
+      "Петропавловск-Камчатский",
+      "Норильск",
+      "Магадан",
+      "Нарьян-Мар",
+      "Якутск",
+      "Анадырь"
+    ]
+  },
+  "scenario": {
+    "description": "Illustrative parameter perturbation only: reduce road OD time between Kostroma and Obninsk by 20% in both directions. No physical project, feasibility, cost, new road, induced rerouting or real service benefit asserted.",
+    "cities": [
+      "Кострома",
+      "Обнинск"
+    ],
+    "road_hours_before": 6.6,
+    "road_hours_after": 5.28,
+    "monotonicity_check": "passed for all 180 origins, both modes and all reported accessibility measures",
+    "propagation": "Only the two OD cells change; no shortest-path closure or inferred transfers."
+  },
+  "measure_conventions": {
+    "comparison_universe": "Other 179 cities in the supplied 180-city selection; excludes self.",
+    "ground_mode_choice": "Minimum of observed road and rail OD time, no transfers.",
+    "unknown_od": "Missing time contributes zero to lower-bound measures; unknown accessibility is not asserted to be zero.",
+    "population_potential": "sum_j population_j exp(-time_ij/tau) / sum_j population_j, j!=i, tau=6/12/24h; population fixed at census2021.",
+    "potential_upper": "Lower bound plus all population share of unknown OD, a loose mathematical upper bound under nonnegative times; no probabilistic interpretation.",
+    "ranking": "Exploratory ordering under these conventions; not validated transport wellbeing or region rankings.",
+    "source_average_error": "Publisher claims average error about11% on an unspecified validation sample; not an uncertainty interval for each OD."
+  }
+}

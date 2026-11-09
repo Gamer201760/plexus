@@ -1,0 +1,102 @@
+{
+  "code": {
+    "sha": "cf780896ec50ae8a4ffa250c883b7506468bad43",
+    "dirty": true
+  },
+  "inputs": [
+    {
+      "path": "data/raw/osm_russia/central.osm.pbf",
+      "bytes": 884829631,
+      "sha256": "d28d118c9269138ae33ea6561d4e29e492bd9954e6dd088f80b7a3b1372b77f2",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    },
+    {
+      "path": "data/raw/osm_russia/crimean.osm.pbf",
+      "bytes": 40709242,
+      "sha256": "055e4bd4de3c4409137e4cba0ebe25014af43e0a31d220d96ad79f2937fa8310",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    },
+    {
+      "path": "data/raw/osm_russia/far-eastern.osm.pbf",
+      "bytes": 397294483,
+      "sha256": "fe047ea6878673c9f3bd4fa42bc147ed8d3002ee0bfc0455d2fbb0b0e74c5ed5",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    },
+    {
+      "path": "data/raw/osm_russia/kaliningrad.osm.pbf",
+      "bytes": 29330257,
+      "sha256": "769a6a6ac552b534057f2480b88f1c2d0709636761ab6d08483efe69c1e97b69",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    },
+    {
+      "path": "data/raw/osm_russia/north-caucasus.osm.pbf",
+      "bytes": 129493113,
+      "sha256": "a6db83fb55e03cc9730da9aff42730003b7d1591a38d4cf0fd15d4fe66743701",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    },
+    {
+      "path": "data/raw/osm_russia/northwestern.osm.pbf",
+      "bytes": 656963015,
+      "sha256": "116af9cc8c03a2298236d55bfdb293a4eb59420f07256ed78dbef2a1e9ae7627",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    },
+    {
+      "path": "data/raw/osm_russia/siberian.osm.pbf",
+      "bytes": 589659893,
+      "sha256": "0d5257ecb438975058556f1e656704e5800f32a21178942a6be20f8ef869f4a0",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    },
+    {
+      "path": "data/raw/osm_russia/south.osm.pbf",
+      "bytes": 317285835,
+      "sha256": "e867508d9240743dea215f130dcfe441a0a53980558b7d5002db91a6b87a57da",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    },
+    {
+      "path": "data/raw/osm_russia/ural.osm.pbf",
+      "bytes": 397058481,
+      "sha256": "20351727184452f26858ffba0ee6d79069de1dd006949dd8ac2507a94d1f2346",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    },
+    {
+      "path": "data/raw/osm_russia/volga.osm.pbf",
+      "bytes": 777732499,
+      "sha256": "ad86cca5936ef61f38425b16c6f2b0dc030169af336439538a1aeb6bc901e353",
+      "osm_timestamp": "2026-11-07T21:21:36Z"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "edges.parquet",
+      "bytes": 368328131,
+      "sha256": "336d0e14c7cec886688b7cc59e863c7eba7d0ac0ca883987d9313c8668fc46b5"
+    },
+    {
+      "path": "nodes.parquet",
+      "bytes": 180789048,
+      "sha256": "303eb91fe56423dad4128ae0ea023c76d65f9bc21b5828dfb432f774bf6058fd"
+    },
+    {
+      "path": "points.parquet",
+      "bytes": 6587020,
+      "sha256": "8dfa0d02b66f649a7853f4f985ea743069bd905aef764c93e8117f76e2fda7a5"
+    },
+    {
+      "path": "ways.parquet",
+      "bytes": 138149252,
+      "sha256": "16081cb7fe64e06184655d8541d8d692f0b145ab175831a30d94340126f880a9"
+    }
+  ],
+  "points": 155747,
+  "regions": 84,
+  "road_points": 155264,
+  "point_population": 128796185,
+  "population_on_road": 128733761,
+  "osm_license": "ODbL 1.0",
+  "parameters": {
+    "snap_max_km": 5,
+    "minimum_component_nodes": 200,
+    "roads_not_field_verified": true
+  },
+  "directory": "data/graph_ru"
+}

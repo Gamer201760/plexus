@@ -1,0 +1,8 @@
+{
+  "source_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_bdmo_118_v20260928/description_bdmo_112_v20260928.pdf",
+  "discovered_on": "https://tochno.st/datasets/bdmo",
+  "bytes": 426162,
+  "sha256": "b5d946fcd07b5cf16dda3582cc5a26d8b43adf0e0500828f38066fd9f726095e",
+  "pages": 18,
+  "findings": "Source explicitly says absence of phenomenon may have no row, but missing row cannot distinguish no phenomenon from missing data. No general zero suppression rule is established."
+}

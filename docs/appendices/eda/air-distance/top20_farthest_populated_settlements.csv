@@ -1,0 +1,21 @@
+object_name,region,oktmo,population_numeric,latitude_numeric,longitude_numeric,nearest_scheduled_airport_km,nearest_airport_ident,nearest_airport_name,nearest_airport_region
+село Уэлен,Чукотский автономный округ,77633440101,685,66.160164,-169.817689,595.170382040371,UHMA,Ugolny Yuri Ryktheu Airport,RU-CHU
+село Инчоун,Чукотский автономный округ,77633410101,432,66.29703,-170.279057,577.7139182337381,UHMA,Ugolny Yuri Ryktheu Airport,RU-CHU
+село Лаврентия,Чукотский автономный округ,77633420101,1420,65.584895,-171.011034,533.0894114862111,UHMA,Ugolny Yuri Ryktheu Airport,RU-CHU
+село Энурмино,Чукотский автономный округ,77633445101,320,66.953619,-171.864656,532.5563702350134,UHMA,Ugolny Yuri Ryktheu Airport,RU-CHU
+село Лысые,Брянская область,15623410106,217,52.33855,31.63842,515.5760199141105,UUWW,Vnukovo International Airport,RU-MOW
+село Денисковичи,Брянская область,15623410101,373,52.31343,31.70628,514.4768191708081,UUWW,Vnukovo International Airport,RU-MOW
+село Азаричи,Брянская область,15623433141,28,52.23611,31.75201,513.6217127355272,UUOO,Voronezh International Airport,RU-VOR
+село Серовка,Брянская область,15623433136,13,52.20264,31.76464,512.6268350385748,UUOO,Voronezh International Airport,RU-VOR
+село Спиридонова Буда,Брянская область,15623433101,430,52.28222,31.781,511.88156745705425,UUOO,Voronezh International Airport,RU-VOR
+деревня Федоровка,Брянская область,15623410116,6,52.3603,31.69858,511.01620272051036,UUWW,Vnukovo International Airport,RU-MOW
+деревня Карпиловка,Брянская область,15623433106,318,52.32775,31.75893,510.881615871499,UUWW,Vnukovo International Airport,RU-MOW
+посёлок Озерище,Брянская область,15623433116,38,52.33158,31.75308,510.83718750474424,UUWW,Vnukovo International Airport,RU-MOW
+посёлок Светлый,Брянская область,15628456126,4,52.14144,31.7941,510.4387158624603,UUOO,Voronezh International Airport,RU-VOR
+посёлок Вербовый Выгор,Брянская область,15628456106,2,52.13224,31.80524,509.6589951630886,UUOO,Voronezh International Airport,RU-VOR
+посёлок Сосновый Бор,Брянская область,15623433121,1,52.33519,31.77469,509.5479368453217,UUWW,Vnukovo International Airport,RU-MOW
+деревня Кожановка,Брянская область,15623433126,250,52.21207,31.82258,508.717087730007,UUOO,Voronezh International Airport,RU-VOR
+деревня Петровка,Брянская область,15623101111,71,52.3906,31.73644,506.8006191244856,UUWW,Vnukovo International Airport,RU-MOW
+село Петрятинка,Брянская область,15623437156,180,52.24997,31.85583,506.6245005900805,UUOO,Voronezh International Airport,RU-VOR
+село Старые Юрковичи,Брянская область,15628456146,251,52.16544,31.85664,506.2350023901459,UUOO,Voronezh International Airport,RU-VOR
+деревня Барановка,Брянская область,15623433131,9,52.19831,31.85839,506.225174689968,UUOO,Voronezh International Airport,RU-VOR

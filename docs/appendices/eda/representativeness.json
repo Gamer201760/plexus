@@ -1,0 +1,40 @@
+{
+  "census_year": 2021,
+  "graph_snapshot_year": 2026,
+  "country_population_in_census_file": 147182123.0,
+  "graph_cities": 180,
+  "graph_population": 77396548.0,
+  "exact_city_oktmo_matches": 177,
+  "unmatched_cities": [],
+  "federal_city_name_level_matches": 3,
+  "city_population_mismatches": [],
+  "region_count": 85,
+  "unmatched_regions": [],
+  "city_counts_distribution": {
+    "1": 48,
+    "4": 6,
+    "3": 11,
+    "2": 15,
+    "22": 1,
+    "7": 1,
+    "6": 1,
+    "5": 2
+  },
+  "levels": {
+    "Страна": 1,
+    "Регион": 82,
+    "Муниципалитет верхнего уровня": 2336,
+    "Населенный пункт": 155747,
+    "Муниципалитет нижнего уровня": 17381,
+    "Внутригородской район": 284,
+    "Город федерального значения": 3,
+    "Административный район": 30,
+    "Внутригородское муниципальное образование города федерального значения": 267,
+    "Регион (анонимизация)": 84
+  },
+  "invalid_or_coded_population_by_level": {},
+  "interpretation": "Population share is representativeness of the selected city sample using the source census, not a transport connectivity score. Exact region labels and 177 exact city OKTMO matches were used; three federal cities matched by exact same city/region name and administrative level due 8/11-digit code representation. No fuzzy or prefix matches.",
+  "sample_country_population_share_pct": 52.585562989874795,
+  "minimum_region_share_pct": 4.71649882533557,
+  "maximum_region_share_pct": 100.0
+}

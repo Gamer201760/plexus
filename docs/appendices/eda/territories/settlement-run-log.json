@@ -1,0 +1,137 @@
+levels {'Населенный пункт': 155747, 'Муниципалитет нижнего уровня': 17381, 'Муниципалитет верхнего уровня': 2336, 'Внутригородской район': 284, 'Внутригородское муниципальное образование города федерального значения': 267, 'Регион (анонимизация)': 84, 'Регион': 82, 'Административный район': 30, 'Город федерального значения': 3, 'Страна': 1}
+{
+  "input_rows": 176215,
+  "levels": {
+    "Населенный пункт": 155747,
+    "Муниципалитет нижнего уровня": 17381,
+    "Муниципалитет верхнего уровня": 2336,
+    "Внутригородской район": 284,
+    "Внутригородское муниципальное образование города федерального значения": 267,
+    "Регион (анонимизация)": 84,
+    "Регион": 82,
+    "Административный район": 30,
+    "Город федерального значения": 3,
+    "Страна": 1
+  },
+  "key_warning": "No code-prefix inference or name fuzzy matching; match only explicit full OKTMO codes at compatible administrative level. Census reference population is not municipal population in2024.",
+  "candidate_census_upper_rows": 2336,
+  "candidate_level_labels": [
+    "Муниципалитет верхнего уровня"
+  ],
+  "oktmo": {
+    "unique_upper_codes": 2336,
+    "ambiguous_codes": 0,
+    "matched_municipal_2024": 1255,
+    "municipal_base": 1455,
+    "share": 0.8625429553264605,
+    "population_numeric": 1255,
+    "examples": [
+      {
+        "municipality_road": "Залесовский муниципальный округ",
+        "object_name": "Залесовский муниципальный округ",
+        "oktmo": "01512000",
+        "population": "11793"
+      },
+      {
+        "municipality_road": "Алейский муниципальный район",
+        "object_name": "Алейский муниципальный район",
+        "oktmo": "01601000",
+        "population": "14374"
+      },
+      {
+        "municipality_road": "Алтайский муниципальный район",
+        "object_name": "Алтайский муниципальный район",
+        "oktmo": "01602000",
+        "population": "26279"
+      },
+      {
+        "municipality_road": "Баевский муниципальный район",
+        "object_name": "Баевский муниципальный район",
+        "oktmo": "01603000",
+        "population": "8277"
+      },
+      {
+        "municipality_road": "Бийский муниципальный район",
+        "object_name": "Бийский муниципальный район",
+        "oktmo": "01604000",
+        "population": "32595"
+      },
+      {
+        "municipality_road": "Благовещенский муниципальный район",
+        "object_name": "Благовещенский муниципальный район",
+        "oktmo": "01605000",
+        "population": "26285"
+      },
+      {
+        "municipality_road": "Бурлинский муниципальный район",
+        "object_name": "Бурлинский муниципальный район",
+        "oktmo": "01606000",
+        "population": "8039"
+      },
+      {
+        "municipality_road": "Быстроистокский муниципальный район",
+        "object_name": "Быстроистокский муниципальный район",
+        "oktmo": "01607000",
+        "population": "7479"
+      }
+    ]
+  },
+  "oktmo_new": {
+    "unique_upper_codes": 2336,
+    "ambiguous_codes": 0,
+    "matched_municipal_2024": 1255,
+    "municipal_base": 1455,
+    "share": 0.8625429553264605,
+    "population_numeric": 1255,
+    "examples": [
+      {
+        "municipality_road": "Залесовский муниципальный округ",
+        "object_name": "Залесовский муниципальный округ",
+        "oktmo_municipal": "01512000",
+        "population": "11793"
+      },
+      {
+        "municipality_road": "Алейский муниципальный район",
+        "object_name": "Алейский муниципальный район",
+        "oktmo_municipal": "01601000",
+        "population": "14374"
+      },
+      {
+        "municipality_road": "Алтайский муниципальный район",
+        "object_name": "Алтайский муниципальный район",
+        "oktmo_municipal": "01602000",
+        "population": "26279"
+      },
+      {
+        "municipality_road": "Баевский муниципальный район",
+        "object_name": "Баевский муниципальный район",
+        "oktmo_municipal": "01603000",
+        "population": "8277"
+      },
+      {
+        "municipality_road": "Бийский муниципальный район",
+        "object_name": "Бийский муниципальный район",
+        "oktmo_municipal": "01604000",
+        "population": "32595"
+      },
+      {
+        "municipality_road": "Благовещенский муниципальный район",
+        "object_name": "Благовещенский муниципальный район",
+        "oktmo_municipal": "01605000",
+        "population": "26285"
+      },
+      {
+        "municipality_road": "Бурлинский муниципальный район",
+        "object_name": "Бурлинский муниципальный район",
+        "oktmo_municipal": "01606000",
+        "population": "8039"
+      },
+      {
+        "municipality_road": "Быстроистокский муниципальный район",
+        "object_name": "Быстроистокский муниципальный район",
+        "oktmo_municipal": "01607000",
+        "population": "7479"
+      }
+    ]
+  }
+}
