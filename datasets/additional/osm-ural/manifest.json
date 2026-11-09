@@ -1,0 +1,27 @@
+{
+  "retrieved_at": "2026-11-07T23:38:57.030824+00:00",
+  "snapshot": "261106",
+  "geography": "Ural Federal District, includes Yugra and neighboring regions",
+  "license": "ODbL-1.0; OpenStreetMap contributors",
+  "supplier_md5_verified": true,
+  "files": [
+    {
+      "path": "data/additional/osm-ural/raw/ural-fed-district-261106.osm.pbf.md5",
+      "url": "https://download.geofabrik.de/russia/ural-fed-district-261106.osm.pbf.md5",
+      "bytes": 67,
+      "sha256": "54e3282f135ff97a26684fae17045380d38af4bff0caf69ebeff656d6ac2ea89"
+    },
+    {
+      "path": "data/additional/osm-ural/raw/ural-fed-district-261106.osm.pbf",
+      "url": "https://download.geofabrik.de/russia/ural-fed-district-261106.osm.pbf",
+      "bytes": 396895176,
+      "sha256": "f91d445620021136a8d0e71991c21834440bdf3ccaaa60521762e81a9e5b6074"
+    },
+    {
+      "path": "data/additional/osm-ural/raw/ural-fed-district.html",
+      "url": "https://download.geofabrik.de/russia/ural-fed-district.html",
+      "bytes": 22566,
+      "sha256": "747c96883de668217ec086e82e759fb9592eb16e1ef8f79e7924e7b1d9c39891"
+    }
+  ]
+}

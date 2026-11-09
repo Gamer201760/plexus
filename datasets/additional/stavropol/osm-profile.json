@@ -1,0 +1,49 @@
+{
+  "publisher_md5_matches": true,
+  "replication_timestamp": "2026-11-07T21:21:36Z",
+  "boundary_relation_id": 108081,
+  "boundary_bounds": [
+    40.8460433,
+    43.6584258,
+    45.7159533,
+    46.2365165
+  ],
+  "network_ways": 95306,
+  "poi_features": 4732,
+  "route_relations": 401,
+  "restriction_relations": 1370,
+  "counts": {
+    "highway_ways": 91893,
+    "oneway_ways": 3691,
+    "railway_ways": 3416,
+    "bridge_ways": 1801,
+    "maxweight_ways": 12,
+    "seasonal_ways": 4
+  },
+  "poi_categories": {
+    "railway_station": 80,
+    "public_transport": 2863,
+    "pharmacy": 639,
+    "hospital": 208,
+    "school": 501,
+    "clinic": 146,
+    "university": 46,
+    "healthcare:yes": 10,
+    "healthcare:blood_donation": 1,
+    "airport": 45,
+    "college": 51,
+    "doctors": 86,
+    "healthcare:dentist": 38,
+    "healthcare:occupational_therapist": 1,
+    "healthcare:laboratory": 10,
+    "healthcare:pharmacy": 1,
+    "healthcare:birthing_centre": 2,
+    "healthcare:physiotherapist": 1,
+    "healthcare:centre": 1,
+    "healthcare:rehabilitation": 1,
+    "healthcare:clinic": 1
+  },
+  "source_scope": "North Caucasus Federal District",
+  "derived_scope": "ways intersecting RU-STA boundary; whole crossing ways retained; POI representative points inside boundary",
+  "routable_graph": false
+}

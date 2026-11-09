@@ -1,0 +1,351 @@
+[
+  {
+    "filename": "osmlab-index.html",
+    "url": "https://www.osmlab.ru/",
+    "kind": "osm_index"
+  },
+  {
+    "filename": "geofabrik-index.html",
+    "url": "https://download.geofabrik.de/russia/north-caucasus-fed-district.html",
+    "kind": "osm_index"
+  },
+  {
+    "filename": "statistics-index.html",
+    "url": "https://26.rosstat.gov.ru/compendium_stav/document/33308",
+    "kind": "statistics_index"
+  },
+  {
+    "filename": "medical-index.html",
+    "url": "https://tfomssk.ru/reestry-oms/reestr-mo/",
+    "kind": "medical_index"
+  },
+  {
+    "filename": "transport-index.html",
+    "url": "https://dorogisk.ru/",
+    "kind": "transport_index"
+  },
+  {
+    "filename": "interregional-index.html",
+    "url": "https://mintrans.gov.ru/documents/8/16070",
+    "kind": "bus_registry_index"
+  },
+  {
+    "filename": "stavropol-figures-2025.pdf",
+    "url": "https://26.rosstat.gov.ru/storage/mediabank/%D0%BE%D1%84%D0%B8%D1%86%20%D0%B8%D0%B7%D0%B4%20%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D1%80%D0%B0%D0%B9%20%D0%B2%20%D1%86%D0%B8%D1%84%D1%80%D0%B0%D1%85%20%D0%B7%D0%B0%202020-2024_%D0%BF%D0%B5%D1%87.pdf",
+    "kind": "official_statistics"
+  },
+  {
+    "filename": "transport-plan-2022-2026.html",
+    "url": "https://www.stavropol-gov.ru/doc/53060",
+    "kind": "legal_mirror"
+  },
+  {
+    "filename": "north-caucasus-261107.osm.pbf",
+    "url": "https://download.geofabrik.de/russia/north-caucasus-fed-district-261107.osm.pbf",
+    "kind": "osm_pbf"
+  },
+  {
+    "filename": "north-caucasus-261107.osm.pbf.md5",
+    "url": "https://download.geofabrik.de/russia/north-caucasus-fed-district-261107.osm.pbf.md5",
+    "kind": "publisher_checksum"
+  },
+  {
+    "filename": "medical-2026.xlsx",
+    "url": "https://tfomssk.ru/files/doc/dlya-mo/реестр_МО_2026.xlsx",
+    "kind": "medical_registry",
+    "label": "Реестр медицинских организаций, осуществляющих деятельность в сфере обязательного медицинского страхования на территории Ставропольского края в 2026 году"
+  },
+  {
+    "filename": "medical-2025.xlsx",
+    "url": "https://tfomssk.ru/files/doc/dlya-mo/реестр_МО_2025.xlsx",
+    "kind": "medical_registry",
+    "label": "Реестр медицинских организаций, осуществляющих деятельность в сфере обязательного медицинского страхования на территории Ставропольского края в 2025 году"
+  },
+  {
+    "filename": "interregional-bus-20261020.xlsx",
+    "url": "https://mintrans.gov.ru/file/572006",
+    "kind": "interregional_bus_registry",
+    "label": "Реестр действующих межрегиональных маршрутов регулярных перевозок по состоянию на 20 октября 2026 года (6093 kb)"
+  },
+  {
+    "filename": "bus-index.html",
+    "url": "https://dorogisk.ru/transport/",
+    "kind": "regional_transport_index"
+  },
+  {
+    "filename": "roads-index.html",
+    "url": "https://dorogisk.ru/dorozhnoe-khozyaystvo/",
+    "kind": "regional_transport_index"
+  },
+  {
+    "filename": "opendata-index.html",
+    "url": "https://dorogisk.ru/opendata/",
+    "kind": "regional_transport_index"
+  },
+  {
+    "filename": "bus-detail.html",
+    "url": "https://dorogisk.ru/transport/avtomobilnyy-transport/",
+    "kind": "regional_transport_detail"
+  },
+  {
+    "filename": "road-registry-index.html",
+    "url": "https://dorogisk.ru/dorozhnoe-khozyaystvo/avtomobilnye-dorogi-sk/",
+    "kind": "regional_transport_detail"
+  },
+  {
+    "filename": "road-statistics.html",
+    "url": "https://dorogisk.ru/dorozhnoe-khozyaystvo/statistika-otrasli/",
+    "kind": "regional_transport_detail"
+  },
+  {
+    "filename": "transport-statistics.html",
+    "url": "https://dorogisk.ru/transport/statistika-otrasli/",
+    "kind": "regional_transport_detail"
+  },
+  {
+    "filename": "road-archive-stavropol.docx",
+    "url": "https://dorogisk.ru/upload/iblock/1a9/stavropol.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Город Ставрополь",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-pyatigorsk.docx",
+    "url": "https://dorogisk.ru/upload/iblock/105/pyatigorsk.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Город-курорт Пятигорск",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-nevinnomissk.docx",
+    "url": "https://dorogisk.ru/upload/iblock/2a2/nevinnomissk.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Город Невинномысск",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-lermontov.docx",
+    "url": "https://dorogisk.ru/upload/iblock/ba8/lermontov.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Город Лермонтов",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-kislovodsk.docx",
+    "url": "https://dorogisk.ru/upload/iblock/0a6/kislovodsk.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Город-курорт Кисловодск",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-jeleznovodsk.docx",
+    "url": "https://dorogisk.ru/upload/iblock/49d/jeleznovodsk.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Город-курорт Железноводск",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-essentuka.docx",
+    "url": "https://dorogisk.ru/upload/iblock/9d4/essentuka.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Город-курорт Ессентуки",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-shpakovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/414/shpakovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Шпаковский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-turkmenskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/67b/turkmenskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Туркменский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-trunovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/f02/trunovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Труновский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-stepnovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/90e/stepnovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Степновский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-sovetskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/128/sovetskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Советский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-predgornii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/a2d/predgornii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Предгорный район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-petrovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/437/petrovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Петровский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-novoselickii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/067/novoselickii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Новоселицкий район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-novoaleksandrovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/981/novoaleksandrovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Новоалександровский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-neftekumskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/61a/neftekumskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Нефтекумский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-mineralovodskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/cb2/mineralovodskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Минераловодский городской округ",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-levokumskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/fe7/levokumskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Левокумский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-kurskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/f1d/kurskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Курский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-krasnogvardeiskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/699/krasnogvardeiskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Красногвардейский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-kochubeevskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/e68/kochubeevskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Кочубеевский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-kirovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/2cb/kirovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Кировский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-ipatovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/541/ipatovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Ипатовский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-izobilnenskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/a60/izobilnenskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Изобильненский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-grachevskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/011/grachevskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Грачевский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-georgievskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/e53/georgievskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Георгиевский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-budennovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/d45/budennovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Буденновский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-blagodarnenskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/c73/blagodarnenskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Благодарненский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-arzgirskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/187/arzgirskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Арзгирский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-apanasenkovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/f7a/apanasenkovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Апанасенковский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-andropovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/c55/andropovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Андроповский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "road-archive-aleksandrovskii.docx",
+    "url": "https://dorogisk.ru/upload/iblock/ef9/aleksandrovskii.docx",
+    "kind": "municipal_road_archive_2017",
+    "label": "Александровский район",
+    "published_date": "2017-07-14"
+  },
+  {
+    "filename": "bus-registry-index.html",
+    "url": "https://dorogisk.ru/transport/reestr-marshrutov/",
+    "kind": "regional_bus_registry_index"
+  },
+  {
+    "filename": "predgorny-bus-registry-2024.pdf",
+    "url": "https://pmosk.ru/wp-content/uploads/1068.pdf",
+    "kind": "municipal_bus_registry_archive"
+  },
+  {
+    "filename": "transport-activity.html",
+    "url": "https://dorogisk.ru/activity/transport/",
+    "kind": "ministry_transport_current_navigation"
+  }
+]

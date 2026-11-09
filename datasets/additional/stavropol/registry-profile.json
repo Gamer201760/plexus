@@ -1,0 +1,32 @@
+{
+  "medical": {
+    "2025": {
+      "source_rows": 1152,
+      "organizations": 165,
+      "department_codes": 1149,
+      "distinct_care_address_strings": 924,
+      "excluded_organization_ids": 165,
+      "other_region_source_rows": 1,
+      "coordinates_available": false
+    },
+    "2026": {
+      "source_rows": 1165,
+      "organizations": 161,
+      "department_codes": 1165,
+      "distinct_care_address_strings": 926,
+      "excluded_organization_ids": 4,
+      "other_region_source_rows": 0,
+      "coordinates_available": false
+    }
+  },
+  "interregional_bus": {
+    "routes": 653,
+    "schedule_rows": 7124,
+    "stavropol_stop_rows": 3536,
+    "distinct_stavropol_stop_ids": 39,
+    "selection": "At least one stop with official stop_region_code=26 in either direction; full schedules retained",
+    "routes_rows": 653,
+    "vehicles_rows": 653,
+    "carriers_rows": 703
+  }
+}

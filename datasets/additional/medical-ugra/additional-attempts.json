@@ -1,0 +1,11 @@
+[
+  {
+    "date": "2026-11-08",
+    "url": "https://med-b-ugutskaya-r86.gosweb.gosuslugi.ru",
+    "result": "failed",
+    "curl_exit_code": 60,
+    "error": "SSL certificate problem: unable to get local issuer certificate",
+    "tls_verification_disabled": false,
+    "data_obtained": false
+  }
+]

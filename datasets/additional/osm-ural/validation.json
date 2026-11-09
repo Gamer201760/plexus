@@ -1,0 +1,14 @@
+{
+  "rows": 846243,
+  "unique_osm_way_ids": 846243,
+  "geometry_length_mismatches": 0,
+  "ways_with_less_than_two_vertices": 0,
+  "latitude_range": [
+    51.2581178,
+    73.5166401
+  ],
+  "longitude_range": [
+    55.9968925,
+    83.8870654
+  ]
+}

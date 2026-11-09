@@ -1,0 +1,97 @@
+{
+  "sources": [
+    {
+      "id": "capital_plan",
+      "url": "https://www.dumahmao.ru/povest/0750_3/06/252.pdf",
+      "filename": "capital-investment-plan-2026-2028.pdf",
+      "publisher": "Дума ХМАО — Югры",
+      "source_type": "government_budget_attachment",
+      "retrieved_at": "2026-11-07T23:37:21.031233+00:00",
+      "http_status": "200",
+      "curl_exit": 0,
+      "path": "data/additional/transport-projects-ugra/raw/capital-investment-plan-2026-2028.pdf",
+      "bytes": 1008413,
+      "sha256": "943ac5f4b9cc35630b2226c688428e9dd8bdac6fd3d9a2feb63cd3f261780f5d",
+      "status": "downloaded"
+    },
+    {
+      "id": "kumin_tynkul",
+      "url": "https://www.avtoban.ru/project/tumen-ntavda/",
+      "filename": "kumin-tynkul-contractor.html",
+      "publisher": "Автобан",
+      "source_type": "contractor_project_card",
+      "retrieved_at": "2026-11-07T23:37:20.236809+00:00",
+      "http_status": "200",
+      "curl_exit": 0,
+      "path": "data/additional/transport-projects-ugra/raw/kumin-tynkul-contractor.html",
+      "bytes": 54414,
+      "sha256": "3f01d70bfdf9cbf31ccd47ad33b804dfc6867ac299e31e462bb3483cd0abadc6",
+      "status": "downloaded"
+    },
+    {
+      "id": "ob_opening",
+      "url": "https://npsgk.ru/news/dvizhenie-po-novomu-mostu-cherez-ob-v-surgute-otkryto/",
+      "filename": "ob-bridge-opening-2025.html",
+      "publisher": "Нацпроектстрой",
+      "source_type": "contractor_release",
+      "publication_date": "2025-10-15",
+      "retrieved_at": "2026-11-07T23:37:20.494991+00:00",
+      "http_status": "200",
+      "curl_exit": 0,
+      "path": "data/additional/transport-projects-ugra/raw/ob-bridge-opening-2025.html",
+      "bytes": 47063,
+      "sha256": "e663ec9b66f1c232024af5755a0e2cfc26b1abee849e1c2571d7be8868eadbd5",
+      "status": "downloaded"
+    },
+    {
+      "id": "ob_progress",
+      "url": "https://www.ugrador.ru/news/novosti_nacproekt/1596/",
+      "filename": "ob-bridge-progress-2025.html",
+      "publisher": "Управление автомобильных дорог Югры",
+      "source_type": "road_authority_release",
+      "publication_date": "2025-08-20",
+      "retrieved_at": "2026-11-07T23:37:18.929273+00:00",
+      "http_status": "000",
+      "curl_exit": 60,
+      "status": "failed",
+      "error": "curl: (60) SSL certificate problem: self signed certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n"
+    }
+  ],
+  "derived_files": [
+    {
+      "path": "data/additional/transport-projects-ugra/raw/capital-investment-plan-2026-2028.txt",
+      "bytes": 548310,
+      "sha256": "5e38d966fd75948d2926f8ff668064218c0512511a3eac5a055054a9a5b1e2cb"
+    },
+    {
+      "path": "data/additional/transport-projects-ugra/derived/budget_lines.json",
+      "bytes": 3449,
+      "sha256": "d47e5e659f3af53a5308f4397aeb0da1b8043c52dc4a7e932f3f0988d5de3e6e"
+    },
+    {
+      "path": "data/additional/transport-projects-ugra/derived/kumin_tynkul.txt",
+      "bytes": 4388,
+      "sha256": "2a4f8c4ce34e2386e179634e9e81f16f0f47e3e44a13ec7a7757cdac7377d975"
+    },
+    {
+      "path": "data/additional/transport-projects-ugra/derived/ob_opening.txt",
+      "bytes": 6161,
+      "sha256": "f4e8e2b654d5b4e5374d93b56bac4baa057bd45ed384e4c84575b114870fb4c9"
+    },
+    {
+      "path": "data/additional/transport-projects-ugra/derived/project_facts.json",
+      "bytes": 6631,
+      "sha256": "ba7f2f22fd2b2167a4865ca89e439c75b5f37e2ea3824fbf04426c2f4cbf6df4"
+    },
+    {
+      "path": "data/additional/transport-projects-ugra/derived/projects.json",
+      "bytes": 1562,
+      "sha256": "2c211acbe5f658dc01ba6cbd7c1be305f646d0be1bbdf28676b6054a86e5bf01"
+    },
+    {
+      "path": "data/additional/transport-projects-ugra/derived/validation.json",
+      "bytes": 226,
+      "sha256": "e64be78e17aa7190df72a9bf66b94a662d85ae6261c2146d105a4b9621c93420"
+    }
+  ]
+}

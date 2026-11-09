@@ -1,0 +1,899 @@
+[
+  {
+    "path": "data/additional/stavropol/derived/boundary.geojson",
+    "bytes": 91801,
+    "sha256": "b548e35021f24b8af3073e23a741377971fa0f9d78b4e4e9f9995de6556086d9"
+  },
+  {
+    "path": "data/additional/stavropol/derived/companies_2025.parquet",
+    "bytes": 661402,
+    "sha256": "ffd2c20a5ae75e5a61c984f348ea00d2d32aebc4c30b03628a4082b4bc6bd3fd",
+    "rows": 28590,
+    "schema": "firm_id: int64\ninn: string\nsource_region: string\nregion_id: string\nokved_section: string\nfiled: double\neligible: double\nimputed: double\noutlier: double\ngeocoding_quality: string\nlat: double\nlon: double\ncreation_date: date32[day]\ndissolution_date: date32[day]\nrevenue_rub: double\nstrict: bool\nfns_matched: bool\nincome_rub: decimal128(19, 2)\nexpense_rub: decimal128(19, 2)"
+  },
+  {
+    "path": "data/additional/stavropol/derived/company_settlement.parquet",
+    "bytes": 106727,
+    "sha256": "e925fd065cea43f08c027e0908473c9d5b2e0dca450b5969252ef8196799a2e8",
+    "rows": 16761,
+    "schema": "firm_id: int64\npoint_id: string\ndistance_km: double"
+  },
+  {
+    "path": "data/additional/stavropol/derived/fns_matched_2025.parquet",
+    "bytes": 799956,
+    "sha256": "477d34dfa9863917c73427dbba43dfc6289ef752fbc3f06f5a926140df86f54d",
+    "rows": 17338,
+    "schema": "inn: string\norganization_name: string\ndocument_id: string\ndocument_date: string\nas_of_date: string\nsource_member: string\nincome_rub: decimal128(19, 2)\nexpense_rub: decimal128(19, 2)"
+  },
+  {
+    "path": "data/additional/stavropol/derived/interregional_bus_carriers.csv",
+    "bytes": 150803,
+    "sha256": "78b7de93aae1d55a523620bd88b014b0660990bd2ef2ba48b8b64c632fd3e6f8",
+    "columns": [
+      "source_file",
+      "source_sheet",
+      "source_row",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "rows": 703
+  },
+  {
+    "path": "data/additional/stavropol/derived/interregional_bus_routes.csv",
+    "bytes": 1804475,
+    "sha256": "cf5d6984368cc02767c5d002b37b1d858d37612ea0b3f6eaa50239f3aed68ed8",
+    "columns": [
+      "source_file",
+      "source_sheet",
+      "source_row",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M"
+    ],
+    "rows": 653
+  },
+  {
+    "path": "data/additional/stavropol/derived/interregional_bus_schedules.csv",
+    "bytes": 2511420,
+    "sha256": "bfa03604760865a93a7d5d5897f9c683bc1e9025d8596fe559f82cb8307570a1",
+    "columns": [
+      "route_registry_id",
+      "route_name",
+      "route_ordinal",
+      "stop_name",
+      "stop_region_code",
+      "stop_registry_id",
+      "winter_departure_days",
+      "winter_departure_time",
+      "winter_dwell_time",
+      "winter_arrival_days",
+      "winter_arrival_time",
+      "winter_period",
+      "summer_departure_days",
+      "summer_departure_time",
+      "summer_dwell_time",
+      "summer_arrival_days",
+      "summer_arrival_time",
+      "summer_period",
+      "direction",
+      "source_file",
+      "source_sheet",
+      "source_row",
+      "stop_in_stavropol"
+    ],
+    "rows": 7124
+  },
+  {
+    "path": "data/additional/stavropol/derived/interregional_bus_vehicles.csv",
+    "bytes": 69512,
+    "sha256": "61d0313e9934410bb5bbd60d8165192693d8a48dfc9dc835fac626ad0c7f2bb2",
+    "columns": [
+      "source_file",
+      "source_sheet",
+      "source_row",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "rows": 653
+  },
+  {
+    "path": "data/additional/stavropol/derived/medical_care_rows_2025.csv",
+    "bytes": 2789430,
+    "sha256": "9a4aa27dc16702a66e08a2cdb540b0e1a0d4a9f118b360ce3399b63cceab8c92",
+    "columns": [
+      "ordinal",
+      "region_oktmo",
+      "registry_year_id",
+      "registry_number",
+      "oms_code",
+      "full_name",
+      "short_name",
+      "inn",
+      "kpp",
+      "ogrn",
+      "frmo_oid",
+      "organization_type",
+      "okopf_code",
+      "okopf_name",
+      "okfs_code",
+      "okfs_name",
+      "founder",
+      "organization_address",
+      "organization_address_id",
+      "phone",
+      "email",
+      "care_address",
+      "care_address_id",
+      "department_code",
+      "department_registry_id",
+      "department_name",
+      "department_oid",
+      "care_type",
+      "care_setting",
+      "care_profile",
+      "included_date",
+      "excluded_date",
+      "exclusion_reason",
+      "registry_year",
+      "source_file",
+      "source_sheet",
+      "source_row",
+      "region_code_matches_stavropol"
+    ],
+    "rows": 1152
+  },
+  {
+    "path": "data/additional/stavropol/derived/medical_care_rows_2026.csv",
+    "bytes": 2718581,
+    "sha256": "0c73526056c4a8b07d70f981344ae72050f093e8261bf89a4c1adc4acc8249db",
+    "columns": [
+      "ordinal",
+      "region_oktmo",
+      "registry_year_id",
+      "registry_number",
+      "oms_code",
+      "full_name",
+      "short_name",
+      "inn",
+      "kpp",
+      "ogrn",
+      "frmo_oid",
+      "organization_type",
+      "okopf_code",
+      "okopf_name",
+      "okfs_code",
+      "okfs_name",
+      "founder",
+      "organization_address",
+      "organization_address_id",
+      "phone",
+      "email",
+      "care_address",
+      "care_address_id",
+      "department_code",
+      "department_registry_id",
+      "department_name",
+      "department_oid",
+      "care_type",
+      "care_setting",
+      "care_profile",
+      "included_date",
+      "excluded_date",
+      "exclusion_reason",
+      "registry_year",
+      "source_file",
+      "source_sheet",
+      "source_row",
+      "region_code_matches_stavropol"
+    ],
+    "rows": 1165
+  },
+  {
+    "path": "data/additional/stavropol/derived/medical_organizations_2025.csv",
+    "bytes": 203448,
+    "sha256": "cada3888fc9730f38261c9fa2fd58d8b0135f9117d2ee9b00ebc7428a12b408d",
+    "columns": [
+      "ordinal",
+      "region_oktmo",
+      "registry_year_id",
+      "registry_number",
+      "oms_code",
+      "full_name",
+      "short_name",
+      "inn",
+      "kpp",
+      "ogrn",
+      "frmo_oid",
+      "organization_type",
+      "okopf_code",
+      "okopf_name",
+      "okfs_code",
+      "okfs_name",
+      "founder",
+      "organization_address",
+      "organization_address_id",
+      "included_date",
+      "excluded_date",
+      "exclusion_reason",
+      "registry_year",
+      "source_file",
+      "source_sheet",
+      "source_row",
+      "care_source_rows"
+    ],
+    "rows": 165
+  },
+  {
+    "path": "data/additional/stavropol/derived/medical_organizations_2026.csv",
+    "bytes": 181542,
+    "sha256": "44d07d3022170b24f2645ed400cb45b6b234eb5c283ff0c2d78be0cf28e62228",
+    "columns": [
+      "ordinal",
+      "region_oktmo",
+      "registry_year_id",
+      "registry_number",
+      "oms_code",
+      "full_name",
+      "short_name",
+      "inn",
+      "kpp",
+      "ogrn",
+      "frmo_oid",
+      "organization_type",
+      "okopf_code",
+      "okopf_name",
+      "okfs_code",
+      "okfs_name",
+      "founder",
+      "organization_address",
+      "organization_address_id",
+      "included_date",
+      "excluded_date",
+      "exclusion_reason",
+      "registry_year",
+      "source_file",
+      "source_sheet",
+      "source_row",
+      "care_source_rows"
+    ],
+    "rows": 161
+  },
+  {
+    "path": "data/additional/stavropol/derived/network_ways.parquet",
+    "bytes": 15375220,
+    "sha256": "3e63f7aa63cbec320edaaa8a5531866f88778dda8e52df3666adc33617a12161",
+    "rows": 95306,
+    "schema": "name: string\nhighway: string\nrailway: string\nroute: string\nref: string\nbridge: string\ntunnel: string\nsurface: string\noneway: string\naccess: string\nmotor_vehicle: string\nmaxspeed: string\nmaxweight: string\nseasonal: string\nosm_way_id: int64\nversion: int64\nnode_ids: list<element: int64>\n  child 0, element: int64\nlon: list<element: double>\n  child 0, element: double\nlat: list<element: double>\n  child 0, element: double\ntags_json: string"
+  },
+  {
+    "path": "data/additional/stavropol/derived/nonroad_links_prior_search.csv",
+    "bytes": 155,
+    "sha256": "9723da691f59fac9c1a320b1bada40d6bf5f5e1de520a70963f4a42814787c77",
+    "columns": [
+      "from_id",
+      "to_id",
+      "from_name",
+      "to_name",
+      "mode",
+      "vehicle",
+      "km",
+      "freq_per_week",
+      "freq_note",
+      "season",
+      "months",
+      "road_ref",
+      "crossing_lat",
+      "crossing_lon",
+      "confidence",
+      "source_url",
+      "source_date"
+    ],
+    "rows": 0
+  },
+  {
+    "path": "data/additional/stavropol/derived/osm_places.csv",
+    "bytes": 1168865,
+    "sha256": "fbbb10d6d0c98b20965b14dd877128fde828b1c51c304305e47ba884abd865cd",
+    "columns": [
+      "osm_type",
+      "osm_id",
+      "category",
+      "name",
+      "lat",
+      "lon",
+      "location_method",
+      "tags_json"
+    ],
+    "rows": 4732
+  },
+  {
+    "path": "data/additional/stavropol/derived/osm_places.parquet",
+    "bytes": 220043,
+    "sha256": "fbcb02d41b05ee84d5aca07533d989344008200543d6dd32b9088f7c64ada791",
+    "rows": 4732,
+    "schema": "osm_type: string\nosm_id: int64\ncategory: string\nname: string\nlat: double\nlon: double\nlocation_method: string\ntags_json: string"
+  },
+  {
+    "path": "data/additional/stavropol/derived/osm_relations.parquet",
+    "bytes": 292568,
+    "sha256": "121694d137dd4491d8f5deff9a56520acc9a37d1f66c13531ad26d8e4f978980",
+    "rows": 1771,
+    "schema": "osm_relation_id: int64\ntype: string\nroute: string\nname: string\nref: string\ntags_json: string\nmembers_json: string"
+  },
+  {
+    "path": "data/additional/stavropol/derived/region_economy.csv",
+    "bytes": 306,
+    "sha256": "32e872b9fcd6b67fb381fd11a46cb084bfc803b912bbad110ee52f4aa4c446e2",
+    "columns": [
+      "region_id",
+      "name",
+      "population",
+      "company_rows",
+      "revenue_rows",
+      "strict_rows",
+      "strict_revenue_rows",
+      "strict_revenue_rub",
+      "negative_revenue_rows",
+      "fns_matched_rows",
+      "strict_fns_income_rub",
+      "strict_fns_rows"
+    ],
+    "rows": 1
+  },
+  {
+    "path": "data/additional/stavropol/derived/remote_tax_status.csv",
+    "bytes": 211205,
+    "sha256": "a24a79537cc458112809a3678270b5fa1b2860cd39af0761819ff81fa91e2e88",
+    "columns": [
+      "point_id",
+      "name",
+      "status",
+      "all_season_road",
+      "note",
+      "source_url"
+    ],
+    "rows": 297
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-aleksandrovskii.txt",
+    "bytes": 14529,
+    "sha256": "63979a7f591ffe55045d8b3216fc9cc8e3c574592bcbb2d6595dd60d6e0ad034"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-andropovskii.txt",
+    "bytes": 11736,
+    "sha256": "ca3680562ec00cdc31b92894ef612a521abc5da45c4ee3ea287cff1651378c91"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-apanasenkovskii.txt",
+    "bytes": 9057,
+    "sha256": "af1a561dd2011d08e26c6222cafec68088eda0c22a57ff26279287992317f3d4"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-arzgirskii.txt",
+    "bytes": 10750,
+    "sha256": "8eeb2e90b6f4838fc4267c927e1e4dbeae1fa9a55fb2a4dcd5d994e2cf7f9f80"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-blagodarnenskii.txt",
+    "bytes": 14409,
+    "sha256": "9ea910b3b66f484955cd0f0f146a16df6015456b451dc14865ca1384ce96ad14"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-budennovskii.txt",
+    "bytes": 17335,
+    "sha256": "925d7eb762d71f7931856a5d98af07348437e3e53a551e016b8ce0c67a6bef42"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-essentuka.txt",
+    "bytes": 5807,
+    "sha256": "eb3bc0562ef524b4e420c4748f2409996f84d5ad3c80a100f625b5a4e46fd109"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-georgievskii.txt",
+    "bytes": 16587,
+    "sha256": "fb3f3262c330f81a2cc4a6f470e7465b4a0ad5f1aabf766c4ddffff0ce95be8f"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-grachevskii.txt",
+    "bytes": 11890,
+    "sha256": "1a3120f98da58634cc5b8a8e953f9980b850afad223241c2634e08073446adff"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-ipatovskii.txt",
+    "bytes": 11694,
+    "sha256": "a1b7b2256dab7d580a37d137158a7230476d874aca11e51ea14688849e84bb18"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-izobilnenskii.txt",
+    "bytes": 14106,
+    "sha256": "8f77c8c728efb7fec514fd7c517a30cee72962c1462fc0363dc3a149943a40db"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-jeleznovodsk.txt",
+    "bytes": 4984,
+    "sha256": "69ebd947df66b73b9fa4857cdccb69a656dc04386005f05fa155dc067f9da1e5"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-kirovskii.txt",
+    "bytes": 14427,
+    "sha256": "d70ba6e6c44641210bb5af476fe67f4ccb6e2a9de6f44ebe0c706e8d4f589c6b"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-kislovodsk.txt",
+    "bytes": 6801,
+    "sha256": "06eebffb5da716e319e7b14b47c4f8620818437a04ebe21d1c0cb7795f4d207a"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-kochubeevskii.txt",
+    "bytes": 14416,
+    "sha256": "51fea651ca5f4333fa2cbc595ba984ab35910cc73884fe798bb9f6eecf5f9764"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-krasnogvardeiskii.txt",
+    "bytes": 12968,
+    "sha256": "b805dd227aa104c43997ebe0f67ca2e0e7840d20c7980b486347bb45615d2de8"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-kurskii.txt",
+    "bytes": 15774,
+    "sha256": "a3c870e100fc36a112f7b2dc2bffaf82bdbea0bac9aef60743e19def5a2dfda5"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-lermontov.txt",
+    "bytes": 3511,
+    "sha256": "088778271583db2a9ae8014c93748effe38aad17213a362b94dff93c3a2244fd"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-levokumskii.txt",
+    "bytes": 10696,
+    "sha256": "42f1578af59b8d8e2b4906b65faff870d6634805080da91ba14beeaf7aa84a01"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-mineralovodskii.txt",
+    "bytes": 14768,
+    "sha256": "a73cafc83552149f38bcc843568064c21201bdb9f40bd42c9f4618127b5f7711"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-neftekumskii.txt",
+    "bytes": 13986,
+    "sha256": "9db8bed65d4806f11ea1ccee035e4a70308f07b40fe0d1c97c01b10749905f69"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-nevinnomissk.txt",
+    "bytes": 6461,
+    "sha256": "ea41340be8de40bd4d627bdcf99a898d25ae9e6d17a96f070ed4f4b07936a683"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-novoaleksandrovskii.txt",
+    "bytes": 14109,
+    "sha256": "5392401bcf65b35378b4722b5d854846eea3118843389dd818f74faa6b99c0a8"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-novoselickii.txt",
+    "bytes": 9917,
+    "sha256": "1a97f890c2919eb21af097aa52c64a1e749104afb28f93109bd5e504741d3a63"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-petrovskii.txt",
+    "bytes": 13983,
+    "sha256": "d5482c0d433d5db3438a22907d77bed48153caeef8eb803cd0966bd75d3fc37a"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-predgornii.txt",
+    "bytes": 15587,
+    "sha256": "151c41be39f99f50e88a09ead81d2633f185e119b39d71932b37ef66787b4fc7"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-pyatigorsk.txt",
+    "bytes": 9791,
+    "sha256": "a3583da2c671787c35bbc057adda98b5f107f3e3e0fe0a3ae47bf1a87f6f6805"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-shpakovskii.txt",
+    "bytes": 13986,
+    "sha256": "f52ce7736e3c689f6ee8da1a680bf532a45552f85662c0cca0f9de6f87ca2c50"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-sovetskii.txt",
+    "bytes": 12380,
+    "sha256": "7d9398d2a53196b44cd741fc3825858ac892e822e2dc10f9ac68c7a7d8a447df"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-stavropol.txt",
+    "bytes": 17806,
+    "sha256": "1ef4293899a80f0477e96542dcac0322c14d61dc2bfa32b9f691d436f1ff95a3"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-stepnovskii.txt",
+    "bytes": 12806,
+    "sha256": "cfd675cfd17e29aa3ab8d67abff34d182900310d34c1e5f0f965074765dacda7"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-trunovskii.txt",
+    "bytes": 9277,
+    "sha256": "46337f7adcf740d447d8c6fcb233d7323693ec49e4439d2a004b70ceacc7a349"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road-archive-turkmenskii.txt",
+    "bytes": 9854,
+    "sha256": "3ab2cc132a28e55d2f580262e2dc0ade4d77016597ad5ad6091aa313f95db4f0"
+  },
+  {
+    "path": "data/additional/stavropol/derived/road_archive_tables.csv",
+    "bytes": 942990,
+    "sha256": "0337421933251a3296942c34803338c5a3deece3d1d0070c0ce062b010bffd09",
+    "columns": [
+      "source_file",
+      "source_url",
+      "municipality_source_label",
+      "published_date",
+      "table_number",
+      "row_number",
+      "cells_json",
+      "column_spans_json",
+      "vertical_merges_json",
+      "normalized"
+    ],
+    "rows": 2880
+  },
+  {
+    "path": "data/additional/stavropol/derived/sector_economy.csv",
+    "bytes": 931,
+    "sha256": "1ebb1e93cbe707e46d17bdbd294f7c5663ef6873ffd49891645163dd36d0ce9b",
+    "columns": [
+      "region_id",
+      "sector",
+      "company_rows",
+      "revenue_rows",
+      "strict_rows",
+      "strict_revenue_rows",
+      "strict_revenue_rub"
+    ],
+    "rows": 21
+  },
+  {
+    "path": "data/additional/stavropol/derived/settlement_economy.csv",
+    "bytes": 76462,
+    "sha256": "a12baf49983db4138c14007ee8f80d9e6f70e879b96de3a7186f35829c43a73e",
+    "columns": [
+      "point_id",
+      "region_id",
+      "name",
+      "population",
+      "lat",
+      "lon",
+      "company_rows",
+      "revenue_rows",
+      "revenue_rub",
+      "market_weight_rub",
+      "fns_matched_rows",
+      "max_assignment_km"
+    ],
+    "rows": 760
+  },
+  {
+    "path": "data/additional/stavropol/derived/settlement_lights.csv",
+    "bytes": 38094,
+    "sha256": "1d2c189217d31d46d403ea6760fdf3ff4a69a73d7920254fe9d7a42c94c6cd98",
+    "columns": [
+      "point_id",
+      "year",
+      "raw_value",
+      "status"
+    ],
+    "rows": 1520
+  },
+  {
+    "path": "data/additional/stavropol/derived/settlements.csv",
+    "bytes": 103312,
+    "sha256": "e701d13a02f46b63bccc9dd948ba067ebc396b06dd5f3bc07f22cab5bb0f74a8",
+    "columns": [
+      "point_id",
+      "name",
+      "region_id",
+      "mun_upper",
+      "population",
+      "lat",
+      "lon"
+    ],
+    "rows": 760
+  },
+  {
+    "path": "data/additional/stavropol/derived/settlements_input.csv",
+    "bytes": 101008,
+    "sha256": "351c5d9d2d71bb777d4d673af88599472cbbb20f7d762a62cefba162a510328c",
+    "columns": [
+      "point_id",
+      "name",
+      "mun_upper",
+      "population",
+      "lat",
+      "lon",
+      "is_district_center"
+    ],
+    "rows": 760
+  },
+  {
+    "path": "data/additional/stavropol/raw/bus-detail.html",
+    "bytes": 46360,
+    "sha256": "5f5d983cccc42e15b709a48043e88299724b90f0f1d492b1e856a4c47be4e27d"
+  },
+  {
+    "path": "data/additional/stavropol/raw/bus-index.html",
+    "bytes": 44967,
+    "sha256": "a07326efed36ee5bb788ce2bab52ebcee89310022eef1affd12b92c470d6cff0"
+  },
+  {
+    "path": "data/additional/stavropol/raw/bus-registry-index.html",
+    "bytes": 49491,
+    "sha256": "68722564eeaf9a8e501891353b9fb818e7d3b06b2875c213faec764cde234ca7"
+  },
+  {
+    "path": "data/additional/stavropol/raw/geofabrik-index.html",
+    "bytes": 24647,
+    "sha256": "0be05caf74dcfeae78a6835d9952937cb918e2dbff50f0841d038cf37a7d9978"
+  },
+  {
+    "path": "data/additional/stavropol/raw/interregional-bus-20261020.xlsx",
+    "bytes": 6239265,
+    "sha256": "cf389623b1c6fd3e2f5b88c2fcfae088478576a09fcf4cc2d27b76d31f21429e"
+  },
+  {
+    "path": "data/additional/stavropol/raw/interregional-index.html",
+    "bytes": 69311,
+    "sha256": "f28c64f2b95a36198e62fac3d9b24c17afb15422b5613ef09bf1fadbecf5c396"
+  },
+  {
+    "path": "data/additional/stavropol/raw/medical-2025.xlsx",
+    "bytes": 302461,
+    "sha256": "e389ea802ee55381eaeb56c6527470ad429d901b680d172c6ab807eda9d1be55"
+  },
+  {
+    "path": "data/additional/stavropol/raw/medical-2026.xlsx",
+    "bytes": 302916,
+    "sha256": "ad0b318eb87b56af6d381cd63d414d292fbf3a3adf1dbdca64d3c7290eec2c01"
+  },
+  {
+    "path": "data/additional/stavropol/raw/medical-index.html",
+    "bytes": 194250,
+    "sha256": "2c318dec92b21e9c8d0eb324a6c9aebaf7cdeb2ae4324620195fb362d92b9c5b"
+  },
+  {
+    "path": "data/additional/stavropol/raw/north-caucasus-261107.osm.pbf",
+    "bytes": 129493113,
+    "sha256": "a6db83fb55e03cc9730da9aff42730003b7d1591a38d4cf0fd15d4fe66743701"
+  },
+  {
+    "path": "data/additional/stavropol/raw/north-caucasus-261107.osm.pbf.md5",
+    "bytes": 77,
+    "sha256": "71a757b96f998b7cf78cf28da3000b94f9d03fe063bcc92f62b5fb12c087e6d1"
+  },
+  {
+    "path": "data/additional/stavropol/raw/predgorny-bus-registry-2024.pdf",
+    "bytes": 381836,
+    "sha256": "c93da42e24643c2c1fd39e065b9a464e65af5fa8eec6ad8fb583cbf828709adc"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-aleksandrovskii.docx",
+    "bytes": 62830,
+    "sha256": "8d2b5eba00ba902110188d0250e1d25dc0dd4dd44bb7800385f1b06d687c333d"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-andropovskii.docx",
+    "bytes": 40434,
+    "sha256": "c2d707b52c499d842bf4fae9ce0c5c7ea99b0130ec99ea7aba4833854c107421"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-apanasenkovskii.docx",
+    "bytes": 37118,
+    "sha256": "317d4878c50bde2d3d6292f7a003d6989e19d2c1dcda648ae479f7ffd40fcb39"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-arzgirskii.docx",
+    "bytes": 38928,
+    "sha256": "0617e53d97884abfb6ddf385e24345e7cbf43b3c4969eb407b22b963c6f895b2"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-blagodarnenskii.docx",
+    "bytes": 40341,
+    "sha256": "04e93241a2702caa5ab11217fea280178fd48aa4387c05756f2e77e8b323c122"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-budennovskii.docx",
+    "bytes": 42392,
+    "sha256": "e58619c33e4eaac063e5a01a9a597c71a0c30e6e977bbb9ba85db72a72959891"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-essentuka.docx",
+    "bytes": 51586,
+    "sha256": "0ad41823194fbce5d905d59d4de37f5d39cae30ebf3bb39464b85a0c275d09fb"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-georgievskii.docx",
+    "bytes": 45457,
+    "sha256": "dd5b0252803454f47768c9fbd52f315c3981989b0463f77ef92f790a322d8fab"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-grachevskii.docx",
+    "bytes": 37945,
+    "sha256": "e23406e85b031df99e26e2ba8040f708f688b1be06e6379bcc782549e473deb7"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-ipatovskii.docx",
+    "bytes": 59931,
+    "sha256": "1fefa0107b2174baade8ee3f1adf42767bf30544a460e1709b2ba0298ea2ef4a"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-izobilnenskii.docx",
+    "bytes": 39524,
+    "sha256": "5b2de10f0405cfeef5e2234ba6676450615146c30d6becdaac6aae969f8d91fe"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-jeleznovodsk.docx",
+    "bytes": 49097,
+    "sha256": "a10b1ddf4132e8ea4da951cafc19ad1e71490650b861287a2e522eeb16a89cc4"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-kirovskii.docx",
+    "bytes": 43916,
+    "sha256": "7839496e3b13a7402cc05da625afe407b21bb0f5eb46d11934103650a42fa46e"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-kislovodsk.docx",
+    "bytes": 51142,
+    "sha256": "57bb461e9e3e804ca32d5da08af0a5d35a9279a67fce435a4a5446312ae1cc61"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-kochubeevskii.docx",
+    "bytes": 62504,
+    "sha256": "ab3e3467aa089fb9d6bbf42b69f16b26907dd242dd259e6848d27e5f7daae104"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-krasnogvardeiskii.docx",
+    "bytes": 61778,
+    "sha256": "16d0c60e0e5f00acdfb238b02514255a0ee91d41b21f4bb59936a59aa6970f24"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-kurskii.docx",
+    "bytes": 42260,
+    "sha256": "70f1d5a4b2f3045ab0e3372b86040207a251f4afd671d13095a8d11b9892a9de"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-lermontov.docx",
+    "bytes": 47105,
+    "sha256": "38c3ddfd01fe25f4cdeba68e1e37ceddee61c5192f8c3e8936ab4722d7692db9"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-levokumskii.docx",
+    "bytes": 34834,
+    "sha256": "c6f793429260f79cafda8d86dc7e988764930324dabd1254f6f97cc676acc3cd"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-mineralovodskii.docx",
+    "bytes": 37705,
+    "sha256": "656fa27797d60c71a881e3c6a7efce82407abc3c1a6f68915f2ea44f1b568550"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-neftekumskii.docx",
+    "bytes": 36254,
+    "sha256": "84709ba34b0cf9dd56e87237a02cdf79251eb872ac0ef39e612e1b9b5831ef90"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-nevinnomissk.docx",
+    "bytes": 49894,
+    "sha256": "2175845bc9dd8464b2a568a28dcfda8e2dd86a81321ae5e223e4fa6348109a2b"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-novoaleksandrovskii.docx",
+    "bytes": 37355,
+    "sha256": "78b641c7dd324d56156e3f5bcf517acdd0dc0d97cb3c4631c09e8f2c6124f677"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-novoselickii.docx",
+    "bytes": 36512,
+    "sha256": "645bdabadb2bf9fcc712e16b0bafb166089cc6777c7c05c6a8363efac666cfa2"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-petrovskii.docx",
+    "bytes": 36622,
+    "sha256": "7f0a86f97cd8f3c239a4774d22514f19e9c602034628cf3ca76510a6ea5b8f03"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-predgornii.docx",
+    "bytes": 42074,
+    "sha256": "3769a1e026624a5f71b2e202f6b152f0b31029ad6a82b8cda976cc88716d9610"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-pyatigorsk.docx",
+    "bytes": 49893,
+    "sha256": "8b8dd58e9cd229f5fb0b511536cad6e86ec0a0c50ffdfc7e6a93b21cc0802bde"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-shpakovskii.docx",
+    "bytes": 39381,
+    "sha256": "42779d4ee427a82ef214815017517de57be183e47378847e6d771143486e3bed"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-sovetskii.docx",
+    "bytes": 35960,
+    "sha256": "7264b3f718973dac23fba3ace8e8040e619fcd075d5caa9f36dd75a292d2dd4a"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-stavropol.docx",
+    "bytes": 58909,
+    "sha256": "a0f720befc131ab56d6a4897fbea2303af05ed35a4198807329ef20cdb30f1b8"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-stepnovskii.docx",
+    "bytes": 35378,
+    "sha256": "c68512643cc6ab7637c0062fd610fc0639727d2efdd2da4cf93af20366bd8d06"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-trunovskii.docx",
+    "bytes": 36553,
+    "sha256": "e26c694f683a09e45ba2bbbcb77dce88f634edd0abb27b331bb676081dd4c576"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-archive-turkmenskii.docx",
+    "bytes": 34332,
+    "sha256": "1ea5940e98501347b665c341af69647755ef3da52eeae0e7294e63b514e0d71c"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-registry-index.html",
+    "bytes": 71595,
+    "sha256": "efaeea7505e8b5a3f8c0d95e4af3703147415c8ff67160771dbd794ab653203e"
+  },
+  {
+    "path": "data/additional/stavropol/raw/road-statistics.html",
+    "bytes": 49185,
+    "sha256": "ce01e2c7cd3953f9ce1c9d26c68d14932de8cc7f1550390b91b3da0080ac448a"
+  },
+  {
+    "path": "data/additional/stavropol/raw/roads-index.html",
+    "bytes": 49284,
+    "sha256": "41e6d7db93206847dff23f050e25e55f6c2f5f1e9d65ca3e49cd4f00e247a7e3"
+  },
+  {
+    "path": "data/additional/stavropol/raw/transport-activity.html",
+    "bytes": 48473,
+    "sha256": "420d3c7fb0c1e7dbf6b1edfb6d45f75b670618ef0b8863879dc882de0962eafd"
+  },
+  {
+    "path": "data/additional/stavropol/raw/transport-index.html",
+    "bytes": 112603,
+    "sha256": "088a8ded2940a2d2c8f4b2cd96ea9ad6567a380b36b8b36548604ccd85816fe2"
+  },
+  {
+    "path": "data/additional/stavropol/raw/transport-plan-2022-2026.html",
+    "bytes": 2302,
+    "sha256": "8f2a44f4c23bd954bc59af54bb4905f8505705c38c68530bb96cf41e81af864a"
+  },
+  {
+    "path": "data/additional/stavropol/raw/transport-statistics.html",
+    "bytes": 53628,
+    "sha256": "39278fca1daf723138232652568ad9060a8244bcf92b35ef7e31bf1e73b4d01e"
+  }
+]

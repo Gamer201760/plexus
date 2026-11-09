@@ -1,0 +1,67 @@
+{
+  "settlements": {
+    "rows": 760,
+    "path": "data/additional/stavropol/derived/settlements.csv",
+    "sha256": "e701d13a02f46b63bccc9dd948ba067ebc396b06dd5f3bc07f22cab5bb0f74a8"
+  },
+  "companies_2025": {
+    "rows": 28590,
+    "path": "data/additional/stavropol/derived/companies_2025.parquet",
+    "sha256": "ffd2c20a5ae75e5a61c984f348ea00d2d32aebc4c30b03628a4082b4bc6bd3fd"
+  },
+  "fns_matched_2025": {
+    "rows": 17338,
+    "path": "data/additional/stavropol/derived/fns_matched_2025.parquet",
+    "sha256": "477d34dfa9863917c73427dbba43dfc6289ef752fbc3f06f5a926140df86f54d"
+  },
+  "settlement_economy": {
+    "rows": 760,
+    "path": "data/additional/stavropol/derived/settlement_economy.csv",
+    "sha256": "a12baf49983db4138c14007ee8f80d9e6f70e879b96de3a7186f35829c43a73e"
+  },
+  "region_economy": {
+    "rows": 1,
+    "path": "data/additional/stavropol/derived/region_economy.csv",
+    "sha256": "32e872b9fcd6b67fb381fd11a46cb084bfc803b912bbad110ee52f4aa4c446e2"
+  },
+  "sector_economy": {
+    "rows": 21,
+    "path": "data/additional/stavropol/derived/sector_economy.csv",
+    "sha256": "1ebb1e93cbe707e46d17bdbd294f7c5663ef6873ffd49891645163dd36d0ce9b"
+  },
+  "settlement_lights": {
+    "rows": 1520,
+    "path": "data/additional/stavropol/derived/settlement_lights.csv",
+    "sha256": "1d2c189217d31d46d403ea6760fdf3ff4a69a73d7920254fe9d7a42c94c6cd98"
+  },
+  "company_settlement": {
+    "rows": 16761,
+    "path": "data/additional/stavropol/derived/company_settlement.parquet",
+    "sha256": "e925fd065cea43f08c027e0908473c9d5b2e0dca450b5969252ef8196799a2e8"
+  },
+  "settlements_input.csv": {
+    "source": "data_manual/regions_input/07000000.csv",
+    "rows": 760,
+    "path": "data/additional/stavropol/derived/settlements_input.csv",
+    "sha256": "351c5d9d2d71bb777d4d673af88599472cbbb20f7d762a62cefba162a510328c"
+  },
+  "remote_tax_status.csv": {
+    "source": "data_manual/regions/07000000_remote.csv",
+    "rows": 297,
+    "path": "data/additional/stavropol/derived/remote_tax_status.csv",
+    "sha256": "a24a79537cc458112809a3678270b5fa1b2860cd39af0761819ff81fa91e2e88"
+  },
+  "nonroad_links_prior_search.csv": {
+    "source": "data_manual/regions/07000000.csv",
+    "rows": 0,
+    "path": "data/additional/stavropol/derived/nonroad_links_prior_search.csv",
+    "sha256": "9723da691f59fac9c1a320b1bada40d6bf5f5e1de520a70963f4a42814787c77"
+  },
+  "checks": {
+    "settlement_duplicates": 0,
+    "geography": "RFSD source region mapped to atlas code07000000; not INN prefix",
+    "source_database": "data/additional.duckdb",
+    "financial_units": "company revenue_rub and FNS income_rub/expense_rub in RUB; distinct concepts",
+    "lights_units": "raw source integer; not calibrated radiance"
+  }
+}

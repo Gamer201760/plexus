@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "filename": "road-program.html",
+      "url": "https://www.ugrador.ru/about/programma-dorozhnyh-rabot/",
+      "retrieved_at": "2026-11-07T23:36:34.017096+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 32794,
+      "sha256": "22127d236cbbdd2070df8a23b0e22c0c551837ce5e016c77587f77ac5d48bfb2",
+      "path": "data/additional/road-assets-ugra/raw/road-program.html"
+    },
+    {
+      "filename": "home.html",
+      "url": "https://www.ugrador.ru/",
+      "retrieved_at": "2026-11-07T23:36:36.103957+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 51322,
+      "sha256": "59a69a05924ea0b6a6a2a147c629e12e26e5bafa009d4fa977d750225529a0ec",
+      "path": "data/additional/road-assets-ugra/raw/home.html"
+    },
+    {
+      "filename": "roads-index.html",
+      "url": "https://www.ugrador.ru/avtomobilistam/regionalnye-i-mezhmunitsipalnye-avtomobilnye-dorogi/perechen-i-karta-avtomobilnykh-dorog-na-01-01-2018-g/",
+      "retrieved_at": "2026-11-07T23:37:19.346488+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 31189,
+      "sha256": "0f1af23150c5c26e7bc9c00f7cdcaaa3b5c7f82c4e6f23d5760f515f5f162ae1",
+      "path": "data/additional/road-assets-ugra/raw/roads-index.html"
+    },
+    {
+      "filename": "development.html",
+      "url": "https://www.ugrador.ru/avtomobilistam/razvitie-seti-regionalnykh-i-mezhmunitsipalnykh-avtomobilnykh-dorog/",
+      "retrieved_at": "2026-11-07T23:37:20.197169+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 31758,
+      "sha256": "5c30c3f834e44d2cd9d36f7ba3d5757faee972fea59461e04d5302e66d06dfa6",
+      "path": "data/additional/road-assets-ugra/raw/development.html"
+    },
+    {
+      "filename": "Prikaz-remonty-_-208-ot-13.12.2023_dlya-sayta.pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/d9e/9pr8pi22z6p6cuwmdx1uw8gl5iaot4gv/Prikaz-remonty-_-208-ot-13.12.2023_dlya-sayta.pdf",
+      "retrieved_at": "2026-11-07T23:37:21.040432+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 4547664,
+      "sha256": "cb7483ba80387473e395b194570373dcc430bc68caa72923bd5163bed98d4dcc",
+      "path": "data/additional/road-assets-ugra/raw/Prikaz-remonty-_-208-ot-13.12.2023_dlya-sayta.pdf"
+    },
+    {
+      "filename": "Programma_dorozhnykh_rabot_2023_2027_KHMAO_YUgra_ITOG_26.09.2022_korr.04.10.22_.xlsx",
+      "url": "https://www.ugrador.ru/upload/medialibrary/982/zujyvgbblr3yfjc331vzcbffdi7d67m6/Programma_dorozhnykh_rabot_2023_2027_KHMAO_YUgra_ITOG_26.09.2022_korr.04.10.22_.xlsx",
+      "retrieved_at": "2026-11-07T23:37:24.247872+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 709017,
+      "sha256": "bf67ffd4fd479dfaa478830268158215e03cbe6cf9d990e31ad8a5d54a930c2e",
+      "path": "data/additional/road-assets-ugra/raw/Programma_dorozhnykh_rabot_2023_2027_KHMAO_YUgra_ITOG_26.09.2022_korr.04.10.22_.xlsx"
+    },
+    {
+      "filename": "Prilozhenie_1_Proverka_KHMAO-_1_.xlsx",
+      "url": "https://www.ugrador.ru/upload/medialibrary/a22/eizg2adqcxuagoob2jl06xseckfi7lss/Prilozhenie_1_Proverka_KHMAO-_1_.xlsx",
+      "retrieved_at": "2026-11-07T23:37:25.236966+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 570342,
+      "sha256": "8ad8e861f9a1673d78e68c1cd8318bf00afa4fd3b3e37ce7e3b1017b65adee2f",
+      "path": "data/additional/road-assets-ugra/raw/Prilozhenie_1_Proverka_KHMAO-_1_.xlsx"
+    },
+    {
+      "filename": "Zaklyuchenie_KHMAO.PDF",
+      "url": "https://www.ugrador.ru/upload/medialibrary/ae8/hb9jt29auh36dkwne36gzsgzu6jhvdl0/Zaklyuchenie_KHMAO.PDF",
+      "retrieved_at": "2026-11-07T23:37:26.131997+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 524561,
+      "sha256": "9a31aa33fd753e1c125eb6f6d28763e3c948e81d7fef053dc54bd362bbbe9071",
+      "path": "data/additional/road-assets-ugra/raw/Zaklyuchenie_KHMAO.PDF"
+    },
+    {
+      "filename": "Perechen-avtozimnikov-obshchego-polzovaniya-2024_2025-gg.pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/6f5/otigp4t7sud4d5evm1642bjk10m3e0yl/Perechen-avtozimnikov-obshchego-polzovaniya-2024_2025-gg.pdf",
+      "retrieved_at": "2026-11-07T23:37:51.522868+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 203395,
+      "sha256": "fc99eabeadba5e7799a8b3df15ac63e6204d1df4bcd210e54167f0063e2c4873",
+      "path": "data/additional/road-assets-ugra/raw/Perechen-avtozimnikov-obshchego-polzovaniya-2024_2025-gg.pdf"
+    },
+    {
+      "filename": "Prikaz-po-protyazhennosti-na-01.01.2026-g..pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/76a/jy5ipxe0ex3jksxvr51vdn65gpvmt094/Prikaz-po-protyazhennosti-na-01.01.2026-g..pdf",
+      "retrieved_at": "2026-11-07T23:37:52.323648+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 195195,
+      "sha256": "13a7605727172708e16cad48a780a7cdbaff734e68768b41a72b3a2c00b5a01a",
+      "path": "data/additional/road-assets-ugra/raw/Prikaz-po-protyazhennosti-na-01.01.2026-g..pdf"
+    },
+    {
+      "filename": "Perechen-zimnikh-avtodorog-i-ledovykh-pereprav-obshchego-polzovaniya_na-01.01.2024.pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/826/429rjdp2oaasunif1x6irdbeosmp9mhg/Perechen-zimnikh-avtodorog-i-ledovykh-pereprav-obshchego-polzovaniya_na-01.01.2024.pdf",
+      "retrieved_at": "2026-11-07T23:37:53.118285+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 206043,
+      "sha256": "8e08bf9efcf19a466df4ec99943d4b9d3666c0eb1aff716ed1c458e6e80f6abc",
+      "path": "data/additional/road-assets-ugra/raw/Perechen-zimnikh-avtodorog-i-ledovykh-pereprav-obshchego-polzovaniya_na-01.01.2024.pdf"
+    },
+    {
+      "filename": "Itogi-2024.pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/472/huw61n3g4dkcpz6v56kviq1vhu8ddtlc/Itogi-2024.pdf",
+      "retrieved_at": "2026-11-07T23:37:53.917169+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 83041,
+      "sha256": "ee8dddf5354d7bb177e059cda2154e31bcb81d8a725817b03f632ba3167f3ad8",
+      "path": "data/additional/road-assets-ugra/raw/Itogi-2024.pdf"
+    },
+    {
+      "filename": "Itogi-2023-_1_.pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/323/tyhv1rfkbtqtfxmgzce5qud02nnhrnyi/Itogi-2023-_1_.pdf",
+      "retrieved_at": "2026-11-07T23:37:54.690795+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 201422,
+      "sha256": "8865e52d5e0caf6836845c76d57b29b0bf3a469409aaed739c40ffc145f1b849",
+      "path": "data/additional/road-assets-ugra/raw/Itogi-2023-_1_.pdf"
+    },
+    {
+      "filename": "3.-Itogi-2022-goda.pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/b00/pmva5eeelemr8wmrw4a5053a5pezpbr2/3.-Itogi-2022-goda.pdf",
+      "retrieved_at": "2026-11-07T23:37:55.484983+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 95514,
+      "sha256": "cd35238745d9f65541d17b24b4860a96e81a26f37a75209cec6c3338c5dca828",
+      "path": "data/additional/road-assets-ugra/raw/3.-Itogi-2022-goda.pdf"
+    },
+    {
+      "filename": "4.-Naibolee-znachimye-stroyki.pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/627/x850wggthcl7zz1gv02na4tssb6sut49/4.-Naibolee-znachimye-stroyki.pdf",
+      "retrieved_at": "2026-11-07T23:37:56.246510+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 91129,
+      "sha256": "69d0b86619d6628f4481842d8a6063de7a387df9985e1971178a567baed7ba29",
+      "path": "data/additional/road-assets-ugra/raw/4.-Naibolee-znachimye-stroyki.pdf"
+    },
+    {
+      "filename": "4.-KHarakteristika-seti-avtomobilnykh-dorog-na-1.01.2023.pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/4a9/h8ao9nynkp9vg78wzi1vabm3z8lyompm/4.-KHarakteristika-seti-avtomobilnykh-dorog-na-1.01.2023.pdf",
+      "retrieved_at": "2026-11-07T23:37:57.012344+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 145426,
+      "sha256": "a2f1fa4e531c2e775106e0385c9e2afce2ed03fdc33c57eaefbd5163d04ad725",
+      "path": "data/additional/road-assets-ugra/raw/4.-KHarakteristika-seti-avtomobilnykh-dorog-na-1.01.2023.pdf"
+    },
+    {
+      "filename": "2.-Itogi-deyatelnosti-Upravleniya-za-period-1995_2022gg..pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/8c7/egpb1n9wqsvj1seox768g2xrjiuiexl4/2.-Itogi-deyatelnosti-Upravleniya-za-period-1995_2022gg..pdf",
+      "retrieved_at": "2026-11-07T23:37:57.788657+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 117509,
+      "sha256": "77b39bcef291c0a5dbc424872de446744fbf347ab636dbf5b71cfef86abead14",
+      "path": "data/additional/road-assets-ugra/raw/2.-Itogi-deyatelnosti-Upravleniya-za-period-1995_2022gg..pdf"
+    },
+    {
+      "filename": "Intensivnost-na-dorogakh-KHMAO-za-2022-g..pdf",
+      "url": "https://www.ugrador.ru/upload/medialibrary/3f8/928499uaw013etis7tr96pj8bftswrbr/Intensivnost-na-dorogakh-KHMAO-za-2022-g..pdf",
+      "retrieved_at": "2026-11-07T23:37:58.596503+00:00",
+      "tls_verification": false,
+      "tls_fallback": "Ugrador only: DEFAULT:@SECLEVEL=0; weak end-entity certificate; no credentials",
+      "http_status": 200,
+      "bytes": 910584,
+      "sha256": "0a7584a3bea31e0b6e95f7ad12e125e76b55b7265a0ce42532f535fbe7f930eb",
+      "path": "data/additional/road-assets-ugra/raw/Intensivnost-na-dorogakh-KHMAO-za-2022-g..pdf"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/2.-Itogi-deyatelnosti-Upravleniya-za-period-1995_2022gg..txt",
+      "bytes": 3959,
+      "sha256": "7c7b2c537badbb30e37852ccf62fecd3da7e1bcdd210710210ce79f95a8e0f2f",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/3.-Itogi-2022-goda.txt",
+      "bytes": 9300,
+      "sha256": "13117318c0d0da74e81dcc86ab22ef2fbbe11d7b9ea4047153329335158a9e12",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/4.-KHarakteristika-seti-avtomobilnykh-dorog-na-1.01.2023.txt",
+      "bytes": 6216,
+      "sha256": "d4c718cd7cfa8e11449d41f6fc1cd8a67308be2bb71ff0b258b33ebc65dfcb06",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/4.-Naibolee-znachimye-stroyki.txt",
+      "bytes": 19886,
+      "sha256": "5de6272433ee75d5b64368a9f62f06ef31b7b20dd867de97e148ad3d1745f66a",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/Intensivnost-na-dorogakh-KHMAO-za-2022-g..txt",
+      "bytes": 9442,
+      "sha256": "e5f73d95eb2e4873b1d693112a9fcd9bdbb0fd9940c1a676fdf23d82cf6bfdb1",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/Itogi-2023-_1_.txt",
+      "bytes": 7943,
+      "sha256": "7defe317999b65bc3357dbfc704e33d6e1a2de12ad5fdc1250a7e5c106c4633e",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/Itogi-2024.txt",
+      "bytes": 11510,
+      "sha256": "1a6dffa1a7efaf877885573decb311d7484633d8bb8b6e19fcfffa940ab95fe2",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/Perechen-avtozimnikov-obshchego-polzovaniya-2024_2025-gg.txt",
+      "bytes": 23873,
+      "sha256": "f98e29fff8cd018f0b6cbb3f2c16932416dffb1d5df82ba27c5e37514de36c39",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/Perechen-zimnikh-avtodorog-i-ledovykh-pereprav-obshchego-polzovaniya_na-01.01.2024.txt",
+      "bytes": 22056,
+      "sha256": "e6fb1132910f415b018191ff346967f9ee1595355e6e2473431b0d0fce89e82d",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/Prikaz-po-protyazhennosti-na-01.01.2026-g..txt",
+      "bytes": 45577,
+      "sha256": "3a1fd95eedc3f482e38983d66af4305b46ed3f6d3c769c1a7b1269957caa0bc7",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/Prikaz-remonty-_-208-ot-13.12.2023_dlya-sayta.txt",
+      "bytes": 13,
+      "sha256": "859aa658314fcc519a9b7aa9096bc94316446ca5d26eb9f1a5e9369030b02c86",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/Zaklyuchenie_KHMAO.txt",
+      "bytes": 1,
+      "sha256": "ef6cbd2161eaea7943ce8693b9824d23d1793ffb1c0fca05b600d3899b44c977",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/bridge-named-roads-2026.csv",
+      "bytes": 5673,
+      "sha256": "5b9870f810b6cc83c23eb3a194eeae9edd63db4958ef497e18ac92ad2dde95b5",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/pdf-table-rows.jsonl",
+      "bytes": 121554,
+      "sha256": "9b1eaa9725ace202e29289df15a284ab984b91bd59f0a49cc8ee502f365d6503",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/roads-2026.csv",
+      "bytes": 57829,
+      "sha256": "6e5bc99f50e983551e932be2e08f94b6ddc199ba0ab7a35d4be4d92b45633cb1",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/xlsx-bridge-mentioned-rows.jsonl",
+      "bytes": 96618,
+      "sha256": "201b9ee40ca406f29b523e4231c8b36a8af7f528d4b9a1cc12b58eba1c03b980",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    },
+    {
+      "path": "data/additional/road-assets-ugra/derived/xlsx-rows.jsonl",
+      "bytes": 5777537,
+      "sha256": "105264e8691fc26cb305f90ad4c46bceb4d6458760c427f363530b4c186435a4",
+      "kind": "derived",
+      "url": null,
+      "generated_by": "datasets/additional/road-assets-ugra/extract.py"
+    }
+  ],
+  "counts": {
+    "source_files": 18,
+    "road_records": 87,
+    "bridge_named_road_records": 7,
+    "pdf_table_rows": 498,
+    "xlsx_rows": 9187
+  }
+}

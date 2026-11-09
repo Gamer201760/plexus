@@ -1,0 +1,42 @@
+{
+  "date_local": "2026-11-08",
+  "purpose": "Additional datasets for transport scenarios and medical destinations",
+  "datasets": [
+    {
+      "dataset": "osm-ural",
+      "files": 4,
+      "bytes": 599102583
+    },
+    {
+      "dataset": "medical-ugra",
+      "files": 9,
+      "bytes": 12954455
+    },
+    {
+      "dataset": "road-assets-ugra",
+      "files": 35,
+      "bytes": 14966892
+    },
+    {
+      "dataset": "transport-projects-ugra",
+      "files": 10,
+      "bytes": 1680617
+    }
+  ],
+  "new_files": 58,
+  "new_bytes": 628704547,
+  "verification": {
+    "files_all": 1533,
+    "manifest_references_checked": 1077,
+    "failures": [],
+    "checked_at": "2026-11-07T23:42:41.419240+00:00"
+  },
+  "model_integration": "not yet integrated into indices or graph",
+  "limitations": [
+    "Medical registry lacks coordinates, hours and confirmation of emergency capability.",
+    "Official road inventory requires georeferencing; intensity2022 numeric OCR not validated.",
+    "Road-assets downloads used host-scoped weakened TLS/certificate verification; SHA256 checks do not authenticate the origin.",
+    "Project capacities and investment plans are not actual freight flows or ROI.",
+    "Ural OSM source features have not been converted to a validated routing graph."
+  ]
+}

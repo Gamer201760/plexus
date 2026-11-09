@@ -1,0 +1,14 @@
+{
+  "registry_year": 2026,
+  "workbook_modified_utc": "2026-05-12T06:24:19Z",
+  "source_rows": 2121,
+  "organizations": 115,
+  "exact_organization_address_pairs": 1077,
+  "rows_with_care_address": 2121,
+  "rows_with_care_profiles": 2121,
+  "rows_with_department_oid": 2121,
+  "rows_with_exclusion_date": 0,
+  "rows_with_coordinates": 0,
+  "rows_with_opening_hours": 0,
+  "caveat": "Registry inclusion and profiles do not establish current opening, emergency capability, operating theatre, staffing or capacity. Exact address groups are not deduplicated physical buildings."
+}

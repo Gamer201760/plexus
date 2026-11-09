@@ -1,0 +1,90 @@
+{
+  "files": [
+    {
+      "path": "data/additional/medical-ugra/derived/care_locations_exact_address_2026.csv",
+      "bytes": 651090,
+      "sha256": "5d4ea4365db1b3cd9ebe9be8772c3df9f42fdfc5f01527395464af791df1d379",
+      "url": null,
+      "downloaded_or_generated_at_utc": "2026-11-07T23:40:12.719620+00:00",
+      "kind": "derived"
+    },
+    {
+      "path": "data/additional/medical-ugra/derived/care_locations_exact_address_2026.json",
+      "bytes": 943885,
+      "sha256": "fd062615592d0cd4cf068c319eb7937d5685b4e480d293b63b5979c5a65fe19b",
+      "url": null,
+      "downloaded_or_generated_at_utc": "2026-11-07T23:40:12.715217+00:00",
+      "kind": "derived"
+    },
+    {
+      "path": "data/additional/medical-ugra/derived/care_records_2026.csv",
+      "bytes": 4237038,
+      "sha256": "6319c75eb7e91cea3064057e7e49c00da0b646d5d72344d63aea611e388de79d",
+      "url": null,
+      "downloaded_or_generated_at_utc": "2026-11-07T23:40:12.703630+00:00",
+      "kind": "derived"
+    },
+    {
+      "path": "data/additional/medical-ugra/derived/care_records_2026.json",
+      "bytes": 6269953,
+      "sha256": "42de960ed895cca904106192e555dbdfd6015a1a2e2e48eff7aac847f6a3dad1",
+      "url": null,
+      "downloaded_or_generated_at_utc": "2026-11-07T23:40:12.669456+00:00",
+      "kind": "derived"
+    },
+    {
+      "path": "data/additional/medical-ugra/derived/organizations_2026.csv",
+      "bytes": 109291,
+      "sha256": "800136a8783fc2dd4ae281e2f8f489c955818a92dd74b20035eb69196684c05e",
+      "url": null,
+      "downloaded_or_generated_at_utc": "2026-11-07T23:40:12.710264+00:00",
+      "kind": "derived"
+    },
+    {
+      "path": "data/additional/medical-ugra/derived/organizations_2026.json",
+      "bytes": 155122,
+      "sha256": "1eceb25754d11c592d88e1b96cb8f3d8bfffcdc2596540d0c3e8bc4978071296",
+      "url": null,
+      "downloaded_or_generated_at_utc": "2026-11-07T23:40:12.709608+00:00",
+      "kind": "derived"
+    },
+    {
+      "path": "data/additional/medical-ugra/raw/city-ugut.html",
+      "bytes": 39174,
+      "sha256": "74cb0f375799b210722fa13e1b4de35452bbc63844aa885c2e871b98fdbc154b",
+      "url": "https://www.ofoms.ru/организации/city/ugut",
+      "downloaded_or_generated_at_utc": "2026-11-07T23:39:38.291587+00:00",
+      "kind": "primary"
+    },
+    {
+      "path": "data/additional/medical-ugra/raw/ofoms-register-index.html",
+      "bytes": 59848,
+      "sha256": "e7bfe8c6d91afbe327585f0d2cfcd93120aeba38bd941c4f229f94c666a308ba",
+      "url": "https://www.ofoms.ru/страницы/реестры-и-справочники",
+      "downloaded_or_generated_at_utc": "2026-11-07T23:39:37.442869+00:00",
+      "kind": "primary"
+    },
+    {
+      "path": "data/additional/medical-ugra/raw/trmo052026.xlsx",
+      "bytes": 489054,
+      "sha256": "de71a184560248fdd1be700ba740a48e2489e27cb1861664803090bc0d389083",
+      "url": "https://www.ofoms.ru/uploads/files/7eb202f860af4b038bcfba67ec9e03ea/trmo052026.xlsx",
+      "downloaded_or_generated_at_utc": "2026-11-07T23:39:38.002482+00:00",
+      "kind": "primary"
+    }
+  ],
+  "profile": {
+    "registry_year": 2026,
+    "workbook_modified_utc": "2026-05-12T06:24:19Z",
+    "source_rows": 2121,
+    "organizations": 115,
+    "exact_organization_address_pairs": 1077,
+    "rows_with_care_address": 2121,
+    "rows_with_care_profiles": 2121,
+    "rows_with_department_oid": 2121,
+    "rows_with_exclusion_date": 0,
+    "rows_with_coordinates": 0,
+    "rows_with_opening_hours": 0,
+    "caveat": "Registry inclusion and profiles do not establish current opening, emergency capability, operating theatre, staffing or capacity. Exact address groups are not deduplicated physical buildings."
+  }
+}

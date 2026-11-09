@@ -1,0 +1,272 @@
+{
+  "documents": 33,
+  "tables": 213,
+  "source_table_rows": 2880,
+  "normalized_numeric_metrics": false,
+  "files": [
+    {
+      "filename": "road-archive-aleksandrovskii.docx",
+      "label": "Александровский район",
+      "tables": 8,
+      "table_rows": 99,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-andropovskii.docx",
+      "label": "Андроповский район",
+      "tables": 7,
+      "table_rows": 83,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-apanasenkovskii.docx",
+      "label": "Апанасенковский район",
+      "tables": 7,
+      "table_rows": 76,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-arzgirskii.docx",
+      "label": "Арзгирский район",
+      "tables": 7,
+      "table_rows": 76,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-blagodarnenskii.docx",
+      "label": "Благодарненский район",
+      "tables": 7,
+      "table_rows": 109,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-budennovskii.docx",
+      "label": "Буденновский район",
+      "tables": 7,
+      "table_rows": 122,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-essentuka.docx",
+      "label": "Город-курорт Ессентуки",
+      "tables": 4,
+      "table_rows": 52,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-georgievskii.docx",
+      "label": "Георгиевский район",
+      "tables": 7,
+      "table_rows": 117,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-grachevskii.docx",
+      "label": "Грачевский район",
+      "tables": 7,
+      "table_rows": 85,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-ipatovskii.docx",
+      "label": "Ипатовский район",
+      "tables": 7,
+      "table_rows": 100,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-izobilnenskii.docx",
+      "label": "Изобильненский район",
+      "tables": 7,
+      "table_rows": 106,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-jeleznovodsk.docx",
+      "label": "Город-курорт Железноводск",
+      "tables": 4,
+      "table_rows": 36,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-kirovskii.docx",
+      "label": "Кировский район",
+      "tables": 8,
+      "table_rows": 94,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-kislovodsk.docx",
+      "label": "Город-курорт Кисловодск",
+      "tables": 4,
+      "table_rows": 52,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-kochubeevskii.docx",
+      "label": "Кочубеевский район",
+      "tables": 7,
+      "table_rows": 106,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-krasnogvardeiskii.docx",
+      "label": "Красногвардейский район",
+      "tables": 7,
+      "table_rows": 93,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-kurskii.docx",
+      "label": "Курский район",
+      "tables": 7,
+      "table_rows": 108,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-lermontov.docx",
+      "label": "Город Лермонтов",
+      "tables": 4,
+      "table_rows": 28,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-levokumskii.docx",
+      "label": "Левокумский район",
+      "tables": 7,
+      "table_rows": 85,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-mineralovodskii.docx",
+      "label": "Минераловодский городской округ",
+      "tables": 8,
+      "table_rows": 115,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-neftekumskii.docx",
+      "label": "Нефтекумский район",
+      "tables": 7,
+      "table_rows": 95,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-nevinnomissk.docx",
+      "label": "Город Невинномысск",
+      "tables": 4,
+      "table_rows": 55,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-novoaleksandrovskii.docx",
+      "label": "Новоалександровский район",
+      "tables": 7,
+      "table_rows": 111,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-novoselickii.docx",
+      "label": "Новоселицкий район",
+      "tables": 7,
+      "table_rows": 69,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-petrovskii.docx",
+      "label": "Петровский район",
+      "tables": 7,
+      "table_rows": 106,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-predgornii.docx",
+      "label": "Предгорный район",
+      "tables": 7,
+      "table_rows": 114,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-pyatigorsk.docx",
+      "label": "Город-курорт Пятигорск",
+      "tables": 4,
+      "table_rows": 55,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-shpakovskii.docx",
+      "label": "Шпаковский район",
+      "tables": 7,
+      "table_rows": 99,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-sovetskii.docx",
+      "label": "Советский район",
+      "tables": 7,
+      "table_rows": 94,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-stavropol.docx",
+      "label": "Город Ставрополь",
+      "tables": 4,
+      "table_rows": 98,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-stepnovskii.docx",
+      "label": "Степновский район",
+      "tables": 7,
+      "table_rows": 85,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-trunovskii.docx",
+      "label": "Труновский район",
+      "tables": 7,
+      "table_rows": 79,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    },
+    {
+      "filename": "road-archive-turkmenskii.docx",
+      "label": "Туркменский район",
+      "tables": 7,
+      "table_rows": 78,
+      "publication_date": "2017-07-14",
+      "content_period": "mixed historical periods; consult document text and footnotes"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://www.ofoms.ru/страницы/реестры-и-справочники",
+    "path": "data/additional/medical-ugra/raw/ofoms-register-index.html",
+    "utc": "2026-11-07T23:39:37.444552+00:00",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "url": "https://www.ofoms.ru/uploads/files/7eb202f860af4b038bcfba67ec9e03ea/trmo052026.xlsx",
+    "path": "data/additional/medical-ugra/raw/trmo052026.xlsx",
+    "utc": "2026-11-07T23:39:38.004405+00:00",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "url": "https://www.ofoms.ru/организации/city/ugut",
+    "path": "data/additional/medical-ugra/raw/city-ugut.html",
+    "utc": "2026-11-07T23:39:38.292702+00:00",
+    "exit_code": 0,
+    "error": ""
+  }
+]

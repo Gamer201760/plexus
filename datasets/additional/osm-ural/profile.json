@@ -1,0 +1,26 @@
+{
+  "source": "data/additional/osm-ural/raw/ural-fed-district-261106.osm.pbf",
+  "replication_timestamp": "2026-11-06T21:21:21Z",
+  "geography": "Ural Federal District (not Yugra-only)",
+  "counts": {
+    "selected_ways": 846243,
+    "exported_ways": 846243,
+    "highway_ways": 806063,
+    "bridge_ways": 14086,
+    "maxweight_tagged_ways": 995,
+    "railway_ways": 38910,
+    "ferry_ways": 76,
+    "seasonal_tagged_ways": 265
+  },
+  "derived": {
+    "path": "data/additional/osm-ural/derived/network_ways.parquet",
+    "bytes": 202184774,
+    "sha256": "bbb67ad002a4e406ba862aacfae7759cb0d5bc4b319c1483821d2e7a23babf29"
+  },
+  "limitations": [
+    "Feature counts are OSM way segments, not unique roads or bridges.",
+    "No tags are treated as evidence of unrestricted year-round operation.",
+    "Rail, pedestrian and private ways retained as source data; vehicle routing filters not applied.",
+    "Coordinates are source vertices; network connectivity and restrictions require model validation."
+  ]
+}

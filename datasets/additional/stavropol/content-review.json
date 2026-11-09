@@ -1,0 +1,29 @@
+{
+  "transport-plan-2022-2026.html": {
+    "usable_dataset": false,
+    "reason": "Browser verification challenge; requested legal document not obtained"
+  },
+  "bus-registry-index.html": {
+    "usable_dataset": false,
+    "reason": "HTTP 200 generic transport index instead of registry; current intermunicipal registry unavailable"
+  },
+  "transport-activity.html": {
+    "usable_dataset": false,
+    "reason": "HTTP 200 generic activity index instead of transport detail"
+  },
+  "predgorny-bus-registry-2024.pdf": {
+    "usable_dataset": true,
+    "format": "scanned PDF",
+    "pages": 6,
+    "document_date": "2024-07-29",
+    "document_number": "1068",
+    "verification": "Page 1 rendered and visually read; no text layer; search snippet date was incorrect",
+    "normalized": false,
+    "ocr": false
+  },
+  "road-archive-*.docx": {
+    "usable_dataset": true,
+    "publication_date": "2017-07-14",
+    "reason": "Historical documents, mixed reference periods; raw table cells extracted without numerical normalization"
+  }
+}

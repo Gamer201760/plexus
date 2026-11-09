@@ -1,0 +1,33 @@
+{
+  "validated_at": "2026-11-08T18:26:38.684798+00:00",
+  "status": "passed",
+  "files": 110,
+  "bytes": 170008152,
+  "checks": [
+    "download size and SHA256",
+    "XLSX/DOCX ZIP integrity",
+    "settlement uniqueness and region",
+    "lights settlement-year uniqueness and coverage",
+    "bus routes referenced by schedules and official stop region",
+    "OSM feature identity and POI boundary containment",
+    "OSM coordinate and node-array alignment",
+    "medical organization and care-row reconciliation"
+  ],
+  "medical": {
+    "2025": {
+      "care_rows": 1152,
+      "organizations": 165
+    },
+    "2026": {
+      "care_rows": 1165,
+      "organizations": 161
+    }
+  },
+  "not_tested": [
+    "routing connectivity or travel times",
+    "current operation of registry services",
+    "geocoding of medical care addresses",
+    "OCR of scanned Predgorny PDF",
+    "current legal status of historical road and tax lists"
+  ]
+}
