@@ -18,6 +18,7 @@ export interface StatProps {
   readonly value: ReactNode
   readonly unit?: string | undefined
   readonly delta?: StatDelta | undefined
+  readonly help?: ReactNode
   readonly className?: string | undefined
 }
 
@@ -44,10 +45,13 @@ function Delta({ value, trend, tone = "neutral", label }: StatDelta) {
   )
 }
 
-export function Stat({ label, value, unit, delta, className }: StatProps) {
+export function Stat({ label, value, unit, delta, help, className }: StatProps) {
   return (
     <div className={clsx(styles.stat, className)}>
-      <span className={styles.label}>{label}</span>
+      <span className={styles.label}>
+        {label}
+        {help === undefined ? null : <span className={styles.help}>{help}</span>}
+      </span>
       <span className={styles.value}>
         <span className={styles.number}>{value}</span>
         {unit === undefined ? null : <span className={styles.unit}>{unit}</span>}

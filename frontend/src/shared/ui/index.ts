@@ -84,6 +84,7 @@ export {
 export { type TabItem, Tabs, type TabsProps } from "./navigation/tabs/tabs"
 export { CloseButton, type CloseButtonProps } from "./overlays/close-button/close-button"
 export { Dialog, type DialogProps } from "./overlays/dialog/dialog"
+export { HelpTip, type HelpTipProps } from "./overlays/help-tip/help-tip"
 export {
   Layer,
   LayerHost,

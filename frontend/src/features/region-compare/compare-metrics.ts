@@ -10,11 +10,11 @@ export type CompareMetricLabel =
   | "data:network.coverageColumn"
 
 export type CompareMetricHint =
-  | "compare:hints.hansen"
-  | "compare:hints.links"
-  | "compare:hints.population"
-  | "compare:hints.settlements"
-  | "compare:hints.companies"
+  | "data:metricHint.hansen"
+  | "data:metricHint.links"
+  | "data:metricHint.population"
+  | "data:metricHint.settlements"
+  | "data:metricHint.companies"
   | "data:network.coverageHint"
 
 export interface CompareMetric {
@@ -29,7 +29,7 @@ export const COMPARE_METRICS: readonly CompareMetric[] = [
   {
     key: "hansen",
     label: "data:metric.hansen",
-    hint: "compare:hints.hansen",
+    hint: "data:metricHint.hansen",
     value: (region) => region.hansen,
     format: (value, f) => f.number(value, 2),
   },
@@ -43,28 +43,28 @@ export const COMPARE_METRICS: readonly CompareMetric[] = [
   {
     key: "links",
     label: "data:metric.links",
-    hint: "compare:hints.links",
+    hint: "data:metricHint.links",
     value: (region) => region.links_season,
     format: (value, f) => f.integer(value),
   },
   {
     key: "population",
     label: "data:metric.population",
-    hint: "compare:hints.population",
+    hint: "data:metricHint.population",
     value: (region) => region.population,
     format: (value, f) => f.compact(value),
   },
   {
     key: "settlements",
     label: "region:stats.settlements",
-    hint: "compare:hints.settlements",
+    hint: "data:metricHint.settlements",
     value: (region) => region.settlements,
     format: (value, f) => f.integer(value),
   },
   {
     key: "companies",
     label: "data:metric.companies",
-    hint: "compare:hints.companies",
+    hint: "data:metricHint.companies",
     value: (region) => region.companies,
     format: (value, f) => f.compact(value),
   },

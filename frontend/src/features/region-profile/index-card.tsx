@@ -1,6 +1,6 @@
 import { IndexCoverage, type RegionDetail, type RegionSummary } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
-import { Banner, Card, RankStrip, Stat } from "@/shared/ui"
+import { Banner, Card, HelpTip, RankStrip, Stat } from "@/shared/ui"
 import styles from "./index-card.module.css"
 
 export interface IndexCardProps {
@@ -25,14 +25,20 @@ export function IndexCard({ region, regions }: IndexCardProps) {
   return (
     <Card as="section" title={t("region:index.title")}>
       <div className={styles.stats}>
-        <Stat label={t("data:metric.hansen")} value={f.number(region.hansen, 2)} />
+        <Stat
+          label={t("data:metric.hansen")}
+          value={f.number(region.hansen, 2)}
+          help={<HelpTip content={t("data:metricHint.hansen")} label={t("common:ui.hint")} />}
+        />
         <Stat
           label={t("data:network.coverageColumn")}
           value={<IndexCoverage value={region.index_population_coverage} compact />}
+          help={<HelpTip content={t("data:network.coverageHint")} label={t("common:ui.hint")} />}
         />
         <Stat
           label={t("region:index.rankLabel")}
           value={t("region:index.rank", { rank, total: values.length })}
+          help={<HelpTip content={t("region:index.rankHint")} label={t("common:ui.hint")} />}
         />
       </div>
       <RankStrip
