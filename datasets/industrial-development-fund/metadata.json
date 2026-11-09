@@ -1,0 +1,29 @@
+{
+  "source_row": 34,
+  "slug": "industrial-development-fund",
+  "title": "Фонд развития промышленности: финансирование проектов",
+  "status": "blocked",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "Федеральный ФРП РФ; выгрузка региональной структуры проектов не получена.",
+  "period": "Период и полнота без исходного файла не установлены.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Официальные страницы федерального ФРП возвращают 403. Отчёты одноимённых фондов Казахстана и отдельных региональных фондов не подменяют федеральный перечень. Нужен официальный файл перечня профинансированных проектов.",
+  "source_urls": [
+    "https://frprf.ru/o-fonde/about/",
+    "https://frprf.ru/proekty-i-zayavki/"
+  ],
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://frprf.ru/o-fonde/about/",
+      "status": "failed",
+      "error": "HTTP 403 Forbidden"
+    },
+    {
+      "url": "https://frprf.ru/proekty-i-zayavki/",
+      "status": "failed",
+      "error": "HTTP 403 Forbidden"
+    }
+  ],
+  "profile_path": "profile.json"
+}

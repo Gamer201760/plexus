@@ -14,8 +14,7 @@
     не найден (зарубежные пункты и т.п.) → связь отбрасывается, пишется в лог.
   - Переправа (ferry / ice_crossing / pontoon_bridge): подъезд по берегам + пересечение; km в CSV — ширина
     створа. Паром между н.п. дальше CROSSING_MAX_KM — линия (морской паром), считается как river.
-  - Ожидание рейса (air, river, линейный паром) — половина интервала, не больше WAIT_CAP_H:
-    поездку планируют под расписание, ждут не дольше суток. Частота не найдена → DEFAULT_FREQ, помечено.
+  - Ожидание рейса (air, river, линейный паром) — половина интервала, без ограничения: равномерный интервал и случайный момент потребности. Частота не найдена → DEFAULT_FREQ, помечено.
 """
 import csv
 import os
@@ -42,7 +41,6 @@ CROSSING_OVERHEAD_H = {"ferry": 0.5, "ice_crossing": 0.0, "pontoon_bridge": 0.0}
 CROSSING_DEFAULT_KM = 1.0          # ширина створа, если не указана
 APPROACH_KMH, APPROACH_DETOUR = 40, 1.3
 DEFAULT_FREQ = 1.0                 # рейсов в неделю, если частота не найдена
-WAIT_CAP_H = 24.0
 SEASONS = ("summer", "winter")
 TUVA_CODE = "93000000"
 
@@ -117,7 +115,7 @@ def link_hours(df, pts):
     travel_cross = approach_km / APPROACH_KMH + cross_km / cm + co
     scheduled = ~crossing & (df["mode"] != "winter_road").values
     freq = df.freq_per_week.where(df.freq_per_week > 0)
-    wait = np.where(scheduled, np.minimum(168 / freq.fillna(DEFAULT_FREQ).values / 2, WAIT_CAP_H), 0.0)
+    wait = np.where(scheduled, 84 / freq.fillna(DEFAULT_FREQ).values, 0.0)
     return df.assign(kind=np.where(crossing, "crossing", "line"),
                      km=np.where(crossing, approach_km + cross_km, km_line),
                      travel_h=np.where(crossing, travel_cross, travel_line), wait_h=wait,

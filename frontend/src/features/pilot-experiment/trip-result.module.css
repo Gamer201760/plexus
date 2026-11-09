@@ -1,0 +1,29 @@
+.trip {
+  display: grid;
+  gap: var(--space-16);
+  padding-block: var(--space-16);
+}
+.title {
+  font-size: var(--font-size-subheading);
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}
+.delta {
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+.note {
+  font-size: var(--font-size-body-sm);
+  color: var(--text-secondary);
+}
+.details {
+  display: grid;
+  gap: var(--space-12);
+  padding-block: var(--space-12);
+}
+.details a {
+  color: var(--action-primary);
+  min-height: var(--target-min);
+  display: flex;
+  align-items: center;
+}

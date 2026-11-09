@@ -1,0 +1,36 @@
+{
+  "2024_paired_distribution": {
+    "number_road": {
+      "min": 0.2,
+      "median": 49.8,
+      "max": 100.0,
+      "zero": 0,
+      "hundred": 20
+    },
+    "number_service": {
+      "min": 0.01,
+      "median": 2.33,
+      "max": 100.0,
+      "zero": 0,
+      "hundred": 28
+    }
+  },
+  "balanced_changes": {
+    "road_change_pp": {
+      "improved": 805,
+      "same": 261,
+      "worsened": 262,
+      "min_pp": -81.7,
+      "median_pp": -0.2999999999999971,
+      "max_pp": 58.2
+    },
+    "service_change_pp": {
+      "improved": 430,
+      "same": 713,
+      "worsened": 185,
+      "min_pp": -82.0,
+      "median_pp": 0.0,
+      "max_pp": 63.4
+    }
+  }
+}

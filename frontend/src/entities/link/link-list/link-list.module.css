@@ -1,0 +1,30 @@
+.list > li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding-block: var(--space-12);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+}
+.list > li:last-child {
+  border-block-end: 0;
+}
+.content {
+  flex: 1;
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+.route {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  font-size: var(--font-size-body-sm);
+  overflow-wrap: anywhere;
+}
+.metadata {
+  display: flex;
+  gap: var(--space-8);
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+}

@@ -1,0 +1,23 @@
+.iso {
+  composes: fluidSvg from "../../../styles/compose.module.css";
+}
+
+.ring {
+  composes: ringEnter from "../../../styles/compose.module.css";
+}
+
+.ring[data-ring="1"] {
+  fill: var(--iso-1);
+}
+
+.ring[data-ring="2"] {
+  fill: var(--iso-2);
+}
+
+.ring[data-ring="3"] {
+  fill: var(--iso-3);
+}
+
+.word {
+  fill: var(--text-primary);
+}

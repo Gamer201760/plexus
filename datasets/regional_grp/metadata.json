@@ -1,0 +1,33 @@
+{
+  "source_row": 14,
+  "slug": "regional_grp",
+  "title": "Точно / Росстат: валовый региональный продукт",
+  "status": "downloaded",
+  "source_url": "https://tochno.st/datasets/regions_collection",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "2001–2023",
+  "license": "CC BY 4.0, прямо указана на странице подборки.",
+  "description": "Полный опубликованный раздел 8 «Валовый региональный продукт» сборника региональных социально-экономических показателей.",
+  "limitations": "16896 строк × 14 полей,8 показателей. Есть уровни региона, федерального округа и страны. Номинальные значения, душевые показатели и индексы требуют разных единиц и интерпретации; валюта и цены читаются из indicator_unit и comment. В indicator_value есть числовые коды пропуска: -99999999 — нет информации, -77777777 — скрыто. Их нельзя включать в расчёт как измеренные числа.",
+  "files": [
+    {
+      "path": "raw/data_08_socio_economic_102_v20260313.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_08_socio_economic_102_v20260313.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_08_socio_economic_102_v20260313.zip",
+      "bytes": 1248622,
+      "sha256": "973a7e3de8a6052cc06d850ff302c7928d08a40c9547e12ae5e9d3dbe09d95d9",
+      "kind": "raw_data"
+    },
+    {
+      "path": "raw/description_regions_collection_102_v20260313.pdf",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/description_regions_collection_102_v20260313.pdf",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/description_regions_collection_102_v20260313.pdf",
+      "bytes": 230594,
+      "sha256": "e5b6f09f05ba6bf165f1d9065e8cd2d071a9f81225e21f0fe2837ee1b3aa8a00",
+      "kind": "source_documentation"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": []
+}

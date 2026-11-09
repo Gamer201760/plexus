@@ -1,0 +1,90 @@
+.row {
+  padding: var(--space-12) var(--space-16);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+}
+.summary {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(160px, 2fr) 240px;
+  align-items: center;
+  gap: var(--space-20);
+}
+.name {
+  display: grid;
+  gap: var(--space-4);
+  font-size: var(--font-size-body-sm);
+}
+.name small,
+.dates small {
+  display: block;
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+}
+.track {
+  position: relative;
+  display: block;
+  block-size: var(--space-48);
+}
+.guide {
+  left: var(--tick-left);
+  position: absolute;
+  inset-block: 0;
+  border-inline-start: var(--hairline) solid var(--border-subtle);
+}
+.bar {
+  left: var(--bar-left);
+  width: var(--bar-width);
+  position: absolute;
+  inset-block-start: var(--space-16);
+  block-size: var(--space-16);
+  border-radius: var(--radius-sm);
+  background: var(--iso-1);
+}
+.bar[data-previous="true"] {
+  inset-block-start: var(--space-32);
+  background: var(--text-disabled);
+  block-size: var(--space-8);
+}
+.bar[data-open="true"] {
+  outline: var(--hairline) dashed var(--text-secondary);
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}
+.dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-12);
+  font-size: var(--font-size-caption);
+}
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-24);
+  padding: var(--space-20) var(--space-24);
+  background: var(--surface-muted);
+}
+.facts {
+  flex: 1;
+  min-inline-size: 240px;
+  font-size: var(--font-size-body-sm);
+}
+.facts dl {
+  display: grid;
+  gap: var(--space-8);
+  margin-block-start: var(--space-12);
+}
+.facts dl > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+}
+.facts dt,
+.details p {
+  color: var(--text-secondary);
+}
+.facts dd {
+  overflow-wrap: anywhere;
+}
+.details p {
+  flex-basis: 100%;
+  font-size: var(--font-size-caption);
+}

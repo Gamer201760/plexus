@@ -1,0 +1,71 @@
+{
+  "rows": 96660,
+  "road_rows": 32220,
+  "cities": 180,
+  "source_capital_flags": 84,
+  "source_capital_flag_values": {
+    "0": 96,
+    "1": 84
+  },
+  "region_count": 85,
+  "regions_with_no_capital_flag": [
+    "Московская область"
+  ],
+  "regions_with_multiple_capital_flags": [],
+  "input_sha256": "4728d93b8d29925b433a84a7c91fedbe4665bc78e672a23dc185d01c1e41dbea",
+  "tau_hours": 12,
+  "mode": "road",
+  "unknown_convention": "Unknown OD contributes zero to conditional lower estimate; upper adds all unknown destination population share. This is not evidence of actual inaccessibility.",
+  "denominator": "Population of eligible destination cities, recomputed for each origin and destination-set mask; self excluded.",
+  "admin_region_note": "Uses exact region labels from the source, not functional agglomerations. Moscow and Moscow Oblast remain distinct administrative labels.",
+  "comparisons": [
+    {
+      "left_set": "all_180",
+      "right_set": "source_capitals",
+      "spearman": 0.9982961455437414,
+      "max_absolute_rank_shift": 15,
+      "median_absolute_rank_shift": 1.0,
+      "top20_common": 19
+    },
+    {
+      "left_set": "all_180",
+      "right_set": "outside_admin_region",
+      "spearman": 0.9983928619198817,
+      "max_absolute_rank_shift": 12,
+      "median_absolute_rank_shift": 2.0,
+      "top20_common": 17
+    },
+    {
+      "left_set": "all_180",
+      "right_set": "source_capitals_outside_admin_region",
+      "spearman": 0.997586206186967,
+      "max_absolute_rank_shift": 15,
+      "median_absolute_rank_shift": 2.0,
+      "top20_common": 19
+    },
+    {
+      "left_set": "source_capitals",
+      "right_set": "outside_admin_region",
+      "spearman": 0.9972260920204873,
+      "max_absolute_rank_shift": 15,
+      "median_absolute_rank_shift": 2.0,
+      "top20_common": 17
+    },
+    {
+      "left_set": "source_capitals",
+      "right_set": "source_capitals_outside_admin_region",
+      "spearman": 0.9987468027006504,
+      "max_absolute_rank_shift": 11,
+      "median_absolute_rank_shift": 1.0,
+      "top20_common": 20
+    },
+    {
+      "left_set": "outside_admin_region",
+      "right_set": "source_capitals_outside_admin_region",
+      "spearman": 0.9983661105818004,
+      "max_absolute_rank_shift": 12,
+      "median_absolute_rank_shift": 1.0,
+      "top20_common": 17
+    }
+  ]
+}

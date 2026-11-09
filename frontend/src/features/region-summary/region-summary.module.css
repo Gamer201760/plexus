@@ -1,0 +1,25 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--term-min), 1fr));
+  gap: var(--space-16) var(--space-32);
+}
+
+.statBone {
+  padding-block-start: var(--space-4);
+}
+
+.statBone > span:first-child {
+  inline-size: 70%;
+}
+
+.statBone > span:last-child {
+  inline-size: 50%;
+  block-size: var(--space-24);
+}
+
+@media (max-width: 48rem) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-16);
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "plexus-defense",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "python3 -m http.server 8090 --directory dist",
+    "speech:check": "node scripts/speech.mjs check",
+    "speech:sync": "node scripts/speech.mjs sync",
+    "speech:init": "node scripts/speech.mjs check",
+    "shots": "node scripts/render.mjs shots",
+    "pdf": "node scripts/render.mjs pdf",
+    "final": "npm run build && npm run speech:check && node scripts/render.mjs final",
+    "build:final": "npm run final"
+  }
+}

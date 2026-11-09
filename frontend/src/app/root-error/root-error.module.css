@@ -1,0 +1,17 @@
+.shell {
+  position: relative;
+  min-block-size: 100dvh;
+  background-color: var(--surface-base);
+}
+
+.top {
+  position: absolute;
+  inset: 0 auto auto 0;
+  padding: var(--space-12) var(--space-page);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--target-min);
+}

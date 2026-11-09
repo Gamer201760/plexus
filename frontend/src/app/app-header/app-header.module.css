@@ -1,0 +1,109 @@
+.header {
+  --brand-header-height: var(--space-40);
+  --brand-header-compact: var(--space-32);
+
+  position: sticky;
+  inset-block-start: 0;
+  z-index: var(--layer-sticky);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8) var(--space-24);
+  min-block-size: var(--header-height);
+  padding-inline: var(--space-page);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+  background-color: var(--surface-raised);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  min-block-size: var(--target-min);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.brand > svg {
+  block-size: var(--brand-header-height);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-inline-size: 0;
+}
+
+.link {
+  composes: controlText from "../../shared/styles/compose.module.css";
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-block-size: var(--control-height);
+  padding-inline: var(--space-12) var(--space-16);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition-control-press);
+}
+
+.label {
+  display: inline;
+}
+
+.active {
+  background-color: var(--surface-sunken);
+  color: var(--text-primary);
+}
+
+.search {
+  flex: 1 1 var(--field-max-width);
+  display: flex;
+  justify-content: flex-end;
+  min-inline-size: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover:not(.active) {
+    color: var(--text-primary);
+    background-color: var(--action-ghost-hover);
+  }
+}
+
+@media (max-width: 64rem) {
+  .label {
+    display: none;
+  }
+}
+
+@media (width < 48rem) {
+  .header {
+    flex-wrap: wrap;
+    padding-block: var(--space-8);
+  }
+
+  .nav {
+    margin-inline-start: auto;
+  }
+
+  .search {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .header {
+    column-gap: var(--space-8);
+  }
+
+  .brand {
+    --brand-header-height: var(--brand-header-compact);
+  }
+}
+
+@media (min-width: 75rem) {
+  .header {
+    padding-inline: var(--space-page-wide);
+  }
+}

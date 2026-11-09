@@ -1,0 +1,51 @@
+{
+  "rows": 98220,
+  "exact_duplicate_rows": 0,
+  "duplicate_key_rows": 139,
+  "duplicate_key_groups": 35,
+  "nonnumeric_tokens": {
+    "": 78
+  },
+  "out_of_range_rows": [
+    {
+      "indicator_code": "Y48106005",
+      "region_name": "Магаданская область",
+      "municipality": "Хасынский городской округ (до 2023 г.)",
+      "oktmo": "44719000",
+      "year": "2020",
+      "indicator_value": "651.0",
+      "comment": "Аномальное значение показателя"
+    }
+  ],
+  "comments": {
+    "CD": 96248,
+    "mun_type в исходных данных не соответствует oktmo": 1971,
+    "Аномальное значение показателя": 1
+  },
+  "nontrivial_dimensions": {
+    "mest": {
+      "CD": 98220
+    },
+    "vidres": {
+      "CD": 98220
+    },
+    "okved2": {
+      "CD": 98220
+    },
+    "strashod": {
+      "CD": 98220
+    },
+    "okfs": {
+      "CD": 98220
+    },
+    "vozr": {
+      "CD": 98220
+    },
+    "indicator_unit": {
+      "Процент": 98220
+    },
+    "indicator_period": {
+      "Значение показателя за год": 98220
+    }
+  }
+}

@@ -1,0 +1,10 @@
+comparison,mode,tau_a,tau_b,spearman,top20_common,largest_rank_change
+decay_parameter,road,6,12,0.9946497323837292,19,17
+decay_parameter,road,6,24,0.9880030537681317,19,26
+decay_parameter,road,12,24,0.9977693499630625,20,12
+decay_parameter,best_ground,6,12,0.9944852279216203,20,17
+decay_parameter,best_ground,6,24,0.987976562218667,19,26
+decay_parameter,best_ground,12,24,0.9978846322027709,19,12
+modal_choice,road_vs_best_ground,6,6,0.999725801805286,20,7
+modal_choice,road_vs_best_ground,12,12,0.9996867041181692,19,6
+modal_choice,road_vs_best_ground,24,24,0.9997216862592739,20,6

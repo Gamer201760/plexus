@@ -1,0 +1,33 @@
+{
+  "source_row": 23,
+  "slug": "economy-forecast",
+  "title": "Минэкономразвития: макроэкономический прогноз",
+  "status": "blocked",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "Россия в целом; региональный охват не подтверждён.",
+  "period": "Найден прогноз на 2026 год и плановый период 2027–2028; файл не получен.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Официальный домен economy.gov.ru не разрешается из среды загрузки; HTML/чужие пересказы не сохранены вместо прогноза. Нужен доступный официальный файл или файл от пользователя.",
+  "source_urls": [
+    "https://www.economy.gov.ru/material/directions/makroec/prognozy_socialno_ekonomicheskogo_razvitiya/prognoz_socialno_ekonomicheskogo_razvitiya_rf_na_2026_god_i_na_planovyy_period_2027_i_2028_godov.html",
+    "https://www.economy.gov.ru/material/file/bc142016f6ab3772370bb0b4541fc778/prognoz_socialno_ekonomicheskogo_razvitiya_rf_2026-2028.pdf"
+  ],
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.economy.gov.ru/material/file/download/bc142016f6ab3772370bb0b4541fc778/prognoz_socialno_ekonomicheskogo_razvitiya_rf_2026-2028.pdf",
+      "file": "datasets/economy-forecast/raw/forecast-2026-2028.pdf",
+      "retrieved_at": "2026-11-06T18:26:47.042319+00:00",
+      "status": "failed",
+      "error": "curl: (6) Could not resolve host: www.economy.gov.ru"
+    },
+    {
+      "url": "https://economy.gov.ru/material/file/download/bc142016f6ab3772370bb0b4541fc778/prognoz_socialno_ekonomicheskogo_razvitiya_rf_2026-2028.pdf",
+      "file": "datasets/economy-forecast/raw/forecast-2026-2028.pdf",
+      "retrieved_at": "2026-11-06T18:28:51.311297+00:00",
+      "status": "failed",
+      "error": "curl: (6) Could not resolve host: economy.gov.ru"
+    }
+  ],
+  "profile_path": "profile.json"
+}

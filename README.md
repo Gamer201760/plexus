@@ -1,122 +1,185 @@
-# Кейс А2 — индекс транспортной связанности
+<p align="center">
+<!-- readme:banner -->
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/banner.dark.png"><img src="docs/readme/banner.light.png" width="880" height="308" alt="Plexus. Как меняется доступность рынков и поездок к центрам"></picture>
+<!-- /readme:banner -->
+</p>
 
-Индекс доступности рынков со стресс-тестом транспортной сети. Отвечает на три вопроса:
-к каким рынкам у территории удобный доступ; какое изменение сообщения сильнее расширит её возможности;
-какая связь критична и что будет, если она перестанет работать.
+Аналитик региональной политики сравнивает территории, меняет сообщение в пилоте Тывы
+и видит, как изменяются маршрут, движение и ожидание при заданных условиях.
 
-Индекс (гравитационная модель Хансена): `A_i = Σ_j M_j · exp(−β · c_ij)`, где `M_j` — размер рынка
-(180 крупнейших городов), `c_ij` — время в пути по дорогам с пересадками на ЖД/авиа. Население — отдельный
-слой приоритета: `P = (A_норма − A) × население`.
+<p align="center">
+<!-- readme:buttons -->
+<a href="#запуск"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/button-run.dark.png"><img src="docs/readme/button-run.light.png" width="216" height="44" alt="Запустить локально"></picture></a>
+<a href="docs/README.md"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/button-docs.dark.png"><img src="docs/readme/button-docs.light.png" width="175" height="44" alt="Документация"></picture></a>
+<!-- /readme:buttons -->
+</p>
+<p align="center">
+<!-- readme:status -->
+<a href="#результаты"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/status-settlements.dark.png"><img src="docs/readme/status-settlements.light.png" width="229" height="28" alt="Населённых пунктов: 155 412"></picture></a>
+<a href="#результаты"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/status-links.dark.png"><img src="docs/readme/status-links.light.png" width="161" height="28" alt="Ручных связей: 997"></picture></a>
+<a href="#результаты"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/status-regions.dark.png"><img src="docs/readme/status-regions.light.png" width="119" height="28" alt="Регионов: 82"></picture></a>
+<br>
+<a href="#запуск"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/status-tests.dark.png"><img src="docs/readme/status-tests.light.png" width="193" height="28" alt="Проверки: API и браузер"></picture></a>
+<a href="#запуск"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/status-offline.dark.png"><img src="docs/readme/status-offline.light.png" width="200" height="28" alt="Платные ключи: не нужны"></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/status-locale.dark.png"><img src="docs/readme/status-locale.light.png" width="131" height="28" alt="Интерфейс: RU"></picture>
+<!-- /readme:status -->
+</p>
+<p align="center">
+<!-- readme:stack -->
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/stack-frontend.dark.png"><img src="docs/readme/stack-frontend.light.png" width="194" height="28" alt="Фронтенд: React 19, Vite"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/stack-types.dark.png"><img src="docs/readme/stack-types.light.png" width="177" height="28" alt="Типы: TypeScript strict"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/stack-api.dark.png"><img src="docs/readme/stack-api.light.png" width="110" height="28" alt="API: FastAPI"></picture>
+<br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/stack-data.dark.png"><img src="docs/readme/stack-data.light.png" width="173" height="28" alt="Расчёт: DuckDB, OSM"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/stack-tools.dark.png"><img src="docs/readme/stack-tools.light.png" width="138" height="28" alt="Пакеты: uv, npm"></picture>
+<!-- /readme:stack -->
+</p>
+<p align="center">
+<!-- readme:nav -->
+<a href="#зачем-это"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/nav-why.dark.png"><img src="docs/readme/nav-why.light.png" width="86" height="28" alt="Зачем это"></picture></a>
+<a href="#как-это-работает"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/nav-how.dark.png"><img src="docs/readme/nav-how.light.png" width="130" height="28" alt="Как это работает"></picture></a>
+<a href="#попробовать-за-две-минуты"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/nav-try.dark.png"><img src="docs/readme/nav-try.light.png" width="105" height="28" alt="Попробовать"></picture></a>
+<a href="#результаты"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/nav-results.dark.png"><img src="docs/readme/nav-results.light.png" width="94" height="28" alt="Результаты"></picture></a>
+<a href="#запуск"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/nav-run.dark.png"><img src="docs/readme/nav-run.light.png" width="66" height="28" alt="Запуск"></picture></a>
+<a href="#устройство"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/nav-layout.dark.png"><img src="docs/readme/nav-layout.light.png" width="95" height="28" alt="Устройство"></picture></a>
+<br>
+<a href="#ограничения"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/nav-limits.dark.png"><img src="docs/readme/nav-limits.light.png" width="105" height="28" alt="Ограничения"></picture></a>
+<!-- /readme:nav -->
+</p>
 
-## Масштаб
+> Расчёт показывает эффект в модели. Историческая публикация о рейсе и отсутствие
+> тега закрытия в OSM не подтверждают действующее сообщение или проходимость дороги.
 
-- **Вся Россия** — 155 тыс. н.п.: время до райцентра, столицы региона и 180 городов по дорожному графу OSM
-  (6,9 млн узлов) + магистральная матрица «Если быть точным».
-- **Глубоко** — регионы с ручными данными о местной авиации, зимниках, речных линиях и переправах
-  (`data_manual/`). Тыва проработана полностью (сценарии, сезоны, ожидание рейсов).
+## Зачем это
 
-## Структура
+Для Кунгуртуга увеличение частоты с двух до четырёх рейсов в неделю даёт нулевой
+выигрыш: дорожная альтернатива ещё быстрее авиации с ожиданием. Семь рейсов дают
+другой результат. Поэтому предложение оценивается вместе с альтернативами,
+а частота сама по себе не служит мерой хорошей связанности.
 
+Россия представлена потенциальной доступностью 180 рынков по Hansen.
+Пилот Тывы оценивает конкретные поездки жителей к названным центрам.
+Пользователь выбирает вывод и следующий шаг проверки по данным, а не по числу линий на карте.
+
+## Как это работает
+
+| Участок | Правило | Проверка |
+| --- | --- | --- |
+| Россия | Население рынка с экспоненциальным затуханием по времени; полупериод 2 ч | Одна дорожная база, чувствительность 1/2/4 ч, покрытие и манифест |
+| Тыва | Минимум движения с накладными и ожидания `84/f` при равных интервалах | Независимый расчёт 24 комбинаций, отдельный контроль расписания |
+| Сценарий | Меняются только существующие связи, сезон и целая частота 1–28 | Версии, валидация API, неизменность входов |
+
+Источники и периоды раскрываются в интерфейсе. Неизвестная частота сохраняется
+неизвестной; допущение отмечается. Если неизвестные альтернативы могут быть быстрее,
+путь не объявляется доказанным оптимумом. Отсутствие пути имеет отдельный статус.
+
+## Попробовать за две минуты
+
+1. Откройте карту, выберите «Доступность рынков Hansen», сезон и режим транспорта.
+2. Откройте «Пилот Тывы», задайте первой авиационной линии 7 рейсов в неделю и нажмите «Пересчитать».
+3. Сравните 18,10 и 14,24 ч, откройте маршрут, выгрузите CSV и JSON. Затем попробуйте 4 рейса: эффект нулевой.
+
+[Маршрут жюри](docs/for-jury.md) связывает действия с доказательствами.
+[Карта требований](docs/requirements-map.md) отдельно отмечает неподтверждённые прошлые события и отправку.
+
+## Результаты
+
+| Проверенный опыт | Результат | Граница вывода |
+| --- | --- | --- |
+| Кунгуртуг → Кызыл, 2 → 4 рейса | 18,095 → 18,095 ч | Условная дорожная альтернатива остаётся быстрее |
+| Та же поездка, 2 → 7 рейсов | 18,095 → 14,243 ч | Выигрыш 3,852 ч при частотной модели |
+| Сезонная связь Сыстыг-Хем → Тоора-Хем отключена | Пути нет | Относится к рассматриваемой сети |
+| Независимый контроль пилота | 24 комбинации совпали | Время и статус на том же графе, не полевая валидация |
+| Национальный входной масштаб | 82 региона, 155412 пунктов | Частичные федеральные города исключены; не всё население России |
+
+Методы, даты, версии и протоколы приведены в [доказательствах](docs/evidence.md).
+Отрицательный результат четырёх рейсов сохранён. Затраты, ВРП и пассажиропоток не оценивались.
+
+<details><summary>Повторить расчёт пилота</summary>
+
+```bash
+uv sync --python 3.12
+PYTHONPATH=backend/src uv run python etl/validate_pilot.py
+uv run python -m unittest discover -s tests
 ```
-etl/                      пайплайн
-  download.py, sources.py   открытые данные Точно / БД ПМО Росстата
-  load.py + sql/            DuckDB: STG и витрины mart_mo / mart_region
-  download_osm.py           OSM Geofabrik по России (10 выгрузок, ~4 ГБ)
-  osm_extract.py            дороги из .pbf → data/osm_ways/*.parquet
-  graph_russia.py           упрощённый граф РФ (цепочки без развилок склеиваются)
-  graphlib.py               загрузка графа в scipy (минимум по параллельным рёбрам!)
-  manual_links.py           ручные связи регионов → manual_links_ru, manual_remote
-  access_russia.py          время доступа для всех н.п. (road / summer / winter) → np_access, np_city_times
-  indices.py                индексы из исследований (Hansen, ARIA+, OECD, RAI, Lancet…) → idx_* (docs/indices.md)
-  graph_tuva.py, multimodal_tuva.py   детальная модель Тывы (авиа, сезоны, ожидание рейса)
-  export_regions_input.py   н.п. каждого региона → data_manual/regions_input/
-data_manual/              ручные данные (в git)
-  tuva_links.csv            местные рейсы и сезонные связи Тывы
-  regions/<ОКТМО>.csv       связи по регионам: авиа, зимники, реки, переправы — с источниками
-  regions/<ОКТМО>_remote.csv  труднодоступные н.п.
-  regions/<ОКТМО>.md        как устроена связанность региона
-  regions_input/<ОКТМО>.csv н.п. региона — вход для сбора связей
-prompts/regions_todo.md   задания на сбор связей по остальным регионам (см. ниже)
-data/                     скачанное и посчитанное, в git не хранится
-```
+
+Проверка использует поставляемый артефакт; тяжёлая национальная пересборка отделена
+от запуска приложения и описана в [пайплайне](docs/data-pipeline.md).
+
+</details>
 
 ## Запуск
 
-### Интерактивный атлас
+```bash
+docker compose up --build -d
+docker compose ps
+```
 
-Фронтенд в `frontend/atlas`: карта России с региональными границами и шкалой Hansen → регион → маршруты и источники. Использует реальные CSV проекта; отсутствующие региональные расчёты отмечены отдельно. В README фронтенда описаны импорт индексов из DuckDB и ограничения картографической подложки.
+Приложение: **http://localhost:8080**. API доступен через `/api/v1` на том же адресе.
+Первичная сборка скачивает образы и зависимости. Работа готового сценария не требует
+платных ключей, регистрации или скачивания исходных графов.
+Для другого порта: `PORT=8081 docker compose up --build -d`.
+
+<details><summary>Разработка и проверки</summary>
 
 ```bash
-cd frontend/atlas
+cd backend
+uv sync
+uv run uvicorn app.main:create_app --factory --host 127.0.0.1 --port 8000
+```
+
+Во втором терминале:
+
+```bash
+cd frontend
 npm ci
-npm run dev -- --host 127.0.0.1 --port 5186
+npm run dev -- --host 127.0.0.1 --port 8080
 ```
-
-### Дополнительные данные: экономика и сезонность
-
-Восемь новых семейств данных подключены через `etl/additional_data.py`.
-При наличии исходников в `data/additional/` выполните из корня проекта:
 
 ```bash
-uv run python etl/additional_data.py
+cd frontend
+npm run verify
+E2E_BASE_URL=http://127.0.0.1:8080 npx playwright test e2e/pilot-experiment.spec.ts
 ```
-
-Скрипт создаёт `data/additional.duckdb` и обновляет статические выгрузки атласа
-`frontend/atlas/public/additional.json` и `additional/regions/*.json`. Проверяет уникальность ИНН,
-отсутствие размножения строк, единственную привязку компании и покрытие освещённости.
-Существующая расчётная база не изменяется. При наличии `np_city_times`, `market_cities` и
-`np_access` в `data/casechamp.duckdb` дополнительно создаётся экспериментальная витрина
-`idx_economic_np` с весами по наблюдаемой неотрицательной выручке около рыночных городов.
-Без сохранённых времён поездки расчёт пропускается с явным статусом.
-
-В интерфейсе доступны «Экономика территорий» и «Сезоны и расписания». Финансы относятся к
-2025 году, ночная освещённость — к 2023–2024 годам. Адрес компании — адрес регистрации;
-привязка к ближайшему населённому пункту в пределах 5 км не устанавливает расположение завода.
-Подробности сборки, фильтров и проверок — в README фронтенда.
-
-### Основной расчётный пайплайн
-
-Нужен [uv](https://docs.astral.sh/uv/). DuckDB закреплён на 1.2.2 (машина разработки без AVX).
 
 ```bash
-uv run python etl/download.py && uv run python etl/load.py      # открытые данные → data/casechamp.duckdb
-uv run python etl/download_osm.py                                 # OSM, ~4 ГБ
-ls data/raw/osm_russia/*.pbf | xargs -P 3 -n 1 uv run python etl/osm_extract.py
-uv run python etl/graph_russia.py                                 # граф РФ, пик ~6 ГБ RAM
-uv run python etl/manual_links.py                                 # ручные связи → рёбра по сезонам
-uv run python etl/access_russia.py                                # доступ для всех н.п., 3 сценария, ~45 мин
-uv run python etl/indices.py                                      # индексы, ~5 мин
-uv run python etl/graph_tuva.py && uv run python etl/multimodal_tuva.py   # Тыва
+cd backend
+uv run ruff check .
+uv run mypy .
+uv run pytest tests/unit tests/integration
 ```
 
-## Сбор связей по регионам
+`DATA_DIR` задаёт каталог настоящих экспортов. Compose монтирует поставляемые данные
+только для чтения. Healthcheck проверяет живой процесс; отсутствие конкретного артефакта
+возвращает честную ошибку соответствующего API. Подробнее: [запуск](docs/running.md).
 
-`prompts/regions_todo.md` — инструкция и по одному промту на регион (для агента с веб-поиском).
-Результат — три файла в `data_manual/regions/`. Готовые примеры формата: Чукотка (`77000000.*`), ЯНАО (`71900000.*`).
+</details>
 
-## Допущения модели
+## Устройство
 
-Скорости по классам дорог (trunk 65, primary 60, … track 20 км/ч, грунт −30%) откалиброваны по Кызыл–Абакан;
-сверка с матрицей Точно по 24 тыс. пар: r = 0,993, наше время в среднем +6,6%. Накладные на ЖД/авиа — 1 / 2,5 ч.
-Частоты местных рейсов — из `data_manual`, неизвестные помечены (по умолчанию 1 рейс/нед).
+React, Vite и TypeScript; FastAPI с разделением domain/usecase/repository/controller;
+отдельный пакетный расчёт на DuckDB, NumPy и SciPy. Текущий интерфейс находится в `frontend/`.
+`frontend/atlas/public` содержит данные API; старый интерфейс атласа не является вторым продуктом.
 
-## Ручные связи в графе РФ
+| Материал | Назначение |
+| --- | --- |
+| [Документация](docs/README.md) | Методика, API, источники, ограничения и воспроизводимость |
+| [Пилот](docs/pilot-method.md) | Поездки, варианты, ожидание и проверка |
+| [Реестр ИИ](docs/ai-register.md) | Задачи, инструменты, материалы и найденные ошибки |
+| [Комплект сдачи](docs/submission/README.md) | Паспорт, семь слайдов, речь и статус отправки |
 
-`etl/manual_links.py` собирает `data_manual/regions/*.csv` и `tuva_links.csv` в `manual_links_ru`
-(по строке на связь и сезон), `access_russia.py` добавляет их рёбрами в дорожный граф. Сценарии в колонке
-`season` таблиц `np_access` / `np_city_times`: `road` — только дороги, `summer` / `winter` — плюс связи сезона.
-Н.п. без дороги в 5 км, но с ручной связью, получают свой узел (`manual_only`).
+## Ограничения
 
-- Линии (авиа, зимник, река, дальний паром): км из источника или по прямой × извилистость (зимник 1,25,
-  река 1,3); скорости 200 / 30 / 20 км/ч, накладные 1 / 0 / 0,5 ч.
-- Переправы (паром, лёд, понтон): подъезд между н.п. по прямой × 1,3 на 40 км/ч + створ (km из CSV, иначе 1 км)
-  на 10 / 20 / 20 км/ч; у парома +0,5 ч ожидания.
-- Ожидание рейса: половина интервала, не больше 24 ч (поездку планируют под расписание);
-  частота не найдена — 1 рейс/нед (`freq_assumed`).
-- Не используются: связи без сезона (67, `confidence=low`) и зарубежные `ext:` (Хэйхэ, Тунцзян, Миншань, Сухум).
-- `_remote.csv`: в модель (`manual_remote`, флаг `no_all_season_road`) идут только `all_season_road=no`.
-  Остальное — перечни для ККТ и выплат медикам; они покрывают почти все сёла и отсутствие дороги не доказывают.
+- **Транспортные сведения исторические.** Действующее расписание и проходимость OSM не проверены на месте.
+- **Время условное.** Равные интервалы и независимые пересадки упрощают реальные поездки; сезон не означает конкретную дату открытия.
+- **Экономический эффект не рассчитан.** Без затрат и спроса модельный выигрыш не определяет инвестиционный приоритет.
 
-```bash
-uv run python etl/manual_links.py && uv run python etl/access_russia.py    # 3 сценария, ~45 мин
-```
+Полный перечень и статусы: [ограничения](docs/limitations.md).
+Данные OSM распространяются на условиях [ODbL](https://www.openstreetmap.org/copyright).
+Источники, лицензии и периоды перечислены в манифестах; наличие URL не заменяет проверку.
+
+<p align="center">
+<!-- readme:footer -->
+<picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/footer.dark.png"><img src="docs/readme/footer.light.png" width="98" height="44" alt="Plexus"></picture>
+<!-- /readme:footer -->
+</p>

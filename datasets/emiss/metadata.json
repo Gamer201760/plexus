@@ -1,0 +1,49 @@
+{
+  "source_row": 19,
+  "slug": "emiss",
+  "title": "ЕМИСС: макроэкономические показатели",
+  "status": "partial",
+  "source_url": "https://fedstat.ru/indicator/61497",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "2016–2024",
+  "license": "Явная лицензия отдельно не установлена; источник ЕМИСС / Росстат.",
+  "description": "Скачан полный ответ официального dataGrid для показателя 61497 «Валовой региональный продукт в основных ценах (ОКВЭД 2)» по всем значениям фильтров, опубликованным страницей.",
+  "limitations": "Сохранены исходный JSON, тело публичного POST-запроса, расшифровки фильтров и длинная CSV-таблица. Это один полный показатель, не вся ЕМИСС и не все доходы, занятость, цены и торговля из исходной строки. Служебные идентификаторы и первоначальная запись чисел с запятой сохранены. Территориальные уровни смешаны; названия перечислены в profile.json.",
+  "files": [
+    {
+      "path": "derived/filters.json",
+      "url": "https://fedstat.ru/indicator/61497",
+      "download_url": null,
+      "bytes": 20685,
+      "sha256": "7690b53b1d334a955c770446868692509a04eae1557d4a6d64f61561fa91f825",
+      "kind": "derived_data"
+    },
+    {
+      "path": "derived/grp_61497_long.csv",
+      "url": "https://fedstat.ru/indicator/61497",
+      "download_url": null,
+      "bytes": 12979082,
+      "sha256": "8a36dd7f69d505e41e92ad31f9e277cbd5ea5d0edc0f5e17d2fbe2305c317226",
+      "kind": "derived_data"
+    },
+    {
+      "path": "derived/request_body.txt",
+      "url": "https://fedstat.ru/indicator/61497",
+      "download_url": null,
+      "bytes": 4341,
+      "sha256": "ad818ef38930c6a26e50d657cad307aa1876cdd5bc2d138fa8295021470123cf",
+      "kind": "derived_data"
+    },
+    {
+      "path": "raw/grp_61497.json",
+      "url": "https://fedstat.ru/indicator/dataGrid.do?id=61497",
+      "download_url": "https://fedstat.ru/indicator/dataGrid.do?id=61497",
+      "bytes": 2383841,
+      "sha256": "9830fcd3a5ebb8f54eac88a35c6a7aa034a743b5e5ebfc200b9c5fe9a971bd76",
+      "kind": "raw_data"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": []
+}

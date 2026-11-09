@@ -1,0 +1,33 @@
+{
+  "source_row": 20,
+  "slug": "regions_collection",
+  "title": "Росстат: социально-экономические показатели регионов",
+  "status": "downloaded",
+  "source_url": "https://tochno.st/datasets/regions_collection",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "2001–2025",
+  "license": "CC BY 4.0, прямо указана на странице подборки.",
+  "description": "Скачан полный опубликованный CSV-архив подборки Точно по 19 сборникам Росстата, включая 21 раздел сборника «Регионы России».",
+  "limitations": "Архив содержит 40 содержательных CSV плюс вспомогательные файлы; сохранён целиком. Сборники и раздельные разделы частично повторяют одни и те же наблюдения, поэтому число строк по всем файлам не является числом уникальных наблюдений. Фактические годы, уровни, регионы, показатели и пустоты описаны по каждому CSV в profile.json. MACOSX-метаданные не считались таблицами.",
+  "files": [
+    {
+      "path": "raw/data_regions_collection_102_v20260313_csv.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_regions_collection_102_v20260313_csv.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_regions_collection_102_v20260313_csv.zip",
+      "bytes": 44206113,
+      "sha256": "41ab88aef7118f65d0b92dd5a4e35d323fdac53cc78683dc2358283bcf1eb94d",
+      "kind": "raw_data"
+    },
+    {
+      "path": "raw/description_regions_collection_102_v20260313.pdf",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/description_regions_collection_102_v20260313.pdf",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/description_regions_collection_102_v20260313.pdf",
+      "bytes": 230594,
+      "sha256": "e5b6f09f05ba6bf165f1d9065e8cd2d071a9f81225e21f0fe2837ee1b3aa8a00",
+      "kind": "source_documentation"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": []
+}

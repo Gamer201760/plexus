@@ -1,37 +1,3 @@
-"""Индексы доступности и удалённости из исследований — для всех н.п. России по сценариям road / summer / winter.
-
-Вход: np_access, np_city_times, market_cities (etl/access_russia.py), stg_settlements, data/osm_ways.
-Выход (DuckDB):
-  idx_np      — season × н.п.: все индексы ниже
-  idx_np_gap  — н.п.: сезонность и зависимость от ручных связей (сравнение сценариев)
-  idx_mo      — season × МО верхнего уровня: средневзвешенные по населению, доли населения
-  idx_region  — season × регион: то же + неравенство (Gini, Palma, Theil) + типология OECD
-  idx_theil   — season: Theil по стране, разложение «внутри / между регионами»
-
-Индексы (источники — docs/indices.md):
-  hansen_{1,2,4}h   Hansen (1959): Σ M_j·exp(−β·t_ij), β = ln2 / полупериод; M_j — население 180 городов.
-                    hansen_idx = hansen_2h / средневзвеш. по населению РФ в road × 100.
-  harris            рыночный потенциал Harris (1954) / Redding–Venables (2004): Σ M_j / (t_ij + T0).
-  remoteness_ca     индекс удалённости по образцу Statistics Canada (2020): 1 − min-max(ln harris), 0..1.
-  cum_pop_{1,2,4}h  кумулятивные возможности: население городов в пределах 1/2/4 ч; 4 ч — «дневная доступность»
-                    (Gutiérrez 2001: съездить и вернуться за день).
-  t_city50k_*       время до ближайшего города ≥50 тыс.: road — критерий OECD (удалённый, если > 1 ч на машине,
-                    Dijkstra & Ruiz 2010); best — по образцу карты Weiss et al. (2018, Nature).
-  aria              ARIA+ (Австралия, 0–15): по пяти классам центров (≥250k, ≥48k, ≥18k, ≥5k, ≥1k)
-                    время / среднее по н.п. РФ в road, cap 3, сумма. aria_class — пороги ABS 0,2 / 2,4 / 5,92 / 10,53.
-                    Отличие: время вместо км (зимники, паромы, авиа иначе не учесть).
-  lancet_2h         ≤ 2 ч до райцентра — прокси показателя Lancet Commission on Global Surgery (2015):
-                    2 ч до больницы с кесаревым, лапаротомией, открытым переломом. Райцентр ≈ ЦРБ — допущение.
-  rai_2km           SDG 9.1.1 Rural Access Index: сельский н.п. в 2 км от всесезонной дороги.
-                    Всесезонная (прокси): motorway…tertiary без грунтового покрытия или любая с твёрдым покрытием,
-                    не сезонная, не паром.
-  net_efficiency    эффективность сети (Gutiérrez & Monzón 1998): Σ (t_ij / t_ideal_ij)·M_j / Σ M_j,
-                    t_ideal = по прямой / IDEAL_KMH. 1 — как по прямой, больше — хуже; где высок — нужна новая связь.
-Сезонность (idx_np_gap): exposure_manual — доля Hansen, теряемая без ручных связей (по образцу site exposure,
-  Jenelius et al. 2006); seasonal_gap — 1 − min/max(лето, зима).
-Неравенство: Gini и Palma (Delbosc & Currie 2011) по населению; access_poor — доля жителей с Hansen < 50 %
-  медианы РФ (порог достаточности, Martens 2017 «Transport Justice»); Theil T с разложением.
-"""
 import glob
 import os
 from pathlib import Path
@@ -44,6 +10,7 @@ import pyarrow.compute as pc
 import pyarrow.parquet as pq
 from scipy.spatial import cKDTree
 
+from inequality import gini, palma, theil
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "casechamp.duckdb"
 R_EARTH = 6371.0
@@ -107,28 +74,11 @@ def rai(pts):
     return best
 
 
-def gini(x, w):
-    o = np.argsort(x); x, w = x[o], w[o]
-    cw = np.cumsum(w) / w.sum(); cx = np.cumsum(x * w) / (x * w).sum()
-    return 1 - np.sum((cw - np.r_[0, cw[:-1]]) * (cx + np.r_[0, cx[:-1]]))
-
-
-def palma(x, w):
-    o = np.argsort(x); x, w = x[o], w[o]
-    cw = np.cumsum(w) / w.sum(); tot = (x * w).sum()
-    return (x * w)[cw > 0.9].sum() / max((x * w)[cw <= 0.4].sum(), 1e-12) if tot else np.nan
-
-
-def theil(x, w):
-    m = np.average(x, weights=w)
-    r = np.where(x > 0, x / m, 1)
-    return np.average(np.where(x > 0, r * np.log(r), 0), weights=w)
-
-
 def main():
     os.chdir(ROOT)
     con = duckdb.connect(str(DB))
     con.execute("set threads = 4")
+    con.execute("begin transaction")
     b = {f"b{h}": np.log(2) / h for h in HALF_LIFE_H}
 
     # --- рыночные индексы из np_city_times: всё в SQL (84 млн строк)
@@ -136,9 +86,9 @@ def main():
                         for k, v in ARIA_CLASSES.items() if k in "abc")
     con.execute(f"""
       create or replace temp table mk as
-      select t.season, t.point_id,
-             {", ".join(f"sum(c.population * exp(-{b[f'b{h}']} * t.best_h)) as hansen_{h}h" for h in HALF_LIFE_H)},
-             sum(c.population / (t.best_h + {HARRIS_T0_H})) as harris,
+      select t.season, t.point_id, count(*) as reachable_markets,
+             {", ".join(f"sum(c.population * exp(-{b[f'b{h}']} * cast(t.best_h as double))) as hansen_{h}h" for h in HALF_LIFE_H)},
+             sum(c.population / (cast(t.best_h as double) + {HARRIS_T0_H})) as harris,
              {", ".join(f"sum(c.population) filter (t.best_h <= {h}) as cum_pop_{h}h" for h in (1, 2, 4))},
              min(t.road_h) filter (c.population >= 50000) as t_city50k_road_h,
              min(t.best_h) filter (c.population >= 50000) as t_city50k_best_h,
@@ -159,13 +109,17 @@ def main():
 
     acc = con.sql("""select a.*, s.latitude as lat, s.longitude as lon from np_access a
                      join stg_settlements s on s.oktmo = a.point_id and s.object_level = 'Населенный пункт'""").df()
+    acc = acc[~acc.region.isin(["Москва", "Санкт-Петербург", "Севастополь"])]
     df = acc.merge(con.sql("select * from mk").df(), on=["season", "point_id"], how="left") \
             .merge(con.sql("select * from eff").df(), on=["season", "point_id"], how="left")
+    df["reachable_markets"] = df.reachable_markets.fillna(0).astype(int)
     df["is_rural"] = ~df.name.str.split(" ", n=1).str[0].isin(URBAN_PREFIX)
     for c in [f"hansen_{h}h" for h in HALF_LIFE_H] + ["harris"] + [f"cum_pop_{h}h" for h in (1, 2, 4)]:
         df[c] = df[c].fillna(0.0)
     road = df[df.season == "road"]
-    base = np.average(road.hansen_2h, weights=road.population.clip(lower=1))
+    base = np.average(road.hansen_2h, weights=road.population.fillna(0).clip(lower=0))
+    if not np.isfinite(base) or base <= 0:
+        raise ValueError("positive population-weighted baseline is required")
     df["hansen_idx"] = df.hansen_2h / base * 100
     lh = np.log(df.harris.where(df.harris > 0))
     lr = np.log(road.harris[road.harris > 0])
@@ -190,7 +144,7 @@ def main():
     df = df.merge(pts[["point_id", "km_allseason_road"]], on="point_id", how="left")
     df["rai_2km"] = df.km_allseason_road <= RAI_KM
 
-    cols = ["season", "point_id", "name", "region", "mun_upper", "population", "is_rural", "is_dc", "on_road",
+    cols = ["reachable_markets", "season", "point_id", "name", "region", "mun_upper", "population", "is_rural", "is_dc", "on_road",
             "manual_only", "no_all_season_road", "hansen_1h", "hansen_2h", "hansen_4h", "hansen_idx", "harris",
             "remoteness_ca", "cum_pop_1h", "cum_pop_2h", "cum_pop_4h", "t_city50k_road_h", "t_city50k_best_h",
             "oecd_remote", "t_aria_a", "t_aria_b", "t_aria_c", "t_aria_d", "t_aria_e", "aria", "aria_class",
@@ -212,6 +166,11 @@ def main():
 
     # --- агрегаты МО и регионов
     agg = """sum(population) as population, count(*) as n_np,
+             coalesce(sum(population) filter (reachable_markets > 0), 0) as covered_population,
+             count(*) filter (reachable_markets > 0) as covered_settlements,
+             sum(population * hansen_1h) / sum(population) as hansen_1h,
+             sum(population * hansen_2h) / sum(population) as hansen_2h,
+             sum(population * hansen_4h) / sum(population) as hansen_4h,
              sum(population * hansen_idx) / sum(population) as hansen_idx,
              sum(population * remoteness_ca) / sum(population) as remoteness_ca,
              sum(population * aria) / sum(population) as aria,
@@ -260,6 +219,9 @@ def main():
                             round(sum(population) filter (is_rural and rai_2km) / sum(population) filter (is_rural), 3) rai,
                             round(sum(population * aria) / sum(population), 2) aria
                      from idx_np group by 1 order by 1"""))
+
+    con.execute("create or replace table index_model_metadata as select ?::varchar as model_version, ?::double as normalization_base, 2 as half_life_h", ["hansen-frequency-v2", float(base)])
+    con.execute("commit")
 
 
 if __name__ == "__main__":

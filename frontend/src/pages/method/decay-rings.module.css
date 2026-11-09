@@ -1,0 +1,45 @@
+.art {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 1;
+  overflow: visible;
+}
+
+.ring {
+  composes: ringEnter from "../../shared/styles/compose.module.css";
+  --ring-delay-base: var(--delay-none);
+  fill: none;
+  stroke-width: var(--iso-line-strong);
+}
+
+.ring[data-ring="1"] {
+  stroke: var(--iso-1);
+}
+
+.ring[data-ring="2"] {
+  stroke: var(--iso-2);
+}
+
+.ring[data-ring="3"] {
+  stroke: var(--iso-3);
+}
+
+.origin {
+  fill: var(--text-primary);
+}
+
+.label {
+  fill: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-caption);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: var(--font-numeric);
+  text-anchor: middle;
+}
+
+.caption {
+  margin-block-start: var(--space-12);
+  color: var(--text-secondary);
+  font-size: var(--font-size-body-sm);
+  text-align: center;
+}

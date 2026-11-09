@@ -1,0 +1,67 @@
+.region {
+  position: fixed;
+  inset-block-end: var(--space-16);
+  inset-inline: var(--space-16);
+  z-index: var(--layer-toast);
+  pointer-events: none;
+}
+
+@media (min-width: 48rem) {
+  .region {
+    inset-block-end: var(--space-24);
+    inset-inline: auto var(--space-24);
+    inline-size: var(--toast-width);
+  }
+}
+
+.list {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.toast {
+  composes: surface from "../../overlays/popover/popover.module.css";
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--space-12);
+  padding-block: var(--space-12);
+  padding-inline: var(--space-16) var(--space-8);
+  box-shadow: var(--shadow-float);
+  pointer-events: auto;
+  animation: var(--motion-slide-in);
+}
+
+.toast[data-state="closed"] {
+  animation: var(--motion-slide-out);
+}
+
+:where(.toast) {
+  --tone: var(--status-neutral);
+}
+
+.icon {
+  margin-block-start: var(--space-8);
+  color: var(--tone);
+}
+
+.text {
+  display: grid;
+  gap: var(--space-2);
+  min-inline-size: 0;
+  padding-block: var(--space-8);
+}
+
+.title {
+  composes: title from "../banner/banner.module.css";
+}
+
+.description {
+  composes: secondaryText from "../../../styles/compose.module.css";
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}

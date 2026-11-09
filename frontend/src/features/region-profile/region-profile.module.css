@@ -1,0 +1,62 @@
+.profile {
+  display: grid;
+  gap: var(--space-24);
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--text-secondary);
+  font-size: var(--font-size-body-sm);
+}
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: var(--space-24);
+  align-items: start;
+}
+.main {
+  display: grid;
+  gap: var(--space-24);
+  min-inline-size: 0;
+}
+.note {
+  color: var(--text-secondary);
+  font-size: var(--font-size-body-sm);
+  margin-block-end: var(--space-20);
+}
+.modes {
+  inline-size: 100%;
+  border-collapse: collapse;
+  margin-block-start: var(--space-24);
+  font-size: var(--font-size-body-sm);
+}
+.modes th,
+.modes td {
+  padding: var(--space-12) var(--space-8);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+  text-align: end;
+}
+.modes th:first-child {
+  text-align: start;
+  font-weight: var(--weight-regular);
+}
+.modes th span {
+  display: flex;
+  gap: var(--space-12);
+  align-items: center;
+}
+.modes thead {
+  color: var(--text-secondary);
+}
+.aside {
+  display: grid;
+  gap: var(--space-20);
+}
+.aside h2 {
+  font-size: var(--font-size-subheading);
+}
+.aside p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-body-sm);
+}

@@ -1,0 +1,3 @@
+year,turnover_million_tonnes,capacity_million_tonnes,utilization_stated_pct,utilization_computed_pct,source_file,basin_sum_million_tonnes,national_minus_basins_million_tonnes
+2022,841.8,1301.1,64.7,64.69910076089462,datasets/asop-port-turnover-capacity/raw/turnover-capacity-2000-2024.pdf,841.8,0.0
+2023,906.9,1368.4,66.3,66.27448114586377,datasets/asop-port-turnover-capacity/raw/turnover-capacity-2000-2024.pdf,883.8,23.100000000000023

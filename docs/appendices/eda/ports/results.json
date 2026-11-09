@@ -1,0 +1,66 @@
+{
+  "ports": {
+    "rows": 42,
+    "duplicate_dimension_ports": 2,
+    "duplicate_dimension_rows": 10,
+    "capacity_parsed": 41,
+    "capacity_unit_screen_pass": 39,
+    "berths_parsed": 41,
+    "front_parsed": 42,
+    "collapsed_parallel_cell_ports": [
+      "Морской порт Ольга",
+      "Морской порт Посьет",
+      "Морской порт Архангельск",
+      "Морской порт Анапа",
+      "Морской порт Ейск",
+      "Морской порт Таганрог"
+    ],
+    "without_capacity": [
+      "Морской порт Пассажирский порт Санкт-Петербург"
+    ],
+    "cargo_capacity_year_uniform": false,
+    "capacity_unit_screen_is_not_full_comparability": true,
+    "individual_port_observed_turnover_available": false
+  },
+  "asop": {
+    "national_years": 25,
+    "national_utilization_max_abs_error_pp": 0.04649705714828656,
+    "readable_numeric_pdf_by_source": {
+      "asop-port-arrival-modes": 3,
+      "asop-port-basins": 4
+    },
+    "all_pdf_by_source": {
+      "asop-port-arrival-modes": 30,
+      "asop-port-basins": 29
+    },
+    "chart_values_extracted": 44,
+    "publication_conflict_rows": 4,
+    "national_vs_basin_consistency": [
+      {
+        "year": 2022,
+        "turnover_million_tonnes": 841.8,
+        "basin_sum_million_tonnes": 841.8,
+        "national_minus_basins_million_tonnes": 0.0
+      },
+      {
+        "year": 2023,
+        "turnover_million_tonnes": 906.9,
+        "basin_sum_million_tonnes": 883.8,
+        "national_minus_basins_million_tonnes": 23.100000000000023
+      }
+    ]
+  },
+  "airports": {
+    "rows": 1844,
+    "closed": 335,
+    "scheduled_yes": 157,
+    "active_scheduled": 157,
+    "regions_with_active_scheduled": 63,
+    "scheduled_service_is_routes": false
+  },
+  "input_hashes": {
+    "datasets/rosmorport-port-characteristics/derived/ports.csv": "fa6db4a59c8750acf0b18a47fd7cfaffb354a57df67ad56b07d76466514b969d",
+    "datasets/rosmorport-port-characteristics/derived/characteristics.csv": "389fecfd67eb2da68db727d0ca2f992f32a018dd9899c0e7f8e0616c5a5a07da",
+    "datasets/asop-port-turnover-capacity/raw/turnover-capacity-2000-2024.pdf": "55aaa7ca1b648c1635d083449f4e85ae8330818415abdd8ebafbc524a1224874"
+  }
+}

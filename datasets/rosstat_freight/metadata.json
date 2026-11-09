@@ -1,0 +1,104 @@
+{
+  "source_row": 16,
+  "slug": "rosstat_freight",
+  "title": "Росстат: грузовые перевозки и грузооборот",
+  "status": "partial",
+  "source_url": "https://rosstat.gov.ru/statistics/transport",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "Доступные региональные данные 2001–2024",
+  "license": "Для сохранённой публикации Точно CC BY 4.0.",
+  "description": "Оригинальные таблицы XLSX из транспортного раздела Росстата получить не удалось: опубликованные ссылки отдают 404. Сохранены полные региональные ряды грузовых показателей Росстата в обработке Точно и официальные методические определения PDF.",
+  "limitations": "Это частичное покрытие строки исходного списка: обработанная региональная публикация, не оригинальная текущая выгрузка Росстата. Нет подтверждения полной ежемесячной серии всех видов транспорта и текущей железнодорожной погрузки. derived/freight_indicators.csv содержит все строки грузовых показателей из полного раздела 16; исходный ZIP сохранён. Дополнительный архив data_transport содержит тарифы и отраслевые показатели сборника «Транспорт в России»; он не заменяет ряды объёмов перевозок. В исходных значениях есть числовые коды пропуска -99999999 (нет информации) и -77777777 (скрыто); перед расчётами их нужно исключать, сохраняя причины пропусков.",
+  "files": [
+    {
+      "path": "derived/freight_indicators.csv",
+      "url": "https://rosstat.gov.ru/statistics/transport",
+      "download_url": null,
+      "bytes": 5381781,
+      "sha256": "06489436b5f0e2b72dbd2ba2298f900846be8b6bfe18bfa4c447d193b3fb712e",
+      "kind": "derived_data"
+    },
+    {
+      "path": "raw/data_16_socio_economic_102_v20260313.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_16_socio_economic_102_v20260313.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_16_socio_economic_102_v20260313.zip",
+      "bytes": 2259923,
+      "sha256": "aa717221482c6abe5e63156c8b43d8b6aa6dff7da358ca57fb1104c17ce82d19",
+      "kind": "raw_data"
+    },
+    {
+      "path": "raw/data_transport_102_v20260313.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_transport_102_v20260313.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_transport_102_v20260313.zip",
+      "bytes": 1844904,
+      "sha256": "85283d639cd8a25edbda0481dfa6379a9142699de1eddbdeb7a377e4c069aa8a",
+      "kind": "raw_data"
+    },
+    {
+      "path": "raw/Понятия и определения (перевозки грузов транспортом).pdf",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/Понятия и определения (перевозки грузов транспортом).pdf",
+      "download_url": "https://www.rosstat.gov.ru/storage/mediabank/Понятия и определения (перевозки грузов транспортом).pdf",
+      "bytes": 122004,
+      "sha256": "8e7efa949ca1c2503fe8586e388375ea5825178459de202642507fa350068129",
+      "kind": "source_documentation"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": [
+    {
+      "title": "Перевозки грузов по видам транспорта",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/PerevGruz-01-2026.xlsx",
+      "slug": "rosstat_freight",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/PerevGruz-01-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null
+    },
+    {
+      "title": "Объем погрузки основных видов грузов на железнодорожном транспорте (с 2005 г.)",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/Pogruzka-01-2026.xlsx",
+      "slug": "rosstat_freight",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/Pogruzka-01-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null
+    },
+    {
+      "title": "Грузооборот по видам транспорта",
+      "url": "https://www.rosstat.gov.ru/storage/mediabank/Gruzooborot-01-2026.xlsx",
+      "slug": "rosstat_freight",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/Gruzooborot-01-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null
+    },
+    {
+      "slug": "rosstat_freight",
+      "url": "https://rosstat.gov.ru/storage/mediabank/PerevGruz-09-2026.xlsx",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/PerevGruz-09-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null,
+      "url_discovery": "Versioned filename inferred from published Rosstat file pattern and October 2026 catalog update; accepted only if actual file download succeeds."
+    },
+    {
+      "slug": "rosstat_freight",
+      "url": "https://rosstat.gov.ru/storage/mediabank/Gruzooborot-09-2026.xlsx",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/Gruzooborot-09-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null,
+      "url_discovery": "Versioned filename inferred from published Rosstat file pattern and October 2026 catalog update; accepted only if actual file download succeeds."
+    },
+    {
+      "slug": "rosstat_freight",
+      "url": "https://rosstat.gov.ru/storage/mediabank/Pogruzka-09-2026.xlsx",
+      "file": "/private/tmp/keys-champ-data-statistics/datasets/rosstat_freight/raw/Pogruzka-09-2026.xlsx",
+      "exit_code": 22,
+      "error": "curl: (22) The requested URL returned error: 404\n",
+      "size": null,
+      "url_discovery": "Versioned filename inferred from published Rosstat file pattern and October 2026 catalog update; accepted only if actual file download succeeds."
+    }
+  ]
+}

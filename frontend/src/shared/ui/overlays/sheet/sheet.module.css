@@ -1,0 +1,55 @@
+.frame {
+  align-items: var(--sheet-frame-align);
+  justify-items: var(--sheet-frame-justify);
+}
+
+.sheet {
+  inline-size: var(--sheet-inline);
+  block-size: var(--sheet-block);
+  max-block-size: var(--sheet-max);
+  border-radius: var(--sheet-radius);
+  animation: var(--sheet-enter);
+}
+
+.sheet[data-state="closed"] {
+  animation: var(--sheet-exit);
+}
+
+.bottom {
+  --sheet-frame-align: end;
+  --sheet-frame-justify: stretch;
+  --sheet-inline: 100%;
+  --sheet-block: auto;
+  --sheet-max: 85dvh;
+  --sheet-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  --sheet-enter: var(--motion-sheet-in);
+  --sheet-exit: var(--motion-sheet-out);
+}
+
+.side {
+  --sheet-frame-align: stretch;
+  --sheet-frame-justify: end;
+  --sheet-inline: min(var(--sheet-width), 100%);
+  --sheet-block: 100%;
+  --sheet-max: 100%;
+  --sheet-radius: 0;
+  --sheet-enter: var(--motion-drawer-in);
+  --sheet-exit: var(--motion-drawer-out);
+}
+
+.responsive {
+  composes: bottom;
+}
+
+@media (min-width: 48rem) {
+  .responsive {
+    --sheet-frame-align: stretch;
+    --sheet-frame-justify: end;
+    --sheet-inline: min(var(--sheet-width), 100%);
+    --sheet-block: 100%;
+    --sheet-max: 100%;
+    --sheet-radius: 0;
+    --sheet-enter: var(--motion-drawer-in);
+    --sheet-exit: var(--motion-drawer-out);
+  }
+}

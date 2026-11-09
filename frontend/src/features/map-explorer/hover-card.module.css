@@ -1,0 +1,30 @@
+.hover {
+  composes: surface from "../../shared/styles/compose.module.css";
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: var(--layer-tooltip);
+  display: grid;
+  gap: var(--space-4);
+  min-inline-size: var(--term-min);
+  padding: var(--space-8) var(--space-12);
+  box-shadow: var(--shadow-float);
+  pointer-events: none;
+  translate: var(--space-16) calc(-100% - var(--space-8));
+  animation: var(--motion-fade-in);
+}
+
+.hoverTitle {
+  font-size: var(--font-size-body-sm);
+}
+
+.hoverRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-16);
+  font-size: var(--font-size-caption);
+}
+
+.hoverValue {
+  font-variant-numeric: var(--font-numeric);
+  font-weight: var(--weight-semibold);
+}

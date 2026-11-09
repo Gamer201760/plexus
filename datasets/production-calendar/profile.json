@@ -1,0 +1,235 @@
+{
+  "russian_calendars": [
+    {
+      "file": "ru2004.json",
+      "year": 2004,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2005.json",
+      "year": 2005,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2006.json",
+      "year": 2006,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2007.json",
+      "year": 2007,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2008.json",
+      "year": 2008,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2009.json",
+      "year": 2009,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2010.json",
+      "year": 2010,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2011.json",
+      "year": 2011,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2012.json",
+      "year": 2012,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2013.json",
+      "year": 2013,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2014.json",
+      "year": 2014,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2015.json",
+      "year": 2015,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2016.json",
+      "year": 2016,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2017.json",
+      "year": 2017,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2018.json",
+      "year": 2018,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2019.json",
+      "year": 2019,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2020.json",
+      "year": 2020,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2021.json",
+      "year": 2021,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru-ad2022.json",
+      "year": 2022,
+      "countrycode": "ru-ad"
+    },
+    {
+      "file": "ru-al2022.json",
+      "year": 2022,
+      "countrycode": "ru-al"
+    },
+    {
+      "file": "ru-ba2022.json",
+      "year": 2022,
+      "countrycode": "ru-ba"
+    },
+    {
+      "file": "ru-bel2022.json",
+      "year": 2022,
+      "countrycode": "ru-bel"
+    },
+    {
+      "file": "ru-bu2022.json",
+      "year": 2022,
+      "countrycode": "ru-bu"
+    },
+    {
+      "file": "ru-ce2022.json",
+      "year": 2022,
+      "countrycode": "ru-ce"
+    },
+    {
+      "file": "ru-cu2022.json",
+      "year": 2022,
+      "countrycode": "ru-cu"
+    },
+    {
+      "file": "ru-da2022.json",
+      "year": 2022,
+      "countrycode": "ru-da"
+    },
+    {
+      "file": "ru-in2022.json",
+      "year": 2022,
+      "countrycode": "ru-in"
+    },
+    {
+      "file": "ru-kb2022.json",
+      "year": 2022,
+      "countrycode": "ru-kb"
+    },
+    {
+      "file": "ru-kc2022.json",
+      "year": 2022,
+      "countrycode": "ru-kc"
+    },
+    {
+      "file": "ru-kl2022.json",
+      "year": 2022,
+      "countrycode": "ru-kl"
+    },
+    {
+      "file": "ru-ko2022.json",
+      "year": 2022,
+      "countrycode": "ru-ko"
+    },
+    {
+      "file": "ru-pnz2022.json",
+      "year": 2022,
+      "countrycode": "ru-pnz"
+    },
+    {
+      "file": "ru-sa2022.json",
+      "year": 2022,
+      "countrycode": "ru-sa"
+    },
+    {
+      "file": "ru-sar2022.json",
+      "year": 2022,
+      "countrycode": "ru-sar"
+    },
+    {
+      "file": "ru-se2022.json",
+      "year": 2022,
+      "countrycode": "ru-se"
+    },
+    {
+      "file": "ru-sta2022.json",
+      "year": 2022,
+      "countrycode": "ru-sta"
+    },
+    {
+      "file": "ru-ta2022.json",
+      "year": 2022,
+      "countrycode": "ru-ta"
+    },
+    {
+      "file": "ru-ty2022.json",
+      "year": 2022,
+      "countrycode": "ru-ty"
+    },
+    {
+      "file": "ru-zab2022.json",
+      "year": 2022,
+      "countrycode": "ru-zab"
+    },
+    {
+      "file": "ru2022.json",
+      "year": 2022,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2023.json",
+      "year": 2023,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2024.json",
+      "year": 2024,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2025.json",
+      "year": 2025,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2026.json",
+      "year": 2026,
+      "countrycode": "ru"
+    },
+    {
+      "file": "ru2027.json",
+      "year": 2027,
+      "countrycode": "ru"
+    }
+  ],
+  "api_year": 2026,
+  "api_rows": 365,
+  "api_codes": {
+    "1": 118,
+    "0": 247
+  }
+}

@@ -1,0 +1,7 @@
+left_set,right_set,spearman,max_absolute_rank_shift,median_absolute_rank_shift,top20_common
+all_180,source_capitals,0.9982961455437414,15,1.0,19
+all_180,outside_admin_region,0.9983928619198817,12,2.0,17
+all_180,source_capitals_outside_admin_region,0.997586206186967,15,2.0,19
+source_capitals,outside_admin_region,0.9972260920204873,15,2.0,17
+source_capitals,source_capitals_outside_admin_region,0.9987468027006504,11,1.0,20
+outside_admin_region,source_capitals_outside_admin_region,0.9983661105818004,12,1.0,17

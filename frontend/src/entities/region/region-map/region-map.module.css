@@ -1,0 +1,127 @@
+.frame {
+  display: grid;
+  margin: 0;
+  overflow: hidden;
+  border: var(--hairline) solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background-color: var(--map-water);
+}
+
+.map {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.land {
+  fill: var(--map-land);
+  composes: hairStroke from "../../../shared/styles/compose.module.css";
+  stroke: var(--border-strong);
+}
+
+.place {
+  fill: var(--text-secondary);
+  fill-opacity: 0.6;
+  stroke: var(--surface-raised);
+  stroke-width: var(--hairline);
+  vector-effect: non-scaling-stroke;
+  paint-order: stroke;
+}
+
+.link,
+.end {
+  --tone: var(--mode-road);
+}
+
+.link[data-mode="air"],
+.end[data-mode="air"] {
+  --tone: var(--mode-air);
+}
+
+.link[data-mode="river"],
+.end[data-mode="river"] {
+  --tone: var(--mode-river);
+}
+
+.link[data-mode="winter_road"],
+.link[data-mode="ice_crossing"],
+.end[data-mode="winter_road"],
+.end[data-mode="ice_crossing"] {
+  --tone: var(--mode-winter);
+}
+
+.link[data-mode="ferry"],
+.link[data-mode="pontoon_bridge"],
+.end[data-mode="ferry"],
+.end[data-mode="pontoon_bridge"] {
+  --tone: var(--mode-ferry);
+}
+
+.toned {
+  stroke: var(--tone);
+  stroke-width: var(--iso-line-strong);
+  vector-effect: non-scaling-stroke;
+}
+
+.link {
+  stroke-linecap: round;
+  cursor: pointer;
+  transition: var(--transition-fade);
+}
+
+.link[data-season="winter"] {
+  stroke-dasharray: var(--dash-winter);
+}
+
+.link[data-season="unknown"] {
+  stroke-dasharray: var(--dash-unknown);
+}
+
+.map[data-focused] .link:not(.active) {
+  opacity: 0.3;
+}
+
+.active {
+  stroke-width: var(--link-active-width);
+}
+
+.end {
+  fill: var(--surface-raised);
+  pointer-events: none;
+}
+
+.endActive {
+  fill: var(--tone);
+  stroke: var(--surface-raised);
+}
+
+.focus {
+  pointer-events: none;
+}
+
+.ring {
+  composes: ringEnter from "../../../shared/styles/compose.module.css";
+  fill: none;
+  stroke-width: var(--iso-line);
+  vector-effect: non-scaling-stroke;
+}
+
+.ring[data-ring="1"] {
+  stroke: var(--iso-1);
+}
+
+.ring[data-ring="2"] {
+  stroke: var(--iso-2);
+}
+
+.ring[data-ring="3"] {
+  stroke: var(--iso-3);
+}
+
+.placeFocus {
+  fill: var(--iso-1);
+  stroke: var(--surface-raised);
+  stroke-width: var(--iso-line-strong);
+  vector-effect: non-scaling-stroke;
+}

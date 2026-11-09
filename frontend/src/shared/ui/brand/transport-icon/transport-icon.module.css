@@ -1,0 +1,38 @@
+.icon {
+  --transport-size: var(--icon-md);
+
+  flex: none;
+  inline-size: var(--transport-size);
+  block-size: var(--transport-size);
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: var(--icon-stroke);
+}
+
+.icon .sm {
+  --transport-size: var(--icon-sm);
+}
+
+.md {
+  --transport-size: var(--icon-md);
+}
+
+.lg {
+  --transport-size: var(--icon-lg);
+}
+
+.air {
+  color: var(--mode-air);
+}
+
+.river {
+  color: var(--mode-river);
+}
+
+.winter {
+  color: var(--mode-winter);
+}
+
+.ferry {
+  color: var(--mode-ferry);
+}

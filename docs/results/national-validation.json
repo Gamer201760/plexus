@@ -1,0 +1,104 @@
+{
+  "measured_at": "2026-11-09T06:02:19.920837+00:00",
+  "code": {
+    "sha": "8c8455d77d940ec5a29d63f2d09b652eff491c17",
+    "dirty": true
+  },
+  "model_metadata": {
+    "model_version": "hansen-frequency-v2",
+    "normalization_base": 3031546.7748233443,
+    "half_life_h": 2
+  },
+  "origin_rows": 777060,
+  "regional_rows": 410,
+  "origins_per_scenario": 155412,
+  "regions_per_scenario": 82,
+  "road_weighted_mean": 100.0,
+  "monotonicity_violations": {
+    "road_summer_not_worse_than_road": 0,
+    "road_winter_not_worse_than_road": 0,
+    "summer_not_worse_than_road_summer": 0,
+    "winter_not_worse_than_road_winter": 0
+  },
+  "independent_formula_checks": [
+    {
+      "point_id": "93701000001",
+      "scenario": "road",
+      "reference_hansen": 172653.86402598754,
+      "stored_hansen": 172653.86402598754
+    },
+    {
+      "point_id": "93643425101",
+      "scenario": "road",
+      "reference_hansen": 326.94513827091225,
+      "stored_hansen": 326.94513827091225
+    },
+    {
+      "point_id": "93650444101",
+      "scenario": "road",
+      "reference_hansen": 36231.64794229593,
+      "stored_hansen": 36231.64794229593
+    },
+    {
+      "point_id": "93701000001",
+      "scenario": "road_summer",
+      "reference_hansen": 172653.86402598754,
+      "stored_hansen": 172653.86402598754
+    },
+    {
+      "point_id": "93643425101",
+      "scenario": "road_summer",
+      "reference_hansen": 326.94513827091225,
+      "stored_hansen": 326.94513827091225
+    },
+    {
+      "point_id": "93650444101",
+      "scenario": "road_summer",
+      "reference_hansen": 36231.64794229593,
+      "stored_hansen": 36231.64794229593
+    },
+    {
+      "point_id": "93701000001",
+      "scenario": "summer",
+      "reference_hansen": 172653.86566728153,
+      "stored_hansen": 172653.86566728153
+    },
+    {
+      "point_id": "93643425101",
+      "scenario": "summer",
+      "reference_hansen": 326.9451413891216,
+      "stored_hansen": 326.9451413891216
+    },
+    {
+      "point_id": "93650444101",
+      "scenario": "summer",
+      "reference_hansen": 36231.64828679673,
+      "stored_hansen": 36231.64828679673
+    },
+    {
+      "point_id": "93701000001",
+      "scenario": "winter",
+      "reference_hansen": 172654.5349437164,
+      "stored_hansen": 172654.5349437164
+    },
+    {
+      "point_id": "93643425101",
+      "scenario": "winter",
+      "reference_hansen": 326.94641292142387,
+      "stored_hansen": 326.94641292142387
+    },
+    {
+      "point_id": "93650444101",
+      "scenario": "winter",
+      "reference_hansen": 36231.788765189405,
+      "stored_hansen": 36231.788765189405
+    }
+  ],
+  "tolerance": "relative 1e-7 for graph monotonicity; 1e-10 for formula samples",
+  "input": {
+    "path": "data/casechamp.duckdb",
+    "bytes": 3485741056,
+    "sha256": "eb74cb340681cc3a9aca802163b75a6e090cec222dc53d934f4cdfc2f1ea3db7"
+  },
+  "limitation": "checks model arithmetic and internal graph invariants, not field operability"
+}

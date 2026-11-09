@@ -1,0 +1,351 @@
+{
+  "municipal_rows": 98220,
+  "paired_2024_upper": 1455,
+  "regions": 84,
+  "year_level": [
+    {
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2023",
+      "observed_union": 2229,
+      "road_valid": 2128,
+      "service_valid": 1512,
+      "paired_valid": 1411
+    },
+    {
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2024",
+      "observed_union": 2257,
+      "road_valid": 2206,
+      "service_valid": 1506,
+      "paired_valid": 1455
+    },
+    {
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2025",
+      "observed_union": 2106,
+      "road_valid": 2102,
+      "service_valid": 108,
+      "paired_valid": 104
+    },
+    {
+      "mun_level": "Муниципальное образование нижнего уровня",
+      "year": "2023",
+      "observed_union": 4527,
+      "road_valid": 4527,
+      "service_valid": 0,
+      "paired_valid": 0
+    },
+    {
+      "mun_level": "Муниципальное образование нижнего уровня",
+      "year": "2024",
+      "observed_union": 4806,
+      "road_valid": 4806,
+      "service_valid": 0,
+      "paired_valid": 0
+    },
+    {
+      "mun_level": "Муниципальное образование нижнего уровня",
+      "year": "2025",
+      "observed_union": 3838,
+      "road_valid": 3838,
+      "service_valid": 0,
+      "paired_valid": 0
+    }
+  ],
+  "balanced": [
+    {
+      "years": [
+        "2023",
+        "2024"
+      ],
+      "municipalities": 1328,
+      "rows": 2656,
+      "regions": 81,
+      "key": "region_id, mun_level, oktmo, oktmo_stable + all dimensions; no administrative-code interpolation"
+    },
+    {
+      "years": [
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "municipalities": 1204,
+      "rows": 3612,
+      "regions": 79,
+      "key": "region_id, mun_level, oktmo, oktmo_stable + all dimensions; no administrative-code interpolation"
+    },
+    {
+      "years": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "municipalities": 1002,
+      "rows": 5010,
+      "regions": 69,
+      "key": "region_id, mun_level, oktmo, oktmo_stable + all dimensions; no administrative-code interpolation"
+    }
+  ],
+  "examples": [
+    {
+      "region_id": "66",
+      "region_name": "Смоленская область",
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2024",
+      "observed_union": 27,
+      "road_valid": 27,
+      "service_valid": 26,
+      "paired_valid": 26,
+      "paired_share_of_observed_union": 0.9629629629629629,
+      "road_min": 15.5,
+      "road_max": 89.4,
+      "service_min": 0.01,
+      "service_max": 19.8,
+      "service_zero": 0,
+      "service_100": 0
+    },
+    {
+      "region_id": "49",
+      "region_name": "Новгородская область",
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2024",
+      "observed_union": 22,
+      "road_valid": 22,
+      "service_valid": 21,
+      "paired_valid": 21,
+      "paired_share_of_observed_union": 0.9545454545454546,
+      "road_min": 13.0,
+      "road_max": 84.4,
+      "service_min": 0.51,
+      "service_max": 6.23,
+      "service_zero": 0,
+      "service_100": 0
+    },
+    {
+      "region_id": "69",
+      "region_name": "Томская область",
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2024",
+      "observed_union": 19,
+      "road_valid": 19,
+      "service_valid": 18,
+      "paired_valid": 18,
+      "paired_share_of_observed_union": 0.9473684210526315,
+      "road_min": 0.8,
+      "road_max": 93.4,
+      "service_min": 0.06,
+      "service_max": 40.42,
+      "service_zero": 0,
+      "service_100": 0
+    },
+    {
+      "region_id": "98",
+      "region_name": "Республика Саха (Якутия)",
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2024",
+      "observed_union": 35,
+      "road_valid": 35,
+      "service_valid": 33,
+      "paired_valid": 33,
+      "paired_share_of_observed_union": 0.9428571428571428,
+      "road_min": 15.5,
+      "road_max": 100.0,
+      "service_min": 1.79,
+      "service_max": 100.0,
+      "service_zero": 0,
+      "service_100": 5
+    },
+    {
+      "region_id": "56",
+      "region_name": "Пензенская область",
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2024",
+      "observed_union": 29,
+      "road_valid": 29,
+      "service_valid": 27,
+      "paired_valid": 27,
+      "paired_share_of_observed_union": 0.9310344827586207,
+      "road_min": 10.4,
+      "road_max": 82.2,
+      "service_min": 0.14,
+      "service_max": 47.36,
+      "service_zero": 0,
+      "service_100": 0
+    },
+    {
+      "region_id": "57",
+      "region_name": "Пермский край",
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2024",
+      "observed_union": 42,
+      "road_valid": 42,
+      "service_valid": 39,
+      "paired_valid": 39,
+      "paired_share_of_observed_union": 0.9285714285714286,
+      "road_min": 3.7,
+      "road_max": 86.9,
+      "service_min": 0.02,
+      "service_max": 17.0,
+      "service_zero": 0,
+      "service_100": 0
+    },
+    {
+      "region_id": "29",
+      "region_name": "Калужская область",
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2024",
+      "observed_union": 26,
+      "road_valid": 26,
+      "service_valid": 24,
+      "paired_valid": 24,
+      "paired_share_of_observed_union": 0.9230769230769231,
+      "road_min": 14.9,
+      "road_max": 82.0,
+      "service_min": 0.1,
+      "service_max": 12.0,
+      "service_zero": 0,
+      "service_100": 0
+    },
+    {
+      "region_id": "37",
+      "region_name": "Курганская область",
+      "mun_level": "Муниципальное образование верхнего уровня",
+      "year": "2024",
+      "observed_union": 26,
+      "road_valid": 26,
+      "service_valid": 24,
+      "paired_valid": 24,
+      "paired_share_of_observed_union": 0.9230769230769231,
+      "road_min": 2.2,
+      "road_max": 73.7,
+      "service_min": 0.16,
+      "service_max": 95.8,
+      "service_zero": 0,
+      "service_100": 0
+    }
+  ],
+  "regional_cohorts_2023": [
+    {
+      "year": "2023",
+      "transport_code": "Y477110061",
+      "transport_name": "Грузооборот автомобильного транспорта организаций всех видов деятельности",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110291",
+      "transport_name": "Отправление пассажиров железнодорожным транспортом общего пользования",
+      "transport_valid_regions": 78,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 78,
+      "three_way_intersection": 78
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110292",
+      "transport_name": "Пассажирооборот автобусов общего пользования",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110293",
+      "transport_name": "Перевозки грузов автомобильным транспортом организаций всех видов деятельности",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110294",
+      "transport_name": "Перевозки пассажиров автобусами общего пользования",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110295",
+      "transport_name": "Плотность автомобильных дорог общего пользования с твердым покрытием",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110296",
+      "transport_name": "Плотность железнодорожных путей общего пользования",
+      "transport_valid_regions": 78,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 78,
+      "three_way_intersection": 78
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110406",
+      "transport_name": "Удельный вес автомобильных дорог с твердым покрытием в общей протяженности автомобильных дорог общего пользования",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110407",
+      "transport_name": "Удельный вес автомобильных дорог с усовершенствованным покрытием в протяженности автомобильных дорог с твердым покрытием общего пользования",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110489",
+      "transport_name": "Число автобусов общего пользования на 100000 человек населения",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110494",
+      "transport_name": "Число дорожно-транспортных происшествий на 100000 человек населения",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    },
+    {
+      "year": "2023",
+      "transport_code": "Y477110496",
+      "transport_name": "Число лиц, погибших в дорожно-транспортных происшествиях на 100000 человек населения",
+      "transport_valid_regions": 85,
+      "grp_per_capita_valid_regions": 85,
+      "population_valid_regions": 85,
+      "transport_grp_intersection": 85,
+      "three_way_intersection": 85
+    }
+  ]
+}

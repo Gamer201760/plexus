@@ -1,0 +1,39 @@
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  inline-size: 100%;
+  min-block-size: var(--target-min);
+  color: inherit;
+  text-align: start;
+  font: inherit;
+  cursor: pointer;
+}
+.trigger > span {
+  flex: 1;
+  min-inline-size: 0;
+}
+.trigger[aria-expanded="false"] > svg {
+  transform: rotate(-90deg);
+}
+.content {
+  opacity: 1;
+  clip-path: inset(0);
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    clip-path var(--dur-fast) var(--ease-out);
+}
+.content[data-state="closed"] {
+  opacity: 0;
+  clip-path: inset(0 0 100% 0);
+  transition-duration: var(--dur-fast-exit);
+}
+.content[data-instant="true"] {
+  transition: none;
+}
+@starting-style {
+  .content {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+}

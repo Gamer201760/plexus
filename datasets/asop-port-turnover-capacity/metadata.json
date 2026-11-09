@@ -1,0 +1,31 @@
+{
+  "source_row": 3,
+  "slug": "asop-port-turnover-capacity",
+  "title": "АСОП: грузооборот и мощности портов",
+  "status": "downloaded",
+  "source_page": "https://www.morport.com/rus/content/statistika-0",
+  "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+  "period": "2000–2024",
+  "coverage": "Россия, один национальный агрегат",
+  "license": "Отдельная лицензия на файлы не установлена; открытый доступ не равен разрешению на произвольное распространение. Сохранять атрибуцию и ссылку.",
+  "contents": "График грузоперевалки, мощности и использования мощностей морских портов России, 25 лет.",
+  "limitations": "Официальный исходник — одностраничный PDF-график, не CSV/XLSX. Территории и отдельные порты не выделены; для расчёта территориального индекса сам по себе недостаточен.",
+  "files": [
+    {
+      "path": "raw/turnover-capacity-2000-2024.pdf",
+      "bytes": 192339,
+      "sha256": "55aaa7ca1b648c1635d083449f4e85ae8330818415abdd8ebafbc524a1224874",
+      "download_url": "https://www.morport.com/sites/default/files/inline/files/gruzooborot_i_moshchnosti_morskih_portov_rossii_na_01.01.2025_s_procentami_1.pdf",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+      "pdf_profile": {
+        "format": "PDF",
+        "pages": 1,
+        "text_characters": 885,
+        "text_extraction_error": null
+      }
+    }
+  ],
+  "profile": "profile.json",
+  "attempts": []
+}

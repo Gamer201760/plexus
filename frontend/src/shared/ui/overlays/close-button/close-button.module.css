@@ -1,0 +1,29 @@
+.close {
+  composes: pressable from "../../../styles/compose.module.css";
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  inline-size: var(--control-height-compact);
+  block-size: var(--control-height-compact);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+}
+
+.close::before {
+  content: "";
+  position: absolute;
+  inset: calc((var(--control-height-compact) - var(--target-min)) / 2);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .close:hover {
+    background-color: var(--action-ghost-hover);
+    color: var(--text-primary);
+  }
+}
+
+.close:active {
+  background-color: var(--action-ghost-press);
+  scale: var(--press-scale);
+}

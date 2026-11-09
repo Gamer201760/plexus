@@ -1,0 +1,113 @@
+{
+  "source_row": 7,
+  "slug": "rosmorport-port-characteristics",
+  "title": "Росморпорт: характеристики портов",
+  "status": "partial",
+  "source_page": "https://www.rosmorport.ru/services/seaports/",
+  "retrieved_at": "2026-11-06T18:35:16.927449+00:00",
+  "period": "Состояние опубликованных страниц на дату скачивания; единый год показателей не задан",
+  "coverage": "42 морских порта на страницах филиалов Росморпорта",
+  "license": "Отдельная лицензия на файлы не установлена; открытый доступ не равен разрешению на произвольное распространение. Сохранять атрибуцию и ссылку.",
+  "contents": "Оригинальные HTML-страницы, производный каталог42портов и535строк табличных характеристик. Поля: регистрация, расположение с координатами в исходном тексте, технические характеристики, точная ссылка.",
+  "limitations": "Это фактическое извлечение из опубликованных таблиц, а не официальный XLSX. Не полный реестр всех портов РФ. У42портов есть местоположение и текст характеристик, у38 есть двухколоночные таблицы. Числа/единицы оставлены как в источнике; координаты пока не приведены к десятичным градусам.",
+  "files": [
+    {
+      "path": "derived/characteristics.csv",
+      "bytes": 99198,
+      "sha256": "389fecfd67eb2da68db727d0ca2f992f32a018dd9899c0e7f8e0616c5a5a07da",
+      "download_url": null,
+      "kind": "derived",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "derived/ports.csv",
+      "bytes": 62549,
+      "sha256": "fa6db4a59c8750acf0b18a47fd7cfaffb354a57df67ad56b07d76466514b969d",
+      "download_url": null,
+      "kind": "derived",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/filials_mur_seaports.html",
+      "bytes": 637557,
+      "sha256": "ac626003cb95d42eaa793fe9e3c704a626571e543806f06bd65cdace900ece64",
+      "download_url": "https://www.rosmorport.ru/filials/mur_seaports/",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/filials_nvr_seaports.html",
+      "bytes": 1359306,
+      "sha256": "1a90bccff32146b889be16843193f14e5b23647df0356befe1c930d695a4b58a",
+      "download_url": "https://www.rosmorport.ru/filials/nvr_seaports/",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/filials_vaf_seaports.html",
+      "bytes": 942364,
+      "sha256": "5b9dbf3a88747806083a067c8a8507862d6d9a159fc479bd3c206d5628bdde6e",
+      "download_url": "https://www.rosmorport.ru/filials/vaf_seaports/",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/mur_seaports.html",
+      "bytes": 637557,
+      "sha256": "1d441f26fe667fd51675663fee6b5d99bc53c3b04a7d41b00e5107b2d392f1af",
+      "download_url": "https://www.rosmorport.ru/mur_seaports.html",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/nvr_seaports.html",
+      "bytes": 1359306,
+      "sha256": "79c7d685f9b26995c42f4cd9080f140ff236e398debf44eed09f468d36d9e629",
+      "download_url": "https://www.rosmorport.ru/nvr_seaports.html",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/ppv_seaports.html",
+      "bytes": 263125,
+      "sha256": "5ee5d94635579c7aaa897019f4ac8acb51b70f3901ebf0a2d328eeb2ffee6bd8",
+      "download_url": "https://www.rosmorport.ru/ppv_seaports.html",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/shl_seaports.html",
+      "bytes": 584440,
+      "sha256": "767f4252c0325cda69d34c0447f1753b8ff031f00cd5902618c679496f954a0f",
+      "download_url": "https://rosmorport.ru/shl_seaports.html",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/spb_seaports.html",
+      "bytes": 1209275,
+      "sha256": "ef568e4fbb6432c185f25f5e53eba02f1c63c16dce944ecc32d56d23583cfd97",
+      "download_url": "https://www.rosmorport.ru/spb_seaports.html",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/vaf_seaports.html",
+      "bytes": 942364,
+      "sha256": "92847d485c385bbd02b5dfd4c85d50b2a1c640bdf2016475604ef9a0791711c2",
+      "download_url": "https://www.rosmorport.ru/vaf_seaports.html",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    },
+    {
+      "path": "raw/vlf_seaports.html",
+      "bytes": 824274,
+      "sha256": "95dea5aab68d278f6ee5c2bf91171e5da9d0795e4e8b19b1dc19bde22ca44aa5",
+      "download_url": "https://rosmorport.ru/vlf_seaports.html",
+      "kind": "original",
+      "retrieved_at": "2026-11-06T18:35:16.927449+00:00"
+    }
+  ],
+  "profile": "profile.json",
+  "attempts": []
+}

@@ -1,0 +1,40 @@
+{
+  "source_row": 38,
+  "slug": "roshydromet-air-quality",
+  "title": "Росгидромет: состояние и загрязнение окружающей среды",
+  "status": "partial",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "РФ, субъекты, федеральные округа, наблюдаемые города и станции; покрытие определяется сетью мониторинга, не всеми населёнными пунктами.",
+  "period": "Обзор за 2024 год; отдельные сравнительные ряды предшествующих лет.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Полный официальный PDF-обзор за 2024 год, 222 страницы, включает загрязнение атмосферного воздуха городов, региональные характеристики и сеть наблюдений. Это отчёт с таблицами, не архив первичных измерений всех станций. Таблицы не извлечены в нормализованный набор.",
+  "source_urls": [
+    "https://www.meteorf.gov.ru/upload/iblock/88f/%D0%9E%D0%B1%D0%B7%D0%BE%D1%80%20%D0%B7%D0%B0%202024%20%D0%B3%D0%BE%D0%B4_300625.pdf"
+  ],
+  "files": [
+    {
+      "path": "raw/environment-review-2024.pdf",
+      "bytes": 16487207,
+      "sha256": "800bb2c8c33f6517ebc62d47dec6ecb6cc90005ed95c55c8e2dbf2da56514c19",
+      "url": "https://www.meteorf.gov.ru/upload/iblock/88f/%D0%9E%D0%B1%D0%B7%D0%BE%D1%80%20%D0%B7%D0%B0%202024%20%D0%B3%D0%BE%D0%B4_300625.pdf",
+      "retrieved_at": "2026-11-06T18:26:47.042093+00:00",
+      "content_type": "application/pdf",
+      "kind": "original_download",
+      "pages": 222
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.meteorf.gov.ru/upload/iblock/88f/%D0%9E%D0%B1%D0%B7%D0%BE%D1%80%20%D0%B7%D0%B0%202024%20%D0%B3%D0%BE%D0%B4_300625.pdf",
+      "file": "datasets/roshydromet-air-quality/raw/environment-review-2024.pdf",
+      "retrieved_at": "2026-11-06T18:26:47.042093+00:00",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "final_url": "https://www.meteorf.gov.ru/upload/iblock/88f/%D0%9E%D0%B1%D0%B7%D0%BE%D1%80%20%D0%B7%D0%B0%202024%20%D0%B3%D0%BE%D0%B4_300625.pdf",
+      "status": "downloaded",
+      "bytes": 16487207,
+      "sha256": "800bb2c8c33f6517ebc62d47dec6ecb6cc90005ed95c55c8e2dbf2da56514c19"
+    }
+  ],
+  "profile_path": "profile.json"
+}

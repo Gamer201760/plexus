@@ -1,0 +1,29 @@
+{
+  "source_row": 27,
+  "slug": "vniigmi-weather",
+  "title": "ВНИИГМИ-МЦД: архив метеоданных",
+  "status": "blocked",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "Станции наблюдений РФ; точный список и полнота не выгружены.",
+  "period": "Доступные периоды зависят от станции и параметра; пока не установлены по файлам.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Старый адрес meteo.ru/data/162-temperature-precipitation возвращает страницу 404 нового сайта. Актуальная официальная страница описывает выдачу выборок по запросу по электронной почте. Запрос не отправлялся, регистрации не создавались. Погодные данные других источников не выданы за ВНИИГМИ.",
+  "source_urls": [
+    "http://meteo.ru/data/162-temperature-precipitation",
+    "http://meteo.ru/services/data-providing/"
+  ],
+  "files": [],
+  "attempts": [
+    {
+      "url": "http://meteo.ru/data/162-temperature-precipitation",
+      "status": "failed",
+      "error": "Official current site shows page not found; content checked."
+    },
+    {
+      "url": "http://meteo.ru/services/data-providing/",
+      "status": "information_only",
+      "finding": "Official service page describes station archive parameters and asks to contact for data; no ready file downloaded."
+    }
+  ],
+  "profile_path": "profile.json"
+}

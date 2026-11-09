@@ -1,0 +1,25 @@
+{
+  "source_row": 21,
+  "slug": "demography",
+  "title": "Росстат: демография и перепись",
+  "status": "partial",
+  "source_url": "https://tochno.st/datasets/regions_collection",
+  "retrieved_at": "2026-11-06T18:36:06.054202+00:00",
+  "period": "Доступный демографический сборник 2005,2010–2023",
+  "license": "CC BY 4.0, прямо указана на странице подборки.",
+  "description": "Скачан полный опубликованный архив «Демографический ежегодник России» в подборке Точно: региональные ряды населения и отдельных демографических показателей.",
+  "limitations": "10560 строк × 14 полей,7 показателей. Перепись по населённым пунктам отдельно сохранена в allsettlements. Прогнозы населения и все миграционные разрезы этой выгрузкой не покрыты; не считать строку источников полностью выполненной.",
+  "files": [
+    {
+      "path": "raw/data_demography_102_v20260313.zip",
+      "url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_demography_102_v20260313.zip",
+      "download_url": "https://storage.yandexcloud.net/tochno-st-catalog/Rosstat/data_regions_collection_102_v20260313/data_demography_102_v20260313.zip",
+      "bytes": 778748,
+      "sha256": "1d69725ae648e60181b4f75f941c021cc3f56a7ec141c7852d40ec2e2635d0ee",
+      "kind": "raw_data"
+    }
+  ],
+  "profile": "profile.json",
+  "coverage": "coverage.md",
+  "attempts": []
+}

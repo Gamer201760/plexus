@@ -1,0 +1,94 @@
+:root {
+  color-scheme: light;
+
+  --surface-base: var(--neutral-0);
+  --surface-raised: var(--neutral-0);
+  --surface-raised-hover: var(--neutral-25);
+  --surface-muted: var(--neutral-25);
+  --surface-sunken: var(--neutral-50);
+  --surface-selected: var(--neutral-0);
+  --surface-accent-soft: var(--blue-50);
+  --surface-inverse: var(--neutral-950);
+  --surface-skeleton: var(--neutral-100);
+
+  --text-primary: var(--neutral-950);
+  --text-secondary: var(--neutral-700);
+  --text-muted: var(--neutral-600);
+  --text-disabled: var(--neutral-400);
+  --text-on-inverse: var(--neutral-0);
+  --text-accent: var(--blue-600);
+  --text-danger: var(--red-600);
+  --text-success: var(--green-600);
+  --text-warning: var(--amber-600);
+  --action-primary-text: var(--neutral-0);
+
+  --action-primary: var(--blue-600);
+  --action-primary-hover: var(--blue-700);
+  --action-primary-press: var(--blue-800);
+  --action-ghost-hover: color-mix(in oklab, var(--neutral-950) 6%, transparent);
+  --action-ghost-press: color-mix(in oklab, var(--neutral-950) 11%, transparent);
+  --action-danger: var(--red-600);
+  --action-danger-hover: var(--red-700);
+  --action-disabled: var(--neutral-100);
+
+  --border-subtle: var(--neutral-100);
+  --border-default: var(--neutral-200);
+  --border-strong: var(--neutral-300);
+  --border-control: var(--neutral-450);
+  --border-selected: var(--neutral-950);
+  --border-accent: var(--blue-600);
+
+  --status-danger: var(--red-600);
+  --status-danger-surface: var(--red-50);
+  --status-success: var(--green-600);
+  --status-success-surface: var(--green-50);
+  --status-warning: var(--amber-600);
+  --status-warning-surface: var(--amber-50);
+  --status-info: var(--blue-600);
+  --status-info-surface: var(--blue-50);
+  --status-neutral: var(--neutral-600);
+
+  --focus-ring: var(--blue-500);
+  --shadow-color: color-mix(in oklab, var(--neutral-950) 12%, transparent);
+  --shadow-color-strong: color-mix(in oklab, var(--neutral-950) 24%, transparent);
+  --scrim: color-mix(in oklab, var(--neutral-950) 36%, transparent);
+  --scrollbar-thumb: color-mix(in oklab, var(--neutral-950) 22%, transparent);
+  --scrollbar-thumb-hover: color-mix(in oklab, var(--neutral-950) 40%, transparent);
+
+  --iso-1: var(--iso-ring-1);
+  --iso-2: var(--iso-ring-2);
+  --iso-3: var(--iso-ring-3);
+  --iso-inverse-1: var(--iso-night-1);
+  --iso-inverse-2: var(--iso-night-2);
+  --iso-inverse-3: var(--iso-night-3);
+
+  --map-land: var(--land-100);
+  --map-land-brand: var(--blue-100);
+  --map-none: var(--land-200);
+  --map-water: var(--water-200);
+  --map-water-line: var(--water-400);
+  --map-border: var(--neutral-0);
+  --map-selected: var(--neutral-950);
+  --map-hover: color-mix(in oklab, var(--iso-1) 26%, transparent);
+
+  --data-seq-1: var(--teal-1);
+  --data-seq-2: var(--teal-2);
+  --data-seq-3: var(--teal-3);
+  --data-seq-4: var(--teal-4);
+  --data-seq-5: var(--teal-5);
+  --data-seq-6: var(--teal-6);
+  --data-seq-7: var(--teal-7);
+  --data-loss-3: var(--orange-3);
+  --data-loss-2: var(--orange-2);
+  --data-loss-1: var(--orange-1);
+  --data-zero: var(--sand-0);
+  --data-gain-1: var(--violet-1);
+  --data-gain-2: var(--violet-2);
+  --data-gain-3: var(--violet-3);
+
+  --mode-air: var(--mode-air-hue);
+  --mode-river: var(--mode-river-hue);
+  --mode-winter: var(--mode-winter-hue);
+  --mode-ferry: var(--mode-ferry-hue);
+  --mode-road: var(--mode-road-hue);
+}

@@ -1,0 +1,66 @@
+.panelSub {
+  font-size: var(--font-size-label);
+  color: var(--text-secondary);
+  font-weight: var(--weight-semibold);
+}
+
+.ranking {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.rankList {
+  composes: bareList from "../../shared/styles/compose.module.css";
+  display: grid;
+  gap: var(--space-2);
+}
+
+.rankList > li {
+  animation: var(--motion-rise-in);
+  animation-delay: calc(var(--i) * var(--stagger));
+}
+
+.rankRow {
+  composes: pressable from "../../shared/styles/compose.module.css";
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-4) var(--space-12);
+  inline-size: 100%;
+  padding: var(--space-12) var(--space-8);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: var(--font-size-body-sm);
+}
+
+.rankName {
+  composes: truncate from "../../shared/styles/compose.module.css";
+  min-inline-size: 0;
+}
+
+.rankValue {
+  font-variant-numeric: var(--font-numeric);
+  font-weight: var(--weight-semibold);
+}
+
+.rankBar {
+  grid-column: 1 / -1;
+  block-size: var(--space-4);
+  border-radius: var(--radius-pill);
+  background-color: var(--data-seq-5);
+  transform-origin: left;
+  transform: scaleX(var(--v));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .rankRow:hover {
+    background-color: var(--action-ghost-hover);
+  }
+}
+
+.coverage {
+  grid-column: 1 / -1;
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+}

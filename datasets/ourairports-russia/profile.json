@@ -1,0 +1,71 @@
+{
+  "rows": 1844,
+  "fields": [
+    "id",
+    "ident",
+    "type",
+    "name",
+    "latitude_deg",
+    "longitude_deg",
+    "elevation_ft",
+    "continent",
+    "iso_country",
+    "iso_region",
+    "municipality",
+    "scheduled_service",
+    "icao_code",
+    "iata_code",
+    "gps_code",
+    "local_code",
+    "home_link",
+    "wikipedia_link",
+    "keywords"
+  ],
+  "source_filter": "iso_country == 'RU'",
+  "regions_with_records": 83,
+  "regions_in_dictionary": 85,
+  "regions_without_records": [
+    "RU-U-A",
+    "RU-UOB"
+  ],
+  "support_rows": {
+    "runways": 492,
+    "airport-frequencies": 319,
+    "navaids": 460,
+    "regions": 85,
+    "countries": 1
+  },
+  "types": {
+    "small_airport": 691,
+    "heliport": 559,
+    "medium_airport": 211,
+    "closed": 335,
+    "seaplane_base": 4,
+    "large_airport": 44
+  },
+  "scheduled_service": {
+    "no": 1687,
+    "yes": 157
+  },
+  "missing": {
+    "id": 0,
+    "ident": 0,
+    "type": 0,
+    "name": 0,
+    "latitude_deg": 0,
+    "longitude_deg": 0,
+    "elevation_ft": 551,
+    "continent": 0,
+    "iso_country": 0,
+    "iso_region": 0,
+    "municipality": 116,
+    "scheduled_service": 0,
+    "icao_code": 1628,
+    "iata_code": 1625,
+    "gps_code": 1214,
+    "local_code": 1499,
+    "home_link": 1728,
+    "wikipedia_link": 1347,
+    "keywords": 560
+  }
+}

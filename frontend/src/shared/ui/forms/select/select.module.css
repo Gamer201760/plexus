@@ -1,0 +1,47 @@
+.select {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+  min-inline-size: 0;
+}
+
+.label {
+  composes: controlText from "../../../styles/compose.module.css";
+}
+
+.trigger {
+  composes: box from "../text-field/text-field.module.css";
+  inline-size: 100%;
+  text-align: start;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .trigger:hover:not(:disabled) {
+    border-color: var(--border-selected);
+  }
+}
+
+.trigger:disabled {
+  background-color: var(--action-disabled);
+  color: var(--text-disabled);
+}
+
+.value {
+  composes: truncate from "../../../styles/compose.module.css";
+  flex: 1 1 auto;
+  min-inline-size: 0;
+}
+
+.placeholder,
+.muted {
+  color: var(--text-muted);
+}
+
+.chevron {
+  color: var(--text-muted);
+  transition: var(--transition-transform);
+}
+
+.trigger[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}

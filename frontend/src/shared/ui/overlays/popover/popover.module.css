@@ -1,0 +1,50 @@
+.surface {
+  composes: surface from "../../../styles/compose.module.css";
+}
+
+.floating {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  transition: var(--transition-pop);
+}
+
+.popover {
+  composes: surface floating;
+  --origin-block: top;
+  --origin-inline: left;
+  --popover-shift: calc(var(--shift-anchor) * -1);
+
+  z-index: var(--layer-popover);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4);
+  overflow: clip;
+  box-shadow: var(--shadow-float);
+  transform-origin: var(--origin-inline) var(--origin-block);
+}
+
+@starting-style {
+  .popover {
+    opacity: 0;
+    transform: translateY(var(--popover-shift)) scale(var(--enter-scale));
+  }
+}
+
+.popover[data-side="top"] {
+  --origin-block: bottom;
+  --popover-shift: var(--shift-anchor);
+}
+
+.popover[data-align="center"] {
+  --origin-inline: center;
+}
+
+.popover[data-align="end"] {
+  --origin-inline: right;
+}
+
+.popover[data-state="closed"] {
+  pointer-events: none;
+  animation: var(--motion-scale-out);
+}

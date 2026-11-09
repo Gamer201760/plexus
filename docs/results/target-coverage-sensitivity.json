@@ -1,0 +1,58 @@
+{
+  "measured_at": "2026-11-09T06:02:21.695925+00:00",
+  "code": {
+    "sha": "8c8455d77d940ec5a29d63f2d09b652eff491c17",
+    "dirty": true
+  },
+  "implementation": {
+    "path": "etl/index_sensitivity.py",
+    "bytes": 4161,
+    "sha256": "154db0cb46e560aee7a77e9f713463e82f8a9e3e1fc1fd8ae78e91009add9d78"
+  },
+  "method": "leave out the largest population market; retain the original normalization base",
+  "removed_market": "Москва",
+  "removed_population": 13010112,
+  "rows": [
+    {
+      "scenario": "road",
+      "regions": 82,
+      "rank_spearman": 0.974249300725939,
+      "median_relative_loss": 0.006508760686122056,
+      "maximum_relative_loss": 0.6662522156778545,
+      "maximum_loss_region": "Московская область"
+    },
+    {
+      "scenario": "road_summer",
+      "regions": 82,
+      "rank_spearman": 0.974249300725939,
+      "median_relative_loss": 0.00650875145419238,
+      "maximum_relative_loss": 0.6662522052499833,
+      "maximum_loss_region": "Московская область"
+    },
+    {
+      "scenario": "road_winter",
+      "regions": 82,
+      "rank_spearman": 0.974249300725939,
+      "median_relative_loss": 0.00654905241019915,
+      "maximum_relative_loss": 0.6662492750862027,
+      "maximum_loss_region": "Московская область"
+    },
+    {
+      "scenario": "summer",
+      "regions": 82,
+      "rank_spearman": 0.974249300725939,
+      "median_relative_loss": 0.006516747440704715,
+      "maximum_relative_loss": 0.6662518702099626,
+      "maximum_loss_region": "Московская область"
+    },
+    {
+      "scenario": "winter",
+      "regions": 82,
+      "rank_spearman": 0.974249300725939,
+      "median_relative_loss": 0.006549052410199199,
+      "maximum_relative_loss": 0.666249275086201,
+      "maximum_loss_region": "Московская область"
+    }
+  ],
+  "limitation": "one target perturbation, not proof that the 180 markets represent all opportunities"
+}

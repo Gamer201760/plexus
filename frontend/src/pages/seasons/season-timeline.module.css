@@ -1,0 +1,120 @@
+.card {
+  min-inline-size: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, calc(var(--term-min) + var(--space-64))) minmax(0, 1fr);
+  column-gap: var(--space-16);
+}
+
+.axis {
+  position: relative;
+  grid-column: 2;
+  block-size: var(--space-24);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+}
+
+.tick {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--at) * 100%);
+  padding-inline-start: var(--space-4);
+  border-inline-start: var(--hairline) solid var(--border-default);
+  color: var(--text-muted);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+}
+
+.rows {
+  composes: bareList from "../../shared/styles/compose.module.css";
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+
+.row {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  align-items: center;
+  padding-block: var(--space-8);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+}
+
+.name {
+  min-inline-size: 0;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body-sm);
+}
+
+.lane {
+  position: relative;
+  block-size: var(--space-24);
+}
+
+.gridLine {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: calc(var(--at) * 100%);
+  border-inline-start: var(--hairline) solid var(--border-subtle);
+}
+
+.track {
+  position: absolute;
+  inset: var(--space-4) 0;
+}
+
+.fill {
+  border: var(--iso-line-strong) solid var(--mode-winter);
+  border-radius: var(--radius-sm);
+  background-color: var(--mode-winter);
+}
+
+.fill[data-open] {
+  border-style: dashed;
+  background-color: var(--surface-raised);
+}
+
+.bar {
+  composes: fill;
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: calc(var(--from) * 100%);
+  inline-size: max(var(--space-4), calc((var(--to) - var(--from)) * 100%));
+}
+
+.key {
+  composes: secondaryText from "../../shared/styles/compose.module.css";
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-20);
+  margin: 0;
+  padding-block-start: var(--space-12);
+}
+
+.keyItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.swatch {
+  composes: fill;
+  inline-size: var(--space-20);
+  block-size: var(--space-12);
+}
+
+@media (max-width: 48rem) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .axis {
+    grid-column: 1;
+  }
+
+  .row {
+    gap: var(--space-8);
+  }
+}

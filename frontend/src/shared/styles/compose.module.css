@@ -1,0 +1,136 @@
+.labelText {
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+}
+
+.controlText {
+  composes: labelText;
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+}
+
+.secondaryText {
+  color: var(--text-secondary);
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body-sm);
+}
+
+.subheadingText {
+  font-size: var(--font-size-subheading);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-height-subheading);
+  text-wrap: balance;
+}
+
+.pressable {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transition: var(--transition-control);
+}
+
+.pressable:active {
+  transition: var(--transition-control-press);
+}
+
+.statePanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-block-size: var(--state-min-height);
+  padding: var(--space-24);
+  text-align: center;
+  animation: var(--motion-fade-in);
+}
+
+.ringEnter {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: var(--motion-ring-in);
+  animation-delay: calc(var(--ring-delay-base) + var(--i) * var(--delay-ring-step));
+}
+
+.ringPulse {
+  animation: var(--motion-ring-pulse);
+  animation-delay: calc(var(--i) * var(--dur-base));
+}
+
+.pagePad {
+  padding-block: var(--space-32) var(--space-64);
+  padding-inline: var(--space-page);
+}
+
+@media (min-width: 75rem) {
+  .pagePad {
+    padding-inline: var(--space-page-wide);
+  }
+}
+
+.bareList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.surface {
+  border: var(--hairline) solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-raised);
+}
+
+.mapFloat {
+  composes: surface;
+  position: absolute;
+  z-index: var(--layer-raised);
+  box-shadow: var(--shadow-raised);
+}
+
+.leadText {
+  max-inline-size: var(--prose-measure);
+  color: var(--text-secondary);
+  font-size: var(--font-size-subheading);
+}
+
+.fluidSvg {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  overflow: visible;
+}
+
+.overlayBox {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.isoStroke {
+  fill: none;
+  stroke-width: var(--iso-line-strong);
+  stroke-linejoin: round;
+}
+
+.fillBox {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.hairStroke {
+  stroke-width: var(--hairline);
+  vector-effect: non-scaling-stroke;
+}
+
+.displayText {
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--tracking-display);
+}

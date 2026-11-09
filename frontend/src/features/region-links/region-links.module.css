@@ -1,0 +1,116 @@
+.card {
+  min-inline-size: 0;
+}
+
+.list {
+  composes: bareList from "../../shared/styles/compose.module.css";
+  display: grid;
+}
+
+.list > li {
+  animation: var(--motion-rise-in);
+  animation-delay: calc(var(--i) * var(--stagger));
+}
+
+.row {
+  composes: pressable from "../../shared/styles/compose.module.css";
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-12) var(--space-4);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.skeletonRow {
+  padding: var(--space-16) var(--space-4) var(--space-16) var(--space-32);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+}
+
+.row[aria-current] {
+  background-color: var(--surface-accent-soft);
+}
+
+.route {
+  display: grid;
+  gap: var(--space-2);
+  min-inline-size: 0;
+  font-size: var(--font-size-body-sm);
+}
+
+.ends {
+  composes: truncate from "../../shared/styles/compose.module.css";
+}
+
+.ends:last-child {
+  color: var(--text-secondary);
+}
+
+.season {
+  color: var(--text-muted);
+  font-size: var(--font-size-caption);
+}
+
+.detail {
+  display: grid;
+  gap: var(--space-20);
+}
+
+.routeHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-8);
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-weight: var(--weight-medium);
+  line-height: var(--line-height-body);
+}
+
+.arrow {
+  color: var(--text-muted);
+}
+
+.detailHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-8) var(--space-16);
+  margin: 0;
+  font-size: var(--font-size-body-sm);
+}
+
+.facts dt {
+  color: var(--text-muted);
+}
+
+.facts dd {
+  margin: 0;
+  font-variant-numeric: var(--font-numeric);
+}
+
+.note {
+  display: grid;
+  gap: var(--space-4);
+  font-size: var(--font-size-body-sm);
+  color: var(--text-secondary);
+}
+
+.noteLabel {
+  color: var(--text-muted);
+  font-size: var(--font-size-caption);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .row:hover {
+    background-color: var(--action-ghost-hover);
+  }
+}

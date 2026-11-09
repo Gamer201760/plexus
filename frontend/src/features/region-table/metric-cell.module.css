@@ -1,0 +1,24 @@
+.cell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-12);
+  min-inline-size: calc(var(--space-64) + var(--space-48));
+}
+
+.track {
+  display: block;
+  inline-size: 100%;
+  block-size: var(--space-4);
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-muted);
+}
+
+.bar {
+  display: block;
+  block-size: 100%;
+  background-color: var(--data-seq-5);
+  transform-origin: left center;
+  transform: scaleX(var(--v));
+}

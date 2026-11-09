@@ -1,0 +1,15 @@
+.frame {
+  place-items: center;
+  padding: var(--space-16);
+}
+
+.dialog {
+  inline-size: min(var(--dialog-width), 100%);
+  max-block-size: 100%;
+  border-radius: var(--radius-lg);
+  animation: var(--motion-scale-in);
+}
+
+.dialog[data-state="closed"] {
+  animation: var(--motion-scale-out);
+}

@@ -1,0 +1,72 @@
+{
+  "measured_at": "2026-11-09T06:02:21.695925+00:00",
+  "code": {
+    "sha": "8c8455d77d940ec5a29d63f2d09b652eff491c17",
+    "dirty": true
+  },
+  "implementation": {
+    "path": "etl/index_sensitivity.py",
+    "bytes": 4161,
+    "sha256": "154db0cb46e560aee7a77e9f713463e82f8a9e3e1fc1fd8ae78e91009add9d78"
+  },
+  "method": "sum market contributions over all finite origin-target pairs; unweighted by origin population",
+  "threshold_h": 72,
+  "rows": [
+    {
+      "season": "road",
+      "finite_pairs": 26347467,
+      "pairs_over_72h": 2649818,
+      "hansen_sum": 460237911120.39435,
+      "hansen_tail": 0.8202831979337958,
+      "harris_sum": 853501719956.0881,
+      "harris_tail": 8712258651.28115,
+      "hansen_tail_share": 1.7823025398688129e-12,
+      "harris_tail_share": 0.010207663848327556
+    },
+    {
+      "season": "road_summer",
+      "finite_pairs": 26518122,
+      "pairs_over_72h": 2816243,
+      "hansen_sum": 460253701560.6763,
+      "hansen_tail": 0.8239447084595859,
+      "harris_sum": 853679987558.0045,
+      "harris_tail": 8847618954.873642,
+      "hansen_tail_share": 1.790196810293254e-12,
+      "harris_tail_share": 0.010364093200992928
+    },
+    {
+      "season": "road_winter",
+      "finite_pairs": 27026005,
+      "pairs_over_72h": 3035789,
+      "hansen_sum": 460680595000.46,
+      "hansen_tail": 0.8458474508320816,
+      "harris_sum": 856523871322.679,
+      "harris_tail": 9174186350.585552,
+      "hansen_tail_share": 1.8360822227192725e-12,
+      "harris_tail_share": 0.010710952324560903
+    },
+    {
+      "season": "summer",
+      "finite_pairs": 27805140,
+      "pairs_over_72h": 4020824,
+      "hansen_sum": 460394097995.1633,
+      "hansen_tail": 0.8501314302778744,
+      "harris_sum": 858136623600.9545,
+      "harris_tail": 12851252063.125956,
+      "hansen_tail_share": 1.846529818648556e-12,
+      "harris_tail_share": 0.014975764592354664
+    },
+    {
+      "season": "winter",
+      "finite_pairs": 27922320,
+      "pairs_over_72h": 3930918,
+      "hansen_sum": 460681006412.14905,
+      "hansen_tail": 0.8496025968763692,
+      "harris_sum": 860289562652.3806,
+      "harris_tail": 12929961105.25022,
+      "hansen_tail_share": 1.84423187639794e-12,
+      "harris_tail_share": 0.015029777956837612
+    }
+  ],
+  "limitation": "aggregate contribution sensitivity, not a maximum error bound for every origin"
+}

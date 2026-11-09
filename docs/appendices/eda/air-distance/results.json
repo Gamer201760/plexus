@@ -1,0 +1,307 @@
+{
+  "method": "minimum Haversine great-circle distance to 157 nonclosed airports with scheduled_service=yes; no route or travel time inference",
+  "earth_radius_km": 6371.0088,
+  "population_basis": "Census 2020–2021; source CSV version 2026-09-25",
+  "airports_basis": "OurAirports downloaded 2026-11-06; schedule flag is not verified operational schedule",
+  "strict_settlements": {
+    "settlements": 155747,
+    "with_valid_coordinates": 155747,
+    "missing_or_coded_population": 0,
+    "zero_population_settlements": 24758,
+    "population_with_valid_coordinates_and_population": 128796185.0,
+    "population_without_valid_coordinates": 0.0,
+    "population_within_50km": 65715801.0,
+    "population_share_within_50km": 0.5102309590924607,
+    "settlements_within_50km": 22951,
+    "population_within_100km": 88776349.0,
+    "population_share_within_100km": 0.6892777841207021,
+    "settlements_within_100km": 62667,
+    "population_within_200km": 113712668.0,
+    "population_share_within_200km": 0.8828884799654586,
+    "settlements_within_200km": 123646,
+    "population_weighted_median_km": 46.81683609986743,
+    "population_weighted_p90_km": 215.04985126130168
+  },
+  "strict_region_count": 84,
+  "regional_output_rows": 85,
+  "regional_rows_without_settlements": [
+    "Санкт-Петербург"
+  ],
+  "scheduled_airports": 157,
+  "federal_cities_not_added_to_settlement_population": true,
+  "quantile_definition": "inverse weighted empirical CDF: first sorted distance with cumulative positive population >= q*total; no interpolation",
+  "top20_at_least_1000_people": [
+    {
+      "object_name": "село Лаврентия",
+      "region": "Чукотский автономный округ",
+      "oktmo": "77633420101",
+      "population_numeric": 1420,
+      "latitude_numeric": 65.584895,
+      "longitude_numeric": -171.011034,
+      "nearest_scheduled_airport_km": 533.0894114862111,
+      "nearest_airport_ident": "UHMA",
+      "nearest_airport_name": "Ugolny Yuri Ryktheu Airport",
+      "nearest_airport_region": "RU-CHU"
+    },
+    {
+      "object_name": "село Тиличики",
+      "region": "Камчатский край",
+      "oktmo": "30827405101",
+      "population_numeric": 1700,
+      "latitude_numeric": 60.42834,
+      "longitude_numeric": 166.05554,
+      "nearest_scheduled_airport_km": 505.4234364613226,
+      "nearest_airport_ident": "UHPK",
+      "nearest_airport_name": "Ust'-Kamchatsk Airport",
+      "nearest_airport_region": "RU-KAM"
+    },
+    {
+      "object_name": "г. Злынка",
+      "region": "Брянская область",
+      "oktmo": "15623101001",
+      "population_numeric": 5270,
+      "latitude_numeric": 52.42657,
+      "longitude_numeric": 31.73608,
+      "nearest_scheduled_airport_km": 503.90970638215924,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "посёлок Вышков",
+      "region": "Брянская область",
+      "oktmo": "15623153051",
+      "population_numeric": 2497,
+      "latitude_numeric": 52.47733,
+      "longitude_numeric": 31.68773,
+      "nearest_scheduled_airport_km": 502.1102369976084,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "село Лорино",
+      "region": "Чукотский автономный округ",
+      "oktmo": "77633423101",
+      "population_numeric": 1426,
+      "latitude_numeric": 65.502576,
+      "longitude_numeric": -171.70058,
+      "nearest_scheduled_airport_km": 500.66656283557546,
+      "nearest_airport_ident": "UHMA",
+      "nearest_airport_name": "Ugolny Yuri Ryktheu Airport",
+      "nearest_airport_region": "RU-CHU"
+    },
+    {
+      "object_name": "село Чуровичи",
+      "region": "Брянская область",
+      "oktmo": "15628488101",
+      "population_numeric": 1071,
+      "latitude_numeric": 52.17107,
+      "longitude_numeric": 32.00012,
+      "nearest_scheduled_airport_km": 496.4710886019217,
+      "nearest_airport_ident": "UUOO",
+      "nearest_airport_name": "Voronezh International Airport",
+      "nearest_airport_region": "RU-VOR"
+    },
+    {
+      "object_name": "г. Новозыбков",
+      "region": "Брянская область",
+      "oktmo": "15720000001",
+      "population_numeric": 38680,
+      "latitude_numeric": 52.53714,
+      "longitude_numeric": 31.93574,
+      "nearest_scheduled_airport_km": 485.6836435713409,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "посёлок Климово",
+      "region": "Брянская область",
+      "oktmo": "15628151051",
+      "population_numeric": 13554,
+      "latitude_numeric": 52.37947,
+      "longitude_numeric": 32.19733,
+      "nearest_scheduled_airport_km": 484.36249696955724,
+      "nearest_airport_ident": "UUOO",
+      "nearest_airport_name": "Voronezh International Airport",
+      "nearest_airport_region": "RU-VOR"
+    },
+    {
+      "object_name": "село Сачковичи",
+      "region": "Брянская область",
+      "oktmo": "15628460101",
+      "population_numeric": 1153,
+      "latitude_numeric": 52.34923,
+      "longitude_numeric": 32.21882,
+      "nearest_scheduled_airport_km": 482.64495597472364,
+      "nearest_airport_ident": "UUOO",
+      "nearest_airport_name": "Voronezh International Airport",
+      "nearest_airport_region": "RU-VOR"
+    },
+    {
+      "object_name": "село Замишево",
+      "region": "Брянская область",
+      "oktmo": "15720000117",
+      "population_numeric": 1276,
+      "latitude_numeric": 52.54104,
+      "longitude_numeric": 32.01016,
+      "nearest_scheduled_airport_km": 481.91283480831834,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "посёлок Мирный",
+      "region": "Брянская область",
+      "oktmo": "15611402101",
+      "population_numeric": 1378,
+      "latitude_numeric": 52.82034,
+      "longitude_numeric": 31.73172,
+      "nearest_scheduled_airport_km": 473.33571479390247,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "посёлок Красная Гора",
+      "region": "Брянская область",
+      "oktmo": "15634151051",
+      "population_numeric": 5504,
+      "latitude_numeric": 53.00493,
+      "longitude_numeric": 31.603,
+      "nearest_scheduled_airport_km": 466.16908513583394,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "село Беляши",
+      "region": "Республика Алтай",
+      "oktmo": "84610410101",
+      "population_numeric": 1363,
+      "latitude_numeric": 49.706226,
+      "longitude_numeric": 87.425131,
+      "nearest_scheduled_airport_km": 458.02657732783547,
+      "nearest_airport_ident": "UNWW",
+      "nearest_airport_name": "Spichenkovo Airport",
+      "nearest_airport_region": "RU-KEM"
+    },
+    {
+      "object_name": "село Займище",
+      "region": "Брянская область",
+      "oktmo": "15715000111",
+      "population_numeric": 5026,
+      "latitude_numeric": 52.72205,
+      "longitude_numeric": 32.23665,
+      "nearest_scheduled_airport_km": 456.78838980850696,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "г. Клинцы",
+      "region": "Брянская область",
+      "oktmo": "15715000001",
+      "population_numeric": 63059,
+      "latitude_numeric": 52.75288,
+      "longitude_numeric": 32.23378,
+      "nearest_scheduled_airport_km": 454.45042991503624,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "село Ардонь",
+      "region": "Брянская область",
+      "oktmo": "15715000106",
+      "population_numeric": 2300,
+      "latitude_numeric": 52.73567,
+      "longitude_numeric": 32.30632,
+      "nearest_scheduled_airport_km": 452.45703199672414,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "посёлок Чемерна",
+      "region": "Брянская область",
+      "oktmo": "15630480141",
+      "population_numeric": 1177,
+      "latitude_numeric": 52.7967,
+      "longitude_numeric": 32.20966,
+      "nearest_scheduled_airport_km": 452.09587619924514,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "село Гордеевка",
+      "region": "Брянская область",
+      "oktmo": "15611406101",
+      "population_numeric": 2973,
+      "latitude_numeric": 52.95779,
+      "longitude_numeric": 31.97035,
+      "nearest_scheduled_airport_km": 451.2050872336516,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "село Творишино",
+      "region": "Брянская область",
+      "oktmo": "15611460101",
+      "population_numeric": 1000,
+      "latitude_numeric": 52.93589,
+      "longitude_numeric": 32.03963,
+      "nearest_scheduled_airport_km": 449.45884944758217,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    },
+    {
+      "object_name": "село Коржовка-Голубовка",
+      "region": "Брянская область",
+      "oktmo": "15630448101",
+      "population_numeric": 2009,
+      "latitude_numeric": 52.76524,
+      "longitude_numeric": 32.34959,
+      "nearest_scheduled_airport_km": 448.06725705862465,
+      "nearest_airport_ident": "UUWW",
+      "nearest_airport_name": "Vnukovo International Airport",
+      "nearest_airport_region": "RU-MOW"
+    }
+  ],
+  "validation": {
+    "same_coordinate_airport_checks": 8,
+    "same_coordinate_max_distance_km": 0.0,
+    "coordinate_range_checks": true,
+    "nonnegative_distances": true,
+    "threshold_monotonicity": true,
+    "weighted_quantile_boundary_examples": true
+  },
+  "input_sha256": {
+    "datasets/allsettlements/raw/data_allsettlements_anon_156_v20260925_csv.zip": "33488f0ea405aeee055d454236238297540d042e473c88156da94416b6ea5562",
+    "datasets/ourairports-russia/derived/airports_ru.csv": "fde7636714685e0a06805ff304127352ae0714bc1507d98fb3104d607b26472b"
+  },
+  "native_region_population_discrepancies_or_partial_federal_city_coverage": [
+    {
+      "region": "Архангельская область",
+      "population_with_valid_coordinates_and_population": 1009881.0,
+      "native_region_population": 978873,
+      "settlement_population_fraction_of_native_region_total": 1.0316772451584628
+    },
+    {
+      "region": "Москва",
+      "population_with_valid_coordinates_and_population": 644544.0,
+      "native_region_population": 13010112,
+      "settlement_population_fraction_of_native_region_total": 0.04954177181564617
+    },
+    {
+      "region": "Севастополь",
+      "population_with_valid_coordinates_and_population": 98353.0,
+      "native_region_population": 547820,
+      "settlement_population_fraction_of_native_region_total": 0.1795352488043518
+    }
+  ]
+}

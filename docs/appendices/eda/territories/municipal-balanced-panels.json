@@ -1,0 +1,36 @@
+[
+  {
+    "years": [
+      "2023",
+      "2024"
+    ],
+    "municipalities": 1328,
+    "rows": 2656,
+    "regions": 81,
+    "key": "region_id, mun_level, oktmo, oktmo_stable + all dimensions; no administrative-code interpolation"
+  },
+  {
+    "years": [
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "municipalities": 1204,
+    "rows": 3612,
+    "regions": 79,
+    "key": "region_id, mun_level, oktmo, oktmo_stable + all dimensions; no administrative-code interpolation"
+  },
+  {
+    "years": [
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "municipalities": 1002,
+    "rows": 5010,
+    "regions": 69,
+    "key": "region_id, mun_level, oktmo, oktmo_stable + all dimensions; no administrative-code interpolation"
+  }
+]

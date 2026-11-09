@@ -1,0 +1,28 @@
+.isolines {
+  composes: overlayBox from "../../../styles/compose.module.css";
+  --ring-delay-base: var(--delay-none);
+}
+
+.ring {
+  composes: isoStroke from "../../../styles/compose.module.css";
+}
+
+.isolines .ring[data-ring="1"] {
+  stroke: var(--iso-1);
+}
+
+.isolines .ring[data-ring="2"] {
+  stroke: var(--iso-2);
+}
+
+.isolines .ring[data-ring="3"] {
+  stroke: var(--iso-3);
+}
+
+.ringEnter {
+  composes: ringEnter from "../../../styles/compose.module.css";
+}
+
+.ringPulse {
+  composes: ringPulse from "../../../styles/compose.module.css";
+}

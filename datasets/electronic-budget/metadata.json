@@ -1,0 +1,38 @@
+{
+  "source_row": 31,
+  "slug": "electronic-budget",
+  "title": "Электронный бюджет: расходы по программам",
+  "status": "blocked",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "Федеральные и региональные бюджеты; фактический охват без выгрузки не установлен.",
+  "period": "В исходном списке период не определён; выгрузка расходов по программам не получена.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Портал budget.gov.ru не отвечает в доступном времени; проверенные ссылки CSV Минфина возвращают 503. Квартальная сводка Минфина не подменяет нужные программные расходы. Для выгрузки нужно определить конкретный открытый набор, годы и уровни бюджета.",
+  "source_urls": [
+    "https://budget.gov.ru/",
+    "https://minfin.gov.ru/opendata/7710168360-fedbud_quarter/data-20260910T0100-structure-20210415T0100.csv"
+  ],
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://minfin.gov.ru/opendata/7710168360-fedbud_quarter/data-20260910T0100-structure-20210415T0100.csv",
+      "file": "datasets/electronic-budget/raw/federal-budget-quarterly.csv",
+      "retrieved_at": "2026-11-06T18:26:47.042449+00:00",
+      "status": "failed",
+      "error": "curl: (56) The requested URL returned error: 503"
+    },
+    {
+      "url": "https://minfin.gov.ru/opendata/7710168360-fedbud_quarter/structure-20210415T0100.csv",
+      "file": "datasets/electronic-budget/raw/federal-budget-quarterly-structure.csv",
+      "retrieved_at": "2026-11-06T18:26:47.042363+00:00",
+      "status": "failed",
+      "error": "curl: (56) The requested URL returned error: 503"
+    },
+    {
+      "url": "https://budget.gov.ru/",
+      "status": "failed",
+      "error": "Timeout during public portal retrieval"
+    }
+  ],
+  "profile_path": "profile.json"
+}

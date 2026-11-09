@@ -1,0 +1,12 @@
+{
+  "geography": "Россия; федеральный, региональный и муниципальный уровни в аналитическом обзоре.",
+  "period": "Итоги 2021 года, состояние рынка на 30.12.2021.",
+  "geographic_completeness": "See limitations; no inferred all-region completeness.",
+  "files": [
+    {
+      "file": "raw/ppp-market-2021.pdf",
+      "pages": 26,
+      "format": "PDF report/document; not a normalized data table"
+    }
+  ]
+}

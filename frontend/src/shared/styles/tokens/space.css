@@ -1,0 +1,67 @@
+:root {
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  --space-page: var(--space-24);
+  --space-page-wide: var(--space-32);
+  --space-section: var(--space-32);
+  --space-card: var(--space-20);
+  --space-element: var(--space-12);
+
+  --hairline: 1px;
+  --iso-line: 1.5px;
+  --atlas-line: 1.6px;
+  --atlas-stop: 1.8px;
+  --atlas-station: 2.2px;
+  --atlas-hub: 3.2px;
+  --atlas-hub-active: 4.6px;
+  --atlas-ripple: 26px;
+  --map-wave-reach: 18px;
+  --iso-line-strong: 2px;
+  --dash-winter: 6 4;
+  --dash-unknown: 1 4;
+  --link-active-width: 4px;
+  --target-min: 44px;
+  --control-height: 44px;
+  --control-height-compact: 36px;
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --icon-xl: 48px;
+  --icon-stroke: 1.75;
+  --check-stroke: 2.25;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --scrollbar-size: 10px;
+  --scrollbar-gutter: 2px;
+  --header-height: 64px;
+  --state-min-height: 160px;
+  --panel-min: 320px;
+  --term-min: 160px;
+  --prose-measure: 70ch;
+  --field-max-width: 480px;
+  --toast-width: 380px;
+  --dialog-width: 520px;
+  --map-panel-width: 400px;
+  --map-min-height: 560px;
+  --map-mobile-height: 62dvh;
+  --legend-width: 240px;
+  --formula-art: 320px;
+  --sheet-width: 440px;
+  --listbox-max-height: 320px;
+}
+
+@media (pointer: coarse) {
+  :root {
+    --control-height-compact: var(--target-min);
+  }
+}

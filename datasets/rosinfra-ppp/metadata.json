@@ -1,0 +1,41 @@
+{
+  "source_row": 32,
+  "slug": "rosinfra-ppp",
+  "title": "Росинфра: проекты ГЧП и частные инфраструктурные инвестиции",
+  "status": "partial",
+  "retrieved_at": "2026-11-06T18:34:34.397189+00:00",
+  "coverage": "Россия; федеральный, региональный и муниципальный уровни в аналитическом обзоре.",
+  "period": "Итоги 2021 года, состояние рынка на 30.12.2021.",
+  "license": "Условия повторного использования отдельно не подтверждены; сохранять атрибуцию первоисточнику.",
+  "limitations": "Официальный аналитический обзор, 26 страниц: сводки, проекты и примеры транспортной инфраструктуры. Это исторический отчёт, не полный актуальный реестр всех проектов и соглашений; машиночитаемой полной выгрузки нет.",
+  "source_urls": [
+    "https://rosinfra.ru/api/v2/public/analytics-document/osnovnye-trendy-i-statistika-rynka-gcp-po-itogam-2021-goda-analiticeskij-obzor/download",
+    "https://rosinfra.ru/"
+  ],
+  "files": [
+    {
+      "path": "raw/ppp-market-2021.pdf",
+      "bytes": 777810,
+      "sha256": "59b6c1e5386b58e43f7395a1913889fe5c58ae72eed936cc93210110fcf06f19",
+      "url": "https://rosinfra.ru/api/v2/public/analytics-document/osnovnye-trendy-i-statistika-rynka-gcp-po-itogam-2021-goda-analiticeskij-obzor/download",
+      "retrieved_at": "2026-11-06T18:28:51.311588+00:00",
+      "content_type": "application/pdf",
+      "kind": "original_download",
+      "pages": 26
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://rosinfra.ru/api/v2/public/analytics-document/osnovnye-trendy-i-statistika-rynka-gcp-po-itogam-2021-goda-analiticeskij-obzor/download",
+      "file": "datasets/rosinfra-ppp/raw/ppp-market-2021.pdf",
+      "retrieved_at": "2026-11-06T18:28:51.311588+00:00",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "final_url": "https://rosinfra.ru/api/v2/public/analytics-document/osnovnye-trendy-i-statistika-rynka-gcp-po-itogam-2021-goda-analiticeskij-obzor/download",
+      "status": "downloaded",
+      "bytes": 777810,
+      "sha256": "59b6c1e5386b58e43f7395a1913889fe5c58ae72eed936cc93210110fcf06f19"
+    }
+  ],
+  "profile_path": "profile.json"
+}
