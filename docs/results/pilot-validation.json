@@ -1,0 +1,2315 @@
+{
+  "measured_at": "2026-11-09T05:11:00.783379+00:00",
+  "status": "calculation_verified_not_http_or_browser",
+  "code": {
+    "sha": "cf780896ec50ae8a4ffa250c883b7506468bad43",
+    "dirty": true
+  },
+  "artifact": {
+    "path": "data/pilot_candidate/pilots/tuva.json",
+    "bytes": 14230,
+    "sha256": "dd91882a920373715289ff2981f7a08ba13510f70d8f02d14de50b2dd0b5d3a5"
+  },
+  "model_version": "tuva-frequency-v1",
+  "independent_method": "dense Floyd-Warshall versus production Dijkstra",
+  "pair_comparisons": 24,
+  "repeated_inputs_identical": true,
+  "input_unchanged": true,
+  "benchmark": {
+    "samples": 200,
+    "p95_s": 6.709346926072612e-05,
+    "scope": "cached in-process use case, excludes HTTP and initial load",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "implementation": [
+    {
+      "path": "backend/src/app/domain/pilot.py",
+      "bytes": 2156,
+      "sha256": "82605c7932c048cfb0a54e34ccf71d5662ac69cfdc1dc878a7323961a63a45a5"
+    },
+    {
+      "path": "backend/src/app/domain/pilot_routing.py",
+      "bytes": 6560,
+      "sha256": "42732370a5041475f9930e1ca4c15c83c29d6097351898cd6eced84a1dd26e89"
+    },
+    {
+      "path": "backend/src/app/domain/waiting.py",
+      "bytes": 646,
+      "sha256": "cf15b1d3d9984372ca9f715af85a1ec266134a0d623c376f459fe3f6a050193e"
+    },
+    {
+      "path": "backend/src/app/usecase/pilots.py",
+      "bytes": 3056,
+      "sha256": "2bba7d0350714c1d89e7d2bb0141e8556f3d57399fd7360bc98577ae2100fc14"
+    },
+    {
+      "path": "backend/src/app/repository/files/pilots.py",
+      "bytes": 6996,
+      "sha256": "f6c0e5ce47c30cb3953b50d83bbf6d9bc8df437ee0174b410755db63cf47b8b2"
+    },
+    {
+      "path": "etl/validate_pilot.py",
+      "bytes": 5214,
+      "sha256": "8962a19f0cdfc37e1f702b1861129ffea870d0666a24b840648e71ce1bba5178"
+    }
+  ],
+  "results": [
+    {
+      "variant": "baseline",
+      "pilot_id": "tuva",
+      "season": "summer",
+      "model_version": "tuva-frequency-v1",
+      "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+      "changes": [],
+      "pairs": [
+        {
+          "pair_id": "kungurtug-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "toora-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "systyg-toora",
+          "baseline": {
+            "status": "found",
+            "total_h": 88.4,
+            "travel_h": 4.4,
+            "waiting_h": 84.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "assumed_frequency:manual:6:1.0",
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "uniform_headways_random_need"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 88.4,
+            "travel_h": 4.4,
+            "waiting_h": 84.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "assumed_frequency:manual:6:1.0",
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "uniform_headways_random_need"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 4.4,
+            "travel_h": 4.4,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 4.4,
+            "travel_h": 4.4,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        }
+      ],
+      "assumptions": [
+        "uniform_headways_random_need",
+        "independent_transfer_waits",
+        "no_current_schedule_guarantee",
+        "no_cost_or_demand_estimate"
+      ],
+      "waiting_sensitivity": [
+        {
+          "edge_id": "manual:0",
+          "intervals_h": [
+            48.0,
+            120.0
+          ],
+          "periodic_wait_h": 49.714285714285715,
+          "uniform_wait_h": 42.0,
+          "difference_h": 7.714285714285715
+        }
+      ]
+    },
+    {
+      "variant": "frequency_4",
+      "pilot_id": "tuva",
+      "season": "summer",
+      "model_version": "tuva-frequency-v1",
+      "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+      "changes": [
+        {
+          "edge_id": "manual:0",
+          "enabled": null,
+          "frequency_per_week": 4
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "kungurtug-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "scenario_frequency:manual:0:4"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "toora-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "systyg-toora",
+          "baseline": {
+            "status": "found",
+            "total_h": 88.4,
+            "travel_h": 4.4,
+            "waiting_h": 84.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "assumed_frequency:manual:6:1.0",
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "uniform_headways_random_need"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 88.4,
+            "travel_h": 4.4,
+            "waiting_h": 84.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "assumed_frequency:manual:6:1.0",
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "uniform_headways_random_need"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 4.4,
+            "travel_h": 4.4,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 4.4,
+            "travel_h": 4.4,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        }
+      ],
+      "assumptions": [
+        "uniform_headways_random_need",
+        "independent_transfer_waits",
+        "no_current_schedule_guarantee",
+        "no_cost_or_demand_estimate"
+      ],
+      "waiting_sensitivity": [
+        {
+          "edge_id": "manual:0",
+          "intervals_h": [
+            48.0,
+            120.0
+          ],
+          "periodic_wait_h": 49.714285714285715,
+          "uniform_wait_h": 42.0,
+          "difference_h": 7.714285714285715
+        }
+      ]
+    },
+    {
+      "variant": "frequency_7",
+      "pilot_id": "tuva",
+      "season": "summer",
+      "model_version": "tuva-frequency-v1",
+      "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+      "changes": [
+        {
+          "edge_id": "manual:0",
+          "enabled": null,
+          "frequency_per_week": 7
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "kungurtug-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 14.243330466895841,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 12.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "scenario_frequency:manual:0:7",
+              "uniform_headways_random_need"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "scenario_frequency:manual:0:7"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": -3.8517782134321834
+        },
+        {
+          "pair_id": "toora-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "systyg-toora",
+          "baseline": {
+            "status": "found",
+            "total_h": 88.4,
+            "travel_h": 4.4,
+            "waiting_h": 84.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "assumed_frequency:manual:6:1.0",
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "uniform_headways_random_need"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 88.4,
+            "travel_h": 4.4,
+            "waiting_h": 84.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "assumed_frequency:manual:6:1.0",
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "uniform_headways_random_need"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 4.4,
+            "travel_h": 4.4,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 4.4,
+            "travel_h": 4.4,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        }
+      ],
+      "assumptions": [
+        "uniform_headways_random_need",
+        "independent_transfer_waits",
+        "no_current_schedule_guarantee",
+        "no_cost_or_demand_estimate"
+      ],
+      "waiting_sensitivity": [
+        {
+          "edge_id": "manual:0",
+          "intervals_h": [
+            48.0,
+            120.0
+          ],
+          "periodic_wait_h": 49.714285714285715,
+          "uniform_wait_h": 42.0,
+          "difference_h": 7.714285714285715
+        }
+      ]
+    },
+    {
+      "variant": "seasonal_closure",
+      "pilot_id": "tuva",
+      "season": "summer",
+      "model_version": "tuva-frequency-v1",
+      "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+      "changes": [
+        {
+          "edge_id": "manual:5",
+          "enabled": false,
+          "frequency_per_week": null
+        },
+        {
+          "edge_id": "manual:6",
+          "enabled": false,
+          "frequency_per_week": null
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "kungurtug-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "toora-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:summer:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "systyg-toora",
+          "baseline": {
+            "status": "found",
+            "total_h": 88.4,
+            "travel_h": 4.4,
+            "waiting_h": 84.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "assumed_frequency:manual:6:1.0",
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "uniform_headways_random_need"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "no_route",
+            "total_h": null,
+            "travel_h": null,
+            "waiting_h": null,
+            "edge_ids": [],
+            "point_ids": [],
+            "assumptions": [],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 4.4,
+            "travel_h": 4.4,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:6"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "no_route",
+            "total_h": null,
+            "travel_h": null,
+            "waiting_h": null,
+            "edge_ids": [],
+            "point_ids": [],
+            "assumptions": [],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": null
+        }
+      ],
+      "assumptions": [
+        "uniform_headways_random_need",
+        "independent_transfer_waits",
+        "no_current_schedule_guarantee",
+        "no_cost_or_demand_estimate"
+      ],
+      "waiting_sensitivity": [
+        {
+          "edge_id": "manual:0",
+          "intervals_h": [
+            48.0,
+            120.0
+          ],
+          "periodic_wait_h": 49.714285714285715,
+          "uniform_wait_h": 42.0,
+          "difference_h": 7.714285714285715
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "pilot_id": "tuva",
+      "season": "winter",
+      "model_version": "tuva-frequency-v1",
+      "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+      "changes": [],
+      "pairs": [
+        {
+          "pair_id": "kungurtug-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "toora-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "systyg-toora",
+          "baseline": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        }
+      ],
+      "assumptions": [
+        "uniform_headways_random_need",
+        "independent_transfer_waits",
+        "no_current_schedule_guarantee",
+        "no_cost_or_demand_estimate"
+      ],
+      "waiting_sensitivity": [
+        {
+          "edge_id": "manual:0",
+          "intervals_h": [
+            48.0,
+            120.0
+          ],
+          "periodic_wait_h": 49.714285714285715,
+          "uniform_wait_h": 42.0,
+          "difference_h": 7.714285714285715
+        }
+      ]
+    },
+    {
+      "variant": "frequency_4",
+      "pilot_id": "tuva",
+      "season": "winter",
+      "model_version": "tuva-frequency-v1",
+      "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+      "changes": [
+        {
+          "edge_id": "manual:0",
+          "enabled": null,
+          "frequency_per_week": 4
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "kungurtug-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "scenario_frequency:manual:0:4"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "toora-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "systyg-toora",
+          "baseline": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        }
+      ],
+      "assumptions": [
+        "uniform_headways_random_need",
+        "independent_transfer_waits",
+        "no_current_schedule_guarantee",
+        "no_cost_or_demand_estimate"
+      ],
+      "waiting_sensitivity": [
+        {
+          "edge_id": "manual:0",
+          "intervals_h": [
+            48.0,
+            120.0
+          ],
+          "periodic_wait_h": 49.714285714285715,
+          "uniform_wait_h": 42.0,
+          "difference_h": 7.714285714285715
+        }
+      ]
+    },
+    {
+      "variant": "frequency_7",
+      "pilot_id": "tuva",
+      "season": "winter",
+      "model_version": "tuva-frequency-v1",
+      "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+      "changes": [
+        {
+          "edge_id": "manual:0",
+          "enabled": null,
+          "frequency_per_week": 7
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "kungurtug-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 14.243330466895841,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 12.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "scenario_frequency:manual:0:7",
+              "uniform_headways_random_need"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead",
+              "scenario_frequency:manual:0:7"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": -3.8517782134321834
+        },
+        {
+          "pair_id": "toora-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "systyg-toora",
+          "baseline": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        }
+      ],
+      "assumptions": [
+        "uniform_headways_random_need",
+        "independent_transfer_waits",
+        "no_current_schedule_guarantee",
+        "no_cost_or_demand_estimate"
+      ],
+      "waiting_sensitivity": [
+        {
+          "edge_id": "manual:0",
+          "intervals_h": [
+            48.0,
+            120.0
+          ],
+          "periodic_wait_h": 49.714285714285715,
+          "uniform_wait_h": 42.0,
+          "difference_h": 7.714285714285715
+        }
+      ]
+    },
+    {
+      "variant": "seasonal_closure",
+      "pilot_id": "tuva",
+      "season": "winter",
+      "model_version": "tuva-frequency-v1",
+      "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+      "changes": [
+        {
+          "edge_id": "manual:5",
+          "enabled": false,
+          "frequency_per_week": null
+        },
+        {
+          "edge_id": "manual:6",
+          "enabled": false,
+          "frequency_per_week": null
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "kungurtug-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 18.095108680328025,
+            "travel_h": 18.095108680328025,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93643425101:93701000001"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 2.243330466895842,
+            "travel_h": 2.243330466895842,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:0"
+            ],
+            "point_ids": [
+              "93643425101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "toora-kyzyl",
+          "baseline": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "changed": {
+            "status": "found",
+            "total_h": 4.505352426643291,
+            "travel_h": 4.505352426643291,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "road:winter:93650444101:93701000001"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "modelled_road_speeds",
+              "osm_operability_not_field_verified",
+              "snap_access_15_kmh_max_5_km"
+            ],
+            "warnings": [
+              "unknown_frequency_alternatives"
+            ],
+            "optimality": "incomplete_alternatives"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "found",
+            "total_h": 1.708755438404332,
+            "travel_h": 1.708755438404332,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:1"
+            ],
+            "point_ids": [
+              "93650444101",
+              "93701000001"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": 0.0
+        },
+        {
+          "pair_id": "systyg-toora",
+          "baseline": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "changed": {
+            "status": "no_route",
+            "total_h": null,
+            "travel_h": null,
+            "waiting_h": null,
+            "edge_ids": [],
+            "point_ids": [],
+            "assumptions": [],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_baseline": {
+            "status": "found",
+            "total_h": 2.6,
+            "travel_h": 2.6,
+            "waiting_h": 0.0,
+            "edge_ids": [
+              "manual:5"
+            ],
+            "point_ids": [
+              "93650433101",
+              "93650444101"
+            ],
+            "assumptions": [
+              "historical_link_current_service_unverified",
+              "modelled_mode_speed_and_overhead"
+            ],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "optimistic_changed": {
+            "status": "no_route",
+            "total_h": null,
+            "travel_h": null,
+            "waiting_h": null,
+            "edge_ids": [],
+            "point_ids": [],
+            "assumptions": [],
+            "warnings": [],
+            "optimality": "within_model"
+          },
+          "delta_h": null
+        }
+      ],
+      "assumptions": [
+        "uniform_headways_random_need",
+        "independent_transfer_waits",
+        "no_current_schedule_guarantee",
+        "no_cost_or_demand_estimate"
+      ],
+      "waiting_sensitivity": [
+        {
+          "edge_id": "manual:0",
+          "intervals_h": [
+            48.0,
+            120.0
+          ],
+          "periodic_wait_h": 49.714285714285715,
+          "uniform_wait_h": 42.0,
+          "difference_h": 7.714285714285715
+        }
+      ]
+    }
+  ]
+}

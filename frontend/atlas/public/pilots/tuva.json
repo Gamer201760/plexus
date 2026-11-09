@@ -1,0 +1,494 @@
+{
+  "id": "tuva",
+  "name": "Поездки к центрам Тывы",
+  "model_version": "tuva-frequency-v1",
+  "points": [
+    {
+      "id": "93622151106",
+      "name": "арбан Уш-Белдир",
+      "latitude": 51.788056,
+      "longitude": 98.090556
+    },
+    {
+      "id": "93643425101",
+      "name": "село Кунгуртуг",
+      "latitude": 50.59784,
+      "longitude": 97.523378
+    },
+    {
+      "id": "93650433101",
+      "name": "село Сыстыг-Хем",
+      "latitude": 52.667041,
+      "longitude": 95.504639
+    },
+    {
+      "id": "93650444101",
+      "name": "село Тоора-Хем",
+      "latitude": 52.465659,
+      "longitude": 96.119628
+    },
+    {
+      "id": "93650452101",
+      "name": "село Чазылары",
+      "latitude": 52.754202,
+      "longitude": 97.42579
+    },
+    {
+      "id": "93650460101",
+      "name": "село Ырбан",
+      "latitude": 52.712847,
+      "longitude": 95.727949
+    },
+    {
+      "id": "93701000001",
+      "name": "г. Кызыл",
+      "latitude": 51.719059,
+      "longitude": 94.437698
+    }
+  ],
+  "edges": [
+    {
+      "id": "road:summer:93643425101:93650444101",
+      "from_id": "93643425101",
+      "to_id": "93650444101",
+      "mode": "road",
+      "seasons": [
+        "summer"
+      ],
+      "travel_h": 22.55373375106258,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:summer:93643425101:93701000001",
+      "from_id": "93643425101",
+      "to_id": "93701000001",
+      "mode": "road",
+      "seasons": [
+        "summer"
+      ],
+      "travel_h": 18.095108680328025,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:summer:93650444101:93643425101",
+      "from_id": "93650444101",
+      "to_id": "93643425101",
+      "mode": "road",
+      "seasons": [
+        "summer"
+      ],
+      "travel_h": 22.55592034424747,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:summer:93650444101:93701000001",
+      "from_id": "93650444101",
+      "to_id": "93701000001",
+      "mode": "road",
+      "seasons": [
+        "summer"
+      ],
+      "travel_h": 4.505352426643291,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:summer:93701000001:93643425101",
+      "from_id": "93701000001",
+      "to_id": "93643425101",
+      "mode": "road",
+      "seasons": [
+        "summer"
+      ],
+      "travel_h": 18.096103576434956,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:summer:93701000001:93650444101",
+      "from_id": "93701000001",
+      "to_id": "93650444101",
+      "mode": "road",
+      "seasons": [
+        "summer"
+      ],
+      "travel_h": 4.506774399432394,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:winter:93643425101:93650444101",
+      "from_id": "93643425101",
+      "to_id": "93650444101",
+      "mode": "road",
+      "seasons": [
+        "winter"
+      ],
+      "travel_h": 22.55373375106258,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:winter:93643425101:93701000001",
+      "from_id": "93643425101",
+      "to_id": "93701000001",
+      "mode": "road",
+      "seasons": [
+        "winter"
+      ],
+      "travel_h": 18.095108680328025,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:winter:93650444101:93643425101",
+      "from_id": "93650444101",
+      "to_id": "93643425101",
+      "mode": "road",
+      "seasons": [
+        "winter"
+      ],
+      "travel_h": 22.55592034424747,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:winter:93650444101:93701000001",
+      "from_id": "93650444101",
+      "to_id": "93701000001",
+      "mode": "road",
+      "seasons": [
+        "winter"
+      ],
+      "travel_h": 4.505352426643291,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:winter:93701000001:93643425101",
+      "from_id": "93701000001",
+      "to_id": "93643425101",
+      "mode": "road",
+      "seasons": [
+        "winter"
+      ],
+      "travel_h": 18.096103576434956,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "road:winter:93701000001:93650444101",
+      "from_id": "93701000001",
+      "to_id": "93650444101",
+      "mode": "road",
+      "seasons": [
+        "winter"
+      ],
+      "travel_h": 4.506774399432394,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://download.geofabrik.de/russia/siberian-fed-district.html",
+      "source_period": "snapshot 2026-11-09",
+      "assumptions": [
+        "osm_operability_not_field_verified",
+        "snap_access_15_kmh_max_5_km",
+        "modelled_road_speeds"
+      ],
+      "editable": false,
+      "bidirectional": false,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "manual:0",
+      "from_id": "93701000001",
+      "to_id": "93643425101",
+      "mode": "air",
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "travel_h": 2.243330466895842,
+      "frequency_per_week": 2.0,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://www.tuvaonline.ru/2025/03/11/v-tuve-v-otdalennoe-i-trudnodostupnoe-selo-kurgurtug-samolety-budut-letat-dvazhdy-v-nedelyu.html",
+      "source_period": "2025-03",
+      "assumptions": [
+        "historical_link_current_service_unverified",
+        "modelled_mode_speed_and_overhead"
+      ],
+      "editable": true,
+      "bidirectional": true,
+      "headway_intervals_h": [
+        48.0,
+        120.0
+      ]
+    },
+    {
+      "id": "manual:1",
+      "from_id": "93701000001",
+      "to_id": "93650444101",
+      "mode": "air",
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "travel_h": 1.708755438404332,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": 1.0,
+      "source_url": "https://ru.wikipedia.org/wiki/Кызыл_(аэропорт)",
+      "source_period": "2022-11",
+      "assumptions": [
+        "historical_link_current_service_unverified",
+        "modelled_mode_speed_and_overhead"
+      ],
+      "editable": true,
+      "bidirectional": true,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "manual:2",
+      "from_id": "93701000001",
+      "to_id": "93650452101",
+      "mode": "air",
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "travel_h": 2.1687482324215512,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": 1.0,
+      "source_url": "https://atlaskmns.ru/page/ru/people_todjincy_transport.html",
+      "source_period": null,
+      "assumptions": [
+        "historical_link_current_service_unverified",
+        "modelled_mode_speed_and_overhead"
+      ],
+      "editable": true,
+      "bidirectional": true,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "manual:3",
+      "from_id": "93701000001",
+      "to_id": "93650460101",
+      "mode": "air",
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "travel_h": 1.7059840596594733,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": 1.0,
+      "source_url": "https://ru.wikipedia.org/wiki/Кызыл_(аэропорт)",
+      "source_period": "2022-11",
+      "assumptions": [
+        "historical_link_current_service_unverified",
+        "modelled_mode_speed_and_overhead"
+      ],
+      "editable": true,
+      "bidirectional": true,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "manual:4",
+      "from_id": "93701000001",
+      "to_id": "93622151106",
+      "mode": "air",
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "travel_h": 2.2576700097156355,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": 1.0,
+      "source_url": "https://tmgnews.ru/novosti/aviaperevozki-v-tuve-czeny-i-marshruty/",
+      "source_period": "2024-05",
+      "assumptions": [
+        "historical_link_current_service_unverified",
+        "modelled_mode_speed_and_overhead"
+      ],
+      "editable": true,
+      "bidirectional": true,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "manual:5",
+      "from_id": "93650444101",
+      "to_id": "93650433101",
+      "mode": "winter_road",
+      "seasons": [
+        "winter"
+      ],
+      "travel_h": 2.6,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": null,
+      "source_url": "https://atlaskmns.ru/page/ru/people_todjincy_transport.html",
+      "source_period": null,
+      "assumptions": [
+        "historical_link_current_service_unverified",
+        "modelled_mode_speed_and_overhead"
+      ],
+      "editable": true,
+      "bidirectional": true,
+      "headway_intervals_h": []
+    },
+    {
+      "id": "manual:6",
+      "from_id": "93650444101",
+      "to_id": "93650433101",
+      "mode": "river",
+      "seasons": [
+        "summer"
+      ],
+      "travel_h": 4.4,
+      "frequency_per_week": null,
+      "assumed_frequency_per_week": 1.0,
+      "source_url": "https://atlaskmns.ru/page/ru/people_todjincy_transport.html",
+      "source_period": null,
+      "assumptions": [
+        "historical_link_current_service_unverified",
+        "modelled_mode_speed_and_overhead"
+      ],
+      "editable": true,
+      "bidirectional": true,
+      "headway_intervals_h": []
+    }
+  ],
+  "pairs": [
+    {
+      "id": "kungurtug-kyzyl",
+      "from_id": "93643425101",
+      "to_id": "93701000001"
+    },
+    {
+      "id": "toora-kyzyl",
+      "from_id": "93650444101",
+      "to_id": "93701000001"
+    },
+    {
+      "id": "systyg-toora",
+      "from_id": "93650433101",
+      "to_id": "93650444101"
+    }
+  ],
+  "assumptions": [
+    "uniform_headways_random_need",
+    "independent_transfer_waits",
+    "no_current_schedule_guarantee",
+    "no_cost_or_demand_estimate"
+  ],
+  "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54"
+}

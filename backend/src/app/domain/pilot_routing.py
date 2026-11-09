@@ -54,6 +54,8 @@ def route(
     for edge in edges:
         if season not in edge.seasons:
             continue
+        if not math.isfinite(edge.travel_h) or edge.travel_h < 0:
+            raise InvalidQuery("Stored travel time must be finite and nonnegative")
         waiting = 0.0
         assumptions = edge.assumptions
         if include_wait and edge.mode in SCHEDULED_MODES:
@@ -70,8 +72,6 @@ def route(
             assumptions = (*assumptions, "uniform_headways_random_need")
             if edge.headway_intervals_h:
                 assumptions = (*assumptions, "known_schedule_approximated")
-        if not math.isfinite(edge.travel_h) or edge.travel_h < 0:
-            raise InvalidQuery("Stored travel time must be finite and nonnegative")
         adjacency.setdefault(edge.from_id, []).append((edge.to_id, edge, waiting, assumptions))
         if edge.bidirectional:
             adjacency.setdefault(edge.to_id, []).append((edge.from_id, edge, waiting, assumptions))
@@ -108,7 +108,7 @@ def route(
         waiting_total += waiting
         notes.extend(assumptions)
         current = source
-    warnings = unknown_alternatives(edges, pair, season)
+    warnings = unknown_alternatives(edges, pair, season, distance[pair.to_id])
     return PilotRoute(
         "found",
         distance[pair.to_id],
@@ -123,34 +123,31 @@ def route(
 
 
 def unknown_alternatives(
-    edges: tuple[PilotEdge, ...], pair: PilotPair, season: str
+    edges: tuple[PilotEdge, ...], pair: PilotPair, season: str, known_total: float
 ) -> tuple[str, ...]:
-    active = tuple(edge for edge in edges if season in edge.seasons)
-    forward: dict[str, set[str]] = {}
-    reverse: dict[str, set[str]] = {}
-    for edge in active:
-        forward.setdefault(edge.from_id, set()).add(edge.to_id)
-        reverse.setdefault(edge.to_id, set()).add(edge.from_id)
-        if edge.bidirectional:
-            forward.setdefault(edge.to_id, set()).add(edge.from_id)
-            reverse.setdefault(edge.from_id, set()).add(edge.to_id)
-
-    def reachable(start: str, adjacency: dict[str, set[str]]) -> set[str]:
-        seen, pending = {start}, [start]
-        while pending:
-            for target in adjacency.get(pending.pop(), set()):
-                if target not in seen:
-                    seen.add(target)
-                    pending.append(target)
-        return seen
-
-    origin = reachable(pair.from_id, forward)
-    destination = reachable(pair.to_id, reverse)
-    for edge in active:
-        if edge.mode not in SCHEDULED_MODES or edge.frequency_per_week is not None:
+    adjacency: dict[str, list[tuple[str, float]]] = {}
+    for edge in edges:
+        if season not in edge.seasons:
             continue
-        if (edge.from_id in origin and edge.to_id in destination) or (
-            edge.bidirectional and edge.to_id in origin and edge.from_id in destination
-        ):
-            return ("unknown_frequency_alternatives",)
+        weight = edge.travel_h
+        if edge.mode in SCHEDULED_MODES and edge.frequency_per_week is not None:
+            weight += 84 / edge.frequency_per_week
+        adjacency.setdefault(edge.from_id, []).append((edge.to_id, weight))
+        if edge.bidirectional:
+            adjacency.setdefault(edge.to_id, []).append((edge.from_id, weight))
+    distance = {pair.from_id: 0.0}
+    pending = [(0.0, pair.from_id)]
+    while pending:
+        total, point = heapq.heappop(pending)
+        if total != distance[point]:
+            continue
+        if point == pair.to_id:
+            if total < known_total - 1e-9:
+                return ("unknown_frequency_alternatives",)
+            return ()
+        for target, weight in adjacency.get(point, []):
+            candidate = total + weight
+            if candidate < distance.get(target, math.inf):
+                distance[target] = candidate
+                heapq.heappush(pending, (candidate, target))
     return ()

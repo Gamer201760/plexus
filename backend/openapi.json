@@ -139,7 +139,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -296,7 +296,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -367,7 +367,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -458,7 +458,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -578,7 +578,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -589,6 +589,41 @@
               }
             },
             "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/v1/links": {
+      "get": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "List Routes",
+        "operationId": "list_routes_api_v1_links_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/RouteResponse"
+                  },
+                  "type": "array",
+                  "title": "Response List Routes Api V1 Links Get"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -640,7 +675,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -651,6 +686,205 @@
               }
             },
             "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/v1/pilots": {
+      "get": {
+        "tags": [
+          "pilots"
+        ],
+        "summary": "List Pilots",
+        "operationId": "list_pilots_api_v1_pilots_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/PilotSummaryResponse"
+                  },
+                  "type": "array",
+                  "title": "Response List Pilots Api V1 Pilots Get"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/pilots/{pilot_id}": {
+      "get": {
+        "tags": [
+          "pilots"
+        ],
+        "summary": "Get Pilot",
+        "operationId": "get_pilot_api_v1_pilots__pilot_id__get",
+        "parameters": [
+          {
+            "name": "pilot_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Pilot Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PilotResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/v1/pilots/{pilot_id}/evaluate": {
+      "post": {
+        "tags": [
+          "pilots"
+        ],
+        "summary": "Evaluate Pilot",
+        "operationId": "evaluate_pilot_api_v1_pilots__pilot_id__evaluate_post",
+        "parameters": [
+          {
+            "name": "pilot_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Pilot Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvaluationResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict"
           }
         }
       }
@@ -723,6 +957,171 @@
         ],
         "title": "EconomyResponse"
       },
+      "EdgeChangeRequest": {
+        "properties": {
+          "edge_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Edge Id"
+          },
+          "enabled": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Enabled"
+          },
+          "frequency_per_week": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 28.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Frequency Per Week"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "edge_id"
+        ],
+        "title": "EdgeChangeRequest"
+      },
+      "EdgeResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "from_id": {
+            "type": "string",
+            "title": "From Id"
+          },
+          "to_id": {
+            "type": "string",
+            "title": "To Id"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "seasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Seasons"
+          },
+          "travel_h": {
+            "type": "number",
+            "title": "Travel H"
+          },
+          "frequency_per_week": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Frequency Per Week"
+          },
+          "assumed_frequency_per_week": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assumed Frequency Per Week"
+          },
+          "source_url": {
+            "type": "string",
+            "title": "Source Url"
+          },
+          "source_period": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Period"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Assumptions"
+          },
+          "editable": {
+            "type": "boolean",
+            "title": "Editable"
+          },
+          "bidirectional": {
+            "type": "boolean",
+            "title": "Bidirectional"
+          },
+          "headway_intervals_h": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Headway Intervals H"
+          },
+          "frequency_editable": {
+            "type": "boolean",
+            "title": "Frequency Editable"
+          },
+          "edit_disabled_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Edit Disabled Reason"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "from_id",
+          "to_id",
+          "mode",
+          "seasons",
+          "travel_h",
+          "frequency_per_week",
+          "assumed_frequency_per_week",
+          "source_url",
+          "source_period",
+          "assumptions",
+          "editable",
+          "bidirectional",
+          "headway_intervals_h",
+          "frequency_editable",
+          "edit_disabled_reason"
+        ],
+        "title": "EdgeResponse"
+      },
       "EndpointResponse": {
         "properties": {
           "id": {
@@ -782,6 +1181,107 @@
           "message"
         ],
         "title": "ErrorResponse"
+      },
+      "EvaluationRequest": {
+        "properties": {
+          "season": {
+            "type": "string",
+            "enum": [
+              "summer",
+              "winter"
+            ],
+            "title": "Season"
+          },
+          "model_version": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Model Version"
+          },
+          "artifact_version": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Artifact Version"
+          },
+          "changes": {
+            "items": {
+              "$ref": "#/components/schemas/EdgeChangeRequest"
+            },
+            "type": "array",
+            "maxItems": 50,
+            "title": "Changes",
+            "default": []
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "season",
+          "model_version",
+          "artifact_version"
+        ],
+        "title": "EvaluationRequest"
+      },
+      "EvaluationResponse": {
+        "properties": {
+          "pilot_id": {
+            "type": "string",
+            "title": "Pilot Id"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "artifact_version": {
+            "type": "string",
+            "title": "Artifact Version"
+          },
+          "changes": {
+            "items": {
+              "$ref": "#/components/schemas/EdgeChangeRequest"
+            },
+            "type": "array",
+            "title": "Changes"
+          },
+          "pairs": {
+            "items": {
+              "$ref": "#/components/schemas/PairComparisonResponse"
+            },
+            "type": "array",
+            "title": "Pairs"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Assumptions"
+          },
+          "waiting_sensitivity": {
+            "items": {
+              "$ref": "#/components/schemas/WaitingSensitivityResponse"
+            },
+            "type": "array",
+            "title": "Waiting Sensitivity"
+          }
+        },
+        "type": "object",
+        "required": [
+          "pilot_id",
+          "season",
+          "model_version",
+          "artifact_version",
+          "changes",
+          "pairs",
+          "assumptions",
+          "waiting_sensitivity"
+        ],
+        "title": "EvaluationResponse"
       },
       "GeoRegionsResponse": {
         "properties": {
@@ -1179,6 +1679,301 @@
         ],
         "title": "OverviewResponse"
       },
+      "PairComparisonResponse": {
+        "properties": {
+          "pair_id": {
+            "type": "string",
+            "title": "Pair Id"
+          },
+          "baseline": {
+            "$ref": "#/components/schemas/PilotRouteResponse"
+          },
+          "changed": {
+            "$ref": "#/components/schemas/PilotRouteResponse"
+          },
+          "optimistic_baseline": {
+            "$ref": "#/components/schemas/PilotRouteResponse"
+          },
+          "optimistic_changed": {
+            "$ref": "#/components/schemas/PilotRouteResponse"
+          },
+          "delta_h": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Delta H"
+          }
+        },
+        "type": "object",
+        "required": [
+          "pair_id",
+          "baseline",
+          "changed",
+          "optimistic_baseline",
+          "optimistic_changed",
+          "delta_h"
+        ],
+        "title": "PairComparisonResponse"
+      },
+      "PairResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "from_id": {
+            "type": "string",
+            "title": "From Id"
+          },
+          "to_id": {
+            "type": "string",
+            "title": "To Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "from_id",
+          "to_id"
+        ],
+        "title": "PairResponse"
+      },
+      "PilotResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "artifact_version": {
+            "type": "string",
+            "title": "Artifact Version"
+          },
+          "points": {
+            "items": {
+              "$ref": "#/components/schemas/PointResponse"
+            },
+            "type": "array",
+            "title": "Points"
+          },
+          "edges": {
+            "items": {
+              "$ref": "#/components/schemas/EdgeResponse"
+            },
+            "type": "array",
+            "title": "Edges"
+          },
+          "pairs": {
+            "items": {
+              "$ref": "#/components/schemas/PairResponse"
+            },
+            "type": "array",
+            "title": "Pairs"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Assumptions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "model_version",
+          "artifact_version",
+          "points",
+          "edges",
+          "pairs",
+          "assumptions"
+        ],
+        "title": "PilotResponse"
+      },
+      "PilotRouteResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "found",
+              "no_route",
+              "insufficient_data"
+            ],
+            "title": "Status"
+          },
+          "total_h": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total H"
+          },
+          "travel_h": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Travel H"
+          },
+          "waiting_h": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Waiting H"
+          },
+          "edge_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Edge Ids"
+          },
+          "point_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Point Ids"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Assumptions"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "optimality": {
+            "type": "string",
+            "enum": [
+              "within_model",
+              "incomplete_alternatives"
+            ],
+            "title": "Optimality"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "total_h",
+          "travel_h",
+          "waiting_h",
+          "edge_ids",
+          "point_ids",
+          "assumptions",
+          "warnings",
+          "optimality"
+        ],
+        "title": "PilotRouteResponse"
+      },
+      "PilotSummaryResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "artifact_version": {
+            "type": "string",
+            "title": "Artifact Version"
+          },
+          "point_count": {
+            "type": "integer",
+            "title": "Point Count"
+          },
+          "edge_count": {
+            "type": "integer",
+            "title": "Edge Count"
+          },
+          "pair_count": {
+            "type": "integer",
+            "title": "Pair Count"
+          },
+          "unknown_frequency_links": {
+            "type": "integer",
+            "title": "Unknown Frequency Links"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "model_version",
+          "artifact_version",
+          "point_count",
+          "edge_count",
+          "pair_count",
+          "unknown_frequency_links"
+        ],
+        "title": "PilotSummaryResponse"
+      },
+      "PointResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "latitude": {
+            "type": "number",
+            "title": "Latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "title": "Longitude"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "latitude",
+          "longitude"
+        ],
+        "title": "PointResponse"
+      },
       "RegionDetailResponse": {
         "properties": {
           "id": {
@@ -1447,6 +2242,64 @@
           "has_geometry"
         ],
         "title": "RegionSummaryResponse"
+      },
+      "RouteResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "mode": {
+            "$ref": "#/components/schemas/Mode"
+          },
+          "season": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Season"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "from_name": {
+            "type": "string",
+            "title": "From Name"
+          },
+          "to_name": {
+            "type": "string",
+            "title": "To Name"
+          },
+          "x1": {
+            "type": "number",
+            "title": "X1"
+          },
+          "y1": {
+            "type": "number",
+            "title": "Y1"
+          },
+          "x2": {
+            "type": "number",
+            "title": "X2"
+          },
+          "y2": {
+            "type": "number",
+            "title": "Y2"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "mode",
+          "season",
+          "from_name",
+          "to_name",
+          "x1",
+          "y1",
+          "x2",
+          "y2"
+        ],
+        "title": "RouteResponse"
       },
       "SearchResponse": {
         "properties": {
@@ -1735,6 +2588,56 @@
           "rows"
         ],
         "title": "SourceResponse"
+      },
+      "WaitingSensitivityResponse": {
+        "properties": {
+          "edge_id": {
+            "type": "string",
+            "title": "Edge Id"
+          },
+          "intervals_h": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Intervals H"
+          },
+          "periodic_wait_h": {
+            "type": "number",
+            "title": "Periodic Wait H"
+          },
+          "uniform_wait_h": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Uniform Wait H"
+          },
+          "difference_h": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Difference H"
+          }
+        },
+        "type": "object",
+        "required": [
+          "edge_id",
+          "intervals_h",
+          "periodic_wait_h",
+          "uniform_wait_h",
+          "difference_h"
+        ],
+        "title": "WaitingSensitivityResponse"
       },
       "WinterRoadResponse": {
         "properties": {

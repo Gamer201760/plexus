@@ -1,0 +1,8 @@
+{
+  "method": "sequential loopback HTTP requests after pilot warmup",
+  "samples": 200,
+  "p95_s": 0.0008373270509764552,
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+  "limitations": "local development server; no network latency or concurrency claim"
+}

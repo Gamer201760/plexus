@@ -225,6 +225,57 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/pilots": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** List Pilots */
+        get: operations["list_pilots_api_v1_pilots_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/pilots/{pilot_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Pilot */
+        get: operations["get_pilot_api_v1_pilots__pilot_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/pilots/{pilot_id}/evaluate": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Evaluate Pilot */
+        post: operations["evaluate_pilot_api_v1_pilots__pilot_id__evaluate_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -245,6 +296,50 @@ export interface components {
             /** Fns Matched Rows */
             fns_matched_rows: number | null;
         };
+        /** EdgeChangeRequest */
+        EdgeChangeRequest: {
+            /** Edge Id */
+            edge_id: string;
+            /** Enabled */
+            enabled?: boolean | null;
+            /** Frequency Per Week */
+            frequency_per_week?: number | null;
+        };
+        /** EdgeResponse */
+        EdgeResponse: {
+            /** Id */
+            id: string;
+            /** From Id */
+            from_id: string;
+            /** To Id */
+            to_id: string;
+            /** Mode */
+            mode: string;
+            /** Seasons */
+            seasons: string[];
+            /** Travel H */
+            travel_h: number;
+            /** Frequency Per Week */
+            frequency_per_week: number | null;
+            /** Assumed Frequency Per Week */
+            assumed_frequency_per_week: number | null;
+            /** Source Url */
+            source_url: string;
+            /** Source Period */
+            source_period: string | null;
+            /** Assumptions */
+            assumptions: string[];
+            /** Editable */
+            editable: boolean;
+            /** Bidirectional */
+            bidirectional: boolean;
+            /** Headway Intervals H */
+            headway_intervals_h: number[];
+            /** Frequency Editable */
+            frequency_editable: boolean;
+            /** Edit Disabled Reason */
+            edit_disabled_reason: string | null;
+        };
         /** EndpointResponse */
         EndpointResponse: {
             /** Id */
@@ -262,6 +357,42 @@ export interface components {
             code: string;
             /** Message */
             message: string;
+        };
+        /** EvaluationRequest */
+        EvaluationRequest: {
+            /**
+             * Season
+             * @enum {string}
+             */
+            season: "summer" | "winter";
+            /** Model Version */
+            model_version: string;
+            /** Artifact Version */
+            artifact_version: string;
+            /**
+             * Changes
+             * @default []
+             */
+            changes: components["schemas"]["EdgeChangeRequest"][];
+        };
+        /** EvaluationResponse */
+        EvaluationResponse: {
+            /** Pilot Id */
+            pilot_id: string;
+            /** Season */
+            season: string;
+            /** Model Version */
+            model_version: string;
+            /** Artifact Version */
+            artifact_version: string;
+            /** Changes */
+            changes: components["schemas"]["EdgeChangeRequest"][];
+            /** Pairs */
+            pairs: components["schemas"]["PairComparisonResponse"][];
+            /** Assumptions */
+            assumptions: string[];
+            /** Waiting Sensitivity */
+            waiting_sensitivity: components["schemas"]["WaitingSensitivityResponse"][];
         };
         /** GeoRegionsResponse */
         GeoRegionsResponse: {
@@ -383,6 +514,102 @@ export interface components {
             /** Revenue Rub */
             revenue_rub: number | null;
             index: components["schemas"]["IndexStatusResponse"];
+        };
+        /** PairComparisonResponse */
+        PairComparisonResponse: {
+            /** Pair Id */
+            pair_id: string;
+            baseline: components["schemas"]["PilotRouteResponse"];
+            changed: components["schemas"]["PilotRouteResponse"];
+            optimistic_baseline: components["schemas"]["PilotRouteResponse"];
+            optimistic_changed: components["schemas"]["PilotRouteResponse"];
+            /** Delta H */
+            delta_h: number | null;
+        };
+        /** PairResponse */
+        PairResponse: {
+            /** Id */
+            id: string;
+            /** From Id */
+            from_id: string;
+            /** To Id */
+            to_id: string;
+        };
+        /** PilotResponse */
+        PilotResponse: {
+            /** Id */
+            id: string;
+            /** Name */
+            name: string;
+            /** Model Version */
+            model_version: string;
+            /** Artifact Version */
+            artifact_version: string;
+            /** Points */
+            points: components["schemas"]["PointResponse"][];
+            /** Edges */
+            edges: components["schemas"]["EdgeResponse"][];
+            /** Pairs */
+            pairs: components["schemas"]["PairResponse"][];
+            /** Assumptions */
+            assumptions: string[];
+        };
+        /** PilotRouteResponse */
+        PilotRouteResponse: {
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "found" | "no_route" | "insufficient_data";
+            /** Total H */
+            total_h: number | null;
+            /** Travel H */
+            travel_h: number | null;
+            /** Waiting H */
+            waiting_h: number | null;
+            /** Edge Ids */
+            edge_ids: string[];
+            /** Point Ids */
+            point_ids: string[];
+            /** Assumptions */
+            assumptions: string[];
+            /** Warnings */
+            warnings: string[];
+            /**
+             * Optimality
+             * @enum {string}
+             */
+            optimality: "within_model" | "incomplete_alternatives";
+        };
+        /** PilotSummaryResponse */
+        PilotSummaryResponse: {
+            /** Id */
+            id: string;
+            /** Name */
+            name: string;
+            /** Model Version */
+            model_version: string;
+            /** Artifact Version */
+            artifact_version: string;
+            /** Point Count */
+            point_count: number;
+            /** Edge Count */
+            edge_count: number;
+            /** Pair Count */
+            pair_count: number;
+            /** Unknown Frequency Links */
+            unknown_frequency_links: number;
+        };
+        /** PointResponse */
+        PointResponse: {
+            /** Id */
+            id: string;
+            /** Name */
+            name: string;
+            /** Latitude */
+            latitude: number;
+            /** Longitude */
+            longitude: number;
         };
         /** RegionDetailResponse */
         RegionDetailResponse: {
@@ -565,6 +792,19 @@ export interface components {
             note: string | null;
             /** Rows */
             rows: number | null;
+        };
+        /** WaitingSensitivityResponse */
+        WaitingSensitivityResponse: {
+            /** Edge Id */
+            edge_id: string;
+            /** Intervals H */
+            intervals_h: number[];
+            /** Periodic Wait H */
+            periodic_wait_h: number;
+            /** Uniform Wait H */
+            uniform_wait_h: number | null;
+            /** Difference H */
+            difference_h: number | null;
         };
         /** WinterRoadResponse */
         WinterRoadResponse: {
@@ -1051,6 +1291,164 @@ export interface operations {
             };
             /** @description Not Found */
             404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Unprocessable Content */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+        };
+    };
+    list_pilots_api_v1_pilots_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PilotSummaryResponse"][];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Unprocessable Content */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+        };
+    };
+    get_pilot_api_v1_pilots__pilot_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                pilot_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PilotResponse"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Unprocessable Content */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+        };
+    };
+    evaluate_pilot_api_v1_pilots__pilot_id__evaluate_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                pilot_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["EvaluationRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["EvaluationResponse"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Conflict */
+            409: {
                 headers: {
                     [name: string]: unknown;
                 };
