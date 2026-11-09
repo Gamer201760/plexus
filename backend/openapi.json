@@ -1559,6 +1559,7 @@
       "Mode": {
         "type": "string",
         "enum": [
+          "bus",
           "air",
           "river",
           "winter_road",
@@ -1597,6 +1598,10 @@
       },
       "ModeTotalsResponse": {
         "properties": {
+          "bus": {
+            "type": "integer",
+            "title": "Bus"
+          },
           "air": {
             "type": "integer",
             "title": "Air"
@@ -1624,6 +1629,7 @@
         },
         "type": "object",
         "required": [
+          "bus",
           "air",
           "river",
           "winter_road",

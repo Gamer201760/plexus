@@ -12,6 +12,7 @@ const SIZES: Record<TransportIconSize, string | undefined> = {
 }
 
 const TINTS: Record<TransportMode, string | undefined> = {
+  bus: undefined,
   air: styles.air,
   river: styles.river,
   winter_road: styles.winter,
@@ -29,6 +30,7 @@ export interface TransportIconProps {
 
 export function TransportIcon({ mode, size = "md", tinted = true, className }: TransportIconProps) {
   const names: Record<TransportMode, DesignIconName> = {
+    bus: "bus",
     air: "air",
     river: "river",
     winter_road: "winter",

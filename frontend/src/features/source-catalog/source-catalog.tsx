@@ -72,7 +72,12 @@ export function SourceCatalog() {
                     </div>
                   </dl>
                   {s.url ? (
-                    <ButtonLink to={s.url} variant="ghost" icon="external">
+                    <ButtonLink
+                      reloadDocument={s.url.startsWith("/datasets/")}
+                      to={s.url}
+                      variant="ghost"
+                      icon="external"
+                    >
                       <span className="visually-hidden">
                         {t("sources:openNamed", { title: s.title })}
                       </span>

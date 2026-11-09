@@ -35,5 +35,5 @@ for r in raw:
  path=' '.join('M'+'L'.join(f'{p[0]},{p[1]}' for p in ring)+'Z' for ring in rings)
  out.append({'id':r['id'],'name':r['name'],'path':path,'center':[round(v,1) for v in center]})
 missing=[r['id'] for r in a['regions'] if r['id'] not in [f['id'] for f in out]]
-(root/'public/geo/region-paths.json').write_text(json.dumps({'regions':out,'missing':missing,'source':'Click That Hood / OpenStreetMap, regional geometry snapshot 2013','source_url':'https://github.com/codeforamerica/click_that_hood/blob/master/public/data/russia.geojson'},ensure_ascii=False,separators=(',',':')))
+(root/'public/geo/region-paths.json').write_text(json.dumps({'regions':out,'missing':missing,'source':'Click That Hood / OpenStreetMap (2013); Crimea: geoBoundaries / OpenStreetMap (2017), ODbL-1.0','source_url':'https://github.com/codeforamerica/click_that_hood/blob/master/public/data/russia.geojson'},ensure_ascii=False,separators=(',',':')))
 print('Prepared',len(out),'regional boundaries; dataset without geometry:',missing)

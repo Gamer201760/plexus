@@ -18,9 +18,9 @@ def client() -> Iterator[TestClient]:
 def test_overview_reports_dataset_totals(client: TestClient) -> None:
     body = client.get("/api/v1/overview").json()
 
-    assert (body["regions"], body["settlements"], body["links"]) == (82, 155412, 997)
-    assert sum(body["links_by_mode"].values()) == 997
-    assert body["links_by_season"] == {"summer": 360, "winter": 263, "all": 307, "unknown": 67}
+    assert (body["regions"], body["settlements"], body["links"]) == (82, 155412, 1650)
+    assert sum(body["links_by_mode"].values()) == 1650
+    assert body["links_by_season"] == {"summer": 360, "winter": 263, "all": 908, "unknown": 119}
     assert body["index"]["status"] == "ready"
 
 
@@ -41,7 +41,8 @@ def test_region_detail_has_geometry_and_economy(client: TestClient) -> None:
     assert body["path"].startswith("M") and len(body["bbox"]) == 4
     assert body["economy"]["company_rows"] == 35815
     crimea = client.get("/api/v1/regions/35000000").json()
-    assert (crimea["has_geometry"], crimea["path"], crimea["bbox"]) == (False, None, None)
+    assert crimea["has_geometry"] is True
+    assert crimea["path"].startswith("M") and len(crimea["bbox"]) == 4
 
 
 def test_region_links_serialize_endpoints_as_from_and_to(client: TestClient) -> None:
@@ -90,7 +91,7 @@ def test_reference_lists(client: TestClient) -> None:
     assert len(roads) == 18 and roads[0]["closure_date"] is None
     assert {"atlas-links", "rfsd"} <= {item["id"] for item in sources}
     assert geo["view_box"] == "0 0 1000 620"
-    assert geo["missing"] == [{"id": "35000000", "name": "Республика Крым"}]
+    assert geo["missing"] == []
 
 
 @pytest.mark.parametrize(
@@ -101,7 +102,7 @@ def test_reference_lists(client: TestClient) -> None:
         ("/api/v1/regions/00000000/settlements", 404, "region_not_found"),
         ("/api/v1/links/nope", 404, "link_not_found"),
         ("/api/v1/regions?season=spring", 422, "validation_error"),
-        ("/api/v1/regions/01000000/links?mode=bus", 422, "validation_error"),
+        ("/api/v1/regions/01000000/links?mode=invalid", 422, "validation_error"),
         ("/api/v1/search?q=a", 422, "validation_error"),
         ("/api/v1/search?q=%20%D0%B0%20", 422, "validation_error"),
         ("/api/v1/regions/01000000/settlements?limit=0", 422, "validation_error"),
@@ -129,3 +130,15 @@ def test_openapi_documents_link_aliases(client: TestClient) -> None:
     assert "/api/v1/regions/{region_id}/settlements" in schema["paths"]
     link = schema["components"]["schemas"]["LinkResponse"]["properties"]
     assert {"from", "to"} <= set(link)
+
+
+def test_stavropol_registry_is_integrated_without_invented_frequency(client: TestClient) -> None:
+    region = client.get("/api/v1/regions/07000000").json()
+    links = client.get("/api/v1/regions/07000000/links?mode=bus").json()
+    assert region["links"] == 653
+    assert len(links) == len({row["id"] for row in links}) == 653
+    assert all(row["freq_per_week"] is None and not row["freq_assumed"] for row in links)
+    assert all(row["from"]["x"] is None and row["to"]["x"] is None for row in links)
+    assert all(row["source_date"] == "2026-10-20" for row in links)
+    sources = client.get("/api/v1/sources").json()
+    assert len([row for row in sources if row["id"].startswith("stavropol-")]) == 4

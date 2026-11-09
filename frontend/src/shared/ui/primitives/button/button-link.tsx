@@ -12,6 +12,7 @@ import {
 import styles from "./button.module.css"
 
 export interface ButtonLinkProps {
+  readonly reloadDocument?: boolean
   readonly to: To
   readonly variant?: ButtonVariant
   readonly size?: ButtonSize
@@ -22,6 +23,7 @@ export interface ButtonLinkProps {
 
 export function ButtonLink({
   to,
+  reloadDocument = false,
   variant = "primary",
   size = "regular",
   icon,
@@ -31,6 +33,7 @@ export function ButtonLink({
   return (
     <Link
       to={to}
+      reloadDocument={reloadDocument}
       viewTransition
       className={clsx(styles.button, VARIANT_CLASS[variant], SIZE_CLASS[size], className)}
     >

@@ -75,10 +75,10 @@ class ReferenceQueries:
         atlas = [
             SourceRecord(
                 id="atlas-links",
-                title="Атлас: ручные транспортные связи",
+                title="Атлас: дополнительные транспортные связи",
                 period=_years([link.source_date for link in links]),
                 url=None,
-                note="Региональные CSV проекта: у каждой связи своя ссылка и дата источника.",
+                note="Региональные CSV и реестр автобусов: у каждой связи своя ссылка и дата источника.",
                 rows=len(links),
             ),
             SourceRecord(

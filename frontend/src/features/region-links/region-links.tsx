@@ -7,6 +7,7 @@ import { LinkDetail } from "./link-detail"
 import styles from "./region-links.module.css"
 
 const MODES: readonly Mode[] = [
+  "bus",
   "air",
   "river",
   "winter_road",
