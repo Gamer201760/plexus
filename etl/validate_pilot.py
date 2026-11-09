@@ -102,5 +102,5 @@ def main(directory: Path) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data-dir", type=Path, default=ROOT / "data" / "pilot_candidate")
+    parser.add_argument("--data-dir", type=Path, default=ROOT / "frontend" / "atlas" / "public")
     main(parser.parse_args().data_dir)

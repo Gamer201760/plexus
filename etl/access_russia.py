@@ -30,11 +30,11 @@ from scipy.sparse.csgraph import dijkstra, floyd_warshall
 
 sys.path.insert(0, str(Path(__file__).parent))
 from graphlib import GRAPH, build_csr, load_edges  # noqa: E402
+from access_network import anchor_cities, trunk_matrix
 
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "casechamp.duckdb"
 
-OVERHEAD_H = {"rail": 1.0, "air": 2.5}    # доезд до вокзала/аэропорта, регистрация, ожидание — допущение
 SNAP_KMH = 15
 MAX_H = np.inf
 DC_LIMIT_H = 24.0                          # радиус поиска райцентра
@@ -42,7 +42,8 @@ DC_LIMIT_H = 24.0                          # радиус поиска райц�
 CAPITAL_OVERRIDE = {"Московская область": "Москва"}
 BATCH = 8                                  # источников дейкстры за вызов: 8 × узлы × 8 Б ≈ 1 ГБ
 CENTRE_THRESHOLDS = (1_000, 5_000, 18_000)  # ближайший н.п. не меньше порога — классы E, D, C индекса ARIA+
-SCENARIOS = os.environ.get("SCENARIOS", "road,summer,winter").split(",")
+SCENARIOS = os.environ.get("SCENARIOS", "road,road_summer,road_winter,summer,winter").split(",")
+APPEND_SCENARIOS = os.environ.get("APPEND_SCENARIOS") == "1"
 
 
 def manual_edges(con, scenario, pts, n):
@@ -51,9 +52,14 @@ def manual_edges(con, scenario, pts, n):
     empty = np.empty(0, dtype=np.int64), np.empty(0, dtype=np.int64), np.empty(0, dtype=np.float32)
     if scenario == "road":
         return (*empty, pts, n)
-    ml = con.sql("select from_id, to_id, h from manual_links_ru where season = ?", params=[scenario]).df()
+    season = scenario.removeprefix("road_")
+    ml = con.sql("select from_id, to_id, h, mode from manual_links_ru where season = ?", params=[season]).df()
+    if scenario.startswith("road_"):
+        ml = ml[ml["mode"].isin(["winter_road", "ice_crossing", "pontoon_bridge"])]
+    if season == "summer":
+        ml = ml[~ml["mode"].isin(["winter_road", "ice_crossing"])]
     linked = pts.point_id.isin(set(ml.from_id) | set(ml.to_id))
-    virt = (linked & ~pts.on_road).values
+    virt = (linked & (pts.node < 0)).values
     pts.loc[virt, "node"] = n + np.arange(virt.sum())
     pts.loc[virt, "snap_h"] = 0.0
     pts.loc[virt, "manual_only"] = True
@@ -69,7 +75,7 @@ def run(scenario, con, base, pts0, cities, T0, remote):
     """Доступ для одного сценария → (acc, times)."""
     src, dst, h, n = base
     ms, md, mw, pts, N = manual_edges(con, scenario, pts0, n)
-    G = build_csr(np.concatenate([src, ms]), np.concatenate([dst, md]), np.concatenate([h, mw]), N).astype(np.float64)
+    G = build_csr(np.concatenate([src, ms]), np.concatenate([dst, md]), np.concatenate([h, mw]), N, undirected=True).astype(np.float64)
     pts["in_graph"] = pts.node >= 0
     on = pts[pts.in_graph].reset_index(drop=True)
     on["node"] = on.node.astype(np.int64)
@@ -89,7 +95,7 @@ def run(scenario, con, base, pts0, cities, T0, remote):
         R_cc[b0:b0 + len(idx)] = d[:, cnode]
         del d
     T = R_cc + cities.snap_h.values[:, None] + cities.snap_h.values[None, :]
-    if scenario != "road":
+    if scenario in {"summer", "winter"}:
         T = np.minimum(T0, T)
     np.fill_diagonal(T, 0)
     F = floyd_warshall(T)
@@ -97,15 +103,16 @@ def run(scenario, con, base, pts0, cities, T0, remote):
     # дорога н.п. → город: граф неориентирован почти везде; берём путь город → н.п. (односторонки — малая погрешность)
     road = (R_pts.T + on.snap_h.values[:, None] + cities.snap_h.values[None, :]).astype(np.float32)
     del R_pts
+    for index, city in enumerate(cities.itertuples()):
+        road[on.point_id.values == city.oktmo, index] = 0.
     best = np.empty_like(road)
     for j in range(C):                         # min_k road(i,k) + F(k,j)
         best[:, j] = np.min(road + F[:, j][None, :].astype(np.float32), axis=1)
 
     # --- столица региона и ближайший крупный город
-    cap = cities[cities.is_capital].drop_duplicates("region").set_index("region")
-    for region, city in CAPITAL_OVERRIDE.items():
-        cap.loc[region, "city"] = city
-    cap_idx = on.region.map(lambda r: ci.get(cap.city.get(r)) if r in cap.index else None)
+    cap = cities[cities.is_capital].drop_duplicates("region").set_index("region").city.to_dict()
+    cap.update(CAPITAL_OVERRIDE)
+    cap_idx = on.region.map(lambda region: ci.get(cap.get(region)))
     rows = np.arange(len(on))
     has_cap = cap_idx.notna().values
     t_cap = np.full(len(on), np.nan); t_cap_best = np.full(len(on), np.nan)
@@ -180,29 +187,20 @@ def main():
     cities = con.sql("""select distinct city_from as city, oktmo_from as oktmo, region_from as region,
                                is_capital_from as is_capital, population_from as population, lat_from as lat, lon_from as lon
                         from stg_intercity""").df()
-    cities = cities.merge(pts[["point_id", "node", "on_road", "snap_h"]], left_on="oktmo", right_on="point_id", how="left")
-    miss = cities.node.isna() | ~cities.on_road.fillna(False).astype(bool)
-    if miss.any():
-        from scipy.spatial import cKDTree
-        tree = cKDTree(np.c_[nodes.lat, nodes.lon])
-        _, k = tree.query(np.c_[cities.lat[miss], cities.lon[miss]])
-        cities.loc[miss, "node"] = k; cities.loc[miss, "snap_h"] = 0.0
-    cities["node"] = cities.node.astype(np.int64)
+    cities, pts, n = anchor_cities(cities, pts, nodes, n)
     del nodes
-    C = len(cities)
-
-    # --- магистраль между городами: ЖД/авиа с накладными (дороги добавляются в каждом сценарии)
     ic = con.sql("select city_from, city_to, transport_type, distance_hr from stg_intercity where distance_hr is not null").df()
-    ci = {c: i for i, c in enumerate(cities.city)}
-    T0 = np.full((C, C), np.inf); np.fill_diagonal(T0, 0)
-    for mode, oh in OVERHEAD_H.items():
-        s = ic[ic.transport_type == mode]
-        a, b = s.city_from.map(ci).values, s.city_to.map(ci).values
-        np.minimum.at(T0, (a, b), s.distance_hr.values + oh)
+    T0, trunk_legs = trunk_matrix(ic, cities)
 
     con.execute("begin transaction")
     con.execute("drop table if exists np_access_next")
     con.execute("drop table if exists np_city_times_next")
+    if APPEND_SCENARIOS:
+        con.execute("create table np_access_next as select * from np_access")
+        con.execute("create table np_city_times_next as select * from np_city_times")
+        for scenario in SCENARIOS:
+            con.execute("delete from np_access_next where season = ?", [scenario])
+            con.execute("delete from np_city_times_next where season = ?", [scenario])
     for scenario in SCENARIOS:
         e = load_edges(scenario)
         base = (e["src"].astype(np.int64), e["dst"].astype(np.int64), e["h"].astype(np.float32), n)
@@ -210,7 +208,7 @@ def main():
         acc, times = run(scenario, con, base, pts, cities, T0, remote)
         con.register("acc", pa.Table.from_pandas(acc, preserve_index=False))
         con.register("times", times)
-        if scenario == SCENARIOS[0]:
+        if scenario == SCENARIOS[0] and not APPEND_SCENARIOS:
             con.execute("create table np_access_next as select * from acc")
             con.execute("create table np_city_times_next as select ?::varchar as season, * from times", [scenario])
         else:
@@ -219,6 +217,8 @@ def main():
         con.unregister("acc"); con.unregister("times")
         print(f"[{scenario}] np_city_times rows={times.num_rows}", flush=True)
         del acc, times
+    con.register("trunk_legs", pa.Table.from_pandas(trunk_legs, preserve_index=False))
+    con.execute("create or replace table market_city_legs as select * from trunk_legs")
     con.register("cities", pa.Table.from_pandas(cities.drop(columns=["point_id", "on_road"]), preserve_index=False))
     con.execute("create or replace table market_cities as select * from cities")
     con.execute("drop table if exists np_access")

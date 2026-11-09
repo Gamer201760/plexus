@@ -14,8 +14,8 @@ from indices import palma
 from manual_links import link_hours
 from seasonality import operating_season
 from graphlib import load_edges, build_csr
-from scipy.sparse.csgraph import dijkstra
-from graph_russia import contract
+from scipy.sparse.csgraph import dijkstra, floyd_warshall
+from graph_russia import contract, haversine_km
 
 
 class TransportModelTests(unittest.TestCase):
@@ -77,6 +77,43 @@ class TransportModelTests(unittest.TestCase):
                     "starts": np.array([0]), "ends": np.array([1])}
         _, _, _, edges = contract(vertices, np.array([True, True]), np.array([30.]), np.array([2]))
         self.assertEqual(list(zip(edges["S"], edges["D"])), [(1, 0)])
+
+    def test_compressed_seasonal_graph_matches_original_with_link_removal(self):
+        paths = ([0, 1, 2, 3], [3, 4, 5], [0, 6, 5])
+        node_ids = np.array([node for path in paths for node in path])
+        coordinates = np.array([[50., 90.], [50., 90.01], [50.01, 90.01],
+                                [50.02, 90.01], [50.03, 90.02], [50.04, 90.03],
+                                [50.02, 90.04]])
+        vertices = {"nid": node_ids, "lat": coordinates[node_ids, 0],
+                    "lon": coordinates[node_ids, 1], "wov": np.repeat(np.arange(3), [4, 3, 3]),
+                    "starts": np.array([0, 4, 7]), "ends": np.array([3, 6, 9])}
+        junction = np.isin(node_ids, [0, 3, 5])
+        speeds = np.array([30., 20., 50.])
+        nodes, _, _, compressed = contract(vertices, junction, speeds, np.zeros(3))
+        for allowed in ({0, 1, 2}, {0, 2}):
+            raw = np.full((7, 7), np.inf)
+            np.fill_diagonal(raw, 0.)
+            for way, path in enumerate(paths):
+                if way not in allowed:
+                    continue
+                for source, target in zip(path, path[1:]):
+                    hours = haversine_km(*coordinates[source], *coordinates[target]) / speeds[way]
+                    raw[source, target] = raw[target, source] = hours
+            expected = floyd_warshall(raw)[np.ix_(nodes, nodes)]
+            drop = ~np.isin(compressed["W"], list(allowed))
+            graph = build_csr(compressed["S"], compressed["D"], compressed["H"], len(nodes), drop)
+            np.testing.assert_allclose(dijkstra(graph), expected, rtol=1e-6)
+
+    def test_national_undirected_graph_uses_minimum_in_both_directions(self):
+        source = np.array([0, 1, 1])
+        target = np.array([1, 0, 2])
+        weight = np.array([2., 7., 3.])
+        graph = build_csr(source, target, weight, 3, undirected=True)
+        self.assertEqual((graph != graph.T).nnz, 0)
+        self.assertEqual(graph[0, 1], 2.)
+        self.assertEqual(graph[1, 0], 2.)
+        self.assertEqual(graph[2, 1], 3.)
+        self.assertEqual(dijkstra(graph, indices=2)[0], 5.)
 
 
 if __name__ == "__main__":

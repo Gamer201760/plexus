@@ -14,7 +14,7 @@ def file_record(path: Path, root: Path = ROOT) -> dict:
     with path.open("rb") as stream:
         while chunk := stream.read(8 * 1024 * 1024):
             digest.update(chunk)
-    return {"path": str(path.relative_to(root)), "bytes": path.stat().st_size,
+    return {"path": str(path.relative_to(root)) if path.is_relative_to(root) else str(path), "bytes": path.stat().st_size,
             "sha256": digest.hexdigest()}
 
 

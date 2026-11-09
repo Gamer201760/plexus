@@ -16,6 +16,7 @@
 import gc
 import os
 import resource
+import sys
 from pathlib import Path
 
 import duckdb
@@ -46,7 +47,8 @@ R_EARTH = 6371.0
 
 
 def log(msg):
-    rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1048576
+    divisor = 1073741824 if sys.platform == "darwin" else 1048576
+    rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / divisor
     print(f"{msg}  [peak RSS {rss:.1f} GB]", flush=True)
 
 

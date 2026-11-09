@@ -16,6 +16,7 @@ def load_edges(season=None):
     e = pq.read_table(GRAPH / "edges.parquet")
     result = {c: e[c].to_numpy() for c in e.column_names}
     if season is not None:
+        season = season.removeprefix("road_")
         ways = pq.read_table(GRAPH / "ways.parquet", columns=["operating_season"])
         allowed = ways["operating_season"].to_numpy()
         keep = allowed[result["way_idx"]] == "all"
@@ -27,11 +28,13 @@ def load_edges(season=None):
     return result
 
 
-def build_csr(src, dst, w, n, drop_mask=None):
+def build_csr(src, dst, w, n, drop_mask=None, *, undirected=False):
     """CSR с минимальным весом на пару (src, dst). drop_mask — рёбра, которые исключить (стресс-тест)."""
     if drop_mask is not None:
         keep = ~drop_mask
         src, dst, w = src[keep], dst[keep], w[keep]
+    if undirected:
+        src, dst, w = np.concatenate([src, dst]), np.concatenate([dst, src]), np.concatenate([w, w])
     order = np.lexsort((w, dst, src))            # по паре, внутри — по весу
     s, d, ww = src[order], dst[order], w[order]
     first = np.ones(len(s), dtype=bool)
