@@ -45,13 +45,13 @@ export function LinkEditor({ pilot, edge, season, draft, onChange }: LinkEditorP
           onChange={(event) => onChange({ ...draft, frequency: event.currentTarget.value })}
           disabled={!draft.enabled}
           error={invalid ? t("pilot:frequencyError") : undefined}
-          hint={
+          hint={`${draft.frequency === "" ? `${t("pilot:emptyFrequency")} ` : ""}${
             frequency !== null
               ? t("pilot:sourceFrequency", { count: frequency })
               : assumed !== null
                 ? t("pilot:unknownFrequency", { count: assumed })
                 : t("pilot:unknown")
-          }
+          }`}
         />
       )}
       {!edge.frequency_editable && frequency !== null && (

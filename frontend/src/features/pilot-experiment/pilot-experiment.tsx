@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import type { Pilot } from "@/entities/pilot"
 import { isApiError } from "@/shared/api"
 import { useErrorText, useTranslation } from "@/shared/i18n"
@@ -10,16 +11,24 @@ import { useExperiment } from "./use-experiment"
 
 export interface PilotExperimentProps {
   readonly pilot: Pilot
-  readonly onReload: () => void
+  readonly onReload: () => Promise<boolean>
 }
 
 export function PilotExperiment({ pilot, onReload }: PilotExperimentProps) {
   const { t } = useTranslation()
   const state = useExperiment(pilot)
+  const currentEvaluation = useRef(state.evaluation)
+  currentEvaluation.current = state.evaluation
   const errorText = useErrorText()
   const staleVersion =
     isApiError(state.evaluation.error) && state.evaluation.error.code === "stale_pilot_version"
   const result = state.evaluation.data
+  const reloadPilot = () => {
+    const error = state.evaluation.error
+    void onReload().then((succeeded) => {
+      if (succeeded && currentEvaluation.current.error === error) currentEvaluation.current.reset()
+    })
+  }
   return (
     <div className={styles.experiment}>
       <Banner
@@ -84,7 +93,7 @@ export function PilotExperiment({ pilot, onReload }: PilotExperimentProps) {
             <ErrorState
               title={t("pilot:errors.title")}
               description={errorText(state.evaluation.error)}
-              onRetry={staleVersion ? onReload : state.calculate}
+              onRetry={staleVersion ? reloadPilot : state.calculate}
             />
           )}
           {result ? (

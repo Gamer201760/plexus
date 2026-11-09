@@ -16,7 +16,7 @@ export function PilotPage() {
         <PilotExperiment
           key={query.data.artifact_version}
           pilot={query.data}
-          onReload={() => void query.refetch()}
+          onReload={() => query.refetch().then((result) => !result.isError)}
         />
       ) : query.isError ? (
         <ErrorState title={errorText(query.error)} onRetry={() => void query.refetch()} />
