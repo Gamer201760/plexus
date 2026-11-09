@@ -5,6 +5,7 @@ import pytest
 from app.domain.errors import InvalidQuery, LinkNotFound, RegionNotFound
 from app.domain.transport import Confidence, Mode, Season
 from app.usecase.dto import (
+    BoundaryShape,
     EconomyRecord,
     GeoLayer,
     IndexRecord,
@@ -113,6 +114,10 @@ class FakeAtlas:
         return GeoLayer(
             "0 0 1000 620", [RegionShape("R1", "A", "M1,2L5,8Z")], "Geo snapshot 2013", None
         )
+
+    def boundaries(self) -> list[BoundaryShape]:
+        ring = [(60.0, 50.0), (70.0, 50.0), (70.0, 60.0), (60.0, 50.0)]
+        return [BoundaryShape("R1", "A", (60.0, 50.0, 70.0, 60.0), [[ring]])]
 
     def winter_roads(self) -> list[WinterRoadRecord]:
         return []

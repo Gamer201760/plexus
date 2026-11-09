@@ -78,6 +78,19 @@ class RegionShape:
     path_low: str | None = None
 
 
+type LonLat = tuple[float, float]
+type GeoRing = list[LonLat]
+type GeoPolygon = list[GeoRing]
+
+
+@dataclass(frozen=True, slots=True)
+class BoundaryShape:
+    id: str
+    name: str
+    bounds: tuple[float, float, float, float]
+    polygons: list[GeoPolygon]
+
+
 @dataclass(frozen=True, slots=True)
 class GeoLayer:
     view_box: str

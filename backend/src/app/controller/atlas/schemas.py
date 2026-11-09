@@ -67,6 +67,17 @@ class GeoRegionsResponse(BaseModel):
     missing: list[RegionRefResponse]
 
 
+class BoundaryShapeResponse(BaseModel):
+    id: str
+    name: str
+    bounds: tuple[float, float, float, float]
+    polygons: list[list[list[tuple[float, float]]]]
+
+
+class GeoBoundariesResponse(BaseModel):
+    regions: list[BoundaryShapeResponse]
+
+
 class RegionSummaryResponse(BaseModel):
     id: str
     name: str

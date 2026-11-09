@@ -1,10 +1,10 @@
 import { useCallback, useMemo } from "react"
-import { type Season, useGeoRegions, useOverview, useRegions } from "@/entities/region"
+import { type Season, useGeoBoundaries, useOverview, useRegions } from "@/entities/region"
 import { type MetricKey, metricValue } from "./metric"
 import { buildScale } from "./scale"
 
 export function useMapData(metric: MetricKey, season: Season) {
-  const geo = useGeoRegions()
+  const geo = useGeoBoundaries()
   const regions = useRegions(season)
   const overview = useOverview()
 

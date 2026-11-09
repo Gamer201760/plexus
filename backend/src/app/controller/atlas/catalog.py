@@ -6,6 +6,8 @@ from fastapi import APIRouter, Query
 from app.controller.atlas.mapping import index_response, overview_response
 from app.controller.atlas.responses import INVALID, UNAVAILABLE
 from app.controller.atlas.schemas import (
+    BoundaryShapeResponse,
+    GeoBoundariesResponse,
     GeoRegionsResponse,
     IndexStatusResponse,
     OverviewResponse,
@@ -37,6 +39,17 @@ def build_catalog_router(
             view_box=geo.view_box,
             regions=[RegionShapeResponse(**asdict(item)) for item in geo.regions],
             missing=[RegionRefResponse(**asdict(item)) for item in geo.missing],
+        )
+
+    @router.get("/geo/boundaries", responses=UNAVAILABLE)
+    def get_geo_boundaries() -> GeoBoundariesResponse:
+        return GeoBoundariesResponse(
+            regions=[
+                BoundaryShapeResponse(
+                    id=item.id, name=item.name, bounds=item.bounds, polygons=item.polygons
+                )
+                for item in reference.boundaries()
+            ]
         )
 
     @router.get("/search", responses=INVALID)

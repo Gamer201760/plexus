@@ -1,6 +1,7 @@
 {
   "selectedStatus": "Выбран регион: {{name}}",
   "label": "Карта регионов России",
+  "attribution": "© Участники OpenStreetMap",
   "zoomIn": "Приблизить",
   "zoomOut": "Отдалить",
   "reset": "Вся Россия",

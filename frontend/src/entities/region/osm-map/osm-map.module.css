@@ -1,0 +1,46 @@
+.frame {
+  composes: fillBox from "../../../shared/styles/compose.module.css";
+  position: relative;
+  overflow: hidden;
+  background-color: var(--map-water);
+}
+
+.map {
+  composes: fillBox from "../../../shared/styles/compose.module.css";
+}
+
+.map canvas {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.attribution {
+  position: absolute;
+  inset-block-end: var(--space-4);
+  inset-inline-end: var(--space-8);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-xs);
+  background-color: var(--surface-base);
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+  text-decoration: none;
+}
+
+.attribution::before {
+  content: "";
+  position: absolute;
+  inset: calc((var(--space-24) - var(--target-min)) / 2);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .attribution:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+  }
+}
+
+.map canvas:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: calc(-1 * var(--space-4));
+}

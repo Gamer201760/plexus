@@ -1,5 +1,5 @@
 import { useCallback } from "react"
-import { type MapControls, RussiaMap } from "@/entities/region"
+import { type MapControls, OsmMap } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
 import { ErrorState, Skeleton } from "@/shared/ui"
 import { Isolines } from "@/shared/ui/brand"
@@ -65,12 +65,12 @@ export function MapExplorer() {
     <div className={styles.explorer}>
       <div className={styles.stage}>
         {geo.data && regions.data ? (
-          <RussiaMap
-            viewBox={geo.data.view_box}
+          <OsmMap
             regions={geo.data.regions}
             stepOf={stepOf}
             selectedId={selectedId}
             label={t("map:label")}
+            attribution={t("map:attribution")}
             onSelect={select}
             onHover={onHover}
             controls={controls}

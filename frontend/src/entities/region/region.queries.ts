@@ -11,6 +11,7 @@ export type TransportModeKey = components["schemas"]["Mode"]
 
 export const regionKeys = {
   geo: ["geo", "regions"] as const,
+  boundaries: ["geo", "boundaries"] as const,
   overview: ["overview"] as const,
   list: (season: Season, mode: NetworkMode = "road") => ["regions", season, mode] as const,
   detail: (id: string, season: Season, mode: NetworkMode = "road") =>
@@ -21,6 +22,14 @@ export function useGeoRegions() {
   return useQuery({
     queryKey: regionKeys.geo,
     queryFn: ({ signal }) => unwrap(api.GET("/api/v1/geo/regions", { signal })),
+    staleTime: Number.POSITIVE_INFINITY,
+  })
+}
+
+export function useGeoBoundaries() {
+  return useQuery({
+    queryKey: regionKeys.boundaries,
+    queryFn: ({ signal }) => unwrap(api.GET("/api/v1/geo/boundaries", { signal })),
     staleTime: Number.POSITIVE_INFINITY,
   })
 }

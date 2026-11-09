@@ -1,7 +1,7 @@
 import re
 from dataclasses import dataclass, replace
 
-from app.usecase.dto import RegionShape, SourceRecord, WinterRoadRecord
+from app.usecase.dto import BoundaryShape, RegionShape, SourceRecord, WinterRoadRecord
 from app.usecase.index_status import IndexStatus, index_status
 from app.usecase.interface import AtlasRepository
 
@@ -62,6 +62,13 @@ class ReferenceQueries:
             if region_id not in drawn
         ]
         return GeoRegions(view_box=layer.view_box, regions=shapes, missing=missing)
+
+    def boundaries(self) -> list[BoundaryShape]:
+        names = {region.id: region.name for region in self._repository.regions()}
+        return [
+            replace(shape, name=names.get(shape.id, shape.name))
+            for shape in self._repository.boundaries()
+        ]
 
     def winter_roads(self) -> list[WinterRoadRecord]:
         return self._repository.winter_roads()

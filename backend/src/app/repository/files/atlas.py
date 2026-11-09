@@ -5,7 +5,7 @@ from threading import Lock, RLock
 
 from app.domain.errors import RegionNotFound
 from app.domain.projection import SvgFrame
-from app.repository.files.geo import boundary_frame, region_layer
+from app.repository.files.geo import boundary_frame, boundary_layer, region_layer
 from app.repository.files.json_values import JsonObject, obj, objects, read_json
 from app.repository.files.mapping import (
     economy_record,
@@ -19,6 +19,7 @@ from app.repository.files.mapping import (
     winter_road_record,
 )
 from app.usecase.dto import (
+    BoundaryShape,
     EconomyRecord,
     GeoLayer,
     IndexRecord,
@@ -60,6 +61,7 @@ class JsonAtlasRepository:
         self._region_lock = Lock()
         self._frame: SvgFrame | None = None
         self._geo: GeoLayer | None = None
+        self._boundaries: list[BoundaryShape] | None = None
         self._atlas: _Atlas | None = None
         self._additional: _Additional | None = None
         self._indices: list[IndexRecord] | None = None
@@ -92,6 +94,12 @@ class JsonAtlasRepository:
             if self._geo is None:
                 self._geo = region_layer(self._data_dir)
             return self._geo
+
+    def boundaries(self) -> list[BoundaryShape]:
+        with self._lock:
+            if self._boundaries is None:
+                self._boundaries = boundary_layer(self._data_dir)
+            return self._boundaries
 
     def indices(self) -> list[IndexRecord]:
         with self._lock:

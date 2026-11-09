@@ -1,6 +1,7 @@
 from typing import Protocol
 
 from app.usecase.dto import (
+    BoundaryShape,
     EconomyRecord,
     GeoLayer,
     IndexRecord,
@@ -42,6 +43,8 @@ class AtlasRepository(Protocol):
     def settlement_names(self) -> list[SettlementName]: ...
 
     def geo(self) -> GeoLayer: ...
+
+    def boundaries(self) -> list[BoundaryShape]: ...
 
     def winter_roads(self) -> list[WinterRoadRecord]: ...
 

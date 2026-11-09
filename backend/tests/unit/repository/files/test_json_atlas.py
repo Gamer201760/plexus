@@ -60,6 +60,29 @@ def test_barnaul_lands_inside_altai_krai(atlas: JsonAtlasRepository) -> None:
     assert atlas.frame().place(83.78, 53.348) == pytest.approx((barnaul.x, barnaul.y), abs=0.2)
 
 
+def test_boundaries_join_ids_and_normalize_longitudes(atlas: JsonAtlasRepository) -> None:
+    boundaries = atlas.boundaries()
+    drawn = {shape.id for shape in atlas.geo().shapes}
+
+    assert {shape.id for shape in boundaries} == drawn
+    assert atlas.boundaries() is boundaries
+    for shape in boundaries:
+        min_lon, min_lat, max_lon, max_lat = shape.bounds
+        assert 10 < min_lon <= max_lon < 200
+        assert 40 < min_lat <= max_lat < 85
+        assert all(point[0] >= 0 for polygon in shape.polygons for ring in polygon for point in ring)
+
+
+def test_boundaries_from_fixture_carry_mainland_bounds(tmp_path: Path) -> None:
+    write_dataset(tmp_path)
+    repository = JsonAtlasRepository(tmp_path)
+
+    shape = repository.boundaries()[0]
+    assert (shape.id, shape.name) == ("R1", "A")
+    assert shape.bounds == (60.0, 50.0, 70.0, 60.0)
+    assert shape.polygons == [[[(60.0, 50.0), (70.0, 50.0), (70.0, 60.0), (60.0, 60.0), (60.0, 50.0)]]]
+
+
 def test_real_links_keep_unknown_values_null(atlas: JsonAtlasRepository) -> None:
     links = atlas.links()
 
