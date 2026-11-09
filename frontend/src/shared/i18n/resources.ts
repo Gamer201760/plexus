@@ -10,6 +10,7 @@ import ruLinks from "./locales/ru/links.json"
 import ruMap from "./locales/ru/map.json"
 import ruMethod from "./locales/ru/method.json"
 import ruNav from "./locales/ru/nav.json"
+import ruPilot from "./locales/ru/pilot.json"
 import ruProfile from "./locales/ru/profile.json"
 import ruRegion from "./locales/ru/region.json"
 import ruSeasons from "./locales/ru/seasons.json"
@@ -27,6 +28,7 @@ export const NAMESPACES = [
   "map",
   "method",
   "nav",
+  "pilot",
   "profile",
   "region",
   "seasons",
@@ -49,6 +51,7 @@ const ru = {
   map: ruMap,
   method: ruMethod,
   nav: ruNav,
+  pilot: ruPilot,
   profile: ruProfile,
   region: ruRegion,
   seasons: ruSeasons,

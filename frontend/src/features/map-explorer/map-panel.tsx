@@ -96,6 +96,11 @@ function SelectedRegion({ id, season, onClose }: SelectedProps) {
           ))}
         </ul>
       ) : null}
+      {data.id === "93000000" && (
+        <ButtonLink to="/pilot" variant="secondary" icon="route">
+          {t("pilot:open")}
+        </ButtonLink>
+      )}
       <ButtonLink to={`/regions/${data.id}?season=${season}`} icon="arrow-right">
         {t("map:selected.open")}
       </ButtonLink>

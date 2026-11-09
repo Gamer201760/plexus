@@ -9,11 +9,18 @@ import styles from "./app-header.module.css"
 interface NavItem {
   readonly to: string
   readonly icon: IconName
-  readonly label: "nav:map" | "nav:regions" | "nav:seasons" | "nav:method" | "nav:sources"
+  readonly label:
+    | "nav:pilot"
+    | "nav:map"
+    | "nav:regions"
+    | "nav:seasons"
+    | "nav:method"
+    | "nav:sources"
 }
 
 const NAV: readonly NavItem[] = [
   { to: "/map", icon: "map", label: "nav:map" },
+  { to: "/pilot", icon: "route", label: "nav:pilot" },
   { to: "/regions", icon: "list", label: "nav:regions" },
   { to: "/method", icon: "book", label: "nav:method" },
   { to: "/sources", icon: "database", label: "nav:sources" },

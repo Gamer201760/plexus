@@ -10,6 +10,7 @@ export const router = createBrowserRouter([
     errorElement: <RootError />,
     hydrateFallbackElement: <RouteFallback />,
     children: [
+      { path: "pilot", lazy: lazyPage(() => import("@/pages/pilot/pilot-page"), "PilotPage") },
       { path: "map", lazy: lazyPage(() => import("@/pages/map/map-page"), "MapPage") },
       { index: true, lazy: lazyPage(() => import("@/pages/home/home-page"), "HomePage") },
       {

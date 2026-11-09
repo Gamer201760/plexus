@@ -51,6 +51,7 @@ export {
   type ComboboxItem,
   type ComboboxProps,
 } from "./forms/combobox/combobox"
+export { NumberField, type NumberFieldProps } from "./forms/number-field/number-field"
 export {
   Segmented,
   type SegmentedDisplay,
