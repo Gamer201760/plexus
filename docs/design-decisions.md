@@ -117,3 +117,9 @@ https://maplibre.org/maplibre-style-spec/expressions/.
 85 градусов. Подложка требует интернета, URL задаётся TILE_URL при сборке;
 атрибуция OpenStreetMap остаётся видимой. Геометрия и показатели поступают
 из API независимо от тайлов.
+
+MapLibre 6 требует явного URL worker в Vite: импорт через
+`?worker&url` включает worker в production-сборку. Без него браузер
+выдавал `Worker failed to load` и показывал пустую карту при исправном API.
+Исправление проверено просмотром карты на case.vm; тесты не запускались.
+Источник: https://maplibre.org/maplibre-gl-js/docs/guides/v5-to-v6-migration-guide/.

@@ -3,7 +3,9 @@ import {
   type LngLatBoundsLike,
   type MapLayerMouseEvent,
   type MapOptions,
+  setWorkerUrl,
 } from "maplibre-gl"
+import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url"
 import { useCallback, useEffect, useMemo, useRef } from "react"
 import { motionMs, useReducedMotion } from "@/shared/motion"
 import type { BoundaryAtlas, LonLatBounds } from "./boundary-geojson"
@@ -16,6 +18,8 @@ import {
   SELECTED_LAYER,
   selectionFilter,
 } from "./osm-style"
+
+setWorkerUrl(workerUrl)
 
 const HOME_PADDING = 24
 const FOCUS_PADDING = 56
