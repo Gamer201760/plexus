@@ -46,7 +46,19 @@ export function MapExplorer() {
   if (failed) return <ErrorState title={t("errors:kind.server")} onRetry={retry} />
 
   const hovered = hoveredId ? byId.get(hoveredId) : undefined
+  const hoveredIndex = hovered ? hovered.hansen : null
   const hoveredValue = hovered ? metricValue(hovered, metric) : null
+  const indexRow = {
+    key: "hansen",
+    label: t("data:metric.hansen"),
+    value: hoveredIndex === null ? null : formatMetric(hoveredIndex, "hansen", f),
+  }
+  const metricRow = {
+    key: metric,
+    label: t(`data:metric.${metric}`),
+    value: hoveredValue === null ? null : formatMetric(hoveredValue, metric, f),
+  }
+  const hoverRows = metric === "hansen" ? [indexRow] : [indexRow, metricRow]
   const ready = geo.data !== undefined && regions.data !== undefined
 
   return (
@@ -75,8 +87,7 @@ export function MapExplorer() {
             cardRef={cardRef}
             point={point}
             title={hovered.name}
-            label={t(`data:metric.${metric}`)}
-            value={hoveredValue === null ? null : formatMetric(hoveredValue, metric, f)}
+            rows={hoverRows}
             none={t("map:legend.none")}
           />
         ) : null}

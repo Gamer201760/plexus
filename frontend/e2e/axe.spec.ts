@@ -3,10 +3,8 @@ import { expect, type Page, test } from "@playwright/test"
 
 const ROUTES = [
   "/",
-  "/map",
-  "/regions",
+  "/compare",
   "/sources",
-  "/method",
   "/regions/71800000",
   "/regions/71800000?section=winter-calendar",
   "/missing-page",

@@ -1,0 +1,12 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--term-min), 1fr));
+  gap: var(--space-16);
+  margin-block-end: var(--space-16);
+}
+
+.model {
+  margin-block-start: var(--space-12);
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+}

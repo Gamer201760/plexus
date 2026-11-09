@@ -1,0 +1,46 @@
+.picker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.field {
+  flex: 1 1 auto;
+  min-inline-size: min(100%, var(--term-min));
+  max-inline-size: var(--field-max-width);
+}
+
+.chips {
+  composes: bareList from "../../shared/styles/compose.module.css";
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.chipSlot {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.chipSlot::before {
+  content: "";
+  flex-shrink: 0;
+  inline-size: var(--space-12);
+  block-size: var(--space-12);
+  border-radius: var(--radius-pill);
+  background-color: var(--series-1);
+}
+
+.chipSlot[data-series="2"]::before {
+  background-color: var(--series-2);
+}
+
+.chipSlot[data-series="3"]::before {
+  background-color: var(--series-3);
+}
+
+.chipSlot[data-series="4"]::before {
+  background-color: var(--series-4);
+}

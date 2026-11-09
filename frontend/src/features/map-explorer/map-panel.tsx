@@ -1,5 +1,5 @@
 import { memo, useEffect, useId } from "react"
-import { Link, useLocation } from "react-router"
+import { useLocation } from "react-router"
 import { RegionLinks } from "@/entities/link"
 import type { IndexStatus } from "@/entities/reference"
 import {
@@ -30,17 +30,7 @@ export interface MapPanelProps {
 function IndexBanner({ index }: { readonly index: IndexStatus }) {
   const { t } = useTranslation()
   if (index.status === "ready") return null
-  return (
-    <Banner
-      tone="info"
-      title={t("map:index.missing")}
-      description={
-        <Link to="/method" className={styles.indexLink}>
-          {t("map:index.method")}
-        </Link>
-      }
-    />
-  )
+  return <Banner tone="info" title={t("map:index.missing")} />
 }
 
 interface SelectedProps {
@@ -113,16 +103,18 @@ function SelectedRegion({ id, season, onClose }: SelectedProps) {
           ))}
         </ul>
       ) : null}
-      {data.id === "93000000" && (
-        <ButtonLink to="/pilot" variant="secondary" icon="route">
-          {t("pilot:open")}
-        </ButtonLink>
-      )}
       <ButtonLink
         to={`/regions/${data.id}?season=${season}&network_mode=${networkMode}`}
         icon="arrow-right"
       >
         {t("map:selected.open")}
+      </ButtonLink>
+      <ButtonLink
+        to={`/compare?ids=${data.id}&season=${season}&network_mode=${networkMode}`}
+        variant="secondary"
+        icon="compare"
+      >
+        {t("map:selected.compare")}
       </ButtonLink>
     </Card>
   )

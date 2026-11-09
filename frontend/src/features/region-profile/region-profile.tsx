@@ -1,21 +1,25 @@
 import type { ReactNode } from "react"
 import { Link, useSearchParams } from "react-router"
-import { MiniMap, SeasonControl, SeasonPair, useRegion, useRegions } from "@/entities/region"
+import { MiniMap, SeasonControl, useRegion, useRegions } from "@/entities/region"
 import { isApiError } from "@/shared/api"
+import { useNetworkMode } from "@/shared/hooks/use-network-mode"
 import { useSeason } from "@/shared/hooks/use-season"
-import { useFormatters, useTranslation } from "@/shared/i18n"
+import { useTranslation } from "@/shared/i18n"
 import { ButtonLink, Card, ErrorState, Icon, PageHeader, Skeleton, Tabs } from "@/shared/ui"
-import { TransportIcon } from "@/shared/ui/brand"
+import { IndexCard } from "./index-card"
+import { ModeChart } from "./mode-chart"
 import styles from "./region-profile.module.css"
 import { SeasonalLinks } from "./seasonal-links"
+
 export interface RegionProfileProps {
   readonly regionId: string
   readonly calendar: ReactNode
 }
+
 export function RegionProfile({ regionId, calendar }: RegionProfileProps) {
   const { t } = useTranslation()
-  const f = useFormatters()
   const { season, seasonHref } = useSeason()
+  const { networkMode } = useNetworkMode()
   const [params, setParams] = useSearchParams()
   const region = useRegion(regionId, season)
   const regions = useRegions(season)
@@ -35,7 +39,6 @@ export function RegionProfile({ regionId, calendar }: RegionProfileProps) {
       />
     )
   if (!data || data.id !== regionId) return <Skeleton lines={12} />
-  const sum = (key: "summer" | "winter") => data.links_by_mode.reduce((s, m) => s + m[key], 0)
   const items = [
     { value: "links", label: t("profile:links"), icon: "route" as const },
     ...(isUgra
@@ -44,11 +47,22 @@ export function RegionProfile({ regionId, calendar }: RegionProfileProps) {
   ]
   return (
     <div className={styles.profile}>
-      <Link to={seasonHref("/regions")} className={styles.back}>
+      <Link to={seasonHref("/")} className={styles.back}>
         <Icon name="arrow-left" size="sm" />
-        {t("region:breadcrumb")}
+        {t("region:backToMap")}
       </Link>
-      <PageHeader title={data.name} />
+      <PageHeader
+        title={data.name}
+        actions={
+          <ButtonLink
+            to={`/compare?ids=${data.id}&season=${season}&network_mode=${networkMode}`}
+            variant="secondary"
+            icon="compare"
+          >
+            {t("region:compare")}
+          </ButtonLink>
+        }
+      />
       <Tabs
         label={t("profile:sections")}
         items={items}
@@ -69,35 +83,15 @@ export function RegionProfile({ regionId, calendar }: RegionProfileProps) {
         ) : (
           <div className={styles.workspace}>
             <div className={styles.main}>
-              <Card title={t("profile:seasons")} actions={<SeasonControl />}>
+              <IndexCard region={data} regions={regions.data ?? []} />
+              <Card as="section" title={t("profile:seasons")} actions={<SeasonControl />}>
                 <p className={styles.note}>
-                  {t("profile:counts", { summer: sum("summer"), winter: sum("winter") })}
+                  {t("profile:counts", {
+                    summer: data.links_by_mode.reduce((s, m) => s + m.summer, 0),
+                    winter: data.links_by_mode.reduce((s, m) => s + m.winter, 0),
+                  })}
                 </p>
-                <SeasonPair summer={sum("summer")} winter={sum("winter")} />
-                <table className={styles.modes}>
-                  <caption className="visually-hidden">{t("atlas:composition")}</caption>
-                  <thead>
-                    <tr>
-                      <th>{t("atlas:transport")}</th>
-                      <th>{t("data:season.summer")}</th>
-                      <th>{t("data:season.winter")}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.links_by_mode.map((m) => (
-                      <tr key={m.mode}>
-                        <th>
-                          <span>
-                            <TransportIcon mode={m.mode} size="sm" />
-                            {t(`data:mode.${m.mode}`)}
-                          </span>
-                        </th>
-                        <td>{f.integer(m.summer)}</td>
-                        <td>{f.integer(m.winter)}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <ModeChart rows={data.links_by_mode} />
               </Card>
               <SeasonalLinks regionId={regionId} />
             </div>

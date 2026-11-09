@@ -4,7 +4,7 @@ import { mainlandBox } from "../src/entities/region/russia-map/map-shapes"
 const mapSelector = '[data-map-surface], svg[role="img"]'
 
 test("map can be dragged immediately after opening", async ({ page }) => {
-  await page.goto("/map")
+  await page.goto("/")
   const map = page.locator(mapSelector).first()
   await expect(map).toBeVisible()
   await page.waitForTimeout(500)
@@ -32,7 +32,7 @@ test("Arkhangelsk focuses on its mainland rather than remote islands", async ({
   const region = data.regions.find((entry: { id: string }) => entry.id === "11000000")
   const mainland = mainlandBox(region.path)
   if (!mainland) throw new Error("Mainland is missing")
-  await page.goto("/map?region=11000000")
+  await page.goto("/?region=11000000")
   const map = page.locator(mapSelector).first()
   await expect(map).toBeVisible()
   await page.waitForTimeout(1200)
@@ -62,7 +62,7 @@ test("Arkhangelsk focuses on its mainland rather than remote islands", async ({
 })
 
 test("gestures move the rendered stage and keep geometry until release", async ({ page }) => {
-  await page.goto("/map?region=11000000")
+  await page.goto("/?region=11000000")
   const map = page.locator("[data-map-surface]")
   const stage = map.locator("[data-map-stage]")
   const path = map.locator('[data-region-id="11000000"]')
@@ -109,7 +109,7 @@ test("visible geometry and hit testing place Arkhangelsk at the same coordinates
   const region = regions.find((entry: { id: string }) => entry.id === "11000000")
   const box = mainlandBox(region.path)
   if (!box) throw new Error("Mainland is missing")
-  await page.goto("/map")
+  await page.goto("/")
   const map = page.locator("[data-map-surface]")
   await expect(map).toBeVisible()
   const target = await map.evaluate((element, box) => {

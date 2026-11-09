@@ -9,20 +9,13 @@ import styles from "./app-header.module.css"
 interface NavItem {
   readonly to: string
   readonly icon: IconName
-  readonly label:
-    | "nav:pilot"
-    | "nav:map"
-    | "nav:regions"
-    | "nav:seasons"
-    | "nav:method"
-    | "nav:sources"
+  readonly label: "nav:map" | "nav:compare" | "nav:sources"
+  readonly end?: boolean
 }
 
 const NAV: readonly NavItem[] = [
-  { to: "/map", icon: "map", label: "nav:map" },
-  { to: "/pilot", icon: "route", label: "nav:pilot" },
-  { to: "/regions", icon: "list", label: "nav:regions" },
-  { to: "/method", icon: "book", label: "nav:method" },
+  { to: "/", icon: "map", label: "nav:map", end: true },
+  { to: "/compare", icon: "compare", label: "nav:compare" },
   { to: "/sources", icon: "database", label: "nav:sources" },
 ]
 
@@ -43,7 +36,7 @@ export function AppHeader({ search }: AppHeaderProps) {
           <NavLink
             key={item.to}
             to={seasonHref(item.to)}
-            end={item.to === "/"}
+            end={item.end === true}
             aria-label={t(item.label)}
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link

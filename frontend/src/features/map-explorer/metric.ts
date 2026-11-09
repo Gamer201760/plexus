@@ -12,7 +12,7 @@ export const METRICS: readonly MetricKey[] = [
 
 export const SEASONS: readonly Season[] = ["all", "summer", "winter"]
 
-export const DEFAULT_METRIC: MetricKey = "links"
+export const DEFAULT_METRIC: MetricKey = "hansen"
 
 export const DEFAULT_SEASON: Season = "all"
 

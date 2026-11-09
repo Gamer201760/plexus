@@ -61,10 +61,3 @@
     border-block-start: var(--hairline) solid var(--border-subtle);
   }
 }
-
-.indexLink {
-  color: var(--text-accent);
-  font-weight: var(--weight-medium);
-  text-decoration: underline;
-  text-underline-offset: var(--space-2);
-}

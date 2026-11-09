@@ -3,7 +3,7 @@ import dataCopy from "../src/shared/i18n/locales/ru/data.json" with { type: "jso
 import mapCopy from "../src/shared/i18n/locales/ru/map.json" with { type: "json" }
 
 test("national mode preserves coverage and navigation through real API", async ({ page }) => {
-  await page.goto("/map?metric=hansen&season=summer&region=93000000&network_mode=road")
+  await page.goto("/?metric=hansen&season=summer&region=93000000&network_mode=road")
   await expect(page.getByText("3,84", { exact: true })).toBeVisible()
   await expect(page.getByText(/hansen-frequency-v2/)).toBeVisible()
   const mode = page.getByRole("combobox", { name: dataCopy.network.label })

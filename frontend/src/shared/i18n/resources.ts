@@ -2,15 +2,13 @@ import type { Locale } from "./locale"
 import ruAtlas from "./locales/ru/atlas.json"
 import ruCalendar from "./locales/ru/calendar.json"
 import ruCommon from "./locales/ru/common.json"
+import ruCompare from "./locales/ru/compare.json"
 import ruData from "./locales/ru/data.json"
 import ruErrors from "./locales/ru/errors.json"
 import ruHealth from "./locales/ru/health.json"
-import ruHome from "./locales/ru/home.json"
 import ruLinks from "./locales/ru/links.json"
 import ruMap from "./locales/ru/map.json"
-import ruMethod from "./locales/ru/method.json"
 import ruNav from "./locales/ru/nav.json"
-import ruPilot from "./locales/ru/pilot.json"
 import ruProfile from "./locales/ru/profile.json"
 import ruRegion from "./locales/ru/region.json"
 import ruSeasons from "./locales/ru/seasons.json"
@@ -21,14 +19,12 @@ export const NAMESPACES = [
   "errors",
   "atlas",
   "calendar",
+  "compare",
   "data",
   "health",
-  "home",
   "links",
   "map",
-  "method",
   "nav",
-  "pilot",
   "profile",
   "region",
   "seasons",
@@ -44,14 +40,12 @@ const ru = {
   errors: ruErrors,
   atlas: ruAtlas,
   calendar: ruCalendar,
+  compare: ruCompare,
   data: ruData,
   health: ruHealth,
-  home: ruHome,
   links: ruLinks,
   map: ruMap,
-  method: ruMethod,
   nav: ruNav,
-  pilot: ruPilot,
   profile: ruProfile,
   region: ruRegion,
   seasons: ruSeasons,

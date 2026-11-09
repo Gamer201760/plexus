@@ -8,7 +8,7 @@ async function view(map: Locator): Promise<typeof home> {
 }
 
 test("map wheel prevents page zoom and commits once per gesture", async ({ page }) => {
-  await page.goto("/map")
+  await page.goto("/")
   const map = page.locator(surface)
   await expect(map).toBeVisible()
   const result = await map.evaluate(async (element) => {
@@ -44,7 +44,7 @@ test("map wheel prevents page zoom and commits once per gesture", async ({ page 
 test("horizontal wheel pans without changing scale and reset works without a selection", async ({
   page,
 }) => {
-  await page.goto("/map")
+  await page.goto("/")
   const map = page.locator(surface)
   await expect(map).toBeVisible()
   const box = await map.boundingBox()
@@ -63,7 +63,7 @@ test("horizontal wheel pans without changing scale and reset works without a sel
 })
 
 test("drag commits only on release and does not select a region", async ({ page }) => {
-  await page.goto("/map")
+  await page.goto("/")
   const map = page.locator(surface)
   await expect(map).toBeVisible()
   const box = await map.boundingBox()
@@ -82,7 +82,7 @@ test("drag commits only on release and does not select a region", async ({ page 
 
 test("two-finger pinch zooms the map on mobile", async ({ page, context }) => {
   await page.setViewportSize({ width: 375, height: 812 })
-  await page.goto("/map")
+  await page.goto("/")
   const map = page.locator(surface)
   await expect(map).toBeVisible()
   const box = await map.boundingBox()
@@ -112,19 +112,10 @@ test("two-finger pinch zooms the map on mobile", async ({ page, context }) => {
   expect(new URL(page.url()).searchParams.has("region")).toBe(false)
 })
 
-test("region table uses document scrolling from inside its rows", async ({ page }) => {
-  await page.goto("/regions")
-  await expect(page.locator("tbody tr").first()).toBeVisible()
-  await page.mouse.move(500, 600)
-  await page.mouse.wheel(0, 700)
-  await expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(400)
-  expect(await page.locator("table").evaluate((table) => table.parentElement?.scrollTop)).toBe(0)
-})
-
 test("rapid top navigation stays responsive and leaves a rendered map", async ({ page }) => {
-  await page.goto("/map")
+  await page.goto("/")
   await expect(page.locator(surface)).toBeVisible()
-  for (const path of ["/regions", "/method", "/sources", "/map"]) {
+  for (const path of ["/compare", "/sources", "/"]) {
     await page.locator(`header nav a[href^="${path}?"]`).click()
     await expect.poll(() => new URL(page.url()).pathname).toBe(path)
   }
@@ -133,7 +124,7 @@ test("rapid top navigation stays responsive and leaves a rendered map", async ({
 })
 
 test("a wheel gesture interrupts flight at its visible position", async ({ page }) => {
-  await page.goto("/map")
+  await page.goto("/")
   const map = page.locator(surface)
   await expect(map).toBeVisible()
   await page.getByRole("button", { name: mapMessages.zoomIn, exact: true }).click()
@@ -158,7 +149,7 @@ test("a wheel gesture interrupts flight at its visible position", async ({ page 
 
 test("keyboard zoom and reset are immediate with reduced motion", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" })
-  await page.goto("/map")
+  await page.goto("/")
   const map = page.locator(surface)
   await expect(map).toBeVisible()
   await page.getByRole("button", { name: mapMessages.zoomIn, exact: true }).focus()

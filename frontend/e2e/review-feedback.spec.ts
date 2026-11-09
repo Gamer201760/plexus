@@ -23,21 +23,6 @@ test("source tab underline stays under the selected label", async ({ page }) => 
   }
 })
 
-test("method readout follows hover and keyboard focus", async ({ page }) => {
-  await page.goto("/method")
-  const cells = page.locator("button[aria-pressed]")
-  await expect(cells).toHaveCount(49)
-  await cells.first().hover()
-  await expect(cells.first()).toHaveAttribute("aria-pressed", "true")
-  await expect(
-    page
-      .locator('[aria-live="polite"]')
-      .filter({ hasText: (await cells.first().getAttribute("aria-label")) ?? "" }),
-  ).toBeVisible()
-  await cells.last().focus()
-  await expect(cells.last()).toHaveAttribute("aria-pressed", "true")
-})
-
 test("region page wheel reaches the end through the settlement table", async ({ page }) => {
   await page.goto("/regions/71800000?season=winter")
   await page.getByRole("button", { name: region.settlements.title, exact: true }).click()
@@ -62,7 +47,7 @@ test("selected map region replaces the national ranking with its routes", async 
 }) => {
   const response = await request.get("/api/v1/regions/71800000/links?season=winter")
   const links = await response.json()
-  await page.goto("/map?region=71800000&season=winter")
+  await page.goto("/?region=71800000&season=winter")
   await expect(page.locator("aside ol")).toHaveCount(0)
   await expect(
     page.locator("aside").getByText(links[0].from.name, { exact: true }).first(),

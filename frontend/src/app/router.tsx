@@ -1,8 +1,13 @@
-import { createBrowserRouter } from "react-router"
+import { createBrowserRouter, Navigate, useLocation } from "react-router"
 import { lazyPage } from "./lazy-page"
 import { RootError } from "./root-error/root-error"
 import { RootLayout } from "./root-layout/root-layout"
 import { RouteFallback } from "./route-fallback/route-fallback"
+
+function LegacyMapRedirect() {
+  const { search } = useLocation()
+  return <Navigate to={{ pathname: "/", search }} replace />
+}
 
 export const router = createBrowserRouter([
   {
@@ -10,22 +15,16 @@ export const router = createBrowserRouter([
     errorElement: <RootError />,
     hydrateFallbackElement: <RouteFallback />,
     children: [
-      { path: "pilot", lazy: lazyPage(() => import("@/pages/pilot/pilot-page"), "PilotPage") },
-      { path: "map", lazy: lazyPage(() => import("@/pages/map/map-page"), "MapPage") },
-      { index: true, lazy: lazyPage(() => import("@/pages/home/home-page"), "HomePage") },
+      { index: true, lazy: lazyPage(() => import("@/pages/map/map-page"), "MapPage") },
+      { path: "map", element: <LegacyMapRedirect /> },
       {
-        path: "regions",
-        lazy: lazyPage(() => import("@/pages/regions/regions-page"), "RegionsPage"),
+        path: "compare",
+        lazy: lazyPage(() => import("@/pages/compare/compare-page"), "ComparePage"),
       },
       {
         path: "regions/:regionId",
         lazy: lazyPage(() => import("@/pages/region/region-page"), "RegionPage"),
       },
-      {
-        path: "seasons",
-        lazy: lazyPage(() => import("@/pages/seasons/seasons-page"), "SeasonsPage"),
-      },
-      { path: "method", lazy: lazyPage(() => import("@/pages/method/method-page"), "MethodPage") },
       {
         path: "sources",
         lazy: lazyPage(() => import("@/pages/sources/sources-page"), "SourcesPage"),

@@ -3,7 +3,7 @@ import { useDocumentTitle, useTranslation } from "@/shared/i18n"
 
 export function MapPage() {
   const { t } = useTranslation()
-  useDocumentTitle(t("nav:map"))
+  useDocumentTitle(null)
   return (
     <>
       <h1 className="visually-hidden" tabIndex={-1}>
