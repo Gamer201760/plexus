@@ -7,12 +7,13 @@ const apiUrl = process.env.API_URL ?? "http://localhost:8000"
 const frontendRoot = fileURLToPath(new URL(".", import.meta.url))
 const sourceRoot = fileURLToPath(new URL("./src", import.meta.url))
 const apiProxy = { "/api": { target: apiUrl, changeOrigin: true } }
+const extraHosts = process.env.DEV_ALLOWED_HOSTS?.split(",").filter((host) => host !== "")
 
 export default defineConfig({
   plugins: [react(), htmlMeta(frontendRoot)],
   resolve: { alias: { "@": sourceRoot } },
-  server: { proxy: apiProxy },
-  preview: { proxy: apiProxy },
+  server: { proxy: apiProxy, ...(extraHosts ? { allowedHosts: extraHosts } : {}) },
+  preview: { proxy: apiProxy, ...(extraHosts ? { allowedHosts: extraHosts } : {}) },
   test: {
     css: { modules: { classNameStrategy: "non-scoped" } },
     projects: [
