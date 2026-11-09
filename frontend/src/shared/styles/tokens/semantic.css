@@ -86,6 +86,13 @@
   --data-gain-2: var(--violet-2);
   --data-gain-3: var(--violet-3);
 
+  --series-1: var(--blue-600);
+  --series-2: var(--orange-3);
+  --series-3: var(--mode-air-hue);
+  --series-4: var(--green-600);
+  --pair-main: var(--mode-ferry-hue);
+  --pair-alt: var(--mode-winter-hue);
+
   --mode-air: var(--mode-air-hue);
   --mode-river: var(--mode-river-hue);
   --mode-winter: var(--mode-winter-hue);

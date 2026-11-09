@@ -1,0 +1,77 @@
+.chart {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+}
+
+.legendItem::before {
+  content: "";
+  flex-shrink: 0;
+  inline-size: var(--space-16);
+  block-size: var(--space-4);
+  border-radius: var(--radius-xs);
+  background-color: var(--pair-main);
+}
+
+.legendItem[data-pair="alt"]::before {
+  background-color: var(--pair-alt);
+}
+
+.rows {
+  composes: bareList from "../../../styles/compose.module.css";
+  display: grid;
+  gap: var(--space-12);
+}
+
+.row {
+  composes: staggerRise from "../../../styles/compose.module.css";
+  display: grid;
+  gap: var(--space-4);
+}
+
+.rowLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--font-size-body-sm);
+  color: var(--text-primary);
+}
+
+.track {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.trackValue {
+  font-size: var(--font-size-caption);
+  font-variant-numeric: var(--font-numeric);
+  font-weight: var(--weight-semibold);
+  min-inline-size: var(--space-32);
+  text-align: end;
+}
+
+.bar {
+  composes: meterBar from "../../../styles/compose.module.css";
+  justify-self: start;
+  inline-size: 100%;
+  background-color: var(--pair-main);
+}
+
+.bar[data-pair="alt"] {
+  background-color: var(--pair-alt);
+}

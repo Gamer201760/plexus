@@ -1,5 +1,0 @@
-.page {
-  composes: pagePad from "../../shared/styles/compose.module.css";
-  display: grid;
-  gap: var(--space-32);
-}

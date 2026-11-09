@@ -124,9 +124,17 @@
   block-size: 100%;
 }
 
-.hairStroke {
-  stroke-width: var(--hairline);
-  vector-effect: non-scaling-stroke;
+.staggerRise {
+  animation: var(--motion-rise-in);
+  animation-delay: calc(var(--i) * var(--stagger));
+  animation-fill-mode: backwards;
+}
+
+.meterBar {
+  block-size: var(--space-8);
+  border-radius: var(--radius-xs);
+  transform-origin: left;
+  transform: scaleX(var(--ratio, 0));
 }
 
 .displayText {

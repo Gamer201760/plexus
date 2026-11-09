@@ -1,4 +1,10 @@
 export {
+  BarChart,
+  type BarChartItem,
+  type BarChartProps,
+  type SeriesSlot,
+} from "./data-display/bar-chart/bar-chart"
+export {
   DataTable,
   type DataTableColumn,
   type DataTableProps,
@@ -6,6 +12,12 @@ export {
   type SortValue,
   type TableSort,
 } from "./data-display/data-table/data-table"
+export {
+  PairedBars,
+  type PairedBarsProps,
+  type PairedBarsRow,
+} from "./data-display/paired-bars/paired-bars"
+export { RankStrip, type RankStripProps } from "./data-display/rank-strip/rank-strip"
 export {
   Stat,
   type StatDelta,

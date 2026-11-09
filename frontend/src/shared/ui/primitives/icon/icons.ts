@@ -1,4 +1,5 @@
 import {
+  ChartColumnBig,
   ChevronsUpDown,
   Circle,
   CircleAlert,
@@ -58,6 +59,7 @@ export const ICONS = {
   users: createDesignIcon("people"),
   building: createDesignIcon("index"),
   route: createDesignIcon("route"),
+  compare: ChartColumnBig,
   filter: createDesignIcon("filter"),
   link: createDesignIcon("network"),
 } as const satisfies Record<string, ComponentType<LucideProps>>

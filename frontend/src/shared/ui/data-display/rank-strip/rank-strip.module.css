@@ -1,0 +1,38 @@
+.strip {
+  display: grid;
+  gap: var(--space-8);
+  margin: 0;
+}
+
+.track {
+  position: relative;
+  block-size: var(--space-24);
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-sunken);
+}
+
+.dot {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: calc(var(--x) * 100%);
+  inline-size: var(--space-4);
+  block-size: var(--space-12);
+  border-radius: var(--radius-pill);
+  background-color: var(--border-strong);
+  transform: translate(-50%, -50%);
+}
+
+.marker {
+  inline-size: var(--space-8);
+  block-size: var(--space-20);
+  background-color: var(--series-1);
+  border: var(--space-2) solid var(--surface-base);
+  box-sizing: content-box;
+}
+
+.ends {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+}
