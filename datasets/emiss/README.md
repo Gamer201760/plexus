@@ -10,10 +10,10 @@
 
 | Файл | Назначение | Размер, байт |
 |---|---|---|
-| [derived/filters.json](derived/filters.json) | derived_data | 20685 |
-| [derived/grp_61497_long.csv](derived/grp_61497_long.csv) | derived_data | 12979082 |
-| [derived/request_body.txt](derived/request_body.txt) | derived_data | 4341 |
-| [raw/grp_61497.json](raw/grp_61497.json) | raw_data | 2383841 |
+| `derived/filters.json` | derived_data | 20685 |
+| `derived/grp_61497_long.csv` | derived_data | 12979082 |
+| `derived/request_body.txt` | derived_data | 4341 |
+| `raw/grp_61497.json` | raw_data | 2383841 |
 
 ## Покрытие и ограничения
 
@@ -30,3 +30,5 @@
 ## Как читать
 
 Архивы сохранены в исходном виде. CSV Точно используют UTF-8 и разделитель `;`; таблицы можно читать потоково через `zipfile` и `csv`, без распаковки больших файлов на диск. Таблицы в `derived/` получены явно описанным преобразованием исходников, не являются синтетическими данными. Для ЕМИСС используется запятая как разделитель столбцов длинной CSV.
+
+Исходные и промежуточные файлы `raw/` и `derived/` не включены в Git. Имена в таблице обозначают локальные файлы исторического исследования; адреса загрузки и контрольные суммы приведены в `metadata.json`.

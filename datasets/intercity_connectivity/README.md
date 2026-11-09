@@ -10,11 +10,11 @@
 
 | Файл | Назначение | Размер, байт |
 |---|---|---|
-| [derived/cities.csv](derived/cities.csv) | derived_data | 17703 |
-| [derived/coverage_by_region.csv](derived/coverage_by_region.csv) | derived_data | 24458 |
-| [derived/coverage_by_transport.csv](derived/coverage_by_transport.csv) | derived_data | 348 |
-| [raw/data_intercity_connectivity_162_v20260629_csv.zip](raw/data_intercity_connectivity_162_v20260629_csv.zip) | raw_data | 3517124 |
-| [raw/description_intercity_connectivity_162_v20260629.pdf](raw/description_intercity_connectivity_162_v20260629.pdf) | source_documentation | 314192 |
+| `derived/cities.csv` | derived_data | 17703 |
+| `derived/coverage_by_region.csv` | derived_data | 24458 |
+| `derived/coverage_by_transport.csv` | derived_data | 348 |
+| `raw/data_intercity_connectivity_162_v20260629_csv.zip` | raw_data | 3517124 |
+| `raw/description_intercity_connectivity_162_v20260629.pdf` | source_documentation | 314192 |
 
 ## Покрытие и ограничения
 
@@ -31,3 +31,5 @@ CC BY 4.0, прямо указана на странице набора.
 ## Как читать
 
 Архивы сохранены в исходном виде. CSV Точно используют UTF-8 и разделитель `;`; таблицы можно читать потоково через `zipfile` и `csv`, без распаковки больших файлов на диск. Таблицы в `derived/` получены явно описанным преобразованием исходников, не являются синтетическими данными. Для ЕМИСС используется запятая как разделитель столбцов длинной CSV.
+
+Исходные и промежуточные файлы `raw/` и `derived/` не включены в Git. Имена в таблице обозначают локальные файлы исторического исследования; адреса загрузки и контрольные суммы приведены в `metadata.json`.

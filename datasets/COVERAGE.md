@@ -19,7 +19,7 @@
 
 ## Где искать списки регионов и пропуски
 
-- [Города и регионы графа](intercity_connectivity/derived/coverage_by_region.csv), [города](intercity_connectivity/derived/cities.csv), [режимы и пропуски](intercity_connectivity/derived/coverage_by_transport.csv).
+- `Города и регионы графа`, `города`, `режимы и пропуски`.
 - [Покрытие населённых пунктов](allsettlements/coverage.md), [профиль уровней и координат](allsettlements/profile.json), [дополнительная проверка числового формата координат](settlement-coordinate-validation.json).
 - [Региональный транспорт](regional_transport/coverage.md), [ВРП](regional_grp/coverage.md), [муниципальные показатели](municipal_transport/coverage.md).
 - [Регионы аэропортов](ourairports-russia/coverage_by_region.csv), [регионы GeoNames](geonames-russia/coverage_by_region.csv).

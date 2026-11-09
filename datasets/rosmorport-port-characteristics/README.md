@@ -15,18 +15,18 @@
 
 | Файл | Тип | Байт | SHA-256 |
 |---|---|---|---|
-| [derived/characteristics.csv](derived/characteristics.csv) | derived | 99198 | `389fecfd67eb2da68db727d0ca2f992f32a018dd9899c0e7f8e0616c5a5a07da` |
-| [derived/ports.csv](derived/ports.csv) | derived | 62549 | `fa6db4a59c8750acf0b18a47fd7cfaffb354a57df67ad56b07d76466514b969d` |
-| [raw/filials_mur_seaports.html](raw/filials_mur_seaports.html) | original | 637557 | `ac626003cb95d42eaa793fe9e3c704a626571e543806f06bd65cdace900ece64` |
-| [raw/filials_nvr_seaports.html](raw/filials_nvr_seaports.html) | original | 1359306 | `1a90bccff32146b889be16843193f14e5b23647df0356befe1c930d695a4b58a` |
-| [raw/filials_vaf_seaports.html](raw/filials_vaf_seaports.html) | original | 942364 | `5b9dbf3a88747806083a067c8a8507862d6d9a159fc479bd3c206d5628bdde6e` |
-| [raw/mur_seaports.html](raw/mur_seaports.html) | original | 637557 | `1d441f26fe667fd51675663fee6b5d99bc53c3b04a7d41b00e5107b2d392f1af` |
-| [raw/nvr_seaports.html](raw/nvr_seaports.html) | original | 1359306 | `79c7d685f9b26995c42f4cd9080f140ff236e398debf44eed09f468d36d9e629` |
-| [raw/ppv_seaports.html](raw/ppv_seaports.html) | original | 263125 | `5ee5d94635579c7aaa897019f4ac8acb51b70f3901ebf0a2d328eeb2ffee6bd8` |
-| [raw/shl_seaports.html](raw/shl_seaports.html) | original | 584440 | `767f4252c0325cda69d34c0447f1753b8ff031f00cd5902618c679496f954a0f` |
-| [raw/spb_seaports.html](raw/spb_seaports.html) | original | 1209275 | `ef568e4fbb6432c185f25f5e53eba02f1c63c16dce944ecc32d56d23583cfd97` |
-| [raw/vaf_seaports.html](raw/vaf_seaports.html) | original | 942364 | `92847d485c385bbd02b5dfd4c85d50b2a1c640bdf2016475604ef9a0791711c2` |
-| [raw/vlf_seaports.html](raw/vlf_seaports.html) | original | 824274 | `95dea5aab68d278f6ee5c2bf91171e5da9d0795e4e8b19b1dc19bde22ca44aa5` |
+| `derived/characteristics.csv` | derived | 99198 | `389fecfd67eb2da68db727d0ca2f992f32a018dd9899c0e7f8e0616c5a5a07da` |
+| `derived/ports.csv` | derived | 62549 | `fa6db4a59c8750acf0b18a47fd7cfaffb354a57df67ad56b07d76466514b969d` |
+| `raw/filials_mur_seaports.html` | original | 637557 | `ac626003cb95d42eaa793fe9e3c704a626571e543806f06bd65cdace900ece64` |
+| `raw/filials_nvr_seaports.html` | original | 1359306 | `1a90bccff32146b889be16843193f14e5b23647df0356befe1c930d695a4b58a` |
+| `raw/filials_vaf_seaports.html` | original | 942364 | `5b9dbf3a88747806083a067c8a8507862d6d9a159fc479bd3c206d5628bdde6e` |
+| `raw/mur_seaports.html` | original | 637557 | `1d441f26fe667fd51675663fee6b5d99bc53c3b04a7d41b00e5107b2d392f1af` |
+| `raw/nvr_seaports.html` | original | 1359306 | `79c7d685f9b26995c42f4cd9080f140ff236e398debf44eed09f468d36d9e629` |
+| `raw/ppv_seaports.html` | original | 263125 | `5ee5d94635579c7aaa897019f4ac8acb51b70f3901ebf0a2d328eeb2ffee6bd8` |
+| `raw/shl_seaports.html` | original | 584440 | `767f4252c0325cda69d34c0447f1753b8ff031f00cd5902618c679496f954a0f` |
+| `raw/spb_seaports.html` | original | 1209275 | `ef568e4fbb6432c185f25f5e53eba02f1c63c16dce944ecc32d56d23583cfd97` |
+| `raw/vaf_seaports.html` | original | 942364 | `92847d485c385bbd02b5dfd4c85d50b2a1c640bdf2016475604ef9a0791711c2` |
+| `raw/vlf_seaports.html` | original | 824274 | `95dea5aab68d278f6ee5c2bf91171e5da9d0795e4e8b19b1dc19bde22ca44aa5` |
 
 Точные URL каждого исходника записаны в [metadata.json](metadata.json). Файлы `raw/` сохранены без изменения содержимого. Производные CSV явно отделены в `derived/`; это извлечение из источников, не новая официальная публикация.
 
@@ -39,3 +39,5 @@
 Это фактическое извлечение из опубликованных таблиц, а не официальный XLSX. Не полный реестр всех портов РФ. У 42 портов есть местоположение и текст характеристик, у 38 есть двухколоночные таблицы. Числа/единицы оставлены как в источнике; координаты пока не приведены к десятичным градусам.
 
 Отдельная лицензия на скачанные файлы не установлена. При использовании сохранять название организации, исходную ссылку, дату и версию. Наличие открытого доступа само по себе не подтверждает свободную лицензию на перепубликацию.
+
+Исходные и промежуточные файлы `raw/` и `derived/` не включены в Git. Имена в таблице обозначают локальные файлы исторического исследования; адреса загрузки и контрольные суммы приведены в `metadata.json`.

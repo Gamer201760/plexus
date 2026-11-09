@@ -10,9 +10,9 @@
 
 | Файл | Назначение | Размер, байт |
 |---|---|---|
-| [derived/coverage_by_region.csv](derived/coverage_by_region.csv) | derived_data | 3878 |
-| [raw/data_allsettlements_anon_156_v20260925_csv.zip](raw/data_allsettlements_anon_156_v20260925_csv.zip) | raw_data | 17270412 |
-| [raw/description_allsettlements_156_v20260925.pdf](raw/description_allsettlements_156_v20260925.pdf) | source_documentation | 271754 |
+| `derived/coverage_by_region.csv` | derived_data | 3878 |
+| `raw/data_allsettlements_anon_156_v20260925_csv.zip` | raw_data | 17270412 |
+| `raw/description_allsettlements_156_v20260925.pdf` | source_documentation | 271754 |
 
 ## Покрытие и ограничения
 
@@ -29,3 +29,5 @@
 ## Как читать
 
 Архивы сохранены в исходном виде. CSV Точно используют UTF-8 и разделитель `;`; таблицы можно читать потоково через `zipfile` и `csv`, без распаковки больших файлов на диск. Таблицы в `derived/` получены явно описанным преобразованием исходников, не являются синтетическими данными. Для ЕМИСС используется запятая как разделитель столбцов длинной CSV.
+
+Исходные и промежуточные файлы `raw/` и `derived/` не включены в Git. Имена в таблице обозначают локальные файлы исторического исследования; адреса загрузки и контрольные суммы приведены в `metadata.json`.
