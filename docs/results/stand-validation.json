@@ -1,0 +1,70 @@
+{
+  "measured_at": "2026-11-09T06:14:32.926704+00:00",
+  "clean_checkout_sha": "9a1ad84e6ac048275f878caed7a4a7f539f20781",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "cpu": "Apple M4 Pro",
+  "no_environment_file": true,
+  "national_artifact_version": "7868caeee9741f577f6281bd55bb4748370dc45203d08dc8da06266882f34f3f",
+  "pilot_artifact_version": "7a33b4bf26cb382c6d765d6e30549e639e94e01c9f4aa9c17111b608f3221d54",
+  "checks": [
+    {
+      "command": "cd frontend && npm run verify",
+      "passed": true,
+      "unit_tests": 375,
+      "test_files": 45,
+      "guards": 36
+    },
+    {
+      "command": "cd backend && uv run ruff check . && uv run mypy . && uv run pytest tests/unit tests/integration",
+      "passed": true,
+      "tests": 143
+    },
+    {
+      "command": "uv run python -m unittest discover -s tests",
+      "passed": true,
+      "tests": 21
+    },
+    {
+      "command": "PORT=8082 docker compose -p plexus-clean up --build -d",
+      "passed": true,
+      "scope": "fresh local clone, no .env, prepared exports"
+    },
+    {
+      "command": "E2E_BASE_URL=http://127.0.0.1:8082 npx playwright test e2e/pilot-experiment.spec.ts e2e/national-index.spec.ts e2e/stand-resilience.spec.ts",
+      "passed": true,
+      "tests": 4,
+      "viewport": [
+        1440,
+        900
+      ],
+      "scope": [
+        "real API pilot evaluation, stale result, JSON/CSV, reset, axe",
+        "national mode, coverage and preserved navigation",
+        "503 injection in test and recovery through real API",
+        "longest source region name; external browser requests blocked; local fonts loaded"
+      ]
+    },
+    {
+      "command": "cd presentation && npm run final && npm run shots",
+      "passed": true,
+      "slides": 7,
+      "passport_pages": 2,
+      "speech_pages": 2,
+      "speech_words": 561,
+      "estimated_spoken_seconds": 269.28,
+      "visually_inspected_slides": 7
+    },
+    {
+      "command": "node skills/docs-writing/check-links.mjs README.md docs datasets",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "mobile checks excluded by user instruction",
+    "local clone on the same machine, not a second independent machine",
+    "browser external requests blocked; host network was not disconnected",
+    "speech timing is an estimate, no live rehearsal",
+    "field transport operability and current schedules not validated",
+    "submission form and receipt absent"
+  ]
+}
