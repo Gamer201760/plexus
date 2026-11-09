@@ -47,6 +47,9 @@ if (mode === "shots") {
   function markdown(text) {
     return text.split(/\n\s*\n/).map((block) => {
       if (block.trim() === "[→]") return ""
+      if (block.startsWith("- ")) {
+        return `<ul>${block.split("\n").map((line) => `<li>${inline(line.replace(/^- /, ""))}</li>`).join("")}</ul>`
+      }
       if (block.startsWith("|")) {
         const lines = block.trim().split("\n").filter((line) => !/^\|[ :|-]+\|$/.test(line))
         return `<table>${lines.map((line, index) => `<tr>${line.split("|").slice(1, -1).map((cell) => `<${index === 0 ? "th" : "td"}>${inline(cell.trim())}</${index === 0 ? "th" : "td"}>`).join("")}</tr>`).join("")}</table>`

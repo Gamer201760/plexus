@@ -66,5 +66,13 @@
     "speech timing is an estimate, no live rehearsal",
     "field transport operability and current schedules not validated",
     "submission form and receipt absent"
-  ]
+  ],
+  "scrubbed_checkout": {
+    "sha": "53d23629c3d03fbc4eb3808ede1f395949184492",
+    "source_history_unchanged": true,
+    "compose_services_healthy": true,
+    "e2e_passed": 4,
+    "port": 8083,
+    "limitation": "same runtime source as the clean checkout; documentation-only followups do not change this result"
+  }
 }
