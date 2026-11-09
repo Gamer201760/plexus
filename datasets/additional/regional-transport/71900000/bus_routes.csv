@@ -1,0 +1,2 @@
+registry_no,route_name,route_kind,from_id,to_id,from_name,to_name,via,km,trips_per_week,schedule_note,season,carrier,confidence,source_url,source_date
+11,Салехард — Горнокнязевск,intermunicipal,71951000001,71938000126,Салехард,Горнокнязевск,,,,Схема действующей страницы перевозчика; недельная частота не разобрана. Это не полный региональный реестр.,all,ООО МАТП г. Салехарда,high,https://www.matp-salekhard.ru/marshrutyi/marshrut-11-do-30.06.2025-g/,

@@ -1,0 +1,2 @@
+from_id,to_id,from_name,to_name,mode,vehicle,km,freq_per_week,freq_note,season,months,road_ref,crossing_lat,crossing_lon,confidence,source_url,source_date
+87604420101,87604450101,Ижма,Кипиево,air,Ми-8Т / Ми-8МТВ,,,"Соседние посадки официально опубликованного расписания апреля 2026; отдельные даты, постоянная недельная частота и круглогодичная работа не установлены.",all,04,,,,high,https://www.komiaviatrans.ru/airport/news_a.php,2026-04
