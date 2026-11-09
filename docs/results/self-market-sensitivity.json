@@ -1,0 +1,300 @@
+{
+  "measured_at": "2026-11-09",
+  "source_revision": "bad747d19493ce83736e44a2d7907488a072bec0",
+  "database_sha256": "eb74cb340681cc3a9aca802163b75a6e090cec222dc53d934f4cdfc2f1ea3db7",
+  "sample": "82 regions, 155412 origin settlements, 180 candidate market cities, road_summer",
+  "command": "uv run python work/experiments/national_input_self_audit.py",
+  "limitation": "Fixed original normalization; excludes only matching origin/market code; does not independently validate data or measure actual trips.",
+  "origins": {
+    "n": 155412,
+    "missing": 0,
+    "population_mismatch": 0,
+    "region_mismatch": 0
+  },
+  "market_anchor_summary": [
+    {
+      "anchor_kind": "nearest_road",
+      "n": 3,
+      "population": 19159843.0,
+      "missing": 3,
+      "population_mismatch": 0
+    },
+    {
+      "anchor_kind": "settlement_road",
+      "n": 177,
+      "population": 58236705.0,
+      "missing": 0,
+      "population_mismatch": 0
+    }
+  ],
+  "method": "Remove only contribution of each target city to its own settlement; fixed road normalization; road_summer; no graph recomputation",
+  "region_count": 82,
+  "top_self_share": [
+    {
+      "region": "Магаданская область",
+      "total": 9637365953.062838,
+      "self_sum": 8236833049.0,
+      "hansen_idx": 2.336059065131492,
+      "self_pct": 85.46767954144424,
+      "without_self_fixed_base": 0.33948358944605017,
+      "rank": 80,
+      "rank_without_self": 80,
+      "rank_shift": 0
+    },
+    {
+      "region": "Республика Саха (Якутия)",
+      "total": 154624355305.83813,
+      "self_sum": 126339726249.0,
+      "hansen_idx": 5.122609229839786,
+      "self_pct": 81.70752013750179,
+      "without_self_fixed_base": 0.9370522618029177,
+      "rank": 75,
+      "rank_without_self": 79,
+      "rank_shift": -4
+    },
+    {
+      "region": "Чукотский автономный округ",
+      "total": 216865161.1585738,
+      "self_sum": 174292804.0,
+      "hansen_idx": 0.15063411706954138,
+      "self_pct": 80.36920410307651,
+      "without_self_fixed_base": 0.02957067607305444,
+      "rank": 82,
+      "rank_without_self": 82,
+      "rank_shift": 0
+    },
+    {
+      "region": "Ненецкий автономный округ",
+      "total": 730263830.0527514,
+      "self_sum": 547513201.0,
+      "hansen_idx": 0.5813780827449682,
+      "self_pct": 74.97471166830894,
+      "without_self_fixed_base": 0.14549154150418567,
+      "rank": 81,
+      "rank_without_self": 81,
+      "rank_shift": 0
+    },
+    {
+      "region": "Хабаровский край",
+      "total": 614474272806.7717,
+      "self_sum": 438118023506.0,
+      "hansen_idx": 15.676882947311066,
+      "self_pct": 71.29965287314333,
+      "without_self_fixed_base": 4.499319824549275,
+      "rank": 63,
+      "rank_without_self": 70,
+      "rank_shift": -7
+    },
+    {
+      "region": "Камчатский край",
+      "total": 38439224121.33944,
+      "self_sum": 27192010000.0,
+      "hansen_idx": 4.346768050698571,
+      "self_pct": 70.74026758231165,
+      "without_self_fixed_base": 1.27185270045197,
+      "rank": 76,
+      "rank_without_self": 78,
+      "rank_shift": -2
+    },
+    {
+      "region": "Омская область",
+      "total": 1932706142772.0852,
+      "self_sum": 1267189233025.0,
+      "hansen_idx": 34.298044300104266,
+      "self_pct": 65.56554071937016,
+      "without_self_fixed_base": 11.810346098571786,
+      "rank": 54,
+      "rank_without_self": 62,
+      "rank_shift": -8
+    },
+    {
+      "region": "Сахалинская область",
+      "total": 54345578466.38977,
+      "self_sum": 32973838569.0,
+      "hansen_idx": 3.8419068520565953,
+      "self_pct": 60.67437222955092,
+      "without_self_fixed_base": 1.5108539879271545,
+      "rank": 78,
+      "rank_without_self": 77,
+      "rank_shift": 1
+    },
+    {
+      "region": "Забайкальский край",
+      "total": 188113215489.04166,
+      "self_sum": 111841418329.0,
+      "hansen_idx": 6.179698025628375,
+      "self_pct": 59.454312148268606,
+      "without_self_fixed_base": 2.5056010716508887,
+      "rank": 72,
+      "rank_without_self": 74,
+      "rank_shift": -2
+    },
+    {
+      "region": "Красноярский край",
+      "total": 2476806331203.864,
+      "self_sum": 1451358383291.0,
+      "hansen_idx": 28.597096677610967,
+      "self_pct": 58.5979761520377,
+      "without_self_fixed_base": 11.839776786289328,
+      "rank": 59,
+      "rank_without_self": 61,
+      "rank_shift": -2
+    },
+    {
+      "region": "Калининградская область",
+      "total": 434059789669.179,
+      "self_sum": 240540221601.0,
+      "hansen_idx": 13.901523352501531,
+      "self_pct": 55.41637979973427,
+      "without_self_fixed_base": 6.19780237353053,
+      "rank": 64,
+      "rank_without_self": 68,
+      "rank_shift": -4
+    },
+    {
+      "region": "Мурманская область",
+      "total": 134237245221.26062,
+      "self_sum": 73107507456.0,
+      "hansen_idx": 6.631301334441883,
+      "self_pct": 54.461418167140074,
+      "without_self_fixed_base": 3.019800584768349,
+      "rank": 71,
+      "rank_without_self": 72,
+      "rank_shift": -1
+    }
+  ],
+  "largest_rank_shifts": [
+    {
+      "region": "Новосибирская область",
+      "total": 5540994306850.765,
+      "self_sum": 2679210746525.0,
+      "hansen_idx": 65.3436872030693,
+      "self_pct": 48.352526607227915,
+      "without_self_fixed_base": 33.748363462061434,
+      "rank": 34,
+      "rank_without_self": 50,
+      "rank_shift": -16
+    },
+    {
+      "region": "Омская область",
+      "total": 1932706142772.0852,
+      "self_sum": 1267189233025.0,
+      "hansen_idx": 34.298044300104266,
+      "self_pct": 65.56554071937016,
+      "without_self_fixed_base": 11.810346098571786,
+      "rank": 54,
+      "rank_without_self": 62,
+      "rank_shift": -8
+    },
+    {
+      "region": "Тюменская область",
+      "total": 1993148203140.9917,
+      "self_sum": 728306434048.0,
+      "hansen_idx": 41.042052652959704,
+      "self_pct": 36.54050576370918,
+      "without_self_fixed_base": 26.04507903776041,
+      "rank": 49,
+      "rank_without_self": 56,
+      "rank_shift": -7
+    },
+    {
+      "region": "Хабаровский край",
+      "total": 614474272806.7717,
+      "self_sum": 438118023506.0,
+      "hansen_idx": 15.676882947311066,
+      "self_pct": 71.29965287314333,
+      "without_self_fixed_base": 4.499319824549275,
+      "rank": 63,
+      "rank_without_self": 70,
+      "rank_shift": -7
+    },
+    {
+      "region": "Свердловская область",
+      "total": 9873805091244.615,
+      "self_sum": 2540052993896.0,
+      "hansen_idx": 76.29469218098637,
+      "self_pct": 25.725168467709956,
+      "without_self_fixed_base": 56.66775408550689,
+      "rank": 27,
+      "rank_without_self": 33,
+      "rank_shift": -6
+    },
+    {
+      "region": "Псковская область",
+      "total": 1202679229048.7832,
+      "self_sum": 37280658724.0,
+      "hansen_idx": 66.22131737752021,
+      "self_pct": 3.0998006636803583,
+      "without_self_fixed_base": 64.16858854195395,
+      "rank": 33,
+      "rank_without_self": 27,
+      "rank_shift": 6
+    },
+    {
+      "region": "Республика Алтай",
+      "total": 85981081453.96701,
+      "self_sum": 4269576964.0,
+      "hansen_idx": 13.44660449028459,
+      "self_pct": 4.965716750475938,
+      "without_self_fixed_base": 12.778884198740279,
+      "rank": 65,
+      "rank_without_self": 59,
+      "rank_shift": 6
+    },
+    {
+      "region": "Республика Адыгея",
+      "total": 954133106038.6862,
+      "self_sum": 20559258225.0,
+      "hansen_idx": 63.33532151539937,
+      "self_pct": 2.1547578733911372,
+      "without_self_fixed_base": 61.970598688408714,
+      "rank": 35,
+      "rank_without_self": 29,
+      "rank_shift": 6
+    },
+    {
+      "region": "Белгородская область",
+      "total": 2928781803075.6104,
+      "self_sum": 164725289460.0,
+      "hansen_idx": 62.714070266710145,
+      "self_pct": 5.624361954414512,
+      "without_self_fixed_base": 59.18680395856452,
+      "rank": 36,
+      "rank_without_self": 30,
+      "rank_shift": 6
+    },
+    {
+      "region": "Самарская область",
+      "total": 8564672568465.002,
+      "self_sum": 1872921733707.0,
+      "hansen_idx": 89.04031428112052,
+      "self_pct": 21.867989917128533,
+      "without_self_fixed_base": 69.56898733194554,
+      "rank": 21,
+      "rank_without_self": 26,
+      "rank_shift": -5
+    },
+    {
+      "region": "Челябинская область",
+      "total": 7274366115306.58,
+      "self_sum": 1653477119198.0,
+      "hansen_idx": 69.93294388950261,
+      "self_pct": 22.730188348903493,
+      "without_self_fixed_base": 54.03705402548567,
+      "rank": 30,
+      "rank_without_self": 35,
+      "rank_shift": -5
+    },
+    {
+      "region": "Республика Татарстан",
+      "total": 11451271238083.818,
+      "self_sum": 2098419129541.0,
+      "hansen_idx": 94.32083131683119,
+      "self_pct": 18.324770114275417,
+      "without_self_fixed_base": 77.03675580814838,
+      "rank": 19,
+      "rank_without_self": 24,
+      "rank_shift": -5
+    }
+  ]
+}
