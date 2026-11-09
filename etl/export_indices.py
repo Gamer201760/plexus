@@ -39,6 +39,8 @@ def export(database: Path, target: Path) -> dict:
         row["model_version"] = meta["model_version"]
     manifest = {"model_version": meta["model_version"], "normalization_base": meta["normalization_base"],
                 "half_life_h": 2, "sensitivity_half_lives_h": [1, 2, 4], "code": revision(),
+                "implementation": [file_record(ROOT / "etl" / name) for name in (
+                    "access_russia.py", "access_network.py", "graphlib.py", "indices.py", "export_indices.py")],
                 "measured_at": datetime.now(timezone.utc).isoformat(), "regional_rows": len(records),
                 "regions": len(known), "scenarios": sorted(SCENARIOS), "totals": totals,
                 "targets": targets, "inputs": [file_record(database), file_record(ROOT / "data/graph_ru/manifest.json")],

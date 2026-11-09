@@ -87,8 +87,8 @@ def main():
     con.execute(f"""
       create or replace temp table mk as
       select t.season, t.point_id, count(*) as reachable_markets,
-             {", ".join(f"sum(c.population * exp(-{b[f'b{h}']} * t.best_h)) as hansen_{h}h" for h in HALF_LIFE_H)},
-             sum(c.population / (t.best_h + {HARRIS_T0_H})) as harris,
+             {", ".join(f"sum(c.population * exp(-{b[f'b{h}']} * cast(t.best_h as double))) as hansen_{h}h" for h in HALF_LIFE_H)},
+             sum(c.population / (cast(t.best_h as double) + {HARRIS_T0_H})) as harris,
              {", ".join(f"sum(c.population) filter (t.best_h <= {h}) as cum_pop_{h}h" for h in (1, 2, 4))},
              min(t.road_h) filter (c.population >= 50000) as t_city50k_road_h,
              min(t.best_h) filter (c.population >= 50000) as t_city50k_best_h,
