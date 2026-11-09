@@ -1,12 +1,12 @@
 {
-  "measured_at": "2026-11-09T05:11:00.783379+00:00",
+  "measured_at": "2026-11-09T06:23:46.520635+00:00",
   "status": "calculation_verified_not_http_or_browser",
   "code": {
-    "sha": "cf780896ec50ae8a4ffa250c883b7506468bad43",
+    "sha": "4b37636534a46b51742082f7ab6750b340fbced1",
     "dirty": true
   },
   "artifact": {
-    "path": "data/pilot_candidate/pilots/tuva.json",
+    "path": "frontend/atlas/public/pilots/tuva.json",
     "bytes": 14230,
     "sha256": "dd91882a920373715289ff2981f7a08ba13510f70d8f02d14de50b2dd0b5d3a5"
   },
@@ -17,7 +17,7 @@
   "input_unchanged": true,
   "benchmark": {
     "samples": 200,
-    "p95_s": 6.709346926072612e-05,
+    "p95_s": 7.280449790414423e-05,
     "scope": "cached in-process use case, excludes HTTP and initial load",
     "platform": "macOS-26.6.2-arm64-arm-64bit",
     "machine": "arm64"
@@ -50,8 +50,8 @@
     },
     {
       "path": "etl/validate_pilot.py",
-      "bytes": 5214,
-      "sha256": "8962a19f0cdfc37e1f702b1861129ffea870d0666a24b840648e71ce1bba5178"
+      "bytes": 5329,
+      "sha256": "725f93ad0dd7c1cc2b1f46cca350e7948ebb9d76acdae93d1e0032455826a9c9"
     }
   ],
   "results": [

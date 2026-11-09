@@ -46,7 +46,7 @@ def independent_times(pilot, season, changes):
     return {pair.id: result[points[pair.from_id], points[pair.to_id]] for pair in pilot.pairs}
 
 
-def main(directory: Path) -> None:
+def main(directory: Path, output: Path) -> None:
     repository = JsonPilotRepository(directory)
     query = PilotQueries(repository)
     pilot = repository.get("tuva")
@@ -96,11 +96,13 @@ def main(directory: Path) -> None:
                   ROOT / "backend/src/app/repository/files/pilots.py",
                   ROOT / "etl/validate_pilot.py")],
               "results": results}
-    write_json(ROOT / "data" / "pilot-validation.json", report)
+    write_json(output, report)
     print(json.dumps({key: value for key, value in report.items() if key != "results"}, indent=2))
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-dir", type=Path, default=ROOT / "frontend" / "atlas" / "public")
-    main(parser.parse_args().data_dir)
+    parser.add_argument("--output", type=Path, default=ROOT / "docs/results/pilot-validation.json")
+    args = parser.parse_args()
+    main(args.data_dir, args.output)

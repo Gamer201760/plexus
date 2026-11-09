@@ -65,13 +65,15 @@ uv run python etl/index_sensitivity.py
 ```bash
 OSM_GLOB=siberian.parquet GRAPH_OUTPUT=data/pilot_graph_build POINT_REGION='Республика Тыва' uv run python etl/graph_russia.py
 PYTHONPATH=backend/src uv run python etl/pilot_export.py
-PYTHONPATH=backend/src uv run python etl/validate_pilot.py --data-dir data/pilot_candidate
+PYTHONPATH=backend/src uv run python etl/validate_pilot.py --data-dir data/pilot_candidate --output data/pilot-candidate-validation.json
 uv run python etl/audit_pilot_routes.py
 ```
 
 Кандидат пилота находится в `data/pilot_candidate/pilots/tuva.json`. После проверки его
 публикуют в `frontend/atlas/public/pilots/`. Для готового поставляемого артефакта команда
-`PYTHONPATH=backend/src uv run python etl/validate_pilot.py` работает без восстановления PBF.
+`PYTHONPATH=backend/src uv run python etl/validate_pilot.py` работает без восстановления PBF
+и обновляет `docs/results/pilot-validation.json`. Для кандидата путь отчёта задаётся отдельно,
+чтобы его проверка не подменяла протокол поставляемого артефакта.
 Дорожные пути имеют списки исходных way; редактируемая сезонная связь Сыстыг-Хема не
 спрятана в матрице. Внешняя проходимость и действующее расписание остаются ограничениями.
 
