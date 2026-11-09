@@ -4,6 +4,7 @@ import {
   Circle,
   CircleAlert,
   CircleCheck,
+  CircleQuestionMark,
   House,
   Inbox,
   Info,
@@ -60,6 +61,7 @@ export const ICONS = {
   building: createDesignIcon("index"),
   route: createDesignIcon("route"),
   compare: ChartColumnBig,
+  help: CircleQuestionMark,
   filter: createDesignIcon("filter"),
   link: createDesignIcon("network"),
 } as const satisfies Record<string, ComponentType<LucideProps>>

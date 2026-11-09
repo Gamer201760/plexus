@@ -2,7 +2,15 @@ import { Link } from "react-router"
 import type { RegionSummary } from "@/entities/region"
 import { useSeason } from "@/shared/hooks/use-season"
 import { useFormatters, useTranslation } from "@/shared/i18n"
-import { BarChart, type BarChartItem, Card, NoValue, type SeriesSlot } from "@/shared/ui"
+import {
+  BarChart,
+  type BarChartItem,
+  Button,
+  Card,
+  NoValue,
+  type SeriesSlot,
+  Tooltip,
+} from "@/shared/ui"
 import { COMPARE_METRICS, type CompareMetric } from "./compare-metrics"
 import styles from "./metric-board.module.css"
 
@@ -41,7 +49,24 @@ export function MetricBoard({ rows }: MetricBoardProps) {
   return (
     <div className={styles.board}>
       {COMPARE_METRICS.map((metric, index) => (
-        <Card key={metric.key} as="section" title={t(metric.label)} motionIndex={index}>
+        <Card
+          key={metric.key}
+          as="section"
+          title={t(metric.label)}
+          motionIndex={index}
+          actions={
+            <Tooltip content={t(metric.hint)} side="bottom">
+              <Button
+                variant="ghost"
+                size="compact"
+                icon="help"
+                aria-label={t("compare:hintLabel")}
+              >
+                {null}
+              </Button>
+            </Tooltip>
+          }
+        >
           <BarChart items={items(metric)} label={t(metric.label)} swatches />
         </Card>
       ))}
