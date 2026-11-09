@@ -9,9 +9,10 @@ test("national mode preserves coverage and navigation through real API", async (
   const mode = page.getByRole("combobox", { name: dataCopy.network.label })
   await mode.focus()
   await mode.press("Enter")
-  const response = page.waitForResponse((item) =>
-    item.url().includes("/api/v1/regions/93000000?") &&
-    item.url().includes("network_mode=multimodal"),
+  const response = page.waitForResponse(
+    (item) =>
+      item.url().includes("/api/v1/regions/93000000?") &&
+      item.url().includes("network_mode=multimodal"),
   )
   await page.getByRole("option", { name: dataCopy.network.multimodal, exact: true }).click()
   const payload = await (await response).json()
@@ -19,6 +20,7 @@ test("national mode preserves coverage and navigation through real API", async (
   expect(payload.index_population_coverage).toBeLessThanOrEqual(1)
   expect(payload.index_model_version).toBe("hansen-frequency-v2")
   await expect(page).toHaveURL(/network_mode=multimodal/)
+  await expect(page.getByRole("option")).toHaveCount(0)
   await page.screenshot({ path: "test-results/national-index-desktop.png" })
   await page.getByRole("link", { name: mapCopy.selected.open, exact: true }).click()
   await expect(page).toHaveURL(/regions\/93000000\?.*network_mode=multimodal/)
