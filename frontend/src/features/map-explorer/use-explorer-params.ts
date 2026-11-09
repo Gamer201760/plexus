@@ -21,7 +21,8 @@ export function useExplorerParams() {
   const rawMetric = params.get("metric")
   const rawSeason = params.get("season")
   const metric: MetricKey = isMetricKey(rawMetric) ? rawMetric : DEFAULT_METRIC
-  const season: Season = isSeason(rawSeason) ? rawSeason : DEFAULT_SEASON
+  const requestedSeason: Season = isSeason(rawSeason) ? rawSeason : DEFAULT_SEASON
+  const season = metric === "hansen" && requestedSeason === "all" ? "summer" : requestedSeason
   const selectedId = params.get("region")
 
   const update = useCallback(
@@ -30,8 +31,12 @@ export function useExplorerParams() {
   )
 
   const setMetric = useCallback(
-    (next: MetricKey) => update({ metric: next === DEFAULT_METRIC ? null : next }),
-    [update],
+    (next: MetricKey) =>
+      update({
+        metric: next === DEFAULT_METRIC ? null : next,
+        ...(next === "hansen" && season === "all" ? { season: "summer" } : {}),
+      }),
+    [update, season],
   )
   const setSeason = useCallback(
     (next: Season) => update({ season: next === DEFAULT_SEASON ? null : next }),

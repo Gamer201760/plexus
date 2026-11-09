@@ -1,8 +1,9 @@
 import type { RegionSummary, Season } from "@/entities/region"
 
-export type MetricKey = "links" | "population" | "companies" | "revenuePerCapita"
+export type MetricKey = "hansen" | "links" | "population" | "companies" | "revenuePerCapita"
 
 export const METRICS: readonly MetricKey[] = [
+  "hansen",
   "links",
   "population",
   "companies",
@@ -24,10 +25,11 @@ export function isSeason(value: string | null): value is Season {
 }
 
 export function dependsOnSeason(metric: MetricKey): boolean {
-  return metric === "links"
+  return metric === "links" || metric === "hansen"
 }
 
 export function metricValue(region: RegionSummary, metric: MetricKey): number | null {
+  if (metric === "hansen") return region.hansen
   if (metric === "links") return region.links_season
   if (metric === "population") return region.population
   if (metric === "companies") return region.companies

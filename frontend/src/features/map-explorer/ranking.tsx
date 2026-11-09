@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react"
 import { Link } from "react-router"
-import type { RegionSummary } from "@/entities/region"
+import { IndexCoverage, type RegionSummary } from "@/entities/region"
 import { useFormatters, useTranslation } from "@/shared/i18n"
 import { formatMetric } from "./format-metric"
 import { type MetricKey, metricValue } from "./metric"
@@ -38,6 +38,11 @@ export function Ranking({ regions, metric, searchFor }: RankingProps) {
             >
               <span className={styles.rankName}>{region.name}</span>
               <span className={styles.rankValue}>{formatMetric(value, metric, f)}</span>
+              {metric === "hansen" && (
+                <span className={styles.coverage}>
+                  <IndexCoverage value={region.index_population_coverage} />
+                </span>
+              )}
               <span
                 className={styles.rankBar}
                 style={{ "--v": top > 0 ? value / top : 0 } as CSSProperties}

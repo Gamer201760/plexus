@@ -1,16 +1,21 @@
 import { readFile } from "node:fs/promises"
 import AxeBuilder from "@axe-core/playwright"
 import { expect, test } from "@playwright/test"
+import type { components } from "../src/shared/api/schema.gen"
 import copy from "../src/shared/i18n/locales/ru/pilot.json" with { type: "json" }
 
-test("map to pilot, evaluate frequency, export and reset", async ({ page }) => {
+test("map to pilot, evaluate frequency, export and reset", async ({ page, request }) => {
+  const pilot: components["schemas"]["PilotResponse"] = await (
+    await request.get("/api/v1/pilots/tuva")
+  ).json()
+  const origin = pilot.points.find((point) => point.id === "93643425101")?.name ?? ""
   await page.goto("/map?region=93000000&season=summer")
   await page.getByRole("link", { name: copy.open, exact: true }).click()
   await expect(page.getByRole("heading", { name: copy.title, exact: true })).toBeVisible()
   const frequency = page.getByRole("textbox", { name: copy.frequency, exact: true }).first()
   await frequency.fill("7")
   await page.getByRole("button", { name: copy.calculate, exact: true }).click()
-  const result = page.getByRole("article").filter({ hasText: "село Кунгуртуг" })
+  const result = page.getByRole("article").filter({ hasText: origin })
   await expect(result.getByText("14,24", { exact: true })).toBeVisible()
   await expect(result.getByText(/[-−]3,85$/)).toBeVisible()
   await page.screenshot({ path: "test-results/pilot-results-desktop.png", fullPage: false })

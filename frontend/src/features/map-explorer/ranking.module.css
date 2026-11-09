@@ -58,3 +58,9 @@
     background-color: var(--action-ghost-hover);
   }
 }
+
+.coverage {
+  grid-column: 1 / -1;
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+}

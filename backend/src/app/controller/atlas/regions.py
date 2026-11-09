@@ -17,7 +17,7 @@ from app.controller.atlas.schemas import (
     RouteResponse,
     SettlementPageResponse,
 )
-from app.domain.transport import Mode, Season
+from app.domain.transport import Mode, NetworkMode, Season
 from app.usecase.links import LinkQueries
 from app.usecase.regions import RegionQueries
 from app.usecase.settlements import (
@@ -35,12 +35,18 @@ def build_regions_router(
     router = APIRouter(tags=["regions"])
 
     @router.get("/regions", responses=INVALID)
-    def list_regions(season: Season = Season.ALL) -> list[RegionSummaryResponse]:
-        return [summary_response(item) for item in regions.summaries(season)]
+    def list_regions(
+        season: Season = Season.ALL, network_mode: NetworkMode = NetworkMode.MULTIMODAL
+    ) -> list[RegionSummaryResponse]:
+        return [summary_response(item) for item in regions.summaries(season, network_mode)]
 
     @router.get("/regions/{region_id}", responses=NOT_FOUND)
-    def get_region(region_id: str, season: Season = Season.ALL) -> RegionDetailResponse:
-        return detail_response(regions.detail(region_id, season))
+    def get_region(
+        region_id: str,
+        season: Season = Season.ALL,
+        network_mode: NetworkMode = NetworkMode.MULTIMODAL,
+    ) -> RegionDetailResponse:
+        return detail_response(regions.detail(region_id, season, network_mode))
 
     @router.get("/regions/{region_id}/links", responses=NOT_FOUND)
     def list_region_links(

@@ -1,5 +1,7 @@
 import { useDeferredValue, useState } from "react"
 import {
+  IndexCoverage,
+  NetworkModeControl,
   RegionPreview,
   SeasonControl,
   SeasonPair,
@@ -14,10 +16,12 @@ import {
   DataTable,
   EmptyState,
   ErrorState,
+  NoValue,
   Select,
   Skeleton,
   TextField,
 } from "@/shared/ui"
+import { compareRegionRows } from "./compare-region-rows"
 import { CompositionCell } from "./composition-cell"
 import styles from "./region-table.module.css"
 import { GROUPS, groupCounts, type TransportGroup } from "./transport-groups"
@@ -44,20 +48,10 @@ export function RegionTable() {
     })
     .filter(
       (r) =>
-        r.total > 0 &&
+        (r.total > 0 || sort === "hansen") &&
         r.name.toLocaleLowerCase("ru").includes(deferred.toLocaleLowerCase("ru").trim()),
     )
-    .sort((a, b) =>
-      sort === "name"
-        ? a.name.localeCompare(b.name, "ru")
-        : sort === "population"
-          ? b.population - a.population
-          : sort === "loss"
-            ? (bySummer.get(b.id) ?? 0) -
-              (byWinter.get(b.id) ?? 0) -
-              ((bySummer.get(a.id) ?? 0) - (byWinter.get(a.id) ?? 0))
-            : b.total - a.total,
-    )
+    .sort((a, b) => compareRegionRows(a, b, sort, bySummer, byWinter))
   const active = regions.data?.find((r) => r.id === selected) ?? rows[0]
   const max = Math.max(1, ...rows.map((r) => r.total))
   const failed = regions.isError || summer.isError || winter.isError || compositions.isError
@@ -75,6 +69,7 @@ export function RegionTable() {
       <Card as="aside" className={styles.filters}>
         <strong>{t("data:season.legend")}</strong>
         <SeasonControl />
+        <NetworkModeControl />
         <hr />
         <strong>{t("atlas:transport")}</strong>
         {GROUPS.map((key) => (
@@ -104,7 +99,7 @@ export function RegionTable() {
             hideLabel
             value={sort}
             onChange={setSort}
-            options={["links", "loss", "population", "name"].map((value) => ({
+            options={["links", "hansen", "loss", "population", "name"].map((value) => ({
               value,
               label: t(`atlas:sort.${value}` as "atlas:sort.links"),
             }))}
@@ -124,6 +119,18 @@ export function RegionTable() {
             rowHref={(r) => seasonHref(`/regions/${r.id}`)}
             columns={[
               { key: "name", header: t("atlas:region"), cell: (r) => r.name },
+              {
+                key: "hansen",
+                header: t("data:metric.hansen"),
+                numeric: true,
+                cell: (r) => (r.hansen === null ? <NoValue /> : f.number(r.hansen, 2)),
+              },
+              {
+                key: "coverage",
+                header: t("data:network.coverageColumn"),
+                numeric: true,
+                cell: (r) => <IndexCoverage value={r.index_population_coverage} compact />,
+              },
               {
                 key: "links",
                 header: t("atlas:composition"),

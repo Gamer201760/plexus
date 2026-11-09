@@ -18,7 +18,8 @@
     "links": "По числу связей",
     "loss": "По потере зимой",
     "population": "По населению",
-    "name": "По названию"
+    "name": "По названию",
+    "hansen": "По доступности Hansen"
   },
   "modeCount": "{{mode}}: {{count, number}}",
   "count": "{{count, number}} из {{total, number}} регионов",

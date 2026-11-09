@@ -1,5 +1,7 @@
 export { useRegionCompositions } from "./composition.queries"
+export { IndexCoverage } from "./index-coverage/index-coverage"
 export { MiniMap } from "./mini-map/mini-map"
+export { NetworkModeControl } from "./network-mode-control/network-mode-control"
 export {
   type GeoRegions,
   type Overview,

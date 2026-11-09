@@ -1,5 +1,5 @@
 import { memo } from "react"
-import type { Season } from "@/entities/region"
+import { NetworkModeControl, type Season } from "@/entities/region"
 import { useTranslation } from "@/shared/i18n"
 import { Segmented, Select, Tooltip } from "@/shared/ui"
 import styles from "./map-explorer.module.css"
@@ -25,7 +25,10 @@ export const MapToolbar = memo(function MapToolbar({
       label={t("data:season.legend")}
       value={season}
       onChange={onSeason}
-      options={SEASONS.map((key) => ({ value: key, label: t(`data:seasonShort.${key}`) }))}
+      options={SEASONS.filter((key) => metric !== "hansen" || key !== "all").map((key) => ({
+        value: key,
+        label: t(`data:seasonShort.${key}`),
+      }))}
     />
   )
   return (
@@ -38,6 +41,7 @@ export const MapToolbar = memo(function MapToolbar({
         options={METRICS.map((key) => ({ value: key, label: t(`data:metric.${key}`) }))}
         className={styles.metric}
       />
+      {metric === "hansen" && <NetworkModeControl />}
       {seasonal ? (
         seasons
       ) : (

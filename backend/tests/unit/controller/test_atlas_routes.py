@@ -21,7 +21,7 @@ def test_overview_reports_dataset_totals(client: TestClient) -> None:
     assert (body["regions"], body["settlements"], body["links"]) == (82, 155412, 997)
     assert sum(body["links_by_mode"].values()) == 997
     assert body["links_by_season"] == {"summer": 360, "winter": 263, "all": 307, "unknown": 67}
-    assert body["index"]["status"] == "missing"
+    assert body["index"]["status"] == "ready"
 
 
 def test_region_list_is_sorted_and_season_aware(client: TestClient) -> None:
@@ -30,7 +30,9 @@ def test_region_list_is_sorted_and_season_aware(client: TestClient) -> None:
     assert len(regions) == 82
     assert [item["name"] for item in regions] == sorted(item["name"] for item in regions)
     altai = next(item for item in regions if item["id"] == ALTAI)
-    assert (altai["links"], altai["links_season"], altai["hansen"]) == (8, 5, None)
+    assert (altai["links"], altai["links_season"]) == (8, 5)
+    assert altai["hansen"] > 0
+    assert 0 <= altai["index_population_coverage"] <= 1
 
 
 def test_region_detail_has_geometry_and_economy(client: TestClient) -> None:

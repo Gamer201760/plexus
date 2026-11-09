@@ -497,6 +497,11 @@ export interface components {
             /** Pontoon Bridge */
             pontoon_bridge: number;
         };
+        /**
+         * NetworkMode
+         * @enum {string}
+         */
+        NetworkMode: "road" | "multimodal";
         /** OverviewResponse */
         OverviewResponse: {
             /** Regions */
@@ -633,6 +638,14 @@ export interface components {
             hansen: number | null;
             /** Has Geometry */
             has_geometry: boolean;
+            /** Index Population Coverage */
+            index_population_coverage?: number | null;
+            /** Index Settlement Coverage */
+            index_settlement_coverage?: number | null;
+            /** Index Model Version */
+            index_model_version?: string | null;
+            /** Index Artifact Version */
+            index_artifact_version?: string | null;
             /** Path */
             path: string | null;
             /** Bbox */
@@ -686,6 +699,14 @@ export interface components {
             hansen: number | null;
             /** Has Geometry */
             has_geometry: boolean;
+            /** Index Population Coverage */
+            index_population_coverage?: number | null;
+            /** Index Settlement Coverage */
+            index_settlement_coverage?: number | null;
+            /** Index Model Version */
+            index_model_version?: string | null;
+            /** Index Artifact Version */
+            index_artifact_version?: string | null;
         };
         /** RouteResponse */
         RouteResponse: {
@@ -1046,6 +1067,7 @@ export interface operations {
         parameters: {
             query?: {
                 season?: components["schemas"]["Season"];
+                network_mode?: components["schemas"]["NetworkMode"];
             };
             header?: never;
             path?: never;
@@ -1086,6 +1108,7 @@ export interface operations {
         parameters: {
             query?: {
                 season?: components["schemas"]["Season"];
+                network_mode?: components["schemas"]["NetworkMode"];
             };
             header?: never;
             path: {

@@ -1,5 +1,6 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query"
 import { api, type components, unwrap } from "@/shared/api"
+import { type NetworkMode, useNetworkMode } from "@/shared/hooks/use-network-mode"
 
 export type Season = components["schemas"]["Season"]
 export type RegionSummary = components["schemas"]["RegionSummaryResponse"]
@@ -13,8 +14,9 @@ export const regionKeys = {
   geo: ["geo", "regions"] as const,
   overview: ["overview"] as const,
   routes: ["links"] as const,
-  list: (season: Season) => ["regions", season] as const,
-  detail: (id: string, season: Season) => ["region", id, season] as const,
+  list: (season: Season, mode: NetworkMode = "road") => ["regions", season, mode] as const,
+  detail: (id: string, season: Season, mode: NetworkMode = "road") =>
+    ["region", id, season, mode] as const,
 }
 
 export function useGeoRegions() {
@@ -41,21 +43,28 @@ export function useRoutes() {
 }
 
 export function useRegions(season: Season) {
+  const { networkMode } = useNetworkMode()
   return useQuery({
-    queryKey: regionKeys.list(season),
+    queryKey: regionKeys.list(season, networkMode),
     queryFn: ({ signal }) =>
-      unwrap(api.GET("/api/v1/regions", { params: { query: { season } }, signal })),
+      unwrap(
+        api.GET("/api/v1/regions", {
+          params: { query: { season, network_mode: networkMode } },
+          signal,
+        }),
+      ),
     placeholderData: keepPreviousData,
   })
 }
 
 export function useRegion(id: string, season: Season) {
+  const { networkMode } = useNetworkMode()
   return useQuery({
-    queryKey: regionKeys.detail(id, season),
+    queryKey: regionKeys.detail(id, season, networkMode),
     queryFn: ({ signal }) =>
       unwrap(
         api.GET("/api/v1/regions/{region_id}", {
-          params: { path: { region_id: id }, query: { season } },
+          params: { path: { region_id: id }, query: { season, network_mode: networkMode } },
           signal,
         }),
       ),

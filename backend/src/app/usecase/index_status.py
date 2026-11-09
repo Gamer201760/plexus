@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from enum import StrEnum
 
-from app.domain.transport import Season
+from app.domain.transport import NetworkMode, Season
 from app.usecase.dto import IndexRecord
 
 FORMULA = "A_i = Σ M_j × exp(−β × t_ij)"
@@ -60,8 +60,9 @@ COMPONENTS = [
         key="scenario",
         title="Сценарий сезона",
         description=(
-            "Три сценария: только дороги, лето и зима. Летний и зимний добавляют к дорогам "
-            "сезонные связи. Режим «Все сезоны» показывает сценарий только по дорогам"
+            "Сезон отделён от режима: лето и зима для автомобильной и смешанной сети. "
+            "Отдельная дорожная база задаёт общую нормировку со средним значением 100. "
+            "Неизвестная частота магистрального сообщения моделируется как один рейс в неделю"
         ),
         source="Расчёт проекта",
     ),
@@ -80,6 +81,14 @@ def index_status(rows: list[IndexRecord]) -> IndexStatus:
     )
 
 
-def hansen_by_region(rows: list[IndexRecord], season: Season) -> dict[str, float | None]:
-    scenario = SCENARIO_BY_SEASON[season]
+def hansen_by_region(
+    rows: list[IndexRecord], season: Season, network_mode: NetworkMode = NetworkMode.MULTIMODAL
+) -> dict[str, float | None]:
+    scenario = index_scenario(season, network_mode)
     return {row.region_id: row.hansen for row in rows if row.scenario == scenario}
+
+
+def index_scenario(season: Season, network_mode: NetworkMode) -> str:
+    if season == Season.ALL:
+        return "road"
+    return f"road_{season.value}" if network_mode == NetworkMode.ROAD else season.value

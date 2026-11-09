@@ -77,6 +77,10 @@ class RegionSummaryResponse(BaseModel):
     revenue_rub: float | None
     hansen: float | None
     has_geometry: bool
+    index_population_coverage: float | None = None
+    index_settlement_coverage: float | None = None
+    index_model_version: str | None = None
+    index_artifact_version: str | None = None
 
 
 class ModeCountsResponse(BaseModel):

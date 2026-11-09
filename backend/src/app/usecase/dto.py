@@ -114,3 +114,9 @@ class IndexRecord:
     region_id: str
     scenario: str
     hansen: float | None
+    covered_population: int | None = None
+    total_population: int | None = None
+    covered_settlements: int | None = None
+    total_settlements: int | None = None
+    model_version: str | None = None
+    artifact_version: str | None = None

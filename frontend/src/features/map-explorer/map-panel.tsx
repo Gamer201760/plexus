@@ -2,7 +2,14 @@ import { memo, useEffect, useId } from "react"
 import { Link, useLocation } from "react-router"
 import { RegionLinks } from "@/entities/link"
 import type { IndexStatus } from "@/entities/reference"
-import { type Overview, type RegionSummary, type Season, useRegion } from "@/entities/region"
+import {
+  IndexCoverage,
+  type Overview,
+  type RegionSummary,
+  type Season,
+  useRegion,
+} from "@/entities/region"
+import { useNetworkMode } from "@/shared/hooks/use-network-mode"
 import { useFormatters, useTranslation } from "@/shared/i18n"
 import { Banner, ButtonLink, Card, CloseButton, ScrollArea, Skeleton, Stat } from "@/shared/ui"
 import { TransportIcon } from "@/shared/ui/brand"
@@ -63,6 +70,7 @@ function SelectedRegion({ id, season, onClose }: SelectedProps) {
   const { t } = useTranslation()
   const f = useFormatters()
   const cardId = useId()
+  const { networkMode } = useNetworkMode()
   const { data } = useRegion(id, season)
   useReveal(cardId, data !== undefined, id)
   if (!data || data.id !== id) return <Skeleton lines={6} />
@@ -85,6 +93,15 @@ function SelectedRegion({ id, season, onClose }: SelectedProps) {
           value={data.companies === null ? t("map:legend.none") : f.compact(data.companies)}
         />
       </div>
+      {data.hansen !== null && (
+        <div className={styles.stats}>
+          <Stat label={t("data:metric.hansen")} value={f.number(data.hansen, 2)} />
+          <IndexCoverage value={data.index_population_coverage} />
+        </div>
+      )}
+      {data.index_model_version && (
+        <p>{t("data:network.model", { version: data.index_model_version })}</p>
+      )}
       {data.links_by_mode.length > 0 ? (
         <ul className={styles.modes}>
           {data.links_by_mode.map((row) => (
@@ -101,7 +118,10 @@ function SelectedRegion({ id, season, onClose }: SelectedProps) {
           {t("pilot:open")}
         </ButtonLink>
       )}
-      <ButtonLink to={`/regions/${data.id}?season=${season}`} icon="arrow-right">
+      <ButtonLink
+        to={`/regions/${data.id}?season=${season}&network_mode=${networkMode}`}
+        icon="arrow-right"
+      >
         {t("map:selected.open")}
       </ButtonLink>
     </Card>

@@ -56,3 +56,8 @@ def is_frequency_assumed(mode: Mode, freq_per_week: float | None, span_km: float
     scheduled = mode is not Mode.WINTER_ROAD and not is_crossing(mode, span_km)
     known = freq_per_week is not None and freq_per_week > 0
     return scheduled and not known
+
+
+class NetworkMode(StrEnum):
+    ROAD = "road"
+    MULTIMODAL = "multimodal"

@@ -1,9 +1,11 @@
 import { useEffect } from "react"
 import { useSearchParams } from "react-router"
+import { useNetworkMode } from "./use-network-mode"
 
 export type ActiveSeason = "summer" | "winter"
 export function useSeason() {
   const [params, setParams] = useSearchParams()
+  const { networkMode } = useNetworkMode()
   const raw = params.get("season")
   useEffect(() => {
     if (raw !== null && raw !== "summer" && raw !== "winter" && raw !== "all")
@@ -26,6 +28,7 @@ export function useSeason() {
       },
       { replace: true, preventScrollReset: true, flushSync: true },
     )
-  const seasonHref = (path: string) => `${path}${path.includes("?") ? "&" : "?"}season=${season}`
+  const seasonHref = (path: string) =>
+    `${path}${path.includes("?") ? "&" : "?"}season=${season}&network_mode=${networkMode}`
   return { season, setSeason, seasonHref }
 }

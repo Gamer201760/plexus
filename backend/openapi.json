@@ -271,6 +271,15 @@
               "$ref": "#/components/schemas/Season",
               "default": "all"
             }
+          },
+          {
+            "name": "network_mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/NetworkMode",
+              "default": "multimodal"
+            }
           }
         ],
         "responses": {
@@ -335,6 +344,15 @@
             "schema": {
               "$ref": "#/components/schemas/Season",
               "default": "all"
+            }
+          },
+          {
+            "name": "network_mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/NetworkMode",
+              "default": "multimodal"
             }
           }
         ],
@@ -1615,6 +1633,14 @@
         ],
         "title": "ModeTotalsResponse"
       },
+      "NetworkMode": {
+        "type": "string",
+        "enum": [
+          "road",
+          "multimodal"
+        ],
+        "title": "NetworkMode"
+      },
       "OverviewResponse": {
         "properties": {
           "regions": {
@@ -2037,6 +2063,50 @@
             "type": "boolean",
             "title": "Has Geometry"
           },
+          "index_population_coverage": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index Population Coverage"
+          },
+          "index_settlement_coverage": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index Settlement Coverage"
+          },
+          "index_model_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index Model Version"
+          },
+          "index_artifact_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index Artifact Version"
+          },
           "path": {
             "anyOf": [
               {
@@ -2226,6 +2296,50 @@
           "has_geometry": {
             "type": "boolean",
             "title": "Has Geometry"
+          },
+          "index_population_coverage": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index Population Coverage"
+          },
+          "index_settlement_coverage": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index Settlement Coverage"
+          },
+          "index_model_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index Model Version"
+          },
+          "index_artifact_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index Artifact Version"
           }
         },
         "type": "object",

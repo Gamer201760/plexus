@@ -150,4 +150,14 @@ def index_record(row: JsonObject) -> IndexRecord | None:
     region_id, scenario = text(row, "region_id"), text(row, "season")
     if region_id is None or scenario is None:
         return None
-    return IndexRecord(region_id=region_id, scenario=scenario, hansen=number(row, "hansen_idx"))
+    return IndexRecord(
+        region_id=region_id,
+        scenario=scenario,
+        hansen=number(row, "hansen_idx"),
+        covered_population=integer(row, "covered_population"),
+        total_population=integer(row, "population"),
+        covered_settlements=integer(row, "covered_settlements"),
+        total_settlements=integer(row, "n_np"),
+        model_version=text(row, "model_version"),
+        artifact_version=text(row, "artifact_version"),
+    )
