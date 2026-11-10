@@ -104,3 +104,9 @@
 .loader {
   animation: var(--motion-spin);
 }
+
+.button[data-wrap] {
+  white-space: normal;
+  text-align: start;
+  overflow-wrap: anywhere;
+}

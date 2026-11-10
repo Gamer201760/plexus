@@ -61,7 +61,7 @@ if (mode === "shots") {
   }
   const css = `${tokens}\n@page{size:A4;margin:16mm 18mm}body{font-family:var(--font-sans);font-size:10.3pt;line-height:1.35;color:var(--text-primary);margin:0}h1{font-size:22pt;line-height:1.1;margin:0 0 12pt}h2{font-size:12.5pt;line-height:1.15;margin:13pt 0 6pt}p{margin:0 0 7pt}table{width:100%;border-collapse:collapse;font-size:9.5pt;margin:8pt 0}th,td{padding:5pt;border-bottom:1px solid var(--border-subtle);text-align:left}a{color:var(--action-primary)}code{font-size:9pt}.paper-page{break-after:page}.paper-page:last-child{break-after:auto}`
   const passport = readFileSync(resolve(output, "passport.md"), "utf8")
-  const split = passport.indexOf("## Проверенный результат пилота")
+  const split = passport.indexOf("## Проверка сценариев")
   const passportBody = `<section class="paper-page">${markdown(passport.slice(0, split))}</section><section class="paper-page">${markdown(passport.slice(split))}</section>`
   const passportHtml = `<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Паспорт Plexus</title><style>${css}</style></head><body>${passportBody}</body></html>`
   writeFileSync(resolve(output, "passport.html"), passportHtml)

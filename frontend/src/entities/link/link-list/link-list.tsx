@@ -1,5 +1,5 @@
 import { useTranslation } from "@/shared/i18n"
-import { ButtonLink, Icon } from "@/shared/ui"
+import { ButtonLink, Icon, StatusBadge } from "@/shared/ui"
 import { TransportIcon } from "@/shared/ui/brand"
 import type { Link } from "../link.queries"
 import styles from "./link-list.module.css"
@@ -21,6 +21,7 @@ export function LinkList({ rows }: LinkListProps) {
               <span>{link.to.name}</span>
             </div>
             <div className={styles.metadata}>
+              {link.is_model ? <StatusBadge tone="info" label={t("data:modelLink.badge")} /> : null}
               <span>{t(`data:mode.${link.mode}`)}</span>
               <span>{t(`data:season.${link.season ?? "unknown"}`)}</span>
             </div>

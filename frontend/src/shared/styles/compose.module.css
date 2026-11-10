@@ -142,3 +142,10 @@
   line-height: var(--line-height-display);
   letter-spacing: var(--tracking-display);
 }
+
+.sidePanel {
+  min-inline-size: 0;
+  min-block-size: 0;
+  background-color: var(--surface-raised);
+  border-inline-start: var(--hairline) solid var(--border-subtle);
+}

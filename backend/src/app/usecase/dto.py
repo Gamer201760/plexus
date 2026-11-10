@@ -39,6 +39,7 @@ class LinkRecord:
     confidence: Confidence | None
     source_url: str | None
     source_date: str | None
+    is_model: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -133,3 +134,6 @@ class IndexRecord:
     total_settlements: int | None = None
     model_version: str | None = None
     artifact_version: str | None = None
+    hansen_1h: float | None = None
+    hansen_2h: float | None = None
+    hansen_4h: float | None = None

@@ -4,6 +4,7 @@ export {
   type BarChartProps,
   type SeriesSlot,
 } from "./data-display/bar-chart/bar-chart"
+export { ChatMessage, type ChatMessageProps } from "./data-display/chat-message/chat-message"
 export {
   DataTable,
   type DataTableColumn,
@@ -26,6 +27,7 @@ export {
   type StatTrend,
 } from "./data-display/stat/stat"
 export { Banner, type BannerProps } from "./feedback/banner/banner"
+export { Meter, type MeterProps } from "./feedback/meter/meter"
 export {
   StatusBadge,
   type StatusBadgeProps,
@@ -49,6 +51,7 @@ export {
   type ToastHostProps,
   useToast,
 } from "./feedback/toast/toast-host"
+export { ChatComposer, type ChatComposerProps } from "./forms/chat-composer/chat-composer"
 export { Checkbox, type CheckboxProps } from "./forms/checkbox/checkbox"
 export {
   Chip,

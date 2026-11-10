@@ -4,6 +4,7 @@ export { MiniMap } from "./mini-map/mini-map"
 export { NetworkModeControl } from "./network-mode-control/network-mode-control"
 export type { RegionBoundary } from "./osm-map/boundary-geojson"
 export { OsmMap, type OsmMapProps } from "./osm-map/osm-map"
+export { buildTransitCollection } from "./osm-map/transit-geojson"
 export type { MapControls, MapStep } from "./osm-map/use-osm-map"
 export {
   type GeoRegions,

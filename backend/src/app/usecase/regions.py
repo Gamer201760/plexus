@@ -5,7 +5,7 @@ from app.domain.errors import RegionNotFound
 from app.domain.projection import path_bbox
 from app.domain.transport import Mode, NetworkMode, Season, runs_in_season
 from app.usecase.dto import EconomyRecord, LinkRecord, RegionRecord
-from app.usecase.index_status import hansen_by_region, index_scenario
+from app.usecase.index_status import hansen_by_region, resolved_scenario
 from app.usecase.interface import AtlasRepository
 
 
@@ -107,7 +107,7 @@ class RegionQueries:
         coverage = {
             row.region_id: row
             for row in rows
-            if row.scenario == index_scenario(season, network_mode)
+            if row.scenario == resolved_scenario(rows, season, network_mode)
         }
         return [
             RegionSummary(

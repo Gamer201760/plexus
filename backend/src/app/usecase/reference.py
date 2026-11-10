@@ -85,7 +85,7 @@ class ReferenceQueries:
                 title="Атлас: дополнительные транспортные связи",
                 period=_years([link.source_date for link in links]),
                 url=None,
-                note="Региональные CSV и реестр автобусов: у каждой связи своя ссылка и дата источника.",
+                note="Реестры, расписания и модельные связи: источник каждой записи указан в карточке.",
                 rows=len(links),
             ),
             SourceRecord(

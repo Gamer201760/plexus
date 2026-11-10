@@ -41,7 +41,7 @@ export const MapToolbar = memo(function MapToolbar({
         options={METRICS.map((key) => ({ value: key, label: t(`data:metric.${key}`) }))}
         className={styles.metric}
       />
-      {metric === "hansen" && <NetworkModeControl />}
+      {metric === "hansen" && <NetworkModeControl hideLabel />}
       {seasonal ? (
         seasons
       ) : (

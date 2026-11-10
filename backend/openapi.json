@@ -170,7 +170,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -336,7 +336,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -416,7 +416,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -472,6 +472,16 @@
               ],
               "title": "Mode"
             }
+          },
+          {
+            "name": "include_unknown",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Include Unknown"
+            }
           }
         ],
         "responses": {
@@ -507,7 +517,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -627,7 +637,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -724,7 +734,7 @@
                 }
               }
             },
-            "description": "Unprocessable Entity"
+            "description": "Unprocessable Content"
           },
           "503": {
             "content": {
@@ -735,205 +745,6 @@
               }
             },
             "description": "Service Unavailable"
-          }
-        }
-      }
-    },
-    "/api/v1/pilots": {
-      "get": {
-        "tags": [
-          "pilots"
-        ],
-        "summary": "List Pilots",
-        "operationId": "list_pilots_api_v1_pilots_get",
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "items": {
-                    "$ref": "#/components/schemas/PilotSummaryResponse"
-                  },
-                  "type": "array",
-                  "title": "Response List Pilots Api V1 Pilots Get"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "503": {
-            "description": "Service Unavailable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v1/pilots/{pilot_id}": {
-      "get": {
-        "tags": [
-          "pilots"
-        ],
-        "summary": "Get Pilot",
-        "operationId": "get_pilot_api_v1_pilots__pilot_id__get",
-        "parameters": [
-          {
-            "name": "pilot_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Pilot Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PilotResponse"
-                }
-              }
-            }
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not Found"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Unprocessable Entity"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service Unavailable"
-          }
-        }
-      }
-    },
-    "/api/v1/pilots/{pilot_id}/evaluate": {
-      "post": {
-        "tags": [
-          "pilots"
-        ],
-        "summary": "Evaluate Pilot",
-        "operationId": "evaluate_pilot_api_v1_pilots__pilot_id__evaluate_post",
-        "parameters": [
-          {
-            "name": "pilot_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Pilot Id"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EvaluationRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EvaluationResponse"
-                }
-              }
-            }
-          },
-          "404": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Not Found"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Unprocessable Entity"
-          },
-          "503": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Service Unavailable"
-          },
-          "409": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            },
-            "description": "Conflict"
           }
         }
       }
@@ -957,7 +768,7 @@
             }
           },
           "422": {
-            "description": "Unprocessable Entity",
+            "description": "Unprocessable Content",
             "content": {
               "application/json": {
                 "schema": {
@@ -1008,7 +819,7 @@
             }
           },
           "422": {
-            "description": "Unprocessable Entity",
+            "description": "Unprocessable Content",
             "content": {
               "application/json": {
                 "schema": {
@@ -1039,10 +850,914 @@
           }
         }
       }
+    },
+    "/api/v1/regions/{region_id}/sensitivity": {
+      "get": {
+        "tags": [
+          "scenarios"
+        ],
+        "summary": "Evaluate",
+        "operationId": "evaluate_api_v1_regions__region_id__sensitivity_get",
+        "parameters": [
+          {
+            "name": "region_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Region Id"
+            }
+          },
+          {
+            "name": "season",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/Season",
+              "default": "summer"
+            }
+          },
+          {
+            "name": "network_mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/NetworkMode",
+              "default": "road"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SensitivityResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/chat": {
+      "post": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "Stream Chat",
+        "operationId": "stream_chat_api_v1_chat_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatStreamEvent"
+                }
+              },
+              "application/x-ndjson": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-graph/locations": {
+      "get": {
+        "tags": [
+          "road-graph"
+        ],
+        "summary": "Locations",
+        "operationId": "locations_api_v1_road_graph_locations_get",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Query"
+            }
+          },
+          {
+            "name": "region_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Region Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GraphLocation"
+                  },
+                  "title": "Response Locations Api V1 Road Graph Locations Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-graph": {
+      "get": {
+        "tags": [
+          "road-graph"
+        ],
+        "summary": "View",
+        "operationId": "view_api_v1_road_graph_get",
+        "parameters": [
+          {
+            "name": "west",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "title": "West"
+            }
+          },
+          {
+            "name": "south",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "title": "South"
+            }
+          },
+          {
+            "name": "east",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "title": "East"
+            }
+          },
+          {
+            "name": "north",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "title": "North"
+            }
+          },
+          {
+            "name": "zoom",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "default": 8,
+              "title": "Zoom"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoadView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-connections": {
+      "post": {
+        "tags": [
+          "road-graph"
+        ],
+        "summary": "Add Connection",
+        "operationId": "add_connection_api_v1_road_connections_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoadAdditionInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoadJob"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-scenarios": {
+      "get": {
+        "tags": [
+          "road-graph"
+        ],
+        "summary": "Recent",
+        "operationId": "recent_api_v1_road_scenarios_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/RoadJob"
+                  },
+                  "type": "array",
+                  "title": "Response Recent Api V1 Road Scenarios Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "road-graph"
+        ],
+        "summary": "Submit",
+        "operationId": "submit_api_v1_road_scenarios_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoadScenarioInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoadJob"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-scenarios/{job_id}": {
+      "get": {
+        "tags": [
+          "road-graph"
+        ],
+        "summary": "Job",
+        "operationId": "job_api_v1_road_scenarios__job_id__get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoadJob"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "road-graph"
+        ],
+        "summary": "Cancel",
+        "operationId": "cancel_api_v1_road_scenarios__job_id__delete",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoadJob"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-analyses": {
+      "get": {
+        "tags": [
+          "road-analysis"
+        ],
+        "summary": "Recent",
+        "operationId": "recent_api_v1_road_analyses_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/AnalysisResponse"
+                  },
+                  "type": "array",
+                  "title": "Response Recent Api V1 Road Analyses Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "road-analysis"
+        ],
+        "summary": "Submit",
+        "operationId": "submit_api_v1_road_analyses_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalysisInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-analyses/{analysis_id}": {
+      "get": {
+        "tags": [
+          "road-analysis"
+        ],
+        "summary": "Get",
+        "operationId": "get_api_v1_road_analyses__analysis_id__get",
+        "parameters": [
+          {
+            "name": "analysis_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Analysis Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-analyses/{analysis_id}/continue": {
+      "post": {
+        "tags": [
+          "road-analysis"
+        ],
+        "summary": "Resume",
+        "operationId": "resume_api_v1_road_analyses__analysis_id__continue_post",
+        "parameters": [
+          {
+            "name": "analysis_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Analysis Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-analyses/{analysis_id}/cancel": {
+      "post": {
+        "tags": [
+          "road-analysis"
+        ],
+        "summary": "Cancel",
+        "operationId": "cancel_api_v1_road_analyses__analysis_id__cancel_post",
+        "parameters": [
+          {
+            "name": "analysis_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Analysis Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/road-analyses/{analysis_id}/results/{way_id}": {
+      "get": {
+        "tags": [
+          "road-analysis"
+        ],
+        "summary": "Detail",
+        "operationId": "detail_api_v1_road_analyses__analysis_id__results__way_id__get",
+        "parameters": [
+          {
+            "name": "analysis_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Analysis Id"
+            }
+          },
+          {
+            "name": "way_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Way Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "AnalysisDetail": {
+        "properties": {
+          "result": {
+            "$ref": "#/components/schemas/VerifiedRoad"
+          },
+          "lines": {
+            "items": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Lines"
+          },
+          "settlements": {
+            "items": {
+              "$ref": "#/components/schemas/ImpactLocation"
+            },
+            "type": "array",
+            "title": "Settlements"
+          }
+        },
+        "type": "object",
+        "required": [
+          "result",
+          "lines",
+          "settlements"
+        ],
+        "title": "AnalysisDetail"
+      },
+      "AnalysisFailure": {
+        "properties": {
+          "way_id": {
+            "type": "integer",
+            "title": "Way Id"
+          },
+          "code": {
+            "type": "string",
+            "title": "Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "way_id",
+          "code"
+        ],
+        "title": "AnalysisFailure"
+      },
+      "AnalysisInput": {
+        "properties": {
+          "region_id": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Region Id"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "criticality",
+              "improvement"
+            ],
+            "title": "Mode"
+          },
+          "percent": {
+            "type": "integer",
+            "maximum": 200.0,
+            "minimum": 1.0,
+            "title": "Percent",
+            "default": 20
+          }
+        },
+        "type": "object",
+        "required": [
+          "region_id",
+          "mode"
+        ],
+        "title": "AnalysisInput"
+      },
+      "AnalysisResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "region_id": {
+            "type": "string",
+            "title": "Region Id"
+          },
+          "region": {
+            "type": "string",
+            "title": "Region"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "criticality",
+              "improvement"
+            ],
+            "title": "Mode"
+          },
+          "percent": {
+            "type": "integer",
+            "title": "Percent"
+          },
+          "fingerprint": {
+            "type": "string",
+            "title": "Fingerprint"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "stage": {
+            "type": "string",
+            "title": "Stage"
+          },
+          "candidates": {
+            "items": {
+              "$ref": "#/components/schemas/Candidate"
+            },
+            "type": "array",
+            "title": "Candidates"
+          },
+          "results": {
+            "items": {
+              "$ref": "#/components/schemas/VerifiedRoad"
+            },
+            "type": "array",
+            "title": "Results"
+          },
+          "failures": {
+            "items": {
+              "$ref": "#/components/schemas/AnalysisFailure"
+            },
+            "type": "array",
+            "title": "Failures"
+          },
+          "candidate_count": {
+            "type": "integer",
+            "title": "Candidate Count"
+          },
+          "batch_target": {
+            "type": "integer",
+            "title": "Batch Target"
+          },
+          "current_way_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Current Way Id"
+          },
+          "completed": {
+            "type": "integer",
+            "title": "Completed"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "elapsed_seconds": {
+            "type": "number",
+            "title": "Elapsed Seconds"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "compatible": {
+            "type": "boolean",
+            "title": "Compatible"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "region_id",
+          "region",
+          "mode",
+          "percent",
+          "fingerprint",
+          "status",
+          "stage",
+          "candidates",
+          "results",
+          "failures",
+          "candidate_count",
+          "batch_target",
+          "current_way_id",
+          "completed",
+          "total",
+          "elapsed_seconds",
+          "error",
+          "compatible"
+        ],
+        "title": "AnalysisResponse"
+      },
       "BoundaryShapeResponse": {
         "properties": {
           "id": {
@@ -1106,6 +1821,351 @@
         ],
         "title": "BoundaryShapeResponse"
       },
+      "Candidate": {
+        "properties": {
+          "way_id": {
+            "type": "integer",
+            "title": "Way Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "length_km": {
+            "type": "number",
+            "title": "Length Km"
+          },
+          "score": {
+            "type": "number",
+            "title": "Score"
+          },
+          "isolation_score": {
+            "type": "number",
+            "title": "Isolation Score"
+          },
+          "crosses_boundary": {
+            "type": "boolean",
+            "title": "Crosses Boundary"
+          }
+        },
+        "type": "object",
+        "required": [
+          "way_id",
+          "name",
+          "length_km",
+          "score",
+          "isolation_score",
+          "crosses_boundary"
+        ],
+        "title": "Candidate"
+      },
+      "ChatChart": {
+        "properties": {
+          "table_id": {
+            "type": "string",
+            "title": "Table Id"
+          },
+          "x": {
+            "type": "string",
+            "title": "X"
+          },
+          "y": {
+            "type": "string",
+            "title": "Y"
+          },
+          "type": {
+            "type": "string",
+            "const": "bar",
+            "title": "Type",
+            "default": "bar"
+          }
+        },
+        "type": "object",
+        "required": [
+          "table_id",
+          "x",
+          "y"
+        ],
+        "title": "ChatChart"
+      },
+      "ChatColumn": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "text",
+              "number",
+              "integer",
+              "percent"
+            ],
+            "title": "Format",
+            "default": "text"
+          }
+        },
+        "type": "object",
+        "required": [
+          "key"
+        ],
+        "title": "ChatColumn"
+      },
+      "ChatContextInput": {
+        "properties": {
+          "region_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 64
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Region Id"
+          },
+          "season": {
+            "$ref": "#/components/schemas/Season",
+            "default": "summer"
+          },
+          "network_mode": {
+            "$ref": "#/components/schemas/NetworkMode",
+            "default": "road"
+          },
+          "metric": {
+            "type": "string",
+            "maxLength": 64,
+            "title": "Metric",
+            "default": "hansen"
+          }
+        },
+        "type": "object",
+        "title": "ChatContextInput"
+      },
+      "ChatInput": {
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Prompt"
+          },
+          "history": {
+            "items": {
+              "$ref": "#/components/schemas/ChatMessageInput"
+            },
+            "type": "array",
+            "maxItems": 12,
+            "title": "History"
+          },
+          "context": {
+            "$ref": "#/components/schemas/ChatContextInput"
+          }
+        },
+        "type": "object",
+        "required": [
+          "prompt"
+        ],
+        "title": "ChatInput"
+      },
+      "ChatMapCommand": {
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "focus",
+              "reset",
+              "zoom_in",
+              "zoom_out"
+            ],
+            "title": "Action"
+          },
+          "region_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Region Ids"
+          }
+        },
+        "type": "object",
+        "required": [
+          "action",
+          "region_ids"
+        ],
+        "title": "ChatMapCommand"
+      },
+      "ChatMessageInput": {
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ],
+            "title": "Role"
+          },
+          "content": {
+            "type": "string",
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Content"
+          }
+        },
+        "type": "object",
+        "required": [
+          "role",
+          "content"
+        ],
+        "title": "ChatMessageInput"
+      },
+      "ChatStreamEvent": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "status",
+              "delta",
+              "done",
+              "error",
+              "table",
+              "chart",
+              "map",
+              "calculation"
+            ],
+            "title": "Type"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "default": ""
+          },
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "default": ""
+          },
+          "table": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChatTable"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "chart": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChatChart"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "map": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChatMapCommand"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "calculation": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CorridorCalculation"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "ChatStreamEvent"
+      },
+      "ChatTable": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "regions",
+              "links",
+              "settlements",
+              "sensitivity"
+            ],
+            "title": "Title"
+          },
+          "columns": {
+            "items": {
+              "$ref": "#/components/schemas/ChatColumn"
+            },
+            "type": "array",
+            "title": "Columns"
+          },
+          "rows": {
+            "items": {
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Rows"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "truncated": {
+            "type": "boolean",
+            "title": "Truncated"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "columns",
+          "rows",
+          "total",
+          "truncated",
+          "source"
+        ],
+        "title": "ChatTable"
+      },
       "CityPairChangeResponse": {
         "properties": {
           "from_city": {
@@ -1149,6 +2209,44 @@
           "low"
         ],
         "title": "Confidence"
+      },
+      "CorridorCalculation": {
+        "properties": {
+          "corridor": {
+            "$ref": "#/components/schemas/RoadCorridor"
+          },
+          "job_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Job Ids"
+          }
+        },
+        "type": "object",
+        "required": [
+          "corridor",
+          "job_ids"
+        ],
+        "title": "CorridorCalculation"
+      },
+      "CorridorRegion": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "title": "CorridorRegion"
       },
       "EconomyResponse": {
         "properties": {
@@ -1206,173 +2304,30 @@
         ],
         "title": "EconomyResponse"
       },
-      "EdgeChangeRequest": {
-        "properties": {
-          "edge_id": {
-            "type": "string",
-            "maxLength": 120,
-            "minLength": 1,
-            "title": "Edge Id"
-          },
-          "enabled": {
-            "anyOf": [
-              {
-                "type": "boolean"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Enabled"
-          },
-          "frequency_per_week": {
-            "anyOf": [
-              {
-                "type": "integer",
-                "maximum": 28.0,
-                "minimum": 1.0
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Frequency Per Week"
-          }
-        },
-        "additionalProperties": false,
-        "type": "object",
-        "required": [
-          "edge_id"
-        ],
-        "title": "EdgeChangeRequest"
-      },
-      "EdgeResponse": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "title": "Id"
-          },
-          "from_id": {
-            "type": "string",
-            "title": "From Id"
-          },
-          "to_id": {
-            "type": "string",
-            "title": "To Id"
-          },
-          "mode": {
-            "type": "string",
-            "title": "Mode"
-          },
-          "seasons": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "title": "Seasons"
-          },
-          "travel_h": {
-            "type": "number",
-            "title": "Travel H"
-          },
-          "frequency_per_week": {
-            "anyOf": [
-              {
-                "type": "number"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Frequency Per Week"
-          },
-          "assumed_frequency_per_week": {
-            "anyOf": [
-              {
-                "type": "number"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Assumed Frequency Per Week"
-          },
-          "source_url": {
-            "type": "string",
-            "title": "Source Url"
-          },
-          "source_period": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Source Period"
-          },
-          "assumptions": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "title": "Assumptions"
-          },
-          "editable": {
-            "type": "boolean",
-            "title": "Editable"
-          },
-          "bidirectional": {
-            "type": "boolean",
-            "title": "Bidirectional"
-          },
-          "headway_intervals_h": {
-            "items": {
-              "type": "number"
-            },
-            "type": "array",
-            "title": "Headway Intervals H"
-          },
-          "frequency_editable": {
-            "type": "boolean",
-            "title": "Frequency Editable"
-          },
-          "edit_disabled_reason": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Edit Disabled Reason"
-          }
-        },
-        "type": "object",
-        "required": [
-          "id",
-          "from_id",
-          "to_id",
-          "mode",
-          "seasons",
-          "travel_h",
-          "frequency_per_week",
-          "assumed_frequency_per_week",
-          "source_url",
-          "source_period",
-          "assumptions",
-          "editable",
-          "bidirectional",
-          "headway_intervals_h",
-          "frequency_editable",
-          "edit_disabled_reason"
-        ],
-        "title": "EdgeResponse"
-      },
       "EndpointResponse": {
         "properties": {
+          "lat": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lat"
+          },
+          "lon": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lon"
+          },
           "id": {
             "type": "string",
             "title": "Id"
@@ -1431,124 +2386,6 @@
         ],
         "title": "ErrorResponse"
       },
-      "EvaluationRequest": {
-        "properties": {
-          "season": {
-            "type": "string",
-            "enum": [
-              "summer",
-              "winter"
-            ],
-            "title": "Season"
-          },
-          "model_version": {
-            "type": "string",
-            "maxLength": 120,
-            "minLength": 1,
-            "title": "Model Version"
-          },
-          "artifact_version": {
-            "type": "string",
-            "maxLength": 120,
-            "minLength": 1,
-            "title": "Artifact Version"
-          },
-          "changes": {
-            "items": {
-              "$ref": "#/components/schemas/EdgeChangeRequest"
-            },
-            "type": "array",
-            "maxItems": 50,
-            "title": "Changes",
-            "default": []
-          },
-          "additions": {
-            "items": {
-              "$ref": "#/components/schemas/NewLinkRequest"
-            },
-            "type": "array",
-            "maxItems": 10,
-            "title": "Additions",
-            "default": []
-          }
-        },
-        "additionalProperties": false,
-        "type": "object",
-        "required": [
-          "season",
-          "model_version",
-          "artifact_version"
-        ],
-        "title": "EvaluationRequest"
-      },
-      "EvaluationResponse": {
-        "properties": {
-          "pilot_id": {
-            "type": "string",
-            "title": "Pilot Id"
-          },
-          "season": {
-            "type": "string",
-            "title": "Season"
-          },
-          "model_version": {
-            "type": "string",
-            "title": "Model Version"
-          },
-          "artifact_version": {
-            "type": "string",
-            "title": "Artifact Version"
-          },
-          "changes": {
-            "items": {
-              "$ref": "#/components/schemas/EdgeChangeRequest"
-            },
-            "type": "array",
-            "title": "Changes"
-          },
-          "pairs": {
-            "items": {
-              "$ref": "#/components/schemas/PairComparisonResponse"
-            },
-            "type": "array",
-            "title": "Pairs"
-          },
-          "assumptions": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "title": "Assumptions"
-          },
-          "waiting_sensitivity": {
-            "items": {
-              "$ref": "#/components/schemas/WaitingSensitivityResponse"
-            },
-            "type": "array",
-            "title": "Waiting Sensitivity"
-          },
-          "additions": {
-            "items": {
-              "$ref": "#/components/schemas/NewLinkRequest"
-            },
-            "type": "array",
-            "title": "Additions"
-          }
-        },
-        "type": "object",
-        "required": [
-          "pilot_id",
-          "season",
-          "model_version",
-          "artifact_version",
-          "changes",
-          "pairs",
-          "assumptions",
-          "waiting_sensitivity",
-          "additions"
-        ],
-        "title": "EvaluationResponse"
-      },
       "GeoBoundariesResponse": {
         "properties": {
           "regions": {
@@ -1594,6 +2431,69 @@
         ],
         "title": "GeoRegionsResponse"
       },
+      "GraphLocation": {
+        "properties": {
+          "point_id": {
+            "type": "string",
+            "title": "Point Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "region": {
+            "type": "string",
+            "title": "Region"
+          },
+          "node": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Node"
+          },
+          "longitude": {
+            "type": "number",
+            "title": "Longitude"
+          },
+          "latitude": {
+            "type": "number",
+            "title": "Latitude"
+          },
+          "snap_km": {
+            "type": "number",
+            "title": "Snap Km"
+          }
+        },
+        "type": "object",
+        "required": [
+          "point_id",
+          "name",
+          "region",
+          "node",
+          "longitude",
+          "latitude",
+          "snap_km"
+        ],
+        "title": "GraphLocation"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
       "HealthResponse": {
         "properties": {
           "status": {
@@ -1607,6 +2507,33 @@
           "status"
         ],
         "title": "HealthResponse"
+      },
+      "ImpactLocation": {
+        "properties": {
+          "impact": {
+            "$ref": "#/components/schemas/SettlementImpact"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "longitude": {
+            "type": "number",
+            "title": "Longitude"
+          },
+          "latitude": {
+            "type": "number",
+            "title": "Latitude"
+          }
+        },
+        "type": "object",
+        "required": [
+          "impact",
+          "name",
+          "longitude",
+          "latitude"
+        ],
+        "title": "ImpactLocation"
       },
       "IndexComponentResponse": {
         "properties": {
@@ -1693,6 +2620,11 @@
       },
       "LinkResponse": {
         "properties": {
+          "is_model": {
+            "type": "boolean",
+            "title": "Is Model",
+            "default": false
+          },
           "id": {
             "type": "string",
             "title": "Id"
@@ -1863,6 +2795,7 @@
         "enum": [
           "bus",
           "air",
+          "rail",
           "river",
           "winter_road",
           "ferry",
@@ -1900,6 +2833,10 @@
       },
       "ModeTotalsResponse": {
         "properties": {
+          "rail": {
+            "type": "integer",
+            "title": "Rail"
+          },
           "bus": {
             "type": "integer",
             "title": "Bus"
@@ -1931,6 +2868,7 @@
         },
         "type": "object",
         "required": [
+          "rail",
           "bus",
           "air",
           "river",
@@ -1941,6 +2879,103 @@
         ],
         "title": "ModeTotalsResponse"
       },
+      "MoneyAssumptions": {
+        "properties": {
+          "origin_point_id": {
+            "type": "string",
+            "title": "Origin Point Id"
+          },
+          "market_city": {
+            "type": "string",
+            "title": "Market City"
+          },
+          "trips_per_year": {
+            "type": "number",
+            "title": "Trips Per Year"
+          },
+          "rub_per_hour": {
+            "type": "number",
+            "title": "Rub Per Hour"
+          },
+          "capital_cost_rub": {
+            "type": "number",
+            "title": "Capital Cost Rub",
+            "default": 0
+          },
+          "annual_operating_cost_rub": {
+            "type": "number",
+            "title": "Annual Operating Cost Rub",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "required": [
+          "origin_point_id",
+          "market_city",
+          "trips_per_year",
+          "rub_per_hour"
+        ],
+        "title": "MoneyAssumptions"
+      },
+      "MoneyEffect": {
+        "properties": {
+          "before_hours": {
+            "type": "number",
+            "title": "Before Hours"
+          },
+          "after_hours": {
+            "type": "number",
+            "title": "After Hours"
+          },
+          "hours_saved_per_trip": {
+            "type": "number",
+            "title": "Hours Saved Per Trip"
+          },
+          "annual_hours_saved": {
+            "type": "number",
+            "title": "Annual Hours Saved"
+          },
+          "annual_gross_rub": {
+            "type": "number",
+            "title": "Annual Gross Rub"
+          },
+          "annual_net_rub": {
+            "type": "number",
+            "title": "Annual Net Rub"
+          },
+          "simple_payback_years": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Simple Payback Years"
+          },
+          "assumptions": {
+            "$ref": "#/components/schemas/MoneyAssumptions"
+          },
+          "method": {
+            "type": "string",
+            "title": "Method",
+            "default": "conditional_time_savings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "before_hours",
+          "after_hours",
+          "hours_saved_per_trip",
+          "annual_hours_saved",
+          "annual_gross_rub",
+          "annual_net_rub",
+          "simple_payback_years",
+          "assumptions"
+        ],
+        "title": "MoneyEffect"
+      },
       "NetworkMode": {
         "type": "string",
         "enum": [
@@ -1948,84 +2983,6 @@
           "multimodal"
         ],
         "title": "NetworkMode"
-      },
-      "NewLinkRequest": {
-        "properties": {
-          "from_id": {
-            "type": "string",
-            "maxLength": 120,
-            "minLength": 1,
-            "title": "From Id"
-          },
-          "to_id": {
-            "type": "string",
-            "maxLength": 120,
-            "minLength": 1,
-            "title": "To Id"
-          },
-          "mode": {
-            "type": "string",
-            "enum": [
-              "road",
-              "air",
-              "river",
-              "rail",
-              "scheduled_ferry",
-              "ferry",
-              "winter_road",
-              "ice_crossing",
-              "pontoon_bridge"
-            ],
-            "title": "Mode"
-          },
-          "travel_h": {
-            "type": "number",
-            "maximum": 200.0,
-            "exclusiveMinimum": 0.0,
-            "title": "Travel H"
-          },
-          "seasons": {
-            "items": {
-              "type": "string",
-              "enum": [
-                "summer",
-                "winter"
-              ]
-            },
-            "type": "array",
-            "maxItems": 2,
-            "minItems": 1,
-            "title": "Seasons"
-          },
-          "frequency_per_week": {
-            "anyOf": [
-              {
-                "type": "integer",
-                "maximum": 28.0,
-                "minimum": 1.0
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Frequency Per Week"
-          },
-          "bidirectional": {
-            "type": "boolean",
-            "title": "Bidirectional",
-            "default": true
-          }
-        },
-        "additionalProperties": false,
-        "type": "object",
-        "required": [
-          "from_id",
-          "to_id",
-          "mode",
-          "travel_h",
-          "seasons"
-        ],
-        "title": "NewLinkRequest"
       },
       "OverviewResponse": {
         "properties": {
@@ -2090,301 +3047,6 @@
           "index"
         ],
         "title": "OverviewResponse"
-      },
-      "PairComparisonResponse": {
-        "properties": {
-          "pair_id": {
-            "type": "string",
-            "title": "Pair Id"
-          },
-          "baseline": {
-            "$ref": "#/components/schemas/PilotRouteResponse"
-          },
-          "changed": {
-            "$ref": "#/components/schemas/PilotRouteResponse"
-          },
-          "optimistic_baseline": {
-            "$ref": "#/components/schemas/PilotRouteResponse"
-          },
-          "optimistic_changed": {
-            "$ref": "#/components/schemas/PilotRouteResponse"
-          },
-          "delta_h": {
-            "anyOf": [
-              {
-                "type": "number"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Delta H"
-          }
-        },
-        "type": "object",
-        "required": [
-          "pair_id",
-          "baseline",
-          "changed",
-          "optimistic_baseline",
-          "optimistic_changed",
-          "delta_h"
-        ],
-        "title": "PairComparisonResponse"
-      },
-      "PairResponse": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "title": "Id"
-          },
-          "from_id": {
-            "type": "string",
-            "title": "From Id"
-          },
-          "to_id": {
-            "type": "string",
-            "title": "To Id"
-          }
-        },
-        "type": "object",
-        "required": [
-          "id",
-          "from_id",
-          "to_id"
-        ],
-        "title": "PairResponse"
-      },
-      "PilotResponse": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "title": "Id"
-          },
-          "name": {
-            "type": "string",
-            "title": "Name"
-          },
-          "model_version": {
-            "type": "string",
-            "title": "Model Version"
-          },
-          "artifact_version": {
-            "type": "string",
-            "title": "Artifact Version"
-          },
-          "points": {
-            "items": {
-              "$ref": "#/components/schemas/PointResponse"
-            },
-            "type": "array",
-            "title": "Points"
-          },
-          "edges": {
-            "items": {
-              "$ref": "#/components/schemas/EdgeResponse"
-            },
-            "type": "array",
-            "title": "Edges"
-          },
-          "pairs": {
-            "items": {
-              "$ref": "#/components/schemas/PairResponse"
-            },
-            "type": "array",
-            "title": "Pairs"
-          },
-          "assumptions": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "title": "Assumptions"
-          }
-        },
-        "type": "object",
-        "required": [
-          "id",
-          "name",
-          "model_version",
-          "artifact_version",
-          "points",
-          "edges",
-          "pairs",
-          "assumptions"
-        ],
-        "title": "PilotResponse"
-      },
-      "PilotRouteResponse": {
-        "properties": {
-          "status": {
-            "type": "string",
-            "enum": [
-              "found",
-              "no_route",
-              "insufficient_data"
-            ],
-            "title": "Status"
-          },
-          "total_h": {
-            "anyOf": [
-              {
-                "type": "number"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Total H"
-          },
-          "travel_h": {
-            "anyOf": [
-              {
-                "type": "number"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Travel H"
-          },
-          "waiting_h": {
-            "anyOf": [
-              {
-                "type": "number"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Waiting H"
-          },
-          "edge_ids": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "title": "Edge Ids"
-          },
-          "point_ids": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "title": "Point Ids"
-          },
-          "assumptions": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "title": "Assumptions"
-          },
-          "warnings": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "title": "Warnings"
-          },
-          "optimality": {
-            "type": "string",
-            "enum": [
-              "within_model",
-              "incomplete_alternatives"
-            ],
-            "title": "Optimality"
-          }
-        },
-        "type": "object",
-        "required": [
-          "status",
-          "total_h",
-          "travel_h",
-          "waiting_h",
-          "edge_ids",
-          "point_ids",
-          "assumptions",
-          "warnings",
-          "optimality"
-        ],
-        "title": "PilotRouteResponse"
-      },
-      "PilotSummaryResponse": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "title": "Id"
-          },
-          "name": {
-            "type": "string",
-            "title": "Name"
-          },
-          "model_version": {
-            "type": "string",
-            "title": "Model Version"
-          },
-          "artifact_version": {
-            "type": "string",
-            "title": "Artifact Version"
-          },
-          "point_count": {
-            "type": "integer",
-            "title": "Point Count"
-          },
-          "edge_count": {
-            "type": "integer",
-            "title": "Edge Count"
-          },
-          "pair_count": {
-            "type": "integer",
-            "title": "Pair Count"
-          },
-          "unknown_frequency_links": {
-            "type": "integer",
-            "title": "Unknown Frequency Links"
-          }
-        },
-        "type": "object",
-        "required": [
-          "id",
-          "name",
-          "model_version",
-          "artifact_version",
-          "point_count",
-          "edge_count",
-          "pair_count",
-          "unknown_frequency_links"
-        ],
-        "title": "PilotSummaryResponse"
-      },
-      "PointResponse": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "title": "Id"
-          },
-          "name": {
-            "type": "string",
-            "title": "Name"
-          },
-          "latitude": {
-            "type": "number",
-            "title": "Latitude"
-          },
-          "longitude": {
-            "type": "number",
-            "title": "Longitude"
-          }
-        },
-        "type": "object",
-        "required": [
-          "id",
-          "name",
-          "latitude",
-          "longitude"
-        ],
-        "title": "PointResponse"
       },
       "RegionDetailResponse": {
         "properties": {
@@ -2781,6 +3443,529 @@
         ],
         "title": "RegionSummaryResponse"
       },
+      "RoadAddition": {
+        "properties": {
+          "source_node": {
+            "type": "integer",
+            "title": "Source Node"
+          },
+          "target_node": {
+            "type": "integer",
+            "title": "Target Node"
+          },
+          "travel_hours": {
+            "type": "number",
+            "title": "Travel Hours"
+          },
+          "coordinates": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Coordinates"
+          }
+        },
+        "type": "object",
+        "required": [
+          "source_node",
+          "target_node",
+          "travel_hours"
+        ],
+        "title": "RoadAddition"
+      },
+      "RoadAdditionInput": {
+        "properties": {
+          "region_id": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Region Id"
+          },
+          "source_node": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Source Node"
+          },
+          "target_node": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Target Node"
+          },
+          "travel_hours": {
+            "type": "number",
+            "maximum": 72.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Travel Hours"
+          },
+          "money": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MoneyAssumptions"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "region_id",
+          "source_node",
+          "target_node",
+          "travel_hours"
+        ],
+        "title": "RoadAdditionInput"
+      },
+      "RoadChange": {
+        "properties": {
+          "way_id": {
+            "type": "integer",
+            "title": "Way Id"
+          },
+          "speed_factor": {
+            "type": "number",
+            "title": "Speed Factor"
+          }
+        },
+        "type": "object",
+        "required": [
+          "way_id",
+          "speed_factor"
+        ],
+        "title": "RoadChange"
+      },
+      "RoadChangeInput": {
+        "properties": {
+          "way_id": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Way Id"
+          },
+          "speed_factor": {
+            "type": "number",
+            "maximum": 3.0,
+            "minimum": 0.0,
+            "title": "Speed Factor"
+          }
+        },
+        "type": "object",
+        "required": [
+          "way_id",
+          "speed_factor"
+        ],
+        "title": "RoadChangeInput"
+      },
+      "RoadCorridor": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "road_ref": {
+            "type": "string",
+            "title": "Road Ref"
+          },
+          "origin": {
+            "type": "string",
+            "title": "Origin"
+          },
+          "destination": {
+            "type": "string",
+            "title": "Destination"
+          },
+          "way_ids": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Way Ids"
+          },
+          "length_km": {
+            "type": "number",
+            "title": "Length Km"
+          },
+          "origin_attachment_km": {
+            "type": "number",
+            "title": "Origin Attachment Km"
+          },
+          "destination_attachment_km": {
+            "type": "number",
+            "title": "Destination Attachment Km"
+          },
+          "regions": {
+            "items": {
+              "$ref": "#/components/schemas/CorridorRegion"
+            },
+            "type": "array",
+            "title": "Regions"
+          },
+          "lines": {
+            "items": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Lines"
+          },
+          "scope": {
+            "type": "string",
+            "title": "Scope",
+            "default": "whole_osm_ways_on_named_road_corridor_both_directions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "road_ref",
+          "origin",
+          "destination",
+          "way_ids",
+          "length_km",
+          "origin_attachment_km",
+          "destination_attachment_km",
+          "regions",
+          "lines"
+        ],
+        "title": "RoadCorridor"
+      },
+      "RoadJob": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "region_id": {
+            "type": "string",
+            "title": "Region Id"
+          },
+          "region": {
+            "type": "string",
+            "title": "Region"
+          },
+          "scenario": {
+            "type": "string",
+            "title": "Scenario"
+          },
+          "changes": {
+            "items": {
+              "$ref": "#/components/schemas/RoadChange"
+            },
+            "type": "array",
+            "title": "Changes"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "completed": {
+            "type": "integer",
+            "title": "Completed"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "result": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RoadResult"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "addition": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RoadAddition"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "money_assumptions": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MoneyAssumptions"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "region_id",
+          "region",
+          "scenario",
+          "changes",
+          "status",
+          "completed",
+          "total",
+          "version"
+        ],
+        "title": "RoadJob"
+      },
+      "RoadResult": {
+        "properties": {
+          "before": {
+            "type": "number",
+            "title": "Before"
+          },
+          "after": {
+            "type": "number",
+            "title": "After"
+          },
+          "delta": {
+            "type": "number",
+            "title": "Delta"
+          },
+          "relative_percent": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Relative Percent"
+          },
+          "population": {
+            "type": "integer",
+            "title": "Population"
+          },
+          "settlements": {
+            "type": "integer",
+            "title": "Settlements"
+          },
+          "changed_edges": {
+            "type": "integer",
+            "title": "Changed Edges"
+          },
+          "normalization": {
+            "type": "number",
+            "title": "Normalization"
+          },
+          "elapsed_seconds": {
+            "type": "number",
+            "title": "Elapsed Seconds"
+          },
+          "affected_settlements": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Affected Settlements"
+          },
+          "money": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MoneyEffect"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "routing_method": {
+            "type": "string",
+            "title": "Routing Method",
+            "default": "full_graph"
+          },
+          "settlement_effects": {
+            "items": {
+              "$ref": "#/components/schemas/SettlementEffect"
+            },
+            "type": "array",
+            "title": "Settlement Effects"
+          }
+        },
+        "type": "object",
+        "required": [
+          "before",
+          "after",
+          "delta",
+          "relative_percent",
+          "population",
+          "settlements",
+          "changed_edges",
+          "normalization",
+          "elapsed_seconds"
+        ],
+        "title": "RoadResult"
+      },
+      "RoadScenarioInput": {
+        "properties": {
+          "region_id": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Region Id"
+          },
+          "scenario": {
+            "type": "string",
+            "enum": [
+              "road",
+              "summer",
+              "winter"
+            ],
+            "title": "Scenario",
+            "default": "road"
+          },
+          "changes": {
+            "items": {
+              "$ref": "#/components/schemas/RoadChangeInput"
+            },
+            "type": "array",
+            "maxItems": 50,
+            "minItems": 1,
+            "title": "Changes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "region_id",
+          "changes"
+        ],
+        "title": "RoadScenarioInput"
+      },
+      "RoadSegment": {
+        "properties": {
+          "way_id": {
+            "type": "integer",
+            "title": "Way Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "highway": {
+            "type": "string",
+            "title": "Highway"
+          },
+          "speed_kmh": {
+            "type": "number",
+            "title": "Speed Kmh"
+          },
+          "coordinates": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Coordinates"
+          },
+          "source_node": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Node"
+          },
+          "target_node": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target Node"
+          }
+        },
+        "type": "object",
+        "required": [
+          "way_id",
+          "name",
+          "highway",
+          "speed_kmh",
+          "coordinates"
+        ],
+        "title": "RoadSegment"
+      },
+      "RoadView": {
+        "properties": {
+          "segments": {
+            "items": {
+              "$ref": "#/components/schemas/RoadSegment"
+            },
+            "type": "array",
+            "title": "Segments"
+          },
+          "matched": {
+            "type": "integer",
+            "title": "Matched"
+          },
+          "truncated": {
+            "type": "boolean",
+            "title": "Truncated"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "detail": {
+            "type": "string",
+            "title": "Detail",
+            "default": "all"
+          }
+        },
+        "type": "object",
+        "required": [
+          "segments",
+          "matched",
+          "truncated",
+          "version"
+        ],
+        "title": "RoadView"
+      },
       "RouteResponse": {
         "properties": {
           "id": {
@@ -3081,6 +4266,141 @@
         ],
         "title": "SeasonCountsResponse"
       },
+      "SensitivityPoint": {
+        "properties": {
+          "time_multiplier": {
+            "type": "number",
+            "title": "Time Multiplier"
+          },
+          "hansen": {
+            "type": "number",
+            "title": "Hansen"
+          },
+          "delta": {
+            "type": "number",
+            "title": "Delta"
+          },
+          "relative_change": {
+            "type": "number",
+            "title": "Relative Change"
+          }
+        },
+        "type": "object",
+        "required": [
+          "time_multiplier",
+          "hansen",
+          "delta",
+          "relative_change"
+        ],
+        "title": "SensitivityPoint"
+      },
+      "SensitivityResult": {
+        "properties": {
+          "region_id": {
+            "type": "string",
+            "title": "Region Id"
+          },
+          "scenario": {
+            "type": "string",
+            "title": "Scenario"
+          },
+          "model_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Version"
+          },
+          "artifact_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Artifact Version"
+          },
+          "baseline": {
+            "type": "number",
+            "title": "Baseline"
+          },
+          "points": {
+            "items": {
+              "$ref": "#/components/schemas/SensitivityPoint"
+            },
+            "type": "array",
+            "title": "Points"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind",
+            "default": "uniform_time_sensitivity"
+          },
+          "graph_recomputed": {
+            "type": "boolean",
+            "title": "Graph Recomputed",
+            "default": false
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Assumptions",
+            "default": [
+              "every_origin_to_market_time_scaled_uniformly",
+              "market_weights_coverage_and_road_normalization_fixed",
+              "uses_exported_half_life_1_2_4_hour_sums",
+              "not_a_specific_road_project_or_forecast",
+              "no_new_routes_or_connectivity_changes"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "region_id",
+          "scenario",
+          "model_version",
+          "artifact_version",
+          "baseline",
+          "points"
+        ],
+        "title": "SensitivityResult"
+      },
+      "SettlementEffect": {
+        "properties": {
+          "point_id": {
+            "type": "string",
+            "title": "Point Id"
+          },
+          "before": {
+            "type": "number",
+            "title": "Before"
+          },
+          "after": {
+            "type": "number",
+            "title": "After"
+          },
+          "delta": {
+            "type": "number",
+            "title": "Delta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "point_id",
+          "before",
+          "after",
+          "delta"
+        ],
+        "title": "SettlementEffect"
+      },
       "SettlementHitResponse": {
         "properties": {
           "id": {
@@ -3120,6 +4440,49 @@
           "population"
         ],
         "title": "SettlementHitResponse"
+      },
+      "SettlementImpact": {
+        "properties": {
+          "point_id": {
+            "type": "string",
+            "title": "Point Id"
+          },
+          "population": {
+            "type": "integer",
+            "title": "Population"
+          },
+          "before": {
+            "type": "number",
+            "title": "Before"
+          },
+          "after": {
+            "type": "number",
+            "title": "After"
+          },
+          "delta": {
+            "type": "number",
+            "title": "Delta"
+          },
+          "newly_isolated": {
+            "type": "boolean",
+            "title": "Newly Isolated"
+          },
+          "affected": {
+            "type": "boolean",
+            "title": "Affected"
+          }
+        },
+        "type": "object",
+        "required": [
+          "point_id",
+          "population",
+          "before",
+          "after",
+          "delta",
+          "newly_isolated",
+          "affected"
+        ],
+        "title": "SettlementImpact"
       },
       "SettlementPageResponse": {
         "properties": {
@@ -3361,55 +4724,87 @@
         ],
         "title": "TrunkLinkRequest"
       },
-      "WaitingSensitivityResponse": {
+      "ValidationError": {
         "properties": {
-          "edge_id": {
-            "type": "string",
-            "title": "Edge Id"
-          },
-          "intervals_h": {
+          "loc": {
             "items": {
-              "type": "number"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
             },
             "type": "array",
-            "title": "Intervals H"
+            "title": "Location"
           },
-          "periodic_wait_h": {
-            "type": "number",
-            "title": "Periodic Wait H"
+          "msg": {
+            "type": "string",
+            "title": "Message"
           },
-          "uniform_wait_h": {
-            "anyOf": [
-              {
-                "type": "number"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Uniform Wait H"
+          "type": {
+            "type": "string",
+            "title": "Error Type"
           },
-          "difference_h": {
-            "anyOf": [
-              {
-                "type": "number"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Difference H"
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
           }
         },
         "type": "object",
         "required": [
-          "edge_id",
-          "intervals_h",
-          "periodic_wait_h",
-          "uniform_wait_h",
-          "difference_h"
+          "loc",
+          "msg",
+          "type"
         ],
-        "title": "WaitingSensitivityResponse"
+        "title": "ValidationError"
+      },
+      "VerifiedRoad": {
+        "properties": {
+          "candidate": {
+            "$ref": "#/components/schemas/Candidate"
+          },
+          "before": {
+            "type": "number",
+            "title": "Before"
+          },
+          "after": {
+            "type": "number",
+            "title": "After"
+          },
+          "delta": {
+            "type": "number",
+            "title": "Delta"
+          },
+          "affected_population": {
+            "type": "integer",
+            "title": "Affected Population"
+          },
+          "isolated_population": {
+            "type": "integer",
+            "title": "Isolated Population"
+          },
+          "elapsed_seconds": {
+            "type": "number",
+            "title": "Elapsed Seconds"
+          }
+        },
+        "type": "object",
+        "required": [
+          "candidate",
+          "before",
+          "after",
+          "delta",
+          "affected_population",
+          "isolated_population",
+          "elapsed_seconds"
+        ],
+        "title": "VerifiedRoad"
       },
       "WinterRoadResponse": {
         "properties": {

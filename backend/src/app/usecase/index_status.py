@@ -71,20 +71,32 @@ COMPONENTS = [
 
 def index_status(rows: list[IndexRecord]) -> IndexStatus:
     ready = bool(rows)
+    components = list(COMPONENTS)
+    if any(row.model_version == "hansen-release-20261107" for row in rows):
+        components = [c for c in components if c.key != "scenario"]
+        components.append(IndexComponent(
+            key="snapshot_network", title="Сеть снимка data-20261107",
+            description=("База включает дороги и магистральные ЖД и авиасвязи с накладными "
+                         "расходами 1 и 2,5 часа, без отдельного ожидания рейса. "
+                         "Лето и зима добавляют местные сезонные связи. "
+                         "Сезонных ограничений дорожных рёбер в снимке нет. "
+                         "Нормировка одинакова для базы и проектов."),
+            source="data-20261107, исходный расчёт проекта",
+        ))
     return IndexStatus(
         status=IndexState.READY if ready else IndexState.MISSING,
         reason=None if ready else MISSING_REASON,
         formula=FORMULA,
         half_life_hours=HALF_LIFE_HOURS,
         markets=MARKETS,
-        components=list(COMPONENTS),
+        components=components,
     )
 
 
 def hansen_by_region(
     rows: list[IndexRecord], season: Season, network_mode: NetworkMode = NetworkMode.MULTIMODAL
 ) -> dict[str, float | None]:
-    scenario = index_scenario(season, network_mode)
+    scenario = resolved_scenario(rows, season, network_mode)
     return {row.region_id: row.hansen for row in rows if row.scenario == scenario}
 
 
@@ -92,3 +104,11 @@ def index_scenario(season: Season, network_mode: NetworkMode) -> str:
     if season == Season.ALL:
         return "road"
     return f"road_{season.value}" if network_mode == NetworkMode.ROAD else season.value
+
+
+def resolved_scenario(rows: list[IndexRecord], season: Season, network_mode: NetworkMode) -> str:
+    if network_mode == NetworkMode.ROAD and any(
+        r.model_version == "hansen-release-20261107" for r in rows
+    ):
+        return "road"
+    return index_scenario(season, network_mode)

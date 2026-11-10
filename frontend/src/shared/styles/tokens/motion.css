@@ -16,6 +16,7 @@
   --dur-spin: 800ms;
   --dur-breathe: 2400ms;
   --dur-tour: 3800ms;
+  --dur-map: 900ms;
   --dur-ripple: 560ms;
 
   --stagger: 40ms;
@@ -100,6 +101,7 @@
     --dur-spin: 1ms;
     --dur-breathe: 1ms;
     --dur-tour: 1ms;
+    --dur-map: 1ms;
     --dur-ripple: 1ms;
     --stagger: 0ms;
     --press-scale: 1;

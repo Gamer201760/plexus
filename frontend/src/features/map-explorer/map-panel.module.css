@@ -1,8 +1,5 @@
 .panel {
-  min-inline-size: 0;
-  min-block-size: 0;
-  border-inline-start: var(--hairline) solid var(--border-subtle);
-  background-color: var(--surface-raised);
+  composes: sidePanel from "../../shared/styles/compose.module.css";
 }
 
 .stats {

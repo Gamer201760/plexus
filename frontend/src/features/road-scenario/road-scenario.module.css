@@ -1,0 +1,41 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding: var(--space-24);
+  block-size: 100%;
+}
+
+.note {
+  color: var(--text-secondary);
+  font-size: var(--font-size-body-sm);
+}
+
+.roads {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.roads button {
+  justify-content: flex-start;
+}
+
+.result {
+  display: grid;
+  gap: var(--space-16);
+  border-block-start: var(--hairline) solid var(--border-default);
+  padding-block-start: var(--space-16);
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-16);
+}
+
+.changes {
+  padding-inline-start: var(--space-20);
+  color: var(--text-secondary);
+  font-size: var(--font-size-body-sm);
+}

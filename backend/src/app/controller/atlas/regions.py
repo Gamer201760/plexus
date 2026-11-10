@@ -50,9 +50,10 @@ def build_regions_router(
 
     @router.get("/regions/{region_id}/links", responses=NOT_FOUND)
     def list_region_links(
-        region_id: str, season: Season = Season.ALL, mode: Mode | None = None
+        region_id: str, season: Season = Season.ALL, mode: Mode | None = None,
+        include_unknown: bool = False,
     ) -> list[LinkResponse]:
-        return [link_response(item) for item in links.region_links(region_id, season, mode)]
+        return [link_response(item) for item in links.region_links(region_id, season, mode, include_unknown)]
 
     @router.get("/regions/{region_id}/settlements", responses=NOT_FOUND)
     def list_settlements(

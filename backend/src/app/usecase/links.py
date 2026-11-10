@@ -19,6 +19,8 @@ class Endpoint:
     name: str
     x: float | None
     y: float | None
+    lat: float | None = None
+    lon: float | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -37,6 +39,7 @@ class LinkView:
     confidence: Confidence | None
     source_url: str | None
     source_date: str | None
+    is_model: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -56,7 +59,9 @@ def _endpoint(point_id: str, name: str, points: dict[str, PointRecord]) -> Endpo
     point = points.get(point_id)
     if point is None:
         return Endpoint(id=point_id, name=name, x=None, y=None)
-    return Endpoint(id=point_id, name=name, x=point.x, y=point.y)
+    return Endpoint(
+        id=point_id, name=name, x=point.x, y=point.y, lat=point.lat, lon=point.lon
+    )
 
 
 def _span_km(link: LinkRecord, points: dict[str, PointRecord]) -> float | None:
@@ -76,12 +81,14 @@ def link_view(link: LinkRecord, points: dict[str, PointRecord]) -> LinkView:
         destination=_endpoint(link.to_id, link.to_name, points),
         km=link.km,
         freq_per_week=link.freq_per_week,
-        freq_assumed=is_frequency_assumed(link.mode, link.freq_per_week, _span_km(link, points)),
+        freq_assumed=not link.is_model
+        and is_frequency_assumed(link.mode, link.freq_per_week, _span_km(link, points)),
         freq_note=link.freq_note,
         vehicle=link.vehicle,
         confidence=link.confidence,
         source_url=link.source_url,
         source_date=link.source_date,
+        is_model=link.is_model,
     )
 
 
@@ -90,7 +97,8 @@ class LinkQueries:
         self._repository = repository
 
     def region_links(
-        self, region_id: str, season: Season, mode: Mode | None = None
+        self, region_id: str, season: Season, mode: Mode | None = None,
+        include_unknown: bool = False,
     ) -> list[LinkView]:
         if region_id not in {region.id for region in self._repository.regions()}:
             raise RegionNotFound()
@@ -99,7 +107,7 @@ class LinkQueries:
             link_view(link, points)
             for link in self._repository.links()
             if link.region_id == region_id
-            and runs_in_season(link.season, season)
+            and (runs_in_season(link.season, season) or (include_unknown and link.season is None))
             and (mode is None or link.mode is mode)
         ]
 

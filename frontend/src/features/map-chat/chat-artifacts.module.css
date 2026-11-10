@@ -1,0 +1,21 @@
+.blocks {
+  display: grid;
+  gap: var(--space-16);
+  margin-block-start: var(--space-16);
+}
+
+.block {
+  display: grid;
+  gap: var(--space-16);
+  padding: var(--space-16);
+}
+
+.source {
+  color: var(--text-accent);
+  font-size: var(--font-size-caption);
+  text-underline-offset: var(--space-4);
+}
+
+.block th {
+  white-space: normal;
+}

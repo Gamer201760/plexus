@@ -1,0 +1,4 @@
+.meter {
+  inline-size: 100%;
+  accent-color: var(--action-primary);
+}

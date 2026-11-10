@@ -1,0 +1,94 @@
+.message {
+  margin-block-end: var(--space-24);
+  overflow-wrap: anywhere;
+}
+
+.message[data-role="user"] {
+  inline-size: fit-content;
+  margin-inline-start: var(--space-24);
+  margin-left: auto;
+  padding: var(--space-12) var(--space-16);
+  background: var(--action-primary);
+  color: var(--action-primary-text);
+  border-radius: var(--radius-chat);
+  white-space: pre-wrap;
+}
+
+.prose {
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body);
+}
+
+.prose > * + * {
+  margin-block-start: var(--space-12);
+}
+
+.prose :where(ul, ol) {
+  padding-inline-start: var(--space-24);
+}
+
+.prose li + li {
+  margin-block-start: var(--space-8);
+}
+
+.prose :where(h1, h2, h3, h4) {
+  font-size: var(--font-size-body);
+  font-weight: var(--weight-semibold);
+}
+
+.prose a {
+  color: var(--text-accent);
+  text-underline-offset: var(--space-4);
+}
+
+.prose pre {
+  white-space: pre-wrap;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-label);
+  background-color: var(--surface-sunken);
+}
+
+.prose table {
+  border-collapse: collapse;
+  inline-size: 100%;
+  font-variant-numeric: var(--font-numeric);
+}
+
+.prose :where(th, td) {
+  padding: var(--space-8);
+  border-block-end: var(--hairline) solid var(--border-subtle);
+  text-align: start;
+}
+
+.prose th {
+  font-weight: var(--weight-semibold);
+  background-color: var(--surface-sunken);
+}
+
+.prose blockquote {
+  margin-inline: 0;
+  padding: var(--space-12);
+  background-color: var(--surface-sunken);
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose ul:has(> li > svg) {
+  list-style-type: none;
+}
+
+.prose math[display="block"] {
+  display: block;
+  overflow-x: auto;
+  padding-block: var(--space-12);
+  max-inline-size: 100%;
+}

@@ -1,0 +1,109 @@
+{
+  "snapshot_date": "2026-11-10",
+  "model_links": 33957,
+  "schedule_links": 139,
+  "links_by_mode": {
+    "air": 6537,
+    "rail": 27559
+  },
+  "regions_by_mode": {
+    "air": 66,
+    "rail": 76
+  },
+  "points": 185,
+  "skipped": [
+    {
+      "source": "uvt",
+      "id": "04ace23c9694b04c544a",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "0d9751f102031a949082",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "838d10e7a39d66dbaed3",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "310d168217e67223427d",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "1da36f20dc5034aa9725",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "5b0f72f55eb01440c25a",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "6334899bba691cac7ba2",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "f50a85ec9934756129c5",
+      "reason": "conflict_or_period"
+    },
+    {
+      "source": "uvt",
+      "id": "bf7b555a165b78013109",
+      "reason": "conflict_or_period"
+    },
+    {
+      "source": "uvt",
+      "id": "c8d4e28d1d120e4fdd5a",
+      "reason": "conflict_or_period"
+    },
+    {
+      "source": "uvt",
+      "id": "f5ea3af84d130d5bf09a",
+      "reason": "conflict_or_period"
+    },
+    {
+      "source": "uvt",
+      "id": "d84ec870a78abb9d7236",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "a4cb94a6a8446faf05bb",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "2fa32ef3b525a6a72673",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "efafa56b9e270ec3524c",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "6bc0776bbe252b7fe18f",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "38122a004e404bd452ee",
+      "reason": "outside_atlas_or_unresolved_point"
+    },
+    {
+      "source": "uvt",
+      "id": "8731afe487ed214cd3bd",
+      "reason": "outside_atlas_or_unresolved_point"
+    }
+  ],
+  "sha256": "cd1f8e84292553fa5ade2039e5a651a09989a3f19a0e44e0f168b0686e34c829",
+  "source_database_table": "stg_intercity",
+  "indices_recomputed": false
+}

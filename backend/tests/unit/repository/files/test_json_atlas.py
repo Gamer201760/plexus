@@ -86,7 +86,7 @@ def test_boundaries_from_fixture_carry_mainland_bounds(tmp_path: Path) -> None:
 def test_real_links_keep_unknown_values_null(atlas: JsonAtlasRepository) -> None:
     links = atlas.links()
 
-    assert len(links) == 12391
+    assert len(links) == 46487
     assert any(link.season is None for link in links)
     assert any(link.km is None for link in links)
     assert all(link.km != 0 for link in links if link.km is not None)

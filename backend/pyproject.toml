@@ -3,8 +3,13 @@ name = "app"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
+    "duckdb==1.2.2",
     "fastapi>=0.143.1",
     "numpy>=2.5.4",
+    "openai-codex>=0.167.0",
+    "pyarrow>=26",
+    "pydantic-ai-slim[openai]>=2,<3",
+    "scipy>=1.17",
     "uvicorn>=0.54.0",
 ]
 
@@ -39,3 +44,7 @@ addopts = ["-n", "auto", "--strict-markers"]
 strict = true
 mypy_path = "src"
 files = ["src", "tests"]
+
+[[tool.mypy.overrides]]
+module = ["pyarrow.*", "scipy.*"]
+ignore_missing_imports = true

@@ -28,6 +28,7 @@ class SeasonCountsResponse(BaseModel):
 
 
 class ModeTotalsResponse(BaseModel):
+    rail: int
     bus: int
     air: int
     river: int
@@ -117,6 +118,8 @@ class RegionDetailResponse(RegionSummaryResponse):
 
 
 class EndpointResponse(BaseModel):
+    lat: float | None = None
+    lon: float | None = None
     id: str
     name: str
     x: float | None
@@ -124,6 +127,7 @@ class EndpointResponse(BaseModel):
 
 
 class LinkResponse(BaseModel):
+    is_model: bool = False
     id: str
     region_id: str
     mode: Mode

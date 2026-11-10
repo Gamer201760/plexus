@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import { type DesignIconName, designArtwork } from "../../primitives/icon/design-icon"
+import { Icon } from "../../primitives/icon/icon"
 import styles from "./transport-icon.module.css"
 import type { TransportMode } from "./transport-paths"
 
@@ -12,6 +13,7 @@ const SIZES: Record<TransportIconSize, string | undefined> = {
 }
 
 const TINTS: Record<TransportMode, string | undefined> = {
+  rail: undefined,
   bus: undefined,
   air: styles.air,
   river: styles.river,
@@ -29,7 +31,8 @@ export interface TransportIconProps {
 }
 
 export function TransportIcon({ mode, size = "md", tinted = true, className }: TransportIconProps) {
-  const names: Record<TransportMode, DesignIconName> = {
+  if (mode === "rail") return <Icon name="rail" size={size} className={className} />
+  const names: Record<Exclude<TransportMode, "rail">, DesignIconName> = {
     bus: "bus",
     air: "air",
     river: "river",

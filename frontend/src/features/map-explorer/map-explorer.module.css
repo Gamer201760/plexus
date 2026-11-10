@@ -5,6 +5,10 @@
   min-block-size: var(--map-min-height);
 }
 
+.explorer[data-fullscreen="true"] {
+  block-size: 100dvh;
+}
+
 .stage {
   position: relative;
   min-inline-size: 0;
@@ -54,13 +58,20 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-8);
-  padding: var(--space-8);
+  padding: var(--space-4);
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body-sm);
   inset-inline-end: var(--space-16);
   inline-size: fit-content;
 }
 
 .metric {
-  min-inline-size: var(--term-min);
+  min-inline-size: 0;
+}
+
+.toolbar > * {
+  flex: 0 1 auto;
+  min-inline-size: 0;
 }
 
 .zoom {

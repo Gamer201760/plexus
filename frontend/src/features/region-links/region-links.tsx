@@ -1,12 +1,13 @@
 import type { CSSProperties } from "react"
 import type { Link, Mode } from "@/entities/link"
 import { useTranslation } from "@/shared/i18n"
-import { Card, ChipGroup, EmptyState, Skeleton } from "@/shared/ui"
+import { Card, ChipGroup, EmptyState, Skeleton, StatusBadge } from "@/shared/ui"
 import { TransportIcon } from "@/shared/ui/brand"
 import { LinkDetail } from "./link-detail"
 import styles from "./region-links.module.css"
 
 const MODES: readonly Mode[] = [
+  "rail",
   "bus",
   "air",
   "river",
@@ -67,6 +68,9 @@ export function RegionLinks({ links, modes, onModesChange, activeId, onActive }:
               <span className={styles.route}>
                 <span className={styles.ends}>{link.from.name}</span>
                 <span className={styles.ends}>{link.to.name}</span>
+                {link.is_model ? (
+                  <StatusBadge tone="info" label={t("data:modelLink.badge")} />
+                ) : null}
               </span>
               <span className={styles.season}>
                 {link.season ? t(`data:seasonShort.${link.season}`) : t("data:season.unknown")}

@@ -102,3 +102,27 @@
     display: none;
   }
 }
+
+.transitNote {
+  max-inline-size: var(--prose-measure);
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-body);
+}
+
+.transitNote p {
+  margin-block: var(--space-8) 0;
+}
+
+.transitModes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  margin-block-start: var(--space-8);
+}
+
+.transitModes span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+}

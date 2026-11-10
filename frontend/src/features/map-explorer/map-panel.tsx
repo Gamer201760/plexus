@@ -93,15 +93,18 @@ function SelectedRegion({ id, season, onClose }: SelectedProps) {
         <p>{t("data:network.model", { version: data.index_model_version })}</p>
       )}
       {data.links_by_mode.length > 0 ? (
-        <ul className={styles.modes}>
-          {data.links_by_mode.map((row) => (
-            <li key={row.mode} className={styles.modeRow}>
-              <TransportIcon mode={row.mode} size="sm" />
-              <span>{t(`data:mode.${row.mode}`)}</span>
-              <span className={styles.modeValue}>{f.integer(row[season])}</span>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <p>{t("map:connections.counts")}</p>
+          <ul className={styles.modes}>
+            {data.links_by_mode.map((row) => (
+              <li key={row.mode} className={styles.modeRow}>
+                <TransportIcon mode={row.mode} size="sm" />
+                <span>{t(`data:mode.${row.mode}`)}</span>
+                <span className={styles.modeValue}>{f.integer(row.all)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       ) : null}
       <ButtonLink
         to={`/regions/${data.id}?season=${season}&network_mode=${networkMode}`}

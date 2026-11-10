@@ -11,11 +11,14 @@ import {
   LoaderCircle,
   type LucideProps,
   Menu,
+  MessageCircle,
   Minus,
   OctagonAlert,
   Plus,
   RefreshCw,
   RotateCcw,
+  Square,
+  TrainFront,
   TriangleAlert,
   X,
 } from "lucide-react"
@@ -24,6 +27,9 @@ import type { ComponentType } from "react"
 import { createDesignIcon } from "./design-icon"
 
 export const ICONS = {
+  rail: TrainFront,
+  chat: MessageCircle,
+  stop: Square,
   alert: TriangleAlert,
   success: CircleCheck,
   empty: Inbox,

@@ -7,6 +7,7 @@
 
 ---
 
+
 ## Какие входы зафиксированы?
 
 Табличные источники «Если быть точным» и Росстата задаются в `etl/sources.py`.
@@ -31,6 +32,14 @@ OSM распространяется по [ODbL](https://www.openstreetmap.org/c
 gh release download data-20261107 -R GoatWhistle/casechamp -D data
 tar -xf data/graph_ru.tar -C data && rm data/graph_ru.tar
 ```
+
+Проверка релиза 10 ноября 2026: фактически в DuckDB три сценария (`road`, `summer`,
+`winter`) и 84 региона. Этот снимок предшествует текущему экспорту из пяти сценариев
+для 82 регионов: отсутствуют `index_model_metadata`, `market_city_legs` и поле
+`operating_season` в графе. Значения индексов различаются. Релиз подходит как исходный
+материал, но не заменяет соответствующий текущей модели расчётный снимок без подготовки
+и проверки базового расчёта.
+
 
 ## Как восстановить национальный слой?
 
@@ -66,25 +75,8 @@ uv run python etl/index_sensitivity.py
 происхождение частично заменённых матриц. Публикуемый расчёт выполнен одной серией всех пяти
 сценариев; для новой модели требуется такая же полная серия.
 
-## Как восстановить пилот?
 
-Пилот использует тот же сибирский PBF и реестр `data_manual/tuva_links.csv`.
-Отдельный каталог графа предотвращает подмену национального слоя.
 
-```bash
-OSM_GLOB=siberian.parquet GRAPH_OUTPUT=data/pilot_graph_build POINT_REGION='Республика Тыва' uv run python etl/graph_russia.py
-PYTHONPATH=backend/src uv run python etl/pilot_export.py
-PYTHONPATH=backend/src uv run python etl/validate_pilot.py --data-dir data/pilot_candidate --output data/pilot-candidate-validation.json
-uv run python etl/audit_pilot_routes.py
-```
-
-Кандидат пилота находится в `data/pilot_candidate/pilots/tuva.json`. После проверки его
-публикуют в `frontend/atlas/public/pilots/`. Для готового поставляемого артефакта команда
-`PYTHONPATH=backend/src uv run python etl/validate_pilot.py` работает без восстановления PBF
-и обновляет `docs/results/pilot-validation.json`. Для кандидата путь отчёта задаётся отдельно,
-чтобы его проверка не подменяла протокол поставляемого артефакта.
-Дорожные пути имеют списки исходных way; редактируемая сезонная связь Сыстыг-Хема не
-спрятана в матрице. Внешняя проходимость и действующее расписание остаются ограничениями.
 
 ## Где находятся прежние интерфейс и расчёты?
 
@@ -99,6 +91,7 @@ uv run python etl/audit_pilot_routes.py
 
 <sub>[Оглавление документации](README.md) · [README проекта](../README.md)</sub>
 
+
 ## Матрицы сценария «новый маршрут»
 
 После `etl/access_russia.py` выполните `uv run python etl/export_scenario_matrices.py`:
@@ -108,3 +101,7 @@ uv run python etl/audit_pilot_routes.py
 эндпоинты `/api/v1/scenarios*` честно отвечают 503. При нехватке памяти запускайте
 `access_russia.py` по одному сценарию: `SCENARIOS=road`, затем
 `SCENARIOS=summer APPEND_SCENARIOS=1` и `SCENARIOS=winter APPEND_SCENARIOS=1`.
+
+## Ж/д и авиа в интерфейсе
+
+Дополнительный экспорт `network-links.json` подключён к API отдельно от расчётных графов. Источники, воспроизводимость и ограничения описаны в [транспортной сети](transport-network.md).

@@ -18,9 +18,11 @@ def client() -> Iterator[TestClient]:
 def test_overview_reports_dataset_totals(client: TestClient) -> None:
     body = client.get("/api/v1/overview").json()
 
-    assert (body["regions"], body["settlements"], body["links"]) == (82, 155412, 12391)
-    assert sum(body["links_by_mode"].values()) == 12391
-    assert body["links_by_season"] == {"summer": 490, "winter": 332, "all": 6823, "unknown": 4746}
+    assert (body["regions"], body["settlements"], body["links"]) == (82, 155412, 46487)
+    assert sum(body["links_by_mode"].values()) == 46487
+    assert body["links_by_season"] == {
+        "summer": 490, "winter": 332, "all": 6823, "unknown": 38842
+    }
     assert body["index"]["status"] == "ready"
 
 
@@ -30,7 +32,7 @@ def test_region_list_is_sorted_and_season_aware(client: TestClient) -> None:
     assert len(regions) == 82
     assert [item["name"] for item in regions] == sorted(item["name"] for item in regions)
     altai = next(item for item in regions if item["id"] == ALTAI)
-    assert (altai["links"], altai["links_season"]) == (239, 5)
+    assert (altai["links"], altai["links_season"]) == (775, 5)
     assert altai["hansen"] > 0
     assert 0 <= altai["index_population_coverage"] <= 1
 
@@ -58,7 +60,7 @@ def test_region_links_serialize_endpoints_as_from_and_to(client: TestClient) -> 
 def test_routes_list_every_link_with_coordinates(client: TestClient) -> None:
     routes = client.get("/api/v1/links").json()
 
-    assert 0 < len(routes) <= 12391
+    assert 0 < len(routes) <= 46487
     assert {"id", "mode", "season", "from_name", "to_name", "x1", "y1", "x2", "y2"} == set(
         routes[0]
     )
@@ -135,7 +137,7 @@ def test_openapi_documents_link_aliases(client: TestClient) -> None:
 def test_stavropol_registry_is_integrated_without_invented_frequency(client: TestClient) -> None:
     region = client.get("/api/v1/regions/07000000").json()
     links = client.get("/api/v1/regions/07000000/links?mode=bus").json()
-    assert region["links"] == 944
+    assert region["links"] == 2261
     assert len(links) == len({row["id"] for row in links}) == 944
     registry = [row for row in links if row["source_date"] == "2026-10-20"]
     assert len(registry) == 653

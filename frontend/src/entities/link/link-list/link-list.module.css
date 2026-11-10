@@ -24,6 +24,8 @@
 }
 .metadata {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-8);
   color: var(--text-secondary);
   font-size: var(--font-size-caption);

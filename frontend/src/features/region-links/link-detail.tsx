@@ -43,19 +43,7 @@ export function LinkDetail({ link, onClose }: LinkDetailProps) {
           <Icon name="arrow-right" size="sm" label={t("region:link.to")} className={styles.arrow} />
           <span>{link.to.name}</span>
         </p>
-        {link.confidence || link.freq_assumed ? (
-          <div className={styles.detailHead}>
-            {link.confidence ? (
-              <StatusBadge
-                tone={CONFIDENCE_TONE[link.confidence]}
-                label={t(`data:confidence.${link.confidence}`)}
-              />
-            ) : null}
-            {link.freq_assumed ? (
-              <StatusBadge tone="warning" label={t("data:frequency.assumed")} />
-            ) : null}
-          </div>
-        ) : null}
+        <LinkEvidence link={link} />
         <dl className={styles.facts}>
           <dt>{t("region:link.season")}</dt>
           <dd>{link.season ? t(`data:season.${link.season}`) : t("data:season.unknown")}</dd>
@@ -82,5 +70,28 @@ export function LinkDetail({ link, onClose }: LinkDetailProps) {
         ) : null}
       </div>
     </Sheet>
+  )
+}
+
+function LinkEvidence({ link }: { readonly link: Link }) {
+  const { t } = useTranslation()
+  return (
+    <>
+      {link.is_model || link.confidence || link.freq_assumed ? (
+        <div className={styles.detailHead}>
+          {link.is_model ? <StatusBadge tone="info" label={t("data:modelLink.badge")} /> : null}
+          {link.confidence ? (
+            <StatusBadge
+              tone={CONFIDENCE_TONE[link.confidence]}
+              label={t(`data:confidence.${link.confidence}`)}
+            />
+          ) : null}
+          {link.freq_assumed ? (
+            <StatusBadge tone="warning" label={t("data:frequency.assumed")} />
+          ) : null}
+        </div>
+      ) : null}
+      {link.is_model ? <p>{t("data:modelLink.description")}</p> : null}
+    </>
   )
 }

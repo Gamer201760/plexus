@@ -1,5 +1,12 @@
-import { useCallback, useMemo } from "react"
-import { type Season, useGeoBoundaries, useOverview, useRegions } from "@/entities/region"
+import { useCallback, useMemo, useState } from "react"
+import { useRegionLinks } from "@/entities/link"
+import {
+  buildTransitCollection,
+  type Season,
+  useGeoBoundaries,
+  useOverview,
+  useRegions,
+} from "@/entities/region"
 import { type MetricKey, metricValue } from "./metric"
 import { buildScale } from "./scale"
 
@@ -32,4 +39,19 @@ export function useMapData(metric: MetricKey, season: Season) {
   }
 
   return { geo, regions, overview, byId, valueAt, scale, missing, failed, retry }
+}
+
+export function useSelectedTransit(selectedId: string | null, season: Season) {
+  const links = useRegionLinks(selectedId, season)
+  const [showModels, setShowModels] = useState(false)
+  const modelCount = (links.data ?? []).filter((link) => link.is_model).length
+  const transit = useMemo(
+    () =>
+      buildTransitCollection(
+        (links.data ?? []).filter((link) => showModels || !link.is_model),
+        selectedId,
+      ),
+    [links.data, selectedId, showModels],
+  )
+  return { links, transit, modelCount, showModels, setShowModels }
 }

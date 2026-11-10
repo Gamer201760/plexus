@@ -72,6 +72,7 @@ def link_record(row: JsonObject) -> LinkRecord | None:
         confidence=_choice(Confidence, text(row, "confidence")),
         source_url=text(row, "source_url"),
         source_date=text(row, "source_date"),
+        is_model=row.get("is_model") is True,
     )
 
 
@@ -160,4 +161,7 @@ def index_record(row: JsonObject) -> IndexRecord | None:
         total_settlements=integer(row, "n_np"),
         model_version=text(row, "model_version"),
         artifact_version=text(row, "artifact_version"),
+        hansen_1h=number(row, "hansen_1h"),
+        hansen_2h=number(row, "hansen_2h"),
+        hansen_4h=number(row, "hansen_4h"),
     )

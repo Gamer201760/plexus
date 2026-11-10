@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-10",
+  "method": "One exact candidate per region and mode; full 180-market routing; fixed baseline normalization. Cancel after first result.",
+  "sample_size": 4,
+  "runs": [
+    {
+      "region_id": "18000000",
+      "mode": "criticality",
+      "id": "9ea53c88161d498490dd40c9273fc37d",
+      "first_result_seconds": 472.98506166704465,
+      "result": {
+        "candidate": {
+          "way_id": 231736882,
+          "name": "Р-228",
+          "length_km": 41.36648652656004,
+          "score": 210311469759.61737,
+          "isolation_score": 0.0,
+          "crosses_boundary": false
+        },
+        "before": 93.79380288317311,
+        "after": 93.1240153080394,
+        "delta": -0.6697875751337108,
+        "affected_population": 2050907,
+        "isolated_population": 525,
+        "elapsed_seconds": 344.5174467499601
+      },
+      "detail_settlements": 687
+    },
+    {
+      "region_id": "93000000",
+      "mode": "improvement",
+      "id": "45501527fd0a420eb832e79f22c0964c",
+      "first_result_seconds": 373.4280293750344,
+      "result": {
+        "candidate": {
+          "way_id": 28560655,
+          "name": "Кызыл - Эрзин - Госграница с Монголией",
+          "length_km": 96.48752516135573,
+          "score": 2689459215.561179,
+          "isolation_score": 0.0,
+          "crosses_boundary": false
+        },
+        "before": 30.485475932209773,
+        "after": 30.641513815649574,
+        "delta": 0.15603788343980085,
+        "affected_population": 35162,
+        "isolated_population": 0,
+        "elapsed_seconds": 339.52578729204834
+      },
+      "detail_settlements": 32
+    },
+    {
+      "region_id": "93000000",
+      "mode": "criticality",
+      "id": "ee6e8365e082478c83bdd318686b748a",
+      "first_result_seconds": 444.54393187502865,
+      "result": {
+        "candidate": {
+          "way_id": 28560655,
+          "name": "Кызыл - Эрзин - Госграница с Монголией",
+          "length_km": 96.48752516135573,
+          "score": 2689459215.561179,
+          "isolation_score": 0.0,
+          "crosses_boundary": false
+        },
+        "before": 30.485475932209773,
+        "after": 29.87015140540708,
+        "delta": -0.615324526802695,
+        "affected_population": 35162,
+        "isolated_population": 0,
+        "elapsed_seconds": 367.4449705829611
+      },
+      "detail_settlements": 32
+    }
+  ],
+  "volgograd_improvement": {
+    "job_id": "5c2ce2e06f0c4c679bb6e9d480606fd6",
+    "way_id": 231736882,
+    "before": 93.79380288317311,
+    "after": 93.94640774188197,
+    "elapsed_seconds": 344.6292655,
+    "affected_population": 2060011,
+    "isolated_population": 0
+  },
+  "limitations": [
+    "No complete real ten-candidate batch benchmark",
+    "No independent rerun of these four exact candidates",
+    "No paid chat model request",
+    "Five existing full backend suite failures assert outdated catalog counts"
+  ]
+}

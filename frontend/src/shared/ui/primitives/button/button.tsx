@@ -37,6 +37,7 @@ export function ButtonContent({ icon, pending = false, children }: ButtonContent
 
 export interface ButtonProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children" | "type"> {
+  readonly wrap?: boolean
   readonly variant?: ButtonVariant
   readonly size?: ButtonSize
   readonly icon?: IconName | undefined
@@ -47,6 +48,7 @@ export interface ButtonProps
 }
 
 export function Button({
+  wrap = false,
   variant = "primary",
   size = "regular",
   icon,
@@ -68,6 +70,7 @@ export function Button({
     <button
       {...rest}
       type={type}
+      data-wrap={wrap || undefined}
       className={clsx(styles.button, VARIANT_CLASS[variant], SIZE_CLASS[size], className)}
       aria-busy={pending || undefined}
       aria-disabled={pending || undefined}

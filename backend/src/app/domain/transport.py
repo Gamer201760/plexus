@@ -11,6 +11,7 @@ class Season(StrEnum):
 class Mode(StrEnum):
     BUS = "bus"
     AIR = "air"
+    RAIL = "rail"
     RIVER = "river"
     WINTER_ROAD = "winter_road"
     FERRY = "ferry"

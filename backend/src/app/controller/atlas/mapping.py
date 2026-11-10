@@ -73,7 +73,7 @@ def detail_response(detail: RegionDetail) -> RegionDetailResponse:
 
 
 def _endpoint(endpoint: Endpoint) -> EndpointResponse:
-    return EndpointResponse(id=endpoint.id, name=endpoint.name, x=endpoint.x, y=endpoint.y)
+    return EndpointResponse(**asdict(endpoint))
 
 
 def link_response(link: LinkView) -> LinkResponse:
@@ -92,6 +92,7 @@ def link_response(link: LinkView) -> LinkResponse:
         confidence=link.confidence,
         source_url=link.source_url,
         source_date=link.source_date,
+        is_model=link.is_model,
     )
 
 

@@ -1,4 +1,5 @@
 export type TransportMode =
+  | "rail"
   | "bus"
   | "air"
   | "river"
@@ -12,7 +13,7 @@ export interface Glyph {
   readonly dots: readonly (readonly [number, number, number])[]
 }
 
-export const TRANSPORT_GLYPHS: Record<TransportMode, Glyph> = {
+export const TRANSPORT_GLYPHS: Record<Exclude<TransportMode, "rail">, Glyph> = {
   bus: {
     strokes: ["M5 18V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v12Z", "M5 11h14", "M8 18v3", "M16 18v3"],
     dots: [

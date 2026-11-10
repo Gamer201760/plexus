@@ -1,29 +1,24 @@
+import type { FeatureCollection, LineString } from "geojson"
 import {
   Map as LibreMap,
-  type LngLatBoundsLike,
   type MapLayerMouseEvent,
   type MapOptions,
   setWorkerUrl,
 } from "maplibre-gl"
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url"
-import { useCallback, useEffect, useMemo, useRef } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import type { ChatMapCommand } from "@/shared/api/chat-map"
+import type { RoadLayerProps } from "@/shared/api/road-graph"
 import { motionMs, useReducedMotion } from "@/shared/motion"
 import type { BoundaryAtlas, LonLatBounds } from "./boundary-geojson"
-import {
-  buildStyle,
-  FILL_LAYER,
-  NO_REGION,
-  REGIONS_SOURCE,
-  readMapColors,
-  SELECTED_LAYER,
-  selectionFilter,
-} from "./osm-style"
+import { corners, focusIds, focusRegions } from "./map-camera"
+import { buildStyle, FILL_LAYER, REGIONS_SOURCE, readMapColors } from "./osm-style"
+import { ROAD_LAYER, useRoadLayer } from "./use-road-layer"
+import { useTransitLayer } from "./use-transit-layer"
 
 setWorkerUrl(workerUrl)
 
 const HOME_PADDING = 24
-const FOCUS_PADDING = 56
-const FOCUS_MAX_ZOOM = 8.5
 const MIN_ZOOM = 1.4
 const MAX_ZOOM = 18
 const EDGE = 14
@@ -37,18 +32,14 @@ export interface MapControls {
 }
 
 export interface OsmMapOptions {
+  readonly transit: FeatureCollection<LineString>
+  readonly roads?: RoadLayerProps | undefined
   readonly atlas: BoundaryAtlas
   readonly stepOf: (id: string) => number
+  readonly command?: ChatMapCommand | null | undefined
   readonly selectedId: string | null
   readonly onSelect: (id: string) => void
   readonly onHover: (id: string | null, x: number, y: number) => void
-}
-
-function corners(bounds: LonLatBounds): LngLatBoundsLike {
-  return [
-    [bounds[0], bounds[1]],
-    [bounds[2], bounds[3]],
-  ]
 }
 
 function margin(bounds: LonLatBounds): LonLatBounds {
@@ -60,14 +51,29 @@ function margin(bounds: LonLatBounds): LonLatBounds {
   ]
 }
 
-export function useOsmMap({ atlas, stepOf, selectedId, onSelect, onHover }: OsmMapOptions) {
+export function useOsmMap({
+  transit,
+  roads,
+  atlas,
+  stepOf,
+  selectedId,
+  command,
+  onSelect,
+  onHover,
+}: OsmMapOptions) {
   const container = useRef<HTMLDivElement | null>(null)
   const engine = useRef<LibreMap | null>(null)
+  const [styleReady, setStyleReady] = useState(false)
+  useRoadLayer(engine, roads, styleReady)
+  useTransitLayer(engine, transit, styleReady)
+  const roadState = useRef(roads)
+  roadState.current = roads
   const ready = useRef(false)
+  const appliedCommand = useRef<ChatMapCommand | null | undefined>(undefined)
   const hovered = useRef<number | null>(null)
   const reduced = useReducedMotion()
-  const state = useRef({ atlas, stepOf, selectedId, onSelect, onHover, reduced })
-  state.current = { atlas, stepOf, selectedId, onSelect, onHover, reduced }
+  const state = useRef({ atlas, stepOf, selectedId, command, onSelect, onHover, reduced })
+  state.current = { atlas, stepOf, selectedId, command, onSelect, onHover, reduced }
 
   const duration = useCallback(
     (instant?: boolean) =>
@@ -101,17 +107,20 @@ export function useOsmMap({ atlas, stepOf, selectedId, onSelect, onHover }: OsmM
     (instant?: boolean) => {
       const map = engine.current
       if (!map || !ready.current) return
-      const { atlas: current, selectedId: selected } = state.current
-      const target = selected === null ? undefined : current.featureOf.get(selected)
-      map.setFilter(SELECTED_LAYER, selectionFilter(target?.id ?? NO_REGION))
-      if (target)
-        map.fitBounds(corners(target.bounds), {
-          padding: FOCUS_PADDING,
-          maxZoom: FOCUS_MAX_ZOOM,
+      const current = state.current
+      const action = current.command !== appliedCommand.current ? current.command : undefined
+      appliedCommand.current = current.command
+      const travel =
+        instant || current.reduced ? 0 : motionMs("--dur-map", container.current ?? undefined)
+      if (action?.action === "zoom_in" || action?.action === "zoom_out") {
+        map.stop()
+        map.zoomTo(map.getZoom() + (action.action === "zoom_in" ? 1 : -1), {
           duration: duration(instant),
         })
-      else
-        map.fitBounds(corners(current.home), { padding: HOME_PADDING, duration: duration(instant) })
+        return
+      }
+
+      focusRegions(map, current.atlas, focusIds(action, current.selectedId), travel)
     },
     [duration],
   )
@@ -147,17 +156,31 @@ export function useOsmMap({ atlas, stepOf, selectedId, onSelect, onHover }: OsmM
       state.current.onHover(region, event.originalEvent.clientX, event.originalEvent.clientY)
     }
     const onClick = (event: MapLayerMouseEvent) => {
+      if (
+        map.getLayer(ROAD_LAYER) &&
+        map.queryRenderedFeatures(event.point, { layers: [ROAD_LAYER] }).length
+      )
+        return
       const id = event.features?.[0]?.id
       const region = typeof id === "number" ? state.current.atlas.regionOf.get(id) : undefined
       if (region) state.current.onSelect(region)
     }
     const markView = () => {
+      const box = map.getBounds()
+      roadState.current?.onBounds([
+        Math.max(-180, box.getWest()),
+        Math.max(-85, box.getSouth()),
+        Math.min(180, box.getEast()),
+        Math.min(85, box.getNorth()),
+        map.getZoom(),
+      ])
       element.dataset.zoom = map.getZoom().toFixed(3)
       const center = map.getCenter()
       element.dataset.center = `${center.lng.toFixed(3)},${center.lat.toFixed(3)}`
     }
-    map.on("load", () => {
+    map.on("style.load", () => {
       ready.current = true
+      setStyleReady(true)
       paintSteps()
       aim(true)
       markView()
@@ -169,6 +192,8 @@ export function useOsmMap({ atlas, stepOf, selectedId, onSelect, onHover }: OsmM
     map.on("click", FILL_LAYER, onClick)
     return () => {
       ready.current = false
+      setStyleReady(false)
+      appliedCommand.current = undefined
       hovered.current = null
       engine.current = null
       resize.disconnect()
@@ -184,7 +209,7 @@ export function useOsmMap({ atlas, stepOf, selectedId, onSelect, onHover }: OsmM
   // biome-ignore lint/correctness/useExhaustiveDependencies: Ref-backed camera callback must react to selection changes.
   useEffect(() => {
     aim()
-  }, [aim, atlas, selectedId])
+  }, [aim, atlas, selectedId, command])
 
   const controls = useMemo<MapControls>(
     () => ({

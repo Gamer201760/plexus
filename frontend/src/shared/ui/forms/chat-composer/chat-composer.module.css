@@ -1,0 +1,42 @@
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  border: var(--hairline) solid var(--border-control);
+  border-radius: var(--radius-chat);
+  background-color: var(--surface-raised);
+}
+
+.composer:focus-within {
+  outline: var(--focus-ring-width) solid var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.input {
+  flex: 1;
+  min-inline-size: 0;
+  min-block-size: var(--control-height);
+  max-block-size: var(--term-min);
+  field-sizing: content;
+  resize: none;
+  padding: var(--space-12);
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: var(--line-height-body);
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+.composer .send {
+  flex: none;
+  border-radius: var(--radius-pill);
+}

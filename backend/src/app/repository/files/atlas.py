@@ -44,6 +44,7 @@ class _Atlas:
     points: dict[str, PointRecord]
     links: list[LinkRecord]
     total_settlements: int
+    sources: list[SourceRecord]
 
 
 @dataclass(frozen=True, slots=True)
@@ -87,7 +88,7 @@ class JsonAtlasRepository:
         return self._load_additional().winter_roads
 
     def sources(self) -> list[SourceRecord]:
-        return self._load_additional().sources
+        return [*self._load_additional().sources, *self._load_atlas().sources]
 
     def geo(self) -> GeoLayer:
         with self._lock:
@@ -153,16 +154,25 @@ class JsonAtlasRepository:
         with self._lock:
             if self._atlas is None:
                 document = obj(read_json(self._data_dir, ATLAS))
+                network = (
+                    obj(read_json(self._data_dir, "network-links.json"))
+                    if (self._data_dir / "network-links.json").exists()
+                    else {}
+                )
                 frame = self.frame()
                 regions = [region_record(row) for row in objects(document.get("regions"))]
-                points = [point_record(row, frame) for row in objects(document.get("points"))]
-                links = [link_record(row) for row in objects(document.get("links"))]
+                point_rows = objects(document.get("points")) + objects(network.get("points"))
+                link_rows = objects(document.get("links")) + objects(network.get("links"))
+                points = [point_record(row, frame) for row in point_rows]
+                links = [link_record(row) for row in link_rows]
+                sources = [source_record(row) for row in objects(network.get("sources"))]
                 kept = [region for region in regions if region is not None]
                 self._atlas = _Atlas(
                     regions=kept,
                     points={point.id: point for point in points if point is not None},
                     links=[link for link in links if link is not None],
                     total_settlements=sum(region.settlements for region in kept),
+                    sources=[source for source in sources if source is not None],
                 )
             return self._atlas
 
