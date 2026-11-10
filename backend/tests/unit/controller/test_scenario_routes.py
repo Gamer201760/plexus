@@ -23,6 +23,7 @@ def write_artifact(target: Path) -> None:
         np.save(directory / "city_best_h.npy", city)
         np.save(directory / "population.npy", np.array([10.0, 20.0, 5.0]))
         np.save(directory / "region_idx.npy", np.array([0, 1, 1], dtype=np.int32))
+        np.save(directory / "point_id.npy", np.array(["p1", "p2", "p3"]))
     manifest = {
         "schema_version": 1,
         "model_version": "model-v1",
@@ -76,8 +77,8 @@ def test_evaluation_returns_region_and_pair_impacts(client: TestClient) -> None:
         "artifact_version": "artifact-1",
         "links": [
             {
-                "from_city": "X",
-                "to_city": "Y",
+                "from_id": "X",
+                "to_id": "Y",
                 "mode": "air",
                 "travel_h": 1.0,
                 "frequency_per_week": 28,
@@ -94,7 +95,7 @@ def test_evaluation_returns_region_and_pair_impacts(client: TestClient) -> None:
     assert result["national_changed_index"] > result["national_baseline_index"]
     deltas = {impact["region_id"]: impact["delta_index"] for impact in result["regions"]}
     assert all(delta >= 0 for delta in deltas.values())
-    assert result["links"][0]["from_city"] == "X"
+    assert result["links"][0]["from_id"] == "X"
 
 
 def test_stale_versions_unknown_city_and_bad_requests(client: TestClient) -> None:
@@ -102,24 +103,24 @@ def test_stale_versions_unknown_city_and_bad_requests(client: TestClient) -> Non
         "season": "road",
         "model_version": "model-v1",
         "artifact_version": "old",
-        "links": [{"from_city": "X", "to_city": "Y", "mode": "road", "travel_h": 1.0}],
+        "links": [{"from_id": "X", "to_id": "Y", "mode": "road", "travel_h": 1.0}],
     }
     response = client.post("/api/v1/scenarios/evaluate", json=request)
     assert response.status_code == 409
     assert response.json()["code"] == "stale_scenario_version"
     request["artifact_version"] = "artifact-1"
-    request["links"] = [{"from_city": "X", "to_city": "Q", "mode": "road", "travel_h": 1.0}]
+    request["links"] = [{"from_id": "X", "to_id": "Q", "mode": "road", "travel_h": 1.0}]
     response = client.post("/api/v1/scenarios/evaluate", json=request)
     assert response.status_code == 422
     assert response.json()["code"] == "validation_error"
     request["links"] = []
     assert client.post("/api/v1/scenarios/evaluate", json=request).status_code == 422
     request["links"] = [
-        {"from_city": "X", "to_city": "Y", "mode": "road", "travel_h": 1.0, "frequency_per_week": 7}
+        {"from_id": "X", "to_id": "Y", "mode": "road", "travel_h": 1.0, "frequency_per_week": 7}
     ]
     assert client.post("/api/v1/scenarios/evaluate", json=request).status_code == 422
     request["season"] = "winter"
-    request["links"] = [{"from_city": "X", "to_city": "Y", "mode": "road", "travel_h": 1.0}]
+    request["links"] = [{"from_id": "X", "to_id": "Y", "mode": "road", "travel_h": 1.0}]
     assert client.post("/api/v1/scenarios/evaluate", json=request).status_code == 422
 
 
@@ -128,3 +129,28 @@ def test_missing_artifact_fails_honestly(tmp_path: Path) -> None:
     response = client.get("/api/v1/scenarios")
     assert response.status_code == 503
     assert response.json()["code"] == "data_unavailable"
+
+
+def test_settlement_link_improves_only_its_region(client: TestClient) -> None:
+    request = {
+        "season": "road",
+        "model_version": "model-v1",
+        "artifact_version": "artifact-1",
+        "links": [
+            {
+                "from_id": "p2",
+                "to_id": "X",
+                "mode": "air",
+                "travel_h": 1.0,
+                "frequency_per_week": 28,
+            }
+        ],
+    }
+    response = client.post("/api/v1/scenarios/evaluate", json=request)
+    assert response.status_code == 200, response.text
+    result = response.json()
+    assert result["improved_city_pairs"] == 0
+    deltas = {impact["region_id"]: impact["delta_index"] for impact in result["regions"]}
+    assert deltas["02"] > 0
+    assert deltas["01"] == pytest.approx(0.0)
+    assert "settlement_links_serve_named_endpoints_only" in result["assumptions"]

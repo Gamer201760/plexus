@@ -32,8 +32,8 @@ class ScenarioCatalogResponse(Response):
 
 class TrunkLinkRequest(BaseModel):
     model_config = ConfigDict(extra="forbid", from_attributes=True)
-    from_city: str = Field(min_length=1, max_length=120)
-    to_city: str = Field(min_length=1, max_length=120)
+    from_id: str = Field(min_length=1, max_length=120)
+    to_id: str = Field(min_length=1, max_length=120)
     mode: Literal["air", "rail", "road"]
     travel_h: float = Field(gt=0, le=200)
     frequency_per_week: int | None = Field(default=None, ge=1, le=28, strict=True)
@@ -52,6 +52,13 @@ class CityPairChangeResponse(Response):
     to_city: str
     baseline_h: float | None
     changed_h: float
+
+
+class SettlementImpactResponse(Response):
+    point_id: str
+    baseline_index: float
+    changed_index: float
+    delta_index: float
 
 
 class RegionImpactResponse(Response):
@@ -74,3 +81,4 @@ class ScenarioEvaluationResponse(Response):
     improved_city_pairs: int
     city_pairs: tuple[CityPairChangeResponse, ...]
     regions: tuple[RegionImpactResponse, ...]
+    settlements: tuple[SettlementImpactResponse, ...]

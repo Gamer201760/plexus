@@ -62,6 +62,7 @@ def model() -> ScenarioModel:
         CITY,
         POPULATION,
         REGION_IDX,
+        {"p1": 0, "p2": 1, "p3": 2, "p4": 3},
         access,
         population_mean(access, POPULATION, REGION_IDX, 2),
         np.bincount(REGION_IDX, weights=POPULATION, minlength=2),
@@ -125,6 +126,7 @@ def test_isolated_point_stays_isolated() -> None:
     "link",
     [
         NewTrunkLink("X", "Q", "air", 1.0, 7),
+        NewTrunkLink("p3", "p3", "road", 1.0),
         NewTrunkLink("X", "X", "air", 1.0, 7),
         NewTrunkLink("X", "Y", "teleport", 1.0),
         NewTrunkLink("X", "Y", "air", 0.0, 7),
@@ -145,3 +147,41 @@ def test_empty_links_are_rejected_and_unknown_frequency_is_assumed() -> None:
     weight, notes = link_weight(NewTrunkLink("X", "Y", "air", 1.0))
     assert weight == pytest.approx(1.0 + 84.0 + 2.5)
     assert "assumed_frequency:X-Y:1" in notes
+
+
+def test_settlement_link_connects_isolated_point_exactly() -> None:
+    subject = model()
+    result = evaluate(subject, (NewTrunkLink("p3", "X", "air", 2.0, 14),))
+    weight = 2.0 + 6.0 + 2.5
+    row = weight + CITY[0]
+    expected_access = float(np.exp(-BETA_PER_H * row) @ MARKETS)
+    reference = subject.point_access.copy()
+    reference[2] = expected_access
+    scale = 100.0 / subject.normalization_base
+    reference_region = population_mean(reference, POPULATION, REGION_IDX, 2)
+    by_id = {impact.region_id: impact for impact in result.regions}
+    assert by_id["02"].changed_index == pytest.approx(reference_region[1] * scale)
+    assert by_id["01"].delta_index == pytest.approx(0.0)
+    assert result.improved_city_pairs == 0
+    assert "settlement_links_serve_named_endpoints_only" in result.assumptions
+
+
+def test_settlement_chain_relaxes_through_other_settlement() -> None:
+    subject = model()
+    links = (
+        NewTrunkLink("p3", "p1", "road", 1.0),
+        NewTrunkLink("p1", "X", "road", 0.5),
+    )
+    result = evaluate(subject, links)
+    row_p1 = np.minimum((ROAD[0].astype(np.float64)[:, None] + CITY).min(axis=0), 0.5 + CITY[0])
+    row_p3 = 1.0 + row_p1
+    reference = subject.point_access.copy()
+    reference[0] = float(np.exp(-BETA_PER_H * row_p1) @ MARKETS)
+    reference[2] = float(np.exp(-BETA_PER_H * row_p3) @ MARKETS)
+    scale = 100.0 / subject.normalization_base
+    reference_region = population_mean(reference, POPULATION, REGION_IDX, 2)
+    by_id = {impact.region_id: impact for impact in result.regions}
+    for index, region in enumerate(REGIONS):
+        assert by_id[region.region_id].changed_index == pytest.approx(
+            reference_region[index] * scale
+        )

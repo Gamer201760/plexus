@@ -31,8 +31,8 @@ def build_scenarios_router(queries: ScenarioQueries) -> APIRouter:
             request.artifact_version,
             tuple(
                 NewTrunkLink(
-                    link.from_city,
-                    link.to_city,
+                    link.from_id,
+                    link.to_id,
                     link.mode,
                     link.travel_h,
                     link.frequency_per_week,

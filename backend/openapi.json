@@ -2985,6 +2985,13 @@
             },
             "type": "array",
             "title": "Regions"
+          },
+          "settlements": {
+            "items": {
+              "$ref": "#/components/schemas/SettlementImpactResponse"
+            },
+            "type": "array",
+            "title": "Settlements"
           }
         },
         "type": "object",
@@ -2998,7 +3005,8 @@
           "national_changed_index",
           "improved_city_pairs",
           "city_pairs",
-          "regions"
+          "regions",
+          "settlements"
         ],
         "title": "ScenarioEvaluationResponse"
       },
@@ -3120,6 +3128,34 @@
           "population"
         ],
         "title": "SettlementHitResponse"
+      },
+      "SettlementImpactResponse": {
+        "properties": {
+          "point_id": {
+            "type": "string",
+            "title": "Point Id"
+          },
+          "baseline_index": {
+            "type": "number",
+            "title": "Baseline Index"
+          },
+          "changed_index": {
+            "type": "number",
+            "title": "Changed Index"
+          },
+          "delta_index": {
+            "type": "number",
+            "title": "Delta Index"
+          }
+        },
+        "type": "object",
+        "required": [
+          "point_id",
+          "baseline_index",
+          "changed_index",
+          "delta_index"
+        ],
+        "title": "SettlementImpactResponse"
       },
       "SettlementPageResponse": {
         "properties": {
@@ -3310,17 +3346,17 @@
       },
       "TrunkLinkRequest": {
         "properties": {
-          "from_city": {
+          "from_id": {
             "type": "string",
             "maxLength": 120,
             "minLength": 1,
-            "title": "From City"
+            "title": "From Id"
           },
-          "to_city": {
+          "to_id": {
             "type": "string",
             "maxLength": 120,
             "minLength": 1,
-            "title": "To City"
+            "title": "To Id"
           },
           "mode": {
             "type": "string",
@@ -3354,8 +3390,8 @@
         "additionalProperties": false,
         "type": "object",
         "required": [
-          "from_city",
-          "to_city",
+          "from_id",
+          "to_id",
           "mode",
           "travel_h"
         ],

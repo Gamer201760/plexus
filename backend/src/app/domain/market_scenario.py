@@ -11,6 +11,7 @@ SCHEDULED_TRUNK_MODES = frozenset({"air", "rail"})
 WEEKLY_WAIT_H = 84.0
 ASSUMED_FREQUENCY_PER_WEEK = 1
 MAX_PAIR_CHANGES = 30
+SETTLEMENT_LINK_NOTE = "settlement_links_serve_named_endpoints_only"
 
 
 @dataclass(frozen=True, slots=True)
@@ -52,6 +53,7 @@ class ScenarioModel:
     city_best_h: NDArray[np.float64]
     population: NDArray[np.float64]
     region_idx: NDArray[np.int32]
+    point_index: dict[str, int]
     point_access: NDArray[np.float64]
     region_access: NDArray[np.float64]
     region_population: NDArray[np.float64]
@@ -59,8 +61,8 @@ class ScenarioModel:
 
 @dataclass(frozen=True, slots=True)
 class NewTrunkLink:
-    from_city: str
-    to_city: str
+    from_id: str
+    to_id: str
     mode: str
     travel_h: float
     frequency_per_week: int | None = None
@@ -72,6 +74,14 @@ class CityPairChange:
     to_city: str
     baseline_h: float | None
     changed_h: float
+
+
+@dataclass(frozen=True, slots=True)
+class SettlementImpact:
+    point_id: str
+    baseline_index: float
+    changed_index: float
+    delta_index: float
 
 
 @dataclass(frozen=True, slots=True)
@@ -96,6 +106,7 @@ class ScenarioEvaluation:
     improved_city_pairs: int
     city_pairs: tuple[CityPairChange, ...]
     regions: tuple[RegionImpact, ...]
+    settlements: tuple[SettlementImpact, ...]
 
 
 def finite_hours(best: NDArray[np.float32] | NDArray[np.float64]) -> NDArray[np.float64]:
@@ -136,32 +147,94 @@ def link_weight(link: NewTrunkLink) -> tuple[float, tuple[str, ...]]:
     notes: tuple[str, ...] = ("uniform_headways_random_need",)
     if frequency is None:
         frequency = ASSUMED_FREQUENCY_PER_WEEK
-        notes = (*notes, f"assumed_frequency:{link.from_city}-{link.to_city}:{frequency}")
+        notes = (*notes, f"assumed_frequency:{link.from_id}-{link.to_id}:{frequency}")
     elif type(frequency) is not int or not 1 <= frequency <= 28:
         raise InvalidQuery("Frequency must be an integer from 1 to 28")
     waiting = WEEKLY_WAIT_H / frequency
     return float(link.travel_h) + waiting + TRUNK_OVERHEAD_H[link.mode], notes
 
 
-def changed_city_matrix(
+@dataclass(frozen=True, slots=True)
+class ResolvedLink:
+    from_point: int | None
+    from_city: int | None
+    to_point: int | None
+    to_city: int | None
+    weight: float
+
+
+def resolve_links(
     model: ScenarioModel, links: tuple[NewTrunkLink, ...]
-) -> tuple[NDArray[np.float64], tuple[str, ...]]:
+) -> tuple[tuple[ResolvedLink, ...], tuple[str, ...]]:
     position = {city.id: index for index, city in enumerate(model.cities)}
-    matrix = model.city_best_h.copy()
+    resolved = []
     notes: list[str] = []
     for link in links:
-        source, target = position.get(link.from_city), position.get(link.to_city)
-        if source is None or target is None:
-            raise InvalidQuery("Unknown market city")
-        if source == target:
-            raise InvalidQuery("Link endpoints must be distinct market cities")
+        if link.from_id == link.to_id:
+            raise InvalidQuery("Link endpoints must be distinct")
+        ends: list[tuple[int | None, int | None]] = []
+        for identifier in (link.from_id, link.to_id):
+            city = position.get(identifier)
+            if city is not None:
+                ends.append((None, city))
+                continue
+            point = model.point_index.get(identifier)
+            if point is None:
+                raise InvalidQuery("Unknown market city or settlement")
+            ends.append((point, None))
         weight, link_notes = link_weight(link)
-        matrix[source, target] = min(matrix[source, target], weight)
-        matrix[target, source] = min(matrix[target, source], weight)
         notes.extend(link_notes)
+        resolved.append(ResolvedLink(ends[0][0], ends[0][1], ends[1][0], ends[1][1], weight))
+    if any(item.from_point is not None or item.to_point is not None for item in resolved):
+        notes.append(SETTLEMENT_LINK_NOTE)
+    return tuple(resolved), tuple(sorted(set(notes)))
+
+
+def changed_city_matrix(
+    model: ScenarioModel, links: tuple[ResolvedLink, ...]
+) -> NDArray[np.float64]:
+    matrix = model.city_best_h.copy()
+    for link in links:
+        if link.from_city is None or link.to_city is None:
+            continue
+        source, target = link.from_city, link.to_city
+        matrix[source, target] = min(matrix[source, target], link.weight)
+        matrix[target, source] = min(matrix[target, source], link.weight)
     for k in range(len(model.cities)):
         np.minimum(matrix, matrix[:, k, None] + matrix[None, k, :], out=matrix)
-    return matrix, tuple(sorted(set(notes)))
+    return matrix
+
+
+def point_rows(
+    model: ScenarioModel, matrix: NDArray[np.float64], links: tuple[ResolvedLink, ...]
+) -> dict[int, NDArray[np.float64]]:
+    rows: dict[int, NDArray[np.float64]] = {}
+    for link in links:
+        for point in (link.from_point, link.to_point):
+            if point is not None and point not in rows:
+                rows[point] = (finite_hours(model.road_h[point])[:, None] + matrix).min(axis=0)
+    settlement_links = [
+        link for link in links if link.from_point is not None or link.to_point is not None
+    ]
+    for _ in range(len(settlement_links) + 1):
+        changed = False
+        for link in settlement_links:
+            sides = ((link.from_point, link.from_city), (link.to_point, link.to_city))
+            for (target, _), (source_point, source_city) in (sides, sides[::-1]):
+                if target is None:
+                    continue
+                if source_point is not None:
+                    source_row = rows[source_point]
+                else:
+                    assert source_city is not None
+                    source_row = matrix[source_city]
+                candidate = link.weight + source_row
+                if bool((candidate < rows[target] - 1e-9).any()):
+                    rows[target] = np.minimum(rows[target], candidate)
+                    changed = True
+        if not changed:
+            break
+    return rows
 
 
 def pair_changes(
@@ -188,7 +261,8 @@ def pair_changes(
 def evaluate(model: ScenarioModel, links: tuple[NewTrunkLink, ...]) -> ScenarioEvaluation:
     if not links:
         raise InvalidQuery("At least one new link is required")
-    matrix, notes = changed_city_matrix(model, links)
+    resolved, notes = resolve_links(model, links)
+    matrix = changed_city_matrix(model, resolved)
     improved = matrix < model.city_best_h - 1e-9
     market_population = np.array([city.population for city in model.cities], dtype=np.float64)
     access = model.point_access.copy()
@@ -204,7 +278,20 @@ def evaluate(model: ScenarioModel, links: tuple[NewTrunkLink, ...]) -> ScenarioE
         access += market_population[j] * (
             np.exp(-BETA_PER_H * changed_j) - np.exp(-BETA_PER_H * baseline_j)
         )
+    settlements = []
     scale = 100.0 / model.normalization_base
+    rows = point_rows(model, matrix, resolved)
+    point_labels = {row: name for name, row in model.point_index.items()} if rows else {}
+    for point, row in rows.items():
+        access[point] = float(np.exp(-BETA_PER_H * row) @ market_population)
+        settlements.append(
+            SettlementImpact(
+                point_labels[point],
+                float(model.point_access[point] * scale),
+                float(access[point] * scale),
+                float((access[point] - model.point_access[point]) * scale),
+            )
+        )
     region_access = population_mean(access, model.population, model.region_idx, len(model.regions))
     regions = tuple(
         RegionImpact(
@@ -230,4 +317,5 @@ def evaluate(model: ScenarioModel, links: tuple[NewTrunkLink, ...]) -> ScenarioE
         improved_pairs,
         changes,
         regions,
+        tuple(sorted(settlements, key=lambda impact: -impact.delta_index)),
     )
