@@ -2,16 +2,13 @@ import numpy as np
 import pytest
 
 from app.domain.errors import InvalidQuery
+from app.domain.market_evaluation import evaluate, link_weight, point_access, population_mean
 from app.domain.market_scenario import (
     BETA_PER_H,
     MarketCity,
     NewTrunkLink,
     ScenarioModel,
     ScenarioRegion,
-    evaluate,
-    link_weight,
-    point_access,
-    population_mean,
 )
 
 CITIES = (

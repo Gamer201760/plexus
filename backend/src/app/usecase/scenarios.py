@@ -1,10 +1,6 @@
 from app.domain.errors import DomainError, InvalidQuery
-from app.domain.market_scenario import (
-    NewTrunkLink,
-    ScenarioCatalog,
-    ScenarioEvaluation,
-    evaluate,
-)
+from app.domain.market_evaluation import evaluate
+from app.domain.market_scenario import NewTrunkLink, ScenarioCatalog, ScenarioEvaluation
 from app.usecase.interface.scenarios import ScenarioRepository
 
 

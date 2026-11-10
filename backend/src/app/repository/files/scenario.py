@@ -6,14 +6,8 @@ from threading import RLock
 import numpy as np
 
 from app.domain.errors import DataUnavailable
-from app.domain.market_scenario import (
-    MarketCity,
-    ScenarioCatalog,
-    ScenarioModel,
-    ScenarioRegion,
-    point_access,
-    population_mean,
-)
+from app.domain.market_evaluation import point_access, population_mean
+from app.domain.market_scenario import MarketCity, ScenarioCatalog, ScenarioModel, ScenarioRegion
 
 FILES = (
     "road_h.npy",
