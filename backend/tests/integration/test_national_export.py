@@ -17,9 +17,7 @@ from app.settings import Settings
         ("winter", "multimodal", "winter"),
     ],
 )
-def test_api_selects_exported_scenario_and_coverage(
-    season: str, mode: str, scenario: str
-) -> None:
+def test_api_selects_exported_scenario_and_coverage(season: str, mode: str, scenario: str) -> None:
     settings = Settings()
     rows = json.loads((settings.data_dir / "indices.json").read_text())
     expected = next(

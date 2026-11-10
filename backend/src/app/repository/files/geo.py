@@ -37,7 +37,9 @@ def _polygons(geometry: Json) -> list[GeoPolygon]:
     shape = obj(geometry)
     coordinates = shape.get("coordinates")
     multi = isinstance(coordinates, list) and shape.get("type") == "MultiPolygon"
-    raw: list[Json] = list(coordinates) if multi and isinstance(coordinates, list) else [coordinates]
+    raw: list[Json] = (
+        list(coordinates) if multi and isinstance(coordinates, list) else [coordinates]
+    )
     polygons: list[GeoPolygon] = []
     for polygon in raw:
         if not isinstance(polygon, list):
