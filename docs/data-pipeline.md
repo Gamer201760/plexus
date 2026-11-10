@@ -23,6 +23,15 @@ OSM распространяется по [ODbL](https://www.openstreetmap.org/c
 Манифесты под `data/` относятся к полным локальным входам. Краткие манифесты и протоколы
 результата поставляются в `docs/results/`; сырые PBF и DuckDB в Git не включены.
 
+Готовые `data/graph_ru/` и `data/casechamp.duckdb` опубликованы с SHA-256 в релизе
+[`data-20261107`](https://github.com/GoatWhistle/casechamp/releases/tag/data-20261107);
+скачивание избавляет от пересборки графа и матрицы времён:
+
+```bash
+gh release download data-20261107 -R GoatWhistle/casechamp -D data
+tar -xf data/graph_ru.tar -C data && rm data/graph_ru.tar
+```
+
 ## Как восстановить национальный слой?
 
 Нужны Python 3.12, uv, сеть для исходников и свободное место под граф/базу. Граф содержит
