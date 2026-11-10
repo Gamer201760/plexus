@@ -122,6 +122,7 @@ def export_season(con, season, cities, region_ids, out_dir):
     np.save(season_dir / "city_best_h.npy", F)
     np.save(season_dir / "population.npy", population)
     np.save(season_dir / "region_idx.npy", region_idx)
+    np.save(season_dir / "point_id.npy", np.asarray(pts.point_id.tolist(), dtype=np.str_))
     return {"points": len(pts), "closure_gap_h": gap,
             "hansen": hansen, "population": population, "region_idx": region_idx,
             "regions": regions}
@@ -188,7 +189,7 @@ def main(database, out_dir):
             "points": result["points"], "closure_gap_h": result["closure_gap_h"],
             "files": [file_record(out_dir / season / name, out_dir)
                       for name in ("road_h.npy", "best_h.npy", "city_best_h.npy",
-                                   "population.npy", "region_idx.npy")],
+                                   "population.npy", "region_idx.npy", "point_id.npy")],
         }
         manifest["published_reference"][season] = {
             "regions_compared": reference["regions_compared"],
