@@ -9,13 +9,14 @@ import styles from "./app-header.module.css"
 interface NavItem {
   readonly to: string
   readonly icon: IconName
-  readonly label: "nav:map" | "nav:compare" | "nav:sources"
+  readonly label: "nav:map" | "nav:compare" | "nav:scenarios" | "nav:sources"
   readonly end?: boolean
 }
 
 const NAV: readonly NavItem[] = [
   { to: "/", icon: "map", label: "nav:map", end: true },
   { to: "/compare", icon: "compare", label: "nav:compare" },
+  { to: "/scenarios", icon: "route", label: "nav:scenarios" },
   { to: "/sources", icon: "database", label: "nav:sources" },
 ]
 

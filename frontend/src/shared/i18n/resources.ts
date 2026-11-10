@@ -12,6 +12,7 @@ import ruNav from "./locales/ru/nav.json"
 import ruPilot from "./locales/ru/pilot.json"
 import ruProfile from "./locales/ru/profile.json"
 import ruRegion from "./locales/ru/region.json"
+import ruScenario from "./locales/ru/scenario.json"
 import ruSeasons from "./locales/ru/seasons.json"
 import ruSources from "./locales/ru/sources.json"
 
@@ -29,6 +30,7 @@ export const NAMESPACES = [
   "pilot",
   "profile",
   "region",
+  "scenario",
   "seasons",
   "sources",
 ] as const
@@ -51,6 +53,7 @@ const ru = {
   pilot: ruPilot,
   profile: ruProfile,
   region: ruRegion,
+  scenario: ruScenario,
   seasons: ruSeasons,
   sources: ruSources,
 }

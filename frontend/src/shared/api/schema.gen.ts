@@ -293,6 +293,40 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/scenarios": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Catalog */
+        get: operations["get_catalog_api_v1_scenarios_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/scenarios/evaluate": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Evaluate Scenario */
+        post: operations["evaluate_scenario_api_v1_scenarios_evaluate_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -315,6 +349,17 @@ export interface components {
                 number,
                 number
             ][][][];
+        };
+        /** CityPairChangeResponse */
+        CityPairChangeResponse: {
+            /** From City */
+            from_city: string;
+            /** To City */
+            to_city: string;
+            /** Baseline H */
+            baseline_h: number | null;
+            /** Changed H */
+            changed_h: number;
         };
         /**
          * Confidence
@@ -410,6 +455,11 @@ export interface components {
              * @default []
              */
             changes: components["schemas"]["EdgeChangeRequest"][];
+            /**
+             * Additions
+             * @default []
+             */
+            additions: components["schemas"]["NewLinkRequest"][];
         };
         /** EvaluationResponse */
         EvaluationResponse: {
@@ -429,6 +479,8 @@ export interface components {
             assumptions: string[];
             /** Waiting Sensitivity */
             waiting_sensitivity: components["schemas"]["WaitingSensitivityResponse"][];
+            /** Additions */
+            additions: components["schemas"]["NewLinkRequest"][];
         };
         /** GeoBoundariesResponse */
         GeoBoundariesResponse: {
@@ -508,6 +560,21 @@ export interface components {
             /** Source Date */
             source_date: string | null;
         };
+        /** MarketCityResponse */
+        MarketCityResponse: {
+            /** Id */
+            id: string;
+            /** Region */
+            region: string;
+            /** Population */
+            population: number;
+            /** Latitude */
+            latitude: number;
+            /** Longitude */
+            longitude: number;
+            /** Is Capital */
+            is_capital: boolean;
+        };
         /**
          * Mode
          * @enum {string}
@@ -545,6 +612,29 @@ export interface components {
          * @enum {string}
          */
         NetworkMode: "road" | "multimodal";
+        /** NewLinkRequest */
+        NewLinkRequest: {
+            /** From Id */
+            from_id: string;
+            /** To Id */
+            to_id: string;
+            /**
+             * Mode
+             * @enum {string}
+             */
+            mode: "road" | "air" | "river" | "rail" | "scheduled_ferry" | "ferry" | "winter_road" | "ice_crossing" | "pontoon_bridge";
+            /** Travel H */
+            travel_h: number;
+            /** Seasons */
+            seasons: ("summer" | "winter")[];
+            /** Frequency Per Week */
+            frequency_per_week?: number | null;
+            /**
+             * Bidirectional
+             * @default true
+             */
+            bidirectional: boolean;
+        };
         /** OverviewResponse */
         OverviewResponse: {
             /** Regions */
@@ -702,6 +792,21 @@ export interface components {
             links_by_mode: components["schemas"]["ModeCountsResponse"][];
             economy: components["schemas"]["EconomyResponse"] | null;
         };
+        /** RegionImpactResponse */
+        RegionImpactResponse: {
+            /** Region Id */
+            region_id: string;
+            /** Name */
+            name: string;
+            /** Population */
+            population: number;
+            /** Baseline Index */
+            baseline_index: number;
+            /** Changed Index */
+            changed_index: number;
+            /** Delta Index */
+            delta_index: number;
+        };
         /** RegionRefResponse */
         RegionRefResponse: {
             /** Id */
@@ -769,6 +874,65 @@ export interface components {
             x2: number;
             /** Y2 */
             y2: number;
+        };
+        /** ScenarioCatalogResponse */
+        ScenarioCatalogResponse: {
+            /** Model Version */
+            model_version: string;
+            /** Artifact Version */
+            artifact_version: string;
+            /** Seasons */
+            seasons: string[];
+            /** Cities */
+            cities: components["schemas"]["MarketCityResponse"][];
+            /** Regions */
+            regions: components["schemas"]["ScenarioRegionResponse"][];
+            /** Assumptions */
+            assumptions: string[];
+        };
+        /** ScenarioEvaluationRequest */
+        ScenarioEvaluationRequest: {
+            /**
+             * Season
+             * @enum {string}
+             */
+            season: "road" | "summer" | "winter";
+            /** Model Version */
+            model_version: string;
+            /** Artifact Version */
+            artifact_version: string;
+            /** Links */
+            links: components["schemas"]["TrunkLinkRequest"][];
+        };
+        /** ScenarioEvaluationResponse */
+        ScenarioEvaluationResponse: {
+            /** Season */
+            season: string;
+            /** Model Version */
+            model_version: string;
+            /** Artifact Version */
+            artifact_version: string;
+            /** Links */
+            links: components["schemas"]["TrunkLinkRequest"][];
+            /** Assumptions */
+            assumptions: string[];
+            /** National Baseline Index */
+            national_baseline_index: number;
+            /** National Changed Index */
+            national_changed_index: number;
+            /** Improved City Pairs */
+            improved_city_pairs: number;
+            /** City Pairs */
+            city_pairs: components["schemas"]["CityPairChangeResponse"][];
+            /** Regions */
+            regions: components["schemas"]["RegionImpactResponse"][];
+        };
+        /** ScenarioRegionResponse */
+        ScenarioRegionResponse: {
+            /** Region Id */
+            region_id: string;
+            /** Name */
+            name: string;
         };
         /** SearchResponse */
         SearchResponse: {
@@ -856,6 +1020,22 @@ export interface components {
             note: string | null;
             /** Rows */
             rows: number | null;
+        };
+        /** TrunkLinkRequest */
+        TrunkLinkRequest: {
+            /** From City */
+            from_city: string;
+            /** To City */
+            to_city: string;
+            /**
+             * Mode
+             * @enum {string}
+             */
+            mode: "air" | "rail" | "road";
+            /** Travel H */
+            travel_h: number;
+            /** Frequency Per Week */
+            frequency_per_week?: number | null;
         };
         /** WaitingSensitivityResponse */
         WaitingSensitivityResponse: {
@@ -1540,6 +1720,95 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Conflict */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Unprocessable Entity */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+        };
+    };
+    get_catalog_api_v1_scenarios_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ScenarioCatalogResponse"];
+                };
+            };
+            /** @description Unprocessable Entity */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorResponse"];
+                };
+            };
+        };
+    };
+    evaluate_scenario_api_v1_scenarios_evaluate_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ScenarioEvaluationRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ScenarioEvaluationResponse"];
                 };
             };
             /** @description Conflict */

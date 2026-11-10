@@ -1,0 +1,17 @@
+.results {
+  display: grid;
+  gap: var(--space-20);
+  min-width: 0;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--space-16);
+}
+.note {
+  color: var(--text-secondary);
+}
+.version {
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+}
