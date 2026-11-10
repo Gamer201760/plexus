@@ -7,10 +7,11 @@ from scipy.sparse.csgraph import dijkstra
 
 from app.adapter.road_graph.baselines import BaselineCache
 from app.adapter.road_graph.data import GraphData
-from app.adapter.road_graph.delta_model import DeltaRegion, access_times
+from app.adapter.road_graph.delta_model import access_times
 from app.adapter.road_graph.delta_store import DeltaStore
 from app.adapter.road_graph.routing import minimum_csr
 from app.domain.errors import InvalidQuery
+from app.usecase.dto.road_graph import DeltaRegion
 
 
 class DeltaBase:

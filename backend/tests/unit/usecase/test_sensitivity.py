@@ -4,7 +4,7 @@ import pytest
 from tests.unit.usecase.test_atlas_usecases import FakeAtlas
 
 from app.domain.transport import NetworkMode, Season
-from app.usecase.dto import IndexRecord, RegionRecord
+from app.usecase.dto.atlas import IndexRecord, RegionRecord
 from app.usecase.sensitivity import AccessibilitySensitivity
 
 

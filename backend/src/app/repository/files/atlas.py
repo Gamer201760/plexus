@@ -19,7 +19,7 @@ from app.repository.files.mapping import (
     source_record,
     winter_road_record,
 )
-from app.usecase.dto import (
+from app.usecase.dto.atlas import (
     BoundaryShape,
     EconomyRecord,
     GeoLayer,

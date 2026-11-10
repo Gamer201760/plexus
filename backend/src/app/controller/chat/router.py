@@ -11,10 +11,11 @@ from pydantic import BaseModel, Field
 
 from app.controller.road_analysis.schemas import AnalysisResponse
 from app.domain.transport import NetworkMode, Season
-from app.usecase.chat import Chat, ChatContext, ChatMessage, ChatRequest
+from app.usecase.chat import Chat
 from app.usecase.chat_artifacts import ChatChart, ChatTable
 from app.usecase.chat_map import ChatMapCommand
-from app.usecase.road_corridor import CorridorCalculation
+from app.usecase.dto.chat import ChatContext, ChatMessage, ChatRequest
+from app.usecase.dto.road_corridor import CorridorCalculation
 
 
 class ChatMessageInput(BaseModel):

@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 from app.domain.transport import Mode, Season
 from app.usecase.index_status import IndexStatus, index_status
-from app.usecase.interface import AtlasRepository
+from app.usecase.interface.atlas import AtlasRepository
 
 UNKNOWN_SEASON = "unknown"
 

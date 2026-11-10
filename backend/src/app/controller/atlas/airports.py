@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
-from app.usecase.airports import AirportCatalog, AirportQueries
+from app.usecase.airports import AirportQueries
+from app.usecase.dto.airports import AirportCatalog
 
 
 def build_airports_router(airports: AirportQueries) -> APIRouter:

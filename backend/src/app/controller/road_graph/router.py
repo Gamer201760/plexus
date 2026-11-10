@@ -4,14 +4,8 @@ from fastapi import APIRouter
 from pydantic import BaseModel, Field
 
 from app.domain.road_economics import MoneyAssumptions
-from app.usecase.road_graph import (
-    GraphLocation,
-    RoadAddition,
-    RoadChange,
-    RoadGraph,
-    RoadJob,
-    RoadView,
-)
+from app.usecase.dto.road_graph import GraphLocation, RoadAddition, RoadChange, RoadJob, RoadView
+from app.usecase.road_graph import RoadGraph
 
 
 class RoadChangeInput(BaseModel):

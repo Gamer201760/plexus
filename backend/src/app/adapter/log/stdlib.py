@@ -1,6 +1,6 @@
 import logging
 
-from app.usecase.interface import LogValue
+from app.usecase.interface.log import LogValue
 
 
 class StdlibLogger:

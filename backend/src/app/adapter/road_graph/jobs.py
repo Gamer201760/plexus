@@ -13,8 +13,7 @@ from app.adapter.road_graph.delta_base import DeltaBase
 from app.adapter.road_graph.routing import GraphRouting
 from app.domain.errors import DataUnavailable, InvalidQuery
 from app.domain.road_economics import MoneyAssumptions
-from app.usecase.graph_snapshot import GraphSnapshot
-from app.usecase.road_graph import (
+from app.usecase.dto.road_graph import (
     GraphLocation,
     RoadAddition,
     RoadChange,
@@ -22,7 +21,8 @@ from app.usecase.road_graph import (
     RoadResult,
     RoadView,
 )
-from app.usecase.road_job_store import RoadJobStore
+from app.usecase.interface.graph_snapshot import GraphSnapshot
+from app.usecase.interface.road_graph import RoadJobStore
 
 
 class RoadJobs:

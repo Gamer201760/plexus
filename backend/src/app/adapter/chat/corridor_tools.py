@@ -5,8 +5,9 @@ from pydantic_ai import Agent, ModelRetry, RunContext
 
 from app.adapter.chat.artifacts import ChatRun
 from app.domain.errors import DomainError
-from app.usecase.chat import ChatEvent
-from app.usecase.road_corridor import CorridorCalculation, RoadCorridors
+from app.usecase.dto.chat import ChatEvent
+from app.usecase.dto.road_corridor import CorridorCalculation
+from app.usecase.road_corridor import RoadCorridors
 
 
 class CorridorTools:

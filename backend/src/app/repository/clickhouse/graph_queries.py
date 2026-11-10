@@ -1,4 +1,4 @@
-from app.usecase.graph_snapshot import GraphQuery
+from app.usecase.dto.graph_snapshot import GraphQuery
 
 QUERIES: dict[GraphQuery, str] = {
     "locations": "SELECT point_id,settlement,region,node,lon,lat,snap_km FROM plexus_graph.locations WHERE lowerUTF8(ifNull(settlement,'')) LIKE {pattern:String} AND ({region:String}='' OR region={region:String}) ORDER BY population DESC NULLS LAST LIMIT 20",

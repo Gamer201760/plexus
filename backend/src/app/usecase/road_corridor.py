@@ -1,41 +1,7 @@
-from dataclasses import dataclass
-from typing import Protocol
-
 from app.domain.errors import DataUnavailable, InvalidQuery
-from app.usecase.road_graph import RoadJob
-
-
-@dataclass(frozen=True)
-class CorridorRegion:
-    id: str
-    name: str
-
-
-@dataclass(frozen=True)
-class RoadCorridor:
-    id: str
-    road_ref: str
-    origin: str
-    destination: str
-    way_ids: list[int]
-    length_km: float
-    origin_attachment_km: float
-    destination_attachment_km: float
-    regions: list[CorridorRegion]
-    lines: list[list[list[float]]]
-    scope: str = "whole_osm_ways_on_named_road_corridor_both_directions"
-
-
-@dataclass(frozen=True)
-class CorridorCalculation:
-    corridor: RoadCorridor
-    job_ids: list[str]
-
-
-class CorridorPort(Protocol):
-    def get(self, corridor_id: str) -> RoadCorridor: ...
-    def resolve(self, road_name: str, origin: str, destination: str) -> RoadCorridor: ...
-    def close(self, corridor_id: str) -> list[RoadJob]: ...
+from app.usecase.dto.road_corridor import RoadCorridor
+from app.usecase.dto.road_graph import RoadJob
+from app.usecase.interface.road_corridor import CorridorPort
 
 
 class RoadCorridors:

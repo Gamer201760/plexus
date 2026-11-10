@@ -8,7 +8,7 @@ from pydantic_ai.exceptions import UnexpectedModelBehavior
 
 from app.adapter.chat.gateway import CodexResponsesGateway
 from app.domain.transport import NetworkMode, Season
-from app.usecase.chat import ChatContext, ChatEvent, ChatRequest
+from app.usecase.dto.chat import ChatContext, ChatEvent, ChatRequest
 
 
 def test_tool_failure_retains_diagnostic_context() -> None:

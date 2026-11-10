@@ -1,7 +1,7 @@
 import re
 
 from app.domain.transport import great_circle_km
-from app.usecase.dto import PointRecord
+from app.usecase.dto.atlas import PointRecord
 
 TRANSLITERATION = dict(zip(
     "абвгдеёжзийклмнопрстуфхцчшщъыьэюя",

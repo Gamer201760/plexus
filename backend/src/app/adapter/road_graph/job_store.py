@@ -4,7 +4,13 @@ from pathlib import Path
 
 from app.adapter.road_graph.data import VERSION
 from app.domain.road_economics import MoneyAssumptions, MoneyEffect
-from app.usecase.road_graph import RoadAddition, RoadChange, RoadJob, RoadResult, SettlementEffect
+from app.usecase.dto.road_graph import (
+    RoadAddition,
+    RoadChange,
+    RoadJob,
+    RoadResult,
+    SettlementEffect,
+)
 
 
 def restore_jobs(root: Path) -> dict[str, RoadJob]:

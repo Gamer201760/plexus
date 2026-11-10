@@ -3,8 +3,8 @@ from dataclasses import asdict, dataclass, field, replace
 
 from pydantic_ai import ModelRetry
 
-from app.usecase.chat import ChatContext, ChatEvent
 from app.usecase.chat_artifacts import ChatChart, ChatTable
+from app.usecase.dto.chat import ChatContext, ChatEvent
 
 
 @dataclass

@@ -4,8 +4,8 @@ from dataclasses import asdict
 from pydantic_ai import Agent, ModelRetry, RunContext
 
 from app.adapter.chat.artifacts import ChatRun
-from app.usecase.chat import ChatEvent
 from app.usecase.chat_map import ChatMap, MapAction
+from app.usecase.dto.chat import ChatEvent
 from app.usecase.regions import RegionQueries
 
 

@@ -9,8 +9,8 @@ from app.domain.transport import (
     is_frequency_assumed,
     runs_in_season,
 )
-from app.usecase.dto import LinkRecord, PointRecord
-from app.usecase.interface import AtlasRepository
+from app.usecase.dto.atlas import LinkRecord, PointRecord
+from app.usecase.interface.atlas import AtlasRepository
 
 
 @dataclass(frozen=True, slots=True)

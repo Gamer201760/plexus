@@ -2,7 +2,8 @@ from fastapi import APIRouter
 from pydantic import BaseModel, Field
 
 from app.controller.road_analysis.schemas import AnalysisResponse
-from app.usecase.road_analysis import AnalysisDetail, AnalysisJob, AnalysisMode, RoadAnalysis
+from app.usecase.dto.road_analysis import AnalysisDetail, AnalysisJob, AnalysisMode
+from app.usecase.road_analysis import RoadAnalysis
 
 
 class AnalysisInput(BaseModel):

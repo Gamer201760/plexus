@@ -4,8 +4,8 @@ from pathlib import Path
 
 from app.domain.errors import InvalidQuery
 from app.domain.road_analysis import SettlementImpact
-from app.usecase.dto import BoundaryShape
-from app.usecase.road_analysis import (
+from app.usecase.dto.atlas import BoundaryShape
+from app.usecase.dto.road_analysis import (
     AnalysisDetail,
     AnalysisFailure,
     AnalysisJob,

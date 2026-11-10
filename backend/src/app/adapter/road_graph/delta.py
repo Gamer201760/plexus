@@ -8,7 +8,7 @@ from app.adapter.road_graph.delta_base import DeltaBase
 from app.adapter.road_graph.delta_model import access_times
 from app.domain.errors import InvalidQuery
 from app.domain.road_economics import MoneyAssumptions, time_savings
-from app.usecase.road_graph import RoadAddition, RoadResult, SettlementEffect
+from app.usecase.dto.road_graph import RoadAddition, RoadResult, SettlementEffect
 
 
 def added_edge_distances(

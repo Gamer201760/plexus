@@ -3,7 +3,7 @@ from pathlib import Path
 import duckdb
 
 from app.repository.files.atlas import JsonAtlasRepository
-from app.usecase.dto import IndexRecord
+from app.usecase.dto.atlas import IndexRecord
 
 
 class SnapshotAtlasRepository(JsonAtlasRepository):

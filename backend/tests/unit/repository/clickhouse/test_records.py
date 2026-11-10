@@ -1,8 +1,8 @@
 from dataclasses import asdict
 
 from app.repository.clickhouse.records import decode, encode
-from app.usecase.dto import BoundaryShape
-from app.usecase.road_graph import RoadAddition, RoadJob, RoadResult
+from app.usecase.dto.atlas import BoundaryShape
+from app.usecase.dto.road_graph import RoadAddition, RoadJob, RoadResult
 
 
 def test_optional_coordinates_distinguish_absence_from_empty_geometry() -> None:

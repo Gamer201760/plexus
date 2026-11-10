@@ -5,7 +5,8 @@ from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
 from app.controller.chat.router import build_chat_router
-from app.usecase.chat import Chat, ChatEvent, ChatRequest
+from app.usecase.chat import Chat
+from app.usecase.dto.chat import ChatEvent, ChatRequest
 
 
 class RecordingProvider:

@@ -1,5 +1,5 @@
 from app.repository.clickhouse.atlas import ClickHouseAtlasRepository
-from app.usecase.airports import Airport, AirportCatalog
+from app.usecase.dto.airports import Airport, AirportCatalog
 
 
 class ClickHouseAirportRepository:

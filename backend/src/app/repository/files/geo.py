@@ -3,7 +3,7 @@ from pathlib import Path
 
 from app.domain.projection import VIEW_BOX, SvgFrame, lambert
 from app.repository.files.json_values import Json, obj, objects, read_json, text
-from app.usecase.dto import BoundaryShape, GeoLayer, GeoPolygon, GeoRing, RegionShape
+from app.usecase.dto.atlas import BoundaryShape, GeoLayer, GeoPolygon, GeoRing, RegionShape
 
 BOUNDARIES = "geo/regions.json"
 REGION_PATHS = "geo/region-paths.json"

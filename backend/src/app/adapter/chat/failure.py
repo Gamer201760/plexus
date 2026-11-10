@@ -2,7 +2,7 @@ from pydantic_ai import ModelRetry
 
 from app.adapter.log.stdlib import StdlibLogger
 from app.domain.errors import DomainError
-from app.usecase.chat import ChatEvent
+from app.usecase.dto.chat import ChatEvent
 
 
 def chat_failure(error: BaseException, code: str, stage: str) -> ChatEvent:

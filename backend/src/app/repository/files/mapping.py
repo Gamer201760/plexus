@@ -1,7 +1,7 @@
 from app.domain.projection import SvgFrame
 from app.domain.transport import Confidence, Mode, Season
 from app.repository.files.json_values import JsonObject, integer, number, text
-from app.usecase.dto import (
+from app.usecase.dto.atlas import (
     EconomyRecord,
     IndexRecord,
     LinkRecord,

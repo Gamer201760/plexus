@@ -7,7 +7,7 @@ from typing import Any
 import numpy as np
 
 from app.adapter.road_graph.baselines import BaselineCache
-from app.adapter.road_graph.delta_model import DeltaRegion
+from app.usecase.dto.road_graph import DeltaRegion
 
 
 class DeltaStore:

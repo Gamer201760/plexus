@@ -15,7 +15,7 @@ from app.controller.atlas.schemas import (
     SeasonCountsResponse,
     SettlementResponse,
 )
-from app.usecase.dto import SettlementRecord
+from app.usecase.dto.atlas import SettlementRecord
 from app.usecase.index_status import IndexStatus
 from app.usecase.links import Endpoint, LinkView, RouteView
 from app.usecase.overview import Overview

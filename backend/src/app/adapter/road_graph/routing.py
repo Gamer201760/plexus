@@ -7,7 +7,7 @@ from scipy.sparse.csgraph import dijkstra, floyd_warshall
 
 from app.adapter.road_graph.data import GraphData
 from app.domain.road_analysis import SettlementAccess
-from app.usecase.road_graph import RoadAddition, RoadChange
+from app.usecase.dto.road_graph import RoadAddition, RoadChange
 
 
 def minimum_csr(src: Any, dst: Any, weights: Any, count: int) -> Any:

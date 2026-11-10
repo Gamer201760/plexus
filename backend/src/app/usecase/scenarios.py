@@ -1,13 +1,11 @@
-from typing import Protocol
-
 from app.domain.errors import DomainError, InvalidQuery
 from app.domain.market_scenario import (
     NewTrunkLink,
     ScenarioCatalog,
     ScenarioEvaluation,
-    ScenarioModel,
     evaluate,
 )
+from app.usecase.interface.scenarios import ScenarioRepository
 
 
 class StaleScenarioVersion(DomainError):
@@ -15,10 +13,6 @@ class StaleScenarioVersion(DomainError):
     message = "Reload the current scenario catalog"
 
 
-class ScenarioRepository(Protocol):
-    def catalog(self) -> ScenarioCatalog: ...
-
-    def model(self, season: str) -> ScenarioModel: ...
 
 
 class ScenarioQueries:

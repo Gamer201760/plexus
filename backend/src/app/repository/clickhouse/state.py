@@ -5,9 +5,9 @@ from app.domain.errors import InvalidQuery
 from app.repository.clickhouse.client import ClickHouseReader
 from app.repository.clickhouse.records import columns, decode, encode
 from app.repository.clickhouse.writer import ClickHouseWriter
-from app.usecase.dto import BoundaryShape
-from app.usecase.road_analysis import AnalysisDetail, AnalysisJob
-from app.usecase.road_graph import RoadJob
+from app.usecase.dto.atlas import BoundaryShape
+from app.usecase.dto.road_analysis import AnalysisDetail, AnalysisJob
+from app.usecase.dto.road_graph import RoadJob
 
 
 @dataclass(frozen=True)

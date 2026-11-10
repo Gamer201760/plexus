@@ -7,8 +7,8 @@ from scipy.sparse.csgraph import dijkstra
 from app.adapter.road_analysis.geometry import region_edges
 from app.adapter.road_analysis.topology import bridge_exposure
 from app.adapter.road_graph.delta_base import DeltaBase
-from app.usecase.dto import BoundaryShape
-from app.usecase.road_analysis import AnalysisMode, Candidate
+from app.usecase.dto.atlas import BoundaryShape
+from app.usecase.dto.road_analysis import AnalysisMode, Candidate
 
 
 def interleave(first: list[Candidate], second: list[Candidate]) -> list[Candidate]:

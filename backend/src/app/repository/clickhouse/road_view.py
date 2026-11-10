@@ -1,7 +1,7 @@
 from functools import cached_property
 
 from app.repository.clickhouse.client import ClickHouseReader
-from app.usecase.road_graph import RoadSegment, RoadView
+from app.usecase.dto.road_graph import RoadSegment, RoadView
 
 BOUNDS = """min_lon <= {east:Float64} AND max_lon >= {west:Float64}
     AND min_lat <= {north:Float64} AND max_lat >= {south:Float64}

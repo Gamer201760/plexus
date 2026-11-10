@@ -8,8 +8,9 @@ import numpy as np
 
 from app.adapter.road_graph.view_geometry import road_segments
 from app.domain.errors import DataUnavailable, InvalidQuery
-from app.usecase.graph_snapshot import GraphParameters, GraphQuery, GraphSnapshot
-from app.usecase.road_graph import GraphLocation, RoadView
+from app.usecase.dto.graph_snapshot import GraphParameters, GraphQuery
+from app.usecase.dto.road_graph import GraphLocation, RoadView
+from app.usecase.interface.graph_snapshot import GraphSnapshot
 
 VERSION = "data-20261107"
 

@@ -1,9 +1,9 @@
 import re
 from dataclasses import dataclass, replace
 
-from app.usecase.dto import BoundaryShape, RegionShape, SourceRecord, WinterRoadRecord
+from app.usecase.dto.atlas import BoundaryShape, RegionShape, SourceRecord, WinterRoadRecord
 from app.usecase.index_status import IndexStatus, index_status
-from app.usecase.interface import AtlasRepository
+from app.usecase.interface.atlas import AtlasRepository
 
 
 @dataclass(frozen=True, slots=True)

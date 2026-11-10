@@ -3,7 +3,7 @@ from typing import Any, Literal
 from app.domain.errors import DataUnavailable
 from app.repository.clickhouse.client import ClickHouseReader
 from app.repository.clickhouse.graph_queries import ARRAYS, QUERIES
-from app.usecase.graph_snapshot import GraphParameters, GraphQuery
+from app.usecase.dto.graph_snapshot import GraphParameters, GraphQuery
 
 
 class ClickHouseGraphSnapshot:

@@ -6,8 +6,8 @@ from pydantic_ai import RunContext
 from app.adapter.chat.analysis_tools import AnalysisTools
 from app.adapter.chat.artifacts import ChatRun
 from app.domain.transport import NetworkMode, Season
-from app.usecase.chat import ChatContext
-from app.usecase.road_analysis import AnalysisJob
+from app.usecase.dto.chat import ChatContext
+from app.usecase.dto.road_analysis import AnalysisJob
 
 
 def test_start_emits_inline_analysis_instead_of_navigation_url() -> None:

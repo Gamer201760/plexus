@@ -1,4 +1,4 @@
-from typing import Any, Literal, Protocol
+from typing import Literal
 
 GraphQuery = Literal[
     "locations",
@@ -29,13 +29,6 @@ GraphQuery = Literal[
     "model_version",
     "manual_v2",
 ]
+
+
 type GraphParameters = dict[str, str | int | float | list[int] | list[str]]
-
-
-class GraphSnapshot(Protocol):
-    @property
-    def revision(self) -> str: ...
-    def arrays(self, name: Literal["edges", "nodes", "ranks", "seasons"]) -> dict[str, Any]: ...
-    def read(
-        self, query: GraphQuery, parameters: GraphParameters | None = None
-    ) -> list[tuple[Any, ...]]: ...

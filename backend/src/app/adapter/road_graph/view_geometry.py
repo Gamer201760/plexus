@@ -4,7 +4,7 @@ from typing import Any
 
 import numpy as np
 
-from app.usecase.road_graph import RoadSegment
+from app.usecase.dto.road_graph import RoadSegment
 
 
 def chains(edges: set[tuple[int, int]]) -> Iterator[list[int]]:

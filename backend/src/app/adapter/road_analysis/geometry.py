@@ -3,7 +3,7 @@ from typing import Any
 
 import numpy as np
 
-from app.usecase.dto import GeoPolygon, GeoRing
+from app.usecase.dto.atlas import GeoPolygon, GeoRing
 
 
 def inside_ring(x: Any, y: Any, ring: GeoRing) -> Any:

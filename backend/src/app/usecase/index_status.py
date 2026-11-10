@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from enum import StrEnum
 
 from app.domain.transport import NetworkMode, Season
-from app.usecase.dto import IndexRecord
+from app.usecase.dto.atlas import IndexRecord
 
 FORMULA = "A_i = Σ M_j × exp(−β × t_ij)"
 HALF_LIFE_HOURS = 2

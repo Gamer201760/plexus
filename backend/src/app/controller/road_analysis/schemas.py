@@ -1,6 +1,6 @@
 from pydantic import BaseModel, ConfigDict
 
-from app.usecase.road_analysis import AnalysisFailure, AnalysisMode, Candidate, VerifiedRoad
+from app.usecase.dto.road_analysis import AnalysisFailure, AnalysisMode, Candidate, VerifiedRoad
 
 
 class AnalysisResponse(BaseModel):

@@ -4,7 +4,7 @@ import pytest
 
 from app.domain.errors import InvalidQuery, LinkNotFound, RegionNotFound
 from app.domain.transport import Confidence, Mode, Season
-from app.usecase.dto import (
+from app.usecase.dto.atlas import (
     BoundaryShape,
     EconomyRecord,
     GeoLayer,

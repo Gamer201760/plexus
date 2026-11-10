@@ -1,6 +1,6 @@
 from typing import Protocol
 
-from app.usecase.dto import (
+from app.usecase.dto.atlas import (
     BoundaryShape,
     EconomyRecord,
     GeoLayer,
@@ -13,18 +13,6 @@ from app.usecase.dto import (
     SourceRecord,
     WinterRoadRecord,
 )
-
-type LogValue = str | int | float | bool | None
-
-
-class Logger(Protocol):
-    def info(self, event: str, **fields: LogValue) -> None: ...
-
-    def warning(self, event: str, **fields: LogValue) -> None: ...
-
-    def error(
-        self, event: str, *, exc: BaseException | None = None, **fields: LogValue
-    ) -> None: ...
 
 
 class AtlasRepository(Protocol):

@@ -1,42 +1,10 @@
-from dataclasses import dataclass
 from functools import cached_property
-from typing import Protocol
 
 from app.domain.transport import Mode
 from app.usecase.airport_matching import airport_distance, place_key
-from app.usecase.interface import AtlasRepository
-
-
-@dataclass(frozen=True)
-class Airport:
-    id: str
-    name: str
-    municipality: str
-    iata: str
-    latitude: float
-    longitude: float
-    scheduled: bool
-    kind: str
-
-
-@dataclass(frozen=True)
-class AirportAssignment:
-    point_id: str
-    airport_id: str
-    distance_km: float
-    method: str = "nearest_scheduled_airport_within_150km"
-
-
-@dataclass(frozen=True)
-class AirportCatalog:
-    airports: list[Airport]
-    assignments: list[AirportAssignment]
-    source_url: str
-    retrieved_at: str
-
-
-class AirportRepository(Protocol):
-    def catalog(self) -> AirportCatalog: ...
+from app.usecase.dto.airports import AirportAssignment, AirportCatalog
+from app.usecase.interface.airports import AirportRepository
+from app.usecase.interface.atlas import AtlasRepository
 
 
 class AirportQueries:

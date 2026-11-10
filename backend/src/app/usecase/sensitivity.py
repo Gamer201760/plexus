@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from app.domain.errors import DataUnavailable, RegionNotFound
 from app.domain.transport import NetworkMode, Season
 from app.usecase.index_status import resolved_scenario
-from app.usecase.interface import AtlasRepository
+from app.usecase.interface.atlas import AtlasRepository
 
 
 @dataclass(frozen=True, slots=True)

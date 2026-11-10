@@ -7,8 +7,8 @@ import pytest
 
 from app.adapter.road_graph.data import GraphData
 from app.adapter.road_graph.routing import GraphRouting
-from app.usecase.graph_snapshot import GraphParameters, GraphQuery
-from app.usecase.road_graph import RoadChange
+from app.usecase.dto.graph_snapshot import GraphParameters, GraphQuery
+from app.usecase.dto.road_graph import RoadChange
 
 
 class Snapshot:

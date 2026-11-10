@@ -3,7 +3,7 @@ from pathlib import Path
 import duckdb
 
 from app.repository.files.snapshot import SnapshotAtlasRepository
-from app.usecase.dto import RegionRecord
+from app.usecase.dto.atlas import RegionRecord
 
 
 class SnapshotWithShortName(SnapshotAtlasRepository):

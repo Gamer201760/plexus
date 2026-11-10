@@ -5,8 +5,8 @@ from pydantic_ai import ModelRetry
 
 from app.adapter.chat.artifacts import ChatRun
 from app.domain.transport import NetworkMode, Season
-from app.usecase.chat import ChatContext
 from app.usecase.chat_artifacts import ChatColumn, ChatTable
+from app.usecase.dto.chat import ChatContext
 
 
 def test_chart_reuses_table_values_and_rejects_unknown_columns() -> None:

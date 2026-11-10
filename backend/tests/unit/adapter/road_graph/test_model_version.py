@@ -7,7 +7,7 @@ import pytest
 from app.adapter.road_graph.data import GraphData
 from app.adapter.road_graph.delta_base import DeltaBase
 from app.adapter.road_graph.routing import GraphRouting
-from app.usecase.graph_snapshot import GraphParameters, GraphQuery
+from app.usecase.dto.graph_snapshot import GraphParameters, GraphQuery
 
 
 class ModernSnapshot:

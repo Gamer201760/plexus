@@ -9,8 +9,8 @@ from app.adapter.road_corridor.blocks import corridor_pairs
 from app.adapter.road_graph.jobs import RoadJobs
 from app.adapter.road_graph.routing import minimum_csr
 from app.domain.errors import InvalidQuery
-from app.usecase.road_corridor import CorridorRegion, RoadCorridor
-from app.usecase.road_graph import RoadChange, RoadJob
+from app.usecase.dto.road_corridor import CorridorRegion, RoadCorridor
+from app.usecase.dto.road_graph import RoadChange, RoadJob
 
 
 def normalized(value: str) -> str:

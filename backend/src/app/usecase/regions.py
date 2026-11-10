@@ -4,9 +4,9 @@ from dataclasses import dataclass
 from app.domain.errors import RegionNotFound
 from app.domain.projection import path_bbox
 from app.domain.transport import Mode, NetworkMode, Season, runs_in_season
-from app.usecase.dto import EconomyRecord, LinkRecord, RegionRecord
+from app.usecase.dto.atlas import EconomyRecord, LinkRecord, RegionRecord
 from app.usecase.index_status import hansen_by_region, resolved_scenario
-from app.usecase.interface import AtlasRepository
+from app.usecase.interface.atlas import AtlasRepository
 
 
 @dataclass(frozen=True, slots=True)

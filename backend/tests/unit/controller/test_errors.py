@@ -7,7 +7,7 @@ from pydantic import BaseModel
 
 from app.controller.errors import ErrorHandlers
 from app.domain.errors import DataUnavailable, DomainError, InvalidQuery, RegionNotFound
-from app.usecase.interface import LogValue
+from app.usecase.interface.log import LogValue
 
 
 @dataclass

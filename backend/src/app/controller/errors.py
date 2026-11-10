@@ -13,7 +13,7 @@ from app.domain.errors import (
     LinkNotFound,
     RegionNotFound,
 )
-from app.usecase.interface import Logger
+from app.usecase.interface.log import Logger
 from app.usecase.scenarios import StaleScenarioVersion
 
 STATUS_BY_ERROR: dict[type[DomainError], HTTPStatus] = {

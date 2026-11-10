@@ -32,7 +32,8 @@ from app.repository.clickhouse.state import ClickHouseAnalysisStore, ClickHouseR
 from app.settings import Settings, load_settings
 from app.usecase.airports import AirportQueries
 from app.usecase.chat import Chat
-from app.usecase.interface import AtlasRepository
+from app.usecase.interface.atlas import AtlasRepository
+from app.usecase.interface.scenarios import ScenarioRepository
 from app.usecase.links import LinkQueries
 from app.usecase.overview import OverviewQuery
 from app.usecase.reference import ReferenceQueries
@@ -40,7 +41,7 @@ from app.usecase.regions import RegionQueries
 from app.usecase.road_analysis import RoadAnalysis
 from app.usecase.road_corridor import RoadCorridors
 from app.usecase.road_graph import RoadGraph
-from app.usecase.scenarios import ScenarioQueries, ScenarioRepository
+from app.usecase.scenarios import ScenarioQueries
 from app.usecase.search import Search
 from app.usecase.sensitivity import AccessibilitySensitivity
 from app.usecase.settlements import SettlementQueries

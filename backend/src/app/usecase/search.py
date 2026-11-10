@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 from app.domain.errors import InvalidQuery
 from app.domain.text import normalize_name
-from app.usecase.interface import AtlasRepository
+from app.usecase.interface.atlas import AtlasRepository
 
 MIN_QUERY = 2
 MAX_LIMIT = 50

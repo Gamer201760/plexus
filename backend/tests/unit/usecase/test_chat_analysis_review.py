@@ -7,8 +7,9 @@ import pytest
 
 from app.domain.errors import DataUnavailable
 from app.domain.transport import NetworkMode, Season
-from app.usecase.chat import Chat, ChatContext, ChatEvent, ChatRequest
-from app.usecase.road_analysis import AnalysisJob, Candidate, VerifiedRoad
+from app.usecase.chat import Chat
+from app.usecase.dto.chat import ChatContext, ChatEvent, ChatRequest
+from app.usecase.dto.road_analysis import AnalysisJob, Candidate, VerifiedRoad
 
 
 class RecordingProvider:

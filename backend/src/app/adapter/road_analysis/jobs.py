@@ -11,14 +11,9 @@ from app.adapter.road_analysis.evaluation import RoadEvaluation
 from app.adapter.road_analysis.screening import CandidateScreening
 from app.adapter.road_graph.jobs import RoadJobs
 from app.domain.errors import InvalidQuery
-from app.usecase.dto import BoundaryShape
-from app.usecase.road_analysis import (
-    AnalysisDetail,
-    AnalysisFailure,
-    AnalysisJob,
-    AnalysisMode,
-    AnalysisStore,
-)
+from app.usecase.dto.atlas import BoundaryShape
+from app.usecase.dto.road_analysis import AnalysisDetail, AnalysisFailure, AnalysisJob, AnalysisMode
+from app.usecase.interface.road_analysis import AnalysisStore
 
 
 class AnalysisJobs:

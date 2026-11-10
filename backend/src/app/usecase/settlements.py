@@ -4,8 +4,8 @@ from enum import StrEnum
 
 from app.domain.errors import InvalidQuery, RegionNotFound
 from app.domain.text import normalize_name
-from app.usecase.dto import SettlementRecord
-from app.usecase.interface import AtlasRepository
+from app.usecase.dto.atlas import SettlementRecord
+from app.usecase.interface.atlas import AtlasRepository
 
 MAX_PAGE = 500
 

@@ -5,9 +5,10 @@ from pydantic_ai import RunContext
 from app.adapter.chat.artifacts import ChatRun
 from app.adapter.chat.corridor_tools import CorridorTools
 from app.domain.transport import NetworkMode, Season
-from app.usecase.chat import ChatContext
-from app.usecase.road_corridor import CorridorRegion, RoadCorridor, RoadCorridors
-from app.usecase.road_graph import RoadJob
+from app.usecase.dto.chat import ChatContext
+from app.usecase.dto.road_corridor import CorridorRegion, RoadCorridor
+from app.usecase.dto.road_graph import RoadJob
+from app.usecase.road_corridor import RoadCorridors
 
 
 def test_closure_emits_geometry_and_both_jobs_without_waiting_for_results() -> None:

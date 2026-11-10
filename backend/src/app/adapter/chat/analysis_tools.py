@@ -5,8 +5,9 @@ from pydantic_ai import Agent, ModelRetry, RunContext
 
 from app.adapter.chat.artifacts import ChatRun
 from app.domain.errors import DomainError
-from app.usecase.chat import ChatEvent
-from app.usecase.road_analysis import AnalysisJob, AnalysisMode, RoadAnalysis
+from app.usecase.dto.chat import ChatEvent
+from app.usecase.dto.road_analysis import AnalysisJob, AnalysisMode
+from app.usecase.road_analysis import RoadAnalysis
 
 
 class AnalysisTools:

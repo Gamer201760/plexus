@@ -3,7 +3,7 @@ from unittest.mock import Mock
 
 from app.adapter.road_graph.jobs import RoadJobs
 from app.domain.errors import DataUnavailable
-from app.usecase.road_graph import RoadJob
+from app.usecase.dto.road_graph import RoadJob
 
 
 def test_completed_calculation_survives_storage_timeout() -> None:

@@ -6,7 +6,8 @@ from pydantic_ai import Agent, ModelRetry, RunContext
 from app.adapter.chat.artifacts import ChatRun
 from app.domain.errors import DomainError
 from app.domain.road_economics import MoneyAssumptions
-from app.usecase.road_graph import RoadAddition, RoadChange, RoadGraph
+from app.usecase.dto.road_graph import RoadAddition, RoadChange
+from app.usecase.road_graph import RoadGraph
 
 
 class RoadTools:

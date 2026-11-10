@@ -5,14 +5,14 @@ import numpy as np
 
 from app.adapter.road_graph.jobs import RoadJobs
 from app.domain.road_analysis import SettlementAccess, compare_access
-from app.usecase.road_analysis import (
+from app.usecase.dto.road_analysis import (
     AnalysisDetail,
     AnalysisJob,
     Candidate,
     ImpactLocation,
     VerifiedRoad,
 )
-from app.usecase.road_graph import RoadChange
+from app.usecase.dto.road_graph import RoadChange
 
 
 class RoadEvaluation:

@@ -12,8 +12,8 @@ from app.adapter.road_analysis.jobs import AnalysisJobs
 from app.adapter.road_graph.jobs import RoadJobs
 from app.domain.road_analysis import SettlementImpact
 from app.repository.files.road_analysis import FileAnalysisStore
-from app.usecase.dto import BoundaryShape
-from app.usecase.road_analysis import (
+from app.usecase.dto.atlas import BoundaryShape
+from app.usecase.dto.road_analysis import (
     AnalysisDetail,
     AnalysisJob,
     Candidate,

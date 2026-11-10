@@ -5,7 +5,7 @@ from typing import Any, cast
 from app.domain.errors import RegionNotFound
 from app.domain.transport import Confidence, Mode, Season
 from app.repository.clickhouse.client import ClickHouseReader
-from app.usecase.dto import (
+from app.usecase.dto.atlas import (
     BoundaryShape,
     EconomyRecord,
     GeoLayer,

@@ -8,9 +8,11 @@ from fastapi.testclient import TestClient
 from app.adapter.log.stdlib import StdlibLogger
 from app.controller.errors import ErrorHandlers
 from app.controller.road_analysis.router import build_analysis_router
-from app.usecase.dto import BoundaryShape, RegionRecord
-from app.usecase.interface import AtlasRepository
-from app.usecase.road_analysis import AnalysisJob, AnalysisPort, RoadAnalysis
+from app.usecase.dto.atlas import BoundaryShape, RegionRecord
+from app.usecase.dto.road_analysis import AnalysisJob
+from app.usecase.interface.atlas import AtlasRepository
+from app.usecase.interface.road_analysis import AnalysisPort
+from app.usecase.road_analysis import RoadAnalysis
 
 
 @pytest.fixture

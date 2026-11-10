@@ -9,7 +9,7 @@ from app.adapter.road_graph.delta import DeltaCalculation, added_edge_distances
 from app.adapter.road_graph.delta_base import DeltaBase
 from app.adapter.road_graph.routing import minimum_csr
 from app.domain.road_economics import MoneyAssumptions, time_savings
-from app.usecase.road_graph import RoadAddition
+from app.usecase.dto.road_graph import RoadAddition
 
 
 @pytest.mark.parametrize("source,target,hours", [(0, 3, 0.5), (1, 4, 2.0), (0, 2, 20.0)])

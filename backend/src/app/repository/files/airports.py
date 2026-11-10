@@ -2,7 +2,7 @@ from pathlib import Path
 
 from app.domain.errors import DataUnavailable
 from app.repository.files.json_values import number, obj, objects, read_json, text
-from app.usecase.airports import Airport, AirportCatalog
+from app.usecase.dto.airports import Airport, AirportCatalog
 
 
 class FileAirportRepository:

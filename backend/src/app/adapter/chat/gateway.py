@@ -35,7 +35,7 @@ from app.adapter.chat.artifacts import ChatRun
 from app.adapter.chat.failure import chat_failure
 from app.adapter.chat.tools import AtlasTools
 from app.domain.errors import DomainError
-from app.usecase.chat import ChatEvent, ChatRequest
+from app.usecase.dto.chat import ChatEvent, ChatRequest
 
 MODEL = "gpt-6.1-sol"
 INSTRUCTIONS = """You are Plexus, a transport accessibility analyst. Answer in Russian.
