@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Any, Literal
 
 import numpy as np
@@ -8,6 +7,7 @@ from app.adapter.road_graph.data import GraphData
 from app.adapter.road_graph.delta_base import DeltaBase
 from app.adapter.road_graph.routing import GraphRouting
 from app.usecase.dto.graph_snapshot import GraphParameters, GraphQuery
+from app.usecase.dto.road_graph import DeltaRegion
 
 
 class ModernSnapshot:
@@ -57,25 +57,59 @@ class ModernSnapshot:
         return rows[query]
 
 
-def test_road_baseline_excludes_seasonal_shortcut_and_air(tmp_path: Path) -> None:
-    routing = GraphRouting(GraphData(tmp_path, ModernSnapshot(winter=True)))
+def test_road_baseline_excludes_seasonal_shortcut_and_air() -> None:
+    routing = GraphRouting(GraphData(ModernSnapshot(winter=True)))
     road = routing.calculate("region", "road", [], lambda _: None)[0]
     winter = routing.calculate("region", "road_winter", [], lambda _: None)[0]
     assert road == pytest.approx(3.125)
     assert winter == pytest.approx(100 * 2 ** (-.1 / 2))
 
 
-def test_multimodal_route_keeps_documented_frequency_wait(tmp_path: Path) -> None:
-    routing = GraphRouting(GraphData(tmp_path, ModernSnapshot()))
+def test_multimodal_route_keeps_documented_frequency_wait() -> None:
+    routing = GraphRouting(GraphData(ModernSnapshot()))
     summer = routing.calculate("region", "summer", [], lambda _: None)[0]
     assert summer == pytest.approx(3.125)
 
 
-def test_market_origin_has_zero_self_trip_like_national_etl(tmp_path: Path) -> None:
-    routing = GraphRouting(GraphData(tmp_path, ModernSnapshot(own_market=True)))
+def test_market_origin_has_zero_self_trip_like_national_etl() -> None:
+    routing = GraphRouting(GraphData(ModernSnapshot(own_market=True)))
     assert routing.calculate("region", "road", [], lambda _: None)[0] == pytest.approx(100.)
 
 
-def test_prepared_delta_accepts_pure_road_v2_baseline(tmp_path: Path) -> None:
-    base = DeltaBase(GraphData(tmp_path, ModernSnapshot()))
+class MemoryDeltaStore:
+    def __init__(self) -> None:
+        self.regions: dict[str, DeltaRegion] = {}
+
+    def names(self) -> list[str]:
+        return list(self.regions)
+
+    def read(self, region: str) -> DeltaRegion | None:
+        return self.regions.get(region)
+
+    def write(self, region: str, value: DeltaRegion) -> None:
+        self.regions[region] = value
+
+    def read_terminal(self, node: int) -> tuple[Any, Any] | None:
+        return None
+
+    def write_terminal(self, node: int, nodes: Any, distances: Any) -> None:
+        return None
+
+    def write_manifest(self, report: dict[str, object]) -> None:
+        return None
+
+
+class MemoryMatrixStore:
+    graph: Any = None
+
+    def read(self) -> Any | None:
+        return self.graph
+
+    def write(self, graph: Any) -> None:
+        self.graph = graph
+
+
+def test_prepared_delta_accepts_pure_road_v2_baseline() -> None:
+    store = MemoryDeltaStore()
+    base = DeltaBase(GraphData(ModernSnapshot()), store, MemoryMatrixStore())
     assert base.region("region").baseline_index == pytest.approx(3.125)

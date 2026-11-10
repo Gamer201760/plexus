@@ -78,7 +78,7 @@ DuckDB или Parquet. Без `GRAPH_DIR` атлас и дорожный сло�
 С экспортированными переменными ClickHouse, из `backend/`:
 
 ```sh
-PYTHONPATH=src uv run python precompute.py --data-dir ../data
+PYTHONPATH=src uv run python scripts/precompute.py --data-dir ../data
 ```
 
 Команда читает подробный граф и матрицы из ClickHouse, проверяет базовые индексы

@@ -36,7 +36,7 @@ class AnalysisJobs:
             self.stops[job.id] = Event()
 
     def fingerprint(self, boundary: BoundaryShape) -> str:
-        source = self.roads.cache.path(boundary.id, "analysis-v1").stem
+        source = self.roads.cache.key(boundary.id, "analysis-v1")
         return hashlib.sha256(
             (source + json.dumps(asdict(boundary), sort_keys=True)).encode()
         ).hexdigest()

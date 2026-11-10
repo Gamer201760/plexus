@@ -2,7 +2,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from app.adapter.road_graph.data import VERSION
+from app.usecase.dto.road_graph import GRAPH_DATA_VERSION
 
 
 class BaselineCache:
@@ -12,9 +12,12 @@ class BaselineCache:
 
     def path(self, region: str, scenario: str) -> Path:
         key = hashlib.sha256(
-            json.dumps([VERSION, "routing-v1", region, scenario, self.signature]).encode()
+            json.dumps([GRAPH_DATA_VERSION, "routing-v1", region, scenario, self.signature]).encode()
         )
         return self.root / "scenario-results" / f"baseline-{key.hexdigest()}.json"
+
+    def key(self, region: str, scenario: str) -> str:
+        return self.path(region, scenario).stem
 
     def read(self, region: str, scenario: str) -> float | None:
         path = self.path(region, scenario)

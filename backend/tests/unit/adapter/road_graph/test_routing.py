@@ -1,5 +1,4 @@
 import math
-from pathlib import Path
 from typing import Any, Literal, cast
 
 import numpy as np
@@ -37,8 +36,8 @@ class Snapshot:
 
 
 @pytest.fixture
-def routing(tmp_path: Path) -> GraphRouting:
-    return GraphRouting(GraphData(tmp_path, Snapshot()))
+def routing() -> GraphRouting:
+    return GraphRouting(GraphData(Snapshot()))
 
 
 def test_parallel_roads_use_minimum_and_fixed_normalization(routing: GraphRouting) -> None:

@@ -109,3 +109,6 @@ class DeltaRegion:
     baseline_times: Any = None
     baseline_hansen: Any = None
     baseline_index: float = 0.0
+
+
+GRAPH_DATA_VERSION = "data-20261107"

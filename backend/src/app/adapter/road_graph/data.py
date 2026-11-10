@@ -1,6 +1,5 @@
 import hashlib
 from functools import cached_property
-from pathlib import Path
 from threading import Lock
 from typing import Any
 
@@ -9,15 +8,12 @@ import numpy as np
 from app.adapter.road_graph.view_geometry import road_segments
 from app.domain.errors import DataUnavailable, InvalidQuery
 from app.usecase.dto.graph_snapshot import GraphParameters, GraphQuery
-from app.usecase.dto.road_graph import GraphLocation, RoadView
+from app.usecase.dto.road_graph import GRAPH_DATA_VERSION, GraphLocation, RoadView
 from app.usecase.interface.graph_snapshot import GraphSnapshot
-
-VERSION = "data-20261107"
 
 
 class GraphData:
-    def __init__(self, root: Path, snapshot: GraphSnapshot | None = None) -> None:
-        self.root = root
+    def __init__(self, snapshot: GraphSnapshot | None = None) -> None:
         self.snapshot = snapshot
         self.lock = Lock()
         self.loaded = False
@@ -38,7 +34,7 @@ class GraphData:
     @cached_property
     def version(self) -> str:
         if not self.modern_model:
-            return VERSION
+            return GRAPH_DATA_VERSION
         return "road-" + hashlib.sha256(self.revision.encode()).hexdigest()[:16]
 
     def load(self) -> None:

@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -8,7 +7,7 @@ from app.adapter.road_graph.data import GraphData
 
 class ViewData(GraphData):
     def __init__(self, count: int) -> None:
-        super().__init__(Path("."))
+        super().__init__()
         self.loaded = True
         self.modern_model = False
         self.nodes = {"lon": np.linspace(-2, 2, count + 1), "lat": np.zeros(count + 1)}

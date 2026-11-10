@@ -2,24 +2,25 @@ from collections import OrderedDict
 from typing import Any
 
 import numpy as np
-from scipy.sparse import load_npz, save_npz
 from scipy.sparse.csgraph import dijkstra
 
-from app.adapter.road_graph.baselines import BaselineCache
 from app.adapter.road_graph.data import GraphData
 from app.adapter.road_graph.delta_model import access_times
-from app.adapter.road_graph.delta_store import DeltaStore
 from app.adapter.road_graph.routing import minimum_csr
 from app.domain.errors import InvalidQuery
 from app.usecase.dto.road_graph import DeltaRegion
+from app.usecase.interface.road_graph import DeltaRegionStore, GraphMatrixStore
 
 
 class DeltaBase:
-    def __init__(self, data: GraphData) -> None:
+    def __init__(
+        self, data: GraphData, store: DeltaRegionStore, matrix: GraphMatrixStore
+    ) -> None:
         self.data = data
         self.graph: Any = None
         self.distances: OrderedDict[int, Any] = OrderedDict()
-        self.store = DeltaStore(data.root, data.revision)
+        self.store = store
+        self.matrix = matrix
         self.regions: OrderedDict[str, DeltaRegion] = OrderedDict()
         self.projected: OrderedDict[int, tuple[Any, Any]] = OrderedDict()
         for name in self.store.names():
@@ -31,13 +32,9 @@ class DeltaBase:
         if self.graph is not None:
             return
         self.data.load()
-        path = (
-            BaselineCache(self.data.root, self.data.revision)
-            .path("delta-road-graph-v1", "road")
-            .with_suffix(".npz")
-        )
-        if path.exists():
-            self.graph = load_npz(path)
+        cached = self.matrix.read()
+        if cached is not None:
+            self.graph = cached
             return
         e = self.data.edges
         keep = self.data.allowed_edges("road")
@@ -45,8 +42,7 @@ class DeltaBase:
         if self.data.modern_model:
             count = max(count, max(int(city[1]) + 1 for city in self.data.read("cities")))
         self.graph = minimum_csr(e["src"][keep], e["dst"][keep], e["h"][keep], count)
-        path.parent.mkdir(parents=True, exist_ok=True)
-        save_npz(path, self.graph, compressed=False)
+        self.matrix.write(self.graph)
 
     def distances_from(self, node: int) -> Any:
         self.prepare()

@@ -6,11 +6,11 @@ from typing import Any
 
 import numpy as np
 
-from app.adapter.road_graph.baselines import BaselineCache
+from app.repository.files.road_graph.baselines import BaselineCache
 from app.usecase.dto.road_graph import DeltaRegion
 
 
-class DeltaStore:
+class FileDeltaStore:
     def __init__(self, root: Path, revision: str = "[]") -> None:
         key = BaselineCache(root, revision).path("prepared-delta-v2", "road").stem
         self.folder = root / "scenario-cache" / key
@@ -56,4 +56,11 @@ class DeltaStore:
         path = self.folder / f"node-{node}.npz"
         temporary = path.with_suffix(".tmp.npz")
         np.savez(temporary, nodes=nodes, distances=distances)
+        temporary.replace(path)
+
+    def write_manifest(self, report: dict[str, object]) -> None:
+        self.folder.mkdir(parents=True, exist_ok=True)
+        path = self.folder / "manifest.json"
+        temporary = path.with_suffix(".tmp")
+        temporary.write_text(json.dumps(report, ensure_ascii=False, indent=2))
         temporary.replace(path)

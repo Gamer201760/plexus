@@ -1,12 +1,10 @@
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import replace
-from pathlib import Path
 from threading import Event, Lock
 from time import monotonic
 from uuid import uuid4
 
 from app.adapter.log.stdlib import StdlibLogger
-from app.adapter.road_graph.baselines import BaselineCache
 from app.adapter.road_graph.data import GraphData
 from app.adapter.road_graph.delta import DeltaCalculation
 from app.adapter.road_graph.delta_base import DeltaBase
@@ -22,15 +20,27 @@ from app.usecase.dto.road_graph import (
     RoadView,
 )
 from app.usecase.interface.graph_snapshot import GraphSnapshot
-from app.usecase.interface.road_graph import RoadJobStore
+from app.usecase.interface.road_graph import (
+    BaselineStore,
+    DeltaRegionStore,
+    GraphMatrixStore,
+    RoadJobStore,
+)
 
 
 class RoadJobs:
-    def __init__(self, root: Path, snapshot: GraphSnapshot, store: RoadJobStore) -> None:
-        self.data = GraphData(root, snapshot)
+    def __init__(
+        self,
+        snapshot: GraphSnapshot,
+        store: RoadJobStore,
+        baselines: BaselineStore,
+        deltas: DeltaRegionStore,
+        matrix: GraphMatrixStore,
+    ) -> None:
+        self.data = GraphData(snapshot)
         self.routing = GraphRouting(self.data)
-        self.cache = BaselineCache(root, snapshot.revision)
-        self.delta = DeltaCalculation(DeltaBase(self.data))
+        self.cache = baselines
+        self.delta = DeltaCalculation(DeltaBase(self.data, deltas, matrix))
         self.delta.base.prepare()
         self.pool = ThreadPoolExecutor(max_workers=1, thread_name_prefix="road-calculation")
         self.lock = Lock()

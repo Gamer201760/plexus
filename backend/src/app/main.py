@@ -1,6 +1,7 @@
 import os
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import APIRouter, FastAPI
 
@@ -10,6 +11,8 @@ from app.adapter.chat.tools import AtlasTools
 from app.adapter.log.stdlib import StdlibLogger
 from app.adapter.road_analysis.jobs import AnalysisJobs
 from app.adapter.road_corridor.resolver import CorridorResolver
+from app.adapter.road_graph.data import GraphData
+from app.adapter.road_graph.delta_base import DeltaBase
 from app.adapter.road_graph.jobs import RoadJobs
 from app.controller.atlas.airports import build_airports_router
 from app.controller.atlas.catalog import build_catalog_router
@@ -29,10 +32,14 @@ from app.repository.clickhouse.graph_snapshot import ClickHouseGraphSnapshot
 from app.repository.clickhouse.road_view import ClickHouseRoadView
 from app.repository.clickhouse.scenario import ClickHouseScenarioRepository
 from app.repository.clickhouse.state import ClickHouseAnalysisStore, ClickHouseRoadJobStore
+from app.repository.files.road_graph.baselines import BaselineCache
+from app.repository.files.road_graph.delta import FileDeltaStore
+from app.repository.files.road_graph.matrix import FileGraphMatrixStore
 from app.settings import Settings, load_settings
 from app.usecase.airports import AirportQueries
 from app.usecase.chat import Chat
 from app.usecase.interface.atlas import AtlasRepository
+from app.usecase.interface.graph_snapshot import GraphSnapshot
 from app.usecase.interface.scenarios import ScenarioRepository
 from app.usecase.links import LinkQueries
 from app.usecase.overview import OverviewQuery
@@ -58,19 +65,34 @@ def build_atlas_routers(repository: AtlasRepository) -> list[APIRouter]:
     ]
 
 
+def build_reader(config: Settings) -> ClickHouseReader:
+    return ClickHouseReader(config.clickhouse_url, config.clickhouse_user, config.clickhouse_password)
+
+
+def build_delta_base(root: Path, snapshot: GraphSnapshot) -> DeltaBase:
+    return DeltaBase(
+        GraphData(snapshot),
+        FileDeltaStore(root, snapshot.revision),
+        FileGraphMatrixStore(root, snapshot.revision),
+    )
+
+
+def build_road_jobs(root: Path, reader: ClickHouseReader) -> RoadJobs:
+    snapshot = ClickHouseGraphSnapshot(reader)
+    return RoadJobs(
+        snapshot,
+        ClickHouseRoadJobStore(reader),
+        BaselineCache(root, snapshot.revision),
+        FileDeltaStore(root, snapshot.revision),
+        FileGraphMatrixStore(root, snapshot.revision),
+    )
+
+
 def create_app(settings: Settings | None = None, *, scenario_repository: ScenarioRepository | None = None) -> FastAPI:
     config = settings or load_settings(os.environ)
-    reader = ClickHouseReader(
-        config.clickhouse_url or "http://127.0.0.1:18123",
-        config.clickhouse_user,
-        config.clickhouse_password,
-    )
+    reader = build_reader(config)
     atlas = ClickHouseAtlasRepository(reader)
-    road_jobs = (
-        RoadJobs(config.graph_dir, ClickHouseGraphSnapshot(reader), ClickHouseRoadJobStore(reader))
-        if config.graph_dir
-        else None
-    )
+    road_jobs = build_road_jobs(config.graph_dir, reader) if config.graph_dir else None
     road_view = ClickHouseRoadView(reader.url, config.clickhouse_user, config.clickhouse_password)
     road_graph = RoadGraph(road_jobs, atlas, road_view)
     analysis_jobs = (

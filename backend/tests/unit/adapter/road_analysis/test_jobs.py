@@ -23,8 +23,8 @@ from app.usecase.dto.road_analysis import (
 
 
 class Cache:
-    def path(self, region: str, scenario: str) -> Path:
-        return Path("fixed-sources")
+    def key(self, region: str, scenario: str) -> str:
+        return "fixed-sources"
 
 
 def wait(job_id: str, engine: AnalysisJobs) -> None:

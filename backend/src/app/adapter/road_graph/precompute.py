@@ -2,6 +2,7 @@ import json
 from time import monotonic
 
 from app.adapter.road_graph.delta_base import DeltaBase
+from app.usecase.dto.road_graph import GRAPH_DATA_VERSION
 
 
 def run(base: DeltaBase) -> None:
@@ -31,11 +32,8 @@ def run(base: DeltaBase) -> None:
         "max_baseline_error": max(errors),
         "elapsed_seconds": monotonic() - started,
         "method": "single_edge_delta",
-        "snapshot": "data-20261107",
+        "snapshot": GRAPH_DATA_VERSION,
         "network": "road",
     }
-    path = base.store.folder / "manifest.json"
-    temporary = path.with_suffix(".tmp")
-    temporary.write_text(json.dumps(report, ensure_ascii=False, indent=2))
-    temporary.replace(path)
+    base.store.write_manifest(report)
     print(json.dumps(report, ensure_ascii=False), flush=True)
