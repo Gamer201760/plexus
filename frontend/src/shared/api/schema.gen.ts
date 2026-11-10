@@ -455,11 +455,6 @@ export interface components {
              * @default []
              */
             changes: components["schemas"]["EdgeChangeRequest"][];
-            /**
-             * Additions
-             * @default []
-             */
-            additions: components["schemas"]["NewLinkRequest"][];
         };
         /** EvaluationResponse */
         EvaluationResponse: {
@@ -479,8 +474,6 @@ export interface components {
             assumptions: string[];
             /** Waiting Sensitivity */
             waiting_sensitivity: components["schemas"]["WaitingSensitivityResponse"][];
-            /** Additions */
-            additions: components["schemas"]["NewLinkRequest"][];
         };
         /** GeoBoundariesResponse */
         GeoBoundariesResponse: {
@@ -612,29 +605,6 @@ export interface components {
          * @enum {string}
          */
         NetworkMode: "road" | "multimodal";
-        /** NewLinkRequest */
-        NewLinkRequest: {
-            /** From Id */
-            from_id: string;
-            /** To Id */
-            to_id: string;
-            /**
-             * Mode
-             * @enum {string}
-             */
-            mode: "road" | "air" | "river" | "rail" | "scheduled_ferry" | "ferry" | "winter_road" | "ice_crossing" | "pontoon_bridge";
-            /** Travel H */
-            travel_h: number;
-            /** Seasons */
-            seasons: ("summer" | "winter")[];
-            /** Frequency Per Week */
-            frequency_per_week?: number | null;
-            /**
-             * Bidirectional
-             * @default true
-             */
-            bidirectional: boolean;
-        };
         /** OverviewResponse */
         OverviewResponse: {
             /** Regions */

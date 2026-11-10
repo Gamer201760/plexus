@@ -1,6 +1,5 @@
 export {
   type Pilot,
-  type PilotAddition,
   type PilotChange,
   type PilotEdge,
   type PilotPairResult,

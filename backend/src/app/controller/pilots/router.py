@@ -12,7 +12,7 @@ from app.controller.pilots.schemas import (
     PilotSummaryResponse,
     PointResponse,
 )
-from app.domain.pilot import EdgeChange, NewLink
+from app.domain.pilot import EdgeChange
 from app.domain.pilot_routing import SCHEDULED_MODES
 from app.usecase.pilots import PilotQueries
 
@@ -86,18 +86,6 @@ def build_pilots_router(queries: PilotQueries) -> APIRouter:
             tuple(
                 EdgeChange(change.edge_id, change.enabled, change.frequency_per_week)
                 for change in request.changes
-            ),
-            tuple(
-                NewLink(
-                    link.from_id,
-                    link.to_id,
-                    link.mode,
-                    link.travel_h,
-                    link.seasons,
-                    link.frequency_per_week,
-                    link.bidirectional,
-                )
-                for link in request.additions
             ),
         )
         return EvaluationResponse.model_validate(result)

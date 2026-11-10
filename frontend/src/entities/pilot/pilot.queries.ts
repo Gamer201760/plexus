@@ -7,7 +7,6 @@ export type PilotEdge = components["schemas"]["EdgeResponse"]
 export type PilotResult = components["schemas"]["EvaluationResponse"]
 export type PilotRequest = components["schemas"]["EvaluationRequest"]
 export type PilotChange = components["schemas"]["EdgeChangeRequest"]
-export type PilotAddition = components["schemas"]["NewLinkRequest"]
 export type PilotPairResult = components["schemas"]["PairComparisonResponse"]
 
 const LEGACY_PILOT_IDS: Readonly<Record<string, string>> = { "93000000": "tuva" }

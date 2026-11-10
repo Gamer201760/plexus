@@ -1461,15 +1461,6 @@
             "maxItems": 50,
             "title": "Changes",
             "default": []
-          },
-          "additions": {
-            "items": {
-              "$ref": "#/components/schemas/NewLinkRequest"
-            },
-            "type": "array",
-            "maxItems": 10,
-            "title": "Additions",
-            "default": []
           }
         },
         "additionalProperties": false,
@@ -1526,13 +1517,6 @@
             },
             "type": "array",
             "title": "Waiting Sensitivity"
-          },
-          "additions": {
-            "items": {
-              "$ref": "#/components/schemas/NewLinkRequest"
-            },
-            "type": "array",
-            "title": "Additions"
           }
         },
         "type": "object",
@@ -1544,8 +1528,7 @@
           "changes",
           "pairs",
           "assumptions",
-          "waiting_sensitivity",
-          "additions"
+          "waiting_sensitivity"
         ],
         "title": "EvaluationResponse"
       },
@@ -1948,84 +1931,6 @@
           "multimodal"
         ],
         "title": "NetworkMode"
-      },
-      "NewLinkRequest": {
-        "properties": {
-          "from_id": {
-            "type": "string",
-            "maxLength": 120,
-            "minLength": 1,
-            "title": "From Id"
-          },
-          "to_id": {
-            "type": "string",
-            "maxLength": 120,
-            "minLength": 1,
-            "title": "To Id"
-          },
-          "mode": {
-            "type": "string",
-            "enum": [
-              "road",
-              "air",
-              "river",
-              "rail",
-              "scheduled_ferry",
-              "ferry",
-              "winter_road",
-              "ice_crossing",
-              "pontoon_bridge"
-            ],
-            "title": "Mode"
-          },
-          "travel_h": {
-            "type": "number",
-            "maximum": 200.0,
-            "exclusiveMinimum": 0.0,
-            "title": "Travel H"
-          },
-          "seasons": {
-            "items": {
-              "type": "string",
-              "enum": [
-                "summer",
-                "winter"
-              ]
-            },
-            "type": "array",
-            "maxItems": 2,
-            "minItems": 1,
-            "title": "Seasons"
-          },
-          "frequency_per_week": {
-            "anyOf": [
-              {
-                "type": "integer",
-                "maximum": 28.0,
-                "minimum": 1.0
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Frequency Per Week"
-          },
-          "bidirectional": {
-            "type": "boolean",
-            "title": "Bidirectional",
-            "default": true
-          }
-        },
-        "additionalProperties": false,
-        "type": "object",
-        "required": [
-          "from_id",
-          "to_id",
-          "mode",
-          "travel_h",
-          "seasons"
-        ],
-        "title": "NewLinkRequest"
       },
       "OverviewResponse": {
         "properties": {

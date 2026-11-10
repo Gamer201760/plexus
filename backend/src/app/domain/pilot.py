@@ -54,17 +54,6 @@ class EdgeChange:
 
 
 @dataclass(frozen=True, slots=True)
-class NewLink:
-    from_id: str
-    to_id: str
-    mode: str
-    travel_h: float
-    seasons: tuple[str, ...]
-    frequency_per_week: int | None = None
-    bidirectional: bool = True
-
-
-@dataclass(frozen=True, slots=True)
 class PilotRoute:
     status: str
     total_h: float | None
@@ -106,4 +95,3 @@ class PilotEvaluation:
     pairs: tuple[PairComparison, ...]
     assumptions: tuple[str, ...]
     waiting_sensitivity: tuple[WaitingSensitivity, ...] = ()
-    additions: tuple[NewLink, ...] = ()
