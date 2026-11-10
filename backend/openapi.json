@@ -937,6 +937,108 @@
           }
         }
       }
+    },
+    "/api/v1/scenarios": {
+      "get": {
+        "tags": [
+          "scenarios"
+        ],
+        "summary": "Get Catalog",
+        "operationId": "get_catalog_api_v1_scenarios_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScenarioCatalogResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/scenarios/evaluate": {
+      "post": {
+        "tags": [
+          "scenarios"
+        ],
+        "summary": "Evaluate Scenario",
+        "operationId": "evaluate_scenario_api_v1_scenarios_evaluate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScenarioEvaluationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScenarioEvaluationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1003,6 +1105,41 @@
           "polygons"
         ],
         "title": "BoundaryShapeResponse"
+      },
+      "CityPairChangeResponse": {
+        "properties": {
+          "from_city": {
+            "type": "string",
+            "title": "From City"
+          },
+          "to_city": {
+            "type": "string",
+            "title": "To City"
+          },
+          "baseline_h": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Baseline H"
+          },
+          "changed_h": {
+            "type": "number",
+            "title": "Changed H"
+          }
+        },
+        "type": "object",
+        "required": [
+          "from_city",
+          "to_city",
+          "baseline_h",
+          "changed_h"
+        ],
+        "title": "CityPairChangeResponse"
       },
       "Confidence": {
         "type": "string",
@@ -1324,6 +1461,15 @@
             "maxItems": 50,
             "title": "Changes",
             "default": []
+          },
+          "additions": {
+            "items": {
+              "$ref": "#/components/schemas/NewLinkRequest"
+            },
+            "type": "array",
+            "maxItems": 10,
+            "title": "Additions",
+            "default": []
           }
         },
         "additionalProperties": false,
@@ -1380,6 +1526,13 @@
             },
             "type": "array",
             "title": "Waiting Sensitivity"
+          },
+          "additions": {
+            "items": {
+              "$ref": "#/components/schemas/NewLinkRequest"
+            },
+            "type": "array",
+            "title": "Additions"
           }
         },
         "type": "object",
@@ -1391,7 +1544,8 @@
           "changes",
           "pairs",
           "assumptions",
-          "waiting_sensitivity"
+          "waiting_sensitivity",
+          "additions"
         ],
         "title": "EvaluationResponse"
       },
@@ -1666,6 +1820,44 @@
         ],
         "title": "LinkResponse"
       },
+      "MarketCityResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "region": {
+            "type": "string",
+            "title": "Region"
+          },
+          "population": {
+            "type": "number",
+            "title": "Population"
+          },
+          "latitude": {
+            "type": "number",
+            "title": "Latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "title": "Longitude"
+          },
+          "is_capital": {
+            "type": "boolean",
+            "title": "Is Capital"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "region",
+          "population",
+          "latitude",
+          "longitude",
+          "is_capital"
+        ],
+        "title": "MarketCityResponse"
+      },
       "Mode": {
         "type": "string",
         "enum": [
@@ -1756,6 +1948,84 @@
           "multimodal"
         ],
         "title": "NetworkMode"
+      },
+      "NewLinkRequest": {
+        "properties": {
+          "from_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "From Id"
+          },
+          "to_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "To Id"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "road",
+              "air",
+              "river",
+              "rail",
+              "scheduled_ferry",
+              "ferry",
+              "winter_road",
+              "ice_crossing",
+              "pontoon_bridge"
+            ],
+            "title": "Mode"
+          },
+          "travel_h": {
+            "type": "number",
+            "maximum": 200.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Travel H"
+          },
+          "seasons": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "summer",
+                "winter"
+              ]
+            },
+            "type": "array",
+            "maxItems": 2,
+            "minItems": 1,
+            "title": "Seasons"
+          },
+          "frequency_per_week": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 28.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Frequency Per Week"
+          },
+          "bidirectional": {
+            "type": "boolean",
+            "title": "Bidirectional",
+            "default": true
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "from_id",
+          "to_id",
+          "mode",
+          "travel_h",
+          "seasons"
+        ],
+        "title": "NewLinkRequest"
       },
       "OverviewResponse": {
         "properties": {
@@ -2298,6 +2568,44 @@
         ],
         "title": "RegionDetailResponse"
       },
+      "RegionImpactResponse": {
+        "properties": {
+          "region_id": {
+            "type": "string",
+            "title": "Region Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "population": {
+            "type": "number",
+            "title": "Population"
+          },
+          "baseline_index": {
+            "type": "number",
+            "title": "Baseline Index"
+          },
+          "changed_index": {
+            "type": "number",
+            "title": "Changed Index"
+          },
+          "delta_index": {
+            "type": "number",
+            "title": "Delta Index"
+          }
+        },
+        "type": "object",
+        "required": [
+          "region_id",
+          "name",
+          "population",
+          "baseline_index",
+          "changed_index",
+          "delta_index"
+        ],
+        "title": "RegionImpactResponse"
+      },
       "RegionRefResponse": {
         "properties": {
           "id": {
@@ -2530,6 +2838,187 @@
           "y2"
         ],
         "title": "RouteResponse"
+      },
+      "ScenarioCatalogResponse": {
+        "properties": {
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "artifact_version": {
+            "type": "string",
+            "title": "Artifact Version"
+          },
+          "seasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Seasons"
+          },
+          "cities": {
+            "items": {
+              "$ref": "#/components/schemas/MarketCityResponse"
+            },
+            "type": "array",
+            "title": "Cities"
+          },
+          "regions": {
+            "items": {
+              "$ref": "#/components/schemas/ScenarioRegionResponse"
+            },
+            "type": "array",
+            "title": "Regions"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Assumptions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "model_version",
+          "artifact_version",
+          "seasons",
+          "cities",
+          "regions",
+          "assumptions"
+        ],
+        "title": "ScenarioCatalogResponse"
+      },
+      "ScenarioEvaluationRequest": {
+        "properties": {
+          "season": {
+            "type": "string",
+            "enum": [
+              "road",
+              "summer",
+              "winter"
+            ],
+            "title": "Season"
+          },
+          "model_version": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Model Version"
+          },
+          "artifact_version": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Artifact Version"
+          },
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/TrunkLinkRequest"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "minItems": 1,
+            "title": "Links"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "season",
+          "model_version",
+          "artifact_version",
+          "links"
+        ],
+        "title": "ScenarioEvaluationRequest"
+      },
+      "ScenarioEvaluationResponse": {
+        "properties": {
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "artifact_version": {
+            "type": "string",
+            "title": "Artifact Version"
+          },
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/TrunkLinkRequest"
+            },
+            "type": "array",
+            "title": "Links"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Assumptions"
+          },
+          "national_baseline_index": {
+            "type": "number",
+            "title": "National Baseline Index"
+          },
+          "national_changed_index": {
+            "type": "number",
+            "title": "National Changed Index"
+          },
+          "improved_city_pairs": {
+            "type": "integer",
+            "title": "Improved City Pairs"
+          },
+          "city_pairs": {
+            "items": {
+              "$ref": "#/components/schemas/CityPairChangeResponse"
+            },
+            "type": "array",
+            "title": "City Pairs"
+          },
+          "regions": {
+            "items": {
+              "$ref": "#/components/schemas/RegionImpactResponse"
+            },
+            "type": "array",
+            "title": "Regions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "season",
+          "model_version",
+          "artifact_version",
+          "links",
+          "assumptions",
+          "national_baseline_index",
+          "national_changed_index",
+          "improved_city_pairs",
+          "city_pairs",
+          "regions"
+        ],
+        "title": "ScenarioEvaluationResponse"
+      },
+      "ScenarioRegionResponse": {
+        "properties": {
+          "region_id": {
+            "type": "string",
+            "title": "Region Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "region_id",
+          "name"
+        ],
+        "title": "ScenarioRegionResponse"
       },
       "SearchResponse": {
         "properties": {
@@ -2818,6 +3307,59 @@
           "rows"
         ],
         "title": "SourceResponse"
+      },
+      "TrunkLinkRequest": {
+        "properties": {
+          "from_city": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "From City"
+          },
+          "to_city": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "To City"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "air",
+              "rail",
+              "road"
+            ],
+            "title": "Mode"
+          },
+          "travel_h": {
+            "type": "number",
+            "maximum": 200.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Travel H"
+          },
+          "frequency_per_week": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 28.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Frequency Per Week"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "from_city",
+          "to_city",
+          "mode",
+          "travel_h"
+        ],
+        "title": "TrunkLinkRequest"
       },
       "WaitingSensitivityResponse": {
         "properties": {

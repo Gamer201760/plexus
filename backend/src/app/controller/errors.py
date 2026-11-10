@@ -15,11 +15,13 @@ from app.domain.errors import (
 )
 from app.usecase.interface import Logger
 from app.usecase.pilots import PilotNotFound, StalePilotVersion
+from app.usecase.scenarios import StaleScenarioVersion
 
 STATUS_BY_ERROR: dict[type[DomainError], HTTPStatus] = {
     RegionNotFound: HTTPStatus.NOT_FOUND,
     PilotNotFound: HTTPStatus.NOT_FOUND,
     StalePilotVersion: HTTPStatus.CONFLICT,
+    StaleScenarioVersion: HTTPStatus.CONFLICT,
     LinkNotFound: HTTPStatus.NOT_FOUND,
     InvalidQuery: HTTPStatus.UNPROCESSABLE_ENTITY,
     DataUnavailable: HTTPStatus.SERVICE_UNAVAILABLE,

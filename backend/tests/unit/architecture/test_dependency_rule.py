@@ -16,7 +16,7 @@ ALLOWED_LAYERS = {
     "controller": {"controller", "usecase", "domain"},
 }
 INNER_LAYERS = {"domain", "usecase"}
-PURE_LIBRARIES: frozenset[str] = frozenset()
+PURE_LIBRARIES: frozenset[str] = frozenset({"numpy"})
 OWNED_LIBRARIES = {"logging": "adapter.log"}
 
 
