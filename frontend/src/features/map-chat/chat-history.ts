@@ -1,7 +1,12 @@
 import type { ChatEntry } from "./use-map-chat"
 
 export function historyContent(row: ChatEntry): string {
-  if (!row.tables.length && !row.mapCommands.length && !row.calculations?.length)
+  if (
+    !row.tables.length &&
+    !row.mapCommands.length &&
+    !row.calculations?.length &&
+    !row.analyses?.length
+  )
     return row.content.slice(0, 12000)
   const context = {
     displayed_tables: row.tables.map((table) => ({
@@ -13,6 +18,10 @@ export function historyContent(row: ChatEntry): string {
         destination,
       })),
     })),
+    analyses: row.analyses?.map(({ id, region_id, mode }) => ({ id, region_id, mode })),
+    commentaries: Object.values(row.commentaries ?? {})
+      .filter((value) => value.complete)
+      .map((value) => value.text.slice(0, 2000)),
     map_commands: row.mapCommands,
     calculations: row.calculations?.map((item) => ({
       corridor_id: item.corridor.id,

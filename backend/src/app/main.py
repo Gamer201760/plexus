@@ -11,6 +11,7 @@ from app.adapter.log.stdlib import StdlibLogger
 from app.adapter.road_analysis.jobs import AnalysisJobs
 from app.adapter.road_corridor.resolver import CorridorResolver
 from app.adapter.road_graph.jobs import RoadJobs
+from app.controller.atlas.airports import build_airports_router
 from app.controller.atlas.catalog import build_catalog_router
 from app.controller.atlas.regions import build_regions_router
 from app.controller.chat.router import build_chat_router
@@ -21,11 +22,15 @@ from app.controller.road_graph.router import build_road_graph_router
 from app.controller.router import build_api_router
 from app.controller.scenarios.router import build_scenarios_router
 from app.controller.scenarios.sensitivity import build_sensitivity_router
-from app.repository.files.atlas import JsonAtlasRepository
-from app.repository.files.road_analysis import FileAnalysisStore
-from app.repository.files.scenario import FilesScenarioRepository
-from app.repository.files.snapshot import SnapshotAtlasRepository
+from app.repository.clickhouse.airports import ClickHouseAirportRepository
+from app.repository.clickhouse.atlas import ClickHouseAtlasRepository
+from app.repository.clickhouse.client import ClickHouseReader
+from app.repository.clickhouse.graph_snapshot import ClickHouseGraphSnapshot
+from app.repository.clickhouse.road_view import ClickHouseRoadView
+from app.repository.clickhouse.scenario import ClickHouseScenarioRepository
+from app.repository.clickhouse.state import ClickHouseAnalysisStore, ClickHouseRoadJobStore
 from app.settings import Settings, load_settings
+from app.usecase.airports import AirportQueries
 from app.usecase.chat import Chat
 from app.usecase.interface import AtlasRepository
 from app.usecase.links import LinkQueries
@@ -35,7 +40,7 @@ from app.usecase.regions import RegionQueries
 from app.usecase.road_analysis import RoadAnalysis
 from app.usecase.road_corridor import RoadCorridors
 from app.usecase.road_graph import RoadGraph
-from app.usecase.scenarios import ScenarioQueries
+from app.usecase.scenarios import ScenarioQueries, ScenarioRepository
 from app.usecase.search import Search
 from app.usecase.sensitivity import AccessibilitySensitivity
 from app.usecase.settlements import SettlementQueries
@@ -52,24 +57,30 @@ def build_atlas_routers(repository: AtlasRepository) -> list[APIRouter]:
     ]
 
 
-def create_app(settings: Settings | None = None) -> FastAPI:
+def create_app(settings: Settings | None = None, *, scenario_repository: ScenarioRepository | None = None) -> FastAPI:
     config = settings or load_settings(os.environ)
-    atlas = (
-        SnapshotAtlasRepository(config.data_dir, config.graph_dir)
-        if config.graph_dir
-        else JsonAtlasRepository(config.data_dir)
+    reader = ClickHouseReader(
+        config.clickhouse_url or "http://127.0.0.1:18123",
+        config.clickhouse_user,
+        config.clickhouse_password,
     )
-    road_jobs = RoadJobs(config.graph_dir) if config.graph_dir else None
-    road_graph = RoadGraph(road_jobs, atlas)
+    atlas = ClickHouseAtlasRepository(reader)
+    road_jobs = (
+        RoadJobs(config.graph_dir, ClickHouseGraphSnapshot(reader), ClickHouseRoadJobStore(reader))
+        if config.graph_dir
+        else None
+    )
+    road_view = ClickHouseRoadView(reader.url, config.clickhouse_user, config.clickhouse_password)
+    road_graph = RoadGraph(road_jobs, atlas, road_view)
     analysis_jobs = (
-        AnalysisJobs(road_jobs, FileAnalysisStore(config.graph_dir))
+        AnalysisJobs(road_jobs, ClickHouseAnalysisStore(reader))
         if road_jobs and config.graph_dir
         else None
     )
     analysis = RoadAnalysis(analysis_jobs, atlas)
     corridors = RoadCorridors(CorridorResolver(road_jobs) if road_jobs else None)
     sensitivity = AccessibilitySensitivity(atlas)
-    scenarios = ScenarioQueries(FilesScenarioRepository(config.scenario_dir))
+    scenarios = ScenarioQueries(scenario_repository or ClickHouseScenarioRepository(reader))
     gateway = (
         CodexResponsesGateway(
             AtlasTools(
@@ -104,9 +115,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(
         build_api_router(
             *build_atlas_routers(atlas),
+            build_airports_router(AirportQueries(ClickHouseAirportRepository(atlas), atlas)),
             build_scenarios_router(scenarios),
             build_sensitivity_router(sensitivity),
-            build_chat_router(Chat(gateway)),
+            build_chat_router(Chat(gateway, analysis)),
         )
     )
     app.include_router(build_road_graph_router(road_graph), prefix="/api/v1")

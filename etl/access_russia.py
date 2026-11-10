@@ -31,16 +31,16 @@ from scipy.sparse.csgraph import dijkstra, floyd_warshall
 sys.path.insert(0, str(Path(__file__).parent))
 from graphlib import GRAPH, build_csr, load_edges  # noqa: E402
 from access_network import anchor_cities, trunk_matrix
+from market_distances import market_distances
 
 ROOT = Path(__file__).resolve().parent.parent
-DB = ROOT / "data" / "casechamp.duckdb"
+DB = Path(os.environ.get("CASECHAMP_DB", str(ROOT / "data" / "casechamp.duckdb")))
 
 SNAP_KMH = 15
 MAX_H = np.inf
 DC_LIMIT_H = 24.0                          # радиус поиска райцентра
 # у Московской области нет столицы в списке Точно; функциональный центр — Москва
 CAPITAL_OVERRIDE = {"Московская область": "Москва"}
-BATCH = 8                                  # источников дейкстры за вызов: 8 × узлы × 8 Б ≈ 1 ГБ
 CENTRE_THRESHOLDS = (1_000, 5_000, 18_000)  # ближайший н.п. не меньше порога — классы E, D, C индекса ARIA+
 SCENARIOS = os.environ.get("SCENARIOS", "road,road_summer,road_winter,summer,winter").split(",")
 APPEND_SCENARIOS = os.environ.get("APPEND_SCENARIOS") == "1"
@@ -86,14 +86,7 @@ def run(scenario, con, base, pts0, cities, T0, remote):
     print(f"[{scenario}] dijkstra from cities ...", flush=True)
     cnode = cities.node.values
     pnode = on.node.values
-    R_pts = np.empty((C, len(on)), dtype=np.float32)
-    R_cc = np.empty((C, C), dtype=np.float64)
-    for b0 in range(0, C, BATCH):
-        idx = cnode[b0:b0 + BATCH]
-        d = np.atleast_2d(dijkstra(G, directed=False, indices=idx, limit=MAX_H))
-        R_pts[b0:b0 + len(idx)] = d[:, pnode]
-        R_cc[b0:b0 + len(idx)] = d[:, cnode]
-        del d
+    R_pts, R_cc = market_distances(G, cnode, pnode)
     T = R_cc + cities.snap_h.values[:, None] + cities.snap_h.values[None, :]
     if scenario in {"summer", "winter"}:
         T = np.minimum(T0, T)
@@ -125,7 +118,7 @@ def run(scenario, con, base, pts0, cities, T0, remote):
     print(f"[{scenario}] dijkstra from district centers ...", flush=True)
     dcs = on[on.is_dc].drop_duplicates(["region", "mun_upper"])
     dc_nodes = dcs.node.values.astype(np.int64)
-    d, _, src_dc = dijkstra(G, directed=False, indices=dc_nodes, min_only=True, return_predecessors=True, limit=DC_LIMIT_H)
+    d, _, src_dc = dijkstra(G, directed=True, indices=dc_nodes, min_only=True, return_predecessors=True, limit=DC_LIMIT_H)
     own = on.merge(dcs[["region", "mun_upper", "node"]].rename(columns={"node": "own_dc_node"}),
                    on=["region", "mun_upper"], how="left").own_dc_node.values
     dc_snap = pd.Series(dcs.snap_h.values, index=dcs.node.values)
@@ -139,7 +132,7 @@ def run(scenario, con, base, pts0, cities, T0, remote):
     t_centre = {}
     for thr in CENTRE_THRESHOLDS:
         big = on[on.population >= thr].drop_duplicates("node")
-        d, _, src_c = dijkstra(G, directed=False, indices=big.node.values, min_only=True, return_predecessors=True, limit=MAX_H)
+        d, _, src_c = dijkstra(G, directed=True, indices=big.node.values, min_only=True, return_predecessors=True, limit=MAX_H)
         snap_c = pd.Series(big.snap_h.values, index=big.node.values)
         near_c = src_c[pnode]
         t = d[pnode] + on.snap_h.values + snap_c.reindex(near_c).fillna(0).values

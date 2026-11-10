@@ -1,0 +1,1194 @@
+{
+  "date": "2026-11-10",
+  "runs": [
+    [
+      {
+        "name": "regional_matrix",
+        "sql": "SELECT point_id,city,road_h FROM plexus_casechamp.np_city_times WHERE season='road' AND point_id IN (SELECT point_id FROM plexus_casechamp.idx_np WHERE season='road' AND region={region:String})",
+        "parameters": {
+          "region": "Владимирская область"
+        },
+        "plan": [
+          {
+            "explain": "CreatingSets (Create sets before main query execution)"
+          },
+          {
+            "explain": "  Expression ((Project names + Projection))"
+          },
+          {
+            "explain": "    Expression"
+          },
+          {
+            "explain": "      ReadFromMergeTree (plexus_casechamp.np_city_times)"
+          },
+          {
+            "explain": "      Indexes:"
+          },
+          {
+            "explain": "        PrimaryKey"
+          },
+          {
+            "explain": "          Keys:"
+          },
+          {
+            "explain": "            season"
+          },
+          {
+            "explain": "            point_id"
+          },
+          {
+            "explain": "          Condition: and((point_id in 2526-element set), (season in ['road', 'road']))"
+          },
+          {
+            "explain": "          Parts: 1/5"
+          },
+          {
+            "explain": "          Granules: 56/10238"
+          },
+          {
+            "explain": "          Search Algorithm: generic exclusion search"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.29792316595558077,
+            "elapsed": 0.098032167,
+            "rows_read": 475136,
+            "bytes_read": 32104789,
+            "returned": 454680
+          },
+          {
+            "wall_seconds": 0.31361458299215883,
+            "elapsed": 0.097205875,
+            "rows_read": 475136,
+            "bytes_read": 32104789,
+            "returned": 454680
+          },
+          {
+            "wall_seconds": 0.33598425006493926,
+            "elapsed": 0.116037,
+            "rows_read": 475136,
+            "bytes_read": 32104789,
+            "returned": 454680
+          }
+        ],
+        "median_wall_seconds": 0.31361458299215883
+      },
+      {
+        "name": "road_osm_id",
+        "sql": "SELECT way_id,way_idx FROM plexus_graph.ways WHERE way_id IN {ids:Array(Int64)}",
+        "parameters": {
+          "ids": [
+            815010654
+          ]
+        },
+        "plan": [
+          {
+            "explain": "Expression ((Project names + Projection))"
+          },
+          {
+            "explain": "  Expression"
+          },
+          {
+            "explain": "    ReadFromMergeTree (by_osm_id)"
+          },
+          {
+            "explain": "    Indexes:"
+          },
+          {
+            "explain": "      PrimaryKey"
+          },
+          {
+            "explain": "        Keys:"
+          },
+          {
+            "explain": "          way_id"
+          },
+          {
+            "explain": "        Condition: (way_id in 1-element set)"
+          },
+          {
+            "explain": "        Parts: 4/4"
+          },
+          {
+            "explain": "        Granules: 4/527"
+          },
+          {
+            "explain": "        Search Algorithm: binary search"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.05261016695294529,
+            "elapsed": 0.007175625,
+            "rows_read": 32768,
+            "bytes_read": 335872,
+            "returned": 1
+          },
+          {
+            "wall_seconds": 0.012697583064436913,
+            "elapsed": 0.008299584,
+            "rows_read": 32768,
+            "bytes_read": 335872,
+            "returned": 1
+          },
+          {
+            "wall_seconds": 0.016637208056636155,
+            "elapsed": 0.010751625,
+            "rows_read": 32768,
+            "bytes_read": 335872,
+            "returned": 1
+          }
+        ],
+        "median_wall_seconds": 0.016637208056636155,
+        "without_secondary_indexes": {
+          "elapsed": 0.053241083,
+          "rows_read": 4301210,
+          "bytes_read": 38710895
+        }
+      },
+      {
+        "name": "settlements_region",
+        "sql": "SELECT id,name,population,x,y FROM plexus_atlas.atlas_settlements WHERE region_id={region:String}",
+        "parameters": {
+          "region": "17000000"
+        },
+        "plan": [
+          {
+            "explain": "Expression ((Project names + Projection))"
+          },
+          {
+            "explain": "  Expression"
+          },
+          {
+            "explain": "    ReadFromMergeTree (plexus_atlas.atlas_settlements)"
+          },
+          {
+            "explain": "    Indexes:"
+          },
+          {
+            "explain": "      PrimaryKey"
+          },
+          {
+            "explain": "        Keys:"
+          },
+          {
+            "explain": "          region_id"
+          },
+          {
+            "explain": "        Condition: (region_id in ['17000000', '17000000'])"
+          },
+          {
+            "explain": "        Parts: 1/3"
+          },
+          {
+            "explain": "        Granules: 3/155"
+          },
+          {
+            "explain": "        Search Algorithm: binary search"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.04300904204137623,
+            "elapsed": 0.022722791,
+            "rows_read": 2952,
+            "bytes_read": 307214,
+            "returned": 2526
+          },
+          {
+            "wall_seconds": 0.02143095899373293,
+            "elapsed": 0.003165459,
+            "rows_read": 2952,
+            "bytes_read": 307214,
+            "returned": 2526
+          },
+          {
+            "wall_seconds": 0.013776749954558909,
+            "elapsed": 0.003750708,
+            "rows_read": 2952,
+            "bytes_read": 307214,
+            "returned": 2526
+          }
+        ],
+        "median_wall_seconds": 0.02143095899373293
+      },
+      {
+        "name": "settlement_search",
+        "sql": "SELECT id,name,region_id,population FROM plexus_atlas.atlas_settlements WHERE name_key LIKE {pattern:String} ORDER BY ordinal",
+        "parameters": {
+          "pattern": "%владимир%"
+        },
+        "plan": [
+          {
+            "explain": "Expression (Project names)"
+          },
+          {
+            "explain": "  Sorting (Sorting for ORDER BY)"
+          },
+          {
+            "explain": "    Expression ((Before ORDER BY + Projection))"
+          },
+          {
+            "explain": "      Expression"
+          },
+          {
+            "explain": "        ReadFromMergeTree (plexus_atlas.atlas_settlements)"
+          },
+          {
+            "explain": "        Indexes:"
+          },
+          {
+            "explain": "          PrimaryKey"
+          },
+          {
+            "explain": "            Condition: true"
+          },
+          {
+            "explain": "            Parts: 3/3"
+          },
+          {
+            "explain": "            Granules: 155/155"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: place_name"
+          },
+          {
+            "explain": "            Description: ngrambf_v1 GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 3/3"
+          },
+          {
+            "explain": "            Granules: 84/155"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.0716030839830637,
+            "elapsed": 0.066774417,
+            "rows_read": 84388,
+            "bytes_read": 7937637,
+            "returned": 140
+          },
+          {
+            "wall_seconds": 0.02710329194087535,
+            "elapsed": 0.024341917,
+            "rows_read": 84388,
+            "bytes_read": 7937637,
+            "returned": 140
+          },
+          {
+            "wall_seconds": 0.03836699994280934,
+            "elapsed": 0.029449541,
+            "rows_read": 84388,
+            "bytes_read": 7937637,
+            "returned": 140
+          }
+        ],
+        "median_wall_seconds": 0.03836699994280934,
+        "without_secondary_indexes": {
+          "elapsed": 0.034442209,
+          "rows_read": 155412,
+          "bytes_read": 12883543
+        }
+      },
+      {
+        "name": "graph_search",
+        "sql": "SELECT point_id,settlement,region,node,lon,lat,snap_km FROM plexus_graph.locations WHERE lowerUTF8(ifNull(settlement,'')) LIKE {pattern:String} AND ({region:String}='' OR region={region:String}) ORDER BY population DESC NULLS LAST LIMIT 20",
+        "parameters": {
+          "pattern": "%владимир%",
+          "region": ""
+        },
+        "plan": [
+          {
+            "explain": "Expression (Project names)"
+          },
+          {
+            "explain": "  Limit (preliminary LIMIT (without OFFSET))"
+          },
+          {
+            "explain": "    Sorting (Sorting for ORDER BY)"
+          },
+          {
+            "explain": "      Expression ((Before ORDER BY + Projection))"
+          },
+          {
+            "explain": "        Filter"
+          },
+          {
+            "explain": "          ReadFromMergeTree (plexus_graph.locations)"
+          },
+          {
+            "explain": "          Indexes:"
+          },
+          {
+            "explain": "            PrimaryKey"
+          },
+          {
+            "explain": "              Condition: true"
+          },
+          {
+            "explain": "              Parts: 1/1"
+          },
+          {
+            "explain": "              Granules: 153/153"
+          },
+          {
+            "explain": "            Skip"
+          },
+          {
+            "explain": "              Name: place_name"
+          },
+          {
+            "explain": "              Description: ngrambf_v1 GRANULARITY 1"
+          },
+          {
+            "explain": "              Parts: 1/1"
+          },
+          {
+            "explain": "              Granules: 79/153"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.03264716698322445,
+            "elapsed": 0.02998225,
+            "rows_read": 80896,
+            "bytes_read": 11097707,
+            "returned": 20
+          },
+          {
+            "wall_seconds": 0.02706079196650535,
+            "elapsed": 0.021390917,
+            "rows_read": 80896,
+            "bytes_read": 11097707,
+            "returned": 20
+          },
+          {
+            "wall_seconds": 0.029674290912225842,
+            "elapsed": 0.026151375,
+            "rows_read": 80896,
+            "bytes_read": 11097707,
+            "returned": 20
+          }
+        ],
+        "median_wall_seconds": 0.029674290912225842,
+        "without_secondary_indexes": {
+          "elapsed": 0.038346875,
+          "rows_read": 155747,
+          "bytes_read": 13373232
+        }
+      },
+      {
+        "name": "road_reference",
+        "sql": "SELECT DISTINCT ref FROM plexus_graph.road_lookup WHERE lookup={name:String}",
+        "parameters": {
+          "name": "м7"
+        },
+        "plan": [
+          {
+            "explain": "Expression (Project names)"
+          },
+          {
+            "explain": "  Distinct (DISTINCT)"
+          },
+          {
+            "explain": "    Distinct (Preliminary DISTINCT)"
+          },
+          {
+            "explain": "      Expression (Projection)"
+          },
+          {
+            "explain": "        Expression"
+          },
+          {
+            "explain": "          ReadFromMergeTree (plexus_graph.road_lookup)"
+          },
+          {
+            "explain": "          Indexes:"
+          },
+          {
+            "explain": "            PrimaryKey"
+          },
+          {
+            "explain": "              Keys:"
+          },
+          {
+            "explain": "                lookup"
+          },
+          {
+            "explain": "              Condition: (lookup in ['м7', 'м7'])"
+          },
+          {
+            "explain": "              Parts: 1/1"
+          },
+          {
+            "explain": "              Granules: 1/758"
+          },
+          {
+            "explain": "              Search Algorithm: binary search"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.005036458023823798,
+            "elapsed": 0.001443375,
+            "rows_read": 256,
+            "bytes_read": 13566,
+            "returned": 2
+          },
+          {
+            "wall_seconds": 0.003782415995374322,
+            "elapsed": 0.00102725,
+            "rows_read": 256,
+            "bytes_read": 13566,
+            "returned": 2
+          },
+          {
+            "wall_seconds": 0.0032476669875904918,
+            "elapsed": 0.00138975,
+            "rows_read": 256,
+            "bytes_read": 13566,
+            "returned": 2
+          }
+        ],
+        "median_wall_seconds": 0.003782415995374322
+      },
+      {
+        "name": "road_geometry",
+        "sql": "SELECT count(),sum(edge_count) FROM plexus_graph.road_lines WHERE rank<=3 AND min_lon<=43 AND max_lon>=38 AND min_lat<=57 AND max_lat>=54",
+        "parameters": {},
+        "plan": [
+          {
+            "explain": "Expression ((Project names + Projection))"
+          },
+          {
+            "explain": "  Aggregating"
+          },
+          {
+            "explain": "    Expression (Before GROUP BY)"
+          },
+          {
+            "explain": "      Expression"
+          },
+          {
+            "explain": "        ReadFromMergeTree (plexus_graph.road_lines)"
+          },
+          {
+            "explain": "        Indexes:"
+          },
+          {
+            "explain": "          PrimaryKey"
+          },
+          {
+            "explain": "            Keys:"
+          },
+          {
+            "explain": "              rank"
+          },
+          {
+            "explain": "              floor(min_lon)"
+          },
+          {
+            "explain": "              floor(min_lat)"
+          },
+          {
+            "explain": "            Condition: and((floor(min_lat) in (-Inf, 57.]), and((floor(min_lon) in (-Inf, 43.]), (rank in (-Inf, 3])))"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 102/2104"
+          },
+          {
+            "explain": "            Search Algorithm: generic exclusion search"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: bounds_lon_min"
+          },
+          {
+            "explain": "            Description: minmax GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 99/102"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: bounds_lon_max"
+          },
+          {
+            "explain": "            Description: minmax GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 65/99"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: bounds_lat_min"
+          },
+          {
+            "explain": "            Description: minmax GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 65/65"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: bounds_lat_max"
+          },
+          {
+            "explain": "            Description: minmax GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 61/65"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.014833708992227912,
+            "elapsed": 0.011369458,
+            "rows_read": 124928,
+            "bytes_read": 4434757,
+            "returned": 1
+          },
+          {
+            "wall_seconds": 0.014943499932996929,
+            "elapsed": 0.011860791,
+            "rows_read": 122880,
+            "bytes_read": 4367173,
+            "returned": 1
+          },
+          {
+            "wall_seconds": 0.03148112504277378,
+            "elapsed": 0.028141417,
+            "rows_read": 122880,
+            "bytes_read": 4367173,
+            "returned": 1
+          }
+        ],
+        "median_wall_seconds": 0.014943499932996929
+      }
+    ],
+    [
+      {
+        "name": "regional_matrix",
+        "sql": "SELECT point_id,city,road_h FROM plexus_casechamp.np_city_times WHERE season='road' AND point_id IN (SELECT point_id FROM plexus_casechamp.idx_np WHERE season='road' AND region={region:String})",
+        "parameters": {
+          "region": "Владимирская область"
+        },
+        "plan": [
+          {
+            "explain": "CreatingSets (Create sets before main query execution)"
+          },
+          {
+            "explain": "  Expression ((Project names + Projection))"
+          },
+          {
+            "explain": "    Expression"
+          },
+          {
+            "explain": "      ReadFromMergeTree (plexus_casechamp.np_city_times)"
+          },
+          {
+            "explain": "      Indexes:"
+          },
+          {
+            "explain": "        PrimaryKey"
+          },
+          {
+            "explain": "          Keys:"
+          },
+          {
+            "explain": "            season"
+          },
+          {
+            "explain": "            point_id"
+          },
+          {
+            "explain": "          Condition: and((point_id in 2526-element set), (season in ['road', 'road']))"
+          },
+          {
+            "explain": "          Parts: 1/5"
+          },
+          {
+            "explain": "          Granules: 56/10238"
+          },
+          {
+            "explain": "          Search Algorithm: generic exclusion search"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 1.0044497500639409,
+            "elapsed": 0.442520459,
+            "rows_read": 475136,
+            "bytes_read": 32104789,
+            "returned": 454680
+          },
+          {
+            "wall_seconds": 0.9496942500118166,
+            "elapsed": 0.312765375,
+            "rows_read": 475136,
+            "bytes_read": 32104789,
+            "returned": 454680
+          },
+          {
+            "wall_seconds": 0.6430716250324622,
+            "elapsed": 0.244459875,
+            "rows_read": 475136,
+            "bytes_read": 32104789,
+            "returned": 454680
+          }
+        ],
+        "median_wall_seconds": 0.9496942500118166
+      },
+      {
+        "name": "road_osm_id",
+        "sql": "SELECT way_id,way_idx FROM plexus_graph.ways WHERE way_id IN {ids:Array(Int64)}",
+        "parameters": {
+          "ids": [
+            299375168
+          ]
+        },
+        "plan": [
+          {
+            "explain": "Expression ((Project names + Projection))"
+          },
+          {
+            "explain": "  Expression"
+          },
+          {
+            "explain": "    ReadFromMergeTree (by_osm_id)"
+          },
+          {
+            "explain": "    Indexes:"
+          },
+          {
+            "explain": "      PrimaryKey"
+          },
+          {
+            "explain": "        Keys:"
+          },
+          {
+            "explain": "          way_id"
+          },
+          {
+            "explain": "        Condition: (way_id in 1-element set)"
+          },
+          {
+            "explain": "        Parts: 4/4"
+          },
+          {
+            "explain": "        Granules: 4/527"
+          },
+          {
+            "explain": "        Search Algorithm: binary search"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.044965040986426175,
+            "elapsed": 0.006310459,
+            "rows_read": 32768,
+            "bytes_read": 302817,
+            "returned": 1
+          },
+          {
+            "wall_seconds": 0.007089292048476636,
+            "elapsed": 0.004416333,
+            "rows_read": 32768,
+            "bytes_read": 302817,
+            "returned": 1
+          },
+          {
+            "wall_seconds": 0.006969208014197648,
+            "elapsed": 0.003877959,
+            "rows_read": 32768,
+            "bytes_read": 302817,
+            "returned": 1
+          }
+        ],
+        "median_wall_seconds": 0.007089292048476636,
+        "without_secondary_indexes": {
+          "elapsed": 0.066641542,
+          "rows_read": 4301210,
+          "bytes_read": 38710895
+        }
+      },
+      {
+        "name": "settlements_region",
+        "sql": "SELECT id,name,population,x,y FROM plexus_atlas.atlas_settlements WHERE region_id={region:String}",
+        "parameters": {
+          "region": "17000000"
+        },
+        "plan": [
+          {
+            "explain": "Expression ((Project names + Projection))"
+          },
+          {
+            "explain": "  Expression"
+          },
+          {
+            "explain": "    ReadFromMergeTree (plexus_atlas.atlas_settlements)"
+          },
+          {
+            "explain": "    Indexes:"
+          },
+          {
+            "explain": "      PrimaryKey"
+          },
+          {
+            "explain": "        Keys:"
+          },
+          {
+            "explain": "          region_id"
+          },
+          {
+            "explain": "        Condition: (region_id in ['17000000', '17000000'])"
+          },
+          {
+            "explain": "        Parts: 1/3"
+          },
+          {
+            "explain": "        Granules: 3/155"
+          },
+          {
+            "explain": "        Search Algorithm: binary search"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.015678875031881034,
+            "elapsed": 0.00453525,
+            "rows_read": 2952,
+            "bytes_read": 307214,
+            "returned": 2526
+          },
+          {
+            "wall_seconds": 0.01852729101665318,
+            "elapsed": 0.006914667,
+            "rows_read": 2952,
+            "bytes_read": 307214,
+            "returned": 2526
+          },
+          {
+            "wall_seconds": 0.01680629199836403,
+            "elapsed": 0.005149,
+            "rows_read": 2952,
+            "bytes_read": 307214,
+            "returned": 2526
+          }
+        ],
+        "median_wall_seconds": 0.01680629199836403
+      },
+      {
+        "name": "settlement_search",
+        "sql": "SELECT id,name,region_id,population FROM plexus_atlas.atlas_settlements WHERE name_key LIKE {pattern:String} ORDER BY ordinal",
+        "parameters": {
+          "pattern": "%владимир%"
+        },
+        "plan": [
+          {
+            "explain": "Expression (Project names)"
+          },
+          {
+            "explain": "  Sorting (Sorting for ORDER BY)"
+          },
+          {
+            "explain": "    Expression ((Before ORDER BY + Projection))"
+          },
+          {
+            "explain": "      Expression"
+          },
+          {
+            "explain": "        ReadFromMergeTree (plexus_atlas.atlas_settlements)"
+          },
+          {
+            "explain": "        Indexes:"
+          },
+          {
+            "explain": "          PrimaryKey"
+          },
+          {
+            "explain": "            Condition: true"
+          },
+          {
+            "explain": "            Parts: 3/3"
+          },
+          {
+            "explain": "            Granules: 155/155"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: place_name"
+          },
+          {
+            "explain": "            Description: ngrambf_v1 GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 3/3"
+          },
+          {
+            "explain": "            Granules: 84/155"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.025257208035327494,
+            "elapsed": 0.0202685,
+            "rows_read": 84388,
+            "bytes_read": 11016325,
+            "returned": 140
+          },
+          {
+            "wall_seconds": 0.030770624987781048,
+            "elapsed": 0.026617417,
+            "rows_read": 84388,
+            "bytes_read": 11016325,
+            "returned": 140
+          },
+          {
+            "wall_seconds": 0.028378000017255545,
+            "elapsed": 0.023961333,
+            "rows_read": 84388,
+            "bytes_read": 11016325,
+            "returned": 140
+          }
+        ],
+        "median_wall_seconds": 0.028378000017255545,
+        "without_secondary_indexes": {
+          "elapsed": 0.02165775,
+          "rows_read": 155412,
+          "bytes_read": 17106948
+        }
+      },
+      {
+        "name": "graph_search",
+        "sql": "SELECT point_id,settlement,region,node,lon,lat,snap_km FROM plexus_graph.locations WHERE lowerUTF8(ifNull(settlement,'')) LIKE {pattern:String} AND ({region:String}='' OR region={region:String}) ORDER BY population DESC NULLS LAST LIMIT 20",
+        "parameters": {
+          "pattern": "%владимир%",
+          "region": ""
+        },
+        "plan": [
+          {
+            "explain": "Expression (Project names)"
+          },
+          {
+            "explain": "  Limit (preliminary LIMIT (without OFFSET))"
+          },
+          {
+            "explain": "    Sorting (Sorting for ORDER BY)"
+          },
+          {
+            "explain": "      Expression ((Before ORDER BY + Projection))"
+          },
+          {
+            "explain": "        Filter"
+          },
+          {
+            "explain": "          ReadFromMergeTree (plexus_graph.locations)"
+          },
+          {
+            "explain": "          Indexes:"
+          },
+          {
+            "explain": "            PrimaryKey"
+          },
+          {
+            "explain": "              Condition: true"
+          },
+          {
+            "explain": "              Parts: 1/1"
+          },
+          {
+            "explain": "              Granules: 153/153"
+          },
+          {
+            "explain": "            Skip"
+          },
+          {
+            "explain": "              Name: place_name"
+          },
+          {
+            "explain": "              Description: ngrambf_v1 GRANULARITY 1"
+          },
+          {
+            "explain": "              Parts: 1/1"
+          },
+          {
+            "explain": "              Granules: 79/153"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.06501591601409018,
+            "elapsed": 0.061924083,
+            "rows_read": 79872,
+            "bytes_read": 10952444,
+            "returned": 20
+          },
+          {
+            "wall_seconds": 0.04890858300495893,
+            "elapsed": 0.046255625,
+            "rows_read": 78848,
+            "bytes_read": 10910422,
+            "returned": 20
+          },
+          {
+            "wall_seconds": 0.04073466593399644,
+            "elapsed": 0.038538042,
+            "rows_read": 78848,
+            "bytes_read": 10910422,
+            "returned": 20
+          }
+        ],
+        "median_wall_seconds": 0.04890858300495893,
+        "without_secondary_indexes": {
+          "elapsed": 0.0447665,
+          "rows_read": 142336,
+          "bytes_read": 12816478
+        }
+      },
+      {
+        "name": "road_reference",
+        "sql": "SELECT DISTINCT ref FROM plexus_graph.road_lookup WHERE lookup={name:String}",
+        "parameters": {
+          "name": "м7"
+        },
+        "plan": [
+          {
+            "explain": "Expression (Project names)"
+          },
+          {
+            "explain": "  Distinct (DISTINCT)"
+          },
+          {
+            "explain": "    Distinct (Preliminary DISTINCT)"
+          },
+          {
+            "explain": "      Expression (Projection)"
+          },
+          {
+            "explain": "        Expression"
+          },
+          {
+            "explain": "          ReadFromMergeTree (plexus_graph.road_lookup)"
+          },
+          {
+            "explain": "          Indexes:"
+          },
+          {
+            "explain": "            PrimaryKey"
+          },
+          {
+            "explain": "              Keys:"
+          },
+          {
+            "explain": "                lookup"
+          },
+          {
+            "explain": "              Condition: (lookup in ['м7', 'м7'])"
+          },
+          {
+            "explain": "              Parts: 1/1"
+          },
+          {
+            "explain": "              Granules: 1/758"
+          },
+          {
+            "explain": "              Search Algorithm: binary search"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.0037939168978482485,
+            "elapsed": 0.001387416,
+            "rows_read": 256,
+            "bytes_read": 13566,
+            "returned": 2
+          },
+          {
+            "wall_seconds": 0.0021780829411000013,
+            "elapsed": 0.000959917,
+            "rows_read": 256,
+            "bytes_read": 13566,
+            "returned": 2
+          },
+          {
+            "wall_seconds": 0.0020309159299358726,
+            "elapsed": 0.0008175,
+            "rows_read": 256,
+            "bytes_read": 13566,
+            "returned": 2
+          }
+        ],
+        "median_wall_seconds": 0.0021780829411000013
+      },
+      {
+        "name": "road_geometry",
+        "sql": "SELECT count(),sum(edge_count) FROM plexus_graph.road_lines WHERE rank<=3 AND min_lon<=43 AND max_lon>=38 AND min_lat<=57 AND max_lat>=54",
+        "parameters": {},
+        "plan": [
+          {
+            "explain": "Expression ((Project names + Projection))"
+          },
+          {
+            "explain": "  Aggregating"
+          },
+          {
+            "explain": "    Expression (Before GROUP BY)"
+          },
+          {
+            "explain": "      Expression"
+          },
+          {
+            "explain": "        ReadFromMergeTree (plexus_graph.road_lines)"
+          },
+          {
+            "explain": "        Indexes:"
+          },
+          {
+            "explain": "          PrimaryKey"
+          },
+          {
+            "explain": "            Keys:"
+          },
+          {
+            "explain": "              rank"
+          },
+          {
+            "explain": "              floor(min_lon)"
+          },
+          {
+            "explain": "              floor(min_lat)"
+          },
+          {
+            "explain": "            Condition: and((floor(min_lat) in (-Inf, 57.]), and((floor(min_lon) in (-Inf, 43.]), (rank in (-Inf, 3])))"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 102/2104"
+          },
+          {
+            "explain": "            Search Algorithm: generic exclusion search"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: bounds_lon_min"
+          },
+          {
+            "explain": "            Description: minmax GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 99/102"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: bounds_lon_max"
+          },
+          {
+            "explain": "            Description: minmax GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 65/99"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: bounds_lat_min"
+          },
+          {
+            "explain": "            Description: minmax GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 65/65"
+          },
+          {
+            "explain": "          Skip"
+          },
+          {
+            "explain": "            Name: bounds_lat_max"
+          },
+          {
+            "explain": "            Description: minmax GRANULARITY 1"
+          },
+          {
+            "explain": "            Parts: 6/6"
+          },
+          {
+            "explain": "            Granules: 61/65"
+          }
+        ],
+        "runs": [
+          {
+            "wall_seconds": 0.014254749985411763,
+            "elapsed": 0.0123,
+            "rows_read": 122880,
+            "bytes_read": 4367173,
+            "returned": 1
+          },
+          {
+            "wall_seconds": 0.011859958991408348,
+            "elapsed": 0.009918458,
+            "rows_read": 122880,
+            "bytes_read": 4367173,
+            "returned": 1
+          },
+          {
+            "wall_seconds": 0.011769249918870628,
+            "elapsed": 0.009867917,
+            "rows_read": 122880,
+            "bytes_read": 4367173,
+            "returned": 1
+          }
+        ],
+        "median_wall_seconds": 0.011859958991408348
+      }
+    ]
+  ],
+  "method": "Three sequential requests per case in each run; second run overlaps local Docker build; wall time includes HTTP and JSON decoding."
+}

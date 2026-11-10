@@ -15,7 +15,12 @@ export function useCorridorLayer(
   const focused = useRef(0)
   useEffect(() => {
     const map = engine.current
-    if (!ready || !map || !overlay) return
+    if (!ready || !map) return
+    if (!overlay) {
+      clearCorridor(map)
+      focused.current = 0
+      return
+    }
     const lines = overlay.calculation.corridor.lines
     const data: FeatureCollection<MultiLineString> = {
       type: "FeatureCollection",
@@ -62,4 +67,10 @@ export function useCorridorLayer(
       },
     )
   }, [engine, overlay, ready, reduced])
+}
+
+function clearCorridor(map: LibreMap) {
+  if (map.getLayer(SOURCE)) map.removeLayer(SOURCE)
+  if (map.getSource(SOURCE)) map.removeSource(SOURCE)
+  delete map.getContainer().dataset.corridorId
 }

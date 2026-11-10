@@ -13,7 +13,7 @@ export function MapPage() {
         {t("map:title")}
       </h1>
       <MapExplorer
-        renderPanel={(summary, context, onMapCommand, roads) => (
+        renderPanel={(summary, context, onMapCommand, roads, onChatChange) => (
           <MapChat
             scenario={
               <AnalysisWorkspace
@@ -26,6 +26,7 @@ export function MapPage() {
             context={context}
             onMapCommand={onMapCommand}
             onCalculation={roads.showCalculation}
+            onSessionChange={onChatChange}
           />
         )}
       />

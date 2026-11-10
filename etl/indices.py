@@ -12,7 +12,8 @@ from scipy.spatial import cKDTree
 
 from inequality import gini, palma, theil
 ROOT = Path(__file__).resolve().parent.parent
-DB = ROOT / "data" / "casechamp.duckdb"
+DB = Path(os.environ.get("CASECHAMP_DB", str(ROOT / "data" / "casechamp.duckdb")))
+OSM_SOURCE = Path(os.environ.get("OSM_SOURCE", str(ROOT / "data" / "osm_ways")))
 R_EARTH = 6371.0
 
 HALF_LIFE_H = (1, 2, 4)        # полупериод затухания Hansen; основной — 2 ч, остальные — чувствительность
@@ -65,7 +66,7 @@ def rai(pts):
     """Расстояние (км) от н.п. до ближайшей всесезонной дороги: минимум по файлам округов."""
     q = xyz(pts.lat.values, pts.lon.values)
     best = np.full(len(pts), np.inf)
-    for f in sorted(glob.glob(str(ROOT / "data" / "osm_ways" / "*.parquet"))):
+    for f in sorted(glob.glob(str(OSM_SOURCE / "*.parquet"))):
         v = allseason_vertices(f)
         d, _ = cKDTree(v).query(q, distance_upper_bound=RAI_KM * 5 / R_EARTH)
         best = np.minimum(best, d * R_EARTH)

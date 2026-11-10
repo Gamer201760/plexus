@@ -7,13 +7,16 @@ import {
 } from "maplibre-gl"
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url"
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import type { AirportCatalog } from "@/shared/api/airports"
 import type { ChatMapCommand } from "@/shared/api/chat-map"
 import type { RoadLayerProps } from "@/shared/api/road-graph"
 import { motionMs, useReducedMotion } from "@/shared/motion"
 import type { BoundaryAtlas, LonLatBounds } from "./boundary-geojson"
 import { corners, focusIds, focusRegions } from "./map-camera"
 import { buildStyle, FILL_LAYER, REGIONS_SOURCE, readMapColors } from "./osm-style"
-import { ROAD_LAYER, useRoadLayer } from "./use-road-layer"
+import { roadLayers } from "./road-parts"
+import { AIRPORT_LAYER, useAirportLayer } from "./use-airport-layer"
+import { useRoadLayer } from "./use-road-layer"
 import { useTransitLayer } from "./use-transit-layer"
 
 setWorkerUrl(workerUrl)
@@ -32,6 +35,7 @@ export interface MapControls {
 }
 
 export interface OsmMapOptions {
+  readonly airports?: AirportCatalog | undefined
   readonly transit: FeatureCollection<LineString>
   readonly roads?: RoadLayerProps | undefined
   readonly atlas: BoundaryAtlas
@@ -52,6 +56,7 @@ function margin(bounds: LonLatBounds): LonLatBounds {
 }
 
 export function useOsmMap({
+  airports,
   transit,
   roads,
   atlas,
@@ -66,6 +71,7 @@ export function useOsmMap({
   const [styleReady, setStyleReady] = useState(false)
   useRoadLayer(engine, roads, styleReady)
   useTransitLayer(engine, transit, styleReady)
+  useAirportLayer(engine, airports, styleReady)
   const roadState = useRef(roads)
   roadState.current = roads
   const ready = useRef(false)
@@ -76,10 +82,10 @@ export function useOsmMap({
   state.current = { atlas, stepOf, selectedId, command, onSelect, onHover, reduced }
 
   const duration = useCallback(
-    (instant?: boolean) =>
+    (instant?: boolean, command = false) =>
       instant || state.current.reduced
         ? 0
-        : motionMs("--dur-panel", container.current ?? undefined),
+        : motionMs(command ? "--dur-map" : "--dur-panel", container.current ?? undefined),
     [],
   )
 
@@ -110,8 +116,7 @@ export function useOsmMap({
       const current = state.current
       const action = current.command !== appliedCommand.current ? current.command : undefined
       appliedCommand.current = current.command
-      const travel =
-        instant || current.reduced ? 0 : motionMs("--dur-map", container.current ?? undefined)
+      const travel = duration(instant, Boolean(action))
       if (action?.action === "zoom_in" || action?.action === "zoom_out") {
         map.stop()
         map.zoomTo(map.getZoom() + (action.action === "zoom_in" ? 1 : -1), {
@@ -153,12 +158,24 @@ export function useOsmMap({
       const numeric = typeof id === "number" ? id : null
       setHover(numeric)
       const region = numeric === null ? null : (state.current.atlas.regionOf.get(numeric) ?? null)
+      if (
+        map.getLayer(AIRPORT_LAYER) &&
+        map.queryRenderedFeatures(event.point, { layers: [AIRPORT_LAYER] }).length
+      ) {
+        state.current.onHover(null, 0, 0)
+        return
+      }
       state.current.onHover(region, event.originalEvent.clientX, event.originalEvent.clientY)
     }
     const onClick = (event: MapLayerMouseEvent) => {
       if (
-        map.getLayer(ROAD_LAYER) &&
-        map.queryRenderedFeatures(event.point, { layers: [ROAD_LAYER] }).length
+        map.getLayer(AIRPORT_LAYER) &&
+        map.queryRenderedFeatures(event.point, { layers: [AIRPORT_LAYER] }).length
+      )
+        return
+      if (
+        roadLayers(map).length &&
+        map.queryRenderedFeatures(event.point, { layers: roadLayers(map) }).length
       )
         return
       const id = event.features?.[0]?.id

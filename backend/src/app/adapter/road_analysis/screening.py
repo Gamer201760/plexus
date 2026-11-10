@@ -43,12 +43,7 @@ class CandidateScreening:
         )
         cross.update(int(w) for w in selected if inside_counts[w] < total_counts[w])
         region = self.base.region(data.region_name(boundary.id))
-        with data.connect() as con:
-            rows = con.execute(
-                "select way_idx,way_id,coalesce(nullif(name,''),nullif(ref,''),cast(way_id as varchar)),km "
-                "from read_parquet(?) where way_idx in (select unnest(?)) and not coalesce(is_ferry,false)",
-                [str(data.root / "graph_ru/ways.parquet"), selected.tolist()],
-            ).fetchall()
+        rows = data.read("candidates", {"ids": selected.tolist()})
         allowed = {int(r[0]) for r in rows}
         scores = self.path_scores(region, allowed, progress)
         isolation: dict[int, float] = {}

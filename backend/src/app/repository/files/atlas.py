@@ -5,6 +5,7 @@ from threading import Lock, RLock
 
 from app.domain.errors import RegionNotFound
 from app.domain.projection import SvgFrame
+from app.domain.text import normalize_name
 from app.repository.files.geo import boundary_frame, boundary_layer, region_layer
 from app.repository.files.json_values import JsonObject, obj, objects, read_json
 from app.repository.files.mapping import (
@@ -75,8 +76,12 @@ class JsonAtlasRepository:
     def points(self) -> dict[str, PointRecord]:
         return self._load_atlas().points
 
-    def links(self) -> list[LinkRecord]:
-        return self._load_atlas().links
+    def links(self, region_id: str | None = None) -> list[LinkRecord]:
+        return [
+            link
+            for link in self._load_atlas().links
+            if region_id is None or link.region_id == region_id
+        ]
 
     def total_settlements(self) -> int:
         return self._load_atlas().total_settlements
@@ -89,6 +94,9 @@ class JsonAtlasRepository:
 
     def sources(self) -> list[SourceRecord]:
         return [*self._load_additional().sources, *self._load_atlas().sources]
+
+    def search_names(self, needle: str) -> list[SettlementName]:
+        return [p for p in self.settlement_names() if needle in normalize_name(p.name)]
 
     def geo(self) -> GeoLayer:
         with self._lock:

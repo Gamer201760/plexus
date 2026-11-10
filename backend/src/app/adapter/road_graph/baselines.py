@@ -6,17 +6,13 @@ from app.adapter.road_graph.data import VERSION
 
 
 class BaselineCache:
-    def __init__(self, root: Path) -> None:
+    def __init__(self, root: Path, revision: str = "[]") -> None:
         self.root = root
+        self.signature = json.loads(revision)
 
     def path(self, region: str, scenario: str) -> Path:
-        paths = [
-            self.root / "casechamp.duckdb",
-            *sorted((self.root / "graph_ru").glob("*.parquet")),
-        ]
-        signature = [(str(p.name), p.stat().st_size, p.stat().st_mtime_ns) for p in paths]
         key = hashlib.sha256(
-            json.dumps([VERSION, "routing-v1", region, scenario, signature]).encode()
+            json.dumps([VERSION, "routing-v1", region, scenario, self.signature]).encode()
         )
         return self.root / "scenario-results" / f"baseline-{key.hexdigest()}.json"
 
@@ -28,7 +24,7 @@ class BaselineCache:
 
     def write(self, region: str, scenario: str, value: float) -> None:
         path = self.path(region, scenario)
-        path.parent.mkdir(exist_ok=True)
+        path.parent.mkdir(parents=True, exist_ok=True)
         temporary = path.with_suffix(".tmp")
         temporary.write_text(json.dumps({"region": region, "scenario": scenario, "value": value}))
         temporary.replace(path)

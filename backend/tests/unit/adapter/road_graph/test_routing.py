@@ -1,57 +1,44 @@
 import math
 from pathlib import Path
+from typing import Any, Literal, cast
 
-import duckdb
-import pyarrow as pa
-import pyarrow.parquet as pq
+import numpy as np
 import pytest
 
 from app.adapter.road_graph.data import GraphData
 from app.adapter.road_graph.routing import GraphRouting
+from app.usecase.graph_snapshot import GraphParameters, GraphQuery
 from app.usecase.road_graph import RoadChange
+
+
+class Snapshot:
+    revision = "[]"
+
+    def arrays(self, name: Literal["edges", "nodes", "ranks", "seasons"]) -> dict[str, Any]:
+        if name == "edges":
+            return {"src":np.array([0,1,0,0]), "dst":np.array([1,2,1,2]),
+                    "h":np.array([1,1,3,5],dtype=np.float32), "km":np.array([10,10,30,50]),
+                    "way_idx":np.array([0,1,2,3])}
+        if name == "nodes":
+            return {"lat":np.array([0.,0.,0.]), "lon":np.array([0.,1.,2.])}
+        return {"rank":np.array([2,2,2,2])}
+
+    def read(self, query: GraphQuery, parameters: GraphParameters | None = None) -> list[tuple[Any,...]]:
+        rows: dict[GraphQuery,list[tuple[Any,...]]] = {
+            "model_version": [],
+            "points": [("origin",0,0.)], "origins": [("origin",10)],
+            "cities": [("market",2,0.,100)], "trunk": [], "normalization": [(100.,)],
+        }
+        if query == "way_indices":
+            assert parameters is not None
+            ids = cast(list[int], parameters["ids"])
+            return [(way,way-100) for way in ids]
+        return rows[query]
 
 
 @pytest.fixture
 def routing(tmp_path: Path) -> GraphRouting:
-    graph = tmp_path / "graph_ru"
-    graph.mkdir()
-    pq.write_table(
-        pa.table({"lat": [0.0, 0.0, 0.0], "lon": [0.0, 1.0, 2.0]}), graph / "nodes.parquet"
-    )
-    pq.write_table(
-        pa.table(
-            {
-                "src": [0, 1, 0, 0],
-                "dst": [1, 2, 1, 2],
-                "h": pa.array([1.0, 1.0, 3.0, 5.0], type=pa.float32()),
-                "km": [10.0, 10.0, 30.0, 50.0],
-                "way_idx": [0, 1, 2, 3],
-            }
-        ),
-        graph / "edges.parquet",
-    )
-    pq.write_table(
-        pa.table({"point_id": ["origin"], "node": [0], "snap_km": [0.0]}), graph / "points.parquet"
-    )
-    pq.write_table(
-        pa.table(
-            {"way_id": [100, 101, 102, 103], "way_idx": [0, 1, 2, 3], "highway": ["primary"] * 4}
-        ),
-        graph / "ways.parquet",
-    )
-    with duckdb.connect(str(tmp_path / "casechamp.duckdb")) as con:
-        con.execute(
-            "create table idx_np as select 'origin' point_id, 10 population, "
-            "'region' region, 'road' season, 50. hansen_2h, 50. hansen_idx"
-        )
-        con.execute(
-            "create table market_cities as select 'market' city, 2 node, 0. snap_h, 100 population"
-        )
-        con.execute(
-            "create table stg_intercity(city_from varchar, city_to varchar, "
-            "transport_type varchar, distance_hr double)"
-        )
-    return GraphRouting(GraphData(tmp_path))
+    return GraphRouting(GraphData(tmp_path, Snapshot()))
 
 
 def test_parallel_roads_use_minimum_and_fixed_normalization(routing: GraphRouting) -> None:

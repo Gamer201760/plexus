@@ -1,63 +1,78 @@
+import hashlib
+from functools import cached_property
 from pathlib import Path
 from threading import Lock
 from typing import Any
 
-import duckdb
 import numpy as np
-import pyarrow.parquet as pq
 
+from app.adapter.road_graph.view_geometry import road_segments
 from app.domain.errors import DataUnavailable, InvalidQuery
-from app.usecase.road_graph import GraphLocation, RoadSegment, RoadView
+from app.usecase.graph_snapshot import GraphParameters, GraphQuery, GraphSnapshot
+from app.usecase.road_graph import GraphLocation, RoadView
 
 VERSION = "data-20261107"
 
 
 class GraphData:
-    def __init__(self, root: Path) -> None:
+    def __init__(self, root: Path, snapshot: GraphSnapshot | None = None) -> None:
         self.root = root
+        self.snapshot = snapshot
         self.lock = Lock()
         self.loaded = False
         self.edges: dict[str, Any] = {}
         self.nodes: dict[str, Any] = {}
         self.road_rank: Any = None
+        self.road_seasons: Any = None
+
+    @cached_property
+    def modern_model(self) -> bool:
+        rows = self.read("model_version")
+        return bool(rows and rows[0][0] == "hansen-frequency-v2")
+
+    @property
+    def revision(self) -> str:
+        return self.snapshot.revision if self.snapshot else "[]"
+
+    @cached_property
+    def version(self) -> str:
+        if not self.modern_model:
+            return VERSION
+        return "road-" + hashlib.sha256(self.revision.encode()).hexdigest()[:16]
 
     def load(self) -> None:
         with self.lock:
             if self.loaded:
                 return
-            if not (self.root / "graph_ru/edges.parquet").exists():
-                raise DataUnavailable("Graph files are missing")
-            for name, target in [("edges", self.edges), ("nodes", self.nodes)]:
-                table = pq.read_table(self.root / f"graph_ru/{name}.parquet")
-                target.update({c: table[c].to_numpy() for c in table.column_names})
-            with self.connect() as con:
-                self.road_rank = (
-                    con.execute(
-                        "select case replace(highway, '_link', '') "
-                        "when 'motorway' then 0 when 'trunk' then 1 when 'primary' then 2 "
-                        "when 'secondary' then 3 when 'tertiary' then 4 else 5 end as rank "
-                        "from read_parquet(?) order by way_idx",
-                        [str(self.root / "graph_ru/ways.parquet")],
-                    )
-                    .fetchnumpy()["rank"]
-                    .astype(np.uint8)
-                )
+            if self.snapshot is None:
+                raise DataUnavailable("Graph storage is not configured")
+            self.edges.update(self.snapshot.arrays("edges"))
+            self.nodes.update(self.snapshot.arrays("nodes"))
+            self.road_rank = self.snapshot.arrays("ranks")["rank"].astype(np.uint8)
+            if self.modern_model:
+                self.road_seasons = self.snapshot.arrays("seasons")["season"]
             self.loaded = True
 
-    def connect(self) -> duckdb.DuckDBPyConnection:
-        return duckdb.connect(str(self.root / "casechamp.duckdb"), read_only=True)
+    def allowed_edges(self, scenario: str) -> Any:
+        if not self.modern_model:
+            return np.ones(len(self.edges["src"]), dtype=bool)
+        seasons = self.road_seasons[self.edges["way_idx"]]
+        allowed = seasons == 0
+        season = scenario.removeprefix("road_")
+        if season in {"summer", "winter"}:
+            allowed |= seasons == (1 if season == "summer" else 2)
+        return allowed
+
+    def read(
+        self, query: GraphQuery, parameters: GraphParameters | None = None
+    ) -> list[tuple[Any, ...]]:
+        if self.snapshot is None:
+            raise DataUnavailable("Graph storage is not configured")
+        return self.snapshot.read(query, parameters)
 
     def locations(self, query: str, region_id: str | None) -> list[GraphLocation]:
-        self.load()
-        region = self.region_name(region_id) if region_id else None
-        with self.connect() as con:
-            rows = con.execute(
-                "select p.point_id, s.settlement, p.region, p.node, p.lon, p.lat, p.snap_km "
-                "from read_parquet(?) p join stg_settlements s on p.point_id=s.oktmo "
-                "and s.object_level='Населенный пункт' where s.settlement ilike ? "
-                "and (? is null or p.region=?) order by p.population desc nulls last limit 20",
-                [str(self.root / "graph_ru/points.parquet"), "%" + query + "%", region, region],
-            ).fetchall()
+        region = self.region_name(region_id) if region_id else ""
+        rows = self.read("locations", {"query": query, "region": region})
         return [
             GraphLocation(
                 str(p[0]),
@@ -72,22 +87,13 @@ class GraphData:
         ]
 
     def region_name(self, region_id: str) -> str:
-        with self.connect() as con:
-            row = con.execute(
-                "select region from stg_settlements where object_level='Регион' and oktmo=?",
-                [region_id],
-            ).fetchone()
-        if row is None:
+        rows = self.read("region_name", {"region_id": region_id})
+        if not rows:
             raise InvalidQuery("Region is missing from the graph snapshot")
-        return str(row[0])
+        return str(rows[0][0])
 
     def ways(self, ids: list[int]) -> dict[int, dict[str, Any]]:
-        with self.connect() as con:
-            rows = con.execute(
-                "select way_idx, way_id, name, ref, highway, speed_kmh "
-                "from read_parquet(?) where way_idx in (select unnest(?))",
-                [str(self.root / "graph_ru/ways.parquet"), ids],
-            ).fetchall()
+        rows = self.read("ways", {"ids": ids})
         return {
             int(r[0]): {
                 "way_id": int(r[1]),
@@ -99,11 +105,7 @@ class GraphData:
         }
 
     def indices_for(self, ids: list[int]) -> dict[int, int]:
-        with self.connect() as con:
-            rows = con.execute(
-                "select way_id, way_idx from read_parquet(?) where way_id in (select unnest(?))",
-                [str(self.root / "graph_ru/ways.parquet"), ids],
-            ).fetchall()
+        rows = self.read("way_indices", {"ids": ids})
         if len(rows) != len(ids):
             raise InvalidQuery("Unknown OSM way identifier")
         return {int(r[0]): int(r[1]) for r in rows}
@@ -128,27 +130,11 @@ class GraphData:
         positions = positions[ranks <= level]
         matched = len(positions)
         ways = self.ways(np.unique(self.edges["way_idx"][positions]).tolist())
-        segments = []
-        seen = set()
-        for p in positions:
-            a, b, w = int(src[p]), int(dst[p]), int(self.edges["way_idx"][p])
-            key = (min(a, b), max(a, b), w)
-            if key in seen:
-                continue
-            seen.add(key)
-            way = ways[w]
-            segments.append(
-                RoadSegment(
-                    **way,
-                    source_node=a,
-                    target_node=b,
-                    coordinates=[[float(lon[a]), float(lat[a])], [float(lon[b]), float(lat[b])]],
-                )
-            )
+        segments = road_segments(positions, self.edges, self.nodes, ways)
         return RoadView(
             segments,
             matched,
             level < requested,
-            VERSION,
+            self.version,
             ("motorway", "trunk", "primary", "secondary", "tertiary", "all")[level],
         )

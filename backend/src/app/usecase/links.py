@@ -105,7 +105,7 @@ class LinkQueries:
         points = self._repository.points()
         return [
             link_view(link, points)
-            for link in self._repository.links()
+            for link in self._repository.links(region_id)
             if link.region_id == region_id
             and (runs_in_season(link.season, season) or (include_unknown and link.season is None))
             and (mode is None or link.mode is mode)

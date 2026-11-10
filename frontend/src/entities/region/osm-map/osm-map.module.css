@@ -44,3 +44,11 @@
   outline: var(--focus-ring);
   outline-offset: calc(-1 * var(--space-4));
 }
+
+.airportPopup {
+  composes: mapFloat secondaryText from "../../../shared/styles/compose.module.css";
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  padding: var(--space-8) var(--space-12);
+  pointer-events: none;
+}

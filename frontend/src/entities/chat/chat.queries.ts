@@ -9,7 +9,11 @@ interface ChatTurn {
 
 export function useChatStream() {
   return useMutation({
-    mutationFn: ({ body, signal, onEvent }: ChatTurn) => streamChat(body, signal, onEvent),
+    scope: { id: "chat-stream" },
+    mutationFn: ({ body, signal, onEvent }: ChatTurn) => {
+      signal.throwIfAborted()
+      return streamChat(body, signal, onEvent)
+    },
     retry: false,
   })
 }

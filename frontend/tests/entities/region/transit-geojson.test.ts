@@ -29,7 +29,7 @@ describe("buildTransitCollection", () => {
   it("draws selected-region rail and air only and clears on deselection", () => {
     const links = [
       link(),
-      link({ mode: "air" }),
+      link({ mode: "air", is_model: false }),
       link({ mode: "bus" }),
       link({ region_id: "other" }),
     ]
@@ -41,7 +41,10 @@ describe("buildTransitCollection", () => {
   it("merges opposite directions visually while preserving different modes", () => {
     const first = link()
     const reverse = link({ from: first.to, to: first.from })
-    const result = buildTransitCollection([first, reverse, link({ mode: "air" })], "17000000")
+    const result = buildTransitCollection(
+      [first, reverse, link({ mode: "air", is_model: false })],
+      "17000000",
+    )
     expect(result.data.features).toHaveLength(2)
     expect(result.modeled).toBe(true)
   })
@@ -86,4 +89,44 @@ describe("buildTransitCollection", () => {
     )
     expect(buildTransitCollection(links, "17000000").data.features).toHaveLength(2000)
   })
+})
+
+it("anchors model air to airport coordinates and hides unmatched models", () => {
+  const model = link({ mode: "air" })
+  expect(buildTransitCollection([model], "17000000").missing).toBe(1)
+  const airport = {
+    id: "AAA",
+    name: "Airport",
+    municipality: "A",
+    iata: "AAA",
+    latitude: 55,
+    longitude: 39,
+    scheduled: true,
+    kind: "medium_airport",
+  }
+  const catalog = {
+    airports: [airport, { ...airport, id: "BBB", longitude: 42 }],
+    assignments: [
+      {
+        point_id: "a",
+        airport_id: "AAA",
+        distance_km: 4,
+        method: "nearest_scheduled_airport_within_150km",
+      },
+      {
+        point_id: "b",
+        airport_id: "BBB",
+        distance_km: 5,
+        method: "nearest_scheduled_airport_within_150km",
+      },
+    ],
+    source_url: "test",
+    retrieved_at: "test",
+  }
+  const result = buildTransitCollection([model], "17000000", catalog)
+  expect(result.data.features[0]?.geometry.coordinates).toEqual([
+    [39, 55],
+    [42, 55],
+  ])
+  expect(model.from.lon).toBe(40)
 })

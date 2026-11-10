@@ -18,7 +18,7 @@ class DeltaBase:
         self.data = data
         self.graph: Any = None
         self.distances: OrderedDict[int, Any] = OrderedDict()
-        self.store = DeltaStore(data.root)
+        self.store = DeltaStore(data.root, data.revision)
         self.regions: OrderedDict[str, DeltaRegion] = OrderedDict()
         self.projected: OrderedDict[int, tuple[Any, Any]] = OrderedDict()
         for name in self.store.names():
@@ -30,13 +30,21 @@ class DeltaBase:
         if self.graph is not None:
             return
         self.data.load()
-        path = BaselineCache(self.data.root).path("delta-road-graph-v1", "road").with_suffix(".npz")
+        path = (
+            BaselineCache(self.data.root, self.data.revision)
+            .path("delta-road-graph-v1", "road")
+            .with_suffix(".npz")
+        )
         if path.exists():
             self.graph = load_npz(path)
             return
         e = self.data.edges
-        self.graph = minimum_csr(e["src"], e["dst"], e["h"], len(self.data.nodes["lat"]))
-        path.parent.mkdir(exist_ok=True)
+        keep = self.data.allowed_edges("road")
+        count = len(self.data.nodes["lat"])
+        if self.data.modern_model:
+            count = max(count, max(int(city[1]) + 1 for city in self.data.read("cities")))
+        self.graph = minimum_csr(e["src"][keep], e["dst"][keep], e["h"][keep], count)
+        path.parent.mkdir(parents=True, exist_ok=True)
         save_npz(path, self.graph, compressed=False)
 
     def distances_from(self, node: int) -> Any:
@@ -44,7 +52,10 @@ class DeltaBase:
         if not 0 <= node < self.graph.shape[0]:
             raise InvalidQuery("Unknown graph node")
         if node not in self.distances:
-            self.distances[node] = dijkstra(self.graph, directed=True, indices=node, limit=72.0)
+            self.distances[node] = dijkstra(
+                self.graph, directed=True, indices=node,
+                limit=np.inf if self.data.modern_model else 72.0,
+            )
             while len(self.distances) > 8:
                 self.distances.popitem(last=False)
         self.distances.move_to_end(node)
@@ -59,39 +70,15 @@ class DeltaBase:
             self.regions[name] = stored
             return stored
         self.prepare()
-        with self.data.connect() as con:
-            points = con.execute(
-                "select i.point_id, i.population, p.node, p.snap_km/15 "
-                "from idx_np i left join read_parquet(?) p using(point_id) "
-                "where i.season='road' and i.region=? order by i.point_id",
-                [str(self.data.root / "graph_ru/points.parquet"), name],
-            ).fetchall()
-            cities = con.execute(
-                "select city, oktmo, node, snap_h, population from market_cities order by city"
-            ).fetchall()
-            times = con.execute(
-                "select t.point_id, t.city, t.road_h from np_city_times t "
-                "join idx_np i on t.point_id=i.point_id and i.season=t.season "
-                "where t.season='road' and i.region=?",
-                [name],
-            ).fetchall()
-            cc = con.execute(
-                "select t.point_id, t.city, t.road_h from np_city_times t "
-                "join market_cities c on t.point_id=c.oktmo "
-                "where t.season='road'"
-            ).fetchall()
-            trunk_rows = con.execute(
-                "select city_from,city_to,transport_type,distance_hr "
-                "from stg_intercity where transport_type in ('rail','air') "
-                "and distance_hr is not null"
-            ).fetchall()
-            norm_row = con.execute(
-                "select avg(hansen_2h/hansen_idx*100) from idx_np "
-                "where season='road' and hansen_idx>0"
-            ).fetchone()
-            expected_row = con.execute(
-                "select hansen_idx from idx_region where season='road' and region=?", [name]
-            ).fetchone()
+        points = self.data.read("delta_points", {"region": name})
+        cities = self.data.read("delta_cities")
+        times = self.data.read("delta_times", {"region": name})
+        cc = self.data.read("city_times")
+        trunk_rows = [] if self.data.modern_model else self.data.read("trunk")
+        norms = self.data.read("normalization")
+        expectations = self.data.read("expected", {"region": name, "season": "road"})
+        norm_row = norms[0] if norms else None
+        expected_row = expectations[0] if expectations else None
         if not points or norm_row is None or expected_row is None:
             raise InvalidQuery("Missing regional baseline")
         ids = [p[0] for p in points]
@@ -164,12 +151,9 @@ class DeltaBase:
         if node not in self.projected:
             cached = self.store.read_terminal(node)
             if cached is None:
-                with self.data.connect() as con:
-                    nodes = con.execute(
-                        "select distinct node from read_parquet(?) where node>=0 "
-                        "union select node from market_cities order by node",
-                        [str(self.data.root / "graph_ru/points.parquet")],
-                    ).fetchnumpy()["node"]
+                nodes = np.array(
+                    [row[0] for row in self.data.read("terminal_nodes")], dtype=np.int32
+                )
                 distances = self.distances_from(node)[nodes]
                 cached = (nodes, distances)
                 self.store.write_terminal(node, *cached)

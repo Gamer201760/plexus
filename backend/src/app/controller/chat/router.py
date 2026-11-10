@@ -9,6 +9,7 @@ from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel, Field
 
+from app.controller.road_analysis.schemas import AnalysisResponse
 from app.domain.transport import NetworkMode, Season
 from app.usecase.chat import Chat, ChatContext, ChatMessage, ChatRequest
 from app.usecase.chat_artifacts import ChatChart, ChatTable
@@ -32,16 +33,18 @@ class ChatInput(BaseModel):
     prompt: str = Field(min_length=1, max_length=4000, pattern=r"\S")
     history: list[ChatMessageInput] = Field(default_factory=list, max_length=12)
     context: ChatContextInput = Field(default_factory=ChatContextInput)
+    analysis_id: str | None = Field(default=None, min_length=1, max_length=128)
 
 
 class ChatStreamEvent(BaseModel):
-    type: Literal["status", "delta", "done", "error", "table", "chart", "map", "calculation"]
+    type: Literal["status", "delta", "done", "error", "table", "chart", "map", "calculation", "analysis"]
     text: str = ""
     code: str = ""
     table: ChatTable | None = None
     chart: ChatChart | None = None
     map: ChatMapCommand | None = None
     calculation: CorridorCalculation | None = None
+    analysis: AnalysisResponse | None = None
 
 
 def build_chat_router(chat: Chat) -> APIRouter:
@@ -68,6 +71,7 @@ def build_chat_router(chat: Chat) -> APIRouter:
                 body.context.network_mode,
                 body.context.metric,
             ),
+            body.analysis_id,
         )
 
         async def events() -> AsyncIterator[str]:

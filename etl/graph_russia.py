@@ -29,14 +29,14 @@ from scipy.sparse.csgraph import connected_components
 from scipy.spatial import cKDTree
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "data" / "osm_ways"
+SRC = Path(os.environ.get("OSM_SOURCE", str(ROOT / "data" / "osm_ways")))
 OUT = Path(os.environ.get("GRAPH_OUTPUT", str(ROOT / "data" / "graph_ru")))
-DB = ROOT / "data" / "casechamp.duckdb"
+DB = Path(os.environ.get("CASECHAMP_DB", str(ROOT / "data" / "casechamp.duckdb")))
 
 # те же допущения, что и для Тывы (etl/graph_tuva.py)
 SPEED = {
     "motorway": 90, "trunk": 65, "primary": 60, "secondary": 55, "tertiary": 50,
-    "unclassified": 40, "road": 35, "residential": 25, "living_street": 15, "track": 20, "ferry": 10,
+    "unclassified": 40, "road": 35, "residential": 25, "living_street": 15, "track": 20, "service": 15, "ferry": 10,
 }
 UNPAVED = ["unpaved", "gravel", "dirt", "ground", "earth", "sand", "grass", "compacted", "fine_gravel", "mud"]
 UNPAVED_K = 0.7
@@ -164,6 +164,7 @@ def main():
     ncomp, comp = components(E, len(uniq))
     comp_size = np.bincount(comp)
     way_big = comp_size[comp[np.searchsorted(uniq, V["nid"][V["starts"]])]] >= MIN_COMP_NODES
+    way_big &= ~pc.fill_null(t["is_ferry"], False).to_numpy()
     del E, uniq, comp
     gc.collect()
     log(f"pass1: components={ncomp} big={int(np.sum(comp_size >= MIN_COMP_NODES))}")
@@ -209,14 +210,14 @@ def main():
     pts["comp"] = np.where(pts.on_road, comp[np.maximum(pts.node.values, 0)], -1)
 
     pq.write_table(pa.table({"node": np.arange(n, dtype=np.int32), "osm_node": uniq, "lat": nlat, "lon": nlon,
-                             "comp": comp.astype(np.int32)}), OUT / "nodes.parquet")
+                             "comp": comp.astype(np.int32)}), OUT / "nodes.parquet", compression="zstd")
     pq.write_table(pa.table({"src": E["S"], "dst": E["D"], "h": E["H"], "km": E["K"], "way_idx": E["W"]}),
-                   OUT / "edges.parquet")
+                   OUT / "edges.parquet", compression="zstd")
     way_km = np.bincount(E["W"], weights=E["K"], minlength=t.num_rows) / np.where(oneway > 0, 1, 2)
     pq.write_table(t.append_column("way_idx", pa.array(np.arange(t.num_rows, dtype=np.int32)))
                    .append_column("speed_kmh", pa.array(speed)).append_column("km", pa.array(way_km)),
-                   OUT / "ways.parquet")
-    pq.write_table(pa.Table.from_pandas(pts, preserve_index=False), OUT / "points.parquet")
+                   OUT / "ways.parquet", compression="zstd")
+    pq.write_table(pa.Table.from_pandas(pts, preserve_index=False), OUT / "points.parquet", compression="zstd")
     log(f"points={len(pts)} on_road={int(pts.on_road.sum())} "
         f"pop_on_road={pts.population[pts.on_road].sum() / pts.population.sum():.3f}")
 

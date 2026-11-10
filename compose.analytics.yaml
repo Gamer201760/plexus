@@ -1,0 +1,27 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:25.6-alpine
+    ports:
+      - "127.0.0.1:${CLICKHOUSE_PORT:-18123}:8123"
+    environment:
+      CLICKHOUSE_USER: plexus
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD in .env.analytics}
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: "1"
+    volumes:
+      - plexus_analytics:/var/lib/clickhouse
+      - ./infra/clickhouse/resources.xml:/etc/clickhouse-server/config.d/resources.xml:ro
+    mem_limit: 3g
+    cpus: 3
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://127.0.0.1:8123/ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+volumes:
+  plexus_analytics:
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: ${CLICKHOUSE_SUBNET:-10.253.242.0/24}

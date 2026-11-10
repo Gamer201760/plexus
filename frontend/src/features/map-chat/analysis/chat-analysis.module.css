@@ -1,0 +1,28 @@
+.analysis {
+  display: grid;
+  gap: var(--space-12);
+  min-inline-size: 0;
+  margin-block-start: var(--space-16);
+}
+
+.note {
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+}
+
+.road {
+  display: grid;
+  gap: var(--space-4);
+  overflow-wrap: anywhere;
+  min-inline-size: calc(var(--space-64) * 2);
+}
+
+.table th {
+  white-space: normal;
+  overflow-wrap: normal;
+}
+
+.table td,
+.table th {
+  padding: var(--space-8);
+}

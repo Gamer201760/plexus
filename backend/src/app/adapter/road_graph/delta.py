@@ -18,11 +18,12 @@ def added_edge_distances(
     left_targets: Any,
     right_targets: Any,
     hours: float,
+    limit: float = 72.0,
 ) -> Any:
     forward = left_origins[:, None] + hours + right_targets[None, :]
     reverse = right_origins[:, None] + hours + left_targets[None, :]
     update = np.minimum(forward, reverse)
-    update[update > 72.0] = np.inf
+    update[update > limit] = np.inf
     return np.minimum(base, update)
 
 
@@ -57,10 +58,11 @@ class DeltaCalculation:
         lb, cb = self.base.terminal(addition.target_node, r)
         progress(4)
         raw_roads = r.roads.astype(np.float64) - r.snaps[:, None] - r.market_snaps
-        road = added_edge_distances(raw_roads, la, lb, ca, cb, addition.travel_hours)
+        limit = np.inf if self.base.data.modern_model else 72.0
+        road = added_edge_distances(raw_roads, la, lb, ca, cb, addition.travel_hours, limit)
         road = (road + r.snaps[:, None] + r.market_snaps).astype(np.float32)
         raw_cities = r.city_roads - r.market_snaps[:, None] - r.market_snaps
-        city = added_edge_distances(raw_cities, ca, cb, ca, cb, addition.travel_hours)
+        city = added_edge_distances(raw_cities, ca, cb, ca, cb, addition.travel_hours, limit)
         city += r.market_snaps[:, None] + r.market_snaps
         after_times = access_times(road, city, r.trunk)
         after_hansen = np.exp(-np.log(2) / 2 * after_times.astype(np.float64)) @ r.market_weights

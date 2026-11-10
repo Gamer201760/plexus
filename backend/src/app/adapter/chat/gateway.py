@@ -32,6 +32,7 @@ from pydantic_ai.providers.openai_codex import OpenAICodexProvider
 from pydantic_ai.usage import UsageLimits
 
 from app.adapter.chat.artifacts import ChatRun
+from app.adapter.chat.failure import chat_failure
 from app.adapter.chat.tools import AtlasTools
 from app.domain.errors import DomainError
 from app.usecase.chat import ChatEvent, ChatRequest
@@ -64,6 +65,10 @@ when calculation_capabilities reports national_road_edits available.
 For broad requests to find improvements in a region, use start_road_analysis with its default
 20 percent speed increase and state that assumption. Do not demand individual road IDs for an
 automatic search. For explicit interventions preserve the user's parameters.
+Road analyses appear as live ranking tables directly in this chat, update as roads are checked,
+and receive an automatic LLM commentary when the batch finishes. Never link to /map?analysis,
+refer to an analysis panel or ask the user to open another page or request results again.
+While pending, briefly describe the ongoing check; the table will display actual results.
 For a named highway closure between two named settlements, call resolve_road_corridor over the
 complete graph, then close_road_corridor. Default to full closure in both directions, other roads
 unchanged, and compute BOTH endpoint regions. Do not ask the user to repeat these obvious defaults
@@ -107,32 +112,36 @@ class CodexResponsesGateway:
             return
         async with self._lock:
             yield ChatEvent("status", code="connecting")
+            stage = "account"
             try:
                 async with asyncio.timeout(180):
                     account = await self._codex.account(refresh_token=True)
                     if account.account is None:
                         yield ChatEvent("error", code="chat_auth_required")
                         return
+                    stage = "model"
                     provider = OpenAICodexProvider()
                     try:
                         async with aclosing(self._run(request, provider)) as events:
                             async for event in events:
+                                if event.type == "status":
+                                    stage = event.code
                                 yield event
                     finally:
                         await provider.client.close()
-            except (AuthenticationError, UserError):
-                yield ChatEvent("error", code="chat_auth_required")
-            except TimeoutError:
-                yield ChatEvent("error", code="chat_timeout")
-            except UsageLimitExceeded:
-                yield ChatEvent("error", code="chat_limit")
+            except (AuthenticationError, UserError) as error:
+                yield chat_failure(error, "chat_auth_required", stage)
+            except TimeoutError as error:
+                yield chat_failure(error, "chat_timeout", stage)
+            except UsageLimitExceeded as error:
+                yield chat_failure(error, "chat_limit", stage)
             except (APIStatusError, ModelHTTPError) as error:
                 code = "chat_limit" if error.status_code == 429 else "chat_provider_error"
-                yield ChatEvent("error", code=code)
-            except APIConnectionError:
-                yield ChatEvent("error", code="chat_connection_error")
-            except (CodexError, OSError, ValueError, UnexpectedModelBehavior, DomainError):
-                yield ChatEvent("error", code="chat_provider_error")
+                yield chat_failure(error, code, stage)
+            except APIConnectionError as error:
+                yield chat_failure(error, "chat_connection_error", stage)
+            except (CodexError, OSError, ValueError, UnexpectedModelBehavior, DomainError) as error:
+                yield chat_failure(error, "chat_provider_error", stage)
 
     async def _run(
         self, request: ChatRequest, provider: OpenAICodexProvider
@@ -143,7 +152,8 @@ class CodexResponsesGateway:
             instructions=INSTRUCTIONS,
             model_settings=OpenAIResponsesModelSettings(openai_reasoning_effort="low"),
         )
-        self._tools.register(agent)
+        if request.analysis_id is None:
+            self._tools.register(agent)
         history: list[ModelMessage] = []
         for message in request.history:
             if message.role == "user":

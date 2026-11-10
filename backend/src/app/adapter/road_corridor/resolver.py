@@ -25,50 +25,28 @@ class CorridorResolver:
 
     def resolve(self, road_name: str, origin: str, destination: str) -> RoadCorridor:
         data = self.roads.data
-        with data.connect() as con:
-            ways = con.execute(
-                "select way_idx,way_id,name,ref,km from read_parquet(?) where ref is not null",
-                [str(data.root / "graph_ru/ways.parquet")],
-            ).fetchall()
-            matches = {
-                str(r[3])
-                for r in ways
-                if normalized(str(r[2] or "")) == normalized(road_name)
-                or normalized(str(r[3])) == normalized(road_name)
-            }
-            if len(matches) != 1:
+        matches = {str(r[0]) for r in data.read("road_reference", {"name": normalized(road_name)})}
+        if len(matches) != 1:
+            raise InvalidQuery(
+                "Road reference is ambiguous or missing: " + ", ".join(sorted(matches)[:8])
+            )
+        reference = next(iter(matches))
+        selected = {int(r[0]): r for r in data.read("references", {"reference": reference})}
+        endpoints = []
+        for query in (origin, destination):
+            locations = data.read("corridor_places", {"query": query})
+            if len(locations) != 1:
                 raise InvalidQuery(
-                    "Road reference is ambiguous or missing: " + ", ".join(sorted(matches)[:8])
+                    "Settlement is ambiguous: "
+                    + query
+                    + ": "
+                    + ", ".join(str(p[1]) + ", " + str(p[2]) for p in locations[:8])
                 )
-            reference = next(iter(matches))
-            selected = {int(r[0]): r for r in ways if str(r[3]) == reference}
-            endpoints = []
-            for query in (origin, destination):
-                locations = con.execute(
-                    "select p.point_id,s.settlement,p.region,p.lon,p.lat from read_parquet(?) p join stg_settlements s on p.point_id=s.oktmo and s.object_level='Населенный пункт' where s.settlement ilike ?",
-                    [str(data.root / "graph_ru/points.parquet"), "%" + query + "%"],
-                ).fetchall()
-                if len(locations) != 1:
-                    raise InvalidQuery(
-                        "Settlement is ambiguous: "
-                        + query
-                        + ": "
-                        + ", ".join(str(p[1]) + ", " + str(p[2]) for p in locations[:8])
-                    )
-                endpoints.append(locations[0])
-            edge_rows = con.execute(
-                "select src,dst,way_idx from read_parquet(?) where way_idx in (select unnest(?))",
-                [str(data.root / "graph_ru/edges.parquet"), list(selected)],
-            ).fetchall()
-            node_ids = sorted({int(n) for a, b, _ in edge_rows for n in (a, b)})
-            node_rows = con.execute(
-                "select node,lon,lat from read_parquet(?) where node in (select unnest(?)) order by node",
-                [str(data.root / "graph_ru/nodes.parquet"), node_ids],
-            ).fetchall()
-            region_rows = con.execute(
-                "select oktmo,region from stg_settlements where object_level='Регион' and region in (select unnest(?))",
-                [[str(p[2]) for p in endpoints]],
-            ).fetchall()
+            endpoints.append(locations[0])
+        edge_rows = data.read("corridor_edges", {"ids": list(selected)})
+        node_ids = sorted({int(n) for a, b, _ in edge_rows for n in (a, b)})
+        node_rows = data.read("corridor_nodes", {"ids": node_ids})
+        region_rows = data.read("region_codes", {"regions": [str(p[2]) for p in endpoints]})
         coordinates = {int(n): (float(x), float(y)) for n, x, y in node_rows}
         xy = np.array([(x, y) for _, x, y in node_rows])
         distances = []

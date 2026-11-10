@@ -19,6 +19,7 @@ import {
   RotateCcw,
   Square,
   TrainFront,
+  Trash2,
   TriangleAlert,
   X,
 } from "lucide-react"
@@ -27,6 +28,7 @@ import type { ComponentType } from "react"
 import { createDesignIcon } from "./design-icon"
 
 export const ICONS = {
+  trash: Trash2,
   rail: TrainFront,
   chat: MessageCircle,
   stop: Square,

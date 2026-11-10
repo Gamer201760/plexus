@@ -11,8 +11,8 @@ from app.adapter.road_graph.delta_model import DeltaRegion
 
 
 class DeltaStore:
-    def __init__(self, root: Path) -> None:
-        key = BaselineCache(root).path("prepared-delta-v2", "road").stem
+    def __init__(self, root: Path, revision: str = "[]") -> None:
+        key = BaselineCache(root, revision).path("prepared-delta-v2", "road").stem
         self.folder = root / "scenario-cache" / key
 
     def path(self, region: str) -> Path:

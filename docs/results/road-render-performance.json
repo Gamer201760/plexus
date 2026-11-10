@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-10",
+  "scope": "local API, bbox 38,54,43,57 zoom 7; not browser frame latency",
+  "before": {
+    "seconds": 7.2548922499408945,
+    "wire_bytes": 2266781,
+    "decoded_bytes": 12946163,
+    "features": 64779,
+    "vertices": 129558,
+    "ways": 29765,
+    "matched": 118815,
+    "detail": "tertiary"
+  },
+  "after": [
+    {
+      "seconds": 0.5742425830103457,
+      "wire_bytes": 1504266,
+      "decoded_bytes": 6773525,
+      "features": 29765,
+      "vertices": 94980,
+      "ways": 29765,
+      "matched": 119681,
+      "detail": "tertiary"
+    },
+    {
+      "seconds": 0.6990393749438226,
+      "wire_bytes": 1504253,
+      "decoded_bytes": 6773525,
+      "features": 29765,
+      "vertices": 94980,
+      "ways": 29765,
+      "matched": 119681,
+      "detail": "tertiary"
+    },
+    {
+      "seconds": 0.8073465829947963,
+      "wire_bytes": 1504253,
+      "decoded_bytes": 6773525,
+      "features": 29765,
+      "vertices": 94980,
+      "ways": 29765,
+      "matched": 119681,
+      "detail": "tertiary"
+    }
+  ],
+  "coverage": {
+    "old_edges": 64779,
+    "new_edges": 65215,
+    "missing_edges": 0,
+    "same_way_ids": true
+  },
+  "storage": [
+    {
+      "database": "plexus_additional",
+      "tables": "26",
+      "rows": "9916306",
+      "bytes": "410337304"
+    },
+    {
+      "database": "plexus_atlas",
+      "tables": "1",
+      "rows": "94",
+      "bytes": "14406891"
+    },
+    {
+      "database": "plexus_casechamp",
+      "tables": "20",
+      "rows": "86532846",
+      "bytes": "738851768"
+    },
+    {
+      "database": "plexus_graph",
+      "tables": "5",
+      "rows": "33146357",
+      "bytes": "932514767"
+    }
+  ],
+  "import": {
+    "tables": 50,
+    "rows": 125290049,
+    "all_null_counts_match": true
+  },
+  "graph": {
+    "directed_edges": 17393384,
+    "display_lines": 4305460
+  }
+}

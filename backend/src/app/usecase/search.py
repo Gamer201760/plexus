@@ -1,9 +1,7 @@
 from dataclasses import dataclass
-from threading import Lock
 
 from app.domain.errors import InvalidQuery
 from app.domain.text import normalize_name
-from app.usecase.dto import SettlementName
 from app.usecase.interface import AtlasRepository
 
 MIN_QUERY = 2
@@ -45,8 +43,6 @@ def _rank(name: str, needle: str) -> int | None:
 class Search:
     def __init__(self, repository: AtlasRepository) -> None:
         self._repository = repository
-        self._names: list[tuple[str, SettlementName]] | None = None
-        self._lock = Lock()
 
     def run(self, text: str, limit: int = 8) -> SearchResult:
         needle = normalize_name(text)
@@ -63,8 +59,8 @@ class Search:
         ]
         settlement_hits = [
             (rank, -(item.population or 0), item)
-            for normalized, item in self._index()
-            if (rank := _rank(normalized, needle)) is not None
+            for item in self._repository.search_names(needle)
+            if (rank := _rank(normalize_name(item.name), needle)) is not None
         ]
         settlement_hits.sort(key=lambda hit: (hit[0], hit[1], hit[2].name))
         return SearchResult(
@@ -80,12 +76,3 @@ class Search:
                 for _, _, item in settlement_hits[:limit]
             ],
         )
-
-    def _index(self) -> list[tuple[str, SettlementName]]:
-        with self._lock:
-            if self._names is None:
-                self._names = [
-                    (normalize_name(item.name), item)
-                    for item in self._repository.settlement_names()
-                ]
-            return self._names

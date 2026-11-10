@@ -4,7 +4,7 @@
   inset-inline-start: var(--space-16);
   display: grid;
   gap: var(--space-8);
-  min-inline-size: var(--legend-width);
+  inline-size: calc(var(--legend-width) + var(--space-64));
   margin: 0;
   padding: var(--space-12) var(--space-16);
   color: var(--text-muted);
@@ -104,7 +104,7 @@
 }
 
 .transitNote {
-  max-inline-size: var(--prose-measure);
+  min-inline-size: 0;
   color: var(--text-secondary);
   font-size: var(--font-size-caption);
   line-height: var(--line-height-body);
@@ -118,11 +118,35 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-12);
-  margin-block-start: var(--space-8);
 }
 
 .transitModes span {
   display: inline-flex;
   align-items: center;
   gap: var(--space-4);
+}
+
+.transitHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.help {
+  composes: secondaryText from "../../shared/styles/compose.module.css";
+  inline-size: calc(var(--legend-width) + var(--space-64));
+  padding: var(--space-12);
+}
+
+.airports {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+.airportDot {
+  inline-size: var(--space-8);
+  block-size: var(--space-8);
+  border-radius: var(--radius-pill);
+  background: var(--mode-air);
 }

@@ -5,14 +5,17 @@ import { useRegion } from "@/entities/region"
 import type { CalculationHandler } from "@/shared/api/chat-calculation"
 import type { MapCommandHandler } from "@/shared/api/chat-map"
 import { useTranslation } from "@/shared/i18n"
-import { Banner, Button, ChatComposer, Icon, ScrollArea, Segmented, Tooltip } from "@/shared/ui"
+import { Banner, Button, ChatComposer, Icon, ScrollArea, Segmented } from "@/shared/ui"
 import { BrandMark } from "@/shared/ui/brand"
 import { ChatAnswer } from "./chat-answer"
 import { chatErrorKey, chatStatusKey } from "./chat-copy"
 import styles from "./map-chat.module.css"
+import { ChatStorageNotice } from "./sessions/chat-storage-notice"
+import { ChatSwitcher } from "./sessions/chat-switcher"
 import { useMapChat } from "./use-map-chat"
 
 export interface MapChatProps {
+  readonly onSessionChange?: (() => void) | undefined
   readonly onCalculation?: CalculationHandler | undefined
   readonly context: ChatContext
   readonly summary: ReactNode
@@ -20,7 +23,14 @@ export interface MapChatProps {
   readonly onMapCommand: MapCommandHandler
 }
 
-export function MapChat({ context, summary, scenario, onMapCommand, onCalculation }: MapChatProps) {
+export function MapChat({
+  context,
+  summary,
+  scenario,
+  onMapCommand,
+  onCalculation,
+  onSessionChange,
+}: MapChatProps) {
   const { t } = useTranslation()
   const [searchParams] = useSearchParams()
   const [tab, setTab] = useState<"chat" | "summary" | "scenario">(initialTab(searchParams))
@@ -36,9 +46,15 @@ export function MapChat({ context, summary, scenario, onMapCommand, onCalculatio
   const follow = useRef(true)
   const tail = chat.messages.at(-1)
   useEffect(() => {
-    if (tail !== undefined && follow.current && scroll.current) {
-      scroll.current.scrollTop = scroll.current.scrollHeight
+    const node = scroll.current
+    if (tail === undefined || !node) return
+    const sync = () => {
+      if (follow.current) node.scrollTop = node.scrollHeight
     }
+    sync()
+    const observer = new ResizeObserver(sync)
+    for (const child of node.children) observer.observe(child)
+    return () => observer.disconnect()
   }, [tail])
   const send = (prompt?: string) => {
     follow.current = true
@@ -54,17 +70,26 @@ export function MapChat({ context, summary, scenario, onMapCommand, onCalculatio
             {t("chat:title")}
           </p>
         </div>
-        <Tooltip content={t("chat:new")}>
-          <Button
-            variant="ghost"
-            icon="plus"
-            aria-label={t("chat:new")}
-            disabled={chat.busy || !chat.messages.length}
-            onClick={chat.clear}
-          >
-            {null}
-          </Button>
-        </Tooltip>
+        <ChatSwitcher
+          sessions={chat.sessions}
+          activeId={chat.sessionId}
+          onNew={() => {
+            follow.current = true
+            onSessionChange?.()
+            chat.newSession()
+            setTab("chat")
+          }}
+          onDelete={(id) => {
+            if (id === chat.sessionId) onSessionChange?.()
+            chat.deleteSession(id)
+          }}
+          onSelect={(id) => {
+            follow.current = true
+            if (id !== chat.sessionId) onSessionChange?.()
+            chat.selectSession(id)
+            setTab("chat")
+          }}
+        />
       </header>
       <div className={styles.tabs}>
         <Segmented
@@ -119,6 +144,8 @@ export function MapChat({ context, summary, scenario, onMapCommand, onCalculatio
             <ChatAnswer
               key={message.id}
               message={message}
+              onCommentary={chat.saveCommentary}
+              autoFocus={chat.busy && message.id === tail?.id}
               onCalculation={onCalculation}
               onMapCommand={onMapCommand}
             />
@@ -131,6 +158,7 @@ export function MapChat({ context, summary, scenario, onMapCommand, onCalculatio
           ) : null}
         </ScrollArea>
         <div className={styles.footer}>
+          <ChatStorageNotice issue={chat.storageIssue} onRetry={chat.retrySave} />
           {chat.error ? (
             <Banner
               tone="danger"

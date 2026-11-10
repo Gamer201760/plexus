@@ -749,6 +749,27 @@
         }
       }
     },
+    "/api/v1/airports": {
+      "get": {
+        "tags": [
+          "airports"
+        ],
+        "summary": "Catalog",
+        "operationId": "catalog_api_v1_airports_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AirportCatalog"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/scenarios": {
       "get": {
         "tags": [
@@ -1545,6 +1566,116 @@
   },
   "components": {
     "schemas": {
+      "Airport": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "municipality": {
+            "type": "string",
+            "title": "Municipality"
+          },
+          "iata": {
+            "type": "string",
+            "title": "Iata"
+          },
+          "latitude": {
+            "type": "number",
+            "title": "Latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "title": "Longitude"
+          },
+          "scheduled": {
+            "type": "boolean",
+            "title": "Scheduled"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "municipality",
+          "iata",
+          "latitude",
+          "longitude",
+          "scheduled",
+          "kind"
+        ],
+        "title": "Airport"
+      },
+      "AirportAssignment": {
+        "properties": {
+          "point_id": {
+            "type": "string",
+            "title": "Point Id"
+          },
+          "airport_id": {
+            "type": "string",
+            "title": "Airport Id"
+          },
+          "distance_km": {
+            "type": "number",
+            "title": "Distance Km"
+          },
+          "method": {
+            "type": "string",
+            "title": "Method",
+            "default": "nearest_scheduled_airport_within_150km"
+          }
+        },
+        "type": "object",
+        "required": [
+          "point_id",
+          "airport_id",
+          "distance_km"
+        ],
+        "title": "AirportAssignment"
+      },
+      "AirportCatalog": {
+        "properties": {
+          "airports": {
+            "items": {
+              "$ref": "#/components/schemas/Airport"
+            },
+            "type": "array",
+            "title": "Airports"
+          },
+          "assignments": {
+            "items": {
+              "$ref": "#/components/schemas/AirportAssignment"
+            },
+            "type": "array",
+            "title": "Assignments"
+          },
+          "source_url": {
+            "type": "string",
+            "title": "Source Url"
+          },
+          "retrieved_at": {
+            "type": "string",
+            "title": "Retrieved At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "airports",
+          "assignments",
+          "source_url",
+          "retrieved_at"
+        ],
+        "title": "AirportCatalog"
+      },
       "AnalysisDetail": {
         "properties": {
           "result": {
@@ -1963,6 +2094,19 @@
           },
           "context": {
             "$ref": "#/components/schemas/ChatContextInput"
+          },
+          "analysis_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Analysis Id"
           }
         },
         "type": "object",
@@ -2034,7 +2178,8 @@
               "table",
               "chart",
               "map",
-              "calculation"
+              "calculation",
+              "analysis"
             ],
             "title": "Type"
           },
@@ -2082,6 +2227,16 @@
             "anyOf": [
               {
                 "$ref": "#/components/schemas/CorridorCalculation"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "analysis": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AnalysisResponse"
               },
               {
                 "type": "null"

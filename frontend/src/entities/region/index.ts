@@ -1,3 +1,4 @@
+export { useAirports } from "./airports.queries"
 export { useRegionCompositions } from "./composition.queries"
 export { IndexCoverage } from "./index-coverage/index-coverage"
 export { MiniMap } from "./mini-map/mini-map"

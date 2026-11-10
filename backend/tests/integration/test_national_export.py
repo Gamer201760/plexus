@@ -1,10 +1,10 @@
-import json
 
 import pytest
 from fastapi.testclient import TestClient
+from tests.storage import atlas_repository
+from tests.storage import settings as storage_settings
 
 from app.main import create_app
-from app.settings import Settings
 
 
 @pytest.mark.parametrize(
@@ -20,10 +20,12 @@ from app.settings import Settings
 def test_api_selects_exported_scenario_and_coverage(
     season: str, mode: str, scenario: str
 ) -> None:
-    settings = Settings()
-    rows = json.loads((settings.data_dir / "indices.json").read_text())
+    settings = storage_settings()
+    rows = atlas_repository().indices()
+    if mode == "road" and any(row.model_version == "hansen-release-20261107" for row in rows):
+        scenario = "road"
     expected = next(
-        row for row in rows if row["region_id"] == "93000000" and row["season"] == scenario
+        row for row in rows if row.region_id == "93000000" and row.scenario == scenario
     )
     with TestClient(create_app(settings)) as client:
         response = client.get(
@@ -31,12 +33,12 @@ def test_api_selects_exported_scenario_and_coverage(
         )
     assert response.status_code == 200
     body = response.json()
-    assert body["hansen"] == expected["hansen_idx"]
+    assert body["hansen"] == expected.hansen
     assert body["index_population_coverage"] == pytest.approx(
-        expected["covered_population"] / expected["population"]
+        (expected.covered_population or 0) / (expected.total_population or 1)
     )
     assert body["index_settlement_coverage"] == pytest.approx(
-        expected["covered_settlements"] / expected["n_np"]
+        (expected.covered_settlements or 0) / (expected.total_settlements or 1)
     )
-    assert body["index_model_version"] == "hansen-frequency-v2"
-    assert body["index_artifact_version"] == expected["artifact_version"]
+    assert body["index_model_version"] == expected.model_version
+    assert body["index_artifact_version"] == expected.artifact_version

@@ -28,7 +28,7 @@ import pandas as pd
 import pyarrow as pa
 
 ROOT = Path(__file__).resolve().parent.parent
-DB = ROOT / "data" / "casechamp.duckdb"
+DB = Path(os.environ.get("CASECHAMP_DB", str(ROOT / "data" / "casechamp.duckdb")))
 MANUAL = ROOT / "data_manual"
 
 # допущения модели — менять здесь и проверять чувствительность

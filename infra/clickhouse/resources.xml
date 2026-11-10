@@ -1,0 +1,12 @@
+<clickhouse>
+    <max_server_memory_usage>2500000000</max_server_memory_usage>
+    <max_thread_pool_size>2000</max_thread_pool_size>
+    <background_pool_size>16</background_pool_size>
+    <background_schedule_pool_size>8</background_schedule_pool_size>
+    <profiles>
+        <default>
+            <max_threads>3</max_threads>
+            <max_memory_usage>1500000000</max_memory_usage>
+        </default>
+    </profiles>
+</clickhouse>

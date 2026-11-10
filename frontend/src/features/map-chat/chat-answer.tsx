@@ -1,7 +1,9 @@
+import type { AnalysisCommentary } from "@/entities/chat"
 import type { CalculationHandler } from "@/shared/api/chat-calculation"
 import type { MapCommandHandler } from "@/shared/api/chat-map"
 import { useTranslation } from "@/shared/i18n"
 import { Button, ChatMessage, Disclosure } from "@/shared/ui"
+import { ChatAnalysisCard } from "./analysis/chat-analysis-card"
 import { ChatArtifacts } from "./chat-artifacts"
 import { ChatCalculationCard } from "./chat-calculation-card"
 import { chatStatusKey } from "./chat-copy"
@@ -10,9 +12,15 @@ import type { ChatEntry } from "./use-map-chat"
 
 export function ChatAnswer({
   message,
+  autoFocus = false,
+  onCommentary,
   onMapCommand,
   onCalculation,
 }: {
+  readonly autoFocus?: boolean
+  readonly onCommentary?:
+    | ((messageId: string, analysisId: string, value: AnalysisCommentary) => void)
+    | undefined
   readonly onCalculation?: CalculationHandler | undefined
   readonly message: ChatEntry
   readonly onMapCommand: MapCommandHandler
@@ -43,7 +51,16 @@ export function ChatAnswer({
             <ChatCalculationCard
               key={calculation.corridor.id}
               calculation={calculation}
+              autoFocus={autoFocus}
               onShow={onCalculation}
+            />
+          ))}
+          {message.analyses?.map((analysis) => (
+            <ChatAnalysisCard
+              key={analysis.id}
+              analysis={analysis}
+              commentary={message.commentaries?.[analysis.id]}
+              onCommentary={(value) => onCommentary?.(message.id, analysis.id, value)}
             />
           ))}
           <ChatArtifacts tables={message.tables} charts={message.charts} />

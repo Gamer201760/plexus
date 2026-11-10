@@ -63,6 +63,7 @@ def test_settlement_effects_include_transit_origins() -> None:
         2: (np.array([10.0, 8.0, 0.0]), np.array([0.0])),
     }
     base = Mock(spec=DeltaBase)
+    base.data = SimpleNamespace(modern_model=False)
     base.region.return_value = region
     base.terminal.side_effect = lambda node, _: terminals[node]
     result = DeltaCalculation(base).calculate("region", RoadAddition(0, 2, 1.0), None, lambda _: None)

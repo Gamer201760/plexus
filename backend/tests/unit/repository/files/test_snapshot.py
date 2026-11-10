@@ -2,7 +2,6 @@ from pathlib import Path
 
 import duckdb
 
-from app.adapter.road_graph.data import GraphData
 from app.repository.files.snapshot import SnapshotAtlasRepository
 from app.usecase.dto import RegionRecord
 
@@ -27,4 +26,3 @@ def test_snapshot_joins_region_identifiers_not_display_names(tmp_path: Path) -> 
     assert len(rows) == 1
     assert rows[0].region_id == "11800000"
     assert rows[0].hansen == 50
-    assert GraphData(tmp_path).region_name("11800000") == "canonical database name"

@@ -3,13 +3,14 @@
 Важно: coo→csr СУММИРУЕТ дубли (src, dst). Параллельные рёбра (разные way между теми же развилками)
 должны давать минимум, поэтому перед сборкой матрицы оставляем быстрейшее ребро каждой пары.
 """
+import os
 from pathlib import Path
 
 import numpy as np
 import pyarrow.parquet as pq
 from scipy.sparse import csr_matrix
 
-GRAPH = Path(__file__).resolve().parent.parent / "data" / "graph_ru"
+GRAPH = Path(os.environ.get("GRAPH_INPUT", str(Path(__file__).resolve().parent.parent / "data" / "graph_ru")))
 
 
 def load_edges(season=None):

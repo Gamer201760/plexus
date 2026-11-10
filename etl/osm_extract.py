@@ -8,6 +8,7 @@ nodes (list<int64>), lat (list<double>), lon (list<double>).
 Пишется пачками, чтобы не держать весь округ в памяти Python.
 """
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -17,15 +18,11 @@ import pyarrow.parquet as pq
 
 from seasonality import operating_season
 from artifacts import file_record, revision, write_json
+from road_access import HIGHWAYS, include_way
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "data" / "osm_ways"
+OUT = Path(os.environ.get("OSM_OUTPUT", str(ROOT / "data" / "osm_ways")))
 
-HIGHWAYS = {
-    "motorway", "trunk", "primary", "secondary", "tertiary", "unclassified", "road",
-    "residential", "living_street", "track",
-    "motorway_link", "trunk_link", "primary_link", "secondary_link", "tertiary_link",
-}
 SCHEMA = pa.schema([
     ("way_id", pa.int64()), ("highway", pa.string()), ("ref", pa.string()), ("name", pa.string()),
     ("surface", pa.string()), ("tracktype", pa.string()), ("oneway", pa.string()),
@@ -33,7 +30,7 @@ SCHEMA = pa.schema([
     ("is_bridge", pa.bool_()), ("is_ferry", pa.bool_()), ("is_seasonal", pa.bool_()),
     ("nodes", pa.list_(pa.int64())), ("lat", pa.list_(pa.float64())), ("lon", pa.list_(pa.float64())),
 ])
-BATCH = 200_000
+BATCH = 50_000
 
 
 def main(pbf: Path) -> None:
@@ -41,9 +38,10 @@ def main(pbf: Path) -> None:
     dst = OUT / (pbf.name.split(".")[0] + ".parquet")
     source = file_record(pbf)
     manifest = dst.with_suffix(".json")
+    policy = {name: file_record(Path(__file__).with_name(name)) for name in ("road_access.py", "seasonality.py")}
     if dst.exists() and manifest.exists():
         record = json.loads(manifest.read_text())
-        if record.get("input") == source and record.get("extractor") == file_record(Path(__file__)):
+        if record.get("input") == source and record.get("extractor") == file_record(Path(__file__)) and record.get("policy") == policy:
             if record.get("output") == file_record(dst):
                 print(f"skip verified {dst}", flush=True)
                 return
@@ -51,6 +49,8 @@ def main(pbf: Path) -> None:
     writer = pq.ParquetWriter(temporary, SCHEMA, compression="zstd")
     cols = {f.name: [] for f in SCHEMA}
     n = 0
+    invalid_locations = 0
+    service_ways = 0
 
     def flush():
         if cols["way_id"]:
@@ -67,11 +67,14 @@ def main(pbf: Path) -> None:
         ferry = t.get("route") == "ferry"
         if not (hw in HIGHWAYS or ferry):
             continue
+        if hw == "service" and not include_way(dict(t)):
+            continue
         try:
             ids = [nd.ref for nd in w.nodes]
             lat = [nd.location.lat for nd in w.nodes]
             lon = [nd.location.lon for nd in w.nodes]
         except osmium.InvalidLocationError:  # узел за пределами выгрузки
+            invalid_locations += 1
             continue
         if len(ids) < 2:
             continue
@@ -90,14 +93,17 @@ def main(pbf: Path) -> None:
             t.get("ice_road") == "yes" or t.get("winter_road") == "yes" or t.get("seasonal", "no") != "no")
         cols["nodes"].append(ids); cols["lat"].append(lat); cols["lon"].append(lon)
         n += 1
+        service_ways += hw == "service"
         if len(cols["way_id"]) >= BATCH:
             flush()
             print(f"  {pbf.name}: {n} ways", flush=True)
     flush()
     writer.close()
     temporary.replace(dst)
-    write_json(manifest, {"schema_version": 2, "input": source, "output": file_record(dst),
-                          "extractor": file_record(Path(__file__)), "code": revision()})
+    write_json(manifest, {"schema_version": 3, "input": source, "output": file_record(dst),
+                          "extractor": file_record(Path(__file__)), "policy": policy,
+                          "ways": n, "service_ways": service_ways,
+                          "invalid_location_ways": invalid_locations, "code": revision()})
     print(f"{pbf.name}: {n} ways -> {dst}")
 
 

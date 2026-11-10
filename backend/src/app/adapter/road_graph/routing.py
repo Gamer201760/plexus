@@ -44,39 +44,30 @@ class GraphRouting:
         addition: RoadAddition | None = None,
     ) -> tuple[tuple[float, int, int, int, float], tuple[SettlementAccess, ...]]:
         self.data.load()
-        with self.data.connect() as con:
-            points = con.execute(
-                "select point_id, node, snap_km from read_parquet(?)",
-                [str(self.data.root / "graph_ru/points.parquet")],
-            ).fetchall()
-            origins = con.execute(
-                "select point_id, population from idx_np where season=? and region=?",
-                [scenario, region],
-            ).fetchall()
-            cities = con.execute(
-                "select city, node, snap_h, population from market_cities order by city"
-            ).fetchall()
-            trunk = con.execute(
-                "select city_from, city_to, transport_type, distance_hr "
-                "from stg_intercity where transport_type in ('rail','air') "
-                "and distance_hr is not null"
-            ).fetchall()
-            manual = (
-                []
-                if scenario == "road"
-                else con.execute(
-                    "select from_id, to_id, h from manual_links_ru where season=?", [scenario]
-                ).fetchall()
+        points = self.data.read("points")
+        origins = self.data.read("origins", {"season": scenario, "region": region})
+        cities = self.data.read("cities")
+        modern = self.data.modern_model
+        trunk = [] if modern and scenario.startswith("road") else self.data.read("trunk")
+        manual = []
+        if scenario != "road":
+            manual = self.data.read(
+                "manual_v2" if modern else "manual",
+                {"season": scenario.removeprefix("road_"),
+                 "road_only": int(scenario.startswith("road_"))},
             )
-            norm_row = con.execute(
-                "select avg(hansen_2h/hansen_idx*100) from idx_np "
-                "where season='road' and hansen_idx>0"
-            ).fetchone()
-            if norm_row is None or norm_row[0] is None:
-                raise ValueError("Missing normalization")
-            norm = float(norm_row[0])
+        norm_rows = self.data.read("normalization")
+        if not norm_rows or norm_rows[0][0] is None:
+            raise ValueError("Missing normalization")
+        norm = float(norm_rows[0][0])
         lookup = {p[0]: [int(p[1]), float(p[2]) / 15] for p in points}
         count = len(self.data.nodes["lat"])
+        if modern:
+            for city in cities:
+                if city[1] >= count:
+                    count = int(city[1]) + 1
+                if len(city) > 4 and city[4] in lookup and city[1] >= len(self.data.nodes["lat"]):
+                    lookup[city[4]] = [int(city[1]), 0.0]
         for a, b, _ in manual:
             for point in (a, b):
                 if point in lookup and lookup[point][0] < 0:
@@ -101,7 +92,7 @@ class GraphRouting:
             mask = edges["way_idx"] == ways[change.way_id]
             changed += int(mask.sum())
             weights[mask] = weights[mask] / change.speed_factor if change.speed_factor else np.inf
-        finite = np.isfinite(weights)
+        finite = np.isfinite(weights) & self.data.allowed_edges(scenario)
         graph = minimum_csr(
             np.concatenate([edges["src"][finite], ms]).astype(np.int32),
             np.concatenate([edges["dst"][finite], md]).astype(np.int32),
@@ -122,15 +113,24 @@ class GraphRouting:
         city_snaps = np.array([c[2] for c in cities], dtype=np.float64)
         road = np.empty((len(on), len(cities)), dtype=np.float32)
         city_road = np.empty((len(cities), len(cities)))
+        origin_rows = {
+            point: i for i, point in enumerate(
+                p for p, _ in origins if p in lookup and lookup[p][0] >= 0
+            )
+        }
         for j, node in enumerate(city_nodes):
-            distances = dijkstra(graph, directed=True, indices=int(node), limit=72.0)
+            distances = dijkstra(graph, directed=True, indices=int(node), limit=np.inf if modern else 72.0)
             road[:, j] = distances[nodes].astype(np.float32) + snaps + city_snaps[j]
+            if modern and len(cities[j]) > 4 and cities[j][4] in origin_rows:
+                road[origin_rows[cities[j][4]], j] = 0.0
             city_road[j] = distances[city_nodes] + city_snaps[j] + city_snaps
             progress(j + 1)
         ci = {c[0]: j for j, c in enumerate(cities)}
         for source, target, mode, hours in trunk:
             a, b = ci[source], ci[target]
-            city_road[a, b] = min(city_road[a, b], hours + (1 if mode == "rail" else 2.5))
+            city_road[a, b] = min(
+                city_road[a, b], hours + (1 if mode == "rail" else 2.5) + (84 if modern else 0)
+            )
         np.fill_diagonal(city_road, 0.0)
         transfers = floyd_warshall(city_road)
         hansen = np.zeros(len(on))

@@ -3,6 +3,7 @@ import { useRegionLinks } from "@/entities/link"
 import {
   buildTransitCollection,
   type Season,
+  useAirports,
   useGeoBoundaries,
   useOverview,
   useRegions,
@@ -43,6 +44,7 @@ export function useMapData(metric: MetricKey, season: Season) {
 
 export function useSelectedTransit(selectedId: string | null, season: Season) {
   const links = useRegionLinks(selectedId, season)
+  const airports = useAirports()
   const [showModels, setShowModels] = useState(false)
   const modelCount = (links.data ?? []).filter((link) => link.is_model).length
   const transit = useMemo(
@@ -50,8 +52,9 @@ export function useSelectedTransit(selectedId: string | null, season: Season) {
       buildTransitCollection(
         (links.data ?? []).filter((link) => showModels || !link.is_model),
         selectedId,
+        airports.data,
       ),
-    [links.data, selectedId, showModels],
+    [links.data, selectedId, showModels, airports.data],
   )
-  return { links, transit, modelCount, showModels, setShowModels }
+  return { links, airports, transit, modelCount, showModels, setShowModels }
 }

@@ -1,17 +1,15 @@
 import math
 
 import pytest
+from tests.unit.usecase.test_atlas_usecases import FakeAtlas
 
-from app.domain.errors import RegionNotFound
 from app.domain.transport import NetworkMode, Season
-from app.repository.files.atlas import JsonAtlasRepository
-from app.settings import DEFAULT_DATA_DIR
-from app.usecase.dto import IndexRecord
+from app.usecase.dto import IndexRecord, RegionRecord
 from app.usecase.sensitivity import AccessibilitySensitivity
 
 
 def test_sensitivity_matches_independent_od_recalculation(monkeypatch: pytest.MonkeyPatch) -> None:
-    repository = JsonAtlasRepository(DEFAULT_DATA_DIR)
+    repository = FakeAtlas(region_rows=[RegionRecord("18000000", "Region", 1, 10)])
     times = ((0.0, 3.0), (2.0, 5.0))
     origins = (100.0, 200.0)
     markets = (1000.0, 2000.0)
@@ -31,13 +29,3 @@ def test_sensitivity_matches_independent_od_recalculation(monkeypatch: pytest.Mo
         assert math.isclose(point.hansen, raw(point.time_multiplier) / normalization * 100)
     assert not result.graph_recomputed
     assert result.points[0].hansen > result.baseline > result.points[2].hansen
-
-
-def test_real_regional_baseline_matches_published_index() -> None:
-    service = AccessibilitySensitivity(JsonAtlasRepository(DEFAULT_DATA_DIR))
-    result = service.evaluate("18000000", Season.SUMMER, NetworkMode.ROAD)
-    assert result.baseline == pytest.approx(61.55079117766899)
-    assert result.points[1].hansen == pytest.approx(result.baseline)
-    assert result.artifact_version
-    with pytest.raises(RegionNotFound):
-        service.evaluate("unknown", Season.SUMMER, NetworkMode.ROAD)

@@ -1,0 +1,37 @@
+from app.usecase.graph_snapshot import GraphQuery
+
+QUERIES: dict[GraphQuery, str] = {
+    "locations": "SELECT point_id,settlement,region,node,lon,lat,snap_km FROM plexus_graph.locations WHERE lowerUTF8(ifNull(settlement,'')) LIKE {pattern:String} AND ({region:String}='' OR region={region:String}) ORDER BY population DESC NULLS LAST LIMIT 20",
+    "region_name": "SELECT region FROM plexus_graph.region_codes WHERE oktmo={region_id:String}",
+    "ways": "SELECT way_idx,way_id,name,ref,highway,speed_kmh FROM plexus_graph.ways WHERE way_idx IN {ids:Array(Int64)}",
+    "way_indices": "SELECT way_id,way_idx FROM plexus_graph.ways WHERE way_id IN {ids:Array(Int64)}",
+    "points": "SELECT point_id,node,snap_km FROM plexus_graph.points",
+    "origins": "SELECT point_id,population FROM plexus_casechamp.idx_np WHERE season={season:String} AND region={region:String}",
+    "cities": "SELECT city,node,snap_h,population,oktmo FROM plexus_casechamp.market_cities ORDER BY city",
+    "trunk": "SELECT city_from,city_to,transport_type,distance_hr FROM plexus_casechamp.stg_intercity WHERE transport_type IN ('rail','air') AND distance_hr IS NOT NULL",
+    "manual": "SELECT from_id,to_id,h FROM plexus_casechamp.manual_links_ru WHERE season={season:String}",
+    "normalization": "SELECT avg(hansen_2h/hansen_idx*100) FROM plexus_casechamp.idx_np WHERE season='road' AND hansen_idx>0",
+    "expected": "SELECT hansen_idx FROM plexus_casechamp.idx_region WHERE region={region:String} AND season={season:String}",
+    "delta_points": "SELECT point_id,population,node,snap_km/15 FROM plexus_graph.region_points WHERE season='road' AND region={region:String} ORDER BY point_id",
+    "delta_cities": "SELECT city,oktmo,node,snap_h,population FROM plexus_casechamp.market_cities ORDER BY city",
+    "delta_times": "SELECT point_id,city,road_h FROM plexus_casechamp.np_city_times WHERE season='road' AND point_id IN (SELECT point_id FROM plexus_casechamp.idx_np WHERE season='road' AND region={region:String})",
+    "city_times": "SELECT point_id,city,road_h FROM plexus_casechamp.np_city_times WHERE season='road' AND point_id IN (SELECT oktmo FROM plexus_casechamp.market_cities)",
+    "terminal_nodes": "SELECT DISTINCT node FROM (SELECT node FROM plexus_graph.points WHERE node>=0 UNION ALL SELECT node FROM plexus_casechamp.market_cities) ORDER BY node",
+    "references": "SELECT way_idx,way_id,name,ref,km FROM plexus_graph.ways WHERE ref={reference:String}",
+    "road_reference": "SELECT DISTINCT ref FROM plexus_graph.road_lookup WHERE lookup={name:String}",
+    "corridor_places": "SELECT point_id,settlement,region,lon,lat FROM plexus_graph.locations WHERE lowerUTF8(ifNull(settlement,'')) LIKE {pattern:String}",
+    "corridor_edges": "SELECT src,dst,way_idx FROM plexus_graph.edges WHERE way_idx IN {ids:Array(Int64)}",
+    "corridor_nodes": "SELECT node,lon,lat FROM plexus_graph.nodes WHERE node IN {ids:Array(Int64)} ORDER BY node",
+    "region_codes": "SELECT oktmo,region FROM plexus_graph.region_codes WHERE region IN {regions:Array(String)}",
+    "candidates": "SELECT way_idx,way_id,coalesce(nullIf(name,''),nullIf(ref,''),toString(way_id)),km FROM plexus_graph.ways WHERE way_idx IN {ids:Array(Int64)} AND NOT coalesce(is_ferry,false)",
+    "impact_places": "SELECT point_id,settlement,lon,lat FROM plexus_graph.locations WHERE region={region:String}",
+    "regions": "SELECT region FROM plexus_casechamp.idx_region WHERE season='road' ORDER BY region",
+    "model_version": "SELECT value FROM plexus_atlas.atlas_metadata WHERE key='model_version'",
+    "manual_v2": "SELECT from_id,to_id,h FROM plexus_casechamp.manual_links_ru WHERE season={season:String} AND ({road_only:UInt8}=0 OR mode IN ('winter_road','ice_crossing','pontoon_bridge')) AND ({season:String}!='summer' OR mode NOT IN ('winter_road','ice_crossing'))",
+}
+ARRAYS = {
+    "edges": "SELECT src,dst,h,km,way_idx FROM plexus_graph.edges ORDER BY way_idx,src,dst",
+    "nodes": "SELECT node,lat,lon FROM plexus_graph.nodes ORDER BY node",
+    "ranks": "SELECT multiIf(replaceAll(highway,'_link','')='motorway',0,replaceAll(highway,'_link','')='trunk',1,replaceAll(highway,'_link','')='primary',2,replaceAll(highway,'_link','')='secondary',3,replaceAll(highway,'_link','')='tertiary',4,5) AS rank FROM plexus_graph.ways ORDER BY way_idx",
+    "seasons": "SELECT toUInt8(multiIf(operating_season='all',0,operating_season='summer',1,operating_season='winter',2,3)) AS season FROM plexus_graph.ways ORDER BY way_idx",
+}

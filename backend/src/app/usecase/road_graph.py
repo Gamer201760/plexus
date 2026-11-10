@@ -108,10 +108,20 @@ class RoadGraphPort(Protocol):
     def cancel(self, job_id: str) -> RoadJob: ...
 
 
+class RoadViewSource(Protocol):
+    def view(self, bounds: tuple[float, float, float, float], zoom: float) -> RoadView: ...
+
+
 class RoadGraph:
-    def __init__(self, engine: RoadGraphPort | None, atlas: AtlasRepository) -> None:
+    def __init__(
+        self,
+        engine: RoadGraphPort | None,
+        atlas: AtlasRepository,
+        view_source: RoadViewSource | None = None,
+    ) -> None:
         self._engine = engine
         self.atlas = atlas
+        self.view_source = view_source
 
     @property
     def engine(self) -> RoadGraphPort:
@@ -132,7 +142,8 @@ class RoadGraph:
             raise InvalidQuery()
         if not (-180 <= west < east <= 180 and -85 <= south < north <= 85 and 0 <= zoom <= 22):
             raise InvalidQuery()
-        return self.engine.view((west, south, east, north), zoom)
+        source = self.view_source if self.view_source is not None else self.engine
+        return source.view((west, south, east, north), zoom)
 
     def submit(self, region_id: str, scenario: str, changes: list[RoadChange]) -> RoadJob:
         if scenario not in {"road", "summer", "winter"} or not 1 <= len(changes) <= 50:

@@ -48,6 +48,8 @@ export function applyChatEvent(row: ChatEntry, event: ChatStreamEvent): ChatEntr
             ],
           }
         : row
+    case "analysis":
+      return applyAnalysis(row, event)
     case "done":
       return { ...row, complete: true }
     default:
@@ -64,4 +66,15 @@ export function streamStatus(current: string, event: ChatStreamEvent): string {
   if (event.type === "delta") return "writing"
   if (event.type === "done") return "done"
   return current
+}
+
+function applyAnalysis(row: ChatEntry, event: ChatStreamEvent): ChatEntry {
+  if (!event.analysis) return row
+  return {
+    ...row,
+    analyses: [
+      ...(row.analyses ?? []).filter((item) => item.id !== event.analysis?.id),
+      event.analysis,
+    ],
+  }
 }

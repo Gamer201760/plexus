@@ -93,7 +93,7 @@ class FakeAtlas:
     def points(self) -> dict[str, PointRecord]:
         return {"P1": PointRecord("P1", "Ёлкино", "R1", 60.0, 100.0, 10.0, 20.0)}
 
-    def links(self) -> list[LinkRecord]:
+    def links(self, region_id: str | None = None) -> list[LinkRecord]:
         return self.link_rows
 
     def economy(self) -> dict[str, EconomyRecord]:
@@ -104,6 +104,9 @@ class FakeAtlas:
 
     def settlements(self, region_id: str) -> list[SettlementRecord]:
         return [row for row in self.settlement_rows if row.region_id == region_id]
+
+    def search_names(self, needle: str) -> list[SettlementName]:
+        return self.settlement_names()
 
     def settlement_names(self) -> list[SettlementName]:
         return [

@@ -1,6 +1,7 @@
 import argparse
 import hashlib
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -14,8 +15,9 @@ SCENARIOS = {"road", "road_summer", "road_winter", "summer", "winter"}
 PUBLIC = ROOT / "frontend" / "atlas" / "public"
 
 
-def export(database: Path, target: Path) -> dict:
-    regions = json.loads((PUBLIC / "atlas.json").read_text())["regions"]
+def export(database: Path, target: Path, graph_manifest: Path | None = None) -> dict:
+    atlas = Path(os.environ.get("ATLAS_INPUT", str(PUBLIC / "atlas.json")))
+    regions = json.loads(atlas.read_text())["regions"]
     known = {row["id"] for row in regions}
     with duckdb.connect(str(database), read_only=True) as con:
         meta = con.sql("select * from index_model_metadata").df().iloc[0].to_dict()
@@ -40,10 +42,10 @@ def export(database: Path, target: Path) -> dict:
     manifest = {"model_version": meta["model_version"], "normalization_base": meta["normalization_base"],
                 "half_life_h": 2, "sensitivity_half_lives_h": [1, 2, 4], "code": revision(),
                 "implementation": [file_record(ROOT / "etl" / name) for name in (
-                    "access_russia.py", "access_network.py", "graphlib.py", "indices.py", "export_indices.py")],
+                    "access_russia.py", "access_network.py", "market_distances.py", "graphlib.py", "indices.py", "export_indices.py")],
                 "measured_at": datetime.now(timezone.utc).isoformat(), "regional_rows": len(records),
                 "regions": len(known), "scenarios": sorted(SCENARIOS), "totals": totals,
-                "targets": targets, "inputs": [file_record(database), file_record(ROOT / "data/graph_ru/manifest.json")],
+                "targets": targets, "inputs": [file_record(database), file_record(graph_manifest or ROOT / "data/graph_ru/manifest.json")],
                 "assumptions": ["uniform_headways_random_need", "independent_transfer_waits",
                     "unknown_trunk_frequency_assumed_one_per_week", "osm_operability_not_field_verified",
                     "roads_undirected_for_national_model"],
@@ -68,5 +70,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--database", type=Path, default=ROOT / "data/casechamp.duckdb")
     parser.add_argument("--output", type=Path, default=ROOT / "data/index_candidate/indices.json")
+    parser.add_argument("--graph-manifest", type=Path)
     args = parser.parse_args()
-    export(args.database, args.output)
+    export(args.database, args.output, args.graph_manifest)

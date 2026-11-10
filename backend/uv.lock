@@ -43,7 +43,6 @@ name = "app"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "duckdb" },
     { name = "fastapi" },
     { name = "numpy" },
     { name = "openai-codex" },
@@ -55,6 +54,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "duckdb" },
     { name = "httpx2" },
     { name = "mypy" },
     { name = "pytest" },
@@ -64,7 +64,6 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "duckdb", specifier = "==1.2.2" },
     { name = "fastapi", specifier = ">=0.143.1" },
     { name = "numpy", specifier = ">=2.5.4" },
     { name = "openai-codex", specifier = ">=0.167.0" },
@@ -76,6 +75,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "duckdb", specifier = "==1.2.2" },
     { name = "httpx2", specifier = ">=2.13.1" },
     { name = "mypy", specifier = ">=1.18" },
     { name = "pytest", specifier = ">=8.4" },

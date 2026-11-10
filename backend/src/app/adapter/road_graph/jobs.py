@@ -7,13 +7,13 @@ from uuid import uuid4
 
 from app.adapter.log.stdlib import StdlibLogger
 from app.adapter.road_graph.baselines import BaselineCache
-from app.adapter.road_graph.data import VERSION, GraphData
+from app.adapter.road_graph.data import GraphData
 from app.adapter.road_graph.delta import DeltaCalculation
 from app.adapter.road_graph.delta_base import DeltaBase
-from app.adapter.road_graph.job_store import restore_jobs, save_job
 from app.adapter.road_graph.routing import GraphRouting
-from app.domain.errors import InvalidQuery
+from app.domain.errors import DataUnavailable, InvalidQuery
 from app.domain.road_economics import MoneyAssumptions
+from app.usecase.graph_snapshot import GraphSnapshot
 from app.usecase.road_graph import (
     GraphLocation,
     RoadAddition,
@@ -22,18 +22,23 @@ from app.usecase.road_graph import (
     RoadResult,
     RoadView,
 )
+from app.usecase.road_job_store import RoadJobStore
 
 
 class RoadJobs:
-    def __init__(self, root: Path) -> None:
-        self.data = GraphData(root)
+    def __init__(self, root: Path, snapshot: GraphSnapshot, store: RoadJobStore) -> None:
+        self.data = GraphData(root, snapshot)
         self.routing = GraphRouting(self.data)
-        self.cache = BaselineCache(root)
+        self.cache = BaselineCache(root, snapshot.revision)
         self.delta = DeltaCalculation(DeltaBase(self.data))
         self.delta.base.prepare()
         self.pool = ThreadPoolExecutor(max_workers=1, thread_name_prefix="road-calculation")
         self.lock = Lock()
-        self.jobs = restore_jobs(root)
+        self.store = store
+        self.jobs = {
+            key: replace(job, status="cancelled") if job.status in {"queued", "running"} else job
+            for key, job in store.load().items()
+        }
         self.stops = {key: Event() for key in self.jobs}
         self.baselines: dict[tuple[str, str], float] = {}
 
@@ -62,8 +67,9 @@ class RoadJobs:
                     if not queue:
                         raise InvalidQuery("A calculation is already running; wait or cancel it")
             job = RoadJob(
-                uuid4().hex, region_id, region, scenario, changes, "queued", 0, 360, VERSION
+                uuid4().hex, region_id, region, scenario, changes, "queued", 0, 360, self.data.version
             )
+            self.store.save(job)
             self.jobs[job.id] = job
             self.stops[job.id] = Event()
         self.pool.submit(self.run, job)
@@ -103,10 +109,11 @@ class RoadJobs:
                 "queued",
                 0,
                 5,
-                VERSION,
+                self.data.version,
                 addition=addition,
                 money_assumptions=money,
             )
+            self.store.save(job)
             self.jobs[job.id] = job
             self.stops[job.id] = Event()
         self.pool.submit(self.run, job)
@@ -140,6 +147,14 @@ class RoadJobs:
             self.jobs[job_id] = replace(
                 self.jobs[job_id], status=status, completed=completed, result=result, error=error
             )
+            if status in {"completed", "cancelled", "failed"}:
+                try:
+                    self.store.save(self.jobs[job_id])
+                except DataUnavailable as storage_error:
+                    self.jobs[job_id] = replace(self.jobs[job_id], error=error or "storage_pending")
+                    StdlibLogger("road_graph").error(
+                        "calculation_storage_failed", exc=storage_error, job_id=job_id
+                    )
 
     def run(self, job: RoadJob) -> None:
         started = monotonic()
@@ -156,7 +171,6 @@ class RoadJobs:
             if job.addition:
                 result = self.delta.calculate(region, job.addition, job.money_assumptions, progress)
                 self.update(job.id, status="completed", completed=5, result=result)
-                save_job(self.data.root, self.job(job.id))
                 return
             key = (region, job.scenario)
             cached = self.cache.read(*key)
@@ -164,13 +178,10 @@ class RoadJobs:
                 self.baselines[key] = cached
             if key not in self.baselines:
                 before, _, _, _, _ = self.routing.calculate(region, job.scenario, [], progress)
-                with self.data.connect() as con:
-                    expected_row = con.execute(
-                        "select hansen_idx from idx_region where region=? and season=?", list(key)
-                    ).fetchone()
-                    if expected_row is None:
-                        raise InvalidQuery("Region is missing from the calculation snapshot")
-                    expected = float(expected_row[0])
+                rows = self.data.read("expected", {"region": region, "season": job.scenario})
+                if not rows:
+                    raise InvalidQuery("Region is missing from the calculation snapshot")
+                expected = float(rows[0][0])
                 if abs(before - expected) > max(0.0001, abs(expected) * 0.00001):
                     self.update(job.id, status="failed", completed=180, error="baseline_mismatch")
                     return
@@ -194,7 +205,6 @@ class RoadJobs:
                 monotonic() - started,
             )
             self.update(job.id, status="completed", completed=360, result=result)
-            save_job(self.data.root, self.job(job.id))
         except InterruptedError:
             self.update(job.id, status="cancelled", completed=self.job(job.id).completed)
         except Exception as error:  # noqa: BLE001 - worker boundary records failure and logs the cause

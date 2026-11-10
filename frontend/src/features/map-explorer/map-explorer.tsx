@@ -11,11 +11,12 @@ import { Isolines } from "@/shared/ui/brand"
 import { formatMetric } from "./format-metric"
 import { HoverCard } from "./hover-card"
 import styles from "./map-explorer.module.css"
-import { MapLegend, TransitLegend } from "./map-legend"
+import { AirportLegend, MapLegend, TransitLegend } from "./map-legend"
 import { MapPanel } from "./map-panel"
 import { MapToolbar } from "./map-toolbar"
 import { MapZoom } from "./map-zoom"
 import { metricValue } from "./metric"
+import { RoadLegend } from "./road-legend"
 import { useExplorerParams } from "./use-explorer-params"
 import { useMapData, useSelectedTransit } from "./use-map-data"
 import { useMapHover } from "./use-map-hover"
@@ -36,6 +37,7 @@ export interface MapExplorerProps {
     context: ChatContext,
     onMapCommand: MapCommandHandler,
     roads: RoadGraphState,
+    onChatChange: () => void,
   ) => ReactNode
 }
 
@@ -47,7 +49,7 @@ export function MapExplorer({ renderPanel }: MapExplorerProps) {
   const f = useFormatters()
   const { metric, season, selectedId, setMetric, setSeason, select, searchFor } =
     useExplorerParams()
-  const { links, transit, modelCount, showModels, setShowModels } = useSelectedTransit(
+  const { links, airports, transit, modelCount, showModels, setShowModels } = useSelectedTransit(
     selectedId,
     season,
   )
@@ -126,9 +128,11 @@ export function MapExplorer({ renderPanel }: MapExplorerProps) {
         {geo.data && regions.data ? (
           <OsmMap
             transit={transit.data}
+            airports={airports.data}
             roads={{
               view: roads.layerView,
-              addition: roads.job?.addition,
+              onRendering: roads.setRendering,
+              addition: roads.addition,
               analysis: roads.analysisOverlay,
               corridor: roads.corridorOverlay,
               selected: roads.selected,
@@ -152,6 +156,8 @@ export function MapExplorer({ renderPanel }: MapExplorerProps) {
           <MapToolbar metric={metric} season={season} onMetric={setMetric} onSeason={setSeason} />
           {ready ? (
             <MapLegend metric={metric} scale={scale} missing={missing}>
+              <RoadLegend roads={roads} />
+              <AirportLegend catalog={airports.data} failed={airports.isError} />
               <TransitLegend
                 selectedId={selectedId}
                 loading={links.isPending}
@@ -188,6 +194,10 @@ export function MapExplorer({ renderPanel }: MapExplorerProps) {
             },
             onMapCommand,
             roads,
+            () => {
+              setMapCommand(null)
+              roads.clearOverlays()
+            },
           )
         : panel}
     </div>

@@ -7,38 +7,44 @@ import type {
   ConnectionInput,
   RoadBounds,
   RoadJob,
+  RoadRenderView,
   RoadSegment,
-  RoadView,
 } from "@/shared/api/road-graph"
+import { loadRoadView } from "./load-road-view"
+import { coversRoadViewport, roadViewport } from "./road-viewport"
 
 export function useRoadGraph() {
+  const [showJobOverlay, setShowJobOverlay] = useState(false)
   const [corridorOverlay, setCorridorOverlay] = useState<CorridorOverlay | null>(null)
   const showCalculation = useCallback((calculation: ChatCalculation, instant = false) => {
+    setShowJobOverlay(true)
     setCorridorOverlay({ calculation, focus: performance.now(), instant })
     setSelectedJobId(calculation.job_ids[0] ?? null)
   }, [])
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null)
   const [analysisOverlay, setAnalysisOverlay] = useState<AnalysisOverlay | null>(null)
   const [bounds, setBounds] = useState<RoadBounds | null>(null)
+  const onBounds = useCallback((next: RoadBounds) => {
+    const normalized = roadViewport(next)
+    setBounds((previous) =>
+      previous && coversRoadViewport(previous, next) ? previous : normalized,
+    )
+  }, [])
   const [selected, setSelected] = useState<readonly RoadSegment[]>([])
+  const [rendering, setRendering] = useState(false)
   const [enabled, setEnabled] = useState(true)
   const cache = useQueryClient()
-  const view = useQuery<RoadView>({
+  const view = useQuery<RoadRenderView>({
     queryKey: ["road-graph", bounds],
     placeholderData: keepPreviousData,
+    staleTime: Infinity,
+    gcTime: 60_000,
+    structuralSharing: false,
     enabled: enabled && bounds !== null,
     retry: false,
-    queryFn: ({ signal }) => {
-      const [west, south, east, north, zoom] = bounds ?? [0, 0, 1, 1, 8]
-      return unwrap<RoadView>(
-        api.GET("/api/v1/road-graph", {
-          signal,
-          params: { query: { west, south, east, north, zoom } },
-        }),
-      )
-    },
+    queryFn: ({ signal }) => loadRoadView(bounds ?? [0, 0, 1, 1, 8], signal),
   })
-  const lastView = useRef<RoadView | undefined>(undefined)
+  const lastView = useRef<RoadRenderView | undefined>(undefined)
   useEffect(() => {
     if (view.data) lastView.current = view.data
   }, [view.data])
@@ -69,6 +75,7 @@ export function useRoadGraph() {
       changes: { way_id: number; speed_factor: number }[]
     }) => unwrap(api.POST("/api/v1/road-scenarios", { body })),
     onSuccess: (job) => {
+      setShowJobOverlay(true)
       setSelectedJobId(job.id)
       cache.setQueryData<RoadJob[]>(["road-scenarios"], (current) => [
         job,
@@ -79,6 +86,7 @@ export function useRoadGraph() {
   const addConnection = useMutation({
     mutationFn: (body: ConnectionInput) => unwrap(api.POST("/api/v1/road-connections", { body })),
     onSuccess: (job) => {
+      setShowJobOverlay(true)
       setSelectedJobId(job.id)
       cache.setQueryData<RoadJob[]>(["road-scenarios"], (current) => [
         job,
@@ -104,19 +112,33 @@ export function useRoadGraph() {
           : current,
     )
   }, [])
+  const clearOverlays = useCallback(() => {
+    setCorridorOverlay(null)
+    setAnalysisOverlay(null)
+    setSelected([])
+    setShowJobOverlay(false)
+  }, [])
   return {
+    clearOverlays,
+    hasOverlay: !!corridorOverlay || !!analysisOverlay || !!selected.length || showJobOverlay,
+    addition: showJobOverlay ? (status.data ?? current)?.addition : undefined,
     corridorOverlay,
     showCalculation,
     jobs: recent.data ?? [],
-    selectJob: setSelectedJobId,
+    selectJob: (id: string) => {
+      setShowJobOverlay(true)
+      setSelectedJobId(id)
+    },
     analysisOverlay,
     setAnalysisOverlay,
     view,
+    rendering,
+    setRendering,
     layerView: enabled ? (view.data ?? lastView.current) : undefined,
     selected,
     enabled,
     setEnabled,
-    onBounds: setBounds,
+    onBounds,
     onRoad,
     clear: () => setSelected([]),
     submit,

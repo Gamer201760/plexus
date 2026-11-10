@@ -1,2 +1,6 @@
 export type { ChatContext, ChatInput, ChatStreamEvent } from "@/shared/api/chat-stream"
 export { useChatStream } from "./chat.queries"
+export type { AnalysisCommentary, ChatEntry, ChatSession } from "./chat-session"
+export { chatSessionBusy, chatSessionTitle } from "./chat-session"
+export { useAnalysisCommentary } from "./use-analysis-commentary"
+export { useChatSessions } from "./use-chat-sessions"

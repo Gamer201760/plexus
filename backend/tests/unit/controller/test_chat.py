@@ -48,7 +48,7 @@ def test_stream_keeps_context_and_history_without_credentials() -> None:
 def test_disabled_chat_reports_unavailable_without_inventing_answer() -> None:
     with client_for() as client:
         response = client.post("/api/v1/chat", json={"prompt": "Hello"})
-    assert response.json() == {"type": "error", "text": "", "code": "chat_unavailable", "table": None, "chart": None, "map": None, "calculation": None}
+    assert response.json() == {"type": "error", "text": "", "code": "chat_unavailable", "table": None, "chart": None, "map": None, "calculation": None, "analysis": None}
 
 
 def test_remote_origin_cannot_spend_local_subscription() -> None:

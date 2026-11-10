@@ -1,7 +1,8 @@
 import clsx from "clsx"
-import { memo, type ReactNode } from "react"
+import { memo, type ReactNode, useId, useRef, useState } from "react"
+import type { AirportCatalog } from "@/shared/api/airports"
 import { useFormatters, useTranslation } from "@/shared/i18n"
-import { Button, Checkbox, Skeleton } from "@/shared/ui"
+import { Button, Checkbox, Popover, Skeleton } from "@/shared/ui"
 import { TransportIcon } from "@/shared/ui/brand"
 import { formatThreshold } from "./format-metric"
 import styles from "./map-legend.module.css"
@@ -103,7 +104,7 @@ export function TransitLegend({
         <div className={styles.transitModes}>
           <span>
             <TransportIcon mode="rail" size="sm" />
-            {t("data:mode.rail")}
+            {t("map:connections.railShort")}
           </span>
           <span>
             <TransportIcon mode="air" size="sm" />
@@ -111,16 +112,81 @@ export function TransitLegend({
           </span>
         </div>
       ) : null}
-      {modelCount > 0 ? (
-        <Checkbox
-          label={t("map:connections.showModels", { count: modelCount })}
-          checked={showModels}
-          onChange={onModelsChange}
+      <div className={styles.transitHeader}>
+        {modelCount > 0 ? (
+          <Checkbox
+            label={t("map:connections.showModels", { count: modelCount })}
+            checked={showModels}
+            onChange={onModelsChange}
+          />
+        ) : null}
+        <LegendHelp
+          content={[
+            t("map:connections.schematic"),
+            modeled ? t("map:connections.model") : "",
+            missing > 0 ? t("map:connections.missing", { count: missing }) : "",
+          ]
+            .filter(Boolean)
+            .join(" ")}
         />
-      ) : null}
-      <p>{t(empty && modelCount === 0 ? "map:connections.empty" : "map:connections.schematic")}</p>
-      {modeled ? <p>{t("map:connections.model")}</p> : null}
-      {missing > 0 ? <p>{t("map:connections.missing", { count: missing })}</p> : null}
+      </div>
+      {empty && modelCount === 0 ? <p>{t("map:connections.empty")}</p> : null}
     </div>
+  )
+}
+
+function LegendHelp({ content }: { readonly content: string }) {
+  const { t } = useTranslation()
+  const [open, setOpen] = useState(false)
+  const anchor = useRef<HTMLButtonElement>(null)
+  const id = useId()
+  return (
+    <>
+      <Button
+        ref={anchor}
+        variant="ghost"
+        icon="info"
+        aria-label={t("map:connections.details")}
+        aria-expanded={open}
+        aria-controls={open ? id : undefined}
+        onClick={() => setOpen((value) => !value)}
+      >
+        {null}
+      </Button>
+      <Popover
+        id={id}
+        open={open}
+        onClose={() => setOpen(false)}
+        anchorRef={anchor}
+        side="top"
+        align="end"
+        label={t("map:connections.details")}
+        focusOnOpen
+        className={styles.help}
+      >
+        <p>{content}</p>
+      </Popover>
+    </>
+  )
+}
+
+export function AirportLegend({
+  catalog,
+  failed,
+}: {
+  readonly catalog: AirportCatalog | undefined
+  readonly failed: boolean
+}) {
+  const { t } = useTranslation()
+  const key = failed
+    ? "map:airports.failed"
+    : catalog
+      ? "map:airports.legend"
+      : "map:airports.loading"
+  return (
+    <p className={styles.airports}>
+      <span className={styles.airportDot} aria-hidden="true" />
+      {t(key, { count: catalog?.airports.length ?? 0 })}
+    </p>
   )
 }

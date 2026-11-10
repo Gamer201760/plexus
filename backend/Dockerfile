@@ -23,6 +23,7 @@ RUN --mount=from=uv,source=/uv,target=/usr/local/bin/uv \
 FROM base
 ENV PYTHONPATH=/srv/src
 COPY src ./src
+RUN mkdir -p /cache/scenario-cache /cache/scenario-results && chown -R app:app /cache
 USER app
 EXPOSE 8000
 CMD ["uvicorn", "app.main:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000"]

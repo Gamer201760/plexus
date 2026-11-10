@@ -5,16 +5,14 @@ import styles from "./road-scenario.module.css"
 
 export function RoadSelection({ roads }: { readonly roads: RoadGraphState }) {
   const { t } = useTranslation()
-  const available = [
-    ...new Map((roads.view.data?.segments ?? []).map((r) => [r.way_id, r])).values(),
-  ].slice(0, 12)
+  const available = roads.view.data?.segments ?? []
   return (
     <>
       <Switch label={t("graph:layer")} checked={roads.enabled} onChange={roads.setEnabled} />
       <p className={styles.note}>{t("graph:method")}</p>
       <p className={styles.note}>{t("graph:mapKey")}</p>
       <p className={styles.note}>{t("graph:addHint")}</p>
-      {roads.view.isFetching ? (
+      {roads.view.isFetching || roads.rendering ? (
         <p role="status" className={styles.note}>
           {t("graph:updating")}
         </p>
@@ -30,7 +28,7 @@ export function RoadSelection({ roads }: { readonly roads: RoadGraphState }) {
       {roads.enabled && roads.view.data ? (
         <p className={styles.note}>
           {t("graph:coverage", {
-            count: roads.view.data.segments.length,
+            count: roads.view.data.segmentCount,
             total: roads.view.data.matched,
             detail: t(detailKey(roads.view.data.detail ?? "all")),
           })}

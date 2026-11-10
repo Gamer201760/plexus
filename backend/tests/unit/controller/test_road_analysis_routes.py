@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import cast
 from unittest.mock import Mock
 
@@ -9,14 +8,17 @@ from fastapi.testclient import TestClient
 from app.adapter.log.stdlib import StdlibLogger
 from app.controller.errors import ErrorHandlers
 from app.controller.road_analysis.router import build_analysis_router
-from app.repository.files.atlas import JsonAtlasRepository
+from app.usecase.dto import BoundaryShape, RegionRecord
 from app.usecase.interface import AtlasRepository
 from app.usecase.road_analysis import AnalysisJob, AnalysisPort, RoadAnalysis
 
 
 @pytest.fixture
 def atlas() -> AtlasRepository:
-    return JsonAtlasRepository(Path(__file__).resolve().parents[4] / "frontend/atlas/public")
+    repository = Mock(spec=AtlasRepository)
+    repository.regions.return_value = [RegionRecord("18000000", "Region", 1, 10)]
+    repository.boundaries.return_value = [BoundaryShape("18000000", "Region", (0, 0, 1, 1), [])]
+    return cast(AtlasRepository, repository)
 
 
 def test_analysis_contract_is_complete_and_validates_percentage(atlas: AtlasRepository) -> None:

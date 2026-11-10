@@ -57,13 +57,7 @@ class RoadEvaluation:
             monotonic() - start,
         )
         data = self.roads.data
-        with data.connect() as con:
-            locations = con.execute(
-                "select p.point_id,coalesce(s.settlement,p.point_id),p.lon,p.lat "
-                "from read_parquet(?) p left join stg_settlements s on p.point_id=s.oktmo "
-                "and s.object_level='Населенный пункт' where p.region=?",
-                [str(data.root / "graph_ru/points.parquet"), region],
-            ).fetchall()
+        locations = data.read("impact_places", {"region": region})
         lookup = {str(p[0]): p for p in locations}
         impacts = []
         for impact in effect.settlements:

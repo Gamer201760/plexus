@@ -1,6 +1,8 @@
 import type { MessageKey } from "@/shared/i18n"
 
 const ERRORS: Readonly<Record<string, MessageKey>> = {
+  chat_analysis_unavailable: "chat:errors.analysisUnavailable",
+  chat_analysis_not_ready: "chat:errors.analysisNotReady",
   chat_unavailable: "chat:errors.unavailable",
   chat_auth_required: "chat:errors.auth",
   chat_timeout: "chat:errors.timeout",

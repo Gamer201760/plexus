@@ -9,18 +9,23 @@ import styles from "./chat-calculation.module.css"
 import { corridorPaths } from "./corridor-paths"
 
 export interface ChatCalculationCardProps {
+  readonly autoFocus?: boolean
   readonly calculation: ChatCalculation
   readonly onShow?: CalculationHandler | undefined
 }
 
-export function ChatCalculationCard({ calculation, onShow }: ChatCalculationCardProps) {
+export function ChatCalculationCard({
+  calculation,
+  onShow,
+  autoFocus = true,
+}: ChatCalculationCardProps) {
   const { t } = useTranslation()
   const shown = useRef(false)
   useEffect(() => {
-    if (shown.current || !onShow) return
+    if (shown.current || !onShow || !autoFocus) return
     shown.current = true
     onShow(calculation)
-  }, [calculation, onShow])
+  }, [calculation, onShow, autoFocus])
   const jobs = useQueries({
     queries: calculation.job_ids.map((id) => ({
       queryKey: ["road-scenario", id],

@@ -1,11 +1,21 @@
+name: plexus-analytics
+include:
+  - compose.analytics.yaml
 services:
   backend:
     build:
       context: ./backend
     environment:
-      DATA_DIR: /data
+      CLICKHOUSE_URL: http://clickhouse:8123
+      CLICKHOUSE_USER: plexus
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD in .env.analytics}
+      GRAPH_DIR: /cache
+      CHAT_ENABLED: ${CHAT_ENABLED:-false}
     volumes:
-      - ./frontend/atlas/public:/data:ro
+      - plexus_runtime:/cache
+    depends_on:
+      clickhouse:
+        condition: service_healthy
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health', timeout=3)"]
       interval: 10s
@@ -29,3 +39,6 @@ services:
       timeout: 5s
       retries: 5
     restart: unless-stopped
+
+volumes:
+  plexus_runtime:

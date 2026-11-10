@@ -17,12 +17,15 @@
 ## Запуск
 
 [Инструкция запуска](docs/running.md) описывает Compose и локальную разработку.
-Для расчётов по графу нужны DuckDB и Parquet одного снимка, путь задаётся через `GRAPH_DIR`.
+Рабочие данные находятся в ClickHouse; `GRAPH_DIR` задаёт каталог производных кэшей.
+Подключение к существующей базе: [хранилище](docs/clickhouse.md).
 [Исходные артефакты](docs/data-pipeline.md) опубликованы отдельно от исходного кода.
 
 ```sh
+set -a
+source .env.analytics
+set +a
 cd backend
-PYTHONPATH=src uv run python -m app.adapter.road_graph.precompute --data-dir ../data
 GRAPH_DIR="$(pwd)/../data" CHAT_ENABLED=true uv run uvicorn app.main:create_app --factory --port 8001
 ```
 
@@ -35,7 +38,7 @@ API_URL=http://127.0.0.1:8001 npm run dev -- --port 5187
 ```
 
 Чат использует серверную авторизацию; [настройка и инструменты](docs/chat.md).
-Страница `/scenarios` требует собственного совместимого набора `SCENARIO_DIR`;
+Страница `/scenarios` требует отдельного набора матриц в `plexus_scenario`;
 его отсутствие показывается ошибкой, не заменяется вымышленными результатами.
 
 ## Расчёт и ограничения

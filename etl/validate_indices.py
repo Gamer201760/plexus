@@ -8,7 +8,7 @@ import numpy as np
 from artifacts import ROOT, file_record, revision, write_json
 
 
-def validate(database: Path) -> dict:
+def validate(database: Path, output: Path | None = None) -> dict:
     with duckdb.connect(str(database), read_only=True) as con:
         frame = con.sql("select season, point_id, population, hansen_2h, hansen_idx, reachable_markets from idx_np").df()
         regions = con.sql("select season, region, hansen_idx, population, covered_population, covered_settlements, n_np from idx_region").df()
@@ -50,7 +50,7 @@ def validate(database: Path) -> dict:
               "tolerance": "relative 1e-7 for graph monotonicity; 1e-10 for formula samples",
               "input": file_record(database),
               "limitation": "checks model arithmetic and internal graph invariants, not field operability"}
-    write_json(ROOT / "docs/results/national-validation.json", report)
+    write_json(output or ROOT / "docs/results/national-validation.json", report)
     print(f"validated {len(regions)} regional rows; road mean {normalized}; 12 formula controls")
     return report
 
@@ -58,4 +58,6 @@ def validate(database: Path) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--database", type=Path, default=ROOT / "data/casechamp.duckdb")
-    validate(parser.parse_args().database)
+    parser.add_argument("--output", type=Path)
+    args = parser.parse_args()
+    validate(args.database, args.output)
