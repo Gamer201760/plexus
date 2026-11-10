@@ -24,7 +24,11 @@ OSM распространяется по [ODbL](https://www.openstreetmap.org/c
 Манифесты под `data/` относятся к полным локальным входам. Краткие манифесты и протоколы
 результата поставляются в `docs/results/`; сырые PBF и DuckDB в Git не включены.
 
-Готовые `data/graph_ru/` и `data/casechamp.duckdb` опубликованы с SHA-256 в релизе
+Рабочий снимок ClickHouse опубликован в
+[`data-clickhouse-20261110`](https://github.com/GoatWhistle/casechamp/releases/tag/data-clickhouse-20261110).
+Состав, ограничения и команды восстановления: [хранилище](clickhouse.md).
+
+Исторические `data/graph_ru/` и `data/casechamp.duckdb` опубликованы с SHA-256 в релизе
 [`data-20261107`](https://github.com/GoatWhistle/casechamp/releases/tag/data-20261107);
 скачивание избавляет от пересборки графа и матрицы времён:
 

@@ -115,11 +115,54 @@ DuckDB отсутствует в рабочих зависимостях backend
 
 ## Как запустить и обновить снимок?
 
+Снимок таблиц доступен в [релизе data-clickhouse-20261110](https://github.com/GoatWhistle/casechamp/releases/tag/data-clickhouse-20261110).
+Для скачивания нужен доступ к приватному репозиторию. Каждый файл содержит одну таблицу
+в формате Native с gzip; `manifest.json` хранит схему, число строк и SHA-256.
+Снимок включает рабочие базы и отдельную `plexus_refresh_graph`: это новый граф,
+для которого пересчёт индексов ещё не завершён. По умолчанию восстановление его пропускает.
+История пользовательских расчётов и секреты в релиз не входят. `plexus_scenario` пуст:
+данных отдельной матричной лаборатории в этом снимке нет.
+
+Восстановление в новую базу, из корня репозитория:
+
+```sh
+gh release download data-clickhouse-20261110 -R GoatWhistle/casechamp -D data/releases/data-clickhouse-20261110
+docker compose --env-file .env.analytics -f compose.analytics.yaml -p plexus-analytics up -d
+set -a
+source .env.analytics
+set +a
+uv sync --project backend
+backend/.venv/bin/python etl/analytics/restore_snapshot.py data/releases/data-clickhouse-20261110
+backend/.venv/bin/python - <<'PY'
+import sys
+from pathlib import Path
+sys.path.insert(0, 'etl/analytics')
+from client import ClickHouse
+client = ClickHouse()
+client.request('CREATE DATABASE IF NOT EXISTS plexus_state')
+for statement in Path('infra/clickhouse/state.sql').read_text().split(';'):
+    if statement.strip():
+        client.request(statement)
+PY
+```
+
+Задайте `CLICKHOUSE_URL=http://127.0.0.1:18123`, `CLICKHOUSE_USER=plexus` и собственный
+`CLICKHOUSE_PASSWORD` в `.env.analytics` до запуска. Скрипт проверяет SHA-256 всех
+выбранных файлов перед записью и сверяет число строк после загрузки. Если целевая
+таблица уже существует, восстановление останавливается до записи. Ключ
+`--database-prefix` позволяет проверить снимок в отдельном пространстве имён;
+`--include-staging` дополнительно восстанавливает новый граф в `plexus_refresh_graph`.
+После загрузки можно запускать API и frontend по [инструкции запуска](running.md).
+
+Проверка 10.11.2026: файл таблицы регионов скачан из GitHub, восстановлен в отдельной
+базе; все 82 строки совпали с оригиналом. Полное восстановление всех таблиц на чистом
+сервере в этой проверке не выполнялось. Экспорт идёт по таблицам, общей транзакции
+снимка нет; рабочие наборы во время выгрузки не переключались.
+
 См. [инструкцию запуска](running.md). Данные живут в именованном Docker volume
 `plexus-analytics_plexus_analytics`; удаление этого volume удаляет базу.
-Обычный `docker compose down` volume сохраняет. Резервное копирование volume
-или таблиц ClickHouse должно быть частью эксплуатации; копии на другом носителе
-в этой локальной проверке не создавались.
+Обычный `docker compose down` volume сохраняет. Релиз хранит таблицы наборов данных;
+для резервной копии пользовательской истории отдельно сохраняйте `plexus_state`.
 
 Для первоначальной загрузки восстановленного исходного набора:
 
