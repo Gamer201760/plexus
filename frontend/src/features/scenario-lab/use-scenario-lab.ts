@@ -10,7 +10,9 @@ import {
 
 export interface LinkDraft {
   readonly from: string
+  readonly fromLabel: string
   readonly to: string
+  readonly toLabel: string
   readonly mode: ScenarioMode
   readonly travel: string
   readonly frequency: string
@@ -43,8 +45,8 @@ export function draftLink(draft: LinkDraft): ScenarioLink | null {
   const frequency =
     isScheduled(draft.mode) && draft.frequency !== "" ? Number(draft.frequency) : null
   return {
-    from_city: draft.from,
-    to_city: draft.to,
+    from_id: draft.from,
+    to_id: draft.to,
     mode: draft.mode,
     travel_h: travel,
     frequency_per_week: frequency,
@@ -54,6 +56,7 @@ export function draftLink(draft: LinkDraft): ScenarioLink | null {
 export function useScenarioLab(catalog: ScenarioCatalog) {
   const [season, setSeason] = useState<ScenarioSeason>("road")
   const [links, setLinks] = useState<readonly LinkDraft[]>([])
+  const [labels, setLabels] = useState<Readonly<Record<string, string>>>({})
   const evaluation = useEvaluateScenario()
   const parsed = links.map(draftLink)
   const valid = links.length > 0 && parsed.every((link) => link !== null)
@@ -74,8 +77,15 @@ export function useScenarioLab(catalog: ScenarioCatalog) {
     stale,
     evaluation,
     request,
-    add: (draft: LinkDraft) =>
-      setLinks((current) => (current.length < LINK_LIMIT ? [...current, draft] : current)),
+    labels,
+    add: (draft: LinkDraft) => {
+      setLinks((current) => (current.length < LINK_LIMIT ? [...current, draft] : current))
+      setLabels((current) => ({
+        ...current,
+        [draft.from]: draft.fromLabel,
+        [draft.to]: draft.toLabel,
+      }))
+    },
     remove: (index: number) =>
       setLinks((current) => current.filter((_, position) => position !== index)),
     calculate: () => {

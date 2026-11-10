@@ -94,7 +94,7 @@ function ScenarioWorkspace({ catalog, onReload }: ScenarioWorkspaceProps) {
             />
           )}
           {result ? (
-            <ImpactResults result={result} />
+            <ImpactResults result={result} labels={state.labels} />
           ) : (
             !state.evaluation.isError && (
               <EmptyState
