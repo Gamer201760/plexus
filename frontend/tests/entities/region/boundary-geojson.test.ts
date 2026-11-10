@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
-import { buildBoundaryAtlas } from "@/entities/region/osm-map/boundary-geojson"
 import type { RegionBoundary } from "@/entities/region"
+import { buildBoundaryAtlas } from "@/entities/region/osm-map/boundary-geojson"
 
 const ring: [number, number][] = [
   [60, 50],
