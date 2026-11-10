@@ -14,12 +14,34 @@ class EdgeChangeRequest(BaseModel):
     frequency_per_week: int | None = Field(default=None, ge=1, le=28, strict=True)
 
 
+class NewLinkRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", from_attributes=True)
+    from_id: str = Field(min_length=1, max_length=120)
+    to_id: str = Field(min_length=1, max_length=120)
+    mode: Literal[
+        "road",
+        "air",
+        "river",
+        "rail",
+        "scheduled_ferry",
+        "ferry",
+        "winter_road",
+        "ice_crossing",
+        "pontoon_bridge",
+    ]
+    travel_h: float = Field(gt=0, le=200)
+    seasons: tuple[Literal["summer", "winter"], ...] = Field(min_length=1, max_length=2)
+    frequency_per_week: int | None = Field(default=None, ge=1, le=28, strict=True)
+    bidirectional: bool = True
+
+
 class EvaluationRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     season: Literal["summer", "winter"]
     model_version: str = Field(min_length=1, max_length=120)
     artifact_version: str = Field(min_length=1, max_length=120)
     changes: tuple[EdgeChangeRequest, ...] = Field(default=(), max_length=50)
+    additions: tuple[NewLinkRequest, ...] = Field(default=(), max_length=10)
 
 
 class PointResponse(Response):
@@ -114,3 +136,4 @@ class EvaluationResponse(Response):
     pairs: tuple[PairComparisonResponse, ...]
     assumptions: tuple[str, ...]
     waiting_sensitivity: tuple[WaitingSensitivityResponse, ...]
+    additions: tuple[NewLinkRequest, ...]

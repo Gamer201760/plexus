@@ -83,3 +83,30 @@ def test_missing_artifact_fails_honestly(tmp_path: Path) -> None:
     response = client.get("/api/v1/pilots")
     assert response.status_code == 503
     assert response.json()["code"] == "data_unavailable"
+
+
+def test_added_link_changes_route_and_is_echoed(client: TestClient) -> None:
+    request = payload(client)
+    request["changes"] = []
+    addition: dict[str, object] = {
+        "from_id": "93643425101",
+        "to_id": "93701000001",
+        "mode": "air",
+        "travel_h": 1.2,
+        "seasons": ["summer", "winter"],
+        "frequency_per_week": 14,
+    }
+    request["additions"] = [addition]
+    response = client.post("/api/v1/pilots/tuva/evaluate", json=request)
+    assert response.status_code == 200, response.text
+    result = response.json()
+    trip = result["pairs"][0]
+    assert trip["changed"]["total_h"] == pytest.approx(7.2)
+    assert trip["changed"]["edge_ids"] == ["added:0"]
+    assert trip["delta_h"] < 0
+    assert result["additions"][0]["from_id"] == "93643425101"
+    addition["frequency_per_week"] = None
+    assert client.post("/api/v1/pilots/tuva/evaluate", json=request).status_code == 422
+    addition["frequency_per_week"] = 14
+    addition["to_id"] = "unknown"
+    assert client.post("/api/v1/pilots/tuva/evaluate", json=request).status_code == 422

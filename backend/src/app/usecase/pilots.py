@@ -1,8 +1,15 @@
 from typing import Protocol
 
 from app.domain.errors import DomainError, InvalidQuery
-from app.domain.pilot import EdgeChange, PairComparison, Pilot, PilotEvaluation, WaitingSensitivity
-from app.domain.pilot_routing import changed_edges, route
+from app.domain.pilot import (
+    EdgeChange,
+    NewLink,
+    PairComparison,
+    Pilot,
+    PilotEvaluation,
+    WaitingSensitivity,
+)
+from app.domain.pilot_routing import added_edges, changed_edges, route
 from app.domain.waiting import periodic_wait
 
 
@@ -39,13 +46,14 @@ class PilotQueries:
         model_version: str,
         artifact_version: str,
         changes: tuple[EdgeChange, ...],
+        additions: tuple[NewLink, ...] = (),
     ) -> PilotEvaluation:
         if season not in {"summer", "winter"}:
             raise InvalidQuery("Season must be summer or winter")
         pilot = self._repository.get(pilot_id)
         if model_version != pilot.model_version or artifact_version != pilot.artifact_version:
             raise StalePilotVersion()
-        modified = changed_edges(pilot, changes)
+        modified = changed_edges(pilot, changes) + added_edges(pilot, additions)
         comparisons = []
         for pair in pilot.pairs:
             baseline = route(pilot.edges, pair, season)
@@ -87,4 +95,5 @@ class PilotQueries:
             tuple(comparisons),
             pilot.assumptions,
             tuple(sensitivity),
+            additions,
         )

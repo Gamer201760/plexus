@@ -3,9 +3,52 @@ import math
 from dataclasses import replace
 
 from app.domain.errors import InvalidQuery
-from app.domain.pilot import EdgeChange, Pilot, PilotEdge, PilotPair, PilotRoute
+from app.domain.pilot import EdgeChange, NewLink, Pilot, PilotEdge, PilotPair, PilotRoute
 
 SCHEDULED_MODES = {"air", "river", "scheduled_ferry", "rail"}
+LINK_MODES = SCHEDULED_MODES | {"road", "winter_road", "ferry", "ice_crossing", "pontoon_bridge"}
+
+
+def added_edges(pilot: Pilot, additions: tuple[NewLink, ...]) -> tuple[PilotEdge, ...]:
+    known = {point.id for point in pilot.points}
+    result = []
+    for index, link in enumerate(additions):
+        if link.from_id not in known or link.to_id not in known or link.from_id == link.to_id:
+            raise InvalidQuery("New link endpoints must be distinct pilot points")
+        if link.mode not in LINK_MODES:
+            raise InvalidQuery("Unknown transport mode")
+        if not math.isfinite(link.travel_h) or link.travel_h <= 0:
+            raise InvalidQuery("Travel time must be finite and positive")
+        if not link.seasons or not set(link.seasons) <= {"summer", "winter"}:
+            raise InvalidQuery("Seasons must be summer or winter")
+        frequency = link.frequency_per_week
+        if link.mode in SCHEDULED_MODES:
+            if type(frequency) is not int or not 1 <= frequency <= 28:
+                raise InvalidQuery("Frequency must be an integer from 1 to 28")
+        elif frequency is not None:
+            raise InvalidQuery("Frequency requires a scheduled link")
+        if type(link.bidirectional) is not bool:
+            raise InvalidQuery("Bidirectional must be boolean")
+        identifier = f"added:{index}"
+        result.append(
+            PilotEdge(
+                identifier,
+                link.from_id,
+                link.to_id,
+                link.mode,
+                tuple(link.seasons),
+                link.travel_h,
+                float(frequency) if frequency is not None else None,
+                None,
+                "",
+                None,
+                (f"user_added_link:{identifier}",),
+                True,
+                link.bidirectional,
+                (),
+            )
+        )
+    return tuple(result)
 
 
 def changed_edges(pilot: Pilot, changes: tuple[EdgeChange, ...]) -> tuple[PilotEdge, ...]:
