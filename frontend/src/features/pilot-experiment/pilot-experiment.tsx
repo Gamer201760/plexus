@@ -6,6 +6,7 @@ import { Banner, Button, Card, EmptyState, ErrorState, Segmented } from "@/share
 import { exportComparison, exportParameters } from "./export-experiment"
 import { LinkEditor } from "./link-editor"
 import styles from "./pilot-experiment.module.css"
+import { RouteAdder } from "./route-adder"
 import { TripResult } from "./trip-result"
 import { useExperiment } from "./use-experiment"
 
@@ -79,6 +80,12 @@ export function PilotExperiment({ pilot, onReload }: PilotExperimentProps) {
                 />
               ))}
           </ul>
+          <RouteAdder
+            pilot={pilot}
+            additions={state.additions}
+            onAdd={state.addLink}
+            onRemove={state.removeLink}
+          />
         </Card>
         <div className={styles.results} aria-busy={state.evaluation.isPending}>
           {state.stale && (

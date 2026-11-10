@@ -1,0 +1,19 @@
+.adder {
+  display: grid;
+  gap: var(--space-12);
+  padding-block-start: var(--space-16);
+  border-block-start: var(--hairline) solid var(--border-subtle);
+}
+.title {
+  font-weight: var(--weight-semibold);
+}
+.hint {
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+}
+.chips {
+  composes: bareList from "../../shared/styles/compose.module.css";
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
