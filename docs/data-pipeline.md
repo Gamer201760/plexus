@@ -98,3 +98,13 @@ uv run python etl/audit_pilot_routes.py
 ---
 
 <sub>[Оглавление документации](README.md) · [README проекта](../README.md)</sub>
+
+## Матрицы сценария «новый маршрут»
+
+После `etl/access_russia.py` выполните `uv run python etl/export_scenario_matrices.py`:
+скрипт пишет `data/scenario_ru/<season>/*.npy` и `manifest.json`, проверяет замыкание
+городской матрицы и печатает расхождение с опубликованным `indices.json`. Бэкенд
+читает каталог из `SCENARIO_DIR` (по умолчанию `data/scenario_ru`); без артефактов
+эндпоинты `/api/v1/scenarios*` честно отвечают 503. При нехватке памяти запускайте
+`access_russia.py` по одному сценарию: `SCENARIOS=road`, затем
+`SCENARIOS=summer APPEND_SCENARIOS=1` и `SCENARIOS=winter APPEND_SCENARIOS=1`.
