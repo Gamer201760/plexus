@@ -5,8 +5,8 @@ from pathlib import Path
 from app.repository.files.airports import FileAirportRepository
 from app.repository.files.atlas import JsonAtlasRepository
 from app.repository.files.snapshot import SnapshotAtlasRepository
-from app.usecase.dto import RegionRecord,PointRecord,LinkRecord,EconomyRecord,SettlementRecord,SourceRecord,WinterRoadRecord,IndexRecord,BoundaryShape,RegionShape
-from app.usecase.airports import Airport
+from app.usecase.dto.atlas import RegionRecord,PointRecord,LinkRecord,EconomyRecord,SettlementRecord,SourceRecord,WinterRoadRecord,IndexRecord,BoundaryShape,RegionShape
+from app.usecase.dto.airports import Airport
 from client import ClickHouse
 from typed_tables import write_records
 

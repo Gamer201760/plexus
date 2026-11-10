@@ -5,8 +5,17 @@ from scipy.sparse import csr_matrix
 
 from app.repository.files.road_graph.baselines import BaselineCache
 from app.repository.files.road_graph.delta import FileDeltaStore
+from app.repository.files.road_graph.jobs import FileRoadJobStore
 from app.repository.files.road_graph.matrix import FileGraphMatrixStore
-from app.usecase.dto.road_graph import DeltaRegion
+from app.usecase.dto.road_graph import (
+    GRAPH_DATA_VERSION,
+    DeltaRegion,
+    RoadAddition,
+    RoadChange,
+    RoadJob,
+    RoadResult,
+    SettlementEffect,
+)
 
 REVISION = '["hansen-frequency-v2","fixture"]'
 
@@ -57,3 +66,36 @@ def test_graph_matrix_store_round_trips_sparse_graph(tmp_path: Path) -> None:
     store.write(csr_matrix(np.array([[0.0, 1.0], [0.0, 0.0]])))
     loaded = store.read()
     assert loaded is not None and loaded.toarray().tolist() == [[0.0, 1.0], [0.0, 0.0]]
+
+
+def test_road_job_store_round_trips_current_version_only(tmp_path: Path) -> None:
+    store = FileRoadJobStore(tmp_path)
+    result = RoadResult(
+        1.0,
+        2.0,
+        1.0,
+        100.0,
+        10,
+        2,
+        1,
+        1.0,
+        0.5,
+        settlement_effects=[SettlementEffect("p", 1.0, 2.0, 1.0)],
+    )
+    current = RoadJob(
+        "a" * 32,
+        "r",
+        "Region",
+        "road",
+        [RoadChange(7, 0.5)],
+        "completed",
+        360,
+        360,
+        GRAPH_DATA_VERSION,
+        result=result,
+        addition=RoadAddition(1, 2, 0.5),
+    )
+    stale = RoadJob("b" * 32, "r", "Region", "road", [], "completed", 360, 360, "old")
+    store.save(current)
+    store.save(stale)
+    assert FileRoadJobStore(tmp_path).load() == {current.id: current}
