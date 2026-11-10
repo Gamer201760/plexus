@@ -2,8 +2,8 @@ import { useState } from "react"
 import type { MarketCity, ScenarioMode } from "@/entities/scenario"
 import { useTranslation } from "@/shared/i18n"
 import { Button, Chip, NumberField, Select } from "@/shared/ui"
-import { CityPicker } from "./city-picker"
 import styles from "./link-builder.module.css"
+import { PlacePicker } from "./place-picker"
 import {
   isScheduled,
   LINK_LIMIT,
@@ -19,13 +19,20 @@ export interface LinkBuilderProps {
   readonly onRemove: (index: number) => void
 }
 
-const EMPTY: LinkDraft = { from: "", to: "", mode: "air", travel: "", frequency: "" }
+const EMPTY: LinkDraft = {
+  from: "",
+  fromLabel: "",
+  to: "",
+  toLabel: "",
+  mode: "air",
+  travel: "",
+  frequency: "",
+}
 const MODES: readonly ScenarioMode[] = ["air", "rail", "road"]
 
 export function LinkBuilder({ cities, links, onAdd, onRemove }: LinkBuilderProps) {
   const { t } = useTranslation()
   const [draft, setDraft] = useState<LinkDraft>(EMPTY)
-  const scheduled = isScheduled(draft.mode)
   const travelInvalid = draft.travel !== "" && parseTravel(draft.travel) === null
   const frequencyInvalid = !validFrequency(draft)
   const complete =
@@ -37,19 +44,19 @@ export function LinkBuilder({ cities, links, onAdd, onRemove }: LinkBuilderProps
   const full = links.length >= LINK_LIMIT
   return (
     <div className={styles.builder}>
-      <CityPicker
+      <PlacePicker
         label={t("scenario:from")}
         cities={cities}
-        value={draft.from}
+        value={draft.from === "" ? null : { id: draft.from, label: draft.fromLabel }}
         exclude={draft.to}
-        onSelect={(id) => setDraft({ ...draft, from: id })}
+        onSelect={(choice) => setDraft({ ...draft, from: choice.id, fromLabel: choice.label })}
       />
-      <CityPicker
+      <PlacePicker
         label={t("scenario:to")}
         cities={cities}
-        value={draft.to}
+        value={draft.to === "" ? null : { id: draft.to, label: draft.toLabel }}
         exclude={draft.from}
-        onSelect={(id) => setDraft({ ...draft, to: id })}
+        onSelect={(choice) => setDraft({ ...draft, to: choice.id, toLabel: choice.label })}
       />
       <Select
         label={t("scenario:mode")}
@@ -64,7 +71,7 @@ export function LinkBuilder({ cities, links, onAdd, onRemove }: LinkBuilderProps
         onChange={(event) => setDraft({ ...draft, travel: event.currentTarget.value })}
         error={travelInvalid ? t("scenario:travelError") : undefined}
       />
-      {scheduled && (
+      {isScheduled(draft.mode) && (
         <NumberField
           label={t("scenario:frequency")}
           icon="calendar"
@@ -90,7 +97,7 @@ export function LinkBuilder({ cities, links, onAdd, onRemove }: LinkBuilderProps
           {links.map((link, index) => (
             <li key={`${link.from}-${link.to}-${link.mode}`}>
               <Chip pressed onPressedChange={() => onRemove(index)} icon="route">
-                {t("scenario:linkRow", { from: link.from, to: link.to })}
+                {t("scenario:linkRow", { from: link.fromLabel, to: link.toLabel })}
               </Chip>
             </li>
           ))}

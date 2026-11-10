@@ -5,13 +5,15 @@ import styles from "./impact-results.module.css"
 
 export interface ImpactResultsProps {
   readonly result: ScenarioResult
+  readonly labels: Readonly<Record<string, string>>
 }
 
 type PairRow = ScenarioResult["city_pairs"][number]
+type SettlementRow = ScenarioResult["settlements"][number]
 
 const MIN_DELTA = 0.0005
 
-export function ImpactResults({ result }: ImpactResultsProps) {
+export function ImpactResults({ result, labels }: ImpactResultsProps) {
   const { t } = useTranslation()
   const f = useFormatters()
   const impacted = result.regions.filter((region) => Math.abs(region.delta_index) >= MIN_DELTA)
@@ -35,6 +37,31 @@ export function ImpactResults({ result }: ImpactResultsProps) {
       header: t("scenario:delta"),
       numeric: true,
       cell: (row) => f.number(row.delta_index, 3),
+    },
+  ]
+  const settlementColumns: DataTableColumn<SettlementRow>[] = [
+    {
+      key: "name",
+      header: t("scenario:settlement"),
+      cell: (row) => labels[row.point_id] ?? row.point_id,
+    },
+    {
+      key: "baseline",
+      header: t("scenario:baseline"),
+      numeric: true,
+      cell: (row) => f.number(row.baseline_index, 2),
+    },
+    {
+      key: "changed",
+      header: t("scenario:changed"),
+      numeric: true,
+      cell: (row) => f.number(row.changed_index, 2),
+    },
+    {
+      key: "delta",
+      header: t("scenario:delta"),
+      numeric: true,
+      cell: (row) => f.number(row.delta_index, 2),
     },
   ]
   const pairColumns: DataTableColumn<PairRow>[] = [
@@ -68,9 +95,22 @@ export function ImpactResults({ result }: ImpactResultsProps) {
         />
         <Stat label={t("scenario:improvedPairs")} value={f.integer(result.improved_city_pairs)} />
       </div>
-      {impacted.length === 0 ? (
+      {result.settlements.length > 0 && (
+        <Card
+          title={t("scenario:settlementImpacts")}
+          description={t("scenario:settlementImpactsHint")}
+        >
+          <DataTable
+            caption={t("scenario:settlementImpacts")}
+            columns={settlementColumns}
+            rows={result.settlements}
+            rowKey={(row) => row.point_id}
+          />
+        </Card>
+      )}
+      {impacted.length === 0 && result.settlements.length === 0 ? (
         <p className={styles.note}>{t("scenario:noImpact")}</p>
-      ) : (
+      ) : impacted.length === 0 ? null : (
         <Card title={t("scenario:regions")} description={t("scenario:regionsHint")}>
           <DataTable
             caption={t("scenario:regions")}

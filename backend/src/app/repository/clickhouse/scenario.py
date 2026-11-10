@@ -92,6 +92,7 @@ class ClickHouseScenarioRepository:
                 city_best,
                 population,
                 region_idx,
+                {},
                 access,
                 population_mean(access, population, region_idx, count),
                 np.bincount(region_idx, weights=population, minlength=count).astype(np.float64),

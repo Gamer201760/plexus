@@ -15,7 +15,14 @@ from app.domain.market_scenario import (
     population_mean,
 )
 
-FILES = ("road_h.npy", "best_h.npy", "city_best_h.npy", "population.npy", "region_idx.npy")
+FILES = (
+    "road_h.npy",
+    "best_h.npy",
+    "city_best_h.npy",
+    "population.npy",
+    "region_idx.npy",
+    "point_id.npy",
+)
 
 
 def city_record(row: dict[str, object]) -> MarketCity:
@@ -106,18 +113,26 @@ class FilesScenarioRepository:
                 base = manifest["normalization_base"]
                 assert isinstance(base, float)
                 try:
-                    arrays = [np.load(self._dir / season / name, mmap_mode="r") for name in FILES]
+                    road, best, city_best, population, region_idx = (
+                        np.load(self._dir / season / name, mmap_mode="r") for name in FILES[:-1]
+                    )
+                    point_id = np.load(self._dir / season / FILES[-1])
                 except (OSError, ValueError) as error:
                     raise DataUnavailable("Scenario matrices are missing") from error
-                road, best, city_best, population, region_idx = arrays
+                if not np.issubdtype(point_id.dtype, np.str_):
+                    raise DataUnavailable("Scenario matrices are inconsistent")
                 points, markets = road.shape
                 if (
                     best.shape != (points, markets)
                     or city_best.shape != (markets, markets)
                     or population.shape != (points,)
                     or region_idx.shape != (points,)
+                    or point_id.shape != (points,)
                     or markets != len(catalog.cities)
                 ):
+                    raise DataUnavailable("Scenario matrices are inconsistent")
+                point_index = {str(value): row for row, value in enumerate(point_id)}
+                if len(point_index) != points:
                     raise DataUnavailable("Scenario matrices are inconsistent")
                 region_ids = region_idx.astype(np.int32)
                 if (
@@ -143,6 +158,7 @@ class FilesScenarioRepository:
                     city_best.astype(np.float64),
                     weights,
                     region_ids,
+                    point_index,
                     access,
                     population_mean(access, weights, region_ids, len(catalog.regions)),
                     np.bincount(region_ids, weights=weights, minlength=len(catalog.regions)).astype(

@@ -1409,6 +1409,8 @@ export interface components {
             city_pairs: components["schemas"]["CityPairChangeResponse"][];
             /** Regions */
             regions: components["schemas"]["RegionImpactResponse"][];
+            /** Settlements */
+            settlements: components["schemas"]["SettlementImpactResponse"][];
         };
         /** ScenarioRegionResponse */
         ScenarioRegionResponse: {
@@ -1528,6 +1530,17 @@ export interface components {
             /** Affected */
             affected: boolean;
         };
+        /** SettlementImpactResponse */
+        SettlementImpactResponse: {
+            /** Point Id */
+            point_id: string;
+            /** Baseline Index */
+            baseline_index: number;
+            /** Changed Index */
+            changed_index: number;
+            /** Delta Index */
+            delta_index: number;
+        };
         /** SettlementPageResponse */
         SettlementPageResponse: {
             /** Total */
@@ -1581,10 +1594,10 @@ export interface components {
         };
         /** TrunkLinkRequest */
         TrunkLinkRequest: {
-            /** From City */
-            from_city: string;
-            /** To City */
-            to_city: string;
+            /** From Id */
+            from_id: string;
+            /** To Id */
+            to_id: string;
             /**
              * Mode
              * @enum {string}
